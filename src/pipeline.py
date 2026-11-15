@@ -252,6 +252,14 @@ def ensure_scientific_bootstrap(
     """Initialize SQLite stores and search index on cold start if missing or empty."""
     from .retrieval import RetrievalIndex
 
+    if project_dir is None:
+        try:
+            from dotenv import load_dotenv
+
+            load_dotenv(storage.PROJECT_DIR / ".env", override=False)
+        except ImportError:
+            pass
+
     store = ScientificStore(db_path)
     experiments = storage.list_experiments()
     docs_in_db = store.list_documents()
@@ -266,9 +274,11 @@ def ensure_scientific_bootstrap(
     index = RetrievalIndex(search_db_path)
     with index.connect() as db:
         chunk_count = int(db.execute("SELECT COUNT(*) FROM chunks").fetchone()[0])
+        models_in_db = {str(row[0]) for row in db.execute("SELECT DISTINCT model FROM chunks").fetchall() if row and row[0]}
 
     index_result: dict[str, Any] | None = None
-    if chunk_count == 0 and experiments:
+    needs_reindex = chunk_count == 0 or (index.model is not None and models_in_db != {index.mode})
+    if needs_reindex and experiments:
         index_result = index.index_experiments(experiments)
         chunk_count = int(index_result.get("total", 0))
         bootstrapped = True

@@ -462,10 +462,11 @@ def show_explorer(experiment: dict) -> None:
         st.info(t("view.select_one_dataset", lang))
         return
 
+    is_advanced = st.session_state.get("interaction_mode", "guided") == "advanced"
     prepared: list[dict[str, Any]] = []
     for key in selected:
         entry = by_key[key]
-        with st.expander(f"⚙ {_label(entry, lang)}", expanded=len(selected) == 1):
+        with st.expander(f"⚙ {_label(entry, lang)}", expanded=is_advanced and len(selected) == 1):
             _show_flags(entry["table"], lang)
             st.markdown(f"**{t('view.available_fixes', lang)}**")
             override_editor(experiment, entry, stored)
@@ -560,6 +561,10 @@ def show_explorer(experiment: dict) -> None:
 
     if chart_key == "heatmap":
         st.plotly_chart(_heatmap(first["frame"], first["meta"]), use_container_width=True)
+        from .guided_journeys import render_heatmap_explanation, render_term_help
+
+        render_heatmap_explanation(first["entry"], experiment, lang)
+        render_term_help(lang)
     elif chart_key == "xyc":
         numeric = [c for c in first["frame"].columns if pd.api.types.is_numeric_dtype(first["frame"][c])]
         if len(numeric) < 3 or not first["ys"]:
@@ -567,6 +572,12 @@ def show_explorer(experiment: dict) -> None:
         else:
             color = st.selectbox(t("view.color_var", lang), [c for c in numeric if c not in (first["x"], first["ys"][0])], key=f"ex-color-{eid}")
             st.plotly_chart(px.scatter(first["frame"], x=first["x"], y=first["ys"][0], color=color, template="plotly_white"), use_container_width=True)
+            from .guided_journeys import render_chart_explanation, render_term_help
+
+            x_meta = next((m for m in first["meta"] if m["name"] == first["x"]), None)
+            y_meta = next((m for m in first["meta"] if m["name"] == first["ys"][0]), {"name": first["ys"][0], "unit": "", "quantity": "unknown"})
+            render_chart_explanation(first["entry"], first["x"], [first["ys"][0]], x_meta, [y_meta], None, experiment, lang)
+            render_term_help(lang)
     elif not series:
         st.info(t("view.select_y_warning", lang))
     else:
@@ -591,6 +602,14 @@ def show_explorer(experiment: dict) -> None:
         fig.update_yaxes(title_text=y_title)
         fig.update_layout(margin={"l": 20, "r": 20, "t": 30, "b": 20}, legend={"orientation": "h", "y": -0.25})
         st.plotly_chart(fig, use_container_width=True)
+        from .guided_journeys import render_chart_explanation, render_term_help
+
+        y_metas = [
+            next((m for m in first["meta"] if m["name"] == y), {"name": y, "unit": "", "quantity": "unknown"})
+            for y in first["ys"]
+        ]
+        render_chart_explanation(first["entry"], first["x"], first["ys"], x_meta, y_metas, params, experiment, lang)
+        render_term_help(lang)
         _analysis_and_export(series, origin, prepared, params, stored, fig, long, eid)
 
 

@@ -243,11 +243,58 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "nav.sources": "Sources & Methodology",
 
         # Home / Overview
-        "home.title": "Flame in Freefall: Microgravity Combustion Explorer",
+        "home.title": "Explore the Science of Fire in Space",
+        "home.subtitle": "Discover how fire behaves in microgravity through real NASA experiments, interactive visualizations, and scientific evidence.",
         "home.lead": (
             "Explore authentic NASA Physical Sciences Informatics (PSI) datasets aboard the International Space Station "
             "and spacecraft experiments — built for judges, students, engineers, and curious minds."
         ),
+        "home.plain_intro": (
+            "Why study fire in space? Inside an orbiting spacecraft, astronauts and cabin air are in continuous freefall — "
+            "there is no 'up' or 'down' for hot gas to rise. Every flame, fuel droplet, and smoke trail obeys different physics than on Earth, "
+            "so NASA tests real fuels and spacecraft materials in orbit and shares the evidence publicly through the PSI archive."
+        ),
+        "home.start_title": "Choose How You Want to Explore",
+        "home.exp_a_badge": "Experience A · Guided Discovery (~3 min)",
+        "home.exp_a_title": "A. Discover How Fire Behaves",
+        "home.exp_a_desc": (
+            "A beginner-friendly 4-step interactive journey: learn why freefall turns flames into spheres, "
+            "explore NASA's FLEX droplet study, and interpret a real NASA chart."
+        ),
+        "home.exp_a_btn": "Start Discovery Journey →",
+        "home.exp_b_badge": "Experience B · Spacecraft Safety (~3 min)",
+        "home.exp_b_title": "B. Investigate Spacecraft Fire Safety",
+        "home.exp_b_desc": (
+            "See how NASA investigates cabin fire risk across three layers: preventing flame spread (BASS-II), "
+            "detecting smoke early (SAME), and extinguishing flames (FLEX)."
+        ),
+        "home.exp_b_btn": "Start Safety Investigation →",
+        "home.exp_c_badge": "Experience C · Direct Workbench",
+        "home.exp_c_title": "C. Explore Scientific Data",
+        "home.exp_c_desc": (
+            "Open the full catalog of NASA PSI investigations, interactive charts and tables, "
+            "cross-study comparison tools, or the evidence-grounded research assistant."
+        ),
+        "home.exp_c_btn_data": "Open Data Explorer →",
+        "home.exp_c_btn_assistant": "Ask Evidence Assistant →",
+        "home.exp_c_btn_studies": "Browse Investigations",
+        "home.compare_title": "Earth vs. Microgravity: What Changes When Gravity Stops Pulling Air Up?",
+        "home.earth_title": "On Earth (1g Gravity)",
+        "home.earth_points": (
+            "- **Teardrop flame:** Hot exhaust gas rises quickly because it is lighter than cool surrounding air.\n"
+            "- **Buoyant draft:** Rising heat continually pulls fresh oxygen inward at the base of the flame.\n"
+            "- **Rising smoke:** Buoyancy lifts smoke plumes straight toward ceiling detectors.\n"
+            "- **Rapid cooling:** Natural upward convection sheds heat away from burning surfaces."
+        ),
+        "home.space_title": "In Spacecraft Freefall (~0g Microgravity)",
+        "home.space_points": (
+            "- **Spherical flame:** Without upward buoyancy, heated gases expand symmetrically into a glowing sphere.\n"
+            "- **Diffusion & cabin airflow:** Oxygen reaches fires mainly through slow molecular diffusion or spacecraft fans.\n"
+            "- **Suspended smoke:** Soot particles linger and grow larger while drifting gently with cabin ventilation.\n"
+            "- **Cool flames possible:** Some liquid droplets continue reacting cleanly below normal hot-flame temperatures."
+        ),
+        "home.glossary_title": "Key Scientific Terms Explained Simply",
+        "home.archive_title": "Verified NASA Evidence Inside This Workspace",
         "home.what_title": "Why does fire behave differently in freefall?",
         "home.what_body": (
             "On Earth, hot combustion gases are lighter than cool surrounding air, so **gravity creates buoyancy**: "
@@ -267,8 +314,17 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "home.metric_docs": "Preserved NASA Files",
         "home.metric_tables": "Extracted Tables",
         "home.metric_chunks": "Indexed Chunks",
+        "home.metric_chunks_semantic": "Semantic Token Chunks",
+        "home.metric_chunks_lexical": "Structural Search Chunks",
+        "home.chunk_caption_semantic": (
+            "{chunks} token-window chunks indexed with local multilingual embeddings (`{model}`) across {docs} preserved NASA files."
+        ),
+        "home.chunk_caption_lexical": (
+            "{chunks} structural segments indexed with deterministic offline retrieval across {docs} preserved NASA files "
+            "(enable a local model via RAG_EMBEDDING_MODEL for token-window semantic chunking)."
+        ),
         "home.extraction_caption": "Extraction status: {processed} processed · {partial} partial · {failed} failed. See Sources & Methodology for full provenance.",
-        "home.pillars_title": "What can you investigate? Three Pillars of Spacecraft Fire Safety",
+        "home.pillars_title": "Three Pillars of Spacecraft Fire Safety in NASA PSI",
         "home.pillar_prevention": "Prevention",
         "home.pillar_prevention_studies": "BASS · BASS-II · Saffire-I / II / III",
         "home.pillar_prevention_desc": "How solid cabin materials ignite and spread flames under microgravity airflow and oxygen levels.",
@@ -279,21 +335,6 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "home.pillar_suppression_studies": "FLEX · FLEX-2",
         "home.pillar_suppression_desc": "How liquid fuel droplets burn, form cool flames, and extinguish as oxygen or inert diluents vary.",
         "home.pillar_coverage": "{imported} of {total} priority NASA investigations loaded",
-        "home.tour_title": "3-Minute Guided Tour (Recommended Starting Path)",
-        "home.tour_subtitle": "Follow these 4 steps to explore the complete scientific workflow without needing combustion expertise:",
-        "home.tour_s1_title": "1. Browse NASA Investigations",
-        "home.tour_s1_desc": "See the 9 PSI studies organized by Prevention, Detection, and Suppression with official DOIs and caveats.",
-        "home.tour_s1_btn": "Open Investigations →",
-        "home.tour_s2_title": "2. Inspect FLEX (PSI-69) Data",
-        "home.tour_s2_desc": "Open interactive tables, charts, variable glossaries, and raw source rows for droplet extinction.",
-        "home.tour_s2_btn": "Explore PSI-69 Data →",
-        "home.tour_s3_title": "3. Compare Experiments Safely",
-        "home.tour_s3_desc": "Check why BASS-II and FLEX cannot be merged blindly when methodologies or units diverge.",
-        "home.tour_s3_btn": "Compare Studies →",
-        "home.tour_s4_title": "4. Query the Evidence Assistant",
-        "home.tour_s4_desc": "Run filtered searches (e.g., FLEX with 18%–25% O₂) and verify exact NASA page and row citations.",
-        "home.tour_s4_btn": "Launch Assistant →",
-        "home.start_cta": "Start Guided Investigation (Open PSI-69 Data Explorer)",
         "home.warning_conditions": (
             "Scientific Integrity Notice: Experimental tables frequently describe test conditions or catalogs. "
             "By themselves, they do not prove flame propagation speed, suppression efficacy, or spacecraft fire-safety certification."
@@ -779,6 +820,235 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "docs.img_preview_err": "Preview unavailable for this image file.",
         "docs.formulas_found": "Formulas detected ({count})",
         "docs.preview_truncated": "\n… preview truncated",
+
+        # Sidebar Mode & Guided Navigation
+        "sidebar.mode_label": "Experience level",
+        "sidebar.mode_guided": "Guided Exploration (Default)",
+        "sidebar.mode_advanced": "Advanced Research (All Controls)",
+        "sidebar.mode_help": (
+            "Guided Exploration focuses on clear scientific explanations and hides low-level filters, hashes, "
+            "and engineering diagnostics inside optional panels. Advanced Research expands technical tools directly."
+        ),
+        "sidebar.exit_journey": "Exit Guided Journey",
+        "sidebar.return_journey": "← Return to Guided Journey (Step {step} of {total})",
+        "sidebar.journey_banner": (
+            "You opened **{study_id}** from a Guided Journey. Inspect any NASA tables or charts here, "
+            "and click the button above when ready to resume Step {step}."
+        ),
+
+        # Beginner Glossary
+        "glossary.microgravity_term": "Microgravity (~0g)",
+        "glossary.microgravity_def": (
+            "Continuous orbital freefall inside a spacecraft: gravity bends the orbit, but air and flames float together without upward buoyancy."
+        ),
+        "glossary.o2_term": "Oxygen Mole Fraction (O₂ mol frac)",
+        "glossary.o2_def": (
+            "Share of gas molecules in the test chamber that are oxygen. For comparison, `0.21` equals 21% oxygen — roughly Earth sea-level air."
+        ),
+        "glossary.drop_diam_term": "Droplet Diameter (mm)",
+        "glossary.drop_diam_def": (
+            "Width of an isolated spherical fuel droplet tested inside a sealed chamber (often 1–5 mm) to measure burning and extinction."
+        ),
+        "glossary.psi_term": "NASA PSI Archive",
+        "glossary.psi_def": (
+            "NASA's Physical Sciences Informatics repository of genuine spaceflight experiment files from the ISS and orbital test vehicles."
+        ),
+
+        # Guided Journeys Shared Controls
+        "journey.badge_j1": "Guided Journey 1 · Understanding Fire in Microgravity",
+        "journey.badge_j2": "Guided Journey 2 · Fire Safety in Spacecraft",
+        "journey.step_indicator": "Step {current} of {total}",
+        "journey.back": "← Back",
+        "journey.continue": "Continue →",
+        "journey.restart": "Restart Journey",
+        "journey.exit": "Back to Discovery Home",
+        "journey.open_advanced": "Technical details & provenance for this step",
+
+        # Journey 1 — Understanding Fire in Microgravity
+        "j1.s1_title": "1. Why Fire Behaves Differently in Microgravity",
+        "j1.s1_purpose": "Purpose: Build clear intuition about gravity, buoyancy, and combustion before inspecting spaceflight datasets.",
+        "j1.s1_explain": (
+            "On Earth, hot combustion gases expand and weigh less than surrounding air, so **gravity pulls cooler air underneath and pushes hot exhaust upward**. "
+            "That buoyant draft stretches a flame into its classic yellow teardrop.\n\n"
+            "In orbital freefall, cabin air and warm gas weigh the same relative to the spacecraft — **buoyancy vanishes**. "
+            "Instead of streaming upward, combustion products stay wrapped around the fuel while fresh oxygen enters slowly by diffusion or gentle cabin ventilation, "
+            "forming a quiet, nearly **spherical blue flame**."
+        ),
+        "j1.s1_callout_title": "Interactive Physics Breakdown: Select an Effect to Compare 1g vs. 0g",
+        "j1.s1_aspect_label": "Choose what aspect of fire to compare:",
+        "j1.s1_aspect_shape": "Flame Shape (Teardrop vs. Sphere)",
+        "j1.s1_aspect_o2": "How Oxygen Reaches the Flame",
+        "j1.s1_aspect_temp": "Hot Flames vs. Cool Flames",
+        "j1.s1_aspect_smoke": "Smoke & Soot Behavior",
+        "j1.s1_desc_shape": (
+            "**On Earth (`1g`):** Buoyancy stretches heated gas upward into an elongated teardrop.\n\n"
+            "**In Orbit (`~0g`):** Without an 'up' direction for hot air, symmetrical heat and gas diffusion form a **spherical flame**."
+        ),
+        "j1.s1_desc_o2": (
+            "**On Earth (`1g`):** Upward plumes pump fresh oxygen continuously toward the base of a fire.\n\n"
+            "**In Orbit (`~0g`):** Oxygen arrives slowly by molecular diffusion — or along cabin air fans — dramatically changing how long droplets burn before extinguishing."
+        ),
+        "j1.s1_desc_temp": (
+            "**In Orbit (`~0g`):** Because heat and fuel vapors linger around the droplet instead of rising away, NASA's FLEX experiments revealed liquid droplets can transition into low-temperature **cool flames** after visible hot flames go out."
+        ),
+        "j1.s1_desc_smoke": (
+            "**On Earth (`1g`):** Buoyant plumes rush smoke up to ceiling sensors.\n\n"
+            "**In Orbit (`~0g`):** Without upward convection, soot particles stay suspended longer, grow through coagulation, and travel along air vents."
+        ),
+
+        # Journey 1 Step 2
+        "j1.s2_title": "2. Meet NASA's FLEX Experiment (PSI-69)",
+        "j1.s2_purpose": "Purpose: See what NASA astronauts tested aboard the ISS and preview an authentic experiment page.",
+        "j1.s2_explain": (
+            "Inside the International Space Station's Microgravity Science Glovebox, NASA's **Flame Extinguishment Experiment (FLEX · PSI-69)** "
+            "tested how tiny suspended drops of liquid fuels — such as **n-heptane** and **methanol** (typically **1–5 mm** wide) — ignite, form spherical flames, and extinguish "
+            "as oxygen (`O2 mol frac`) and inert gases (`N2`, `He`, `CO2`, `Xe`) change.\n\n"
+            "Here is how the experiment appears in the preserved NASA guide before we plot its numbers:"
+        ),
+        "j1.s2_pdf_caption": "Authentic NASA PSI-69 PDF preview (`researchers_guide.pdf`, original page {page})",
+        "j1.s2_pdf_unavailable": "PDF page preview unavailable in this environment; raw text and SHA-256 record remain preserved.",
+        "j1.s2_btn_explorer": "Open PSI-69 in Full Data Explorer →",
+
+        # Journey 1 Step 3
+        "j1.s3_title": "3. Inspect & Interpret Real NASA Experimental Evidence",
+        "j1.s3_purpose": "Purpose: Read an authentic PSI-69 plot and verified NASA text snippets with plain-language guidance.",
+        "j1.s3_explain": (
+            "Below is real quantitative data extracted directly from NASA's **PSI-69 (FLEX)** CSV archive. "
+            "Choose a perspective to inspect what conditions NASA tested versus what outcomes require careful scientific caution."
+        ),
+        "j1.s3_view_label": "Choose a real PSI-69 view:",
+        "j1.s3_opt_extinction": "Atmosphere Tested: Oxygen Concentration (O₂) vs. Fuel Droplet Size (mm)",
+        "j1.s3_opt_burning": "Raw Value Check: Oxygen Concentration (O₂) vs. Reported 'Burning rate; mm' (Includes Unit Caveat)",
+        "j1.s3_evidence_title": "Verified NASA Excerpts Retrieved for PSI-69",
+        "j1.s3_chart_missing": "Interactive PSI-69 numeric table is not loaded in this test fixture; verified NASA document excerpts remain accessible below.",
+
+        # Journey 1 Step 4
+        "j1.s4_title": "4. Scientific Findings, Provenance & Limitations",
+        "j1.s4_purpose": "Purpose: Summarize what the PSI-69 data actually demonstrates and where honest scientific limits begin.",
+        "j1.s4_learned_title": "What Verified NASA Evidence Shows",
+        "j1.s4_learned_body": (
+            "- **Spherical droplet flames behave sensitively to oxygen fraction and diluent gas:** PSI-69 tables record exact oxygen mole fractions (`O2 mol frac`), pressures, and initial droplet diameters across isolated orbital runs.\n"
+            "- **Two-stage / cool-flame dynamics appear in FLEX records:** Real NASA guide excerpts document cool-flame behavior after apparent visible extinction.\n"
+            "- **Source quirks are transparently preserved:** Our ingestion audit preserves NASA's exact cover notice (`FLEX-2` inside the PSI-69 PDF bundle) and flags columns like `Burning rate; mm` without inventing missing time units."
+        ),
+        "j1.s4_limits_title": "What This Experiment Does NOT Establish Alone",
+        "j1.s4_limits_body": (
+            "- Isolated **1–5 mm fuel droplets** inside a quiescent chamber do **not** represent full-scale fires in spacecraft wires, foam, or fabrics.\n"
+            "- Rows listing chamber gas mixtures (`O2 mol frac`, `N2`, pressure) represent **test conditions**, not standalone suppression certification.\n"
+            "- Never merge droplet combustion tables (`PSI-69`) directly with solid-material flame spread (`PSI-25 · BASS-II`) without checking experimental geometry and units."
+        ),
+        "j1.s4_next_title": "Recommended Next Actions",
+        "j1.s4_btn_j2": "Start Journey 2: Spacecraft Fire Safety →",
+        "j1.s4_btn_assistant": "Ask Evidence Assistant about FLEX →",
+        "j1.s4_btn_explorer": "Open PSI-69 in Data Explorer →",
+
+        # Journey 2 — Fire Safety in Spacecraft
+        "j2.s1_title": "1. Why Fire Is a Unique Hazard on Spacecraft",
+        "j2.s1_purpose": "Purpose: Understand why orbital exploration changes fire ignition, smoke detection, and extinguishment.",
+        "j2.s1_explain": (
+            "Inside a spacecraft cabin, crews cannot evacuate outdoors or vent an uncontrolled fire without risking depressurization. "
+            "Continuous cabin circulation fans move air gently across cables, batteries, and fabrics — meaning fire behaves very differently than in a room on Earth.\n\n"
+            "NASA's PSI fire-safety investigations examine three mission-critical safety questions:"
+        ),
+        "j2.s1_risk_cards": (
+            "- **Ignition & Material Spread:** Future deep-space cabins may use **higher oxygen concentrations at lower pressures** so astronauts can prepare for spacewalks — raising questions about how thin plastics and fabrics burn under slow cabin ventilation.\n"
+            "- **Hidden Smoke & Late Alarms:** Without upward plumes carrying soot straight to the ceiling, smoke particles coalesce differently in microgravity, requiring detectors tuned for actual space aerosol particle sizes.\n"
+            "- **Extinction Limits:** Halon or CO₂ suppression and lower oxygen levels behave differently when buoyancy disappears and **cool flames** can persist."
+        ),
+
+        # Journey 2 Step 2
+        "j2.s2_title": "2. Prevention, Detection, and Suppression Across NASA PSI",
+        "j2.s2_purpose": "Purpose: Select a spacecraft fire-safety pillar to inspect which authentic NASA studies address it.",
+        "j2.s2_pillar_select": "Select a fire-safety defense layer to explore:",
+        "j2.s2_pillar_prevention_detail": (
+            "**Studies in archive:** `BASS (PSI-26)`, `BASS-II (PSI-25)`, `Saffire-I (PSI-98)`, `Saffire-II (PSI-99)`, `Saffire-III (PSI-100)`\n\n"
+            "**Safety focus:** Measure how **solid fuels** (polymers, cotton/fiberglass composites, wire-like samples) ignite and spread flames under forced cabin airflow velocities and varying oxygen concentrations."
+        ),
+        "j2.s2_pillar_detection_detail": (
+            "**Studies in archive:** `SAME (PSI-102)`, `SAME-R (PSI-101)`\n\n"
+            "**Safety focus:** Characterize **smoke aerosol particle size distributions** produced by overheated wire insulation and spacecraft materials in microgravity so optical and ionization spacecraft smoke alarms avoid false negatives or false alarms."
+        ),
+        "j2.s2_pillar_suppression_detail": (
+            "**Studies in archive:** `FLEX (PSI-69)`, `FLEX-2 (PSI-68)`\n\n"
+            "**Safety focus:** Establish exact **extinction boundaries**, oxygen concentration limits, inert gas dilution effects, and spherical droplet flame lifetimes."
+        ),
+        "j2.s2_loaded_studies": "Loaded NASA investigations matching this pillar ({count}):",
+
+        # Journey 2 Step 3
+        "j2.s3_title": "3. Examine Real NASA Fire-Safety Evidence",
+        "j2.s3_purpose": "Purpose: Inspect real NASA charts, PDFs, and excerpts across Prevention (BASS-II), Detection (SAME), and Suppression (FLEX).",
+        "j2.s3_focus_label": "Choose an authentic evidence slice to examine:",
+        "j2.s3_focus_bass": "Prevention Evidence · BASS-II (PSI-25) Solid Fuel Flame Data",
+        "j2.s3_focus_same": "Detection Evidence · SAME (PSI-102) Microgravity Smoke Report",
+        "j2.s3_focus_compare": "Cross-Pillar Check · Why Prevention (BASS-II) & Suppression (FLEX) Must Not Be Blindly Merged",
+        "j2.s3_same_pdf_caption": "Authentic NASA PSI-102 PDF preview (`SAME` final report, page {page})",
+        "j2.s3_compare_callout": (
+            "**Scientific Integrity Check:** Even though both `PSI-25 (BASS-II)` and `PSI-69 (FLEX)` study spacecraft fire safety, "
+            "one measures **solid materials under forced airflow** while the other measures **isolated liquid fuel droplets** in quiescent gas. "
+            "Comparing insights conceptually is valuable — pooling raw numbers into a single axis would mislead!"
+        ),
+
+        # Journey 2 Step 4
+        "j2.s4_title": "4. How Findings May Inform Spacecraft Safety Research",
+        "j2.s4_purpose": "Purpose: Translate experimental observations into careful, evidence-bounded engineering takeaways.",
+        "j2.s4_findings_title": "Key Research Implications Grounded in This Archive",
+        "j2.s4_findings_body": (
+            "- **Ventilation & Atmosphere Design (Prevention · BASS-II / Saffire):** Flammability thresholds depend on **both oxygen fraction and airflow velocity** — low-speed cabin fans can sustain solid-fuel flames near oxygen extinction limits.\n"
+            "- **Smoke Detector Calibration (Detection · SAME):** Microgravity combustion generates **different particle-size distributions** than normal-gravity fire tests; smoke-detector thresholds must reflect orbital aerosol physics.\n"
+            "- **Suppression & Re-ignition Caution (Suppression · FLEX):** Droplet extinction data show that extinguished visible flames can leave lingering heat or **cool-flame chemistry** if oxygen rises again."
+        ),
+        "j2.s4_caveats_title": "Honest Scope & Engineering Limitations",
+        "j2.s4_caveats_body": (
+            "- These PSI datasets support **scientific insight and hypothesis validation**, **not flight-hardware fire certification** on their own.\n"
+            "- Imported NASA bundles vary in completeness (`processed` vs. `partial` where auxiliary binary formats require specialized tools).\n"
+            "- Every claim made inside this platform can be checked directly against the raw source file, page/row index, and SHA-256 fingerprint."
+        ),
+        "j2.s4_next_title": "Continue Exploring With Full Research Tools",
+        "j2.s4_btn_compare": "Open Study Comparison Tool →",
+        "j2.s4_btn_assistant": "Ask Assistant About Spacecraft Fire Safety →",
+        "j2.s4_btn_explorer": "Inspect BASS-II (PSI-25) in Explorer →",
+
+        # Chart Explanations
+        "chart_guide.title": "How to Read This Chart",
+        "chart_guide.shows_label": "What this chart shows:",
+        "chart_guide.axes_label": "Axes & units:",
+        "chart_guide.source_label": "NASA source & data role:",
+        "chart_guide.interpret_label": "How to interpret:",
+        "chart_guide.caution_label": "Important caveat:",
+        "chart_guide.term_help_title": "Glossary of variables & units in this view",
+        "chart_guide.role_measurement": "Experimental observations / measured quantities",
+        "chart_guide.role_condition": "Test conditions / chamber setup parameters",
+        "chart_guide.role_mixed": "Mixed table (both test settings and observed values)",
+        "chart_guide.note_condition_only": (
+            "Points primarily show which test configurations NASA ran rather than proving a physical response curve."
+        ),
+        "chart_guide.note_trend": (
+            "Read left-to-right across the horizontal variable (`{x}`) and see how `{y}` rises, drops, or spreads across individual NASA test runs."
+        ),
+        "chart_guide.caution_default": (
+            "Applies strictly to the documented setup, fuel geometry, and rows in {study_id}; avoid extrapolating directly to full spacecraft cabins."
+        ),
+        "chart_guide.caution_burning_mm": (
+            "Source header `'Burning rate; mm'` lists `'mm'` without a time unit (`'/s'`); check the source NASA PDF/notes before citing it as a burning rate speed."
+        ),
+        "chart_guide.caution_series_mode": "Derived chart adjustment active: `{mode}` (raw values remain preserved in the underlying table).",
+        "chart_guide.explorer_controls_label": "Customize chart variables, filters, or derived transforms (Advanced Controls)",
+        "chart_guide.heatmap_shows": "Spearman correlation matrix across numeric columns in `{dataset}`.",
+        "chart_guide.heatmap_caution": "Strong correlation highlights variables moving together in these rows — it never proves physical causation by itself.",
+
+        # Assistant Plain-Language Guide
+        "ast_guide.filters_expander": "Advanced filters, study selection & index diagnostics",
+        "ast_guide.examples_hint": "Try a beginner-friendly question (runs automatically):",
+        "ast_guide.summary_title": "Plain-Language Guide to These Results",
+        "ast_guide.summary_counts": "Retrieved **{matches}** verified passage(s) or table row(s) across **{studies}** NASA investigation(s): {study_list}.",
+        "ast_guide.summary_how": (
+            "How to verify each card below: look at the **evidence label** (`Measurement`, `Test Condition`, or `Document Context`) "
+            "before citing a number, and click **View Exact Source** or the provenance header to inspect the original file, page/row, and SHA-256 fingerprint."
+        ),
+        "ast_guide.summary_no_llm": (
+            "Running in **Evidence Retrieval Mode** (external LLM disabled): the text below surfaces verbatim NASA records without speculative AI synthesis."
+        ),
+        "ast_guide.summary_caveat_prefix": "Primary scientific caveat across matched studies: ",
     },
     "pt": {
         # App & Sidebar
@@ -800,11 +1070,58 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "nav.sources": "Fontes e Metodologia",
 
         # Home / Overview
-        "home.title": "Flame in Freefall: Explorador de Combustão em Microgravidade",
+        "home.title": "Explore a Ciência do Fogo no Espaço",
+        "home.subtitle": "Descubra como o fogo se comporta em microgravidade por meio de experimentos reais da NASA, visualizações interativas e evidências científicas.",
         "home.lead": (
             "Explore dados reais do repositório NASA Physical Sciences Informatics (PSI) obtidos na Estação Espacial Internacional (ISS) "
-            "e em experimentos espaciais — projetado para jurados, estudantes, engenheiros e entusiastas."
+            "e em experimentos espaciais — projetado para jurados, estudantes, engenheiros e curiosos."
         ),
+        "home.plain_intro": (
+            "Por que estudar fogo no espaço? Dentro de uma nave em órbita, astronautas e o ar da cabine estão em queda livre contínua — "
+            "não existe 'para cima' ou 'para baixo' para o ar quente subir. Cada chama, gota de combustível e nuvem de fumaça obedece a regras físicas diferentes das da Terra, "
+            "e a NASA publica esses dados experimentais no arquivo público PSI."
+        ),
+        "home.start_title": "Escolha Como Você Quer Explorar",
+        "home.exp_a_badge": "Experiência A · Descoberta Guiada (~3 min)",
+        "home.exp_a_title": "A. Descubra Como o Fogo se Comporta",
+        "home.exp_a_desc": (
+            "Uma jornada interativa em 4 passos para iniciantes: entenda por que a queda livre transforma chamas em esferas, "
+            "explore o estudo FLEX da NASA e interprete um gráfico experimental real."
+        ),
+        "home.exp_a_btn": "Iniciar Jornada de Descoberta →",
+        "home.exp_b_badge": "Experiência B · Segurança Espacial (~3 min)",
+        "home.exp_b_title": "B. Investigue a Segurança contra Incêndio em Naves",
+        "home.exp_b_desc": (
+            "Veja como a NASA reduz riscos de incêndio em espaçonaves em três camadas: prevenção de propagação (BASS-II), "
+            "detecção precoce de fumaça (SAME) e extinção de chamas (FLEX)."
+        ),
+        "home.exp_b_btn": "Investigar Segurança Espacial →",
+        "home.exp_c_badge": "Experiência C · Bancada Direta",
+        "home.exp_c_title": "C. Explorar Dados Científicos",
+        "home.exp_c_desc": (
+            "Acesse diretamente o catálogo completo de estudos NASA PSI, gráficos e tabelas interativas, "
+            "comparação entre experimentos ou o assistente científico baseado em evidências."
+        ),
+        "home.exp_c_btn_data": "Abrir Explorador de Dados →",
+        "home.exp_c_btn_assistant": "Consultar Assistente Científico →",
+        "home.exp_c_btn_studies": "Ver Catálogo de Estudos",
+        "home.compare_title": "Terra vs. Microgravidade: O Que Muda Sem o Empuxo?",
+        "home.earth_title": "Na Terra (Gravidade 1g)",
+        "home.earth_points": (
+            "- **Chama em gota:** Os gases quentes sobem rapidamente por serem mais leves que o ar frio ao redor.\n"
+            "- **Corrente natural:** O ar quente ascendente puxa oxigênio novo para a base da chama.\n"
+            "- **Fumaça ascendente:** O empuxo leva a fumaça direto ao teto, onde ficam os detectores.\n"
+            "- **Resfriamento contínuo:** A convecção natural dissipa o calor do material em combustão."
+        ),
+        "home.space_title": "Em Queda Livre Orbital (~0g Microgravidade)",
+        "home.space_points": (
+            "- **Chama esférica:** Sem direção ascendente, os gases aquecidos formam uma esfera simétrica ao redor do combustível.\n"
+            "- **Difusão e ventilação:** O oxigênio chega ao fogo principalmente por difusão lenta ou pelos ventiladores da cabine.\n"
+            "- **Fumaça em suspensão:** Partículas de fuligem crescem e derivam devagar com o fluxo de ar da nave.\n"
+            "- **Chamas frias possíveis:** Certos combustíveis líquidos continuam reagindo abaixo da temperatura de chamas quentes."
+        ),
+        "home.glossary_title": "Termos Científicos Explicados de Forma Simples",
+        "home.archive_title": "Acervo Real da NASA Carregado Neste Aplicativo",
         "home.what_title": "Por que o fogo é diferente em queda livre (microgravidade)?",
         "home.what_body": (
             "Na Terra, gases quentes da combustão são mais leves que o ar frio ao redor, gerando **empuxo (convecção natural)**: "
@@ -823,8 +1140,17 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "home.metric_docs": "Originais NASA",
         "home.metric_tables": "Tabelas Extraídas",
         "home.metric_chunks": "Trechos Indexados",
+        "home.metric_chunks_semantic": "Trechos Semânticos (Tokens)",
+        "home.metric_chunks_lexical": "Trechos Estruturais de Busca",
+        "home.chunk_caption_semantic": (
+            "{chunks} trechos com janelamento por tokens indexados com embeddings multilíngues locais (`{model}`) em {docs} arquivos NASA preservados."
+        ),
+        "home.chunk_caption_lexical": (
+            "{chunks} segmentos estruturais indexados em modo determinístico offline em {docs} arquivos NASA preservados "
+            "(ative RAG_EMBEDDING_MODEL local para janelamento semântico por tokens)."
+        ),
         "home.extraction_caption": "Estado da extração: {processed} processados · {partial} parciais · {failed} com falha. Detalhes em Fontes e Metodologia.",
-        "home.pillars_title": "O que você pode investigar? Os 3 Pilares da Segurança contra Incêndio Espacial",
+        "home.pillars_title": "Três Pilares da Segurança contra Incêndio Espacial no NASA PSI",
         "home.pillar_prevention": "Prevenção",
         "home.pillar_prevention_studies": "BASS · BASS-II · Saffire-I / II / III",
         "home.pillar_prevention_desc": "Como materiais sólidos de cabine entram em ignição e propagam chamas sob fluxos de ar e níveis de O₂ em microgravidade.",
@@ -835,21 +1161,6 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "home.pillar_suppression_studies": "FLEX · FLEX-2",
         "home.pillar_suppression_desc": "Como gotas de combustível queimam, formam chamas frias e se extinguem conforme variam O₂ e diluentes inertes.",
         "home.pillar_coverage": "{imported} de {total} investigações prioritárias importadas",
-        "home.tour_title": "Roteiro Guiado de 3 Minutos (Caminho Recomendado)",
-        "home.tour_subtitle": "Siga estes 4 passos para percorrer todo o fluxo científico sem precisar de conhecimento prévio em combustão:",
-        "home.tour_s1_title": "1. Explorar Investigações NASA",
-        "home.tour_s1_desc": "Conheça os 9 estudos PSI organizados em Prevenção, Detecção e Supressão, com DOIs oficiais e ressalvas.",
-        "home.tour_s1_btn": "Abrir Investigações →",
-        "home.tour_s2_title": "2. Inspecionar Dados do FLEX (PSI-69)",
-        "home.tour_s2_desc": "Veja tabelas interativas, gráficos, glossário de variáveis e linhas originais de extinção de gotas.",
-        "home.tour_s2_btn": "Explorar Dados PSI-69 →",
-        "home.tour_s3_title": "3. Comparar Estudos com Rigor",
-        "home.tour_s3_desc": "Veja por que BASS-II e FLEX não devem ser misturados quando metodologias ou unidades diferem.",
-        "home.tour_s3_btn": "Comparar Estudos →",
-        "home.tour_s4_title": "4. Consultar o Assistente com Evidências",
-        "home.tour_s4_desc": "Execute buscas com filtros físicos (ex.: FLEX com 18%–25% de O₂) e citações verificáveis de página e linha.",
-        "home.tour_s4_btn": "Abrir Assistente →",
-        "home.start_cta": "Iniciar Roteiro Guiado (Abrir Explorador de Dados PSI-69)",
         "home.warning_conditions": (
             "Aviso de Integridade Científica: Tabelas experimentais frequentemente descrevem condições de ensaio ou catálogos. "
             "Sozinhas, não demonstram velocidade de propagação, eficácia de supressão nem certificação de segurança."
@@ -1335,6 +1646,235 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "docs.img_preview_err": "Pré-visualização indisponível para este arquivo.",
         "docs.formulas_found": "Fórmulas encontradas ({count})",
         "docs.preview_truncated": "\n… conteúdo truncado na prévia",
+
+        # Sidebar Mode & Guided Navigation
+        "sidebar.mode_label": "Nível de experiência",
+        "sidebar.mode_guided": "Exploração Guiada (Padrão)",
+        "sidebar.mode_advanced": "Pesquisa Avançada (Todos os Controles)",
+        "sidebar.mode_help": (
+            "A Exploração Guiada destaca explicações científicas claras e mantém filtros avançados, hashes "
+            "e diagnósticos técnicos recolhidos. A Pesquisa Avançada exibe todas as ferramentas diretamente."
+        ),
+        "sidebar.exit_journey": "Sair da Jornada Guiada",
+        "sidebar.return_journey": "← Voltar à Jornada Guiada (Passo {step} de {total})",
+        "sidebar.journey_banner": (
+            "Você abriu **{study_id}** a partir de uma Jornada Guiada. Explore tabelas e gráficos da NASA aqui "
+            "e clique no botão acima quando quiser retomar o Passo {step}."
+        ),
+
+        # Beginner Glossary
+        "glossary.microgravity_term": "Microgravidade (~0g)",
+        "glossary.microgravity_def": (
+            "Condição contínua de queda livre em órbita: a gravidade curva a trajetória da nave, mas ar e chamas flutuam juntos sem empuxo ascendente."
+        ),
+        "glossary.o2_term": "Fração Molar de Oxigênio (O₂ mol frac)",
+        "glossary.o2_def": (
+            "Proporção de moléculas na câmara de teste que são oxigênio. Como referência, `0.21` equivale a 21% de O₂ — próximo ao ar atmosférico terrestre."
+        ),
+        "glossary.drop_diam_term": "Diâmetro da Gota (mm)",
+        "glossary.drop_diam_def": (
+            "Largura de uma gota esférica de combustível líquido suspensa em câmara selada (tipicamente 1 a 5 mm) para medir queima e extinção."
+        ),
+        "glossary.psi_term": "Repositório NASA PSI",
+        "glossary.psi_def": (
+            "Banco público Physical Sciences Informatics da NASA com arquivos reais de experimentos realizados na ISS e em naves orbitais."
+        ),
+
+        # Guided Journeys Shared Controls
+        "journey.badge_j1": "Jornada Guiada 1 · Entendendo o Fogo em Microgravidade",
+        "journey.badge_j2": "Jornada Guiada 2 · Segurança contra Incêndio em Espaçonaves",
+        "journey.step_indicator": "Passo {current} de {total}",
+        "journey.back": "← Voltar",
+        "journey.continue": "Continuar →",
+        "journey.restart": "Reiniciar Jornada",
+        "journey.exit": "Voltar ao Início",
+        "journey.open_advanced": "Detalhes técnicos e proveniência deste passo",
+
+        # Journey 1 — Understanding Fire in Microgravity
+        "j1.s1_title": "1. Por Que o Fogo se Comporta Diferente em Microgravidade",
+        "j1.s1_purpose": "Objetivo: Construir intuição física sobre gravidade, empuxo e combustão antes de abrir tabelas espaciais.",
+        "j1.s1_explain": (
+            "Na Terra, os gases quentes da chama se expandem e ficam menos densos que o ar frio ao redor, fazendo a **gravidade puxar o ar frio por baixo e empurrar o gás quente para cima**. "
+            "Essa corrente ascendente alonga a chama em seu formato clássico de gota amarela.\n\n"
+            "Em queda livre orbital, o ar frio e o gás quente têm o mesmo peso relativo na cabine — **o empuxo desaparece**. "
+            "Em vez de subir, os produtos da combustão permanecem ao redor do combustível enquanto o oxigênio entra devagar por difusão ou ventilação, "
+            "formando uma **chama esférica azulada** e discreta."
+        ),
+        "j1.s1_callout_title": "Comparação Interativa: Escolha um Efeito Físico (1g vs. 0g)",
+        "j1.s1_aspect_label": "Selecione qual aspecto do fogo deseja comparar:",
+        "j1.s1_aspect_shape": "Formato da Chama (Gota vs. Esfera)",
+        "j1.s1_aspect_o2": "Como o Oxigênio Chega ao Fogo",
+        "j1.s1_aspect_temp": "Chamas Quentes vs. Chamas Frias",
+        "j1.s1_aspect_smoke": "Comportamento da Fumaça e Fuligem",
+        "j1.s1_desc_shape": (
+            "**Na Terra (`1g`):** O empuxo estica os gases aquecidos para cima formando uma chama em gota.\n\n"
+            "**Em Órbita (`~0g`):** Sem 'em cima' nem 'embaixo' para o ar quente subir, a difusão simétrica molda uma **chama esférica**."
+        ),
+        "j1.s1_desc_o2": (
+            "**Na Terra (`1g`):** Plumas ascendentes renovam o oxigênio continuamente na base da chama.\n\n"
+            "**Em Órbita (`~0g`):** O oxigênio chega devagar por difusão molecular — ou pela ventilação da cabine — alterando o tempo de queima e a extinção."
+        ),
+        "j1.s1_desc_temp": (
+            "**Em Órbita (`~0g`):** Como calor e vapores de combustível permanecem ao redor da gota sem escapar por convecção, os experimentos FLEX da NASA registraram transições para **chamas frias** de baixa temperatura após o apagamento da chama visível."
+        ),
+        "j1.s1_desc_smoke": (
+            "**Na Terra (`1g`):** O empuxo leva a fumaça rapidamente até detectores no teto.\n\n"
+            "**Em Órbita (`~0g`):** Sem convecção ascendente, partículas de fuligem permanecem suspensas, crescem por aglomeração e seguem o fluxo de ventilação."
+        ),
+
+        # Journey 1 Step 2
+        "j1.s2_title": "2. Conheça o Experimento NASA FLEX (PSI-69)",
+        "j1.s2_purpose": "Objetivo: Ver o que os astronautas realmente testaram na ISS e observar uma página original do guia NASA.",
+        "j1.s2_explain": (
+            "Dentro da Microgravity Science Glovebox da Estação Espacial Internacional, o **Flame Extinguishment Experiment (FLEX · PSI-69)** "
+            "investigou como pequenas gotas suspensas de combustíveis líquidos — como **n-heptano** e **metanol** (tipicamente **1 a 5 mm** de diâmetro) — entram em ignição, formam chamas esféricas e se extinguem "
+            "quando variam a fração de oxigênio (`O2 mol frac`) e gases inertes (`N2`, `He`, `CO2`, `Xe`).\n\n"
+            "Veja abaixo como o estudo é documentado no arquivo original da NASA antes de analisarmos seus dados:"
+        ),
+        "j1.s2_pdf_caption": "Prévia real do PDF NASA PSI-69 (`researchers_guide.pdf`, página original {page})",
+        "j1.s2_pdf_unavailable": "Prévia em imagem da página PDF indisponível neste ambiente; o texto extraído e o SHA-256 seguem preservados.",
+        "j1.s2_btn_explorer": "Abrir PSI-69 no Explorador Completo →",
+
+        # Journey 1 Step 3
+        "j1.s3_title": "3. Inspecionar e Interpretar Evidências Reais da NASA",
+        "j1.s3_purpose": "Objetivo: Ler um gráfico real do estudo PSI-69 e trechos verificados da NASA com guia explicativo.",
+        "j1.s3_explain": (
+            "Abaixo estão dados quantitativos reais extraídos diretamente do arquivo CSV do estudo **PSI-69 (FLEX)**. "
+            "Escolha uma visualização para distinguir condições testadas pela NASA de valores que exigem ressalva de unidade."
+        ),
+        "j1.s3_view_label": "Escolha uma visão real dos dados PSI-69:",
+        "j1.s3_opt_extinction": "Atmosfera Testada: Concentração de Oxigênio (O₂) vs. Diâmetro da Gota (mm)",
+        "j1.s3_opt_burning": "Verificação de Valor Bruto: Concentração de Oxigênio (O₂) vs. 'Burning rate; mm' (Com Ressalva de Unidade)",
+        "j1.s3_evidence_title": "Trechos Verificados da NASA Recuperados para o PSI-69",
+        "j1.s3_chart_missing": "A tabela numérica interativa do PSI-69 não está carregada nesta amostra; os trechos documentais verificados seguem abaixo.",
+
+        # Journey 1 Step 4
+        "j1.s4_title": "4. Descobertas Científicas, Proveniência e Limitações",
+        "j1.s4_purpose": "Objetivo: Sintetizar o que o conjunto PSI-69 comprova de fato e onde começam os limites da evidência.",
+        "j1.s4_learned_title": "O Que as Evidências Verificadas da NASA Mostram",
+        "j1.s4_learned_body": (
+            "- **Chamas esféricas respondem diretamente ao nível de oxigênio e diluentes:** As tabelas do PSI-69 documentam frações molares de O₂ (`O2 mol frac`), pressões e diâmetros iniciais de gota em corridas orbitais reais.\n"
+            "- **Dinâmica de duas etapas e chamas frias:** Documentos do FLEX registram regimes de chama fria persistentes após a extinção visual.\n"
+            "- **Anomalias documentais preservadas com transparência:** Nossa auditoria mantém o aviso real da capa (`FLEX-2` dentro do pacote PSI-69) e sinaliza colunas como `Burning rate; mm` sem adivinhar unidades ausentes."
+        ),
+        "j1.s4_limits_title": "O Que Este Experimento NÃO Comprova Sozinho",
+        "j1.s4_limits_body": (
+            "- **Gotas isoladas de 1–5 mm** em câmara fechada **não** equivalem a incêndios reais em cabos, espumas ou tecidos de cabine.\n"
+            "- Linhas com composições de câmara (`O2 mol frac`, `N2`, pressão) documentam **condições de ensaio**, não certificação de extinção operacional.\n"
+            "- Tabelas de gotas (`PSI-69`) não podem ser somadas diretamente com propagação em sólidos (`PSI-25 · BASS-II`) sem verificar geometria e unidades."
+        ),
+        "j1.s4_next_title": "Próximos Passos Recomendados",
+        "j1.s4_btn_j2": "Ir para Jornada 2: Segurança contra Incêndio Espacial →",
+        "j1.s4_btn_assistant": "Perguntar ao Assistente sobre o FLEX →",
+        "j1.s4_btn_explorer": "Abrir PSI-69 no Explorador de Dados →",
+
+        # Journey 2 — Fire Safety in Spacecraft
+        "j2.s1_title": "1. Por Que Incêndios São um Risco Único em Espaçonaves",
+        "j2.s1_purpose": "Objetivo: Compreender por que a exploração orbital altera ignição, detecção de fumaça e combate ao fogo.",
+        "j2.s1_explain": (
+            "Em uma nave espacial, a tripulação não pode evacuar para o exterior nem abrir janelas sem risco de despressurização. "
+            "Ventiladores contínuos circulam o ar por cabos, baterias e painéis — fazendo o fogo seguir dinâmicas muito diferentes das de um ambiente na Terra.\n\n"
+            "As investigações de combustão do acervo NASA PSI atacam três questões críticas de engenharia:"
+        ),
+        "j2.s1_risk_cards": (
+            "- **Ignição e Propagação em Materiais:** Futuras missões profundas podem operar com **maior fração de oxigênio e menor pressão** — exigindo dados reais de como polímeros e tecidos queimam sob ventilação lenta.\n"
+            "- **Fumaça Sem Empuxo e Alarmes Tardios:** Sem correntes ascendentes até o teto, aerossóis de fumaça coalescem de maneira diferente em microgravidade, exigindo sensores calibrados para partículas espaciais reais.\n"
+            "- **Limites de Extinção:** Supressão por diluentes ou redução de oxigênio se comporta de outro modo quando o empuxo desaparece e podem surgir **chamas frias**."
+        ),
+
+        # Journey 2 Step 2
+        "j2.s2_title": "2. Prevenção, Detecção e Supressão no Acervo NASA PSI",
+        "j2.s2_purpose": "Objetivo: Selecionar um pilar de segurança para ver quais estudos autênticos da NASA o investigam.",
+        "j2.s2_pillar_select": "Escolha uma camada de defesa contra incêndio espacial:",
+        "j2.s2_pillar_prevention_detail": (
+            "**Estudos no acervo:** `BASS (PSI-26)`, `BASS-II (PSI-25)`, `Saffire-I (PSI-98)`, `Saffire-II (PSI-99)`, `Saffire-III (PSI-100)`\n\n"
+            "**Foco de segurança:** Medir como **combustíveis sólidos** (polímeros, compósitos de algodão/fibra, amostras tipo fio) entram em ignição e propagam chamas sob diferentes velocidades de ar e níveis de O₂."
+        ),
+        "j2.s2_pillar_detection_detail": (
+            "**Estudos no acervo:** `SAME (PSI-102)`, `SAME-R (PSI-101)`\n\n"
+            "**Foco de segurança:** Caracterizar a **distribuição de tamanho de partículas de fumaça e aerossóis** gerados por materiais espaciais superaquecidos em microgravidade para calibrar detectores sem falsos alarmes ou falhas."
+        ),
+        "j2.s2_pillar_suppression_detail": (
+            "**Estudos no acervo:** `FLEX (PSI-69)`, `FLEX-2 (PSI-68)`\n\n"
+            "**Foco de segurança:** Determinar **limites de extinção**, efeito de gases inertes, concentração mínima de oxigênio e tempo de vida de gotas em microgravidade."
+        ),
+        "j2.s2_loaded_studies": "Investigações NASA carregadas neste pilar ({count}):",
+
+        # Journey 2 Step 3
+        "j2.s3_title": "3. Examinar Evidências Reais de Segurança Espacial",
+        "j2.s3_purpose": "Objetivo: Inspecionar gráficos, PDFs e trechos reais de Prevenção (BASS-II), Detecção (SAME) e Supressão (FLEX).",
+        "j2.s3_focus_label": "Selecione uma evidência real para examinar:",
+        "j2.s3_focus_bass": "Prevenção · BASS-II (PSI-25) Dados de Chama em Combustível Sólido",
+        "j2.s3_focus_same": "Detecção · SAME (PSI-102) Relatório de Fumaça em Microgravidade",
+        "j2.s3_focus_compare": "Checagem entre Pilares · Por Que BASS-II (Prevenção) e FLEX (Supressão) Não Podem Ser Misturados",
+        "j2.s3_same_pdf_caption": "Prévia real do PDF NASA PSI-102 (Relatório final `SAME`, página {page})",
+        "j2.s3_compare_callout": (
+            "**Controle de Integridade Científica:** Embora `PSI-25 (BASS-II)` e `PSI-69 (FLEX)` investiguem segurança contra incêndio no espaço, "
+            "um mede **materiais sólidos sob fluxo de ar forçado** e o outro mede **gotas líquidas isoladas** em atmosfera parada. "
+            "Comparar lições científicas entre eles é útil — misturar seus números brutos no mesmo eixo seria metodologicamente errado."
+        ),
+
+        # Journey 2 Step 4
+        "j2.s4_title": "4. Como Esses Achados Orientam a Engenharia de Segurança",
+        "j2.s4_purpose": "Objetivo: Traduzir observações experimentais em sínteses de engenharia rigorosamente delimitadas pelos dados.",
+        "j2.s4_findings_title": "Implicações Científicas Fundamentadas Neste Acervo",
+        "j2.s4_findings_body": (
+            "- **Ventilação e Atmosfera de Cabine (Prevenção · BASS-II / Saffire):** Limites de inflamabilidade dependem **tanto da fração de oxigênio quanto da velocidade do fluxo de ar** — ventiladores de baixa velocidade podem sustentar combustão em sólidos.\n"
+            "- **Calibração de Detectores de Fumaça (Detecção · SAME):** A combustão em microgravidade gera **perfis de tamanho de partículas distintos** dos ensaios na Terra; detectores orbitais precisam considerar a física de aerossóis sem empuxo.\n"
+            "- **Supressão e Risco de Re-ignição (Supressão · FLEX):** Ensaios de gotas indicam que o apagamento visível pode deixar **química de chama fria** ou calor residual capaz de reacender se o O₂ subir."
+        ),
+        "j2.s4_caveats_title": "Fronteiras Reais de Escopo e Limitações",
+        "j2.s4_caveats_body": (
+            "- Os conjuntos PSI sustentam **compreensão científica e validação de hipóteses**, **não substituem certificação de voo de hardware**.\n"
+            "- Pacotes públicos da NASA variam em completude (`processed` vs. `partial` quando há arquivos auxiliares em formatos binários especializados).\n"
+            "- Toda afirmação exibida neste aplicativo pode ser rastreada até o arquivo fonte exato, página/linha e hash SHA-256."
+        ),
+        "j2.s4_next_title": "Continuar Explorando nas Ferramentas Completas",
+        "j2.s4_btn_compare": "Abrir Comparador de Estudos →",
+        "j2.s4_btn_assistant": "Consultar Assistente Sobre Segurança Espacial →",
+        "j2.s4_btn_explorer": "Inspecionar BASS-II (PSI-25) no Explorador →",
+
+        # Chart Explanations
+        "chart_guide.title": "Como Ler Este Gráfico",
+        "chart_guide.shows_label": "O que mostra:",
+        "chart_guide.axes_label": "Eixos e unidades:",
+        "chart_guide.source_label": "Fonte NASA e natureza dos dados:",
+        "chart_guide.interpret_label": "Como interpretar:",
+        "chart_guide.caution_label": "Ressalva importante:",
+        "chart_guide.term_help_title": "Glossário de variáveis e unidades desta visualização",
+        "chart_guide.role_measurement": "Observações experimentais / medições diretas",
+        "chart_guide.role_condition": "Condições de ensaio / parâmetros configurados na câmara",
+        "chart_guide.role_mixed": "Tabela mista (parâmetros de ensaio e variáveis observadas)",
+        "chart_guide.note_condition_only": (
+            "Os pontos mostram principalmente quais combinações de teste a NASA executou, e não uma curva física isolada de causa e efeito."
+        ),
+        "chart_guide.note_trend": (
+            "Leia da esquerda para a direita ao longo de `{x}` e observe como `{y}` sobe, cai ou se dispersa entre os ensaios registrados da NASA."
+        ),
+        "chart_guide.caution_default": (
+            "Aplica-se estritamente ao aparato, combustível e linhas documentadas em {study_id}; evite extrapolar diretamente para toda uma cabine espacial."
+        ),
+        "chart_guide.caution_burning_mm": (
+            "O cabeçalho original `'Burning rate; mm'` informa `'mm'` sem unidade de tempo (`'/s'`); verifique a definição no PDF NASA antes de citar velocidade de queima."
+        ),
+        "chart_guide.caution_series_mode": "Ajuste derivado ativo no gráfico: `{mode}` (os dados originais seguem intactos na tabela).",
+        "chart_guide.explorer_controls_label": "Personalizar eixos, filtros ou transformações (Controles Avançados)",
+        "chart_guide.heatmap_shows": "Matriz de correlação de Spearman entre colunas numéricas de `{dataset}`.",
+        "chart_guide.heatmap_caution": "Correlação mostra variação conjunta nestas linhas — nunca comprova causalidade física isoladamente.",
+
+        # Assistant Plain-Language Guide
+        "ast_guide.filters_expander": "Filtros avançados, seleção de estudos e diagnóstico do índice",
+        "ast_guide.examples_hint": "Clique em uma pergunta introdutória (executa automaticamente):",
+        "ast_guide.summary_title": "Guia em Linguagem Simples Sobre Estes Resultados",
+        "ast_guide.summary_counts": "Foram encontrados **{matches}** trecho(s) ou linha(s) verificados em **{studies}** investigação(ões) NASA: {study_list}.",
+        "ast_guide.summary_how": (
+            "Como validar cada cartão abaixo: confira o **rótulo de evidência** (`Medição`, `Condição de Ensaio` ou `Contexto`) "
+            "antes de citar valores e use **Ver fonte exata** para inspecionar arquivo, página/linha e hash SHA-256."
+        ),
+        "ast_guide.summary_no_llm": (
+            "Executando em **Modo de Recuperação de Evidências** (LLM externo desativado): o resultado abaixo exibe registros literais da NASA sem síntese especulativa."
+        ),
+        "ast_guide.summary_caveat_prefix": "Principal limite científico entre os estudos encontrados: ",
     },
 }
 

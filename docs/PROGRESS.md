@@ -11,10 +11,12 @@
 - **Internacionalização centralizada (`src/i18n.py`)**:
   - Padrão inicial **English (`en`)** com alternador visível **`English (EN)` / `Português (PT-BR)`** na barra lateral persistido em `st.session_state`.
   - Traduções centralizadas para navegação canônica, cards dos 9 estudos PSI + guias NASA, glossário, gráficos/tabelas, comparador, ranking, assistente, revisão visual e metodologia — mantendo intactos títulos NASA, DOIs, hashes SHA-256, cabeçalhos originais e valores brutos.
-- **Redesign de UX (`app.py`, `src/scientific_ui.py`, `src/views.py`)**:
-  - Navegação intuitiva em 7 áreas (`Home / Overview`, `Investigations`, `Data Explorer`, `Compare`, `Scientific Assistant`, `Visual Page Review`, `Sources & Methodology`).
-  - `Home / Overview` com explicação de microgravidade (*Flame in Freefall*), 3 pilares (*Prevenção / Detecção / Supressão*) e tour guiado em 4 passos.
-  - `Data Explorer` com seletor direto no topo (padrão `PSI-69`), glossário colapsável de variáveis/unidades e proteção `is_public_readonly()` que desabilita uploads/mutações em ambiente público.
-  - `Scientific Assistant` com 5 perguntas de exemplo clicáveis e divulgação explícita quando o LLM externo está não configurado.
-  - Página estática opcional bilíngue para GitHub Pages criada em `docs/index.html`.
+- **Redesign de UX Orientado à Descoberta (`src/guided_journeys.py`, `src/scientific_ui.py`, `src/views.py`, `app.py`)**:
+  - **Home orientada à descoberta**: Título *"Explore the Science of Fire in Space"*, explicação simples de `1g` vs. `~0g`, glossário introdutório opcional e 3 experiências iniciais explícitas (**A. Discover How Fire Behaves**, **B. Investigate Spacecraft Fire Safety**, **C. Explore Scientific Data**).
+  - **Duas Jornadas Guiadas em 4 passos (`src/guided_journeys.py`)**: *Journey 1* (física de queda livre, `PSI-69 · FLEX`, prévia PDF p. 36, gráfico Plotly interativo + guia de leitura e achados/limitações) e *Journey 2* (risco espacial, seletor de 3 pilares Prevenção/Detecção/Supressão, evidências `PSI-25 · BASS-II`, `PSI-102 · SAME` p. 13 e alerta metodológico), com persistência em `st.session_state`, controles `← Back` / `Continue →` e botão de retorno contínuo ao visitar seções avançadas.
+  - **Divulgação progressiva (`Guided Exploration` vs. `Advanced Research`)**: seletor de nível de experiência na barra lateral ocultando controles `⚙ ...`, filtros numéricos, diagnósticos de índice e caminhos locais sob painéis recolhidos para iniciantes.
+  - **Explicação de gráficos e resultados**: componente *"How to Read This Chart"* exibido abaixo dos gráficos no Data Explorer e nas jornadas (eixos, unidades, papel dos dados e ressalvas como `'Burning rate; mm'`); no Assistente Científico, perguntas de exemplo executam imediatamente com *"Plain-Language Guide to These Results"* acima das citações.
+  - **Bootstrap & chunks verificados**: `src/pipeline.py` atualiza automaticamente o índice semântico local (**2,711 trechos por janela de tokens** com `paraphrase-multilingual-MiniLM-L12-v2`) quando `.env` aponta modelo local, mantendo **1,517 segmentos estruturais** determinísticos (`lexical-vectors`) em clones limpos ou nuvem sem peso de modelo.
+  - **Regressão & QA**: `tests/test_guided_ux.py` (6 testes E2E de jornada/UX/PT-BR), totalizando **105 testes passando** offline e validação ao vivo no navegador desktop (`1440x1000`) e mobile (`375x812`).
+  - Página estática opcional bilíngue para GitHub Pages em `docs/index.html`.
 - **Próxima ação manual do usuário**: enviar os commits para o GitHub e conectar `app.py` no Streamlit Community Cloud conforme `docs/DEPLOYMENT.md` e `docs/ANTIGRAVITY_HANDOFF.md`.

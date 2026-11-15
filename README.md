@@ -13,13 +13,19 @@ NASA's PSI repository spreads these experiments across heterogeneous CSV spreads
 
 ---
 
-## Workspace Structure (7 Sections)
+## Workspace Structure & Guided Discovery
 
-1. **Home / Overview (`home`)**: Visual introduction to microgravity combustion, spacecraft fire-safety pillars, summary metrics, and a 1-click **3-Minute Guided Tour**.
+On arrival, **Home / Overview (`home`)** acts as an interactive science exhibit (*"Explore the Science of Fire in Space"*) with plain-English microgravity physics (1g vs. 0g), a beginner glossary, progressive disclosure (**Guided Exploration** default vs. **Advanced Research** in the sidebar), and **three starting experiences**:
+
+- **Experience A — Discover How Fire Behaves**: Interactive 4-step **Guided Journey 1** (`src/guided_journeys.py`) covering 1g vs. 0g buoyancy, NASA's **FLEX (`PSI-69`)** experiment and ISS PDF page preview, live interactive Plotly exploration paired with a plain-language *"How to Read This Chart"* guide, and documented caveats (`Burning rate; mm`, `FLEX-2` PDF notice).
+- **Experience B — Investigate Spacecraft Fire Safety**: Interactive 4-step **Guided Journey 2** exploring cabin hazards across **Prevention** (`BASS`, `BASS-II`, `Saffire I–III`), **Detection** (`SAME`, `SAME-R`), and **Suppression** (`FLEX`, `FLEX-2`), live inspection of `PSI-25 · BASS-II` plots and `PSI-102 · SAME` reports, method-boundary guardrails, and 1-click transition to advanced comparison/assistant tools with a persistent *Return to Guided Journey* control.
+- **Experience C — Explore Scientific Data**: Direct access to all 7 workspace sections:
+
+1. **Home / Overview (`home`)**: Discovery-first entry, Earth vs. microgravity contrast, verified NASA archive metrics (**2,711** local semantic token-window chunks or **1,517** deterministic offline structural chunks), and starting experiences A/B/C.
 2. **Investigations (`investigations`)**: Searchable catalog of 9 NASA PSI studies + 2 official NASA reference guides with permanent NASA PSI URLs, confirmed DOIs, objectives, safety relevance, caveats, and direct jump into Data Explorer.
-3. **Data Explorer (`explorer`)**: Study selector (defaulting to `PSI-69 · FLEX`), collapsible **Variable & Unit Glossary**, interactive Plotly charts, descriptive statistics, reversible column fixes, source tables with original row numbers, document integrity & SHA-256 verification, in-PDF keyword reader, and ISA-Tab metadata.
+3. **Data Explorer (`explorer`)**: Study selector (defaulting to `PSI-69 · FLEX`), collapsible **Variable & Unit Glossary**, interactive Plotly charts paired with inline **How to Read This Chart** explainers, descriptive statistics, progressive-disclosure engineering controls (`⚙ ...`), source tables with original row numbers, document integrity & SHA-256 verification, in-PDF keyword reader, and ISA-Tab metadata.
 4. **Compare (`compare`)**: Guided cross-study schema and methodology audit (with quick presets such as *FLEX vs BASS-II*, *SAME vs SAME-R*, *Saffire-I vs Saffire-II*) plus a deterministic **0–100 Reading Priority Ranking** (never a safety score).
-5. **Scientific Assistant (`assistant`)**: Hybrid retrieval engine (SQLite **FTS5** + local multilingual embeddings when configured or deterministic EN/PT lexical vectors) with row-level physical unit filters (`O₂`, `psia`, `cm/s`, fuel), clickable example queries, and strict extractive grounding when an external LLM is configured.
+5. **Scientific Assistant (`assistant`)**: Hybrid retrieval engine (SQLite **FTS5** + local multilingual embeddings when `RAG_EMBEDDING_MODEL` is configured, yielding **2,711** token-window chunks, or **1,517** structural segments via deterministic offline lexical vectors), progressive-disclosure filters/diagnostics, instant-executing example questions, and a **Plain-Language Guide to These Results** card above cited NASA passages.
 6. **Visual Page Review (`visual_review`)**: Offline rendered PDF diagram inspector with optional opt-in VLM qualitative review strictly tagged as `inference` (`needs_human_review = True`).
 7. **Sources & Methodology (`sources`)**: Full provenance, unit normalization policy, known scientific caveats, verification hashes, and archive synchronization controls (read-only when publicly deployed).
 
@@ -65,7 +71,7 @@ On cold start, `app.py` invokes `ensure_scientific_bootstrap()`, initializing `d
 
 ```powershell
 .\.venv\Scripts\python.exe -m ruff check app.py src scripts tests
-.\.venv\Scripts\python.exe -m mypy src/units.py src/scientific_store.py src/comparison.py src/visual_review.py src/local_jobs.py src/pipeline.py src/retrieval.py src/assistant.py src/i18n.py
+.\.venv\Scripts\python.exe -m mypy src/units.py src/scientific_store.py src/comparison.py src/visual_review.py src/local_jobs.py src/pipeline.py src/retrieval.py src/assistant.py src/i18n.py src/guided_journeys.py
 .\.venv\Scripts\python.exe -m compileall -q app.py src scripts tests
 .\.venv\Scripts\python.exe -m pip check
 $env:HF_HUB_OFFLINE='1'; $env:TRANSFORMERS_OFFLINE='1'; .\.venv\Scripts\python.exe -m pytest -q

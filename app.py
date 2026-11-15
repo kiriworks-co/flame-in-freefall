@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 
 from src import scientific_ui, views
 from src.extractors import SCHEMA_VERSION, SUPPORTED_EXTENSIONS
+from src.guided_journeys import TOTAL_STEPS, current_journey, stop_journey
 from src.i18n import (
     DEFAULT_LANG,
     LANGUAGE_OPTIONS,
@@ -176,38 +177,41 @@ def _show_overview(experiment: dict) -> None:
 
     views.show_study_overview(experiment)
 
-    if not readonly:
-        st.markdown(f"**{t('exp.local_folder', lang)}**")
-        st.code(str(DATA_DIR / experiment["folder"]), language=None)
-        with st.expander(t("exp.edit_meta", lang)):
-            with st.form(f"edit-{experiment['id']}"):
-                name = st.text_input(t("exp.edit_name", lang), value=experiment.get("name", ""))
-                description = st.text_area(t("exp.edit_desc", lang), value=experiment.get("description", ""), height=90)
-                submitted = st.form_submit_button(t("exp.save_btn", lang), type="primary")
-            if submitted:
-                try:
-                    update_experiment(experiment, name, description)
-                    st.rerun()
-                except ValueError as error:
-                    st.error(str(error))
+    is_advanced = st.session_state.get("interaction_mode", "guided") == "advanced"
+    if not readonly or documents:
+        with st.expander(t("journey.open_advanced", lang), expanded=is_advanced):
+            if not readonly:
+                st.markdown(f"**{t('exp.local_folder', lang)}**")
+                st.code(str(DATA_DIR / experiment["folder"]), language=None)
+                with st.expander(t("exp.edit_meta", lang)):
+                    with st.form(f"edit-{experiment['id']}"):
+                        name = st.text_input(t("exp.edit_name", lang), value=experiment.get("name", ""))
+                        description = st.text_area(t("exp.edit_desc", lang), value=experiment.get("description", ""), height=90)
+                        submitted = st.form_submit_button(t("exp.save_btn", lang), type="primary")
+                    if submitted:
+                        try:
+                            update_experiment(experiment, name, description)
+                            st.rerun()
+                        except ValueError as error:
+                            st.error(str(error))
 
-    if documents:
-        st.markdown(f"**{t('exp.recent_files', lang)}**")
-        recent = sorted(documents, key=lambda doc: doc.get("uploaded_at", ""), reverse=True)[:6]
-        st.dataframe(
-            pd.DataFrame([
-                {
-                    t("exp.col_file", lang): doc.get("name"),
-                    t("exp.col_format", lang): doc.get("extension", "").lstrip(".").upper(),
-                    t("exp.col_extraction", lang): status_label(doc.get("status"), lang),
-                    t("exp.col_tables", lang): doc.get("table_count", 0),
-                    t("exp.col_imported", lang): _date_label(doc.get("uploaded_at")),
-                }
-                for doc in recent
-            ]),
-            hide_index=True,
-            use_container_width=True,
-        )
+            if documents:
+                st.markdown(f"**{t('exp.recent_files', lang)}**")
+                recent = sorted(documents, key=lambda doc: doc.get("uploaded_at", ""), reverse=True)[:6]
+                st.dataframe(
+                    pd.DataFrame([
+                        {
+                            t("exp.col_file", lang): doc.get("name"),
+                            t("exp.col_format", lang): doc.get("extension", "").lstrip(".").upper(),
+                            t("exp.col_extraction", lang): status_label(doc.get("status"), lang),
+                            t("exp.col_tables", lang): doc.get("table_count", 0),
+                            t("exp.col_imported", lang): _date_label(doc.get("uploaded_at")),
+                        }
+                        for doc in recent
+                    ]),
+                    hide_index=True,
+                    use_container_width=True,
+                )
 
 
 def _show_documents(experiment: dict) -> None:
@@ -422,6 +426,10 @@ def _show_data_explorer(experiments: list[dict]) -> None:
         views.show_metadata(experiment)
 
 
+def _return_to_journey() -> None:
+    st.session_state["workspace_section"] = "home"
+
+
 def main() -> None:
     st.session_state.setdefault("lang", DEFAULT_LANG)
     if "lang_selector" in st.session_state:
@@ -431,9 +439,11 @@ def main() -> None:
 
     lang = get_lang()
     st.session_state["workspace_section"] = normalize_section(st.session_state.get("workspace_section"))
+    st.session_state.setdefault("interaction_mode", "guided")
 
     experiments = list_experiments()
     readonly = is_public_readonly()
+    jid, jstep = current_journey()
 
     with st.sidebar:
         st.markdown(f"## {t('app.title', lang)}")
@@ -454,8 +464,31 @@ def main() -> None:
             key="workspace_section",
         )
         st.divider()
+        st.radio(
+            t("sidebar.mode_label", lang),
+            options=["guided", "advanced"],
+            format_func=lambda mode: t(f"sidebar.mode_{mode}", lang),
+            help=t("sidebar.mode_help", lang),
+            key="interaction_mode",
+        )
+        if jid is not None:
+            st.button(
+                t("sidebar.exit_journey", lang),
+                key="sidebar-exit-journey",
+                use_container_width=True,
+                on_click=stop_journey,
+            )
+        st.divider()
         st.caption(t("sidebar.readonly_badge", lang) if readonly else t("sidebar.local_badge", lang))
         st.caption(t("sidebar.footer_note", lang))
+
+    if jid is not None and section != "home":
+        st.button(
+            t("sidebar.return_journey", lang, step=jstep, total=TOTAL_STEPS),
+            type="primary",
+            key="active-return-journey",
+            on_click=_return_to_journey,
+        )
 
     if section == "explorer":
         _show_data_explorer(experiments)

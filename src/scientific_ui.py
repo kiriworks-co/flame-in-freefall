@@ -114,16 +114,24 @@ def _retrieval_index(model_path: str):
     return RetrievalIndex()
 
 
-def _indexed_chunk_count() -> int:
+def _indexed_chunk_info() -> tuple[int, str]:
+    """Return total indexed chunks and active chunking/vector mode from SQLite."""
     search_db = PROJECT_DIR / "data" / "search.sqlite3"
     if not search_db.exists():
-        return 0
+        return 0, "lexical-vectors"
     try:
         with sqlite3.connect(search_db) as conn:
-            row = conn.execute("SELECT count(*) FROM chunks").fetchone()
-        return int(row[0]) if row else 0
+            row = conn.execute("SELECT count(*), max(model) FROM chunks").fetchone()
+        if not row:
+            return 0, "lexical-vectors"
+        return int(row[0] or 0), str(row[1] or "lexical-vectors")
     except sqlite3.Error:
-        return 0
+        return 0, "lexical-vectors"
+
+
+def _indexed_chunk_count() -> int:
+    count, _mode = _indexed_chunk_info()
+    return count
 
 
 def catalog(experiments: list[dict]) -> list[dict]:
@@ -171,34 +179,123 @@ def _study_id_for(experiments: list[dict], psi_id: str) -> str:
 
 
 def show_overview(experiments: list[dict]) -> None:
+    from .guided_journeys import render_active_journey, start_journey
+
+    if render_active_journey(experiments):
+        return
+
     lang = get_lang()
     st.title(t("home.title", lang))
-    st.markdown(f"<p class='psi-lead'>{t('home.lead', lang)}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p class='psi-lead'>{t('home.subtitle', lang)}</p>", unsafe_allow_html=True)
+    st.write(t("home.plain_intro", lang))
 
     records = catalog(experiments)
     documents = [doc for exp in experiments for doc in exp.get("documents", [])]
     flex_id = _study_id_for(experiments, "PSI-69")
-    bass2_id = _study_id_for(experiments, "PSI-25")
 
-    if flex_id:
+    st.header(t("home.start_title", lang))
+    c1, c2, c3 = st.columns(3, gap="medium")
+    with c1.container(border=True):
+        st.caption(t("home.exp_a_badge", lang))
+        st.subheader(t("home.exp_a_title", lang))
+        st.write(t("home.exp_a_desc", lang))
         st.button(
-            t("home.start_cta", lang),
+            t("home.exp_a_btn", lang),
             type="primary",
-            key="home-start-cta",
-            on_click=_open_experiment,
-            args=(flex_id,),
+            key="home-start-j1",
+            use_container_width=True,
+            on_click=start_journey,
+            args=("journey_1", 1),
         )
+    with c2.container(border=True):
+        st.caption(t("home.exp_b_badge", lang))
+        st.subheader(t("home.exp_b_title", lang))
+        st.write(t("home.exp_b_desc", lang))
+        st.button(
+            t("home.exp_b_btn", lang),
+            type="primary",
+            key="home-start-j2",
+            use_container_width=True,
+            on_click=start_journey,
+            args=("journey_2", 1),
+        )
+    with c3.container(border=True):
+        st.caption(t("home.exp_c_badge", lang))
+        st.subheader(t("home.exp_c_title", lang))
+        st.write(t("home.exp_c_desc", lang))
+        if flex_id:
+            st.button(
+                t("home.exp_c_btn_data", lang),
+                key="home-open-explorer",
+                use_container_width=True,
+                on_click=_open_experiment,
+                args=(flex_id,),
+            )
+        else:
+            st.button(
+                t("home.exp_c_btn_data", lang),
+                key="home-open-explorer",
+                use_container_width=True,
+                on_click=_jump_section,
+                args=("explorer",),
+            )
+        st.button(
+            t("home.exp_c_btn_assistant", lang),
+            key="home-open-assistant",
+            use_container_width=True,
+            on_click=_jump_section,
+            args=("assistant",),
+        )
+        st.button(
+            t("home.exp_c_btn_studies", lang),
+            key="home-open-studies",
+            use_container_width=True,
+            on_click=_jump_section,
+            args=("investigations",),
+            kwargs={"inv_pillar_filter": "All"},
+        )
+
+    st.header(t("home.compare_title", lang))
+    col_earth, col_space = st.columns(2, gap="medium")
+    with col_earth.container(border=True):
+        st.subheader(t("home.earth_title", lang))
+        st.markdown(t("home.earth_points", lang))
+    with col_space.container(border=True):
+        st.subheader(t("home.space_title", lang))
+        st.markdown(t("home.space_points", lang))
+
+    with st.expander(t("home.glossary_title", lang), expanded=False):
+        st.markdown(
+            f"- **{t('glossary.microgravity_term', lang)}:** {t('glossary.microgravity_def', lang)}\n"
+            f"- **{t('glossary.o2_term', lang)}:** {t('glossary.o2_def', lang)}\n"
+            f"- **{t('glossary.drop_diam_term', lang)}:** {t('glossary.drop_diam_def', lang)}\n"
+            f"- **{t('glossary.psi_term', lang)}:** {t('glossary.psi_def', lang)}"
+        )
+
+    st.subheader(t("home.archive_title", lang))
+    chunk_count, chunk_model = _indexed_chunk_info()
+    is_semantic = chunk_model.startswith("local-semantic:")
+    chunk_metric_label = t("home.metric_chunks_semantic" if is_semantic else "home.metric_chunks_lexical", lang)
 
     m1, m2, m3, m4 = st.columns(4)
     m1.metric(t("home.metric_studies", lang), sum(bool(row["experiment"]) for row in records))
     m2.metric(t("home.metric_docs", lang), len(documents))
     m3.metric(t("home.metric_tables", lang), sum(doc.get("table_count", 0) for doc in documents))
-    m4.metric(t("home.metric_chunks", lang), _indexed_chunk_count())
+    m4.metric(chunk_metric_label, chunk_count)
 
     failures = sum(doc.get("status") == "erro" for doc in documents)
     partial = sum(doc.get("status") == "parcial" for doc in documents)
+    raw_model = chunk_model.split(":", 1)[-1]
+    model_short = "local SentenceTransformer" if re.fullmatch(r"[0-9a-f]{32,40}", raw_model) else raw_model
+    chunk_note = (
+        t("home.chunk_caption_semantic", lang, chunks=chunk_count, docs=len(documents), model=model_short)
+        if is_semantic
+        else t("home.chunk_caption_lexical", lang, chunks=chunk_count, docs=len(documents))
+    )
     st.caption(
-        t(
+        chunk_note
+        + " "
+        + t(
             "home.extraction_caption",
             lang,
             processed=len(documents) - failures - partial,
@@ -206,67 +303,6 @@ def show_overview(experiments: list[dict]) -> None:
             failed=failures,
         )
     )
-
-    col_left, col_right = st.columns(2)
-    with col_left:
-        with st.container(border=True):
-            st.subheader(t("home.what_title", lang))
-            st.markdown(t("home.what_body", lang))
-    with col_right:
-        with st.container(border=True):
-            st.subheader(t("home.problem_title", lang))
-            st.markdown(t("home.problem_body", lang))
-
-    st.header(t("home.pillars_title", lang))
-    pillars = [
-        ("Prevention", "home.pillar_prevention", "home.pillar_prevention_studies", "home.pillar_prevention_desc"),
-        ("Detection", "home.pillar_detection", "home.pillar_detection_studies", "home.pillar_detection_desc"),
-        ("Suppression", "home.pillar_suppression", "home.pillar_suppression_studies", "home.pillar_suppression_desc"),
-    ]
-    p_cols = st.columns(3)
-    for idx, (pillar_key, title_k, studies_k, desc_k) in enumerate(pillars):
-        covered = [
-            r for r in records if _PILLAR_KEY_MAP.get(investigation_profile(r["id"], "en").get("pillar", ""), "") == pillar_key
-            or pillar_key.casefold() in r.get("category", "").casefold()
-        ]
-        pillar_label = t(title_k, lang)
-        with p_cols[idx]:
-            with st.container(border=True):
-                st.subheader(pillar_label)
-                st.caption(t(studies_k, lang))
-                st.write(t(desc_k, lang))
-                st.caption(t("home.pillar_coverage", lang, imported=sum(bool(r["experiment"]) for r in covered), total=len(covered)))
-                st.button(
-                    t("home.explore_pillar_btn", lang, pillar=pillar_label),
-                    key=f"home-pillar-{pillar_key}",
-                    use_container_width=True,
-                    on_click=_jump_section,
-                    args=("investigations",),
-                    kwargs={"inv_pillar_filter": pillar_key},
-                )
-
-    st.header(t("home.tour_title", lang))
-    st.write(t("home.tour_subtitle", lang))
-    t_cols = st.columns(2)
-    tour_steps = [
-        ("tour-1", "home.tour_s1_title", "home.tour_s1_desc", "home.tour_s1_btn", "investigations", {"inv_pillar_filter": "All"}),
-        ("tour-2", "home.tour_s2_title", "home.tour_s2_desc", "home.tour_s2_btn", "explorer", {"active_experiment_id": flex_id}),
-        ("tour-3", "home.tour_s3_title", "home.tour_s3_desc", "home.tour_s3_btn", "compare", {"cmp_selected_studies": [s for s in ["PSI-69", "PSI-25"] if s in {_study(e) for e in experiments}] or ([] if not bass2_id else [])}),
-        ("tour-4", "home.tour_s4_title", "home.tour_s4_desc", "home.tour_s4_btn", "assistant", {}),
-    ]
-    for idx, (btn_key, title_k, desc_k, btn_k, target_sec, updates) in enumerate(tour_steps):
-        with t_cols[idx % 2]:
-            with st.container(border=True):
-                st.markdown(f"**{t(title_k, lang)}**")
-                st.write(t(desc_k, lang))
-                st.button(
-                    t(btn_k, lang),
-                    key=f"home-{btn_key}",
-                    on_click=_jump_section,
-                    args=(target_sec,),
-                    kwargs=updates,
-                )
-
     st.warning(t("home.warning_conditions", lang))
     if not documents:
         st.info(t("home.no_docs", lang))
@@ -455,24 +491,46 @@ def _select_example_query(
     st.session_state["ast_pending_autorun"] = True
 
 
+def _render_evidence_summary(result: dict[str, Any], experiments: list[dict], lang: str) -> None:
+    """Summarize matched studies, evidence provenance, and scientific boundaries in plain language."""
+    ev_items = list(result.get("evidence") or [])
+    matched_studies: list[str] = []
+    for item in ev_items:
+        sid = str(item.get("study_id") or "")
+        if sid and sid not in matched_studies:
+            matched_studies.append(sid)
+
+    with st.container(border=True):
+        st.markdown(f"#### {t('ast_guide.summary_title', lang)}")
+        if ev_items:
+            st.markdown(
+                t(
+                    "ast_guide.summary_counts",
+                    lang,
+                    matches=len(ev_items),
+                    studies=len(matched_studies),
+                    study_list=", ".join(f"`{s}`" for s in matched_studies),
+                )
+            )
+            st.markdown(t("ast_guide.summary_how", lang))
+            top_caveat = investigation_profile(matched_studies[0], lang).get("caveat") if matched_studies else ""
+            if top_caveat:
+                st.caption(t("ast_guide.summary_caveat_prefix", lang) + str(top_caveat))
+        if result.get("mode") != "llm":
+            st.caption(t("ast_guide.summary_no_llm", lang))
+
+
 def show_search(experiments: list[dict]) -> None:
     lang = get_lang()
+    is_advanced = st.session_state.get("interaction_mode", "guided") == "advanced"
     st.title(t("ast.title", lang))
     st.caption(t("ast.subtitle", lang))
 
     index = _retrieval_index(os.getenv("RAG_EMBEDDING_MODEL", "").strip())
     has_llm = llm_configured()
-    st.caption(t("ast.mode_semantic", lang) if index.model is not None else t("ast.mode_lexical", lang))
-    st.caption(t("ast.mode_caption", lang, mode=index.mode))
-
-    if has_llm:
-        st.success(t("ast.llm_configured_banner", lang))
-    else:
-        st.info(t("ast.llm_unconfigured_banner", lang))
-
     studies = sorted({_study(e) for e in experiments})
 
-    st.subheader(t("ast.examples_title", lang))
+    st.caption(t("ast_guide.examples_hint", lang))
     examples = [
         ("ex1", "ast.ex1_label", "ast.ex1_q", ["PSI-69"], True, 0.18, 0.25),
         ("ex2", "ast.ex2_label", "ast.ex2_q", ["PSI-25"], False, 0.18, 0.25),
@@ -480,28 +538,39 @@ def show_search(experiments: list[dict]) -> None:
         ("ex4", "ast.ex4_label", "ast.ex4_q", ["PSI-98", "PSI-99", "PSI-100"], False, 0.18, 0.25),
         ("ex5", "ast.ex5_label", "ast.ex5_q", [], False, 0.18, 0.25),
     ]
-    ex_cols = st.columns(len(examples))
-    for idx, (ex_id, label_k, q_k, ex_studies, o2_on, o2_lo, o2_hi) in enumerate(examples):
-        ex_cols[idx].button(
-            t(label_k, lang),
-            key=f"ast-{ex_id}",
-            use_container_width=True,
-            on_click=_select_example_query,
-            args=(t(q_k, lang), ex_studies, studies, o2_on, o2_lo, o2_hi),
-        )
+    for start in range(0, len(examples), 3):
+        row_items = examples[start : start + 3]
+        ex_cols = st.columns(len(row_items))
+        for idx, (ex_id, label_k, q_k, ex_studies, o2_on, o2_lo, o2_hi) in enumerate(row_items):
+            ex_cols[idx].button(
+                t(label_k, lang),
+                key=f"ast-{ex_id}",
+                use_container_width=True,
+                on_click=_select_example_query,
+                args=(t(q_k, lang), ex_studies, studies, o2_on, o2_lo, o2_hi),
+            )
 
     st.session_state.setdefault("ast_question_input", t("ast.ex1_q", lang))
     st.session_state.setdefault("ast_studies_filter", [])
     st.session_state["ast_studies_filter"] = [s for s in st.session_state["ast_studies_filter"] if s in studies]
+    active_filter_set = bool(st.session_state.get("ast_studies_filter") or st.session_state.get("ast_o2_enabled"))
 
-    selected = st.multiselect(t("ast.studies_filter", lang), studies, key="ast_studies_filter")
+    with st.expander(t("ast_guide.filters_expander", lang), expanded=is_advanced or active_filter_set):
+        selected = st.multiselect(t("ast.studies_filter", lang), studies, key="ast_studies_filter")
+        st.caption(t("ast.mode_semantic", lang) if index.model is not None else t("ast.mode_lexical", lang))
+        st.caption(t("ast.mode_caption", lang, mode=index.mode))
+        if has_llm:
+            st.success(t("ast.llm_configured_banner", lang))
+        else:
+            st.info(t("ast.llm_unconfigured_banner", lang))
+
     with st.form("scientific-query"):
         question = st.text_area(
             t("ast.question_label", lang),
             help=t("ast.question_help", lang),
             key="ast_question_input",
         )
-        with st.expander(t("ast.filters_expander", lang)):
+        with st.expander(t("ast.filters_expander", lang), expanded=is_advanced):
             c_o1, c_o2, c_o3 = st.columns(3)
             oxygen = c_o1.checkbox(t("ast.o2_check", lang), key="ast_o2_enabled")
             o2min = c_o2.number_input(t("ast.o2_min", lang), min_value=0.0, max_value=1.0, value=0.18, step=0.01, key="ast_o2_min")
@@ -520,12 +589,12 @@ def show_search(experiments: list[dict]) -> None:
             fuel = st.text_input(t("ast.fuel_label", lang), placeholder=t("ast.fuel_ph", lang), key="ast_fuel_input")
             st.caption(t("ast.filters_note", lang))
 
-        use_llm = st.checkbox(
-            t("ast.use_llm", lang),
-            value=False,
-            disabled=not has_llm,
-            help=t("ast.use_llm_help", lang),
-        )
+            use_llm = st.checkbox(
+                t("ast.use_llm", lang),
+                value=False,
+                disabled=not has_llm,
+                help=t("ast.use_llm_help", lang),
+            )
         submitted = st.form_submit_button(t("ast.submit_btn", lang), type="primary")
 
     autorun = bool(st.session_state.pop("ast_pending_autorun", False))
@@ -568,6 +637,7 @@ def show_search(experiments: list[dict]) -> None:
         if context:
             st.caption(t("ast.last_query", lang, studies=context["studies"]))
             st.text(context["question"])
+        _render_evidence_summary(result, experiments, lang)
         # The assistant constructs this text and escapes source-authored Markdown.
         # Raw evidence remains inert st.text below; HTML is never enabled.
         st.markdown(result.get("text", ""), unsafe_allow_html=False)
