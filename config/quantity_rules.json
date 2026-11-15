@@ -1,0 +1,9 @@
+{
+  "_comentario": "Regras extras de classificação de colunas (antepostas às padrão). 'kind' é a grandeza; 'name' e 'unit' são expressões regulares. Exemplo abaixo desativado: renomeie 'rules_exemplo' para 'rules' para usar.",
+  "rules_exemplo": [
+    {"kind": "heat_flux", "name": "flux|fluxo", "unit": "^W/(m2|m²)$"},
+    {"kind": "velocity", "name": "velocity|velocidade|^u$", "unit": "^(m/s|cm/s|mm/s)$"}
+  ],
+  "rules": []
+}
+

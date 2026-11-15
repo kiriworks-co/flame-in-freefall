@@ -1,0 +1,435 @@
+{
+  "status": "processado",
+  "text": "Sample Number ,Material,Sample Thickness,Sample Length,Sample Width,Air Flow ,Direction,Camera 1,Camera 2\r\nS1,SIBAL Fabric,.33 cm,94 cm,40.6 cm,30 cm/s,Concurrent ,S1C1,S1C2\r\nS2,SIBAL Fabric,.33 cm,94 cm,40.6 cm,30 cm/s,Opposed,S2C1,S2C2\r\n",
+  "pages": [
+    {
+      "page": 1,
+      "location": "arquivo CSV",
+      "text": "Sample Number ,Material,Sample Thickness,Sample Length,Sample Width,Air Flow ,Direction,Camera 1,Camera 2\r\nS1,SIBAL Fabric,.33 cm,94 cm,40.6 cm,30 cm/s,Concurrent ,S1C1,S1C2\r\nS2,SIBAL Fabric,.33 cm,94 cm,40.6 cm,30 cm/s,Opposed,S2C1,S2C2\r\n"
+    }
+  ],
+  "tables": [
+    {
+      "name": "CSV",
+      "location": "arquivo CSV; intervalo A1:I3",
+      "header_row": 1,
+      "columns": [
+        "Sample Number",
+        "Material",
+        "Sample Thickness",
+        "Sample Length",
+        "Sample Width",
+        "Air Flow",
+        "Direction",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "original_headers": [
+        "Sample Number",
+        "Material",
+        "Sample Thickness",
+        "Sample Length",
+        "Sample Width",
+        "Air Flow",
+        "Direction",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "rows": [
+        [
+          "S1",
+          "SIBAL Fabric",
+          ".33 cm",
+          "94 cm",
+          "40.6 cm",
+          "30 cm/s",
+          "Concurrent",
+          "S1C1",
+          "S1C2"
+        ],
+        [
+          "S2",
+          "SIBAL Fabric",
+          ".33 cm",
+          "94 cm",
+          "40.6 cm",
+          "30 cm/s",
+          "Opposed",
+          "S2C1",
+          "S2C2"
+        ]
+      ],
+      "source_rows": [
+        2,
+        3
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "CSV",
+        "range": "A1:I3",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "catalog",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "Sample Number",
+          "base": "Sample Number",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Material",
+          "base": "Material",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Sample Thickness",
+          "base": "Sample Thickness",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Sample Length",
+          "base": "Sample Length",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Sample Width",
+          "base": "Sample Width",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Air Flow",
+          "base": "Air Flow",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Direction",
+          "base": "Direction",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Camera 1",
+          "base": "Camera 1",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Camera 2",
+          "base": "Camera 2",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        }
+      ],
+      "chart": {
+        "type": "catalog",
+        "x": null,
+        "y": []
+      },
+      "flags": [],
+      "evidence_kind": "condition",
+      "field_classification": [
+        {
+          "header": "Sample Number ",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Material",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Sample Thickness",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Sample Length",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Sample Width",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Air Flow ",
+          "role": "condition",
+          "warning": null
+        },
+        {
+          "header": "Direction",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Camera 1",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Camera 2",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        }
+      ]
+    }
+  ],
+  "raw_matrix": {
+    "rows": [
+      [
+        "Sample Number",
+        "Material",
+        "Sample Thickness",
+        "Sample Length",
+        "Sample Width",
+        "Air Flow",
+        "Direction",
+        "Camera 1",
+        "Camera 2"
+      ],
+      [
+        "S1",
+        "SIBAL Fabric",
+        ".33 cm",
+        "94 cm",
+        "40.6 cm",
+        "30 cm/s",
+        "Concurrent",
+        "S1C1",
+        "S1C2"
+      ],
+      [
+        "S2",
+        "SIBAL Fabric",
+        ".33 cm",
+        "94 cm",
+        "40.6 cm",
+        "30 cm/s",
+        "Opposed",
+        "S2C1",
+        "S2C2"
+      ]
+    ],
+    "source_rows": [
+      1,
+      2,
+      3
+    ]
+  },
+  "metadata": {
+    "encoding": "utf-8-sig",
+    "rows": 3,
+    "sheet_titles": []
+  },
+  "warnings": [],
+  "schema_version": 4,
+  "source_filename": "PSI-100_Experimental table_SAFFIRE-3.csv",
+  "source_extension": ".csv",
+  "document": {
+    "name": "PSI-100_Experimental table_SAFFIRE-3.csv",
+    "extension": ".csv",
+    "sha256": "4d3c717ec20dd0247db670b2784a9fd7d746788bc54a936f80693e48eb8cd117",
+    "size_bytes": 239
+  },
+  "evidence_kind": "condition",
+  "observations": [
+    {
+      "value": null,
+      "unit": "",
+      "quantity": "velocity",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": null,
+      "status": "qualitative",
+      "field": "Air Flow",
+      "raw_value": "30 cm/s",
+      "table_index": 0,
+      "row_number": 2,
+      "column_index": 5,
+      "evidence_kind": "condition"
+    },
+    {
+      "value": null,
+      "unit": "",
+      "quantity": "velocity",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": null,
+      "status": "qualitative",
+      "field": "Air Flow",
+      "raw_value": "30 cm/s",
+      "table_index": 0,
+      "row_number": 3,
+      "column_index": 5,
+      "evidence_kind": "condition"
+    }
+  ],
+  "provenance": {
+    "study_id": "PSI-100",
+    "source": "NASA Physical Sciences Informatics",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-100/download?file=PSI-100_Experimental+table_SAFFIRE-3.csv&version=1&redirect=false",
+    "filename": "PSI-100_Experimental table_SAFFIRE-3.csv",
+    "sha256": "4d3c717ec20dd0247db670b2784a9fd7d746788bc54a936f80693e48eb8cd117",
+    "size_bytes": 239,
+    "study_version": 4,
+    "file_version": 1,
+    "retrieved_utc": "2026-11-15T18:23:18.760376+00:00",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 239,
+      "directory": false,
+      "files": [],
+      "id": "6792d422b7b6ff8e650381da",
+      "key": "psi-data/PSI-100/Experimental table/PSI-100_Experimental table_SAFFIRE-3.csv",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "239.0 B",
+      "sortingCategory": "Experimental table",
+      "status": "active",
+      "subcategory": "",
+      "updated": "Fri, 24 Jan 2025 07:43:30 GMT",
+      "version": 1,
+      "visible": true
+    },
+    "doi": "10.60555/040q-4h36",
+    "classification": "condition",
+    "classification_note": "Experimental table: conditions/sample catalogue; not an independently validated measurement dataset.",
+    "license": "No file-specific license exposed by metadata; consult NASA PSI terms and original attribution.",
+    "media_type": "text/csv",
+    "units": "Preserved as declared in the original column headers; no implicit units assigned.",
+    "field_classification": [
+      {
+        "header": "Sample Number ",
+        "role": "identifier_or_unclassified",
+        "warning": null
+      },
+      {
+        "header": "Material",
+        "role": "identifier_or_unclassified",
+        "warning": null
+      },
+      {
+        "header": "Sample Thickness",
+        "role": "identifier_or_unclassified",
+        "warning": null
+      },
+      {
+        "header": "Sample Length",
+        "role": "identifier_or_unclassified",
+        "warning": null
+      },
+      {
+        "header": "Sample Width",
+        "role": "identifier_or_unclassified",
+        "warning": null
+      },
+      {
+        "header": "Air Flow ",
+        "role": "condition",
+        "warning": null
+      },
+      {
+        "header": "Direction",
+        "role": "identifier_or_unclassified",
+        "warning": null
+      },
+      {
+        "header": "Camera 1",
+        "role": "identifier_or_unclassified",
+        "warning": null
+      },
+      {
+        "header": "Camera 2",
+        "role": "identifier_or_unclassified",
+        "warning": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,2053 @@
+{
+  "status": "processado",
+  "text": "BASS-II SCIENCE REQUIREMENTS\n\n•  General Requirements\n    –  20 samples for each of the 5 PIs will be flow (including 20 clear pmma rods, 20\n        black pmma rods (varied diameters for both); 19 SIBAL samples, 1 4 cm pmma\n        spherical section,  20 pmma films (varied thicknesses) and 20 pmma slabs (varied\n        thicknesses and 1 sided or 2 sided holders). Also 3 Nomex-III samples.\n    –  27 additional igniter wires will be flown. Solid fuel ignition uses a Kanthal hot wire.\n    – ISS nitrogen gas will be used (0 to 500 SCCM N2). Instead of connecting the\n       Experiment Assembly to a gas bottle it is connected via the GN2 hose to the MSG\n      GN2 interface. GN2 is used to vitiate the MSG working volume to desired O2 levels.\n    –  8 additional flash cards will be flow for the still camera.\n•  Parameter Measurement\n    – Measurement of the GN2 flow rate, fan voltage, air flow velocity and direction,\n      and flame radiation will be measured and overlaid on the Video.\n    – The acquisition rate of 4 Hz can not be changed from SPICE/BASS.\n    – The measurement accuracy of ±10% was met by the SPICE hardware prior to\n          its launch.\n•  Imaging Requirements\n    – The field of view of the video can not be changed from BASS.\n    – The D300s still image requirements are the same as for BASS.\n\n   4/14/2010                                                                                              1\n\nBASS-II SCIENCE REQUIREMENTS\n•  Acceleration\n    –  BASS-II testing will be scheduled around planned thruster firing or\n       spacecraft dock or undock.\n    – The acceleration environment will be measured by a nearby SAMS\n       during BASS-II testing.\n• MSG Working Volume Gas Concentrations\n    –  Project will include steps in crew procedures to install a Compound Specific\n        Analyzer (CSA-CP) and the CO2 sensor (CDM) into the MSG to measure the\n      Oxygen concentration. These devices will provide readings before and after\n       each burn of the MSG working volume well mixed gas concentrations.\n        Calibration checks will utilize the Columbus and Node 3 O2 and CO2 readings.\n•  Crew support\n    – Crew time is needed to conduct the BASS-II experiments. As part of the nominal\n        ops, the crew establishes the desired test ambient atmosphere and flow. The\n       crew manually inserts the fuel sample, adjusts the fuel location and igniter\n        position within the camera fields of view. The crew manually ignites the sample\n       and triggers the still camera. The crew performs flow calibration and soot\n        cleaning as needed.\n    – The crew works closely with the BASS-II PI team to determine test settings and\n        provide real-time feedback during each burn.\n\n\n4/14/2010                                                                                              2\n\nBASS-II SUCCESS CRITERIA\n\n•  Minimal Success: 10 samples from each PI (of their total 20)\n    will be successfully tested per PI matrices at the desired test\n   conditions (O2, flow). Ignition is successful for these tests,\n  and flame video data is obtained.  Still camera data is\n   obtained for at least 7 tests per PI. Valuable information\n   informing SoFIE science requirements is obtained.\n\n•  Complete Success: All PI samples (100) are tested at the\n   desired test conditions. Video data is obtained for all tests.\n   Ignition occurs in most of the tests (90+). Extinction is\n  observed for tests that seek to find a flammability limit. Most\n   of the tests (90+) provide still camera data. Valuable\n   information informing SoFIE science requirements is\n   obtained.\n\n\n\n\n\n4/14/2010                                                                                              3\n\nBASS-II Hardware Manifest\n\n\n\n   The manifest includes the following items utilizing designs that have\n    previously flown:\n\n    27 ignitors with 9 of each of the 3 different types assembled per S1183MFA0015,\n    S1183MFA0020, and S1183MFA0025.\n\n    8 Flash Cards - 4 GB Capacity (Different vendor from original, same functionality)\n\n    15 SIBAL Samples (2 cm wide) – Previously Flown Design - S1183MFA1020\n    4 SIBAL Samples (1 cm wide) – Previously Flown Design - S1183MFA1025\n    3 NOMEX Samples (2 cm wide) – Previously Flown Design - S1183MFA1055\n\n\n\n\n\n6/6/2023\n\nBASS-II Hardware Manifest\n\n\n\n    The manifest includes the following newly designs hardware:\n\n    8 Flat 2 cm PMMA Samples (0.1 mm thick) - S1183MFA1110-1\n    4 Flat 2 cm PMMA Samples (0.2 mm thick) - S1183MFA1110-2\n    2 Flat 2 cm PMMA Samples (0.3, 0.4, 1.0, 2.0, 3.0, 4.0, and 5.0 mm thick) -\n            S1183MFA1110-3 thru S1183MFA1110-9\n    4 Flat 1 cm PMMA Samples (0.2 mm thick) - S1183MFA1115-1\n    1 Flat 1 cm PMMA Samples (1.0, 2.0, 3.0, 4.0, and 5.0 mm thick) –\n            S1183MFA1115-2 thru S1183MFA1110-6\n    14 Black PMMA Rod Samples (0.25” Diameter) - S1183MFA1090-1\n    6 Black PMMA Rod Samples (0.375” Diameter) - S1183MFA1090-2\n    2 Black PMMA Rod Samples (0.500” Diameter) - S1183MFA1090-3\n    12 Clear PMMA Rod Samples (0.25” Diameter) - S1183MFA1095-1\n    4 Clear PMMA Rod Samples (0.375” Diameter) - S1183MFA1095-2\n    2 Clear PMMA Rod Samples (0.500” Diameter) - S1183MFA1095-3\n    1 Flat 2 cm PMMA one-sided Samples (1.0, 2.0, 3.0, 4.0, and 5.0 mm thick) –\n            S1183MFA1120-1 thru S1183MFA1120-5\n    1 Sphere Sample 4 cm - S1183MFA1085\n\n\n\n6/6/2023\n\nBASS-II SAMPLE PHOTOS\n\n\n                                        2 cm SIBAL Sample\n\n\n\n\n\n              Sphere Sample\n\n\n\n          Flat PMMA Sample (0.1 mm)\n\n\n\n\n\n                                                Flat PMMA Sample (5 mm)\n\n\n\n\n10/28/2013                                                                                             6\n\nBASS-II Science Overview\n\n     Dr. Sandra Olson\n\n\n\n\n\n                                                                                7\n\nBASS-II Science Overview\n\nPS: Dr. Paul Ferkul, NCSER\nPI:  Dr. Sandra Olson, NASA GRC\nCo-PI: Prof. Subrata Bhattacharjee, SDSU\nCo-PI: Prof. James T’ien, CWRU\nCo-PI: Prof. Fletcher Miller, SDSU\nCo-PI: Prof. Carlos Fernandez-Pello, UCB\n\n\nPM:   Robert Hawersaat, NASA GRC\n\n\nEngineering Team:  ZIN Technologies, Inc.\n\n\n\n\n\n                                                                                                         8\n\nBASS-II Science Overview\n\nRelevance/Impact: Burning and Suppression of Solids - II (BASS-II) tests the hypothesis\nthat materials in microgravity, with adequate ventilation, burn as well if not better than\nthe same material in normal gravity with other conditions being identical (pressure,\noxygen concentration, temperature, etc.).\n\nObjectives:\n•  To identify what is the worst case for material flammability in spacecraft\n   environments, and how does that compare to the terrestrial upward burning used to\n   screen the materials for safe use aboard spacecraft.\n•  To determine how quickly a fire in space can grow and if the flames reach a finite size\n   or continue to grow. This has implications for firefighting strategies in spacecraft.\n\nPrimary variables: The main variables to be tested are the effects of ambient oxygen\nconcentration, ventilation flow velocity, and fuel type, thickness, and geometry.\n\nDevelopment Approach:\nBASS-II will utilize the on orbit BASS hardware launched originally for SPICE on STS-126.\nNew samples, igniters, and more flash cards will provide new data. Crew is required to\nset up and operate the experiment. Video and data down-linked to the ground for\nevaluation.                                                                                                       9\n\nBASS-II Science Overview\n\nBASS-II Assembly for PMMA Spherical            BASS-II Fuel Geometries (not to scale)\nsection\n                                                                                                              Alignment tab\n                                                                           1 and 2-cm width\n                                                                                                  fuel sheets                   PMMA\n                                                              -PMMA                                 spherical                                                Fuel\n                                                                                       2 cm                                                                                             Igniter                                               -different thicknesses                                section\n                                                                                                                                 - 1 or 2 sided burns\n                                                                                                                             - SIBAL fabric\n                                     Igniter                Frame                2-pin connector                                                                                                                              - Nomex- III fabric\n\n\n\n                                                                       4-cm PMMA\n                                                                                       Spherical section\n                                 Airflow                                                                              (Forward stagnation region\n                                                                                             ignition and flame growth)\n\n\n\n\n                                                    PMMA rods (black and\n                                                                                                     clear), ¼”, 3/8”, and ½”\n                        Gaseous Nitrogen                                                                                 diameters\n                            nozzle for MSG work\n                        volume vitiation\n\n\n                                                                                                          10\n\nBASS-II Science Overview\n\n                        Sample Mounting\n\n\n\nThe top window\nsupports the solid\nfuel mounting rail.\n\n\n\n\n\n                                             Each Solid Fuel Assembly is\n                                        mounted inside the\n                                              Experiment Assembly via a\n                                              magnetic interface such that it\n                                             can be installed and removed\n                                            by the crew\n\n\n\n\n\n                                                                                                11\n\nBASS-II Science Overview\n                         priority order test matrix per PI: Olson\n\n\n\nBASS- II test Matrix  PI:        Olson\n\n\nPriority Test #  O2       Flow(s)      Sample #/type/description  brief objective of test                   notes\n                                                                                                                      ignite at a consistent concurrent flow,\n                                                                                                 then reduce to low flows and measure\n                                                                                                           spread, repeat until extinguished.\n            1       21 5, 3, 2, 1, min 1/4\" rod, clear             steady spread at condition(s)            Determine solid response time.\n            2       21 5, etc         3/8\" rod, clear             steady spread at condition(s)            diameter effect, timescale estimate\n                                                                                                       wait at each flow for solid phase\n            3       16 5, 3, 2, 1      1/4\" rod, clear              find low velocity limit                    timescale\n            4       16 5, increase    1/4\" rod, clear              find blowoff limit                      can increase flow every 5-10 seconds\n                                                                                 may re-use same rod for repeated tests,\n            5       15 5, decrease   1/4\" rod, clear              find low velocity limit                    to preserve samples\n            6       15 5, increase    1/4\" rod clear               find blowoff limit                      can increase flow every 5-10 seconds\n            7 17 or 14   5, decrease   1/4\" rod, clear              find low velocity limit\n            8 17 or 14   5, increase    1/4\" rod, clear              find blowoff limit                      can increase flow every 5-10 seconds\n            9       21 5, etc         1/2\" rod, clear             steady spread at condition(s)            diameter effect, timescale estimate\n                                                                                                            to determine if results depend on\n                                                                                                             material color, for comparisions with\n           10       21 5,3,2,1, min   1/4\" rod, black             steady spread at condition(s)              Pello results\n           11 tbd       5, decrease   3/8\" rod, clear              find low velocity limit                  diameter effect\n           12 tbd        5, decrease   1/2\" rod, clear              find low velocity limit                  diameter effect\n           13 tbd        5, decrease   1/4\" rod, black              find low velocity limit                     color dependence on limit\n           14 tbd      tbd           1/4\" rod, clear             tbd                                      possible repeat limit\n           15 tbd        5, decrease   3/8\" rod, clear              find low velocity limit                  diameter effect\n           16 tbd        5, increase    3/8\" rod, clear              find blowoff limit                      diameter effect\n           17       19 tbd           1/4\" rod, clear             tbd\n           18       19 tbd           1/4\" rod, clear             tbd\n           19       18 tbd           1/4\" rod, clear             tbd\n           20       18 tbd           1/4\" rod, clear             tbd\nNotes in the event of a non-ignition of the rod at low O2, an opposed ignition will be attempted, followed by an ambient air opposed or concurrent test at TBD flow(s).\n                                                                                                          12\n\nBASS-II Science Overview\n                 priority order test matrix per PI: Bhattacharjee\n\n\n\n\n\nBASS- II test MatrixPI: Bhattacharjee\n\n\nPriority\nTest #   O2     Flow(s)  Sample #/type/description                    brief objective of test                     notes\n       1     21 0 mm/s  A.1/PMMA/thickness 0.1 mm, width 20 mm   study thickness effect\n       2     21 0 mm/s  B.1/PMMA/thickness 0.2 mm, width 20 mm   study thickness effect\n       3     21 0 mm/s  D.1/PMMA/thickness 0.3 mm, width 20 mm   study thickness effect\n       4     21 20 mm/s A.2/PMMA/thickness 0.1 mm, width 20 mm   study boundary layer/flow effect\n       5     21 0 mm/s  C.1/PMMA/thickness 0.2 mm, width 10 mm   study width effect\n       6     15 0 mm/s  A.4/PMMA/thickness 0.1 mm, width 20 mm   study oxygen effect\n       7     21 0 mm/s  E.1/PMMA/thickness 0.4 mm, width 20 mm   study thickness effect\n       8     21 20 mm/s B.2/PMMA/thickness 0.2 mm, width 20 mm   study boundary layer/thickness/flow effect\n       9     21 50 mm/s A.3/PMMA/thickness 0.1 mm, width 20 mm   study boundary layer/flow effect\n       10     21 50 mm/s C.3/PMMA/thickness 0.2 mm, width 10 mm   study width/flow effect\n       11     21 50 mm/s B.3/PMMA/thickness 0.2 mm, width 20 mm   study boundary layer/thickness effect\n       12     21 50 mm/s D.2/PMMA/thickness 0.3 mm, width 20 mm   study boundary layer/thickness effect\n       13     21 50 mm/s E.2/PMMA/thickness 0.4 mm, width 20 mm   study boundary layer/thickness effect\n       14     21 50 mm/s C.2/PMMA/thickness 0.2 mm, width 10 mm   study oxygen/width effect\n       15     15 20 mm/s A.5/PMMA/thickness 0.1 mm, width 20 mm   study oxygen/flow/thickness effect\n       16     15 50 mm/s A.6/PMMA/thickness 0.1 mm, width 20 mm   study oxygen/flow/thickness effect\n       17     15 50 mm/s B.4/PMMA/thickness 0.2 mm, width 20 mm   study oxygen/flow/thickness effect\n       18     15 50 mm/s C.4/PMMA/thickness 0.2 mm, width 10 mm   study oxygen/width effect\n       19     21 0 mm/s  A.7/PMMA/thickness 0.1 mm, width 20 mm   test data repeatability\n       20     21 20 mm/s A.8/PMMA/thickness 0.1 mm, width 20 mm   test data repeatability                                     13\n\nBASS-II Science Overview\n       priority order test matrix per PI: T’ien\n\n\n\n\n\n                                                                                   14\n\nBASS-II Science Overview\n      priority order test matrix per PI: Miller\n\n\n\n\n\n                                                                                              15\n\nBASS-II Science Overview\n priority order test matrix per PI: Fernandez-Pello\n\n\n\n\n\n                                                                                   16",
+  "pages": [
+    {
+      "page": 1,
+      "location": "página 1",
+      "text": "BASS-II SCIENCE REQUIREMENTS\n\n•  General Requirements\n    –  20 samples for each of the 5 PIs will be flow (including 20 clear pmma rods, 20\n        black pmma rods (varied diameters for both); 19 SIBAL samples, 1 4 cm pmma\n        spherical section,  20 pmma films (varied thicknesses) and 20 pmma slabs (varied\n        thicknesses and 1 sided or 2 sided holders). Also 3 Nomex-III samples.\n    –  27 additional igniter wires will be flown. Solid fuel ignition uses a Kanthal hot wire.\n    – ISS nitrogen gas will be used (0 to 500 SCCM N2). Instead of connecting the\n       Experiment Assembly to a gas bottle it is connected via the GN2 hose to the MSG\n      GN2 interface. GN2 is used to vitiate the MSG working volume to desired O2 levels.\n    –  8 additional flash cards will be flow for the still camera.\n•  Parameter Measurement\n    – Measurement of the GN2 flow rate, fan voltage, air flow velocity and direction,\n      and flame radiation will be measured and overlaid on the Video.\n    – The acquisition rate of 4 Hz can not be changed from SPICE/BASS.\n    – The measurement accuracy of ±10% was met by the SPICE hardware prior to\n          its launch.\n•  Imaging Requirements\n    – The field of view of the video can not be changed from BASS.\n    – The D300s still image requirements are the same as for BASS.\n\n   4/14/2010                                                                                              1",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            68.47,
+            48.38,
+            651.29,
+            92.42
+          ],
+          "text": "BASS-II SCIENCE REQUIREMENTS",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            25.2,
+            104.52,
+            253.66,
+            126.87
+          ],
+          "text": "•\nGeneral Requirements",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            61.2,
+            130.3,
+            673.27,
+            246.38
+          ],
+          "text": "–\n20 samples for each of the 5 PIs will be flow (including 20 clear pmma rods, 20 \nblack pmma rods (varied diameters for both); 19 SIBAL samples, 1 4 cm pmma \nspherical section,   20 pmma films (varied thicknesses) and 20 pmma slabs (varied \nthicknesses and 1 sided or 2 sided holders).  Also 3 Nomex-III samples.\n–\n27 additional igniter wires will be flown.  Solid fuel ignition uses a Kanthal hot wire.\n– ISS nitrogen gas will be used (0 to 500 SCCM N2).  Instead of connecting the",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            25.2,
+            243.01,
+            671.56,
+            325.52
+          ],
+          "text": "Experiment Assembly to a gas bottle it is connected via the GN2 hose to the MSG \nGN2 interface.  GN2 is used to vitiate the MSG working volume to desired O2 levels.\n–\n8 additional flash cards will be flow for the still camera.\n•\nParameter Measurement",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            61.2,
+            329.05,
+            670.7,
+            352.13
+          ],
+          "text": "– Measurement of the GN2 flow rate, fan voltage, air flow velocity and direction,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            61.2,
+            347.41,
+            675.47,
+            411.29
+          ],
+          "text": "and flame radiation will be measured and overlaid on the Video.\n– The acquisition rate of 4 Hz can not be changed from SPICE/BASS.\n– The measurement accuracy of ±10% was met by the SPICE hardware prior to",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            25.2,
+            410.68,
+            253.68,
+            455.98
+          ],
+          "text": "its launch.\n•\nImaging Requirements",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            61.2,
+            459.51,
+            558.22,
+            500.95
+          ],
+          "text": "– The field of view of the video can not be changed from BASS.\n– The D300s still image requirements are the same as for BASS.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "4/14/2010\n1",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "location": "página 2",
+      "text": "BASS-II SCIENCE REQUIREMENTS\n•  Acceleration\n    –  BASS-II testing will be scheduled around planned thruster firing or\n       spacecraft dock or undock.\n    – The acceleration environment will be measured by a nearby SAMS\n       during BASS-II testing.\n• MSG Working Volume Gas Concentrations\n    –  Project will include steps in crew procedures to install a Compound Specific\n        Analyzer (CSA-CP) and the CO2 sensor (CDM) into the MSG to measure the\n      Oxygen concentration. These devices will provide readings before and after\n       each burn of the MSG working volume well mixed gas concentrations.\n        Calibration checks will utilize the Columbus and Node 3 O2 and CO2 readings.\n•  Crew support\n    – Crew time is needed to conduct the BASS-II experiments. As part of the nominal\n        ops, the crew establishes the desired test ambient atmosphere and flow. The\n       crew manually inserts the fuel sample, adjusts the fuel location and igniter\n        position within the camera fields of view. The crew manually ignites the sample\n       and triggers the still camera. The crew performs flow calibration and soot\n        cleaning as needed.\n    – The crew works closely with the BASS-II PI team to determine test settings and\n        provide real-time feedback during each burn.\n\n\n4/14/2010                                                                                              2",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            43.2,
+            48.38,
+            651.29,
+            115.91
+          ],
+          "text": "BASS-II SCIENCE REQUIREMENTS\n•\nAcceleration",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            79.22,
+            119.48,
+            603.81,
+            138.48
+          ],
+          "text": "– BASS-II testing will be scheduled around planned thruster firing or",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            79.22,
+            137.84,
+            638.73,
+            180.57
+          ],
+          "text": "spacecraft dock or undock.\n– The acceleration environment will be measured by a nearby SAMS",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            179.96,
+            449.58,
+            226.38
+          ],
+          "text": "during BASS-II testing.\n•\nMSG Working Volume Gas Concentrations",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            229.81,
+            652.98,
+            343.04
+          ],
+          "text": "–\nProject will include steps in crew procedures to install a Compound Specific \nAnalyzer (CSA-CP) and the CO2 sensor (CDM) into the MSG to measure the \nOxygen concentration.  These devices will provide readings before and after \neach burn of the MSG working volume well mixed gas concentrations.  \nCalibration checks will utilize the Columbus and Node 3 O2 and CO2 readings.\n•\nCrew support",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            79.22,
+            346.47,
+            678.52,
+            489.09
+          ],
+          "text": "–\nCrew time is needed to conduct the BASS-II experiments.  As part of the nominal \nops, the crew establishes the desired test ambient atmosphere and flow.  The \ncrew  manually inserts  the fuel sample, adjusts the fuel location and igniter \nposition within the camera fields of view.   The crew manually ignites the sample \nand triggers the still camera.   The crew performs flow calibration and soot \ncleaning as needed.  \n–\nThe crew works closely with the BASS-II PI team to determine test settings and \nprovide real-time feedback during each burn.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "4/14/2010\n2",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "location": "página 3",
+      "text": "BASS-II SUCCESS CRITERIA\n\n•  Minimal Success: 10 samples from each PI (of their total 20)\n    will be successfully tested per PI matrices at the desired test\n   conditions (O2, flow). Ignition is successful for these tests,\n  and flame video data is obtained.  Still camera data is\n   obtained for at least 7 tests per PI. Valuable information\n   informing SoFIE science requirements is obtained.\n\n•  Complete Success: All PI samples (100) are tested at the\n   desired test conditions. Video data is obtained for all tests.\n   Ignition occurs in most of the tests (90+). Extinction is\n  observed for tests that seek to find a flammability limit. Most\n   of the tests (90+) provide still camera data. Valuable\n   information informing SoFIE science requirements is\n   obtained.\n\n\n\n\n\n4/14/2010                                                                                              3",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            127.99,
+            48.38,
+            592.11,
+            92.42
+          ],
+          "text": "BASS-II SUCCESS CRITERIA",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            43.2,
+            125.83,
+            670.58,
+            255.94
+          ],
+          "text": "•\nMinimal Success: 10 samples from each PI (of their total 20) \nwill be successfully tested per PI matrices  at the desired test \nconditions (O2, flow).  Ignition is successful for these tests, \nand flame video data is obtained.  Still camera data is \nobtained for at least 7 tests per PI.  Valuable information \ninforming SoFIE science requirements is obtained.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            284.28,
+            665.67,
+            435.51
+          ],
+          "text": "•\nComplete Success: All PI samples (100) are tested at the \ndesired test conditions.  Video data is obtained for all tests.  \nIgnition occurs in most of the tests (90+).  Extinction is \nobserved for tests that seek to find a flammability limit.  Most \nof the tests (90+) provide still camera data. Valuable \ninformation informing SoFIE science requirements is \nobtained.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "4/14/2010\n3",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "location": "página 4",
+      "text": "BASS-II Hardware Manifest\n\n\n\n   The manifest includes the following items utilizing designs that have\n    previously flown:\n\n    27 ignitors with 9 of each of the 3 different types assembled per S1183MFA0015,\n    S1183MFA0020, and S1183MFA0025.\n\n    8 Flash Cards - 4 GB Capacity (Different vendor from original, same functionality)\n\n    15 SIBAL Samples (2 cm wide) – Previously Flown Design - S1183MFA1020\n    4 SIBAL Samples (1 cm wide) – Previously Flown Design - S1183MFA1025\n    3 NOMEX Samples (2 cm wide) – Previously Flown Design - S1183MFA1055\n\n\n\n\n\n6/6/2023",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            208.34,
+            47.3,
+            516.43,
+            74.06
+          ],
+          "text": "BASS-II Hardware Manifest",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            79.22,
+            124.85,
+            623.08,
+            166.52
+          ],
+          "text": "The manifest includes the following items utilizing designs that have \npreviously flown:",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            79.22,
+            189.61,
+            654.97,
+            226.6
+          ],
+          "text": "27 ignitors with 9 of each of the 3 different types assembled per S1183MFA0015, \nS1183MFA0020, and S1183MFA0025.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            79.22,
+            247.21,
+            654.31,
+            265.0
+          ],
+          "text": "8 Flash Cards - 4 GB Capacity (Different vendor from original, same functionality)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            79.22,
+            285.58,
+            625.47,
+            341.82
+          ],
+          "text": "15 SIBAL Samples (2 cm wide) – Previously Flown Design - S1183MFA1020\n4 SIBAL Samples (1 cm wide) – Previously Flown Design - S1183MFA1025\n3 NOMEX Samples (2 cm wide) – Previously Flown Design - S1183MFA1055",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            510.03,
+            89.19,
+            522.05
+          ],
+          "text": "6/6/2023",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "location": "página 5",
+      "text": "BASS-II Hardware Manifest\n\n\n\n    The manifest includes the following newly designs hardware:\n\n    8 Flat 2 cm PMMA Samples (0.1 mm thick) - S1183MFA1110-1\n    4 Flat 2 cm PMMA Samples (0.2 mm thick) - S1183MFA1110-2\n    2 Flat 2 cm PMMA Samples (0.3, 0.4, 1.0, 2.0, 3.0, 4.0, and 5.0 mm thick) -\n            S1183MFA1110-3 thru S1183MFA1110-9\n    4 Flat 1 cm PMMA Samples (0.2 mm thick) - S1183MFA1115-1\n    1 Flat 1 cm PMMA Samples (1.0, 2.0, 3.0, 4.0, and 5.0 mm thick) –\n            S1183MFA1115-2 thru S1183MFA1110-6\n    14 Black PMMA Rod Samples (0.25” Diameter) - S1183MFA1090-1\n    6 Black PMMA Rod Samples (0.375” Diameter) - S1183MFA1090-2\n    2 Black PMMA Rod Samples (0.500” Diameter) - S1183MFA1090-3\n    12 Clear PMMA Rod Samples (0.25” Diameter) - S1183MFA1095-1\n    4 Clear PMMA Rod Samples (0.375” Diameter) - S1183MFA1095-2\n    2 Clear PMMA Rod Samples (0.500” Diameter) - S1183MFA1095-3\n    1 Flat 2 cm PMMA one-sided Samples (1.0, 2.0, 3.0, 4.0, and 5.0 mm thick) –\n            S1183MFA1120-1 thru S1183MFA1120-5\n    1 Sphere Sample 4 cm - S1183MFA1085\n\n\n\n6/6/2023",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            208.34,
+            47.3,
+            516.43,
+            74.06
+          ],
+          "text": "BASS-II Hardware Manifest",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            79.22,
+            124.78,
+            507.98,
+            142.57
+          ],
+          "text": "The manifest includes the following newly designs hardware:",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            79.22,
+            163.15,
+            627.09,
+            469.05
+          ],
+          "text": "8 Flat 2 cm PMMA Samples (0.1 mm thick) - S1183MFA1110-1\n4 Flat 2 cm PMMA Samples (0.2 mm thick) - S1183MFA1110-2\n2 Flat 2 cm PMMA Samples (0.3, 0.4, 1.0, 2.0, 3.0, 4.0, and 5.0 mm thick) -\nS1183MFA1110-3 thru S1183MFA1110-9\n4 Flat 1 cm PMMA Samples (0.2 mm thick) - S1183MFA1115-1\n1 Flat 1 cm PMMA Samples (1.0, 2.0, 3.0, 4.0, and 5.0 mm thick) –\nS1183MFA1115-2 thru S1183MFA1110-6\n14 Black PMMA Rod Samples (0.25” Diameter) - S1183MFA1090-1\n6 Black PMMA Rod Samples (0.375” Diameter) - S1183MFA1090-2\n2 Black PMMA Rod Samples (0.500” Diameter) - S1183MFA1090-3\n12 Clear PMMA Rod Samples (0.25” Diameter) - S1183MFA1095-1\n4 Clear PMMA Rod Samples (0.375” Diameter) - S1183MFA1095-2\n2 Clear PMMA Rod Samples (0.500” Diameter) - S1183MFA1095-3\n1 Flat 2 cm PMMA one-sided Samples (1.0, 2.0, 3.0, 4.0, and 5.0 mm thick) –\nS1183MFA1120-1 thru S1183MFA1120-5\n1 Sphere Sample 4 cm - S1183MFA1085",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            510.03,
+            89.19,
+            522.05
+          ],
+          "text": "6/6/2023",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "location": "página 6",
+      "text": "BASS-II SAMPLE PHOTOS\n\n\n                                        2 cm SIBAL Sample\n\n\n\n\n\n              Sphere Sample\n\n\n\n          Flat PMMA Sample (0.1 mm)\n\n\n\n\n\n                                                Flat PMMA Sample (5 mm)\n\n\n\n\n10/28/2013                                                                                             6",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            160.87,
+            26.12,
+            559.08,
+            66.08
+          ],
+          "text": "BASS-II SAMPLE PHOTOS",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            406.1,
+            106.31,
+            543.82,
+            124.31
+          ],
+          "text": "2 cm SIBAL Sample",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            160.06,
+            227.27,
+            269.3,
+            245.27
+          ],
+          "text": "Sphere Sample",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            108.82,
+            296.85,
+            318.94,
+            314.88
+          ],
+          "text": "Flat PMMA Sample (0.1 mm)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            366.41,
+            439.58,
+            562.89,
+            457.6
+          ],
+          "text": "Flat PMMA Sample (5 mm)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            43.2,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "10/28/2013\n6",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "location": "página 7",
+      "text": "BASS-II Science Overview\n\n     Dr. Sandra Olson\n\n\n\n\n\n                                                                                7",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            180.65,
+            203.38,
+            547.94,
+            239.38
+          ],
+          "text": "BASS-II Science Overview",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            243.77,
+            289.76,
+            484.72,
+            325.79
+          ],
+          "text": "Dr. Sandra Olson",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            670.66,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "7",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "location": "página 8",
+      "text": "BASS-II Science Overview\n\nPS: Dr. Paul Ferkul, NCSER\nPI:  Dr. Sandra Olson, NASA GRC\nCo-PI: Prof. Subrata Bhattacharjee, SDSU\nCo-PI: Prof. James T’ien, CWRU\nCo-PI: Prof. Fletcher Miller, SDSU\nCo-PI: Prof. Carlos Fernandez-Pello, UCB\n\n\nPM:   Robert Hawersaat, NASA GRC\n\n\nEngineering Team:  ZIN Technologies, Inc.\n\n\n\n\n\n                                                                                                         8",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            155.78,
+            30.25,
+            563.01,
+            70.24
+          ],
+          "text": "BASS-II Science Overview",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            31.2,
+            83.0,
+            297.35,
+            214.18
+          ],
+          "text": "PS: Dr. Paul Ferkul, NCSER\nPI: Dr. Sandra Olson, NASA GRC \nCo-PI: Prof. Subrata Bhattacharjee, SDSU\nCo-PI: Prof. James T’ien, CWRU\nCo-PI: Prof. Fletcher Miller, SDSU\nCo-PI: Prof. Carlos Fernandez-Pello, UCB",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            31.2,
+            244.28,
+            271.18,
+            260.27
+          ],
+          "text": "PM:\nRobert Hawersaat, NASA GRC",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            31.2,
+            290.41,
+            305.4,
+            306.37
+          ],
+          "text": "Engineering Team: ZIN Technologies, Inc.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            670.66,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "8",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "location": "página 9",
+      "text": "BASS-II Science Overview\n\nRelevance/Impact: Burning and Suppression of Solids - II (BASS-II) tests the hypothesis\nthat materials in microgravity, with adequate ventilation, burn as well if not better than\nthe same material in normal gravity with other conditions being identical (pressure,\noxygen concentration, temperature, etc.).\n\nObjectives:\n•  To identify what is the worst case for material flammability in spacecraft\n   environments, and how does that compare to the terrestrial upward burning used to\n   screen the materials for safe use aboard spacecraft.\n•  To determine how quickly a fire in space can grow and if the flames reach a finite size\n   or continue to grow. This has implications for firefighting strategies in spacecraft.\n\nPrimary variables: The main variables to be tested are the effects of ambient oxygen\nconcentration, ventilation flow velocity, and fuel type, thickness, and geometry.\n\nDevelopment Approach:\nBASS-II will utilize the on orbit BASS hardware launched originally for SPICE on STS-126.\nNew samples, igniters, and more flash cards will provide new data. Crew is required to\nset up and operate the experiment. Video and data down-linked to the ground for\nevaluation.                                                                                                       9",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            156.31,
+            30.99,
+            563.55,
+            70.95
+          ],
+          "text": "BASS-II Science Overview",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            43.2,
+            86.0,
+            684.05,
+            168.8
+          ],
+          "text": "Relevance/Impact:  Burning and Suppression of Solids - II (BASS-II) tests the hypothesis \nthat materials in microgravity, with adequate ventilation, burn as well if not better than \nthe same material in normal gravity with other conditions being identical (pressure, \noxygen concentration, temperature, etc.).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            194.03,
+            691.29,
+            320.05
+          ],
+          "text": "Objectives:  \n•\nTo identify what is the worst case for material flammability in spacecraft \nenvironments, and how does that compare to the terrestrial upward burning used to \nscreen the materials for safe use aboard spacecraft.\n•\nTo determine how quickly a fire in space can grow and if the flames reach a finite size \nor continue to grow.  This has implications for firefighting strategies in spacecraft.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            345.25,
+            668.89,
+            384.85
+          ],
+          "text": "Primary variables:  The main variables to be tested are the effects of ambient oxygen \nconcentration, ventilation flow velocity, and fuel type, thickness, and geometry.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            43.2,
+            411.62,
+            687.2,
+            518.08
+          ],
+          "text": "Development Approach:\nBASS-II will utilize the on orbit BASS hardware launched originally for SPICE on STS-126.  \nNew samples, igniters, and more flash cards will provide new data.  Crew is required to \nset up and operate the experiment.  Video and data down-linked to the ground for \nevaluation.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            670.66,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "9",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "location": "página 10",
+      "text": "BASS-II Science Overview\n\nBASS-II Assembly for PMMA Spherical            BASS-II Fuel Geometries (not to scale)\nsection\n                                                                                                              Alignment tab\n                                                                           1 and 2-cm width\n                                                                                                  fuel sheets                   PMMA\n                                                              -PMMA                                 spherical                                                Fuel\n                                                                                       2 cm                                                                                             Igniter                                               -different thicknesses                                section\n                                                                                                                                 - 1 or 2 sided burns\n                                                                                                                             - SIBAL fabric\n                                     Igniter                Frame                2-pin connector                                                                                                                              - Nomex- III fabric\n\n\n\n                                                                       4-cm PMMA\n                                                                                       Spherical section\n                                 Airflow                                                                              (Forward stagnation region\n                                                                                             ignition and flame growth)\n\n\n\n\n                                                    PMMA rods (black and\n                                                                                                     clear), ¼”, 3/8”, and ½”\n                        Gaseous Nitrogen                                                                                 diameters\n                            nozzle for MSG work\n                        volume vitiation\n\n\n                                                                                                          10",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            156.31,
+            31.95,
+            563.57,
+            71.94
+          ],
+          "text": "BASS-II Science Overview",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            391.25,
+            96.92,
+            672.17,
+            114.92
+          ],
+          "text": "BASS-II Fuel Geometries (not to scale)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            19.2,
+            97.55,
+            305.97,
+            137.15
+          ],
+          "text": "BASS-II Assembly for PMMA Spherical \nsection",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            436.82,
+            136.36,
+            482.91,
+            145.26
+          ],
+          "text": "Alignment tab",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            553.49,
+            141.53,
+            655.66,
+            172.37
+          ],
+          "text": "1 and 2-cm width \nfuel sheets",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            559.73,
+            175.13,
+            606.56,
+            189.17
+          ],
+          "text": "-PMMA",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            428.33,
+            181.6,
+            442.43,
+            190.5
+          ],
+          "text": "Fuel",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            300.65,
+            190.36,
+            382.97,
+            202.5
+          ],
+          "text": "2 cm\nIgniter",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            207.36,
+            162.15,
+            261.53,
+            209.84
+          ],
+          "text": "PMMA \nspherical \nsection",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            556.61,
+            191.91,
+            697.41,
+            239.6
+          ],
+          "text": "-different thicknesses \n- 1 or 2 sided burns\n- SIBAL fabric",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            318.65,
+            237.9,
+            443.93,
+            250.5
+          ],
+          "text": "2-pin connector\nFrame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            216.74,
+            238.45,
+            253.83,
+            252.49
+          ],
+          "text": "Igniter",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            559.73,
+            242.36,
+            660.71,
+            256.4
+          ],
+          "text": "- Nomex- III fabric",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            211.85,
+            327.73,
+            253.13,
+            341.77
+          ],
+          "text": "Airflow",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            523.66,
+            300.22,
+            681.13,
+            364.66
+          ],
+          "text": "4-cm PMMA \nSpherical section\n(Forward stagnation region \nignition and flame growth)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            528.96,
+            415.01,
+            661.46,
+            462.65
+          ],
+          "text": "PMMA rods (black and \nclear), ¼”, 3/8”, and ½” \ndiameters",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            187.85,
+            443.77,
+            308.37,
+            491.41
+          ],
+          "text": "Gaseous Nitrogen \nnozzle for MSG work \nvolume vitiation",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            664.54,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "10",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "location": "página 11",
+      "text": "BASS-II Science Overview\n\n                        Sample Mounting\n\n\n\nThe top window\nsupports the solid\nfuel mounting rail.\n\n\n\n\n\n                                             Each Solid Fuel Assembly is\n                                        mounted inside the\n                                              Experiment Assembly via a\n                                              magnetic interface such that it\n                                             can be installed and removed\n                                            by the crew\n\n\n\n\n\n                                                                                                11",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            156.31,
+            31.95,
+            563.57,
+            71.94
+          ],
+          "text": "BASS-II Science Overview",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            295.51,
+            91.16,
+            425.31,
+            109.16
+          ],
+          "text": "Sample Mounting",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            80.28,
+            162.9,
+            215.41,
+            224.15
+          ],
+          "text": "The top window \nsupports the solid \nfuel mounting rail.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            445.27,
+            314.77,
+            659.43,
+            433.84
+          ],
+          "text": "Each Solid Fuel Assembly is \nmounted inside the \nExperiment Assembly via a \nmagnetic interface such that it \ncan be installed and removed \nby the crew",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            664.54,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "11",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "location": "página 12",
+      "text": "BASS-II Science Overview\n                         priority order test matrix per PI: Olson\n\n\n\nBASS- II test Matrix  PI:        Olson\n\n\nPriority Test #  O2       Flow(s)      Sample #/type/description  brief objective of test                   notes\n                                                                                                                      ignite at a consistent concurrent flow,\n                                                                                                 then reduce to low flows and measure\n                                                                                                           spread, repeat until extinguished.\n            1       21 5, 3, 2, 1, min 1/4\" rod, clear             steady spread at condition(s)            Determine solid response time.\n            2       21 5, etc         3/8\" rod, clear             steady spread at condition(s)            diameter effect, timescale estimate\n                                                                                                       wait at each flow for solid phase\n            3       16 5, 3, 2, 1      1/4\" rod, clear              find low velocity limit                    timescale\n            4       16 5, increase    1/4\" rod, clear              find blowoff limit                      can increase flow every 5-10 seconds\n                                                                                 may re-use same rod for repeated tests,\n            5       15 5, decrease   1/4\" rod, clear              find low velocity limit                    to preserve samples\n            6       15 5, increase    1/4\" rod clear               find blowoff limit                      can increase flow every 5-10 seconds\n            7 17 or 14   5, decrease   1/4\" rod, clear              find low velocity limit\n            8 17 or 14   5, increase    1/4\" rod, clear              find blowoff limit                      can increase flow every 5-10 seconds\n            9       21 5, etc         1/2\" rod, clear             steady spread at condition(s)            diameter effect, timescale estimate\n                                                                                                            to determine if results depend on\n                                                                                                             material color, for comparisions with\n           10       21 5,3,2,1, min   1/4\" rod, black             steady spread at condition(s)              Pello results\n           11 tbd       5, decrease   3/8\" rod, clear              find low velocity limit                  diameter effect\n           12 tbd        5, decrease   1/2\" rod, clear              find low velocity limit                  diameter effect\n           13 tbd        5, decrease   1/4\" rod, black              find low velocity limit                     color dependence on limit\n           14 tbd      tbd           1/4\" rod, clear             tbd                                      possible repeat limit\n           15 tbd        5, decrease   3/8\" rod, clear              find low velocity limit                  diameter effect\n           16 tbd        5, increase    3/8\" rod, clear              find blowoff limit                      diameter effect\n           17       19 tbd           1/4\" rod, clear             tbd\n           18       19 tbd           1/4\" rod, clear             tbd\n           19       18 tbd           1/4\" rod, clear             tbd\n           20       18 tbd           1/4\" rod, clear             tbd\nNotes in the event of a non-ignition of the rod at low O2, an opposed ignition will be attempted, followed by an ambient air opposed or concurrent test at TBD flow(s).\n                                                                                                          12",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            156.31,
+            19.95,
+            563.57,
+            59.94
+          ],
+          "text": "BASS-II Science Overview",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            204.91,
+            64.22,
+            515.05,
+            84.26
+          ],
+          "text": "priority order test matrix per PI: Olson",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            20.53,
+            117.68,
+            212.31,
+            129.8
+          ],
+          "text": "BASS- II test Matrix PI: \nOlson",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            19.9,
+            146.38,
+            483.65,
+            155.96
+          ],
+          "text": "Priority Test #\nO2\nFlow(s)\nSample #/type/description brief objective of test\nnotes",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            76.85,
+            197.42,
+            406.6,
+            206.99
+          ],
+          "text": "1\n21 5, 3, 2, 1,  min 1/4\" rod, clear\nsteady spread at condition(s)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            76.85,
+            159.15,
+            613.32,
+            219.76
+          ],
+          "text": "ignite at a consistent concurrent flow, \nthen reduce to low flows and measure \nspread, repeat until extinguished. \nDetermine solid response time.\n2\n21 5, etc\n3/8\" rod, clear\nsteady spread at condition(s)\ndiameter effect, timescale estimate",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            76.85,
+            235.68,
+            379.09,
+            245.25
+          ],
+          "text": "3\n16 5, 3, 2, 1\n1/4\" rod, clear\nfind low velocity limit",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            76.85,
+            222.94,
+            604.81,
+            258.02
+          ],
+          "text": "wait at each flow for solid phase \ntimescale\n4\n16 5, increase\n1/4\" rod, clear\nfind blowoff limit\ncan increase flow every 5-10 seconds",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            76.85,
+            273.96,
+            379.09,
+            283.53
+          ],
+          "text": "5\n15 5, decrease\n1/4\" rod, clear\nfind low velocity limit",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            76.85,
+            261.2,
+            619.67,
+            334.57
+          ],
+          "text": "may re-use same rod for repeated tests, \nto preserve samples\n6\n15 5, increase\n1/4\" rod clear\nfind blowoff limit\ncan increase flow every 5-10 seconds\n7 17 or 14\n5, decrease\n1/4\" rod, clear\nfind low velocity limit\n8 17 or 14\n5, increase\n1/4\" rod, clear\nfind blowoff limit\ncan increase flow every 5-10 seconds\n9\n21 5, etc\n1/2\" rod, clear\nsteady spread at condition(s)\ndiameter effect, timescale estimate",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            72.41,
+            362.64,
+            406.6,
+            372.85
+          ],
+          "text": "10\n21 5,3,2,1, min\n1/4\" rod, black\nsteady spread at condition(s)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            19.9,
+            337.12,
+            669.43,
+            514.45
+          ],
+          "text": "to determine if results depend on \nmaterial color, for comparisions with \nPello results\n11 tbd\n5, decrease\n3/8\" rod, clear\nfind low velocity limit\ndiameter effect\n12 tbd\n5, decrease\n1/2\" rod, clear\nfind low velocity limit\ndiameter effect\n13 tbd\n5, decrease\n1/4\" rod, black\nfind low velocity limit\ncolor dependence on limit\n14 tbd\ntbd\n1/4\" rod, clear\ntbd\npossible repeat limit\n15 tbd\n5, decrease\n3/8\" rod, clear\nfind low velocity limit\ndiameter effect\n16 tbd\n5, increase\n3/8\" rod, clear\nfind blowoff limit\ndiameter effect\n17\n19 tbd\n1/4\" rod, clear\ntbd\n18\n19 tbd\n1/4\" rod, clear\ntbd\n19\n18 tbd\n1/4\" rod, clear\ntbd\n20\n18 tbd\n1/4\" rod, clear\ntbd\nNotes  in the event of a non-ignition of the rod at low O2, an opposed ignition will be attempted, followed by an ambient air opposed or concurrent test at TBD flow(s).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            664.54,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "12",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "location": "página 13",
+      "text": "BASS-II Science Overview\n                 priority order test matrix per PI: Bhattacharjee\n\n\n\n\n\nBASS- II test MatrixPI: Bhattacharjee\n\n\nPriority\nTest #   O2     Flow(s)  Sample #/type/description                    brief objective of test                     notes\n       1     21 0 mm/s  A.1/PMMA/thickness 0.1 mm, width 20 mm   study thickness effect\n       2     21 0 mm/s  B.1/PMMA/thickness 0.2 mm, width 20 mm   study thickness effect\n       3     21 0 mm/s  D.1/PMMA/thickness 0.3 mm, width 20 mm   study thickness effect\n       4     21 20 mm/s A.2/PMMA/thickness 0.1 mm, width 20 mm   study boundary layer/flow effect\n       5     21 0 mm/s  C.1/PMMA/thickness 0.2 mm, width 10 mm   study width effect\n       6     15 0 mm/s  A.4/PMMA/thickness 0.1 mm, width 20 mm   study oxygen effect\n       7     21 0 mm/s  E.1/PMMA/thickness 0.4 mm, width 20 mm   study thickness effect\n       8     21 20 mm/s B.2/PMMA/thickness 0.2 mm, width 20 mm   study boundary layer/thickness/flow effect\n       9     21 50 mm/s A.3/PMMA/thickness 0.1 mm, width 20 mm   study boundary layer/flow effect\n       10     21 50 mm/s C.3/PMMA/thickness 0.2 mm, width 10 mm   study width/flow effect\n       11     21 50 mm/s B.3/PMMA/thickness 0.2 mm, width 20 mm   study boundary layer/thickness effect\n       12     21 50 mm/s D.2/PMMA/thickness 0.3 mm, width 20 mm   study boundary layer/thickness effect\n       13     21 50 mm/s E.2/PMMA/thickness 0.4 mm, width 20 mm   study boundary layer/thickness effect\n       14     21 50 mm/s C.2/PMMA/thickness 0.2 mm, width 10 mm   study oxygen/width effect\n       15     15 20 mm/s A.5/PMMA/thickness 0.1 mm, width 20 mm   study oxygen/flow/thickness effect\n       16     15 50 mm/s A.6/PMMA/thickness 0.1 mm, width 20 mm   study oxygen/flow/thickness effect\n       17     15 50 mm/s B.4/PMMA/thickness 0.2 mm, width 20 mm   study oxygen/flow/thickness effect\n       18     15 50 mm/s C.4/PMMA/thickness 0.2 mm, width 10 mm   study oxygen/width effect\n       19     21 0 mm/s  A.7/PMMA/thickness 0.1 mm, width 20 mm   test data repeatability\n       20     21 20 mm/s A.8/PMMA/thickness 0.1 mm, width 20 mm   test data repeatability                                     13",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            156.31,
+            19.95,
+            563.57,
+            59.94
+          ],
+          "text": "BASS-II Science Overview",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            169.15,
+            64.22,
+            550.83,
+            84.26
+          ],
+          "text": "priority order test matrix per PI:  Bhattacharjee",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            43.96,
+            177.38,
+            188.08,
+            188.05
+          ],
+          "text": "BASS- II test MatrixPI: Bhattacharjee",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            43.96,
+            205.78,
+            552.82,
+            230.66
+          ],
+          "text": "Priority \nTest #\nO2\nFlow(s)\nSample #/type/description\nbrief objective of test\nnotes",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            75.37,
+            235.62,
+            521.71,
+            460.14
+          ],
+          "text": "1\n21 0 mm/s A.1/PMMA/thickness 0.1 mm, width 20 mm\nstudy thickness effect\n2\n21 0 mm/s B.1/PMMA/thickness 0.2 mm, width 20 mm\nstudy thickness effect\n3\n21 0 mm/s D.1/PMMA/thickness 0.3 mm, width 20 mm\nstudy thickness effect\n4\n21 20 mm/s A.2/PMMA/thickness 0.1 mm, width 20 mm\nstudy boundary layer/flow effect\n5\n21 0 mm/s C.1/PMMA/thickness 0.2 mm, width 10 mm\nstudy width effect\n6\n15 0 mm/s A.4/PMMA/thickness 0.1 mm, width 20 mm\nstudy oxygen effect\n7\n21 0 mm/s E.1/PMMA/thickness 0.4 mm, width 20 mm\nstudy thickness effect\n8\n21 20 mm/s B.2/PMMA/thickness 0.2 mm, width 20 mm\nstudy boundary layer/thickness/flow effect\n9\n21 50 mm/s A.3/PMMA/thickness 0.1 mm, width 20 mm\nstudy boundary layer/flow effect\n10\n21 50 mm/s C.3/PMMA/thickness 0.2 mm, width 10 mm\nstudy width/flow effect\n11\n21 50 mm/s B.3/PMMA/thickness 0.2 mm, width 20 mm\nstudy boundary layer/thickness effect\n12\n21 50 mm/s D.2/PMMA/thickness 0.3 mm, width 20 mm\nstudy boundary layer/thickness effect\n13\n21 50 mm/s E.2/PMMA/thickness 0.4 mm, width 20 mm\nstudy boundary layer/thickness effect\n14\n21 50 mm/s C.2/PMMA/thickness 0.2 mm, width 10 mm\nstudy oxygen/width effect\n15\n15 20 mm/s A.5/PMMA/thickness 0.1 mm, width 20 mm\nstudy oxygen/flow/thickness effect\n16\n15 50 mm/s A.6/PMMA/thickness 0.1 mm, width 20 mm\nstudy oxygen/flow/thickness effect",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            75.37,
+            465.11,
+            490.37,
+            475.77
+          ],
+          "text": "17\n15 50 mm/s B.4/PMMA/thickness 0.2 mm, width 20 mm\nstudy oxygen/flow/thickness effect",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            75.37,
+            480.74,
+            453.86,
+            519.83
+          ],
+          "text": "18\n15 50 mm/s C.4/PMMA/thickness 0.2 mm, width 10 mm\nstudy oxygen/width effect\n19\n21 0 mm/s A.7/PMMA/thickness 0.1 mm, width 20 mm\ntest data repeatability\n20\n21 20 mm/s A.8/PMMA/thickness 0.1 mm, width 20 mm\ntest data repeatability",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            664.54,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "13",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "location": "página 14",
+      "text": "BASS-II Science Overview\n       priority order test matrix per PI: T’ien\n\n\n\n\n\n                                                                                   14",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            156.31,
+            19.95,
+            563.57,
+            59.94
+          ],
+          "text": "BASS-II Science Overview",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            205.87,
+            64.22,
+            514.12,
+            84.26
+          ],
+          "text": "priority order test matrix per PI:  T’ien",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            664.54,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "14",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "location": "página 15",
+      "text": "BASS-II Science Overview\n      priority order test matrix per PI: Miller\n\n\n\n\n\n                                                                                              15",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            90.31,
+            68.0,
+            497.52,
+            107.96
+          ],
+          "text": "BASS-II Science Overview",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            138.43,
+            112.22,
+            449.64,
+            132.26
+          ],
+          "text": "priority order test matrix per PI: Miller",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            664.54,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "15",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "location": "página 16",
+      "text": "BASS-II Science Overview\n priority order test matrix per PI: Fernandez-Pello\n\n\n\n\n\n                                                                                   16",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            156.31,
+            19.95,
+            563.57,
+            59.94
+          ],
+          "text": "BASS-II Science Overview",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            163.03,
+            64.22,
+            557.1,
+            84.26
+          ],
+          "text": "priority order test matrix per PI: Fernandez-Pello",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            664.54,
+            510.03,
+            676.76,
+            522.05
+          ],
+          "text": "16",
+          "kind": "heading_candidate"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "name": "Tabela detectada p.12.1",
+      "location": "página 12, tabela 1",
+      "header_row": 1,
+      "columns": [
+        "BASS -IItestMatrix",
+        "Coluna 2",
+        "PI:",
+        "Olson",
+        "Coluna 5",
+        "Coluna 6",
+        "Coluna 7"
+      ],
+      "original_headers": [
+        "BASS -IItestMatrix",
+        "",
+        "PI:",
+        "Olson",
+        "",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "PriorityTest#",
+          "O2",
+          "Flow(s)",
+          "Sample#/type/description",
+          "briefobjectiveoftest",
+          "notes",
+          null
+        ],
+        [
+          1.0,
+          21.0,
+          "5 3 2 1 min\n, , , ,",
+          "1/4\"rod clear\n,",
+          "steadyspreadatcondition(s)",
+          "igniteataconsistentconcurrentflow\n,\nthenreducetolowflowsandmeasure\nspread repeatuntilextinguished\n, .\nDeterminesolidresponsetime\n.",
+          null
+        ],
+        [
+          2.0,
+          21.0,
+          "5 etc\n,",
+          "3/8\"rod clear\n,",
+          "steadyspreadatcondition(s)",
+          "diametereffect timescaleestimate\n,",
+          null
+        ],
+        [
+          3.0,
+          16.0,
+          "5 3 2 1\n, , ,",
+          "1/4\"rod clear\n,",
+          "findlowvelocitylimit",
+          "waitateachflowforsolidphase\ntimescale",
+          null
+        ],
+        [
+          4.0,
+          16.0,
+          "5 increase\n,",
+          "1/4\"rod clear\n,",
+          "findblowofflimit",
+          "can increase flow every 5 -10 seconds",
+          null
+        ],
+        [
+          5.0,
+          15.0,
+          "5 decrease\n,",
+          "1/4\"rod clear\n,",
+          "findlowvelocitylimit",
+          "may re-use same rod for repeated tests\n,\ntopreservesamples",
+          null
+        ],
+        [
+          6.0,
+          15.0,
+          "5 increase\n,",
+          "1/4\"rodclear",
+          "findblowofflimit",
+          "can increase flow every 5 -10 seconds",
+          null
+        ],
+        [
+          7.0,
+          "17or14",
+          "5 decrease\n,",
+          "1/4\"rod clear\n,",
+          "findlowvelocitylimit",
+          null,
+          null
+        ],
+        [
+          8.0,
+          "17or14",
+          "5 increase\n,",
+          "1/4\"rod clear\n,",
+          "findblowofflimit",
+          "can increase flow every 5 -10 seconds",
+          null
+        ],
+        [
+          9.0,
+          21.0,
+          "5 etc\n,",
+          "1/2\"rod clear\n,",
+          "steadyspreadatcondition(s)",
+          "diametereffect timescaleestimate\n,",
+          null
+        ],
+        [
+          10.0,
+          21.0,
+          "5321 min\n, , , ,",
+          "1/4\"rod black\n,",
+          "steadyspreadatcondition(s)",
+          "todetermineifresultsdependon\nmaterialcolor forcomparisionswith\n,\nPelloresults",
+          null
+        ],
+        [
+          11.0,
+          "tbd",
+          "5 decrease\n,",
+          "3/8\"rod clear\n,",
+          "findlowvelocitylimit",
+          "diametereffect",
+          null
+        ],
+        [
+          12.0,
+          "tbd",
+          "5 decrease\n,",
+          "1/2\"rod clear\n,",
+          "findlowvelocitylimit",
+          "diametereffect",
+          null
+        ],
+        [
+          13.0,
+          "tbd",
+          "5 decrease\n,",
+          "1/4\"rod black\n,",
+          "findlowvelocitylimit",
+          "colordependenceonlimit",
+          null
+        ],
+        [
+          14.0,
+          "tbd",
+          "tbd",
+          "1/4\"rod clear\n,",
+          "tbd",
+          "possiblerepeatlimit",
+          null
+        ],
+        [
+          15.0,
+          "tbd",
+          "5 decrease\n,",
+          "3/8\"rod clear\n,",
+          "findlowvelocitylimit",
+          "diametereffect",
+          null
+        ],
+        [
+          16.0,
+          "tbd",
+          "5 increase\n,",
+          "3/8\"rod clear\n,",
+          "findblowofflimit",
+          "diametereffect",
+          null
+        ],
+        [
+          17.0,
+          19.0,
+          "tbd",
+          "1/4\"rod clear\n,",
+          "tbd",
+          null,
+          null
+        ],
+        [
+          18.0,
+          19.0,
+          "tbd",
+          "1/4\"rod clear\n,",
+          "tbd",
+          null,
+          null
+        ],
+        [
+          19.0,
+          18.0,
+          "tbd",
+          "1/4\"rod clear\n,",
+          "tbd",
+          null,
+          null
+        ],
+        [
+          20.0,
+          18.0,
+          "tbd",
+          "1/4\"rod clear\n,",
+          "tbd",
+          null,
+          null
+        ],
+        [
+          "Notes in the event of a non-ignition of the rod at low O2 an opposed ignition will be attempted followed by an ambient air opposed or concurrent test at TBD flow(s)\n, , .",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          12.0
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "página 12",
+        "range": "bbox 18,114,702,528",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "catalog",
+        "has_header": true
+      },
+      "params": {},
+      "page": 12,
+      "bbox": [
+        18.23,
+        114.33,
+        701.67,
+        527.69
+      ],
+      "column_meta": [
+        {
+          "name": "BASS -IItestMatrix",
+          "base": "BASS -IItestMatrix",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 24,
+          "n_nonempty": 22,
+          "n_numeric": 20,
+          "n_range": 0,
+          "numeric_ratio": 0.909,
+          "min": 1.0,
+          "max": 20.0
+        },
+        {
+          "name": "Coluna 2",
+          "base": "Coluna 2",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 24,
+          "n_nonempty": 21,
+          "n_numeric": 12,
+          "n_range": 0,
+          "numeric_ratio": 0.571,
+          "min": 15.0,
+          "max": 21.0
+        },
+        {
+          "name": "PI:",
+          "base": "PI:",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 24,
+          "n_nonempty": 21,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Olson",
+          "base": "Olson",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 24,
+          "n_nonempty": 21,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Coluna 5",
+          "base": "Coluna 5",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 24,
+          "n_nonempty": 21,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Coluna 6",
+          "base": "Coluna 6",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 24,
+          "n_nonempty": 16,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Coluna 7",
+          "base": "Coluna 7",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 24,
+          "n_nonempty": 1,
+          "n_numeric": 1,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 12.0,
+          "max": 12.0
+        }
+      ],
+      "chart": {
+        "type": "catalog",
+        "x": null,
+        "y": []
+      },
+      "flags": [
+        {
+          "level": "info",
+          "code": "valores_ausentes",
+          "message": "'BASS -IItestMatrix': 2 de 24 valores ausentes.",
+          "columns": [
+            "BASS -IItestMatrix"
+          ],
+          "suggest": {}
+        },
+        {
+          "level": "aviso",
+          "code": "texto_em_coluna_numerica",
+          "message": "'BASS -IItestMatrix': 2 célula(s) de texto serão ignoradas na parte numérica.",
+          "columns": [
+            "BASS -IItestMatrix"
+          ],
+          "suggest": {}
+        },
+        {
+          "level": "info",
+          "code": "valores_ausentes",
+          "message": "'Coluna 7': 23 de 24 valores ausentes.",
+          "columns": [
+            "Coluna 7"
+          ],
+          "suggest": {}
+        }
+      ],
+      "evidence_kind": "engineering_or_publication",
+      "field_classification": []
+    },
+    {
+      "name": "Tabela detectada p.13.1",
+      "location": "página 13, tabela 1",
+      "header_row": 1,
+      "columns": [
+        "BASS II test Matrix\n-",
+        "Coluna 2",
+        "PI:Bhattacharjee",
+        "Coluna 4",
+        "Coluna 5",
+        "Coluna 6",
+        "Coluna 7"
+      ],
+      "original_headers": [
+        "BASS II test Matrix\n-",
+        "",
+        "PI:Bhattacharjee",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Priority\nTest#",
+          "O2",
+          "Flow(s)",
+          "Sample#/type/description",
+          "briefobjectiveoftest",
+          "notes",
+          null
+        ],
+        [
+          1.0,
+          21.0,
+          "0mm/s",
+          "A1/PMMA/thickness01mm width20mm\n. . ,",
+          "studythicknesseffect",
+          null,
+          null
+        ],
+        [
+          2.0,
+          21.0,
+          "0mm/s",
+          "B1/PMMA/thickness02mm width20mm\n. . ,",
+          "studythicknesseffect",
+          null,
+          null
+        ],
+        [
+          3.0,
+          21.0,
+          "0mm/s",
+          "D1/PMMA/thickness03mm width20mm\n. . ,",
+          "studythicknesseffect",
+          null,
+          null
+        ],
+        [
+          4.0,
+          21.0,
+          "20mm/s",
+          "A2/PMMA/thickness01mm width20mm\n. . ,",
+          "studyboundarylayer/floweffect",
+          null,
+          null
+        ],
+        [
+          5.0,
+          21.0,
+          "0mm/s",
+          "C1/PMMA/thickness02mm width10mm\n. . ,",
+          "studywidtheffect",
+          null,
+          null
+        ],
+        [
+          6.0,
+          15.0,
+          "0mm/s",
+          "A4/PMMA/thickness01mm width20mm\n. . ,",
+          "studyoxygeneffect",
+          null,
+          null
+        ],
+        [
+          7.0,
+          21.0,
+          "0mm/s",
+          "E1/PMMA/thickness04mm width20mm\n. . ,",
+          "studythicknesseffect",
+          null,
+          null
+        ],
+        [
+          8.0,
+          21.0,
+          "20mm/s",
+          "B2/PMMA/thickness02mm width20mm\n. . ,",
+          "studyboundarylayer/thickness/floweffect",
+          null,
+          null
+        ],
+        [
+          9.0,
+          21.0,
+          "50mm/s",
+          "A3/PMMA/thickness01mm width20mm\n. . ,",
+          "studyboundarylayer/floweffect",
+          null,
+          null
+        ],
+        [
+          10.0,
+          21.0,
+          "50mm/s",
+          "C3/PMMA/thickness02mm width10mm\n. . ,",
+          "studywidth/floweffect",
+          null,
+          null
+        ],
+        [
+          11.0,
+          21.0,
+          "50mm/s",
+          "B3/PMMA/thickness02mm width20mm\n. . ,",
+          "studyboundarylayer/thicknesseffect",
+          null,
+          null
+        ],
+        [
+          12.0,
+          21.0,
+          "50mm/s",
+          "D2/PMMA/thickness03mm width20mm\n. . ,",
+          "studyboundarylayer/thicknesseffect",
+          null,
+          null
+        ],
+        [
+          13.0,
+          21.0,
+          "50mm/s",
+          "E2/PMMA/thickness04mm width20mm\n. . ,",
+          "studyboundarylayer/thicknesseffect",
+          null,
+          null
+        ],
+        [
+          14.0,
+          21.0,
+          "50mm/s",
+          "C2/PMMA/thickness02mm width10mm\n. . ,",
+          "studyoxygen/widtheffect",
+          null,
+          null
+        ],
+        [
+          15.0,
+          15.0,
+          "20mm/s",
+          "A5/PMMA/thickness01mm width20mm\n. . ,",
+          "studyoxygen/flow/thicknesseffect",
+          null,
+          null
+        ],
+        [
+          16.0,
+          15.0,
+          "50mm/s",
+          "A6/PMMA/thickness01mm width20mm\n. . ,",
+          "studyoxygen/flow/thicknesseffect",
+          null,
+          null
+        ],
+        [
+          17.0,
+          15.0,
+          "50mm/s",
+          "B4/PMMA/thickness02mm width20mm\n. . ,",
+          "studyoxygen/flow/thicknesseffect",
+          null,
+          null
+        ],
+        [
+          18.0,
+          15.0,
+          "50mm/s",
+          "C4/PMMA/thickness02mm width10mm\n. . ,",
+          "studyoxygen/widtheffect",
+          null,
+          null
+        ],
+        [
+          19.0,
+          21.0,
+          "0mm/s",
+          "A7/PMMA/thickness01mm width20mm\n. . ,",
+          "testdatarepeatability",
+          null,
+          null
+        ],
+        [
+          20.0,
+          21.0,
+          "20mm/s",
+          "A8/PMMA/thickness01mm width20mm\n. . ,",
+          "testdatarepeatability",
+          13.0,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "página 13",
+        "range": "bbox 42,174,720,540",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "catalog",
+        "has_header": true
+      },
+      "params": {},
+      "page": 13,
+      "bbox": [
+        42.0,
+        173.77,
+        720.0,
+        540.0
+      ],
+      "column_meta": [
+        {
+          "name": "BASS II test Matrix\n-",
+          "base": "BASS II test Matrix\n-",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 23,
+          "n_nonempty": 21,
+          "n_numeric": 20,
+          "n_range": 0,
+          "numeric_ratio": 0.952,
+          "min": 1.0,
+          "max": 20.0
+        },
+        {
+          "name": "Coluna 2",
+          "base": "Coluna 2",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 23,
+          "n_nonempty": 21,
+          "n_numeric": 20,
+          "n_range": 0,
+          "numeric_ratio": 0.952,
+          "min": 15.0,
+          "max": 21.0
+        },
+        {
+          "name": "PI:Bhattacharjee",
+          "base": "PI:Bhattacharjee",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 23,
+          "n_nonempty": 21,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Coluna 4",
+          "base": "Coluna 4",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 23,
+          "n_nonempty": 21,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Coluna 5",
+          "base": "Coluna 5",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 23,
+          "n_nonempty": 21,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Coluna 6",
+          "base": "Coluna 6",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 23,
+          "n_nonempty": 2,
+          "n_numeric": 1,
+          "n_range": 0,
+          "numeric_ratio": 0.5,
+          "min": 13.0,
+          "max": 13.0
+        }
+      ],
+      "chart": {
+        "type": "catalog",
+        "x": null,
+        "y": []
+      },
+      "flags": [
+        {
+          "level": "info",
+          "code": "valores_ausentes",
+          "message": "'BASS II test Matrix\n-': 2 de 23 valores ausentes.",
+          "columns": [
+            "BASS II test Matrix\n-"
+          ],
+          "suggest": {}
+        },
+        {
+          "level": "aviso",
+          "code": "texto_em_coluna_numerica",
+          "message": "'BASS II test Matrix\n-': 1 célula(s) de texto serão ignoradas na parte numérica.",
+          "columns": [
+            "BASS II test Matrix\n-"
+          ],
+          "suggest": {}
+        },
+        {
+          "level": "info",
+          "code": "valores_ausentes",
+          "message": "'Coluna 2': 2 de 23 valores ausentes.",
+          "columns": [
+            "Coluna 2"
+          ],
+          "suggest": {}
+        },
+        {
+          "level": "aviso",
+          "code": "texto_em_coluna_numerica",
+          "message": "'Coluna 2': 1 célula(s) de texto serão ignoradas na parte numérica.",
+          "columns": [
+            "Coluna 2"
+          ],
+          "suggest": {}
+        }
+      ],
+      "evidence_kind": "engineering_or_publication",
+      "field_classification": []
+    }
+  ],
+  "captions": [],
+  "metadata": {
+    "format": "PDF 1.7",
+    "creationDate": "D:20230606090403-05'00'",
+    "modDate": "D:20230606090403-05'00'",
+    "page_count": 16,
+    "legendas": 0,
+    "tabelas_detectadas": 2
+  },
+  "warnings": [
+    "2 tabela(s) detectada(s) automaticamente no PDF; confira visualmente, pois a detecção pode errar. Dados de figuras (gráficos) não são extraídos como números."
+  ],
+  "schema_version": 4,
+  "source_filename": "PSI-25_Science Documents_BASS-II_SRD.pdf",
+  "source_extension": ".pdf",
+  "document": {
+    "name": "PSI-25_Science Documents_BASS-II_SRD.pdf",
+    "extension": ".pdf",
+    "sha256": "d00a763d60719bc14004264e216452b44c3c1bf4b0c629e9d307c8abf9568e75",
+    "size_bytes": 1108340
+  },
+  "evidence_kind": "engineering_or_publication",
+  "observations": [],
+  "provenance": {
+    "study_id": "PSI-25",
+    "source": "NASA Physical Sciences Informatics",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-25/download?file=PSI-25_Science+Documents_BASS-II_SRD.pdf&version=2&redirect=false",
+    "filename": "PSI-25_Science Documents_BASS-II_SRD.pdf",
+    "sha256": "d00a763d60719bc14004264e216452b44c3c1bf4b0c629e9d307c8abf9568e75",
+    "size_bytes": 1108340,
+    "study_version": 4,
+    "file_version": 2,
+    "retrieved_utc": "2026-11-15T18:21:25.649414+00:00",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 1108340.0,
+      "directory": false,
+      "files": [],
+      "id": "6924805f7f6aa6a83021067d",
+      "key": "psi-data/PSI-25/Science Documents/PSI-25_Science Documents_BASS-II_SRD.pdf",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "1.06 MB",
+      "sortingCategory": "Science Documents",
+      "status": "active",
+      "subcategory": "",
+      "updated": "Mon, 24 Nov 2025 23:57:19 GMT",
+      "version": 2,
+      "visible": true
+    },
+    "doi": "10.60555/4qc4-de67",
+    "classification": "engineering_or_publication",
+    "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection.",
+    "license": "No file-specific license exposed by metadata; consult NASA PSI terms and original attribution.",
+    "media_type": "application/pdf",
+    "units": "Preserved as declared in the original column headers; no implicit units assigned."
+  }
+}

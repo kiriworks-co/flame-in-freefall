@@ -1,0 +1,135 @@
+{
+  "investigation_id": "PSI-99",
+  "title": "Spacecraft Fire Experiment-II",
+  "doi": "10.60555/2chp-m469",
+  "study_version": 5,
+  "metadata_source_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-99/metadata",
+  "downloaded_csvs": [
+    {
+      "study_id": "PSI-99",
+      "source": "NASA Physical Sciences Informatics",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-99/download?file=PSI-99_Experimental+table_SAFFIRE-2.csv&version=1&redirect=false",
+      "filename": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "size_bytes": 1973,
+      "study_version": 5,
+      "file_version": 1,
+      "retrieved_utc": "2026-11-15T18:23:13.317418+00:00",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 1973,
+        "directory": false,
+        "files": [],
+        "id": "6792d000b7b6ff8e650380fc",
+        "key": "psi-data/PSI-99/Experimental table/PSI-99_Experimental table_SAFFIRE-2.csv",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "1.93 KB",
+        "sortingCategory": "Experimental table",
+        "status": "active",
+        "subcategory": "",
+        "updated": "Fri, 24 Jan 2025 07:25:52 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "doi": "10.60555/2chp-m469",
+      "classification": "mixed_conditions_and_reported_results",
+      "classification_note": "Contains conditions and reported outcomes. Preserve header meanings and uncertain units; do not infer material risk rankings.",
+      "license": "No file-specific license exposed by metadata; consult NASA PSI terms and original attribution.",
+      "media_type": "text/csv",
+      "units": "Preserved as declared in the original column headers; no implicit units assigned.",
+      "field_classification": [
+        {
+          "header": "Sample Number",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Material",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Samle Thickness ",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Sample Length ",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Sample Width (cm)",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Air Flow (cm/s)",
+          "role": "condition",
+          "warning": null
+        },
+        {
+          "header": "Percent O2 (Note 1)",
+          "role": "condition",
+          "warning": null
+        },
+        {
+          "header": "Ignition Power (W)",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Ignition Time (s)",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Burn Time (s)",
+          "role": "reported_result",
+          "warning": null
+        },
+        {
+          "header": "Flow Direction",
+          "role": "condition",
+          "warning": null
+        },
+        {
+          "header": "?-g Burn Length",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "?-g Spread Length",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "1-g Burn Length",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "1-g Spread Rate",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Camera 1",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Camera 2",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        }
+      ]
+    }
+  ],
+  "downloaded_pdfs": [],
+  "status": "downloaded"
+}

@@ -1,0 +1,80 @@
+{
+  "investigation_id": "PSI-26",
+  "title": "Burning and Suppression of Solids",
+  "doi": "10.60555/58h4-dy80",
+  "study_version": 4,
+  "metadata_source_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-26/metadata",
+  "downloaded_csvs": [
+    {
+      "study_id": "PSI-26",
+      "source": "NASA Physical Sciences Informatics",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-26/download?file=PSI-26_Experimental+table_BASS.csv&version=1&redirect=false",
+      "filename": "PSI-26_Experimental table_BASS.csv",
+      "sha256": "ccfc3c54d948b64a1c5d2596a63c7c8019e51df0c91a1d62f039f48fa28c300f",
+      "size_bytes": 4726,
+      "study_version": 4,
+      "file_version": 1,
+      "retrieved_utc": "2026-11-15T18:22:33.304585+00:00",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 4726,
+        "directory": false,
+        "files": [],
+        "id": "67a3768509ed061032c125fb",
+        "key": "psi-data/PSI-26/Experimental table/PSI-26_Experimental table_BASS.csv",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "4.62 KB",
+        "sortingCategory": "Experimental table",
+        "status": "active",
+        "subcategory": "",
+        "updated": "Wed, 05 Feb 2025 22:32:37 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "doi": "10.60555/58h4-dy80",
+      "classification": "condition",
+      "classification_note": "Experimental table: conditions/sample catalogue; not an independently validated measurement dataset.",
+      "license": "No file-specific license exposed by metadata; consult NASA PSI terms and original attribution.",
+      "media_type": "text/csv",
+      "units": "Preserved as declared in the original column headers; no implicit units assigned.",
+      "field_classification": [
+        {
+          "header": "Date",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "GMT",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "As Run Test #",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Test #",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Sample #",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Fuel Sample Material",
+          "role": "condition",
+          "warning": null
+        }
+      ]
+    }
+  ],
+  "downloaded_pdfs": [],
+  "status": "downloaded"
+}

@@ -1,0 +1,136 @@
+{
+  "id": "ba994cae063b4c4c9dd44e8505e18f93",
+  "folder": "psi-98-saffire-i-ba994cae",
+  "name": "PSI-98 · Saffire-I",
+  "description": "",
+  "created_at": "2026-11-15T18:22:45+00:00",
+  "updated_at": "2026-11-15T19:04:08+00:00",
+  "documents": [
+    {
+      "id": "c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d",
+      "name": "PSI-98_Experimental table_SAFFIRE-1.csv",
+      "extension": ".csv",
+      "size_bytes": 469,
+      "sha256": "c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d",
+      "uploaded_at": "2026-11-15T18:22:45+00:00",
+      "status": "processado",
+      "original_path": "originais/c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d_PSI-98_Experimental table_SAFFIRE-1.csv",
+      "extraction_path": "extraidos/c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d.json",
+      "warnings": [],
+      "table_count": 1,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-98",
+        "source": "NASA Physical Sciences Informatics",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-98/download?file=PSI-98_Experimental+table_SAFFIRE-1.csv&version=1&redirect=false",
+        "filename": "PSI-98_Experimental table_SAFFIRE-1.csv",
+        "sha256": "c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d",
+        "size_bytes": 469,
+        "study_version": 4,
+        "file_version": 1,
+        "retrieved_utc": "2026-11-15T18:23:07.418320+00:00",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 469,
+          "directory": false,
+          "files": [],
+          "id": "6792c46eb7b6ff8e65037f3e",
+          "key": "psi-data/PSI-98/Experimental table/PSI-98_Experimental table_SAFFIRE-1.csv",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "469.0 B",
+          "sortingCategory": "Experimental table",
+          "status": "active",
+          "subcategory": "",
+          "updated": "Fri, 24 Jan 2025 06:36:30 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "doi": "10.60555/0t15-1z43",
+        "classification": "mixed_conditions_and_reported_results",
+        "classification_note": "Contains conditions and reported outcomes. Preserve header meanings and uncertain units; do not infer material risk rankings.",
+        "license": "No file-specific license exposed by metadata; consult NASA PSI terms and original attribution.",
+        "media_type": "text/csv",
+        "units": "Preserved as declared in the original column headers; no implicit units assigned.",
+        "field_classification": [
+          {
+            "header": "Sample Number ",
+            "role": "identifier_or_unclassified",
+            "warning": null
+          },
+          {
+            "header": "Material",
+            "role": "identifier_or_unclassified",
+            "warning": null
+          },
+          {
+            "header": "Sample Thickness (cm)",
+            "role": "identifier_or_unclassified",
+            "warning": null
+          },
+          {
+            "header": "Sample Length (cm)",
+            "role": "identifier_or_unclassified",
+            "warning": null
+          },
+          {
+            "header": "Sample Width (cm)",
+            "role": "identifier_or_unclassified",
+            "warning": null
+          },
+          {
+            "header": "Air Flow (cm/s)",
+            "role": "condition",
+            "warning": null
+          },
+          {
+            "header": "Percent O2",
+            "role": "condition",
+            "warning": null
+          },
+          {
+            "header": "Ignition Power (W)",
+            "role": "identifier_or_unclassified",
+            "warning": null
+          },
+          {
+            "header": "Ignition Time (s)",
+            "role": "identifier_or_unclassified",
+            "warning": null
+          },
+          {
+            "header": "Burn Time (s)",
+            "role": "reported_result",
+            "warning": null
+          },
+          {
+            "header": "Flow Direction ",
+            "role": "condition",
+            "warning": null
+          },
+          {
+            "header": "Camera 1",
+            "role": "identifier_or_unclassified",
+            "warning": null
+          },
+          {
+            "header": "Camera 2",
+            "role": "identifier_or_unclassified",
+            "warning": null
+          }
+        ]
+      },
+      "evidence_kind": "mixed_conditions_and_reported_results"
+    }
+  ],
+  "psi_id": "PSI-98",
+  "investigation_id": "PSI-98",
+  "study_id": "PSI-98",
+  "source_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+  "doi": "10.60555/0t15-1z43",
+  "category": "Prevenção/propagação de chama"
+}

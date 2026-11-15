@@ -1,0 +1,12 @@
+{
+  "source_url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+  "sha256": "5fe046efe4e35e506023e27a9784d041e893026f19c9987591483614aea5d6b6",
+  "bytes": 1500825,
+  "status": "downloaded",
+  "retrieved_utc": "2026-11-15T18:18:57.556117+00:00",
+  "media_type": "application/pdf",
+  "classification": "context",
+  "license": "NASA publication; no separate file-specific license declared. Credit NASA and original authors; verify third-party content permissions.",
+  "doi": null,
+  "version": "Publication bytes as retrieved; SHA-256 identifies this copy."
+}

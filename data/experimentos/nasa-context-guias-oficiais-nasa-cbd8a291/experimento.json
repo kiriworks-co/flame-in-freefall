@@ -1,0 +1,74 @@
+{
+  "id": "cbd8a291a6704f8db756f3f33f9e7af8",
+  "folder": "nasa-context-guias-oficiais-nasa-cbd8a291",
+  "name": "NASA-CONTEXT · Guias oficiais NASA",
+  "description": "Documentação e fundamentos; não contém novas medições deste dashboard.",
+  "created_at": "2026-11-15T18:22:45+00:00",
+  "updated_at": "2026-11-15T19:04:09+00:00",
+  "documents": [
+    {
+      "id": "9237b173f349028014ce69a2beae8c590a8483e7009978f178ecb6eac55fe7b1",
+      "name": "psi_database_guide.pdf",
+      "extension": ".pdf",
+      "size_bytes": 1139998,
+      "sha256": "9237b173f349028014ce69a2beae8c590a8483e7009978f178ecb6eac55fe7b1",
+      "uploaded_at": "2026-11-15T18:22:47+00:00",
+      "status": "processado",
+      "original_path": "originais/9237b173f349028014ce69a2beae8c590a8483e7009978f178ecb6eac55fe7b1_psi_database_guide.pdf",
+      "extraction_path": "extraidos/9237b173f349028014ce69a2beae8c590a8483e7009978f178ecb6eac55fe7b1.json",
+      "warnings": [],
+      "table_count": 0,
+      "page_count": 11,
+      "schema_version": 4,
+      "provenance": {
+        "source_url": "https://assets.science.nasa.gov/content/dam/science/bps/bps-general/bps-data_osdr_psi/Complete_PSI_Database_Guide.pdf",
+        "sha256": "9237b173f349028014ce69a2beae8c590a8483e7009978f178ecb6eac55fe7b1",
+        "bytes": 1139998,
+        "status": "downloaded",
+        "retrieved_utc": "2026-11-15T18:18:57.739081+00:00",
+        "media_type": "application/pdf",
+        "classification": "context",
+        "license": "NASA publication; no separate file-specific license declared. Credit NASA and original authors; verify third-party content permissions.",
+        "doi": null,
+        "version": "Publication bytes as retrieved; SHA-256 identifies this copy."
+      },
+      "evidence_kind": "context"
+    },
+    {
+      "id": "5fe046efe4e35e506023e27a9784d041e893026f19c9987591483614aea5d6b6",
+      "name": "researchers_guide.pdf",
+      "extension": ".pdf",
+      "size_bytes": 1500825,
+      "sha256": "5fe046efe4e35e506023e27a9784d041e893026f19c9987591483614aea5d6b6",
+      "uploaded_at": "2026-11-15T18:23:00+00:00",
+      "status": "processado",
+      "original_path": "originais/5fe046efe4e35e506023e27a9784d041e893026f19c9987591483614aea5d6b6_researchers_guide.pdf",
+      "extraction_path": "extraidos/5fe046efe4e35e506023e27a9784d041e893026f19c9987591483614aea5d6b6.json",
+      "warnings": [
+        "5 tabela(s) detectada(s) automaticamente no PDF; confira visualmente, pois a detecção pode errar. Dados de figuras (gráficos) não são extraídos como números."
+      ],
+      "table_count": 5,
+      "page_count": 56,
+      "schema_version": 4,
+      "provenance": {
+        "source_url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+        "sha256": "5fe046efe4e35e506023e27a9784d041e893026f19c9987591483614aea5d6b6",
+        "bytes": 1500825,
+        "status": "downloaded",
+        "retrieved_utc": "2026-11-15T18:18:57.556117+00:00",
+        "media_type": "application/pdf",
+        "classification": "context",
+        "license": "NASA publication; no separate file-specific license declared. Credit NASA and original authors; verify third-party content permissions.",
+        "doi": null,
+        "version": "Publication bytes as retrieved; SHA-256 identifies this copy."
+      },
+      "evidence_kind": "context"
+    }
+  ],
+  "psi_id": "NASA-CONTEXT",
+  "investigation_id": "NASA-CONTEXT",
+  "study_id": "NASA-CONTEXT",
+  "source_url": "https://psi.nasa.gov/",
+  "doi": null,
+  "category": "Contexto"
+}

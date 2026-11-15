@@ -1,0 +1,8 @@
+{
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "configured_via": "RAG_EMBEDDING_MODEL",
+  "license": "Apache-2.0",
+  "model_card": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "retrieved_utc": "2026-11-15T18:25:59.347191+00:00"
+}

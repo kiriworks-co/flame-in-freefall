@@ -1,0 +1,3 @@
+# Optional: only needed for a local sentence-transformers model.
+-r requirements.txt
+sentence-transformers>=3,<6

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "psi_repository",
+    "url": "https://psi.nasa.gov/physci/repo/search?q=combustion",
+    "checked_utc": "2026-11-15T18:18:58.376028+00:00",
+    "http_status": 200,
+    "final_url": "https://psi.nasa.gov/physci/repo/search?q=combustion",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "id": "nasa_combustion",
+    "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/",
+    "checked_utc": "2026-11-15T18:18:58.377029+00:00",
+    "http_status": 200,
+    "final_url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/",
+    "content_type": "text/html; charset=UTF-8"
+  },
+  {
+    "id": "sciencecast",
+    "url": "https://www.youtube.com/watch?v=W1oXykoz9zg",
+    "checked_utc": "2026-11-15T18:18:58.377029+00:00",
+    "http_status": 200,
+    "final_url": "https://www.youtube.com/watch?v=W1oXykoz9zg",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "id": "research_guide",
+    "url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+    "checked_utc": "2026-11-15T18:18:58.489695+00:00",
+    "http_status": 200,
+    "final_url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+    "content_type": "application/pdf"
+  },
+  {
+    "id": "apollo1",
+    "url": "https://sma.nasa.gov/sma-disciplines/accllp/apollo-1",
+    "checked_utc": "2026-11-15T18:18:58.550802+00:00",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>"
+  },
+  {
+    "id": "apollo13",
+    "url": "https://sma.nasa.gov/sma-disciplines/accllp/apollo-13",
+    "checked_utc": "2026-11-15T18:18:58.659673+00:00",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>"
+  },
+  {
+    "id": "mir_fire",
+    "url": "https://www.nasa.gov/history/25-years-ago-fire-aboard-space-station-mir/",
+    "checked_utc": "2026-11-15T18:18:59.411452+00:00",
+    "http_status": 200,
+    "final_url": "https://www.nasa.gov/history/25-years-ago-fire-aboard-space-station-mir/",
+    "content_type": "text/html; charset=UTF-8"
+  },
+  {
+    "id": "air_tanks",
+    "url": "https://spinoff.nasa.gov/node/9582",
+    "checked_utc": "2026-11-15T18:18:59.457213+00:00",
+    "http_status": 200,
+    "final_url": "https://spinoff.nasa.gov/node/9582",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "id": "detector",
+    "url": "https://spinoff.nasa.gov/node/9407",
+    "checked_utc": "2026-11-15T18:19:00.136080+00:00",
+    "http_status": 200,
+    "final_url": "https://spinoff.nasa.gov/node/9407",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "id": "fire_attire",
+    "url": "https://spinoff.nasa.gov/node/9918",
+    "checked_utc": "2026-11-15T18:19:00.712074+00:00",
+    "http_status": 200,
+    "final_url": "https://spinoff.nasa.gov/node/9918",
+    "content_type": "text/html; charset=utf-8"
+  }
+]

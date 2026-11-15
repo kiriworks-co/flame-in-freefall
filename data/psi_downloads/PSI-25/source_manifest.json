@@ -1,0 +1,210 @@
+{
+  "investigation_id": "PSI-25",
+  "title": "Burning and Suppression of Solids - II",
+  "doi": "10.60555/4qc4-de67",
+  "study_version": 4,
+  "metadata_source_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-25/metadata",
+  "downloaded_csvs": [
+    {
+      "study_id": "PSI-25",
+      "source": "NASA Physical Sciences Informatics",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-25/download?file=PSI-25_Experimental+table_BASS-II.csv&version=1&redirect=false",
+      "filename": "PSI-25_Experimental table_BASS-II.csv",
+      "sha256": "71e792bf6b5fb5ea620c5dd70fbbac05515992e12aefcf5dff47312caa48c042",
+      "size_bytes": 16590,
+      "study_version": 4,
+      "file_version": 1,
+      "retrieved_utc": "2026-11-15T18:22:27.268666+00:00",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 16590,
+        "directory": false,
+        "files": [],
+        "id": "67a3a17b09ed061032c19775",
+        "key": "psi-data/PSI-25/Experimental table/PSI-25_Experimental table_BASS-II.csv",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "16.2 KB",
+        "sortingCategory": "Experimental table",
+        "status": "active",
+        "subcategory": "",
+        "updated": "Thu, 06 Feb 2025 01:35:55 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "doi": "10.60555/4qc4-de67",
+      "classification": "mixed_conditions_and_reported_results",
+      "classification_note": "Contains conditions and reported outcomes. Preserve header meanings and uncertain units; do not infer material risk rankings.",
+      "license": "No file-specific license exposed by metadata; consult NASA PSI terms and original attribution.",
+      "media_type": "text/csv",
+      "units": "Preserved as declared in the original column headers; no implicit units assigned.",
+      "field_classification": [
+        {
+          "header": "PI",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Test #",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Date",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "GMT",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Sample #",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Fuel Sample Material",
+          "role": "condition",
+          "warning": null
+        },
+        {
+          "header": "Flow restrictor",
+          "role": "condition",
+          "warning": null
+        },
+        {
+          "header": "Fan display",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Air display",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Radiometer gain   (1000   250   50   10)",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Total Frames Shot",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Calibrated  initial O2 % by vol ",
+          "role": "condition",
+          "warning": null
+        },
+        {
+          "header": "Calibrated final O2 % by vol",
+          "role": "reported_result",
+          "warning": null
+        },
+        {
+          "header": "Initial CO2 % by vol",
+          "role": "condition",
+          "warning": null
+        },
+        {
+          "header": "Final CO2 % by vol",
+          "role": "reported_result",
+          "warning": null
+        },
+        {
+          "header": "Initial CO (ppm)",
+          "role": "condition",
+          "warning": null
+        },
+        {
+          "header": "Final CO (ppm)",
+          "role": "reported_result",
+          "warning": null
+        }
+      ]
+    }
+  ],
+  "downloaded_pdfs": [
+    {
+      "study_id": "PSI-25",
+      "source": "NASA Physical Sciences Informatics",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-25/download?file=PSI-25_Raw+Data_GMT2014_202_BASS_S220M_TPO5b_ProofSheet.pdf&version=2&redirect=false",
+      "filename": "PSI-25_Raw Data_GMT2014_202_BASS_S220M_TPO5b_ProofSheet.pdf",
+      "sha256": "4487d085b6a99e4f74f8a95dbe697ced7ac799becd051c224d41d400e8789153",
+      "size_bytes": 27893,
+      "study_version": 4,
+      "file_version": 2,
+      "retrieved_utc": "2026-11-15T18:20:38.767386+00:00",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 27893.0,
+        "directory": false,
+        "files": [],
+        "id": "692480567f6aa6a8302105d4",
+        "key": "psi-data/PSI-25/Raw Data/PSI-25_Raw Data_GMT2014_202_BASS_S220M_TPO5b_ProofSheet.pdf",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "27.24 KB",
+        "sortingCategory": "Raw Data",
+        "status": "active",
+        "subcategory": "Reduced Gravity/Olson/O5",
+        "updated": "Mon, 24 Nov 2025 23:57:10 GMT",
+        "version": 2,
+        "visible": true
+      },
+      "doi": "10.60555/4qc4-de67",
+      "classification": "engineering_or_publication",
+      "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection.",
+      "license": "No file-specific license exposed by metadata; consult NASA PSI terms and original attribution.",
+      "media_type": "application/pdf",
+      "units": "Preserved as declared in the original column headers; no implicit units assigned."
+    },
+    {
+      "study_id": "PSI-25",
+      "source": "NASA Physical Sciences Informatics",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-25/download?file=PSI-25_Science+Documents_BASS-II_SRD.pdf&version=2&redirect=false",
+      "filename": "PSI-25_Science Documents_BASS-II_SRD.pdf",
+      "sha256": "d00a763d60719bc14004264e216452b44c3c1bf4b0c629e9d307c8abf9568e75",
+      "size_bytes": 1108340,
+      "study_version": 4,
+      "file_version": 2,
+      "retrieved_utc": "2026-11-15T18:21:25.649414+00:00",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 1108340.0,
+        "directory": false,
+        "files": [],
+        "id": "6924805f7f6aa6a83021067d",
+        "key": "psi-data/PSI-25/Science Documents/PSI-25_Science Documents_BASS-II_SRD.pdf",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "1.06 MB",
+        "sortingCategory": "Science Documents",
+        "status": "active",
+        "subcategory": "",
+        "updated": "Mon, 24 Nov 2025 23:57:19 GMT",
+        "version": 2,
+        "visible": true
+      },
+      "doi": "10.60555/4qc4-de67",
+      "classification": "engineering_or_publication",
+      "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection.",
+      "license": "No file-specific license exposed by metadata; consult NASA PSI terms and original attribution.",
+      "media_type": "application/pdf",
+      "units": "Preserved as declared in the original column headers; no implicit units assigned."
+    }
+  ],
+  "status": "downloaded"
+}

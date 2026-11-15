@@ -1,0 +1,95 @@
+{
+  "investigation_id": "PSI-100",
+  "title": "Spacecraft Fire Experiment-III",
+  "doi": "10.60555/040q-4h36",
+  "study_version": 4,
+  "metadata_source_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-100/metadata",
+  "downloaded_csvs": [
+    {
+      "study_id": "PSI-100",
+      "source": "NASA Physical Sciences Informatics",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-100/download?file=PSI-100_Experimental+table_SAFFIRE-3.csv&version=1&redirect=false",
+      "filename": "PSI-100_Experimental table_SAFFIRE-3.csv",
+      "sha256": "4d3c717ec20dd0247db670b2784a9fd7d746788bc54a936f80693e48eb8cd117",
+      "size_bytes": 239,
+      "study_version": 4,
+      "file_version": 1,
+      "retrieved_utc": "2026-11-15T18:23:18.760376+00:00",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 239,
+        "directory": false,
+        "files": [],
+        "id": "6792d422b7b6ff8e650381da",
+        "key": "psi-data/PSI-100/Experimental table/PSI-100_Experimental table_SAFFIRE-3.csv",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "239.0 B",
+        "sortingCategory": "Experimental table",
+        "status": "active",
+        "subcategory": "",
+        "updated": "Fri, 24 Jan 2025 07:43:30 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "doi": "10.60555/040q-4h36",
+      "classification": "condition",
+      "classification_note": "Experimental table: conditions/sample catalogue; not an independently validated measurement dataset.",
+      "license": "No file-specific license exposed by metadata; consult NASA PSI terms and original attribution.",
+      "media_type": "text/csv",
+      "units": "Preserved as declared in the original column headers; no implicit units assigned.",
+      "field_classification": [
+        {
+          "header": "Sample Number ",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Material",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Sample Thickness",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Sample Length",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Sample Width",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Air Flow ",
+          "role": "condition",
+          "warning": null
+        },
+        {
+          "header": "Direction",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Camera 1",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        },
+        {
+          "header": "Camera 2",
+          "role": "identifier_or_unclassified",
+          "warning": null
+        }
+      ]
+    }
+  ],
+  "downloaded_pdfs": [],
+  "status": "downloaded"
+}

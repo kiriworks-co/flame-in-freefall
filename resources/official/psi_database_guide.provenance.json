@@ -1,0 +1,12 @@
+{
+  "source_url": "https://assets.science.nasa.gov/content/dam/science/bps/bps-general/bps-data_osdr_psi/Complete_PSI_Database_Guide.pdf",
+  "sha256": "9237b173f349028014ce69a2beae8c590a8483e7009978f178ecb6eac55fe7b1",
+  "bytes": 1139998,
+  "status": "downloaded",
+  "retrieved_utc": "2026-11-15T18:18:57.739081+00:00",
+  "media_type": "application/pdf",
+  "classification": "context",
+  "license": "NASA publication; no separate file-specific license declared. Credit NASA and original authors; verify third-party content permissions.",
+  "doi": null,
+  "version": "Publication bytes as retrieved; SHA-256 identifies this copy."
+}
