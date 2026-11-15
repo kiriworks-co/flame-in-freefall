@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PSI Flame Microgravity — Flame in Freefall (NASA Space Apps 2026)</title>
+  <style>
+    :root {
+      --bg: #FAFAF7;
+      --surface: #F0F1EE;
+      --card: #FFFFFF;
+      --ink: #202C32;
+      --muted: #526168;
+      --accent: #A44426;
+      --accent-hover: #87351B;
+      --border: #DCE0DB;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    :is(a, button):focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 1.5rem 1.25rem 3.5rem; }
+    header {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;
+      padding-bottom: 1.25rem; border-bottom: 1px solid var(--border);
+    }
+    .brand { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
+    .brand span { color: var(--accent); }
+    .lang-bar { display: flex; gap: 0.5rem; }
+    .lang-btn {
+      border: 1px solid var(--border); background: var(--card); color: var(--ink);
+      padding: 0.45rem 0.9rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem;
+    }
+    .lang-btn.active { background: var(--accent); border-color: var(--accent); color: #FFFFFF; }
+    .hero { padding: 2.5rem 0 2rem; }
+    .badge {
+      display: inline-block; background: var(--surface); border: 1px solid var(--border);
+      padding: 0.28rem 0.7rem; border-radius: 999px; font-size: 0.85rem; color: var(--muted); font-weight: 600;
+    }
+    h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.18; margin: 0.8rem 0 1rem; letter-spacing: -0.02em; }
+    .lead { font-size: 1.12rem; color: var(--muted); max-width: 72ch; margin: 0 0 1.6rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.85rem; align-items: center; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 44px; padding: 0.65rem 1.25rem; border-radius: 9px; font-weight: 600;
+    }
+    .btn-primary { background: var(--accent); color: #FFFFFF; }
+    .btn-primary:hover { background: var(--accent-hover); text-decoration: none; }
+    .btn-secondary { background: var(--card); border: 1px solid var(--border); color: var(--ink); }
+    .btn-secondary:hover { background: var(--surface); text-decoration: none; }
+    .metrics {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;
+      margin: 2rem 0;
+    }
+    .metric {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.15rem;
+    }
+    .metric-val { font-size: 1.75rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--accent); }
+    .metric-lbl { font-size: 0.9rem; color: var(--muted); }
+    h2 { font-size: 1.5rem; margin: 2.25rem 0 0.85rem; letter-spacing: -0.015em; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.25rem;
+    }
+    .card h3 { margin: 0 0 0.45rem; font-size: 1.1rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.96rem; }
+    .pill {
+      display: inline-block; font-size: 0.78rem; font-weight: 600; color: var(--accent);
+      background: #FBF1ED; padding: 0.18rem 0.55rem; border-radius: 6px; margin-bottom: 0.5rem;
+    }
+    .notice {
+      background: var(--surface); border-left: 4px solid var(--accent);
+      padding: 1rem 1.2rem; border-radius: 0 var(--radius) var(--radius) 0; margin-top: 2rem; font-size: 0.95rem;
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 0.75rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    th, td { text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
+    th { background: var(--surface); font-weight: 600; }
+    footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--border); font-size: 0.88rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">PSI <span>Flame</span> Microgravity</div>
+      <div class="lang-bar" role="group" aria-label="Language switcher">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">English (EN)</button>
+        <button class="lang-btn" id="btn-pt" onclick="setLang('pt')">Português (PT-BR)</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge" data-i18n="badge">NASA Space Apps Challenge 2026 · Flame in Freefall</span>
+      <h1 data-i18n="hero_title">Evidence-First Microgravity Combustion Explorer</h1>
+      <p class="lead" data-i18n="hero_lead">
+        Interactive scientific dashboard unifying 9 authentic NASA Physical Sciences Informatics (PSI) fire-safety investigations from the International Space Station — with SHA-256 original file provenance, conservative Pint unit normalization, and bilingual EN / PT-BR evidence search.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://share.streamlit.io/" target="_blank" rel="noopener noreferrer" data-i18n="cta_app">Launch Interactive Streamlit App →</a>
+        <a class="btn btn-secondary" href="https://psi.nasa.gov/physci/repo/search?q=combustion" target="_blank" rel="noopener noreferrer" data-i18n="cta_nasa">NASA PSI Repository</a>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Dataset summary">
+      <div class="metric"><div class="metric-val">9</div><div class="metric-lbl" data-i18n="m1">NASA PSI Investigations</div></div>
+      <div class="metric"><div class="metric-val">16</div><div class="metric-lbl" data-i18n="m2">Preserved Original Files</div></div>
+      <div class="metric"><div class="metric-val">100%</div><div class="metric-lbl" data-i18n="m3">SHA-256 File Provenance</div></div>
+      <div class="metric"><div class="metric-val">EN / PT</div><div class="metric-lbl" data-i18n="m4">Bilingual Interface & Search</div></div>
+    </section>
+
+    <h2 data-i18n="pillars_title">Why Freefall Changes Fire: Three Safety Pillars</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="pill" data-i18n="p1_tag">Prevention</span>
+        <h3>BASS · BASS-II · Saffire I–III</h3>
+        <p data-i18n="p1_desc">Explores how solid spacecraft materials ignite and spread flames under microgravity ventilation without upward buoyancy.</p>
+      </article>
+      <article class="card">
+        <span class="pill" data-i18n="p2_tag">Detection</span>
+        <h3>SAME · SAME-R</h3>
+        <p data-i18n="p2_desc">Characterizes microgravity smoke aerosol particle-size distributions to calibrate orbital and deep-space fire detectors.</p>
+      </article>
+      <article class="card">
+        <span class="pill" data-i18n="p3_tag">Suppression</span>
+        <h3>FLEX · FLEX-2</h3>
+        <p data-i18n="p3_desc">Investigates spherical liquid droplet burning, cool-flame persistence, and radiative extinction oxygen limits.</p>
+      </article>
+    </div>
+
+    <h2 data-i18n="table_title">Included NASA PSI Studies & Confirmed Identifiers</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>PSI ID</th>
+          <th data-i18n="th_name">Official NASA Title</th>
+          <th data-i18n="th_pillar">Pillar</th>
+          <th>DOI / Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>PSI-25</td><td>BASS-II (Burning and Suppression of Solids II)</td><td data-i18n="p1_tag">Prevention</td><td><a href="https://doi.org/10.60555/49c4-p347" target="_blank" rel="noopener">10.60555/49c4-p347</a></td></tr>
+        <tr><td>PSI-26</td><td>BASS (Burning and Suppression of Solids)</td><td data-i18n="p1_tag">Prevention</td><td><a href="https://psi.nasa.gov/physci/repo/data/investigations/PSI-26" target="_blank" rel="noopener">NASA PSI-26</a></td></tr>
+        <tr><td>PSI-68</td><td>FLEX-2 (Flame Extinguishment Experiment 2)</td><td data-i18n="p3_tag">Suppression</td><td><a href="https://doi.org/10.60555/g7x0-v830" target="_blank" rel="noopener">10.60555/g7x0-v830</a></td></tr>
+        <tr><td>PSI-69</td><td>FLEX (Flame Extinguishment Experiment)</td><td data-i18n="p3_tag">Suppression</td><td><a href="https://doi.org/10.60555/mbq8-0451" target="_blank" rel="noopener">10.60555/mbq8-0451</a></td></tr>
+        <tr><td>PSI-98</td><td>Saffire-I (Spacecraft Fire Experiment I)</td><td data-i18n="p1_tag">Prevention</td><td><a href="https://psi.nasa.gov/physci/repo/data/investigations/PSI-98" target="_blank" rel="noopener">NASA PSI-98</a></td></tr>
+        <tr><td>PSI-99</td><td>Saffire-II (Spacecraft Fire Experiment II)</td><td data-i18n="p1_tag">Prevention</td><td><a href="https://psi.nasa.gov/physci/repo/data/investigations/PSI-99" target="_blank" rel="noopener">NASA PSI-99</a></td></tr>
+        <tr><td>PSI-100</td><td>Saffire-III (Spacecraft Fire Experiment III)</td><td data-i18n="p1_tag">Prevention</td><td><a href="https://psi.nasa.gov/physci/repo/data/investigations/PSI-100" target="_blank" rel="noopener">NASA PSI-100</a></td></tr>
+        <tr><td>PSI-101</td><td>SAME-R (Smoke Aerosol Measurement Experiment - Reflight)</td><td data-i18n="p2_tag">Detection</td><td><a href="https://psi.nasa.gov/physci/repo/data/investigations/PSI-101" target="_blank" rel="noopener">NASA PSI-101</a></td></tr>
+        <tr><td>PSI-102</td><td>SAME (Smoke Aerosol Measurement Experiment)</td><td data-i18n="p2_tag">Detection</td><td><a href="https://doi.org/10.60555/a27x-x988" target="_blank" rel="noopener">10.60555/a27x-x988</a></td></tr>
+      </tbody>
+    </table>
+
+    <div class="notice" data-i18n="deploy_note">
+      <strong>Hosting Note:</strong> GitHub Pages hosts static websites only, so the live Python + SQLite + Plotly scientific application runs on <strong>Streamlit Community Cloud</strong> in read-only mode, initializing directly from committed NASA source artifacts with no paid AI keys required.
+    </div>
+
+    <footer>
+      <span data-i18n="footer">Built for NASA Space Apps Challenge 2026 · Never substitutes independent fire-safety verification or certification.</span>
+    </footer>
+  </div>
+
+  <script>
+    const copy = {
+      en: {
+        badge: "NASA Space Apps Challenge 2026 · Flame in Freefall",
+        hero_title: "Evidence-First Microgravity Combustion Explorer",
+        hero_lead: "Interactive scientific dashboard unifying 9 authentic NASA Physical Sciences Informatics (PSI) fire-safety investigations from the International Space Station — with SHA-256 original file provenance, conservative Pint unit normalization, and bilingual EN / PT-BR evidence search.",
+        cta_app: "Launch Interactive Streamlit App →",
+        cta_nasa: "NASA PSI Repository",
+        m1: "NASA PSI Investigations",
+        m2: "Preserved Original Files",
+        m3: "SHA-256 File Provenance",
+        m4: "Bilingual Interface & Search",
+        pillars_title: "Why Freefall Changes Fire: Three Safety Pillars",
+        p1_tag: "Prevention",
+        p1_desc: "Explores how solid spacecraft materials ignite and spread flames under microgravity ventilation without upward buoyancy.",
+        p2_tag: "Detection",
+        p2_desc: "Characterizes microgravity smoke aerosol particle-size distributions to calibrate orbital and deep-space fire detectors.",
+        p3_tag: "Suppression",
+        p3_desc: "Investigates spherical liquid droplet burning, cool-flame persistence, and radiative extinction oxygen limits.",
+        table_title: "Included NASA PSI Studies & Confirmed Identifiers",
+        th_name: "Official NASA Title",
+        th_pillar: "Pillar",
+        deploy_note: "<strong>Hosting Note:</strong> GitHub Pages hosts static websites only, so the live Python + SQLite + Plotly scientific application runs on <strong>Streamlit Community Cloud</strong> in read-only mode, initializing directly from committed NASA source artifacts with no paid AI keys required.",
+        footer: "Built for NASA Space Apps Challenge 2026 · Never substitutes independent fire-safety verification or certification."
+      },
+      pt: {
+        badge: "NASA Space Apps Challenge 2026 · Flame in Freefall",
+        hero_title: "Explorador Científico de Combustão em Microgravidade",
+        hero_lead: "Painel científico interativo que reúne 9 investigações reais do repositório NASA PSI na Estação Espacial Internacional — com proveniência SHA-256 dos arquivos originais, normalização conservadora de unidades (Pint) e busca bilíngue EN / PT-BR.",
+        cta_app: "Abrir Aplicativo Interativo Streamlit →",
+        cta_nasa: "Repositório NASA PSI",
+        m1: "Investigações NASA PSI",
+        m2: "Originais Preservados",
+        m3: "Integridade SHA-256",
+        m4: "Interface e Busca Bilíngues",
+        pillars_title: "Por que a Queda Livre Muda o Fogo: 3 Pilares",
+        p1_tag: "Prevenção",
+        p1_desc: "Investiga como materiais sólidos de cabine entram em ignição e propagam chamas sob ventilação em microgravidade sem empuxo.",
+        p2_tag: "Detecção",
+        p2_desc: "Caracteriza a distribuição de tamanho de partículas de fumaça para calibrar detectores em naves e habitats tripulados.",
+        p3_tag: "Supressão",
+        p3_desc: "Examina queima esférica de gotas líquidas, chamas frias persistentes e limites de oxigênio na extinção radiativa.",
+        table_title: "Estudos NASA PSI Incluídos e Identificadores Confirmados",
+        th_name: "Título Oficial NASA",
+        th_pillar: "Pilar",
+        deploy_note: "<strong>Nota de Hospedagem:</strong> O GitHub Pages publica apenas páginas estáticas, portanto a aplicação interativa Python + SQLite + Plotly executa no <strong>Streamlit Community Cloud</strong> em modo somente leitura, inicializando diretamente dos arquivos NASA com zero dependência de chaves pagas.",
+        footer: "Projeto NASA Space Apps Challenge 2026 · Não substitui verificação científica independente nem certificação de segurança."
+      }
+    };
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.getElementById("btn-en").classList.toggle("active", lang === "en");
+      document.getElementById("btn-pt").classList.toggle("active", lang === "pt");
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (copy[lang][key]) el.innerHTML = copy[lang][key];
+      });
+    }
+  </script>
+</body>
+</html>

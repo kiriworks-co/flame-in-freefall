@@ -156,9 +156,12 @@ def test_mock_transport_sends_key_only_in_header_and_limits_response(monkeypatch
 
 def test_visual_section_without_provider():
     from pathlib import Path
+
+    from src.i18n import t
+
     app = AppTest.from_file(str(Path(__file__).resolve().parents[1] / "app.py"), default_timeout=60).run()
-    app.radio(key="workspace_section").set_value("Revisão visual").run()
+    app.radio(key="workspace_section").set_value("visual_review").run()
     assert not app.exception
-    buttons = [b for b in app.button if b.label == "Solicitar candidato de revisão visual"]
-    if buttons:
-        assert buttons[0].disabled
+    buttons = [b for b in app.button if b.label == t("vis.vlm_btn", "en")]
+    assert buttons
+    assert buttons[0].disabled

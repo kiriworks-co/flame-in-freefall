@@ -6,6 +6,7 @@ submission explicitly marks abandoned running jobs interrupted.
 from __future__ import annotations
 
 import json
+import os
 import threading
 import uuid
 from concurrent.futures import ThreadPoolExecutor
@@ -24,6 +25,14 @@ _ACTIVE_JOBS: set[str] = set()
 
 def _json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def _portable_path(path: Path) -> str:
+    """Return a repository-relative POSIX path when inside PROJECT_DIR."""
+    try:
+        return path.resolve().relative_to(storage.PROJECT_DIR.resolve()).as_posix()
+    except ValueError:
+        return path.as_posix()
 
 
 def _safe_local(base: Path, filename: str) -> Path:
@@ -93,8 +102,14 @@ def _import_file(store: ScientificStore, experiment: dict[str, Any], path: Path,
     storage._write_json(storage.extraction_file(experiment, document), extraction)
     storage.save_experiment(experiment)
     base = storage.experiment_dir(experiment)
-    store.persist_document(experiment["psi_id"], document, extraction, provenance,
-                           str(base / document["original_path"]), str(base / document["extraction_path"]))
+    store.persist_document(
+        experiment["psi_id"],
+        document,
+        extraction,
+        provenance,
+        _portable_path(base / document["original_path"]),
+        _portable_path(base / document["extraction_path"]),
+    )
     return already, document
 
 
@@ -215,3 +230,54 @@ def enqueue_ingestion(project_dir: str | Path | None = None, db_path: str | Path
 
 def job_status(job_id: str, db_path: str | Path | None = None) -> dict[str, Any] | None:
     return ScientificStore(db_path).get_job(job_id)
+
+
+def is_public_readonly() -> bool:
+    """Return True when running in a public/cloud read-only deployment."""
+    flag = os.getenv("PSI_READONLY_MODE", "").strip().lower()
+    if flag in {"1", "true", "yes", "on"}:
+        return True
+    if flag in {"0", "false", "no", "off"}:
+        return False
+    if os.getenv("STREAMLIT_SHARING_MODE", "").strip():
+        return True
+    return Path("/mount/src").exists()
+
+
+def ensure_scientific_bootstrap(
+    project_dir: str | Path | None = None,
+    db_path: str | Path | None = None,
+    search_db_path: str | Path | None = None,
+) -> dict[str, Any]:
+    """Initialize SQLite stores and search index on cold start if missing or empty."""
+    from .retrieval import RetrievalIndex
+
+    store = ScientificStore(db_path)
+    experiments = storage.list_experiments()
+    docs_in_db = store.list_documents()
+    ingest_result: dict[str, Any] | None = None
+    bootstrapped = False
+
+    if not experiments or not docs_in_db:
+        ingest_result = ingest_downloads(project_dir, db_path, index_search=False)
+        experiments = storage.list_experiments()
+        bootstrapped = True
+
+    index = RetrievalIndex(search_db_path)
+    with index.connect() as db:
+        chunk_count = int(db.execute("SELECT COUNT(*) FROM chunks").fetchone()[0])
+
+    index_result: dict[str, Any] | None = None
+    if chunk_count == 0 and experiments:
+        index_result = index.index_experiments(experiments)
+        chunk_count = int(index_result.get("total", 0))
+        bootstrapped = True
+
+    return {
+        "bootstrapped": bootstrapped,
+        "status": "bootstrapped" if bootstrapped else "ready",
+        "chunks": chunk_count,
+        "experiments": len(experiments),
+        "ingest": ingest_result,
+        "index": index_result,
+    }

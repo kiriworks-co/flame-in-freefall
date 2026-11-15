@@ -338,7 +338,7 @@ def _pdf_tables(page: Any, page_number: int) -> list[dict[str, Any]]:
 
 
 def _extract_pdf(content: bytes) -> dict[str, Any]:
-    import fitz
+    import pymupdf as fitz
 
     pages: list[dict[str, Any]] = []
     captions: list[dict[str, Any]] = []
@@ -389,7 +389,7 @@ def _extract_pdf(content: bytes) -> dict[str, Any]:
 
 def render_pdf_page(content: bytes, page_number: int, dpi: int = 110) -> bytes:
     """Imagem PNG de uma página do PDF para conferência visual de legendas e tabelas."""
-    import fitz
+    import pymupdf as fitz
 
     with fitz.open(stream=content, filetype="pdf") as pdf:
         page = pdf[page_number - 1]

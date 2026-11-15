@@ -23,38 +23,39 @@ def sanitize_markdown(text: str) -> str:
     return re.sub(r"([\\`*_{}\[\]()<>#!|])", r"\\\1", text)
 
 
-def validate_claims(payload: dict, evidence: list[dict]) -> tuple[list[dict], list[str]]:
+def validate_claims(payload: dict, evidence: list[dict], language: str = "pt") -> tuple[list[dict], list[str]]:
     """Require a returned source, exact quote, supported number and source type.
 
     Free-form paraphrases are not accepted as scientific claims: numeric token
     matching alone cannot establish semantic support or preserve negation.
     """
+    english = str(language).lower().startswith("en")
     known = {item["id"]: item for item in evidence}
     accepted, errors = [], []
     if not isinstance(payload, dict) or not isinstance(payload.get("claims"), list):
-        return [], ["Resposta LLM fora do schema de evidências."]
+        return [], ["LLM response does not match the evidence schema." if english else "Resposta LLM fora do schema de evidências."]
     for claim in payload["claims"][:12]:
         if not isinstance(claim, dict):
-            errors.append("Afirmação sem estrutura válida.")
+            errors.append("Claim lacks a valid structure." if english else "Afirmação sem estrutura válida.")
             continue
         cid = claim.get("citation")
         quote = claim.get("quote", "")
         source = known.get(cid)
         if source is None:
-            errors.append("Citação fora das fontes recuperadas.")
+            errors.append("Citation outside retrieved sources." if english else "Citação fora das fontes recuperadas.")
             continue
         if not isinstance(quote, str) or len(quote.strip()) < 12 or quote not in source["text"]:
-            errors.append("Trecho não localizado literalmente na fonte citada.")
+            errors.append("Excerpt not found verbatim in the cited source." if english else "Trecho não localizado literalmente na fonte citada.")
             continue
         if claim.get("text", quote) != quote:
-            errors.append("Paráfrase livre não verificável: exibimos apenas trechos originais.")
+            errors.append("Unverifiable free-form paraphrase rejected: only verbatim source excerpts are shown." if english else "Paráfrase livre não verificável: exibimos apenas trechos originais.")
             continue
         if not set(_NUMBERS.findall(quote)).issubset(_NUMBERS.findall(source["text"])):
-            errors.append("Valor numérico sem apoio na fonte citada.")
+            errors.append("Numeric value unsupported by the cited source." if english else "Valor numérico sem apoio na fonte citada.")
             continue
         source_kind = source.get("evidence_kind", "document_context")
         if claim.get("kind", source_kind) != source_kind:
-            errors.append("A categoria não corresponde à fonte: condição não é medição.")
+            errors.append("Category does not match the source: test condition is not a measurement." if english else "A categoria não corresponde à fonte: condição não é medição.")
             continue
         accepted.append({"citation": cid, "quote": quote, "kind": source_kind})
     return accepted, errors
@@ -114,17 +115,29 @@ def answer(question: str, index: RetrievalIndex | None = None, study_ids: list[s
     claims: list[dict] = []
     if use_llm and evidence:
         if not llm_configured():
-            warnings.append("LLM não configurado: defina RAG_MODEL e RAG_BASE_URL/chave; recuperação local preservada.")
+            warnings.append(
+                "LLM is not configured: set RAG_MODEL and RAG_BASE_URL/API key; local evidence retrieval remains active."
+                if english
+                else "LLM não configurado: defina RAG_MODEL e RAG_BASE_URL/chave; recuperação local preservada."
+            )
         else:
             try:
-                claims, rejected = validate_claims(_llm_claims(question, evidence, language), evidence)
+                claims, rejected = validate_claims(_llm_claims(question, evidence, language), evidence, language=language)
                 warnings.extend(rejected)
                 mode = "llm-verified-excerpts" if claims else "offline-evidence"
                 if not claims:
-                    warnings.append("LLM não produziu trechos verificáveis suficientes; evidências locais exibidas.")
+                    warnings.append(
+                        "LLM did not return enough verifiable excerpts; local evidence is displayed."
+                        if english
+                        else "LLM não produziu trechos verificáveis suficientes; evidências locais exibidas."
+                    )
             except Exception as error:  # noqa: BLE001 - network/provider boundaries must preserve offline recovery without leaking bodies
                 # HTTP bodies and exception strings may include credentials: never expose them.
-                warnings.append(f"Provedor LLM indisponível ({type(error).__name__}); recuperação local preservada.")
+                warnings.append(
+                    f"LLM provider unavailable ({type(error).__name__}); local evidence retrieval preserved."
+                    if english
+                    else f"Provedor LLM indisponível ({type(error).__name__}); recuperação local preservada."
+                )
     if not evidence:
         return {"text": "I did not find sufficient data in the indexed sources." if english else "Não encontrei dados suficientes nas fontes indexadas.",
                 "evidence": [], "claims": [], "mode": mode, "warnings": warnings, "insufficient": True}

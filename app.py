@@ -1,7 +1,8 @@
-"""Dashboard local para organizar, indexar e explorar arquivos PSI."""
+"""Streamlit entry point for PSI Flame Microgravity — bilingual public & local explorer."""
 
 from __future__ import annotations
 
+import os
 from datetime import datetime
 from io import BytesIO
 from pathlib import Path
@@ -13,8 +14,19 @@ from dotenv import load_dotenv
 
 from src import scientific_ui, views
 from src.extractors import SCHEMA_VERSION, SUPPORTED_EXTENSIONS
+from src.i18n import (
+    DEFAULT_LANG,
+    LANGUAGE_OPTIONS,
+    SECTION_KEYS,
+    get_lang,
+    normalize_section,
+    section_label,
+    set_lang,
+    status_label,
+    t,
+)
 from src.local_jobs import enqueue_refresh_experiment, enqueue_uploads
-from src.pipeline import job_status
+from src.pipeline import ensure_scientific_bootstrap, is_public_readonly, job_status
 from src.quantities import load_rules
 from src.storage import (
     CONFIG_DIR,
@@ -34,9 +46,41 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+_SECRET_KEYS = (
+    "RAG_BASE_URL",
+    "RAG_MODEL",
+    "RAG_API_KEY",
+    "RAG_EMBEDDING_MODEL",
+    "VLM_BASE_URL",
+    "VLM_MODEL",
+    "VLM_API_KEY",
+    "PSI_READONLY_MODE",
+)
+
+
+def _sync_streamlit_secrets() -> None:
+    """Propagate optional Streamlit Cloud secrets into process environment without overwriting."""
+    try:
+        secrets = st.secrets
+        for key in _SECRET_KEYS:
+            if not os.environ.get(key) and key in secrets:
+                value = str(secrets[key]).strip()
+                if value:
+                    os.environ[key] = value
+    except Exception:
+        return
+
+
+@st.cache_resource(show_spinner=False)
+def _bootstrap_archive() -> dict:
+    """Initialize SQLite scientific registry and search index once on cold start."""
+    return ensure_scientific_bootstrap()
+
 
 load_dotenv(Path(__file__).resolve().parent / ".env", override=False)
+_sync_streamlit_secrets()
 load_rules(CONFIG_DIR / "quantity_rules.json")
+_bootstrap_archive()
 
 
 def _date_label(value: str | None) -> str:
@@ -46,7 +90,7 @@ def _date_label(value: str | None) -> str:
         parsed = datetime.fromisoformat(value)
         if parsed.tzinfo is not None:
             parsed = parsed.astimezone(ZoneInfo("America/Sao_Paulo"))
-        return parsed.strftime("%d/%m/%Y %H:%M")
+        return parsed.strftime("%Y-%m-%d %H:%M")
     except (ValueError, TypeError):
         return str(value)
 
@@ -60,58 +104,33 @@ def _bytes_label(size: int) -> str:
     return f"{value:.1f} GB"
 
 
-def _format_experiment(experiment_id: str, experiment_map: dict[str, dict]) -> str:
-    return experiment_map[experiment_id]["name"] if experiment_id in experiment_map else "Selecionar experimento"
+def _format_experiment(experiment_id: str, experiment_map: dict[str, dict], lang: str | None = None) -> str:
+    if experiment_id in experiment_map:
+        exp = experiment_map[experiment_id]
+        psi_id = exp.get("psi_id") or exp.get("study_id") or ""
+        name = exp.get("name", experiment_id)
+        return f"{psi_id} · {name}" if psi_id and not name.startswith(psi_id) else name
+    return t("exp.select_placeholder", lang)
 
 
 def _load_one(experiment: dict, document: dict) -> dict:
     return load_extraction(experiment, document)
 
 
-def _activate_experiment(experiment_id: str) -> None:
-    st.session_state["active_experiment_id"] = experiment_id
+def _default_experiment_id(experiments: list[dict]) -> str:
+    for exp in experiments:
+        if (exp.get("psi_id") or exp.get("study_id") or exp.get("id")) == "PSI-69":
+            return str(exp["id"])
+    return str(experiments[0]["id"]) if experiments else ""
 
 
-def _show_home(experiments: list[dict]) -> None:
-    st.title("Experimentos")
-    st.write(
-        "Organize os arquivos dos experimentos de combustão em microgravidade. "
-        "Cada experimento mantém seus documentos originais e extrações em uma pasta independente."
-    )
-    if not experiments:
-        st.info("Ainda não há experimentos. Crie o primeiro pelo formulário na barra lateral.")
-        return
-
-    st.subheader("Experimentos cadastrados")
-    for experiment in experiments:
-        documents = experiment.get("documents", [])
-        failed = sum(doc.get("status") == "erro" for doc in documents)
-        partial = sum(doc.get("status") == "parcial" for doc in documents)
-        status = "Com falhas" if failed else "Extração parcial" if partial else "Pronto" if documents else "Sem arquivos"
-        with st.container(border=True):
-            left, right = st.columns([5, 1])
-            with left:
-                st.markdown(f"### {experiment.get('name', 'Experimento sem nome')}")
-                if experiment.get("description"):
-                    st.write(experiment["description"])
-                st.caption(
-                    f"ID {experiment.get('id', '')[:8]} · Criado em {_date_label(experiment.get('created_at'))} · "
-                    f"Atualizado em {_date_label(experiment.get('updated_at'))} · "
-                    f"{len(documents)} documento(s) · Status: {status} · "
-                    f"{sum(doc.get('table_count', 0) for doc in documents)} tabela(s)"
-                )
-            with right:
-                st.button(
-                    "Abrir",
-                    key=f"open-{experiment['id']}",
-                    type="primary",
-                    use_container_width=True,
-                    on_click=_activate_experiment,
-                    args=(experiment["id"],),
-                )
+def _on_language_change() -> None:
+    set_lang(str(st.session_state.get("lang_selector", DEFAULT_LANG)))
 
 
 def _show_overview(experiment: dict) -> None:
+    lang = get_lang()
+    readonly = is_public_readonly()
     documents = experiment.get("documents", [])
     pdf_count = sum(doc.get("extension") == ".pdf" for doc in documents)
     table_count = sum(doc.get("table_count", 0) for doc in documents)
@@ -120,65 +139,69 @@ def _show_overview(experiment: dict) -> None:
     failed_count = sum(doc.get("status") == "erro" for doc in documents)
     total_size = sum(int(doc.get("size_bytes", 0)) for doc in documents)
 
-    st.subheader("Overview")
-    st.caption(f"Criado em {_date_label(experiment.get('created_at'))} · Atualizado em {_date_label(experiment.get('updated_at'))}")
+    st.subheader(t("exp.tab_overview", lang))
+    st.caption(
+        t(
+            "exp.created_updated",
+            lang,
+            created=_date_label(experiment.get("created_at")),
+            updated=_date_label(experiment.get("updated_at")),
+        )
+    )
     if experiment.get("description"):
         st.write(experiment["description"])
     else:
-        st.write("Adicione uma descrição para registrar o objetivo ou o contexto deste experimento.")
+        st.write(t("exp.no_desc", lang))
 
     metric_columns = st.columns(5)
-    metric_columns[0].metric("Documentos", len(documents))
-    metric_columns[1].metric("PDFs", pdf_count)
-    metric_columns[2].metric("Tabelas", table_count)
-    metric_columns[3].metric("Extraídos", processed_count)
-    metric_columns[4].metric("Armazenamento", _bytes_label(total_size))
+    metric_columns[0].metric(t("exp.metric_docs", lang), len(documents))
+    metric_columns[1].metric(t("exp.metric_pdfs", lang), pdf_count)
+    metric_columns[2].metric(t("exp.metric_tables", lang), table_count)
+    metric_columns[3].metric(t("exp.metric_extracted", lang), processed_count)
+    metric_columns[4].metric(t("exp.metric_storage", lang), _bytes_label(total_size))
 
     if failed_count or partial_count:
-        st.warning(
-            f"{failed_count} arquivo(s) com falha total e {partial_count} com extração parcial. "
-            "Os originais foram preservados para consulta."
-        )
+        st.warning(t("exp.partial_warn", lang, failed=failed_count, partial=partial_count))
     elif documents:
-        st.success("Os documentos importados foram indexados. Os arquivos originais permanecem preservados.")
+        st.success(t("exp.ready_ok", lang))
     else:
-        st.info("Importe arquivos na seção Documentos para começar a organizar os dados.")
+        st.info(t("exp.no_docs_hint", lang))
 
     quality = views.quality_summary(experiment)
     if quality["tabelas"]:
         q1, q2, q3 = st.columns(3)
-        q1.metric("Blocos de dados detectados", quality["dados"])
-        q2.metric("Alertas de qualidade", quality.get("aviso", 0), help="Rótulos trocados, eixos ausentes, escalas misturadas etc. Veja Catálogo e Explorador.")
-        q3.metric("Observações automáticas", quality.get("info", 0))
+        q1.metric(t("exp.metric_blocks", lang), quality["dados"])
+        q2.metric(t("exp.metric_alerts", lang), quality.get("aviso", 0), help=t("exp.metric_alerts_help", lang))
+        q3.metric(t("exp.metric_notes", lang), quality.get("info", 0))
 
     views.show_study_overview(experiment)
 
-    st.markdown("**Estrutura local**")
-    st.code(str(DATA_DIR / experiment["folder"]), language=None)
-
-    with st.expander("Editar nome e descrição do experimento"):
-        with st.form(f"edit-{experiment['id']}"):
-            name = st.text_input("Nome", value=experiment.get("name", ""))
-            description = st.text_area("Descrição", value=experiment.get("description", ""), height=90)
-            submitted = st.form_submit_button("Salvar alterações", type="primary")
-        if submitted:
-            try:
-                update_experiment(experiment, name, description)
-                st.rerun()
-            except ValueError as error:
-                st.error(str(error))
+    if not readonly:
+        st.markdown(f"**{t('exp.local_folder', lang)}**")
+        st.code(str(DATA_DIR / experiment["folder"]), language=None)
+        with st.expander(t("exp.edit_meta", lang)):
+            with st.form(f"edit-{experiment['id']}"):
+                name = st.text_input(t("exp.edit_name", lang), value=experiment.get("name", ""))
+                description = st.text_area(t("exp.edit_desc", lang), value=experiment.get("description", ""), height=90)
+                submitted = st.form_submit_button(t("exp.save_btn", lang), type="primary")
+            if submitted:
+                try:
+                    update_experiment(experiment, name, description)
+                    st.rerun()
+                except ValueError as error:
+                    st.error(str(error))
 
     if documents:
-        st.markdown("**Arquivos mais recentes**")
+        st.markdown(f"**{t('exp.recent_files', lang)}**")
         recent = sorted(documents, key=lambda doc: doc.get("uploaded_at", ""), reverse=True)[:6]
         st.dataframe(
             pd.DataFrame([
                 {
-                    "Arquivo": doc.get("name"),
-                    "Formato": doc.get("extension", "").lstrip(".").upper(),
-                    "Extração": doc.get("status", "—"),
-                    "Tabelas": doc.get("table_count", 0),
-                    "Importado em": _date_label(doc.get("uploaded_at")),
+                    t("exp.col_file", lang): doc.get("name"),
+                    t("exp.col_format", lang): doc.get("extension", "").lstrip(".").upper(),
+                    t("exp.col_extraction", lang): status_label(doc.get("status"), lang),
+                    t("exp.col_tables", lang): doc.get("table_count", 0),
+                    t("exp.col_imported", lang): _date_label(doc.get("uploaded_at")),
                 }
                 for doc in recent
             ]),
@@ -188,70 +211,76 @@ def _show_overview(experiment: dict) -> None:
 
 
 def _show_documents(experiment: dict) -> None:
-    st.subheader("Documentos")
-    st.write("Importe arquivos em lote. Cada original recebe um identificador SHA-256 e fica associado somente a este experimento.")
-    uploads = st.file_uploader(
-        "Selecionar arquivos",
-        type=sorted(extension.lstrip(".") for extension in SUPPORTED_EXTENSIONS),
-        accept_multiple_files=True,
-        key=f"upload-{experiment['id']}",
-        help="CSV, TSV, XLS, XLSX, PDF, imagens, DOCX e TXT (inclui ISA-Tab i_Investigation*.txt).",
-    )
-    if st.button("Importar e extrair", type="primary", disabled=not uploads, key=f"import-{experiment['id']}"):
-        try:
-            st.session_state[f"local-job-{experiment['id']}"] = enqueue_uploads(
-                experiment, [(uploaded.name, uploaded.getvalue()) for uploaded in uploads or []])
-        except ValueError as error:
-            st.error(str(error))
+    lang = get_lang()
+    readonly = is_public_readonly()
+    st.subheader(t("docs.title", lang))
 
-    local_job = st.session_state.get(f"local-job-{experiment['id']}")
-    if local_job:
-        status = job_status(local_job)
-        if status:
-            if status["status"] in {"queued", "running"}:
-                st.info("Importação ou reprocessamento em segundo plano. Os uploads locais mantêm origem local, inclusive em estudos PSI.")
-                st.progress(float(status.get("progress", 0)))
-                if st.button("Atualizar processamento", key=f"local-job-refresh-{experiment['id']}"):
-                    views.clear_cache()
-                    st.rerun()
-            elif status["status"] == "completed":
-                st.success("Processamento concluído: originais, extrações, registro científico e busca sincronizados.")
-            elif status["status"] == "partial":
-                st.warning("Processamento parcial. Consulte as falhas abaixo; os originais importados foram preservados.")
-            else:
-                st.error(f"Processamento {status['status']}: {status.get('error') or 'Consulte o histórico de tarefas.'}")
-            if status.get("result_json"):
-                with st.expander("Resultado do processamento local"):
-                    st.json(status["result_json"])
-        experiment = next((item for item in list_experiments() if item["id"] == experiment["id"]), experiment)
+    if readonly:
+        st.info(t("docs.upload_disabled", lang))
+    else:
+        st.write(t("docs.upload_desc", lang))
+        uploads = st.file_uploader(
+            t("docs.select_files", lang),
+            type=sorted(extension.lstrip(".") for extension in SUPPORTED_EXTENSIONS),
+            accept_multiple_files=True,
+            key=f"upload-{experiment['id']}",
+            help=t("docs.upload_help", lang),
+        )
+        if st.button(t("docs.import_btn", lang), type="primary", disabled=not uploads, key=f"import-{experiment['id']}"):
+            try:
+                st.session_state[f"local-job-{experiment['id']}"] = enqueue_uploads(
+                    experiment, [(uploaded.name, uploaded.getvalue()) for uploaded in uploads or []]
+                )
+            except ValueError as error:
+                st.error(str(error))
+
+        local_job = st.session_state.get(f"local-job-{experiment['id']}")
+        if local_job:
+            status = job_status(local_job)
+            if status:
+                if status["status"] in {"queued", "running"}:
+                    st.info(t("docs.job_running", lang))
+                    st.progress(float(status.get("progress", 0)))
+                    if st.button(t("docs.job_refresh", lang), key=f"local-job-refresh-{experiment['id']}"):
+                        views.clear_cache()
+                        st.rerun()
+                elif status["status"] == "completed":
+                    st.success(t("docs.job_done", lang))
+                elif status["status"] == "partial":
+                    st.warning(t("docs.job_partial", lang))
+                else:
+                    st.error(t("docs.job_err", lang, status=status["status"], error=status.get("error") or ""))
+                if status.get("result_json"):
+                    with st.expander(t("docs.job_result", lang)):
+                        st.json(status["result_json"])
+            experiment = next((item for item in list_experiments() if item["id"] == experiment["id"]), experiment)
 
     documents = experiment.get("documents", [])
     if not documents:
-        st.info("Nenhum documento associado a este experimento.")
+        st.info(t("docs.no_docs", lang))
         return
 
-    outdated = [doc for doc in documents if doc.get("schema_version", 1) < SCHEMA_VERSION]
-    if outdated:
-        st.warning(
-            f"{len(outdated)} documento(s) foram extraídos por uma versão anterior e não têm blocos, alertas nem legendas. "
-            "Reprocessar refaz a extração a partir dos originais, que não são alterados."
-        )
-        if st.button("Reprocessar documentos desatualizados", key=f"reprocess-all-{experiment['id']}"):
-            st.session_state[f"local-job-{experiment['id']}"] = enqueue_refresh_experiment(
-                experiment, document_ids=[doc["id"] for doc in outdated], reextract=True)
-            st.rerun()
+    if not readonly:
+        outdated = [doc for doc in documents if doc.get("schema_version", 1) < SCHEMA_VERSION]
+        if outdated:
+            st.warning(t("docs.outdated_warn", lang, count=len(outdated)))
+            if st.button(t("docs.reprocess_all", lang), key=f"reprocess-all-{experiment['id']}"):
+                st.session_state[f"local-job-{experiment['id']}"] = enqueue_refresh_experiment(
+                    experiment, document_ids=[doc["id"] for doc in outdated], reextract=True
+                )
+                st.rerun()
 
-    st.markdown("**Índice de documentos oficiais**")
+    st.markdown(f"**{t('docs.index_header', lang)}**")
     st.dataframe(
         pd.DataFrame([
             {
-                "Arquivo": doc.get("name"),
-                "Formato": doc.get("extension", "").lstrip(".").upper(),
-                "Tamanho": _bytes_label(int(doc.get("size_bytes", 0))),
-                "Status": doc.get("status", "—"),
-                "Tabelas": doc.get("table_count", 0),
-                "Páginas / trechos": doc.get("page_count", 0),
-                "Importado em": _date_label(doc.get("uploaded_at")),
+                t("exp.col_file", lang): doc.get("name"),
+                t("exp.col_format", lang): doc.get("extension", "").lstrip(".").upper(),
+                t("docs.col_size", lang): _bytes_label(int(doc.get("size_bytes", 0))),
+                t("docs.col_status", lang): status_label(doc.get("status"), lang),
+                t("exp.col_tables", lang): doc.get("table_count", 0),
+                t("docs.col_pages", lang): doc.get("page_count", 0),
+                t("exp.col_imported", lang): _date_label(doc.get("uploaded_at")),
             }
             for doc in documents
         ]),
@@ -259,9 +288,9 @@ def _show_documents(experiment: dict) -> None:
         use_container_width=True,
     )
 
-    st.markdown("**Detalhes e integridade**")
+    st.markdown(f"**{t('docs.details_header', lang)}**")
     selected_id = st.selectbox(
-        "Documento",
+        t("docs.select_doc", lang),
         options=[doc["id"] for doc in documents],
         format_func=lambda identifier: next(doc["name"] for doc in documents if doc["id"] == identifier),
         key=f"document-detail-{experiment['id']}",
@@ -269,29 +298,31 @@ def _show_documents(experiment: dict) -> None:
     document = next(doc for doc in documents if doc["id"] == selected_id)
     col_a, col_b = st.columns([3, 1])
     with col_a:
-        st.caption("SHA-256 do arquivo original")
+        st.caption(t("docs.sha_label", lang))
         st.code(document.get("sha256", ""), language=None)
     with col_b:
-        if st.button("Reprocessar este", key=f"reprocess-{selected_id}"):
-            try:
-                st.session_state[f"local-job-{experiment['id']}"] = enqueue_refresh_experiment(
-                    experiment, document_ids=[selected_id], reextract=True)
-                st.rerun()
-            except (OSError, ValueError) as error:
-                st.error(str(error))
-        if st.button("Verificar integridade", key=f"verify-{selected_id}"):
+        if not readonly:
+            if st.button(t("docs.reprocess_btn", lang), key=f"reprocess-{selected_id}"):
+                try:
+                    st.session_state[f"local-job-{experiment['id']}"] = enqueue_refresh_experiment(
+                        experiment, document_ids=[selected_id], reextract=True
+                    )
+                    st.rerun()
+                except (OSError, ValueError) as error:
+                    st.error(str(error))
+        if st.button(t("docs.verify_btn", lang), key=f"verify-{selected_id}"):
             try:
                 if verify_original(experiment, document):
-                    st.success("O original corresponde ao SHA-256 registrado.")
+                    st.success(t("docs.verify_ok", lang))
                 else:
-                    st.error("O conteúdo do original não corresponde ao SHA-256 registrado.")
+                    st.error(t("docs.verify_fail", lang))
             except (OSError, ValueError) as error:
-                st.error(f"Não foi possível ler o original: {error}")
+                st.error(t("docs.read_fail", lang, error=error))
 
     try:
         original = read_original(experiment, document)
         st.download_button(
-            "Baixar original",
+            t("docs.download_original", lang),
             data=original,
             file_name=document["name"],
             mime="application/octet-stream",
@@ -299,96 +330,139 @@ def _show_documents(experiment: dict) -> None:
         )
         extraction = _load_one(experiment, document)
     except (OSError, ValueError, KeyError) as error:
-        st.error(f"Não foi possível abrir o documento: {error}")
+        st.error(t("docs.open_fail", lang, error=error))
         return
 
     if document.get("extension") in {".jpg", ".jpeg", ".png", ".tif", ".tiff"}:
         try:
             st.image(BytesIO(original), caption=document["name"], use_container_width=True)
         except Exception:
-            st.caption("Pré-visualização indisponível para este arquivo.")
+            st.caption(t("docs.img_preview_err", lang))
     if extraction.get("warnings"):
         for warning in extraction["warnings"]:
             st.warning(warning)
     metadata = extraction.get("metadata", {})
     if metadata:
-        with st.expander("Metadados extraídos"):
+        with st.expander(t("docs.extracted_meta", lang)):
             st.json(metadata)
     if extraction.get("formulas"):
-        with st.expander(f"Fórmulas encontradas ({len(extraction['formulas'])})"):
+        with st.expander(t("docs.formulas_found", lang, count=len(extraction["formulas"]))):
             st.dataframe(pd.DataFrame(extraction["formulas"]), hide_index=True, use_container_width=True)
     preview = extraction.get("text", "")
     if preview:
-        with st.expander("Prévia do texto extraído"):
-            st.text(preview[:12000] + ("\n… conteúdo truncado na prévia" if len(preview) > 12000 else ""))
+        with st.expander(t("docs.extracted_text", lang)):
+            st.text(preview[:12000] + (t("docs.preview_truncated", lang) if len(preview) > 12000 else ""))
 
 
-def main() -> None:
-    experiments = list_experiments()
+def _show_data_explorer(experiments: list[dict]) -> None:
+    lang = get_lang()
+    readonly = is_public_readonly()
+    scientific_ui.inject_dashboard_css()
+
+    st.title(t("exp.title", lang))
+    st.markdown(f"<p class='psi-lead'>{t('exp.subtitle', lang)}</p>", unsafe_allow_html=True)
+
+    with st.expander(t("exp.glossary_title", lang), expanded=False):
+        st.markdown(t("exp.glossary_body", lang))
+
+    if readonly:
+        st.info(t("exp.readonly_notice", lang))
+    else:
+        with st.expander(t("exp.manage_local", lang), expanded=False):
+            with st.form("create-experiment", clear_on_submit=True):
+                new_name = st.text_input(t("exp.new_name", lang), placeholder=t("exp.new_name_ph", lang))
+                new_description = st.text_area(t("exp.new_desc", lang), placeholder=t("exp.new_desc_ph", lang), height=75)
+                create = st.form_submit_button(t("exp.create_btn", lang), type="primary", use_container_width=True)
+            if create:
+                try:
+                    created = create_experiment(new_name, new_description)
+                    st.session_state["active_experiment_id"] = created["id"]
+                    st.rerun()
+                except ValueError as error:
+                    st.error(str(error))
+
+    if not experiments:
+        st.info(t("exp.empty_archive", lang))
+        return
+
     experiment_map = {item["id"]: item for item in experiments}
+    options = [item["id"] for item in experiments]
+    if st.session_state.get("active_experiment_id") not in experiment_map:
+        st.session_state["active_experiment_id"] = _default_experiment_id(experiments)
 
-    with st.sidebar:
-        st.markdown("## PSI Flame")
-        st.caption("Dados NASA · Evidências científicas")
-        section = st.radio("Área de trabalho", scientific_ui.SECTIONS, key="workspace_section")
-        st.divider()
-        with st.form("create-experiment", clear_on_submit=True):
-            new_name = st.text_input("Novo experimento", placeholder="Ex.: Ensaio de chama 01")
-            new_description = st.text_area("Descrição", placeholder="Objetivo ou observações iniciais", height=75)
-            create = st.form_submit_button("Criar experimento", type="primary", use_container_width=True)
-        if create:
-            try:
-                created = create_experiment(new_name, new_description)
-                st.session_state["active_experiment_id"] = created["id"]
-                st.rerun()
-            except ValueError as error:
-                st.error(str(error))
+    selected_id = st.selectbox(
+        t("exp.select_study", lang),
+        options=options,
+        format_func=lambda identifier: _format_experiment(identifier, experiment_map, lang),
+        key="active_experiment_id",
+    )
+    experiment = experiment_map[selected_id]
 
-        st.divider()
-        search_experiments = st.text_input("Pesquisar experimento", placeholder="Nome ou descrição")
-        if st.button("← Lista de experimentos", use_container_width=True):
-            st.session_state["active_experiment_id"] = ""
-        filtered = [
-            item for item in experiments
-            if search_experiments.casefold() in (item.get("name", "") + " " + item.get("description", "")).casefold()
-        ]
-        options = [""] + [item["id"] for item in filtered]
-        if st.session_state.get("active_experiment_id", "") not in options:
-            st.session_state["active_experiment_id"] = ""
-        selected_id = st.selectbox(
-            "Experimento aberto",
-            options=options,
-            format_func=lambda identifier: _format_experiment(identifier, experiment_map),
-            key="active_experiment_id",
-        )
-        st.caption("Os arquivos ficam neste computador, dentro da pasta do projeto.")
-
-    if section != "Arquivos do experimento":
-        scientific_ui.show_section(section, experiments)
-        return
-
-    experiment = experiment_map.get(selected_id)
-    if experiment is None:
-        _show_home(experiments)
-        return
-
-    st.title(experiment.get("name", "Experimento"))
-    st.caption("Ambiente isolado do experimento · os documentos de outros experimentos não aparecem nesta área")
-    tabs = st.tabs(["Overview", "Documentos", "Catálogo", "Explorador", "Tabelas", "Leitor de PDFs"])
+    tabs = st.tabs([
+        t("exp.tab_overview", lang),
+        t("exp.tab_explorer", lang),
+        t("exp.tab_tables", lang),
+        t("exp.tab_docs", lang),
+        t("exp.tab_pdf", lang),
+        t("exp.tab_isa", lang),
+    ])
     with tabs[0]:
         _show_overview(experiment)
     with tabs[1]:
-        _show_documents(experiment)
+        views.show_explorer(experiment)
     with tabs[2]:
+        views.show_tables(experiment)
+        st.divider()
         views.show_catalog(experiment)
     with tabs[3]:
-        views.show_explorer(experiment)
+        _show_documents(experiment)
     with tabs[4]:
-        views.show_tables(experiment)
-    with tabs[5]:
         views.show_search(experiment)
+    with tabs[5]:
+        views.show_metadata(experiment)
+
+
+def main() -> None:
+    st.session_state.setdefault("lang", DEFAULT_LANG)
+    if "lang_selector" in st.session_state:
+        set_lang(str(st.session_state["lang_selector"]))
+    else:
+        st.session_state["lang_selector"] = get_lang()
+
+    lang = get_lang()
+    st.session_state["workspace_section"] = normalize_section(st.session_state.get("workspace_section"))
+
+    experiments = list_experiments()
+    readonly = is_public_readonly()
+
+    with st.sidebar:
+        st.markdown(f"## {t('app.title', lang)}")
+        st.caption(t("app.subtitle", lang))
+        st.radio(
+            t("sidebar.language", lang),
+            options=["en", "pt"],
+            format_func=lambda code: LANGUAGE_OPTIONS[code],
+            horizontal=True,
+            key="lang_selector",
+            on_change=_on_language_change,
+        )
+        st.divider()
+        section = st.radio(
+            t("sidebar.nav_label", lang),
+            SECTION_KEYS,
+            format_func=lambda key: section_label(key, lang),
+            key="workspace_section",
+        )
+        st.divider()
+        st.caption(t("sidebar.readonly_badge", lang) if readonly else t("sidebar.local_badge", lang))
+        st.caption(t("sidebar.footer_note", lang))
+
+    if section == "explorer":
+        _show_data_explorer(experiments)
+        return
+
+    scientific_ui.show_section(section, experiments)
 
 
 if __name__ == "__main__":
     main()
-

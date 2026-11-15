@@ -24,6 +24,11 @@ PROJECT = Path(__file__).resolve().parents[1]
 MAX_CHUNK_CHARS = 1500
 
 
+def _model_mode_id(resolved_model: str) -> str:
+    """Return a portable model identifier free of user-specific parent directories."""
+    return "local-semantic:" + Path(resolved_model).name
+
+
 @lru_cache(maxsize=2)
 def _load_local_model(model_path: str):
     """Reuse immutable model weights across Streamlit reruns in one process."""
@@ -164,7 +169,7 @@ class RetrievalIndex:
                 try:
                     resolved_model = str(Path(model_path).resolve())
                     self.model = _load_local_model(resolved_model)
-                    self.mode = "local-semantic:" + resolved_model
+                    self.mode = _model_mode_id(resolved_model)
                 except Exception as error:  # noqa: BLE001 - optional model backends raise heterogeneous dependency errors
                     self.warnings.append(f"Modelo local indisponível: {type(error).__name__}; busca lexical ativa.")
             else:
@@ -172,6 +177,12 @@ class RetrievalIndex:
         with self.connect() as db:
             db.execute("CREATE TABLE IF NOT EXISTS chunks (id TEXT PRIMARY KEY,payload TEXT NOT NULL,vector TEXT NOT NULL,model TEXT NOT NULL)")
             db.execute("CREATE VIRTUAL TABLE IF NOT EXISTS chunks_fts USING fts5(id UNINDEXED,text, tokenize='unicode61 remove_diacritics 2')")
+            if self.model is not None and self.mode.startswith("local-semantic:"):
+                suffix = self.mode.split(":", 1)[1]
+                db.execute(
+                    "UPDATE chunks SET model=? WHERE (model LIKE ? OR model LIKE ?) AND model != ?",
+                    (self.mode, f"local-semantic:%/{suffix}", f"local-semantic:%\\{suffix}", self.mode),
+                )
 
     @contextmanager
     def connect(self):

@@ -12,7 +12,7 @@ from typing import Any
 
 from . import storage
 from .extractors import extract_document, validate_upload
-from .pipeline import _IMPORT_LOCK
+from .pipeline import _IMPORT_LOCK, _portable_path
 from .scientific_store import ScientificStore, dumps
 from .units import observations_from_tables
 
@@ -65,7 +65,7 @@ def _sync_document(store: ScientificStore, experiment: dict[str, Any], document:
     storage.save_experiment(experiment)
     base = storage.experiment_dir(experiment)
     store.persist_document(experiment.get("psi_id") or experiment["id"], document, extraction,
-        provenance, str(base / document["original_path"]), str(base / document["extraction_path"]))
+        provenance, _portable_path(base / document["original_path"]), _portable_path(base / document["extraction_path"]))
 
 
 def _index(index_search: bool, result: dict[str, Any]) -> None:

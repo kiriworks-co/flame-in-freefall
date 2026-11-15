@@ -1,41 +1,30 @@
-# Demonstração — 2 a 3 minutos
+# 3-Minute Live Demo Script (EN & PT-BR) — NASA Space Apps 2026
 
-Pré-requisitos: ambiente instalado, coletores concluídos, ingestão sem erros e índice atualizado. Abrir http://127.0.0.1:8501. Os arquivos abaixo são originais NASA, com hashes e URLs em DATA_PROVENANCE.md. A numeração PDF é a posição física da página, usada pelo leitor; pode diferir da numeração impressa.
+This guided demonstration highlights the complete scientific, UX, and provenance workflow without requiring prior combustion expertise. It mirrors the 4-step **Guided Tour** built into **Home / Overview**.
 
-## 0:00–0:25 — cobertura e limites
+---
 
-Abrir **Visão geral**: nove investigações PSI, 16 originais, cobertura de prevenção, detecção e supressão. Explicar que condições de ensaio e resultados reportados não equivalem a prova de segurança de materiais. Não mostrar ranking de risco.
+## 0:00 – 0:45 | Home / Overview & Language Switcher (`home`)
+1. Open the app (`English (EN)` active by default) and highlight:
+   - *Why does fire behave differently in freefall?* (buoyancy loss → spherical flames, cool flames, slower smoke clearing).
+   - Live metrics across **9 NASA PSI Studies**, **16 Preserved NASA Files**, **31 Extracted Tables**, and **1,517 Indexed Chunks**.
+2. Demonstrate instant bilingual access: toggle `Language / Idioma` in the sidebar to **Português (PT-BR)**, show UI localization updating cleanly while NASA study IDs (`PSI-69`, `BASS-II`) and source data stay immutable, then switch back to **English (EN)** (or continue in either language).
 
-## 0:25–1:00 — BASS
+## 0:45 – 1:30 | Investigations & Data Explorer (`investigations` → `explorer`)
+1. Click **Investigations** (or click step 1 in the Guided Tour) and filter by **Suppression** to inspect `PSI-69 · FLEX` (objective, spacecraft safety relevance, verified DOI `10.60555/mbq8-0451`, and documented caveats).
+2. Click **Open in Data Explorer** (`PSI-69`):
+   - Expand **Variable & Unit Glossary** to clarify `O₂ mole fraction`, `psia vs psig`, and why `Burning rate; mm` is kept raw.
+   - Inspect **Interactive Charts** (Plotly visualization) and **Tables & Source Rows** showing original CSV row numbers.
+   - Open **Documents & Integrity** to verify immutable **SHA-256** verification and original byte download (while public uploads stay safely disabled in read-only cloud mode).
 
-Em **Investigações NASA**, pesquisar BASS e abrir PSI-25. Em **Documentos/Tabelas**, inspecionar [CSV BASS-II original](../data/psi_downloads/PSI-25/PSI-25_Experimental%20table_BASS-II.csv), cabeçalhos, células vazias e linhas de origem. A opção de baixar o original entrega os mesmos bytes verificados por SHA-256.
+## 1:30 – 2:15 | Compare Safely (`compare`)
+1. Switch to **Compare** and click the quick preset **FLEX (PSI-69) vs BASS-II (PSI-25)**.
+2. Highlight the explicit scientific guardrail: *Joint quantitative pooling NOT validated* — explaining why droplet extinction data (`mm`) and solid-fuel test conditions cannot be merged blindly.
+3. Show the deterministic **0–100 Reading Priority Ranking** below, explicitly clarifying that it ranks reading relevance rather than fire risk.
 
-Em **Revisão visual**, selecionar [BASS-II Science Requirements](../data/psi_downloads/PSI-25/PSI-25_Science%20Documents_BASS-II_SRD.pdf), página **2**, e renderizar localmente. O documento descreve requisitos de medição de concentrações e operação; apresentar como requisito documental, não como resultado medido de um ensaio.
-
-Fonte do estudo: https://psi.nasa.gov/physci/repo/data/investigations/PSI-25
-
-## 1:00–1:45 — FLEX
-
-Em **Busca e assistente**, selecionar PSI-69, perguntar `FLEX oxygen`, abrir os filtros e habilitar O₂ com faixa **0,18 a 0,25 de fração**. Essa faixa é uma escolha de consulta, não um resultado anunciado. Pesquisar e abrir um resultado de tabela: conferir linha, combustível, unidade, hash e original.
-
-Arquivo: [CSV FLEX](../data/psi_downloads/PSI-69/PSI-69_Experimental%20table_FLEX.csv). Não interpretar `Burning rate; mm` como uma taxa dimensionalmente validada. Explicar que o filtro de pressão psia exclui fontes que não declaram referência absoluta.
-
-Para contexto científico, **Revisão visual** → [Researchers Guide NASA](../resources/official/researchers_guide.pdf), página **36**, seção Droplet Combustion. O texto distingue as motivações de FLEX e FLEX-2. O PDF de requisitos catalogado em PSI-69 tem FLEX-2 na capa; mostrar o aviso se esse documento for aberto e não atribuir seus requisitos ao FLEX original.
-
-Fonte: https://psi.nasa.gov/physci/repo/data/investigations/PSI-69
-
-## 1:45–2:20 — SAME
-
-Em **Investigações NASA**, abrir PSI-102 e conferir [CSV SAME](../data/psi_downloads/PSI-102/PSI-102_Experimental%20table_SAME.csv). Destacar a diferença entre configurações/catálogo e resultados reportados.
-
-Em **Revisão visual**, abrir [SAME Final Science Report](../data/psi_downloads/PSI-102/PSI-102_Reports_SAME_Final%20Science%20Report.pdf), página **13** (impressa 3): há texto e uma figura do detector. A página física **24** contém a seção Flight Tests. Ler o original, sem inferir desempenho de detecção a partir de uma única imagem.
-
-Fonte: https://psi.nasa.gov/physci/repo/data/investigations/PSI-102
-
-## 2:20–2:50 — comparação e honestidade
-
-Em **Comparar estudos**, selecionar BASS e FLEX. Mostrar as unidades e o aviso de incompatibilidade quando não há condições/metodologias equivalentes; não juntar curvas heterogêneas.
-
-Voltar ao assistente, consultar termo sem correspondência, como `quasar-zebra-unsupported-xyz`, e mostrar insuficiência de evidências. O modo sem LLM segue operacional sem chave. Se houver LLM configurado, demonstrar apenas seleção de trechos verificáveis, sem afirmar que o provedor foi homologado nesta entrega.
-
-A revisão VLM remota é opcional, requer configuração e consentimento; sem chave, demonstrar somente a inspeção local. Nenhuma inferência visual vira medição.
+## 2:15 – 3:00 | Evidence-First Assistant & Sources (`assistant` → `sources`)
+1. Open **Scientific Assistant**:
+   - Note the transparent disclosure banner when external LLM generation is unconfigured (*Evidence Retrieval Mode*).
+   - Click Example Question 1 (**FLEX droplet O₂ conditions (18–25%)**) to filter `PSI-69` rows matching `0.18 <= O₂ <= 0.25`. Inspect verbatim cited text, permanent NASA link, DOI, and **SHA-256**.
+   - Click Example Question 5 (**Unsupported query guard demo**) to demonstrate zero hallucination when evidence is absent.
+2. Finish briefly on **Sources & Methodology** (`sources`) and **Visual Page Review** (`visual_review`, optional `SAME Final Report · p. 13` local render) emphasizing verifiable NASA provenance (`https://psi.nasa.gov/physci/repo/search?q=combustion`).

@@ -1,98 +1,81 @@
-# PSI Flame Microgravity
+# PSI Flame Microgravity — Flame in Freefall (NASA Space Apps 2026)
 
-Dashboard científico local em Python e Streamlit. Continua o projeto original: preserva leitores, uploads, tabelas, correções, metadados ISA, gráficos e análises por experimento. Acrescenta catálogo NASA, ingestão rastreável, SQLite, busca híbrida, filtros físicos e assistente com evidências.
+> **Bilingual / Bilíngue:** Default interface in **English (`en`)** with instant **Português (`PT-BR`)** switching in the sidebar (`Language / Idioma`).  
+> Interactive scientific workbench unifying **9 NASA Physical Sciences Informatics (PSI)** microgravity combustion investigations (**16 authentic NASA files, 7,881,267 bytes**) with immutable **SHA-256** provenance, conservative **Pint** unit normalization, side-by-side compatibility checks, and an evidence-first research assistant.
 
-O acervo entregue contém **16 arquivos NASA reais**: nove CSVs PSI, cinco PDFs associados a estudos e dois guias oficiais. [URLs, versões, SHA-256 e limitações](docs/DATA_PROVENANCE.md). Fixtures sintéticas existem somente nos testes e são rotuladas.
+---
 
-## Iniciar no Windows
+## Why Freefall Changes Fire
 
-Abra PowerShell na pasta `PROJETO TESTE FLAME MICROGRAVITY`. Para nova instalação, Python 3.11 ou superior:
+On Earth, buoyancy lifts hot combustion gases and draws fresh oxygen inward, shaping a familiar teardrop flame. In orbital microgravity (freefall), natural buoyancy nearly vanishes: flames become spherical, heat and soot remain near the fuel, low-temperature **cool flames** can persist, and smoke aerosols evolve differently along cabin airflow.
+
+NASA's PSI repository spreads these experiments across heterogeneous CSV spreadsheets, engineering requirements PDFs, and final science reports using conflicting unit conventions (`psia`, `psig`, `mmHg`, `cm/s`, mole fractions). **PSI Flame Microgravity** brings 9 high-priority investigations across all three spacecraft fire-safety pillars (**Prevention**, **Detection**, **Suppression**) into one transparent, verifiable explorer where **test conditions are never confused with measured results**.
+
+---
+
+## Workspace Structure (7 Sections)
+
+1. **Home / Overview (`home`)**: Visual introduction to microgravity combustion, spacecraft fire-safety pillars, summary metrics, and a 1-click **3-Minute Guided Tour**.
+2. **Investigations (`investigations`)**: Searchable catalog of 9 NASA PSI studies + 2 official NASA reference guides with permanent NASA PSI URLs, confirmed DOIs, objectives, safety relevance, caveats, and direct jump into Data Explorer.
+3. **Data Explorer (`explorer`)**: Study selector (defaulting to `PSI-69 · FLEX`), collapsible **Variable & Unit Glossary**, interactive Plotly charts, descriptive statistics, reversible column fixes, source tables with original row numbers, document integrity & SHA-256 verification, in-PDF keyword reader, and ISA-Tab metadata.
+4. **Compare (`compare`)**: Guided cross-study schema and methodology audit (with quick presets such as *FLEX vs BASS-II*, *SAME vs SAME-R*, *Saffire-I vs Saffire-II*) plus a deterministic **0–100 Reading Priority Ranking** (never a safety score).
+5. **Scientific Assistant (`assistant`)**: Hybrid retrieval engine (SQLite **FTS5** + local multilingual embeddings when configured or deterministic EN/PT lexical vectors) with row-level physical unit filters (`O₂`, `psia`, `cm/s`, fuel), clickable example queries, and strict extractive grounding when an external LLM is configured.
+6. **Visual Page Review (`visual_review`)**: Offline rendered PDF diagram inspector with optional opt-in VLM qualitative review strictly tagged as `inference` (`needs_human_review = True`).
+7. **Sources & Methodology (`sources`)**: Full provenance, unit normalization policy, known scientific caveats, verification hashes, and archive synchronization controls (read-only when publicly deployed).
+
+---
+
+## Included NASA PSI Dataset
+
+- **Prevention**: `PSI-25` (BASS-II), `PSI-26` (BASS), `PSI-98` (Saffire-I), `PSI-99` (Saffire-II), `PSI-100` (Saffire-III)
+- **Detection**: `PSI-101` (SAME-R), `PSI-102` (SAME)
+- **Suppression**: `PSI-68` (FLEX-2), `PSI-69` (FLEX)
+- **Context Guides**: *A Researcher's Guide to ISS Combustion Science* and *Complete PSI Database Guide*
+
+---
+
+## Key Scientific Caveats (Preserved Transparently)
+
+1. **`Burning rate; mm` in `PSI-69_Experimental table_FLEX.csv`**: Original NASA column declares length without time (`mm` instead of `mm/s` or `mm²/s`). Kept raw without automated dimensional conversion.
+2. **FLEX-2 Requirements PDF under `PSI-69`**: NASA catalogs the requirements PDF under `PSI-69`, while its cover title states `FLEX-2`; an explicit warning surfaces wherever this file is displayed.
+3. **SAME Ignitor Drawing (`PSI-102`)**: 1-page CAD engineering PDF contains no embedded text layer; full OCR requires external Tesseract.
+4. **No Certification Claim**: Retrieved summaries, statistics, regressions, and reading rankings never replace independent scientific review or spacecraft fire-safety qualification.
+
+---
+
+## Quickstart (Local Development)
+
+Requires **Python 3.11** (matching `.python-version`).
 
 ```powershell
-py -3.11 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
-.\.venv\Scripts\python.exe scripts/ingest_nasa.py
-.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8501
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-Acesse [aplicação local](http://127.0.0.1:8501). A interface usa loopback; não há autenticação para exposição pública. Nesta máquina a `.venv` já foi criada com Python **3.12.14** do runtime Codex, pois não havia Python no PATH. Python 3.11 é alvo de compatibilidade, mas não foi executado nesta sessão. `requirements-tested.txt` registra as versões instaladas, inclusive modelos opcionais. Não é preciso ativar a venv; os comandos usam seu executável diretamente.
+On cold start, `app.py` invokes `ensure_scientific_bootstrap()`, initializing `data/scientific.sqlite3` and `data/search.sqlite3` automatically from the preserved repository artifacts in under ~6 seconds with zero external API keys required.
 
-## Coleta e ingestão NASA
+### Optional Providers (Unconfigured by Default)
+- Local multilingual embeddings (`requirements-models.txt` + `scripts/setup_embeddings.py` + `RAG_EMBEDDING_MODEL`).
+- Extractive LLM / Qualitative VLM endpoints configured exclusively via `.env` locally or Streamlit Cloud Secrets (see `.env.example` and `docs/DEPLOYMENT.md`). Never commit credentials.
 
-```powershell
-.\.venv\Scripts\python.exe scripts/fetch_nasa_resources.py --guide --psi-manual
-.\.venv\Scripts\python.exe scripts/fetch_psi_tables.py --ids PSI-25 PSI-26 PSI-68 PSI-69 PSI-98 PSI-99 PSI-100 PSI-101 PSI-102
-.\.venv\Scripts\python.exe scripts/fetch_psi_tables.py --ids PSI-69 PSI-25 PSI-102 --pdfs
-.\.venv\Scripts\python.exe scripts/ingest_nasa.py
-```
+---
 
-Coletores consultam endpoints oficiais públicos, respeitam limites e arquivos restritos, preservam versão/DOI/hashes e não guardam URLs S3 temporárias. Reexecuções não sobrescrevem originais divergentes. Perfil de cobertura: `resources/manifests/data_quality_profile.json`.
-
-A importação é idempotente e tolera falhas por arquivo. Também pode ser iniciada em **Ingestão e fontes**, por worker local com histórico SQLite. Extrações malsucedidas mantêm o original e tornam o job parcial. Jobs abandonados são marcados interrompidos na próxima submissão. Não há download automático ao abrir a interface.
-
-## Interface
-
-- **Visão geral:** cobertura, documentos e prevenção/detecção/supressão.
-- **Investigações NASA:** catálogo, DOI confirmado, fonte e importação.
-- **Busca e assistente:** consulta PT/EN, FTS5/vetores e filtros tipados por O₂, pressão, velocidade e combustível, com página/linha/hash e original citado.
-- **Comparar estudos:** duas ou três tabelas, com bloqueio de comparação quantitativa sem dimensões, métodos e condições compatíveis; relevância explicável para leitura.
-- **Arquivos do experimento:** todas as telas originais, uploads, integridade, PDFs, correções e análise exploratória.
-- **Revisão visual:** inspeção local de página PDF e adaptador VLM opcional, com consentimento e revisão humana.
-
-Condição, configuração, amostra e resultado reportado são categorias distintas. Uma tabela publicada não equivale a telemetria bruta validada. Não há série temporal completa de sensores nesta seleção. Gráficos e análises não constituem laudo de segurança.
-
-## Embeddings locais
-
-Sem configuração, a busca combina FTS5, vetores **lexicais** e sinônimos PT/EN. Esse modo não é descrito como semântico aprendido e funciona sem internet.
+## Verification & Quality Assurance
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements-models.txt
-.\.venv\Scripts\python.exe scripts/setup_embeddings.py --configure
-.\.venv\Scripts\python.exe scripts/ingest_nasa.py
-```
-
-O download explícito usa o cache do usuário fora do repositório, sem chave paga. Registra revisão/licença em `data/embedding_model.json` e caminho em `.env`. Modelo: [paraphrase-multilingual-MiniLM-L12-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2), Apache-2.0. É multilíngue geral; sua precisão científica não foi calibrada. A aplicação só carrega modelos locais, com `trust_remote_code=False`. Chunks respeitam o tokenizer; falhas de modelo preservam a recuperação lexical e avisam sobre reindexação.
-
-## LLM opcional e privacidade
-
-Use `.env.example` como referência e preserve eventual caminho de embedding já configurado em `.env`. Defina `RAG_MODEL`, `RAG_BASE_URL` e, quando necessário, `RAG_API_KEY`. Aceita endpoint OpenAI-compatible HTTPS ou servidor local em loopback. Não há chave incluída nem chamada paga realizada nesta entrega.
-
-O modo padrão recupera evidências e admite insuficiência. O LLM opcional seleciona **trechos literais**, cuja fonte, texto, números e categoria são verificados em código. Paráfrases científicas livres são recusadas; isso reduz a liberdade do resumo para manter verificabilidade. Fontes continuam no idioma original.
-
-Perguntas e documentos são dados não confiáveis. O assistente não executa ferramentas. Somente pergunta e trechos selecionados seguem ao provedor quando o usuário habilita LLM; ambiente, arquivos arbitrários e segredos não entram no prompt.
-
-Para o VLM opcional, configure `VLM_MODEL`, `VLM_BASE_URL` e `VLM_API_KEY`. A página é enviada somente após consentimento explícito. A saída tipada é candidata qualitativa para revisão humana, armazenada em análises separadas; não vira observação científica nem leitura numérica exata. Sem provedor, a prévia local funciona. Nenhuma chamada VLM real foi executada nesta sessão.
-
-## Persistência e unidades
-
-- `data/psi_downloads/`: originais NASA e manifests.
-- `resources/official/`: guias oficiais e proveniência.
-- `data/experimentos/`: arquivo original/extração JSON por experimento, retrocompatível.
-- `data/scientific.sqlite3`: investigações/fontes/versões/páginas/regiões/tabelas/células/observações/jobs/análises.
-- `data/search.sqlite3`: chunks, FTS5 e vetores persistentes.
-
-Faça backup conjunto de `data/` e `resources/`. Índices são reconstruíveis; originais são a referência. SHA-256 detecta alteração, não é criptografia nem assinatura.
-
-Pint normaliza apenas unidades documentadas. Pressão sem referência explícita não vira psia; psig exige referência independente para conversão absoluta. Pressão parcial de O₂ é derivação rotulada. Intervalos, incertezas, qualitativos e ausências não viram valores exatos em filtros.
-
-## Testar
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest -q
 .\.venv\Scripts\python.exe -m ruff check app.py src scripts tests
-.\.venv\Scripts\python.exe -m mypy src/units.py src/scientific_store.py src/comparison.py
+.\.venv\Scripts\python.exe -m mypy src/units.py src/scientific_store.py src/comparison.py src/visual_review.py src/local_jobs.py src/pipeline.py src/retrieval.py src/assistant.py src/i18n.py
 .\.venv\Scripts\python.exe -m compileall -q app.py src scripts tests
 .\.venv\Scripts\python.exe -m pip check
+$env:HF_HUB_OFFLINE='1'; $env:TRANSFORMERS_OFFLINE='1'; .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-Integrações usam originais NASA em diretórios temporários, sem alterar o acervo principal. [Relatório de testes](docs/TEST_REPORT.md), [roteiro de demonstração](docs/DEMO_SCRIPT.md), [progresso retomável](docs/PROGRESS.md).
+---
 
-## Limitações e licenças
+## Public Deployment Architecture
 
-- O PDF de requisitos associado pela NASA a PSI-69 identifica FLEX-2 na capa; há aviso na interface.
-- `Burning rate; mm` no FLEX é dimensionalmente ambíguo e não é convertido como taxa.
-- O desenho SAME não tem texto extraível. OCR depende do Tesseract e idiomas, não incluídos no Python.
-- Apollo 1/13 falharam TLS; não foi desativada validação de certificados.
-- Não foram baixados vídeos gigantes, todo o raw nem todas as publicações. Não se contornam acessos restritos.
-- A API não declara licença específica por arquivo: preserve NASA/autores e verifique termos e direitos de terceiros antes de redistribuir. Não foi inventada licença para dados ou código original.
-- [Uso de IA e limites de validação](docs/AI_USAGE.md).
+- **Primary Runtime (`Streamlit Community Cloud`)**: Runs `app.py` with `PSI_READONLY_MODE` auto-detected on cloud hosts (`STREAMLIT_SHARING_MODE` / `/mount/src`) or set explicitly. Public visitors cannot upload files or overwrite the NASA archive; ephemeral chart column overrides remain session-scoped.
+- **Static Showcase (`docs/index.html` for GitHub Pages)**: GitHub Pages only serves static assets; `docs/index.html` provides a bilingual overview and links directly to the interactive Streamlit Community Cloud app.
+
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) and [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md) for deployment instructions.

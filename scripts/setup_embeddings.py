@@ -21,7 +21,7 @@ def main() -> None:
     local = snapshot_download(MODEL, revision=info.sha, token=False,
                               allow_patterns=["*.json", "model.safetensors", "*.model", "tokenizer*", "vocab.txt",
                                               "1_Pooling/*", "README.md"])
-    record = {"model": MODEL, "revision": info.sha, "local_path": str(local), "license": "Apache-2.0",
+    record = {"model": MODEL, "revision": info.sha, "configured_via": "RAG_EMBEDDING_MODEL", "license": "Apache-2.0",
               "model_card": f"https://huggingface.co/{MODEL}",
               "retrieved_utc": datetime.now(timezone.utc).isoformat()}
     output = PROJECT / "data" / "embedding_model.json"

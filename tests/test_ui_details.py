@@ -50,8 +50,8 @@ def test_nasa_catalog_opens_existing_study():
     if not flex:
         pytest.skip("Run NASA downloads and ingestion first")
     app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=90).run()
-    app.radio(key="workspace_section").set_value("Investigações NASA").run()
+    app.radio(key="workspace_section").set_value("investigations").run()
     app.button(key="nasa-open-PSI-69").click().run()
     assert not app.exception
-    assert app.radio(key="workspace_section").value == "Arquivos do experimento"
+    assert app.radio(key="workspace_section").value == "explorer"
     assert app.session_state["active_experiment_id"] == flex["id"]
