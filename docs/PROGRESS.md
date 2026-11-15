@@ -1,22 +1,21 @@
 # PROGRESS — Retomada de sessões
 
 ## Estado atual
-- **Repositório Git isolado**: inicializado na raiz de `PROJETO TESTE FLAME MICROGRAVITY` com branch `main` (commit baseline `880145a`) e branch de desenvolvimento `feat/spaceapps-public-release`.
-- **Portabilidade e deploy público**:
-  - `.python-version` (`3.11`) e `.streamlit/config.toml` ajustados para nuvem (sem `address = "127.0.0.1"`).
-  - Caminho absoluto de usuário removido de `data/embedding_model.json` e `scripts/setup_embeddings.py`; `src/pipeline.py` e `src/local_jobs.py` persistem caminhos relativos POSIX via `_portable_path()`.
-  - `src/retrieval.py` normaliza identificador de modelo via `_model_mode_id()` e migra entradas legadas automaticamente.
-  - `src/pipeline.py` adiciona `is_public_readonly()` e `ensure_scientific_bootstrap()` para inicialização automática de `scientific.sqlite3` e `search.sqlite3` no cold start (~5.7 s sem `.env` ou banco prévio).
-  - `src/extractors.py` atualizado para `import pymupdf as fitz` (eliminando `FutureWarning`).
-- **Internacionalização centralizada (`src/i18n.py`)**:
-  - Padrão inicial **English (`en`)** com alternador visível **`English (EN)` / `Português (PT-BR)`** na barra lateral persistido em `st.session_state`.
-  - Traduções centralizadas para navegação canônica, cards dos 9 estudos PSI + guias NASA, glossário, gráficos/tabelas, comparador, ranking, assistente, revisão visual e metodologia — mantendo intactos títulos NASA, DOIs, hashes SHA-256, cabeçalhos originais e valores brutos.
-- **Redesign de UX Orientado à Descoberta (`src/guided_journeys.py`, `src/scientific_ui.py`, `src/views.py`, `app.py`)**:
-  - **Home orientada à descoberta**: Título *"Explore the Science of Fire in Space"*, explicação simples de `1g` vs. `~0g`, glossário introdutório opcional e 3 experiências iniciais explícitas (**A. Discover How Fire Behaves**, **B. Investigate Spacecraft Fire Safety**, **C. Explore Scientific Data**).
-  - **Duas Jornadas Guiadas em 4 passos (`src/guided_journeys.py`)**: *Journey 1* (física de queda livre, `PSI-69 · FLEX`, prévia PDF p. 36, gráfico Plotly interativo + guia de leitura e achados/limitações) e *Journey 2* (risco espacial, seletor de 3 pilares Prevenção/Detecção/Supressão, evidências `PSI-25 · BASS-II`, `PSI-102 · SAME` p. 13 e alerta metodológico), com persistência em `st.session_state`, controles `← Back` / `Continue →` e botão de retorno contínuo ao visitar seções avançadas.
-  - **Divulgação progressiva (`Guided Exploration` vs. `Advanced Research`)**: seletor de nível de experiência na barra lateral ocultando controles `⚙ ...`, filtros numéricos, diagnósticos de índice e caminhos locais sob painéis recolhidos para iniciantes.
-  - **Explicação de gráficos e resultados**: componente *"How to Read This Chart"* exibido abaixo dos gráficos no Data Explorer e nas jornadas (eixos, unidades, papel dos dados e ressalvas como `'Burning rate; mm'`); no Assistente Científico, perguntas de exemplo executam imediatamente com *"Plain-Language Guide to These Results"* acima das citações.
-  - **Bootstrap & chunks verificados**: `src/pipeline.py` atualiza automaticamente o índice semântico local (**2,711 trechos por janela de tokens** com `paraphrase-multilingual-MiniLM-L12-v2`) quando `.env` aponta modelo local, mantendo **1,517 segmentos estruturais** determinísticos (`lexical-vectors`) em clones limpos ou nuvem sem peso de modelo.
-  - **Regressão & QA**: `tests/test_guided_ux.py` (6 testes E2E de jornada/UX/PT-BR), totalizando **105 testes passando** offline e validação ao vivo no navegador desktop (`1440x1000`) e mobile (`375x812`).
-  - Página estática opcional bilíngue para GitHub Pages em `docs/index.html`.
-- **Próxima ação manual do usuário**: enviar os commits para o GitHub e conectar `app.py` no Streamlit Community Cloud conforme `docs/DEPLOYMENT.md` e `docs/ANTIGRAVITY_HANDOFF.md`.
+- **Repositório Git isolado (`feat/spaceapps-public-release`)**:
+  - Branch principal `main` preservada + checkpoint seguro `checkpoint/pre-final-product-overhaul` em `16acce4` antes da reformulação final de produto e UX/UI.
+- **Sistema de Design e Arquitetura UI (`src/design_system.py`, `docs/DESIGN_SYSTEM.md`, `docs/UX_AUDIT.md`, `.streamlit/config.toml`)**:
+  - Direção visual **Aerospace Laboratory Daylight** com paleta de alto contraste (`#0F1D2B`, `#3E4C59`, `#B84A24`, `#1D5B86`), algarismos tabulares, cartões planos sem aninhamento excessivo e anéis de foco acessíveis (`3px solid #B84A24`).
+  - `[client] toolbarMode = "viewer"` e `showErrorDetails = "none"` em `.streamlit/config.toml` removem botões de desenvolvedor (`Deploy`); `initial_sidebar_state="auto"` em `app.py` mantém o menu aberto no desktop e recolhido em telas estreitas/móveis.
+  - CSS responsivo em `src/design_system.py` garante ausência de sobrecarga horizontal (`scrollWidth <= clientWidth` verificado em `1440×1000`, `768×1024`, `375×812` e zoom `200%`), quebra segura de abas `[role="tablist"]`, overlay de menu lateral em `<= 48rem` e espaçamento acima do cabeçalho fixo.
+- **Navegação Contínua, Hub de Desafio e Descoberta Guiada (`src/scientific_ui.py`, `src/challenge_engine.py`, `src/guided_journeys.py`, `src/views.py`)**:
+  - Barra superior fixa com *Onde você está*, controles **`← Back`** / **`🏠 Home`**, retorno contínuo às jornadas e alternador rápido **`Language: EN → PT-BR`** sincronizado com o seletor segmentado **`Language: [EN | PT-BR]`** da barra lateral sem traceback ao alternar idiomas repetidamente.
+  - Página inicial com título *"Explore the Science of Fire in Space"*, 3 experiências de entrada e painel interativo **Space Apps Challenge Hub (`SUMMARIZE · RANK · INTERPRET`)**.
+  - Todas as 4 etapas das Jornadas Guiadas 1 e 2 estruturadas com o quadro das **5 Perguntas Científicas** (*O que estou explorando · Por que importa · Evidência NASA · Conclusão · Limitações*), prévia de PDFs e gráficos Plotly padronizados (`style_scientific_figure`).
+  - **Data Explorer Tab 0** atualizado com visualização gráfica imediata (**Visual First Look**) + painel **SUMMARIZE & INTERPRET** antes de tabelas estatísticas amplas.
+- **Assistente Conversacional & Integração Opcional Google Gemini (`src/gemini_provider.py`, `src/assistant.py`)**:
+  - Fluxo conversacional via `st.chat_message` com perguntas rápidas em 2 linhas, síntese **SUMMARIZE / INTERPRET** e suporte opcional ao Google Gemini (`GEMINI_API_KEY` / `GOOGLE_API_KEY`, padrão `gemini-2.5-flash`).
+  - Bloqueio automático de envio de documentos privados (`local_upload`) via `filter_public_nasa_evidence`, teto deslizante de requisições (`10/min`, `40/sessão`), validação extrativa `validate_claims()` e fallback offline determinístico (`IMPLEMENTED BUT UNCONFIGURED` neste ambiente sem chave no `.env`, testado com mocks HTTP).
+- **Documentação & QA Final**:
+  - Documentação entregue em `docs/FEATURE_AUDIT.md`, `docs/LOCAL_ACCEPTANCE.md` (guia simples em português para aceite do responsável), `docs/SCIENTIFIC_REVIEW_CHECKLIST.md`, `docs/DESIGN_SYSTEM.md`, `docs/UX_AUDIT.md`, `docs/DEPLOYMENT.md`, `docs/TEST_REPORT.md`, `docs/AI_USAGE.md` e `README.md`.
+- **Próxima ação manual do responsável**:
+  - Validar localmente seguindo [`docs/LOCAL_ACCEPTANCE.md`](LOCAL_ACCEPTANCE.md) e, quando aprovado, publicar no GitHub + Streamlit Community Cloud seguindo [`docs/DEPLOYMENT.md`](DEPLOYMENT.md).

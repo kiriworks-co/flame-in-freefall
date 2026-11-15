@@ -1,25 +1,33 @@
-# Uso de IA e limites
+# Uso de IA, Limites Científicos e Status do Provedor (`AI_USAGE.md`)
 
-Em 15/11/2026, Codex continuou o código original com subagentes de coleta NASA, ingestão, RAG, interface e QA. Código, testes e documentação tiveram assistência de IA. Os dados científicos vieram diretamente da NASA; nenhuma medição foi gerada para preencher lacunas.
+Em 15/11/2026, o desenvolvimento final do **Flame in Freefall (`PSI Flame Microgravity`)** preservou integralmente os arquivos e metadados científicos coletados diretamente da NASA (`psi.nasa.gov` / `nasa.gov`) e elevou interface, internacionalização, explicabilidade e camadas opcionais de IA com salvaguardas rígidas. Nenhuma medição científica foi gerada ou alterada por IA.
 
-Skills aplicadas segundo o escopo: ui-ux-pro-max, redesign-existing-projects, awesome-design-skills (professional apenas como inspiração), playwright-cli, web-design-guidelines, PDF para inspeção e security-audit em orientação focada. Não havia skill específica Python/RAG no catálogo. React não se aplica ao Streamlit. As regras científicas do projeto prevaleceram. O usuário autorizou instalar dependências e executar testes/aplicação; essa autorização prevaleceu sobre defaults genéricos das skills. Não houve pentest nem deploy público.
+---
 
-## Respostas e privacidade
+## 1. Busca Local e Fallback Sem Chave (Ativo por Padrão)
 
-- FTS5 e vetores lexicais funcionam localmente. Embeddings aprendidos usam pesos locais; modelo, revisão e licença estão em data/embedding_model.json.
-- Semelhança vetorial não comprova relevância científica. Filtros físicos usam observações tipadas na mesma linha, com unidade e referência quando exigidas.
-- O modo sem LLM mostra evidências e localizações sem concluir cientificamente.
-- O LLM opcional recebe pergunta e trechos selecionados após ação do usuário. Não recebe ambiente, arquivos arbitrários ou segredos e não dispõe de ferramentas.
-- As afirmações aceitas são extrativas: fonte recuperada, trecho literal, números e categoria correspondentes. Afirmações livres são recusadas. Isso não é garantia geral contra toda alucinação.
-- LLM pago/chave real não foram utilizados. Fixtures validam o contrato do adaptador; não homologam um provedor real.
-- VLM opcional envia somente a página selecionada após consentimento. Descrição qualitativa, regiões e texto candidato passam por schema tipado e revisão humana. Persistência restrita a analysis_results; não alimenta medições, observações ou RAG. Foi validado com mocks rotulados, sem provedor real.
+- **SQLite FTS5 + Vetores Locais**: Operam offline sem envio de dados externos.
+  - Quando um modelo de embeddings local (`RAG_EMBEDDING_MODEL`, ex.: `paraphrase-multilingual-MiniLM-L12-v2`, licença registrada em [`data/embedding_model.json`](../data/embedding_model.json)) está configurado localmente, o índice utiliza **2.711 trechos em janela de tokens** (`local-semantic:...`).
+  - Em containers limpos ou deploys públicos sem modelo pesado (`RAG_EMBEDDING_MODEL=""`), o sistema utiliza **1.517 segmentos estruturais determinísticos** com `lexical-vectors` bilíngues EN/PT.
+- **Filtros Físicos Tipados**: Restrições numéricas (`O2`, pressão, velocidade de fluxo) cruzam somente observações estruturadas na mesma linha original, com preservação de unidades (`psia` vs. `psig`, `Burning rate; mm`).
+- **Modo Offline (Sem LLM)**: Retorna passagens literais da NASA, documentos associados, DOIs, hashes SHA-256 e guias de leitura em linguagem simples, sem síntese especulativa.
 
-## Ciência e segurança
+---
 
-Condição, amostra, resultado reportado, cálculo e inferência permanecem distintos. Regras por cabeçalho são inspecionáveis e conservadoras, mas exigem revisão de domínio antes do uso decisório. Resultado publicado não equivale a telemetria bruta validada.
+## 2. Integração com Google Gemini API — Status Verificado
 
-O ranking prioriza investigações para leitura: aplicação até 50, termos da pergunta até 30, cobertura local até 20, conforme src/relevance.py. Não é ranking de materiais nem estimativa de risco.
+- **Status Atual neste Ambiente Local**: **`IMPLEMENTED BUT UNCONFIGURED`**.
+  - O arquivo `.env` local não contém `GEMINI_API_KEY` nem `GOOGLE_API_KEY`. Nenhuma chamada externa real ao endpoint Gemini foi executada nesta máquina; todo o comportamento da integração foi validado em testes unitários e de integração com mocks HTTP ([`tests/test_gemini_and_challenge.py`](../tests/test_gemini_and_challenge.py)).
+- **Arquitetura Implementada ([`src/gemini_provider.py`](../src/gemini_provider.py) + [`src/assistant.py`](../src/assistant.py))**:
+  - **Modelo Padrão Configurável**: `GEMINI_MODEL=gemini-2.5-flash` (via `GEMINI_API_KEY` ou `GOOGLE_API_KEY` em `.env` ou Streamlit Cloud Secrets).
+  - **Proteção de Dados Privados (`filter_public_nasa_evidence`)**: Bloqueia qualquer envio externo caso os trechos recuperados pertençam apenas a uploads locais privados (`local_upload`). Somente passagens públicas da NASA são elegíveis para síntese opcional.
+  - **Controle de Cota e Resiliência**: Cache LRU em memória para consultas repetidas, limite deslizante de **10 requisições/minuto** e **40 requisições/sessão**, e fallback automático para citações offline verificáveis em caso de falha HTTP ou timeout.
+  - **Validação Extrativa (`validate_claims`)**: Toda frase gerada exige correspondência com documento recuperado, trecho literal verificável, consistência numérica e fidelidade de categoria (`condition`, `sample`, `measurement`, `calculation`); afirmações livres são recusadas.
 
-Pressão sem referência não é presumida absoluta; a taxa de queima com unidade ambígua é preservada. O PDF FLEX-2 associado ao PSI-69 é sinalizado. Não se certifica material nem eficácia de supressão.
+---
 
-Arquivos e strings são entradas não confiáveis: há limites de tamanho/expansão, rejeição de traversal, conferência de hash e exibição inerte de evidências. Fórmulas não são executadas. Não houve auditoria completa de dependências, teste adversarial de provedores nem homologação de exposição pública.
+## 3. Revisão Visual Opcional (VLM) e Limites Científicos
+
+- **Revisão Visual de PDFs (`src/visual_review.py` + `src/vlm_review.py`)**: Só envia a página selecionada após consentimento explícito do usuário (quando endpoint configurado). Todo retorno é isolado na tabela `analysis_results`, marcado como `inference` e `needs_human_review = True`, nunca alterando medições ou o índice de busca.
+- **Prioridade de Leitura `0–100` (`src/relevance.py` + `src/challenge_engine.py`)**: Pontuação determinística transparente (até 50 aplicação + até 30 termos da consulta + até 20 cobertura local) para ajudar pesquisadores e iniciantes a decidir *qual estudo ler primeiro*. Nunca representa risco real de incêndio, inflamabilidade de material ou certificação espacial.
+- **Segurança Aplicacional**: Prevenção contra path traversal, leitura inerte de texto/Markdown (`unsafe_allow_html=False` em citações e HTML escapado em cartões), verificação criptográfica SHA-256 dos arquivos NASA e modo somente leitura público automático (`is_public_readonly()`).

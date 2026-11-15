@@ -8,6 +8,7 @@ import plotly.express as px
 import streamlit as st
 
 from . import extractors, storage
+from .design_system import render_five_question_framework, style_scientific_figure
 from .i18n import (
     evidence_label,
     get_lang,
@@ -342,6 +343,28 @@ def _render_step_footer(journey_id: str, step: int, lang: str) -> None:
     )
 
 
+def _five_q_labels(lang: str) -> dict[str, str]:
+    return {
+        "exploring": t("journey.q_exploring", lang),
+        "why_matters": t("journey.q_why_matters", lang),
+        "evidence_shows": t("journey.q_evidence_shows", lang),
+        "conclusion": t("journey.q_conclusion", lang),
+        "limitations": t("journey.q_limitations", lang),
+    }
+
+
+def _render_step_five_questions(prefix: str, lang: str) -> None:
+    render_five_question_framework(
+        heading=t("journey.q_heading", lang),
+        q_labels=_five_q_labels(lang),
+        exploring=t(f"{prefix}_q_exploring", lang),
+        why_matters=t(f"{prefix}_q_why", lang),
+        evidence_shows=t(f"{prefix}_q_evidence", lang),
+        conclusion=t(f"{prefix}_q_conclude", lang),
+        limitations=t(f"{prefix}_q_limits", lang),
+    )
+
+
 def _render_scatter_from_columns(
     df: pd.DataFrame,
     metas: list[dict[str, Any]],
@@ -377,7 +400,7 @@ def _render_scatter_from_columns(
         template="plotly_white",
         labels={x_col: f"{x_col} ({x_unit})", y_col: f"{y_col} ({y_unit})"},
     )
-    fig.update_layout(height=410, margin={"l": 16, "r": 16, "t": 28, "b": 16})
+    style_scientific_figure(fig, title=f"{experiment.get('psi_id', 'NASA PSI')} · {y_col}", height=400)
     st.plotly_chart(fig, use_container_width=True)
     render_chart_explanation(entry, x_col, [y_col], x_meta, [y_meta], None, experiment, lang)
     render_term_help(lang)
@@ -409,6 +432,7 @@ def _render_journey_1(experiments: list[dict[str, Any]], step: int, lang: str) -
         )
         with st.container(border=True):
             st.markdown(t(f"j1.s1_desc_{chosen}", lang))
+        _render_step_five_questions("j1.s1", lang)
         render_term_help(lang)
 
     elif step == 2:
@@ -450,6 +474,7 @@ def _render_journey_1(experiments: list[dict[str, Any]], step: int, lang: str) -
                 st.image(png, caption=caption, use_container_width=True)
             else:
                 st.info(t("j1.s2_pdf_unavailable", lang))
+        _render_step_five_questions("j1.s2", lang)
 
     elif step == 3:
         _render_step_header("journey_1", step, "j1.s3_title", "j1.s3_purpose", lang)
@@ -483,6 +508,7 @@ def _render_journey_1(experiments: list[dict[str, Any]], step: int, lang: str) -
         st.subheader(t("j1.s3_evidence_title", lang))
         snippets = _cached_evidence_snippets("FLEX droplet extinction oxygen cool flame", "PSI-69", limit=3)
         _render_evidence_cards(snippets, lang)
+        _render_step_five_questions("j1.s3", lang)
 
     else:
         _render_step_header("journey_1", step, "j1.s4_title", "j1.s4_purpose", lang)
@@ -493,6 +519,7 @@ def _render_journey_1(experiments: list[dict[str, Any]], step: int, lang: str) -
         with c2.container(border=True):
             st.subheader(t("j1.s4_limits_title", lang))
             st.markdown(t("j1.s4_limits_body", lang))
+        _render_step_five_questions("j1.s4", lang)
 
         st.subheader(t("j1.s4_next_title", lang))
         b1, b2, b3 = st.columns(3)
@@ -532,6 +559,7 @@ def _render_journey_2(experiments: list[dict[str, Any]], step: int, lang: str) -
         st.markdown(t("j2.s1_explain", lang))
         with st.container(border=True):
             st.markdown(t("j2.s1_risk_cards", lang))
+        _render_step_five_questions("j2.s1", lang)
         render_term_help(lang)
 
     elif step == 2:
@@ -549,7 +577,7 @@ def _render_journey_2(experiments: list[dict[str, Any]], step: int, lang: str) -
         matched = [
             exp
             for exp in experiments
-            if investigation_profile(str(exp.get("psi_id") or ""), lang).get("pillar") == pillar
+            if investigation_profile(str(exp.get("psi_id") or ""), "en").get("pillar", "").casefold() == pillar
         ]
         st.caption(t("j2.s2_loaded_studies", lang, count=len(matched)))
         if matched:
@@ -565,6 +593,7 @@ def _render_journey_2(experiments: list[dict[str, Any]], step: int, lang: str) -
                         on_click=open_study_from_journey,
                         args=("explorer", sid, experiments),
                     )
+        _render_step_five_questions("j2.s2", lang)
 
     elif step == 3:
         _render_step_header("journey_2", step, "j2.s3_title", "j2.s3_purpose", lang)
@@ -621,6 +650,7 @@ def _render_journey_2(experiments: list[dict[str, Any]], step: int, lang: str) -
                     st.markdown(f"**{t('inv.objective_label', lang)}:** {prof.get('objective', '')}")
                     if prof.get("caveat"):
                         st.caption(prof["caveat"])
+        _render_step_five_questions("j2.s3", lang)
 
     else:
         _render_step_header("journey_2", step, "j2.s4_title", "j2.s4_purpose", lang)
@@ -631,6 +661,7 @@ def _render_journey_2(experiments: list[dict[str, Any]], step: int, lang: str) -
         with c2.container(border=True):
             st.subheader(t("j2.s4_caveats_title", lang))
             st.markdown(t("j2.s4_caveats_body", lang))
+        _render_step_five_questions("j2.s4", lang)
 
         st.subheader(t("j2.s4_next_title", lang))
         b1, b2, b3 = st.columns(3)

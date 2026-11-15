@@ -1,6 +1,6 @@
 # PSI Flame Microgravity — Flame in Freefall (NASA Space Apps 2026)
 
-> **Bilingual / Bilíngue:** Default interface in **English (`en`)** with instant **Português (`PT-BR`)** switching in the sidebar (`Language / Idioma`).  
+> **Bilingual / Bilíngue:** Default interface in **English (`en`)** with persistent top-bar **`Language: EN → PT-BR`** toggle and segmented sidebar **`Language: [EN | PT-BR]`** selector.  
 > Interactive scientific workbench unifying **9 NASA Physical Sciences Informatics (PSI)** microgravity combustion investigations (**16 authentic NASA files, 7,881,267 bytes**) with immutable **SHA-256** provenance, conservative **Pint** unit normalization, side-by-side compatibility checks, and an evidence-first research assistant.
 
 ---
@@ -17,15 +17,15 @@ NASA's PSI repository spreads these experiments across heterogeneous CSV spreads
 
 On arrival, **Home / Overview (`home`)** acts as an interactive science exhibit (*"Explore the Science of Fire in Space"*) with plain-English microgravity physics (1g vs. 0g), a beginner glossary, progressive disclosure (**Guided Exploration** default vs. **Advanced Research** in the sidebar), and **three starting experiences**:
 
-- **Experience A — Discover How Fire Behaves**: Interactive 4-step **Guided Journey 1** (`src/guided_journeys.py`) covering 1g vs. 0g buoyancy, NASA's **FLEX (`PSI-69`)** experiment and ISS PDF page preview, live interactive Plotly exploration paired with a plain-language *"How to Read This Chart"* guide, and documented caveats (`Burning rate; mm`, `FLEX-2` PDF notice).
-- **Experience B — Investigate Spacecraft Fire Safety**: Interactive 4-step **Guided Journey 2** exploring cabin hazards across **Prevention** (`BASS`, `BASS-II`, `Saffire I–III`), **Detection** (`SAME`, `SAME-R`), and **Suppression** (`FLEX`, `FLEX-2`), live inspection of `PSI-25 · BASS-II` plots and `PSI-102 · SAME` reports, method-boundary guardrails, and 1-click transition to advanced comparison/assistant tools with a persistent *Return to Guided Journey* control.
-- **Experience C — Explore Scientific Data**: Direct access to all 7 workspace sections:
+- **Experience A — Discover How Fire Behaves**: Interactive 4-step **Guided Journey 1** (`src/guided_journeys.py`) structured around **5 Scientific Questions** (*What am I exploring · Why does it matter · NASA evidence · Conclusions · Limitations*), covering 1g vs. 0g buoyancy, NASA's **FLEX (`PSI-69`)** experiment and ISS PDF page preview, live interactive Plotly exploration paired with *"How to Read This Chart"*, and preserved caveats (`Burning rate; mm`, `FLEX-2` PDF notice).
+- **Experience B — Investigate Spacecraft Fire Safety**: Interactive 4-step **Guided Journey 2** with the **5 Scientific Questions** framework exploring cabin hazards across **Prevention** (`BASS`, `BASS-II`, `Saffire I–III`), **Detection** (`SAME`, `SAME-R`), and **Suppression** (`FLEX`, `FLEX-2`), live inspection of `PSI-25 · BASS-II` plots and `PSI-102 · SAME` reports, method-boundary guardrails, and 1-click transition to advanced tools with a persistent *Return to Guided Journey* control.
+- **Experience C — Explore Scientific Data & Space Apps Challenge Hub**: Persistent top context navigation bar (**Where you are · `← Back` · `🏠 Home` · `Language: EN → PT-BR`**), an interactive Homepage **Challenge Hub (`SUMMARIZE · RANK · INTERPRET`)**, and direct access to all 7 workspace sections:
 
-1. **Home / Overview (`home`)**: Discovery-first entry, Earth vs. microgravity contrast, verified NASA archive metrics (**2,711** local semantic token-window chunks or **1,517** deterministic offline structural chunks), and starting experiences A/B/C.
+1. **Home / Overview (`home`)**: Discovery-first entry, Earth vs. microgravity contrast, verified NASA archive metrics (**2,711** local semantic token-window chunks or **1,517** deterministic offline structural chunks), starting experiences A/B/C, and interactive **Challenge Hub (`SUMMARIZE · RANK · INTERPRET`)**.
 2. **Investigations (`investigations`)**: Searchable catalog of 9 NASA PSI studies + 2 official NASA reference guides with permanent NASA PSI URLs, confirmed DOIs, objectives, safety relevance, caveats, and direct jump into Data Explorer.
-3. **Data Explorer (`explorer`)**: Study selector (defaulting to `PSI-69 · FLEX`), collapsible **Variable & Unit Glossary**, interactive Plotly charts paired with inline **How to Read This Chart** explainers, descriptive statistics, progressive-disclosure engineering controls (`⚙ ...`), source tables with original row numbers, document integrity & SHA-256 verification, in-PDF keyword reader, and ISA-Tab metadata.
-4. **Compare (`compare`)**: Guided cross-study schema and methodology audit (with quick presets such as *FLEX vs BASS-II*, *SAME vs SAME-R*, *Saffire-I vs Saffire-II*) plus a deterministic **0–100 Reading Priority Ranking** (never a safety score).
-5. **Scientific Assistant (`assistant`)**: Hybrid retrieval engine (SQLite **FTS5** + local multilingual embeddings when `RAG_EMBEDDING_MODEL` is configured, yielding **2,711** token-window chunks, or **1,517** structural segments via deterministic offline lexical vectors), progressive-disclosure filters/diagnostics, instant-executing example questions, and a **Plain-Language Guide to These Results** card above cited NASA passages.
+3. **Data Explorer (`explorer`)**: Study selector (defaulting to `PSI-69 · FLEX`), collapsible **Variable & Unit Glossary**, chart-first **Visual First Look** + **SUMMARIZE & INTERPRET** directly in `Tab 0`, unified Plotly charts paired with **How to Read This Chart**, descriptive statistics, progressive-disclosure engineering controls, source tables with original row numbers, document integrity & SHA-256 verification, in-PDF keyword reader, and ISA-Tab metadata.
+4. **Compare (`compare`)**: Guided cross-study schema and methodology audit (with quick presets such as *FLEX vs BASS-II*, *SAME vs SAME-R*, *Saffire-I vs Saffire-II*) plus a deterministic **0–100 Reading Priority Ranking** chart & matrix (never a safety score).
+5. **Scientific Assistant (`assistant`)**: Conversational `st.chat_message` workflow backed by hybrid search (SQLite **FTS5** + offline `lexical-vectors` or local multilingual embeddings when configured), progressive-disclosure filters, instant-executing example questions, structured **SUMMARIZE / INTERPRET** synthesis cards, and optional Google Gemini API integration (`src/gemini_provider.py`, blocking private `local_upload` excerpts and verifying every claim extratively against retrieved NASA text).
 6. **Visual Page Review (`visual_review`)**: Offline rendered PDF diagram inspector with optional opt-in VLM qualitative review strictly tagged as `inference` (`needs_human_review = True`).
 7. **Sources & Methodology (`sources`)**: Full provenance, unit normalization policy, known scientific caveats, verification hashes, and archive synchronization controls (read-only when publicly deployed).
 
@@ -63,7 +63,7 @@ On cold start, `app.py` invokes `ensure_scientific_bootstrap()`, initializing `d
 
 ### Optional Providers (Unconfigured by Default)
 - Local multilingual embeddings (`requirements-models.txt` + `scripts/setup_embeddings.py` + `RAG_EMBEDDING_MODEL`).
-- Extractive LLM / Qualitative VLM endpoints configured exclusively via `.env` locally or Streamlit Cloud Secrets (see `.env.example` and `docs/DEPLOYMENT.md`). Never commit credentials.
+- Optional **Google Gemini API** (`GEMINI_API_KEY` or `GOOGLE_API_KEY`, default `GEMINI_MODEL=gemini-2.5-flash`) and OpenAI-compatible RAG / VLM endpoints configured exclusively via local `.env` or Streamlit Cloud Secrets (see `.env.example` and `docs/DEPLOYMENT.md`). Private `local_upload` excerpts are blocked from Gemini requests, and never commit credentials.
 
 ---
 
@@ -71,13 +71,21 @@ On cold start, `app.py` invokes `ensure_scientific_bootstrap()`, initializing `d
 
 ```powershell
 .\.venv\Scripts\python.exe -m ruff check app.py src scripts tests
-.\.venv\Scripts\python.exe -m mypy src/units.py src/scientific_store.py src/comparison.py src/visual_review.py src/local_jobs.py src/pipeline.py src/retrieval.py src/assistant.py src/i18n.py src/guided_journeys.py
+.\.venv\Scripts\python.exe -m mypy app.py src/design_system.py src/gemini_provider.py src/challenge_engine.py src/assistant.py src/scientific_ui.py src/guided_journeys.py src/views.py src/i18n.py tests/test_gemini_and_challenge.py
 .\.venv\Scripts\python.exe -m compileall -q app.py src scripts tests
 .\.venv\Scripts\python.exe -m pip check
-$env:HF_HUB_OFFLINE='1'; $env:TRANSFORMERS_OFFLINE='1'; .\.venv\Scripts\python.exe -m pytest -q
+$env:RAG_EMBEDDING_MODEL=""; .\.venv\Scripts\python.exe -m pytest -q
 ```
 
 ---
+
+## Key Project Documentation
+- Owner Local Acceptance Guide (PT-BR): [docs/LOCAL_ACCEPTANCE.md](docs/LOCAL_ACCEPTANCE.md)
+- Feature Audit: [docs/FEATURE_AUDIT.md](docs/FEATURE_AUDIT.md)
+- Scientific Review Checklist: [docs/SCIENTIFIC_REVIEW_CHECKLIST.md](docs/SCIENTIFIC_REVIEW_CHECKLIST.md)
+- Design System & UX Audit: [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) · [docs/UX_AUDIT.md](docs/UX_AUDIT.md)
+- Testing & Browser Verification Report: [docs/TEST_REPORT.md](docs/TEST_REPORT.md)
+- Deployment & Public Hosting: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) · [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md)
 
 ## Public Deployment Architecture
 

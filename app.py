@@ -13,6 +13,7 @@ import streamlit as st
 from dotenv import load_dotenv
 
 from src import scientific_ui, views
+from src.design_system import inject_global_styles, render_context_navigation_bar
 from src.extractors import SCHEMA_VERSION, SUPPORTED_EXTENSIONS
 from src.guided_journeys import TOTAL_STEPS, current_journey, stop_journey
 from src.i18n import (
@@ -44,10 +45,13 @@ st.set_page_config(
     page_title="PSI Flame Microgravity",
     page_icon="🔥",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="auto",
 )
 
 _SECRET_KEYS = (
+    "GEMINI_API_KEY",
+    "GOOGLE_API_KEY",
+    "GEMINI_MODEL",
     "RAG_BASE_URL",
     "RAG_MODEL",
     "RAG_API_KEY",
@@ -127,6 +131,28 @@ def _default_experiment_id(experiments: list[dict]) -> str:
 
 def _on_language_change() -> None:
     set_lang(str(st.session_state.get("lang_selector", DEFAULT_LANG)))
+
+
+def _toggle_language() -> None:
+    next_code = "pt" if get_lang() == "en" else "en"
+    set_lang(next_code)
+    st.session_state["lang_selector"] = next_code
+
+
+def _go_home() -> None:
+    stop_journey()
+    st.session_state["workspace_section"] = "home"
+
+
+def _go_back() -> None:
+    history = st.session_state.get("nav_history") or []
+    if history:
+        prev = history.pop()
+        st.session_state["nav_history"] = history
+        st.session_state["workspace_section"] = normalize_section(prev)
+        st.session_state["_skip_nav_push"] = True
+    else:
+        _go_home()
 
 
 def _show_overview(experiment: dict) -> None:
@@ -438,8 +464,20 @@ def main() -> None:
         st.session_state["lang_selector"] = get_lang()
 
     lang = get_lang()
+    inject_global_styles()
     st.session_state["workspace_section"] = normalize_section(st.session_state.get("workspace_section"))
     st.session_state.setdefault("interaction_mode", "guided")
+    current_sec = st.session_state["workspace_section"]
+    last_sec = st.session_state.get("_last_workspace_section")
+    if last_sec and last_sec != current_sec:
+        if st.session_state.pop("_skip_nav_push", False):
+            pass
+        else:
+            history = list(st.session_state.get("nav_history") or [])
+            if not history or history[-1] != last_sec:
+                history.append(last_sec)
+            st.session_state["nav_history"] = history[-10:]
+    st.session_state["_last_workspace_section"] = current_sec
 
     experiments = list_experiments()
     readonly = is_public_readonly()
@@ -482,13 +520,31 @@ def main() -> None:
         st.caption(t("sidebar.readonly_badge", lang) if readonly else t("sidebar.local_badge", lang))
         st.caption(t("sidebar.footer_note", lang))
 
-    if jid is not None and section != "home":
-        st.button(
-            t("sidebar.return_journey", lang, step=jstep, total=TOTAL_STEPS),
-            type="primary",
-            key="active-return-journey",
-            on_click=_return_to_journey,
-        )
+    active_j_label = (
+        f"{t('journey.badge_' + ('j1' if jid == 'journey_1' else 'j2'), lang)} · {t('journey.step_indicator', lang, current=jstep, total=TOTAL_STEPS)}"
+        if jid is not None and section == "home"
+        else None
+    )
+    return_j_label = (
+        t("sidebar.return_journey", lang, step=jstep, total=TOTAL_STEPS)
+        if jid is not None and section != "home"
+        else None
+    )
+    history_list = st.session_state.get("nav_history") or []
+    render_context_navigation_bar(
+        where_label=t("topbar.where", lang),
+        current_location=section_label(section, lang),
+        home_label=t("topbar.home", lang),
+        back_label=t("topbar.back", lang),
+        can_go_home=(section != "home" or jid is not None),
+        on_go_home=_go_home,
+        on_go_back=_go_back if (history_list or (jid is not None and section != "home")) else None,
+        lang=lang,
+        on_toggle_lang=_toggle_language,
+        active_journey_label=active_j_label,
+        return_journey_label=return_j_label,
+        on_return_journey=_return_to_journey,
+    )
 
     if section == "explorer":
         _show_data_explorer(experiments)

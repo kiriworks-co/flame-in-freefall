@@ -12,6 +12,7 @@ import re
 import urllib.request
 from urllib.parse import urlsplit
 
+from .gemini_provider import GeminiProviderError, gemini_configured, request_gemini_claims
 from .retrieval import RetrievalIndex
 
 _NUMBERS = re.compile(r"(?<![\w])[-+]?\d+(?:[.,]\d+)?(?:[eE][-+]?\d+)?")
@@ -61,8 +62,12 @@ def validate_claims(payload: dict, evidence: list[dict], language: str = "pt") -
     return accepted, errors
 
 
-def llm_configured() -> bool:
+def _openai_compatible_configured() -> bool:
     return bool(os.getenv("RAG_MODEL") and (os.getenv("RAG_API_KEY") or os.getenv("OPENAI_API_KEY") or os.getenv("RAG_BASE_URL")))
+
+
+def llm_configured() -> bool:
+    return gemini_configured() or _openai_compatible_configured()
 
 
 def _llm_claims(question: str, evidence: list[dict], language: str) -> dict:
@@ -112,27 +117,42 @@ def answer(question: str, index: RetrievalIndex | None = None, study_ids: list[s
                if english else "Condições de ensaio não são resultados medidos nem prova de segurança contra incêndio. Os trechos podem conter apenas contexto.")
     warnings.append(warning)
     mode = "offline-evidence"
+    provider_status = "local_deterministic"
     claims: list[dict] = []
     if use_llm and evidence:
         if not llm_configured():
             warnings.append(
-                "LLM is not configured: set RAG_MODEL and RAG_BASE_URL/API key; local evidence retrieval remains active."
+                "AI synthesis provider is not configured (set GEMINI_API_KEY or RAG_MODEL); verified local NASA retrieval remains active."
                 if english
-                else "LLM não configurado: defina RAG_MODEL e RAG_BASE_URL/chave; recuperação local preservada."
+                else "Provedor de IA não configurado (defina GEMINI_API_KEY ou RAG_MODEL); recuperação local verificada preservada."
             )
         else:
+            use_gemini = gemini_configured()
             try:
-                claims, rejected = validate_claims(_llm_claims(question, evidence, language), evidence, language=language)
+                raw_payload = (
+                    request_gemini_claims(question, evidence, language)
+                    if use_gemini
+                    else _llm_claims(question, evidence, language)
+                )
+                claims, rejected = validate_claims(raw_payload, evidence, language=language)
                 warnings.extend(rejected)
-                mode = "llm-verified-excerpts" if claims else "offline-evidence"
-                if not claims:
+                if claims:
+                    mode = "gemini-verified-excerpts" if use_gemini else "llm-verified-excerpts"
+                    provider_status = "gemini_verified" if use_gemini else "openai_compatible_verified"
+                else:
+                    mode = "offline-evidence"
+                    provider_status = "fallback_insufficient_claims"
                     warnings.append(
                         "LLM did not return enough verifiable excerpts; local evidence is displayed."
                         if english
                         else "LLM não produziu trechos verificáveis suficientes; evidências locais exibidas."
                     )
+            except GeminiProviderError as error:
+                provider_status = "fallback_after_error"
+                warnings.append(error.localized(language))
             except Exception as error:  # noqa: BLE001 - network/provider boundaries must preserve offline recovery without leaking bodies
                 # HTTP bodies and exception strings may include credentials: never expose them.
+                provider_status = "fallback_after_error"
                 warnings.append(
                     f"LLM provider unavailable ({type(error).__name__}); local evidence retrieval preserved."
                     if english
@@ -140,7 +160,8 @@ def answer(question: str, index: RetrievalIndex | None = None, study_ids: list[s
                 )
     if not evidence:
         return {"text": "I did not find sufficient data in the indexed sources." if english else "Não encontrei dados suficientes nas fontes indexadas.",
-                "evidence": [], "claims": [], "mode": mode, "warnings": warnings, "insufficient": True}
+                "evidence": [], "claims": [], "mode": mode, "provider_status": provider_status,
+                "warnings": warnings, "insufficient": True}
     intro = ("Retrieved evidence follows. No scientific conclusion is inferred automatically."
              if english else "Evidências recuperadas abaixo. Nenhuma conclusão científica é inferida automaticamente.")
     if claims:
@@ -155,4 +176,4 @@ def answer(question: str, index: RetrievalIndex | None = None, study_ids: list[s
     else:
         text = intro
     return {"text": text, "evidence": evidence, "claims": claims, "mode": mode,
-            "warnings": warnings, "insufficient": False}
+            "provider_status": provider_status, "warnings": warnings, "insufficient": False}

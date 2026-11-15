@@ -13,7 +13,9 @@ import streamlit as st
 
 from . import storage
 from .analysis import DERIVED_OPS, common_grid, derive_column, final_point, fit_linear, peak_info, prepare_series
+from .challenge_engine import build_spacecraft_interpretation, build_study_summary
 from .crossref import build_crossref
+from .design_system import render_pillar_badge, style_scientific_figure
 from .extractors import render_pdf_page
 from .frames import axis_label, suggest_chart, table_to_frame
 from .i18n import (
@@ -159,6 +161,65 @@ def show_study_overview(experiment: dict) -> None:
     if quantities:
         st.markdown(f"**{t('view.quantities_identified', lang)}**")
         st.write(" · ".join(quantities))
+
+    # Chart-first Visual First Look + SUMMARIZE / INTERPRET synthesis
+    preview_entry = next(
+        (
+            e
+            for e in data_entries
+            if sum(1 for m in e["table"].get("column_meta", []) if m.get("kind") in ("numeric", "range") and m.get("n_numeric", 0) > 0) >= 2
+        ),
+        None,
+    )
+    if preview_entry is not None:
+        p_frame, p_meta = entry_frame(preview_entry, entries, overrides)
+        numeric_cols = [c for c in p_frame.columns if pd.api.types.is_numeric_dtype(p_frame[c])]
+        if len(numeric_cols) >= 2:
+            suggestion = suggest_chart(p_meta, len(p_frame), "data")
+            raw_x = suggestion.get("x")
+            px_col = str(raw_x) if isinstance(raw_x, str) and raw_x in numeric_cols else str(numeric_cols[0])
+            py_candidates = [str(c) for c in suggestion.get("y", []) if c in numeric_cols and c != px_col]
+            py_col = py_candidates[0] if py_candidates else next((str(c) for c in numeric_cols if c != px_col), None)
+            if py_col:
+                work = p_frame[[px_col, py_col]].dropna()
+                if not work.empty:
+                    st.divider()
+                    st.subheader(t("view.overview_preview_title", lang))
+                    st.caption(t("view.overview_preview_caption", lang))
+                    meta_map = {m["name"]: m for m in p_meta}
+                    xm = meta_map.get(px_col)
+                    ym = meta_map.get(py_col, {"name": py_col, "unit": "", "quantity": "unknown"})
+                    preview_fig = px.scatter(
+                        work,
+                        x=px_col,
+                        y=py_col,
+                        labels={px_col: axis_label(xm) if xm else px_col, py_col: axis_label(ym)},
+                    )
+                    style_scientific_figure(
+                        preview_fig,
+                        title=f"{experiment.get('psi_id') or experiment.get('name', 'Study')} · {py_col} vs {px_col}",
+                        height=360,
+                    )
+                    st.plotly_chart(preview_fig, use_container_width=True)
+                    from .guided_journeys import render_chart_explanation
+
+                    render_chart_explanation(preview_entry, px_col, [py_col], xm, [ym], None, experiment, lang)
+
+    summary_card = build_study_summary(experiment, lang)
+    interp_card = build_spacecraft_interpretation(experiment, lang)
+    with st.container(border=True):
+        s_col, i_col = st.columns(2, gap="medium")
+        with s_col:
+            render_pillar_badge(summary_card["pillar"])
+            st.markdown(f"**{t('hub.tab_summarize', lang)}**")
+            if summary_card["objective"]:
+                st.write(summary_card["objective"])
+            st.caption(f"{t('hub.summarize_coverage', lang)}: {summary_card['archive_coverage']}")
+        with i_col:
+            st.markdown(f"**{t('hub.tab_interpret', lang)}**")
+            st.markdown(f"- **{t('hub.interpret_obs', lang)}:** {interp_card['observation_scope']}")
+            st.markdown(f"- **{t('hub.interpret_impl', lang)}:** {interp_card['engineering_implication']}")
+            st.caption(f"**{t('hub.interpret_limit', lang)}:** {interp_card['scientific_boundary']}")
 
     st.divider()
     st.subheader(t("view.isa_objective_heading", lang))
@@ -534,10 +595,12 @@ def show_explorer(experiment: dict) -> None:
         except ValueError:
             return None
 
-    params = {
+    x_min_val = to_float(x_min_text)
+    x_max_val = to_float(x_max_text)
+    params: dict[str, Any] = {
         "sort": sort,
-        "x_min": to_float(x_min_text),
-        "x_max": to_float(x_max_text),
+        "x_min": x_min_val,
+        "x_max": x_max_val,
         "baseline": baseline,
         "normalize": normalize,
         "smooth": int(smooth),
@@ -548,7 +611,17 @@ def show_explorer(experiment: dict) -> None:
     multi_doc = len({p["entry"]["document"]["name"] for p in prepared}) > 1
     for item in prepared:
         for y in item["ys"]:
-            s = prepare_series(item["frame"][item["x"]], item["frame"][y], **params)
+            s = prepare_series(
+                item["frame"][item["x"]],
+                item["frame"][y],
+                sort=sort,
+                x_min=x_min_val,
+                x_max=x_max_val,
+                baseline=baseline,
+                normalize=normalize,
+                smooth=int(smooth),
+                max_points=int(max_points),
+            )
             if s.empty:
                 continue
             name = f"{item['entry']['table']['name']} · {y}"
@@ -560,7 +633,8 @@ def show_explorer(experiment: dict) -> None:
         series = common_grid(series)
 
     if chart_key == "heatmap":
-        st.plotly_chart(_heatmap(first["frame"], first["meta"]), use_container_width=True)
+        heat_fig = style_scientific_figure(_heatmap(first["frame"], first["meta"]), height=410)
+        st.plotly_chart(heat_fig, use_container_width=True)
         from .guided_journeys import render_heatmap_explanation, render_term_help
 
         render_heatmap_explanation(first["entry"], experiment, lang)
@@ -571,7 +645,11 @@ def show_explorer(experiment: dict) -> None:
             st.info(t("view.need_3_cols", lang))
         else:
             color = st.selectbox(t("view.color_var", lang), [c for c in numeric if c not in (first["x"], first["ys"][0])], key=f"ex-color-{eid}")
-            st.plotly_chart(px.scatter(first["frame"], x=first["x"], y=first["ys"][0], color=color, template="plotly_white"), use_container_width=True)
+            xyc_fig = style_scientific_figure(
+                px.scatter(first["frame"], x=first["x"], y=first["ys"][0], color=color, template="plotly_white"),
+                height=410,
+            )
+            st.plotly_chart(xyc_fig, use_container_width=True)
             from .guided_journeys import render_chart_explanation, render_term_help
 
             x_meta = next((m for m in first["meta"] if m["name"] == first["x"]), None)
@@ -600,7 +678,7 @@ def show_explorer(experiment: dict) -> None:
         if normalize != "nenhuma":
             y_title += " " + t("view.normalized_suffix", lang, mode=t(_NORM_TRANS[normalize], lang))
         fig.update_yaxes(title_text=y_title)
-        fig.update_layout(margin={"l": 20, "r": 20, "t": 30, "b": 20}, legend={"orientation": "h", "y": -0.25})
+        style_scientific_figure(fig, height=420)
         st.plotly_chart(fig, use_container_width=True)
         from .guided_journeys import render_chart_explanation, render_term_help
 

@@ -7,8 +7,8 @@ import streamlit as st
 
 DEFAULT_LANG = "en"
 LANGUAGE_OPTIONS: dict[str, str] = {
-    "en": "English (EN)",
-    "pt": "Português (PT-BR)",
+    "en": "EN",
+    "pt": "PT-BR",
 }
 
 SECTION_KEYS: list[str] = [
@@ -227,11 +227,16 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         # App & Sidebar
         "app.title": "PSI Flame Microgravity",
         "app.subtitle": "NASA Space Apps 2026 · Flame in Freefall",
-        "sidebar.language": "Language / Idioma",
+        "sidebar.language": "Language: [EN | PT-BR]",
         "sidebar.nav_label": "Workspace Navigation",
-        "sidebar.readonly_badge": "Public Read-Only Mode · Verified NASA Archive",
-        "sidebar.local_badge": "Local Research Workspace · SQLite + SHA-256",
-        "sidebar.footer_note": "Original NASA PSI records preserved with immutable SHA-256 verification. Never a fire-safety certification.",
+        "sidebar.readonly_badge": "Verified NASA Research Archive · Public Showcase",
+        "sidebar.local_badge": "Verified NASA Research Archive · Interactive Local Mode",
+        "sidebar.footer_note": "Original NASA PSI files are preserved verbatim with cryptographic verification. Scientific discovery tool only — never a flight certification.",
+
+        # Persistent Context Bar
+        "topbar.where": "Where you are",
+        "topbar.home": "🏠 Home",
+        "topbar.back": "← Back",
 
         # Navigation
         "nav.home": "Home / Overview",
@@ -244,7 +249,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
 
         # Home / Overview
         "home.title": "Explore the Science of Fire in Space",
-        "home.subtitle": "Discover how fire behaves in microgravity through real NASA experiments, interactive visualizations, and scientific evidence.",
+        "home.subtitle": "Discover how microgravity changes combustion through real NASA experiments, interactive visualizations, and evidence-based insights.",
         "home.lead": (
             "Explore authentic NASA Physical Sciences Informatics (PSI) datasets aboard the International Space Station "
             "and spacecraft experiments — built for judges, students, engineers, and curious minds."
@@ -255,28 +260,28 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
             "so NASA tests real fuels and spacecraft materials in orbit and shares the evidence publicly through the PSI archive."
         ),
         "home.start_title": "Choose How You Want to Explore",
-        "home.exp_a_badge": "Experience A · Guided Discovery (~3 min)",
-        "home.exp_a_title": "A. Discover How Fire Behaves",
+        "home.exp_a_badge": "Guided Discovery · 4 Interactive Steps (~3 min)",
+        "home.exp_a_title": "Discover Fire in Microgravity",
         "home.exp_a_desc": (
             "A beginner-friendly 4-step interactive journey: learn why freefall turns flames into spheres, "
             "explore NASA's FLEX droplet study, and interpret a real NASA chart."
         ),
         "home.exp_a_btn": "Start Discovery Journey →",
-        "home.exp_b_badge": "Experience B · Spacecraft Safety (~3 min)",
-        "home.exp_b_title": "B. Investigate Spacecraft Fire Safety",
+        "home.exp_b_badge": "Spacecraft Safety · 4 Interactive Steps (~3 min)",
+        "home.exp_b_title": "Explore Spacecraft Fire Safety",
         "home.exp_b_desc": (
             "See how NASA investigates cabin fire risk across three layers: preventing flame spread (BASS-II), "
             "detecting smoke early (SAME), and extinguishing flames (FLEX)."
         ),
         "home.exp_b_btn": "Start Safety Investigation →",
-        "home.exp_c_badge": "Experience C · Direct Workbench",
-        "home.exp_c_title": "C. Explore Scientific Data",
+        "home.exp_c_badge": "Full Research Workbench",
+        "home.exp_c_title": "Scientific Research Tools",
         "home.exp_c_desc": (
             "Open the full catalog of NASA PSI investigations, interactive charts and tables, "
             "cross-study comparison tools, or the evidence-grounded research assistant."
         ),
         "home.exp_c_btn_data": "Open Data Explorer →",
-        "home.exp_c_btn_assistant": "Ask Evidence Assistant →",
+        "home.exp_c_btn_assistant": "Ask Scientific Assistant →",
         "home.exp_c_btn_studies": "Browse Investigations",
         "home.compare_title": "Earth vs. Microgravity: What Changes When Gravity Stops Pulling Air Up?",
         "home.earth_title": "On Earth (1g Gravity)",
@@ -313,17 +318,17 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "home.metric_studies": "NASA PSI Studies",
         "home.metric_docs": "Preserved NASA Files",
         "home.metric_tables": "Extracted Tables",
-        "home.metric_chunks": "Indexed Chunks",
-        "home.metric_chunks_semantic": "Semantic Token Chunks",
-        "home.metric_chunks_lexical": "Structural Search Chunks",
+        "home.metric_chunks": "Searchable Evidence Segments",
+        "home.metric_chunks_semantic": "Searchable Evidence Segments",
+        "home.metric_chunks_lexical": "Searchable Evidence Segments",
         "home.chunk_caption_semantic": (
-            "{chunks} token-window chunks indexed with local multilingual embeddings (`{model}`) across {docs} preserved NASA files."
+            "{chunks} multilingual searchable passages indexed across {docs} authentic NASA documents."
         ),
         "home.chunk_caption_lexical": (
-            "{chunks} structural segments indexed with deterministic offline retrieval across {docs} preserved NASA files "
-            "(enable a local model via RAG_EMBEDDING_MODEL for token-window semantic chunking)."
+            "{chunks} verified passages and table rows indexed locally across {docs} authentic NASA documents."
         ),
-        "home.extraction_caption": "Extraction status: {processed} processed · {partial} partial · {failed} failed. See Sources & Methodology for full provenance.",
+        "home.tech_diag_label": "Technical archive & search engine diagnostics (optional)",
+        "home.extraction_caption": "Archive status: {processed} fully processed · {partial} partial · {failed} failed. Inspect exact provenance in Sources & Methodology.",
         "home.pillars_title": "Three Pillars of Spacecraft Fire Safety in NASA PSI",
         "home.pillar_prevention": "Prevention",
         "home.pillar_prevention_studies": "BASS · BASS-II · Saffire-I / II / III",
@@ -562,16 +567,19 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         # Scientific Assistant
         "ast.title": "Evidence-First Scientific Assistant",
         "ast.subtitle": "Bilingual search (EN / PT) · Deterministic physical unit filters · Verifiable NASA citations with page/row provenance",
-        "ast.mode_semantic": "Retrieval engine: Hybrid SQLite FTS5 + local multilingual embeddings (no external API needed)",
-        "ast.mode_lexical": "Retrieval engine: SQLite FTS5 + EN/PT lexical vectors (offline & deterministic; no generative AI)",
+        "ast.mode_semantic": "Search mode: Multilingual hybrid semantic & full-text search (offline-capable)",
+        "ast.mode_lexical": "Search mode: Exact NASA keyword & unit-aware table retrieval (offline-capable)",
         "ast.llm_unconfigured_banner": (
-            "**Evidence Retrieval Mode (LLM unconfigured):** Answers display verbatim NASA excerpts, exact table rows, and source hashes directly. "
-            "No generative AI text is synthesized or fabricated."
+            "**Verified Local Evidence Mode:** Answers present exact NASA excerpts, typed table values, and traceable source provenance with zero fabricated claims."
         ),
         "ast.llm_configured_banner": (
-            "**Verified Extractive LLM Mode available:** When enabled below, the configured LLM may only select literal quotes from retrieved sources — "
-            "paraphrases and unsupported numbers are automatically rejected in code."
+            "**Optional Grounded AI Synthesis Available:** When enabled, the AI assistant selects verbatim passages strictly from retrieved public NASA records and verifies every citation in code."
         ),
+        "ast.diag_title": "Technical retrieval & AI configuration diagnostics",
+        "ast.chat_user_label": "Research question",
+        "ast.chat_assistant_label": "Evidence-grounded response",
+        "ast.synth_summary_heading": "SUMMARIZE · Matched NASA Investigation Overview",
+        "ast.synth_interpret_heading": "INTERPRET · Scientific & Spacecraft Context",
         "ast.examples_title": "Example Research Questions (Click to run)",
         "ast.ex1_label": "FLEX droplet O₂ conditions (18–25%)",
         "ast.ex1_q": "What are the experimental conditions and extinction diameters for FLEX?",
@@ -1046,19 +1054,98 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
             "before citing a number, and click **View Exact Source** or the provenance header to inspect the original file, page/row, and SHA-256 fingerprint."
         ),
         "ast_guide.summary_no_llm": (
-            "Running in **Evidence Retrieval Mode** (external LLM disabled): the text below surfaces verbatim NASA records without speculative AI synthesis."
+            "Running in **Verified Local Evidence Mode** (no AI synthesis required): the cards below present verbatim NASA records without ungrounded text."
         ),
         "ast_guide.summary_caveat_prefix": "Primary scientific caveat across matched studies: ",
+
+        # Data Explorer visual-first preview & Challenge Hub
+        "view.overview_preview_title": "Visual First Look · Experimental Data Preview",
+        "view.overview_preview_caption": "Primary variables plotted automatically before tabular statistics; switch to Interactive Charts to adjust axes, fits, or transforms.",
+        "hub.title": "Space Apps Challenge 2026 Hub · SUMMARIZE · RANK · INTERPRET",
+        "hub.subtitle": "Inspect any NASA study through the three core scientific workflows — directly anchored to original files and honest caveats.",
+        "hub.tab_summarize": "1. SUMMARIZE Study",
+        "hub.tab_rank": "2. RANK Priority",
+        "hub.tab_interpret": "3. INTERPRET Safety Impact",
+        "hub.select_study": "Choose a NASA investigation to summarize or interpret",
+        "hub.summarize_objective": "Scientific objective",
+        "hub.summarize_coverage": "Archive coverage",
+        "hub.summarize_roles": "Documented evidence roles",
+        "hub.summarize_citations": "Verified NASA records",
+        "hub.rank_intro": "Select a spacecraft fire-safety pillar to rank reading priority (0–100 index of relevance & local evidence coverage — never a fire-risk rating).",
+        "hub.interpret_obs": "What verified NASA files contain",
+        "hub.interpret_impl": "Spacecraft safety engineering relevance",
+        "hub.interpret_limit": "Scientific boundary & caveat",
+
+        # 5-Question Guided Journey Framework
+        "journey.q_heading": "Structured Discovery Guide (5 Key Questions)",
+        "journey.q_exploring": "What am I exploring?",
+        "journey.q_why_matters": "Why does it matter?",
+        "journey.q_evidence_shows": "What does the NASA evidence show?",
+        "journey.q_conclusion": "What can I conclude?",
+        "journey.q_limitations": "What are the limitations?",
+
+        "j1.s1_q_exploring": "How removing upward buoyancy (~0g microgravity) changes flame shape, oxygen delivery, and smoke motion compared with Earth (1g).",
+        "j1.s1_q_why": "Inside an orbiting spacecraft, crews cannot open windows or rely on rising hot air; invisible flame and smoke shifts change cabin fire behavior.",
+        "j1.s1_q_evidence": "NASA ISS physics guides establish symmetrical spherical diffusion flames and lingering combustion gases without natural upward convection.",
+        "j1.s1_q_conclude": "Fire behavior in space follows diffusion and cabin airflow rather than buoyancy, setting the foundation for orbital combustion tests.",
+        "j1.s1_q_limits": "Conceptual 1g vs 0g comparison illustrates physical mechanisms — it does not predict ignition thresholds for specific hardware materials.",
+
+        "j1.s2_q_exploring": "NASA's Flame Extinguishment Experiment (FLEX · PSI-69), which tested suspended n-heptane and methanol liquid droplets aboard the ISS.",
+        "j1.s2_q_why": "Liquid fuels burn cleanly as ideal spheres in 0g, letting scientists measure oxygen extinction limits without convective distortion.",
+        "j1.s2_q_evidence": "Archived NASA Researcher's Guide pages, PSI-69 CSV tables, and engineering requirements document orbital test configurations and droplet runs.",
+        "j1.s2_q_conclude": "FLEX isolates spherical burning and transitions toward cool-flame regimes under varied O₂ and inert diluent concentrations.",
+        "j1.s2_q_limits": "NASA catalogs a FLEX-2 requirements PDF under PSI-69 (cover says FLEX-2); isolated 1–5 mm droplets differ from cabin solid materials.",
+
+        "j1.s3_q_exploring": "Quantitative PSI-69 FLEX relationships linking oxygen mole fraction (`O2 mol frac`) to droplet extinction diameter and raw logged variables.",
+        "j1.s3_q_why": "Reading real experimental distributions shows which chamber oxygen/diluent mixtures NASA actually explored.",
+        "j1.s3_q_evidence": "Plotted points directly display recorded PSI-69 CSV test rows alongside verbatim NASA citations and page/row locations.",
+        "j1.s3_q_conclude": "Droplet extinction diameters cluster by fuel type and ambient oxygen concentration across documented orbital test runs.",
+        "j1.s3_q_limits": "Column `'Burning rate; mm'` omits a time unit in the original NASA header and is displayed raw with explicit unit caution.",
+
+        "j1.s4_q_exploring": "Key scientific takeaways and honest empirical boundaries from FLEX (PSI-69) before exploring full-cabin safety systems.",
+        "j1.s4_q_why": "Good spaceflight science avoids over-claiming: distinguishing controlled droplet tests from multi-material spacecraft cabins prevents unsafe assumptions.",
+        "j1.s4_q_evidence": "Verified FLEX CSV records and ISS Researcher's Guide passages trace cool flames, diluent effects, and explicit header warnings.",
+        "j1.s4_q_conclude": "Oxygen fraction, inert diluent gas, and droplet size strongly shape microgravity extinction, while preserving original NASA caveats.",
+        "j1.s4_q_limits": "Single-droplet microgravity experiments cannot replace material-flammability screening (`BASS-II`) or aerosol smoke testing (`SAME`).",
+
+        "j2.s1_q_exploring": "Why closed spacecraft atmospheres, slow circulation fans, and absence of upward smoke plumes make orbital fire protection unique.",
+        "j2.s1_q_why": "A crewed cabin cannot vent rapidly without depressurization; prevention, fast smoke alarms, and reliable suppression must work together.",
+        "j2.s1_q_evidence": "NASA PSI organizes research across solid-fuel spread (`BASS`/`Saffire`), smoke aerosols (`SAME`), and droplet extinguishment (`FLEX`).",
+        "j2.s1_q_conclude": "Effective spacecraft fire safety demands multi-layer coordination calibrated specifically to microgravity physics rather than Earth assumptions.",
+        "j2.s1_q_limits": "Overview introduces the three safety pillars; quantitative inspection happens in Steps 2–3 using verified PSI records.",
+
+        "j2.s2_q_exploring": "Which authentic NASA PSI investigations belong to Prevention, Detection, or Suppression in our verified archive.",
+        "j2.s2_q_why": "Mapping each NASA campaign (`BASS-II`, `Saffire`, `SAME`, `FLEX`) prevents mixing incompatible test setups during analysis.",
+        "j2.s2_q_evidence": "All 9 priority PSI studies are indexed and mapped cleanly to their primary safety layer with preserved DOIs and original files.",
+        "j2.s2_q_conclude": "Solid fabric/polymer airflow tests cover Prevention, aerosol particle sizing covers Detection, and droplet tests illuminate Suppression.",
+        "j2.s2_q_limits": "Studies differ in test scale (glovebox droplets vs Cygnus cabin fabrics) and table evidence types (`condition` vs `reported_result`).",
+
+        "j2.s3_q_exploring": "Direct NASA data & documents across Prevention (`BASS-II · PSI-25`), Detection (`SAME · PSI-102`), and cross-study compatibility.",
+        "j2.s3_q_why": "Seeing actual O₂ vs CO₂ points and smoke-detector aerosol reports reveals how orbital data informs cabin thresholds.",
+        "j2.s3_q_evidence": "BASS-II charts show O₂% vs CO₂% by solid material, and SAME p. 13 details optical/ionization smoke detector aerosol measurements.",
+        "j2.s3_q_conclude": "Forced airflow sustains low-oxygen solid combustion (`BASS-II`) while 0g smoke particle sizing differs from 1g alarms (`SAME`).",
+        "j2.s3_q_limits": "`PSI-25` and `PSI-69` measure fundamentally different fuels and geometries and must never be pooled into a single regression axis.",
+
+        "j2.s4_q_exploring": "How empirical NASA PSI findings translate safely into spacecraft atmosphere, detector, and suppression research guidance.",
+        "j2.s4_q_why": "Synthesizing verified takeaways equips researchers and students to ask sharper follow-up questions in Compare and Scientific Assistant.",
+        "j2.s4_q_evidence": "Cross-pillar takeaways align directly with indexed `BASS-II`, `Saffire`, `SAME`, and `FLEX` records checked against SHA-256 provenance.",
+        "j2.s4_q_conclude": "Ventilation limits, orbital aerosol sizing, and cool-flame extinction bounds emerge as interconnected microgravity fire-safety insights.",
+        "j2.s4_q_limits": "These public PSI datasets provide research understanding and test transparency — never flight-hardware fire certification.",
     },
     "pt": {
         # App & Sidebar
         "app.title": "PSI Flame Microgravity",
         "app.subtitle": "NASA Space Apps 2026 · Flame in Freefall",
-        "sidebar.language": "Idioma / Language",
+        "sidebar.language": "Idioma · Language: [EN | PT-BR]",
         "sidebar.nav_label": "Navegação",
-        "sidebar.readonly_badge": "Modo Público Somente Leitura · Acervo NASA Verificado",
-        "sidebar.local_badge": "Ambiente Local de Pesquisa · SQLite + SHA-256",
-        "sidebar.footer_note": "Arquivos originais NASA PSI preservados com verificação SHA-256 imutável. Não constitui laudo ou certificação de segurança.",
+        "sidebar.readonly_badge": "Acervo Científico NASA Verificado · Demonstração Pública",
+        "sidebar.local_badge": "Acervo Científico NASA Verificado · Modo Local Interativo",
+        "sidebar.footer_note": "Arquivos originais NASA PSI preservados com verificação criptográfica. Ferramenta de descoberta científica — nunca constitui certificação de voo.",
+
+        # Persistent Context Bar
+        "topbar.where": "Onde você está",
+        "topbar.home": "🏠 Início",
+        "topbar.back": "← Voltar",
 
         # Navigation
         "nav.home": "Início / Visão Geral",
@@ -1071,7 +1158,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
 
         # Home / Overview
         "home.title": "Explore a Ciência do Fogo no Espaço",
-        "home.subtitle": "Descubra como o fogo se comporta em microgravidade por meio de experimentos reais da NASA, visualizações interativas e evidências científicas.",
+        "home.subtitle": "Descubra como a microgravidade transforma a combustão por meio de experimentos reais da NASA, visualizações interativas e evidências científicas.",
         "home.lead": (
             "Explore dados reais do repositório NASA Physical Sciences Informatics (PSI) obtidos na Estação Espacial Internacional (ISS) "
             "e em experimentos espaciais — projetado para jurados, estudantes, engenheiros e curiosos."
@@ -1082,22 +1169,22 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
             "e a NASA publica esses dados experimentais no arquivo público PSI."
         ),
         "home.start_title": "Escolha Como Você Quer Explorar",
-        "home.exp_a_badge": "Experiência A · Descoberta Guiada (~3 min)",
-        "home.exp_a_title": "A. Descubra Como o Fogo se Comporta",
+        "home.exp_a_badge": "Descoberta Guiada · 4 Passos Interativos (~3 min)",
+        "home.exp_a_title": "Descubra o Fogo em Microgravidade",
         "home.exp_a_desc": (
             "Uma jornada interativa em 4 passos para iniciantes: entenda por que a queda livre transforma chamas em esferas, "
             "explore o estudo FLEX da NASA e interprete um gráfico experimental real."
         ),
         "home.exp_a_btn": "Iniciar Jornada de Descoberta →",
-        "home.exp_b_badge": "Experiência B · Segurança Espacial (~3 min)",
-        "home.exp_b_title": "B. Investigue a Segurança contra Incêndio em Naves",
+        "home.exp_b_badge": "Segurança Espacial · 4 Passos Interativos (~3 min)",
+        "home.exp_b_title": "Explore a Segurança contra Incêndio Espacial",
         "home.exp_b_desc": (
             "Veja como a NASA reduz riscos de incêndio em espaçonaves em três camadas: prevenção de propagação (BASS-II), "
             "detecção precoce de fumaça (SAME) e extinção de chamas (FLEX)."
         ),
         "home.exp_b_btn": "Investigar Segurança Espacial →",
-        "home.exp_c_badge": "Experiência C · Bancada Direta",
-        "home.exp_c_title": "C. Explorar Dados Científicos",
+        "home.exp_c_badge": "Bancada Completa de Pesquisa",
+        "home.exp_c_title": "Ferramentas de Pesquisa Científica",
         "home.exp_c_desc": (
             "Acesse diretamente o catálogo completo de estudos NASA PSI, gráficos e tabelas interativas, "
             "comparação entre experimentos ou o assistente científico baseado em evidências."
@@ -1139,17 +1226,17 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "home.metric_studies": "Estudos NASA PSI",
         "home.metric_docs": "Originais NASA",
         "home.metric_tables": "Tabelas Extraídas",
-        "home.metric_chunks": "Trechos Indexados",
-        "home.metric_chunks_semantic": "Trechos Semânticos (Tokens)",
-        "home.metric_chunks_lexical": "Trechos Estruturais de Busca",
+        "home.metric_chunks": "Segmentos Pesquisáveis",
+        "home.metric_chunks_semantic": "Segmentos Pesquisáveis",
+        "home.metric_chunks_lexical": "Segmentos Pesquisáveis",
         "home.chunk_caption_semantic": (
-            "{chunks} trechos com janelamento por tokens indexados com embeddings multilíngues locais (`{model}`) em {docs} arquivos NASA preservados."
+            "{chunks} passagens multilíngues pesquisáveis indexadas em {docs} documentos autênticos da NASA."
         ),
         "home.chunk_caption_lexical": (
-            "{chunks} segmentos estruturais indexados em modo determinístico offline em {docs} arquivos NASA preservados "
-            "(ative RAG_EMBEDDING_MODEL local para janelamento semântico por tokens)."
+            "{chunks} passagens e linhas de tabela verificadas indexadas localmente em {docs} documentos autênticos da NASA."
         ),
-        "home.extraction_caption": "Estado da extração: {processed} processados · {partial} parciais · {failed} com falha. Detalhes em Fontes e Metodologia.",
+        "home.tech_diag_label": "Diagnóstico técnico do acervo e motor de busca (opcional)",
+        "home.extraction_caption": "Estado do acervo: {processed} completos · {partial} parciais · {failed} com falha. Proveniência detalhada em Fontes e Metodologia.",
         "home.pillars_title": "Três Pilares da Segurança contra Incêndio Espacial no NASA PSI",
         "home.pillar_prevention": "Prevenção",
         "home.pillar_prevention_studies": "BASS · BASS-II · Saffire-I / II / III",
@@ -1388,16 +1475,19 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         # Scientific Assistant
         "ast.title": "Assistente Científico Baseado em Evidências",
         "ast.subtitle": "Busca bilíngue (PT / EN) · Filtros físicos determinísticos · Citações verificáveis NASA com página e linha",
-        "ast.mode_semantic": "Motor de busca: SQLite FTS5 híbrido + embeddings multilíngues locais (sem API externa obrigatória)",
-        "ast.mode_lexical": "Motor de busca: SQLite FTS5 + vetores lexicais PT/EN (offline e determinístico; sem IA generativa)",
+        "ast.mode_semantic": "Modo de busca: busca semântica multilíngue e textual híbrida (funciona offline)",
+        "ast.mode_lexical": "Modo de busca: busca exata por palavras-chave NASA e tabelas com unidades físicas (offline)",
         "ast.llm_unconfigured_banner": (
-            "**Modo Busca de Evidências (LLM não configurado):** As respostas exibem trechos literais da NASA, linhas exatas de tabelas e hashes originais. "
-            "Nenhum texto generativo é sintetizado ou inventado."
+            "**Modo Evidência Local Verificada:** As respostas exibem trechos exatos da NASA, linhas tipadas de tabela e rastreabilidade completa sem inventar conclusões."
         ),
         "ast.llm_configured_banner": (
-            "**Modo LLM Extrativo Verificado disponível:** Quando habilitado abaixo, o LLM só pode selecionar trechos literais das fontes recuperadas — "
-            "paráfrases e números sem apoio são rejeitados automaticamente em código."
+            "**Síntese por IA com Verificação Disponível:** Quando ativado, o assistente seleciona passagens literais estritamente dos documentos NASA recuperados e valida cada citação em código."
         ),
+        "ast.diag_title": "Diagnóstico técnico de busca e configuração de IA",
+        "ast.chat_user_label": "Pergunta de pesquisa",
+        "ast.chat_assistant_label": "Resposta fundamentada em evidências",
+        "ast.synth_summary_heading": "RESUMO · Visão dos Estudos NASA Correspondentes",
+        "ast.synth_interpret_heading": "INTERPRETAÇÃO · Contexto Científico e de Segurança Espacial",
         "ast.examples_title": "Perguntas de Pesquisa Prontas (Clique para preencher e testar)",
         "ast.ex1_label": "Condições de O₂ no FLEX (18–25%)",
         "ast.ex1_q": "What are the experimental conditions and extinction diameters for FLEX?",
@@ -1872,9 +1962,83 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
             "antes de citar valores e use **Ver fonte exata** para inspecionar arquivo, página/linha e hash SHA-256."
         ),
         "ast_guide.summary_no_llm": (
-            "Executando em **Modo de Recuperação de Evidências** (LLM externo desativado): o resultado abaixo exibe registros literais da NASA sem síntese especulativa."
+            "Executando em **Modo Evidência Local Verificada** (sem síntese especulativa): os cartões abaixo exibem registros originais literais da NASA."
         ),
         "ast_guide.summary_caveat_prefix": "Principal limite científico entre os estudos encontrados: ",
+
+        # Data Explorer visual-first preview & Challenge Hub
+        "view.overview_preview_title": "Visão Visual Inicial · Prévia dos Dados Experimentais",
+        "view.overview_preview_caption": "Principais variáveis plotadas antes das estatísticas em tabela; use Gráficos Interativos para ajustar eixos ou curvas.",
+        "hub.title": "Hub Space Apps Challenge 2026 · RESUMIR · RANQUEAR · INTERPRETAR",
+        "hub.subtitle": "Inspecione qualquer investigação da NASA pelos três pilares do desafio — sempre ancorado nos arquivos originais e em ressalvas transparentes.",
+        "hub.tab_summarize": "1. RESUMIR Estudo",
+        "hub.tab_rank": "2. RANQUEAR Prioridade",
+        "hub.tab_interpret": "3. INTERPRETAR Segurança",
+        "hub.select_study": "Escolha uma investigação NASA para resumir ou interpretar",
+        "hub.summarize_objective": "Objetivo científico",
+        "hub.summarize_coverage": "Cobertura do acervo",
+        "hub.summarize_roles": "Papéis de evidência documentados",
+        "hub.summarize_citations": "Registros NASA verificados",
+        "hub.rank_intro": "Escolha um pilar de segurança contra incêndio espacial para ordenar a prioridade de leitura (índice de 0–100 de relevância e acervo local — nunca ranking de risco).",
+        "hub.interpret_obs": "O que os arquivos verificados da NASA contêm",
+        "hub.interpret_impl": "Relevância para engenharia de segurança espacial",
+        "hub.interpret_limit": "Fronteira científica e ressalva",
+
+        # 5-Question Guided Journey Framework
+        "journey.q_heading": "Guia Estruturado de Descoberta (5 Perguntas-Chave)",
+        "journey.q_exploring": "O que estou explorando?",
+        "journey.q_why_matters": "Por que isso importa?",
+        "journey.q_evidence_shows": "O que a evidência NASA mostra?",
+        "journey.q_conclusion": "O que posso concluir?",
+        "journey.q_limitations": "Quais são as limitações?",
+
+        "j1.s1_q_exploring": "Como remover o empuxo ascendente (~0g em microgravidade) transforma formato da chama, chegada de oxigênio e movimento da fumaça em comparação com a Terra (1g).",
+        "j1.s1_q_why": "Em uma nave orbital, astronautas não podem abrir janelas nem contar com o ar quente subindo; mudanças invisíveis no fogo e na fumaça alteram o risco na cabine.",
+        "j1.s1_q_evidence": "Guias físicos da NASA na ISS demonstram chamas esféricas simétricas por difusão e retenção de gases quentes sem convecção natural.",
+        "j1.s1_q_conclude": "O fogo no espaço obedece à difusão e à ventilação da cabine em vez de empuxo, criando a base para todos os ensaios orbitais.",
+        "j1.s1_q_limits": "Comparar 1g vs 0g ilustra mecanismos físicos fundamentais — não determina limiares exatos de ignição para materiais específicos.",
+
+        "j1.s2_q_exploring": "O experimento Flame Extinguishment Experiment (FLEX · PSI-69), que testou gotas líquidas suspensas de n-heptano e metanol a bordo da ISS.",
+        "j1.s2_q_why": "Combustíveis líquidos formam esferas ideais em 0g, permitindo medir limiares de extinção por oxigênio sem distorção convectiva.",
+        "j1.s2_q_evidence": "Páginas do Researcher's Guide, tabelas CSV do PSI-69 e requisitos de engenharia preservados documentam ensaios orbitais de gotas.",
+        "j1.s2_q_conclude": "O FLEX isola a combustão esférica e revela transições para regimes de chama fria sob variações de O₂ e diluentes inertes.",
+        "j1.s2_q_limits": "A NASA associa um PDF de requisitos do FLEX-2 sob PSI-69 (capa indica FLEX-2); gotas isoladas de 1–5 mm diferem de materiais sólidos de cabine.",
+
+        "j1.s3_q_exploring": "Relações quantitativas reais do PSI-69 FLEX ligando fração molar de oxigênio (`O2 mol frac`) ao diâmetro de extinção e variáveis registradas.",
+        "j1.s3_q_why": "Ler distribuições experimentais autênticas mostra exatamente quais combinações de oxigênio e diluentes a NASA investigou.",
+        "j1.s3_q_evidence": "Os pontos plotados exibem diretamente linhas do CSV PSI-69 acompanhadas de citações literais NASA e localizações página/linha.",
+        "j1.s3_q_conclude": "Diâmetros de extinção agrupam-se por combustível e concentração ambiente de oxigênio ao longo dos ensaios orbitais registrados.",
+        "j1.s3_q_limits": "A coluna `'Burning rate; mm'` omite unidade de tempo no cabeçalho original da NASA e aparece bruta com ressalva explícita.",
+
+        "j1.s4_q_exploring": "Lições científicas principais e limites empíricos honestos do FLEX (PSI-69) antes de investigar sistemas de segurança de cabine.",
+        "j1.s4_q_why": "Boa ciência espacial evita exageros: separar ensaios controlados de gotas de incêndios em múltiplos materiais evita suposições inseguras.",
+        "j1.s4_q_evidence": "Registros CSV verificados do FLEX e passagens do Guia da ISS rastreiam chamas frias, efeito de diluentes e alertas explícitos de cabeçalho.",
+        "j1.s4_q_conclude": "Fração de oxigênio, gás inerte e tamanho da gota governam a extinção em microgravidade, preservando todas as ressalvas NASA.",
+        "j1.s4_q_limits": "Gotas isoladas não substituem triagem de inflamabilidade de sólidos (`BASS-II`) nem ensaios de aerossol de fumaça (`SAME`).",
+
+        "j2.s1_q_exploring": "Por que atmosferas fechadas de naves, ventiladores suaves e ausência de plumas ascendentes tornam o combate a incêndio espacial único.",
+        "j2.s1_q_why": "Uma cabine tripulada não pode ser ventilada para o exterior sem despressurizar; prevenção, alarme precoce e supressão precisam atuar juntas.",
+        "j2.s1_q_evidence": "O acervo NASA PSI organiza estudos em propagação em sólidos (`BASS`/`Saffire`), aerossóis de fumaça (`SAME`) e extinção de gotas (`FLEX`).",
+        "j2.s1_q_conclude": "A segurança espacial requer defesa em múltiplas camadas calibradas para a física da microgravidade, não para suposições terrestres.",
+        "j2.s1_q_limits": "Esta etapa apresenta os três pilares; a inspeção quantitativa com registros PSI ocorre nos Passos 2 e 3.",
+
+        "j2.s2_q_exploring": "Quais investigações autênticas NASA PSI pertencem a Prevenção, Detecção ou Supressão em nosso acervo verificado.",
+        "j2.s2_q_why": "Mapear cada campanha NASA (`BASS-II`, `Saffire`, `SAME`, `FLEX`) impede misturar configurações experimentais incompatíveis.",
+        "j2.s2_q_evidence": "Todas as 9 investigações prioritárias PSI estão indexadas e ligadas à sua camada de segurança com DOIs e arquivos originais.",
+        "j2.s2_q_conclude": "Ensaios com tecidos/polímeros atendem Prevenção, partículas de aerossol atendem Detecção e ensaios com gotas fundamentam Supressão.",
+        "j2.s2_q_limits": "As campanhas diferem em escala (gotas na glovebox vs tecidos no Cygnus) e natureza tabular (`condition` vs `reported_result`).",
+
+        "j2.s3_q_exploring": "Dados e documentos NASA em Prevenção (`BASS-II · PSI-25`), Detecção (`SAME · PSI-102`) e checagem de compatibilidade entre pilares.",
+        "j2.s3_q_why": "Visualizar pontos reais de O₂ vs CO₂ e relatórios de detectores de fumaça mostra como dados orbitais orientam limites operacionais.",
+        "j2.s3_q_evidence": "Gráficos do BASS-II relacionam O₂% vs CO₂% por material sólido, enquanto SAME p. 13 detalha medições de partículas em detectores.",
+        "j2.s3_q_conclude": "Escoamento forçado sustenta queima de sólidos em baixo oxigênio (`BASS-II`) e partículas em 0g diferem de alarmes em 1g (`SAME`).",
+        "j2.s3_q_limits": "`PSI-25` e `PSI-69` medem combustíveis e geometrias diferentes e nunca devem ser fundidos em um único eixo quantitativo.",
+
+        "j2.s4_q_exploring": "Como achados empíricos NASA PSI apoiam decisões sobre atmosfera, detecção precoce e pesquisa de supressão sem ultrapassar os dados.",
+        "j2.s4_q_why": "Sintetizar resultados verificados prepara pesquisadores e estudantes para consultas aprofundadas em Comparar e Assistente Científico.",
+        "j2.s4_q_evidence": "As implicações alinham-se diretamente aos acervos `BASS-II`, `Saffire`, `SAME` e `FLEX` auditados por hash criptográfico.",
+        "j2.s4_q_conclude": "Limites de ventilação, distribuição orbital de aerossóis e regimes de chama fria compõem uma visão integrada de segurança.",
+        "j2.s4_q_limits": "Esses acervos públicos PSI oferecem transparência e entendimento científico — nunca substituem certificação de hardware de voo.",
     },
 }
 

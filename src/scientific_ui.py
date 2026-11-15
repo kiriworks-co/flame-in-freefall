@@ -5,6 +5,7 @@ import json
 import os
 import re
 import sqlite3
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
@@ -13,8 +14,15 @@ import streamlit as st
 
 from . import storage, views
 from .assistant import answer, llm_configured
+from .challenge_engine import (
+    build_priority_ranking,
+    build_spacecraft_interpretation,
+    build_study_summary,
+)
 from .comparison import compare_tables
+from .design_system import inject_global_styles, render_hero_banner, render_pillar_badge
 from .extractors import render_pdf_page
+from .gemini_provider import gemini_status_summary
 from .i18n import (
     SECTION_KEYS,
     evidence_label,
@@ -24,11 +32,9 @@ from .i18n import (
     status_label,
     t,
     translate_comparison_reason,
-    translate_relevance_reason,
     translate_retrieval_warning,
 )
 from .pipeline import is_public_readonly
-from .relevance import rank_investigations
 from .retrieval import safe_source_url
 from .storage import PROJECT_DIR
 
@@ -178,6 +184,109 @@ def _study_id_for(experiments: list[dict], psi_id: str) -> str:
 # ----------------------------------------------------------------------------- Home / Overview
 
 
+def _render_challenge_hub(experiments: list[dict], records: list[dict], lang: str) -> None:
+    """Interactive SUMMARIZE · RANK · INTERPRET workbench directly on Home."""
+    st.divider()
+    st.header(t("hub.title", lang))
+    st.caption(t("hub.subtitle", lang))
+    exp_by_id = {_study(e): e for e in experiments}
+    study_ids = [sid for sid in exp_by_id if sid != "NASA-CONTEXT"]
+    if not study_ids:
+        study_ids = list(exp_by_id)
+    if not study_ids:
+        return
+
+    default_sid = "PSI-69" if "PSI-69" in exp_by_id else study_ids[0]
+    t_sum, t_rank, t_interp = st.tabs([
+        t("hub.tab_summarize", lang),
+        t("hub.tab_rank", lang),
+        t("hub.tab_interpret", lang),
+    ])
+
+    with t_sum:
+        if "hub_sum_study" in st.session_state and st.session_state["hub_sum_study"] not in study_ids:
+            st.session_state["hub_sum_study"] = default_sid
+        chosen_sum = st.selectbox(
+            t("hub.select_study", lang),
+            options=study_ids,
+            index=study_ids.index(default_sid),
+            format_func=lambda s: f"{s} · {exp_by_id[s].get('name', s)}",
+            key="hub_sum_study",
+        )
+        safe_sum = chosen_sum if chosen_sum in exp_by_id else default_sid
+        target_exp = exp_by_id[safe_sum]
+        summary = build_study_summary(target_exp, lang)
+        with st.container(border=True):
+            render_pillar_badge(summary["pillar"])
+            st.subheader(f"{summary['study_id']} · {summary['title']}")
+            st.markdown(f"**{t('hub.summarize_objective', lang)}:** {summary['objective']}")
+            c_cov, c_role = st.columns(2)
+            c_cov.markdown(f"**{t('hub.summarize_coverage', lang)}:** {summary['archive_coverage']}")
+            c_role.markdown(f"**{t('hub.summarize_roles', lang)}:** {summary['evidence_roles']}")
+            if summary["caveats"]:
+                st.warning(summary["caveats"][0])
+            if summary["citations"]:
+                st.caption(
+                    f"**{t('hub.summarize_citations', lang)}:** "
+                    + ", ".join(f"{c['document']} ({c['status']})" for c in summary["citations"])
+                )
+            st.button(
+                t("inv.btn_open", lang),
+                key=f"hub-open-{safe_sum}",
+                on_click=_open_experiment,
+                args=(target_exp["id"],),
+            )
+
+    with t_rank:
+        st.caption(t("hub.rank_intro", lang))
+        app_opts = ["habitat", "detection", "suppression"]
+        if "hub_rank_app" in st.session_state and st.session_state["hub_rank_app"] not in app_opts:
+            st.session_state["hub_rank_app"] = "habitat"
+        app_labels = {
+            "habitat": t("cmp.app_habitat", lang),
+            "detection": t("cmp.app_detection", lang),
+            "suppression": t("cmp.app_suppression", lang),
+        }
+        chosen_app = st.selectbox(
+            t("cmp.application_label", lang),
+            app_opts,
+            format_func=lambda opt: app_labels.get(opt, opt),
+            key="hub_rank_app",
+        )
+        safe_app = chosen_app if chosen_app in app_opts else "habitat"
+        rank_rows = build_priority_ranking(
+            [{**r, "description": (r["experiment"] or {}).get("description", "")} for r in records],
+            application=safe_app,
+            query="microgravity combustion",
+            language=lang,
+        )[:4]
+        for row in rank_rows:
+            with st.container(border=True):
+                rc1, rc2 = st.columns([3.0, 1.2], vertical_alignment="center")
+                rc1.markdown(f"**#{row['rank']} · {row['study_id']} · {row['name']}**")
+                rc1.caption(row["reasons_text"])
+                rc2.metric(t("cmp.col_score", lang), f"{row['score']:.0f}/100")
+                st.progress(min(1.0, max(0.0, row["score"] / 100.0)))
+
+    with t_interp:
+        if "hub_interp_study" in st.session_state and st.session_state["hub_interp_study"] not in study_ids:
+            st.session_state["hub_interp_study"] = default_sid
+        chosen_interp = st.selectbox(
+            t("hub.select_study", lang),
+            options=study_ids,
+            index=study_ids.index(default_sid),
+            format_func=lambda s: f"{s} · {exp_by_id[s].get('name', s)}",
+            key="hub_interp_study",
+        )
+        safe_interp = chosen_interp if chosen_interp in exp_by_id else default_sid
+        interp = build_spacecraft_interpretation(exp_by_id[safe_interp], lang)
+        with st.container(border=True):
+            render_pillar_badge(interp["pillar"])
+            st.markdown(f"**{t('hub.interpret_obs', lang)}:** {interp['observation_scope']}")
+            st.markdown(f"**{t('hub.interpret_impl', lang)}:** {interp['engineering_implication']}")
+            st.info(f"**{t('hub.interpret_limit', lang)}:** {interp['scientific_boundary']}")
+
+
 def show_overview(experiments: list[dict]) -> None:
     from .guided_journeys import render_active_journey, start_journey
 
@@ -187,7 +296,7 @@ def show_overview(experiments: list[dict]) -> None:
     lang = get_lang()
     st.title(t("home.title", lang))
     st.markdown(f"<p class='psi-lead'>{t('home.subtitle', lang)}</p>", unsafe_allow_html=True)
-    st.write(t("home.plain_intro", lang))
+    render_hero_banner(t("app.subtitle", lang), t("home.plain_intro", lang))
 
     records = catalog(experiments)
     documents = [doc for exp in experiments for doc in exp.get("documents", [])]
@@ -255,6 +364,8 @@ def show_overview(experiments: list[dict]) -> None:
             kwargs={"inv_pillar_filter": "All"},
         )
 
+    _render_challenge_hub(experiments, records, lang)
+
     st.header(t("home.compare_title", lang))
     col_earth, col_space = st.columns(2, gap="medium")
     with col_earth.container(border=True):
@@ -275,20 +386,17 @@ def show_overview(experiments: list[dict]) -> None:
     st.subheader(t("home.archive_title", lang))
     chunk_count, chunk_model = _indexed_chunk_info()
     is_semantic = chunk_model.startswith("local-semantic:")
-    chunk_metric_label = t("home.metric_chunks_semantic" if is_semantic else "home.metric_chunks_lexical", lang)
 
     m1, m2, m3, m4 = st.columns(4)
     m1.metric(t("home.metric_studies", lang), sum(bool(row["experiment"]) for row in records))
     m2.metric(t("home.metric_docs", lang), len(documents))
     m3.metric(t("home.metric_tables", lang), sum(doc.get("table_count", 0) for doc in documents))
-    m4.metric(chunk_metric_label, chunk_count)
+    m4.metric(t("home.metric_chunks", lang), chunk_count)
 
     failures = sum(doc.get("status") == "erro" for doc in documents)
     partial = sum(doc.get("status") == "parcial" for doc in documents)
-    raw_model = chunk_model.split(":", 1)[-1]
-    model_short = "local SentenceTransformer" if re.fullmatch(r"[0-9a-f]{32,40}", raw_model) else raw_model
     chunk_note = (
-        t("home.chunk_caption_semantic", lang, chunks=chunk_count, docs=len(documents), model=model_short)
+        t("home.chunk_caption_semantic", lang, chunks=chunk_count, docs=len(documents))
         if is_semantic
         else t("home.chunk_caption_lexical", lang, chunks=chunk_count, docs=len(documents))
     )
@@ -303,6 +411,12 @@ def show_overview(experiments: list[dict]) -> None:
             failed=failures,
         )
     )
+    with st.expander(t("home.tech_diag_label", lang), expanded=False):
+        raw_model = chunk_model.split(":", 1)[-1]
+        model_short = "local SentenceTransformer" if re.fullmatch(r"[0-9a-f]{32,40}", raw_model) else raw_model
+        gemini_info = gemini_status_summary(lang)
+        st.caption(f"Index profile: `{model_short}` ({chunk_count} indexed entries)")
+        st.caption(gemini_info["summary"])
     st.warning(t("home.warning_conditions", lang))
     if not documents:
         st.info(t("home.no_docs", lang))
@@ -366,6 +480,7 @@ def show_catalog(experiments: list[dict]) -> None:
         profile = row["_profile"]
         pillar_text = t(f"inv.pillar_{row['_pillar'].lower()}", lang)
         with st.container(border=True):
+            render_pillar_badge(pillar_text, key_hint=row["_pillar"])
             st.subheader(f"{row['id']} · {row['name']}")
             if exp:
                 status_text = t("inv.status_imported", lang)
@@ -520,15 +635,47 @@ def _render_evidence_summary(result: dict[str, Any], experiments: list[dict], la
             st.caption(t("ast_guide.summary_no_llm", lang))
 
 
+def _render_matched_synthesis(result: dict[str, Any], experiments: list[dict], lang: str) -> None:
+    """Render SUMMARIZE and INTERPRET synthesis cards for matched studies in plain language."""
+    ev_items = list(result.get("evidence") or [])
+    if not ev_items:
+        return
+    exp_by_sid = {_study(e): e for e in experiments}
+    first_sid = next((str(i.get("study_id") or "") for i in ev_items if str(i.get("study_id") or "") in exp_by_sid), "")
+    if not first_sid:
+        return
+    exp = exp_by_sid[first_sid]
+    summary = build_study_summary(exp, lang)
+    interp = build_spacecraft_interpretation(exp, lang)
+    c1, c2 = st.columns(2, gap="medium")
+    with c1.container(border=True):
+        render_pillar_badge(summary["pillar"])
+        st.markdown(f"**{t('ast.synth_summary_heading', lang)}** (`{first_sid}`)")
+        if summary["objective"]:
+            st.write(summary["objective"])
+        st.caption(summary["archive_coverage"])
+    with c2.container(border=True):
+        st.markdown(f"**{t('ast.synth_interpret_heading', lang)}**")
+        st.markdown(f"- **{t('hub.interpret_obs', lang)}:** {interp['observation_scope']}")
+        st.markdown(f"- **{t('hub.interpret_impl', lang)}:** {interp['engineering_implication']}")
+        st.caption(interp["scientific_boundary"])
+
+
 def show_search(experiments: list[dict]) -> None:
     lang = get_lang()
     is_advanced = st.session_state.get("interaction_mode", "guided") == "advanced"
     st.title(t("ast.title", lang))
-    st.caption(t("ast.subtitle", lang))
+    st.markdown(f"<p class='psi-lead'>{t('ast.subtitle', lang)}</p>", unsafe_allow_html=True)
 
     index = _retrieval_index(os.getenv("RAG_EMBEDDING_MODEL", "").strip())
     has_llm = llm_configured()
+    gemini_status = gemini_status_summary(lang)
     studies = sorted({_study(e) for e in experiments})
+
+    if has_llm:
+        st.success(t("ast.llm_configured_banner", lang))
+    else:
+        st.info(t("ast.llm_unconfigured_banner", lang))
 
     st.caption(t("ast_guide.examples_hint", lang))
     examples = [
@@ -552,17 +699,24 @@ def show_search(experiments: list[dict]) -> None:
 
     st.session_state.setdefault("ast_question_input", t("ast.ex1_q", lang))
     st.session_state.setdefault("ast_studies_filter", [])
+    st.session_state.setdefault("ast_o2_enabled", False)
+    st.session_state.setdefault("ast_o2_min", 0.18)
+    st.session_state.setdefault("ast_o2_max", 0.25)
+    st.session_state.setdefault("ast_p_enabled", False)
+    st.session_state.setdefault("ast_p_min", 0.0)
+    st.session_state.setdefault("ast_p_max", 30.0)
+    st.session_state.setdefault("ast_v_enabled", False)
+    st.session_state.setdefault("ast_v_min", 0.0)
+    st.session_state.setdefault("ast_v_max", 100.0)
     st.session_state["ast_studies_filter"] = [s for s in st.session_state["ast_studies_filter"] if s in studies]
     active_filter_set = bool(st.session_state.get("ast_studies_filter") or st.session_state.get("ast_o2_enabled"))
 
     with st.expander(t("ast_guide.filters_expander", lang), expanded=is_advanced or active_filter_set):
         selected = st.multiselect(t("ast.studies_filter", lang), studies, key="ast_studies_filter")
         st.caption(t("ast.mode_semantic", lang) if index.model is not None else t("ast.mode_lexical", lang))
-        st.caption(t("ast.mode_caption", lang, mode=index.mode))
-        if has_llm:
-            st.success(t("ast.llm_configured_banner", lang))
-        else:
-            st.info(t("ast.llm_unconfigured_banner", lang))
+        st.caption(f"{gemini_status['badge']} · {gemini_status['summary']}")
+        with st.expander(t("ast.diag_title", lang), expanded=False):
+            st.caption(t("ast.mode_caption", lang, mode=index.mode))
 
     with st.form("scientific-query"):
         question = st.text_area(
@@ -573,18 +727,18 @@ def show_search(experiments: list[dict]) -> None:
         with st.expander(t("ast.filters_expander", lang), expanded=is_advanced):
             c_o1, c_o2, c_o3 = st.columns(3)
             oxygen = c_o1.checkbox(t("ast.o2_check", lang), key="ast_o2_enabled")
-            o2min = c_o2.number_input(t("ast.o2_min", lang), min_value=0.0, max_value=1.0, value=0.18, step=0.01, key="ast_o2_min")
-            o2max = c_o3.number_input(t("ast.o2_max", lang), min_value=0.0, max_value=1.0, value=0.25, step=0.01, key="ast_o2_max")
+            o2min = c_o2.number_input(t("ast.o2_min", lang), min_value=0.0, max_value=1.0, step=0.01, key="ast_o2_min")
+            o2max = c_o3.number_input(t("ast.o2_max", lang), min_value=0.0, max_value=1.0, step=0.01, key="ast_o2_max")
 
             c_p1, c_p2, c_p3 = st.columns(3)
             pressure = c_p1.checkbox(t("ast.p_check", lang), key="ast_p_enabled")
-            pmin = c_p2.number_input(t("ast.p_min", lang), min_value=0.0, value=0.0, key="ast_p_min")
-            pmax = c_p3.number_input(t("ast.p_max", lang), min_value=0.0, value=30.0, key="ast_p_max")
+            pmin = c_p2.number_input(t("ast.p_min", lang), min_value=0.0, key="ast_p_min")
+            pmax = c_p3.number_input(t("ast.p_max", lang), min_value=0.0, key="ast_p_max")
 
             c_v1, c_v2, c_v3 = st.columns(3)
             velocity = c_v1.checkbox(t("ast.v_check", lang), key="ast_v_enabled")
-            vmin = c_v2.number_input(t("ast.v_min", lang), value=0.0, key="ast_v_min")
-            vmax = c_v3.number_input(t("ast.v_max", lang), value=100.0, key="ast_v_max")
+            vmin = c_v2.number_input(t("ast.v_min", lang), key="ast_v_min")
+            vmax = c_v3.number_input(t("ast.v_max", lang), key="ast_v_max")
 
             fuel = st.text_input(t("ast.fuel_label", lang), placeholder=t("ast.fuel_ph", lang), key="ast_fuel_input")
             st.caption(t("ast.filters_note", lang))
@@ -630,24 +784,36 @@ def show_search(experiments: list[dict]) -> None:
             "filters": filters,
         }
 
-    result = st.session_state.get("scientific_answer")
-    if result:
+    saved_result = st.session_state.get("scientific_answer")
+    if isinstance(saved_result, dict) and saved_result:
         st.header(t("ast.results_header", lang))
         context = st.session_state.get("scientific_query_context", {})
         if context:
-            st.caption(t("ast.last_query", lang, studies=context["studies"]))
-            st.text(context["question"])
-        _render_evidence_summary(result, experiments, lang)
-        # The assistant constructs this text and escapes source-authored Markdown.
-        # Raw evidence remains inert st.text below; HTML is never enabled.
-        st.markdown(result.get("text", ""), unsafe_allow_html=False)
-        st.caption(t("ast.mode_caption", lang, mode=result.get("mode", "retrieval")))
-        for warning in result.get("warnings", []):
-            st.warning(translate_retrieval_warning(str(warning), lang))
-        show_evidence(result.get("evidence", []), experiments)
+            with st.chat_message("user"):
+                st.caption(t("ast.last_query", lang, studies=context["studies"]))
+                st.text(context["question"])
+        with st.chat_message("assistant"):
+            st.caption(t("ast.chat_assistant_label", lang))
+            _render_evidence_summary(saved_result, experiments, lang)
+            _render_matched_synthesis(saved_result, experiments, lang)
+            # The assistant constructs this text and escapes source-authored Markdown.
+            # Raw evidence remains inert st.text below; HTML is never enabled.
+            st.markdown(saved_result.get("text", ""), unsafe_allow_html=False)
+            for warning in saved_result.get("warnings", []):
+                st.warning(translate_retrieval_warning(str(warning), lang))
+            if is_advanced:
+                st.caption(t("ast.mode_caption", lang, mode=saved_result.get("mode", "retrieval")))
+        show_evidence(saved_result.get("evidence", []), experiments)
 
 
 # ----------------------------------------------------------------------------- Compare
+
+
+def _table_name_formatter(items: list[dict[str, Any]]) -> Callable[[int], str]:
+    def _format(idx: int) -> str:
+        return str(items[idx]["table"]["name"])
+
+    return _format
 
 
 def _set_compare_preset(study_ids: list[str], available: dict[str, Any]) -> None:
@@ -657,7 +823,11 @@ def _set_compare_preset(study_ids: list[str], available: dict[str, Any]) -> None
 def show_comparison(experiments: list[dict]) -> None:
     lang = get_lang()
     st.title(t("cmp.title", lang))
-    st.write(t("cmp.lead", lang))
+    st.markdown(f"<p class='psi-lead'>{t('cmp.lead', lang)}</p>", unsafe_allow_html=True)
+
+    with st.container(border=True):
+        st.markdown(f"**{t('cmp.why_title', lang)}**")
+        st.markdown(t("cmp.why_body", lang))
 
     mapping = {_study(exp): exp for exp in experiments}
     st.caption(t("cmp.presets_label", lang))
@@ -675,9 +845,6 @@ def show_comparison(experiments: list[dict]) -> None:
             on_click=_set_compare_preset,
             args=(ids, mapping),
         )
-
-    with st.expander(t("cmp.why_title", lang)):
-        st.markdown(t("cmp.why_body", lang))
 
     st.session_state.setdefault("cmp_selected_studies", [])
     st.session_state["cmp_selected_studies"] = [s for s in st.session_state["cmp_selected_studies"] if s in mapping]
@@ -698,13 +865,15 @@ def show_comparison(experiments: list[dict]) -> None:
             if not available:
                 st.info(t("cmp.no_table", lang))
                 continue
+            table_indices: list[int] = list(range(len(available)))
             chosen = st.selectbox(
                 t("cmp.choose_table", lang),
-                range(len(available)),
-                format_func=lambda n, a=available: a[n]["table"]["name"],
+                table_indices,
+                format_func=_table_name_formatter(available),
                 key=f"compare-table-{study}",
             )
-            entry = available[chosen]
+            idx = chosen if isinstance(chosen, int) and 0 <= chosen < len(available) else 0
+            entry = available[idx]
             entries.append({
                 **entry,
                 "study_id": study,
@@ -728,6 +897,8 @@ def show_comparison(experiments: list[dict]) -> None:
     st.header(t("cmp.relevance_title", lang))
     st.caption(t("cmp.relevance_caption", lang))
     app_opts = ["habitat", "detection", "suppression"]
+    if "cmp_application" in st.session_state and st.session_state["cmp_application"] not in app_opts:
+        st.session_state["cmp_application"] = "habitat"
     app_labels = {
         "habitat": t("cmp.app_habitat", lang),
         "detection": t("cmp.app_detection", lang),
@@ -739,18 +910,26 @@ def show_comparison(experiments: list[dict]) -> None:
         format_func=lambda opt: app_labels.get(opt, opt),
         key="cmp_application",
     )
+    safe_application = application if application in app_opts else "habitat"
     question = st.text_input(t("cmp.query_label", lang), value="microgravity combustion", key="cmp_query")
     records = [{**r, "description": (r["experiment"] or {}).get("description", "")} for r in catalog(experiments)]
-    ranked = rank_investigations(records, query=question, application=application)
+    ranked_rows = build_priority_ranking(records, query=question, application=safe_application, language=lang)
+    for row in ranked_rows[:3]:
+        with st.container(border=True):
+            c_title, c_score = st.columns([3.0, 1.0], vertical_alignment="center")
+            c_title.markdown(f"**#{row['rank']} · {row['study_id']} · {row['name']}**")
+            c_title.caption(row["reasons_text"])
+            c_score.metric(t("cmp.col_score", lang), f"{row['score']:.0f}/100")
+            st.progress(min(1.0, max(0.0, row["score"] / 100.0)))
     st.dataframe(
         pd.DataFrame([
             {
-                t("cmp.col_study", lang): r.get("id") or r.get("study_id"),
-                t("cmp.col_name", lang): r.get("name"),
-                t("cmp.col_score", lang): r.get("score"),
-                t("cmp.col_reasons", lang): "; ".join(translate_relevance_reason(reason, lang) for reason in r.get("reasons", [])),
+                t("cmp.col_study", lang): r["study_id"],
+                t("cmp.col_name", lang): r["name"],
+                t("cmp.col_score", lang): r["score"],
+                t("cmp.col_reasons", lang): "; ".join(r["reasons"]),
             }
-            for r in ranked
+            for r in ranked_rows
         ]),
         hide_index=True,
         use_container_width=True,
@@ -962,16 +1141,21 @@ def show_visual_review(experiments: list[dict]) -> None:
             except (OSError, ValueError, RuntimeError) as error:
                 st.error(t("vis.vlm_failed", lang, err_type=type(error).__name__))
 
-    review = st.session_state.get("visual_review_result")
-    if review and review.document_sha256 == digest and review.page == page:
+    saved_review = st.session_state.get("visual_review_result")
+    if (
+        saved_review is not None
+        and hasattr(saved_review, "document_sha256")
+        and saved_review.document_sha256 == digest
+        and saved_review.page == page
+    ):
         st.header(t("vis.candidate_header", lang))
-        for warning in review.warnings:
+        for warning in saved_review.warnings:
             st.warning(warning)
-        st.caption(t("vis.candidate_status", lang, status=review.status))
-        if review.status == "candidate":
-            st.text(review.description)
-            st.text(review.inference)
-            for index, region in enumerate(review.regions, 1):
+        st.caption(t("vis.candidate_status", lang, status=saved_review.status))
+        if saved_review.status == "candidate":
+            st.text(saved_review.description)
+            st.text(saved_review.inference)
+            for index, region in enumerate(saved_review.regions, 1):
                 with st.expander(t("vis.region_label", lang, idx=index, kind=region.kind)):
                     st.caption(t("vis.region_coords_note", lang))
                     st.text(str(region.bbox))
@@ -980,7 +1164,7 @@ def show_visual_review(experiments: list[dict]) -> None:
                     st.text(region.text_candidate)
             st.download_button(
                 t("vis.download_json", lang),
-                json.dumps(asdict(review), ensure_ascii=False, indent=2).encode("utf-8"),
+                json.dumps(asdict(saved_review), ensure_ascii=False, indent=2).encode("utf-8"),
                 f"visual-review-{digest[:12]}-p{page}.json",
                 "application/json",
             )
@@ -1006,33 +1190,8 @@ def show_visual_review(experiments: list[dict]) -> None:
 
 
 def inject_dashboard_css() -> None:
-    """Inject restrained, responsive scientific styling (static CSS only)."""
-    # Static CSS only. Do not interpolate external document strings into HTML.
-    st.html(
-        """<style>
-        [data-testid="stMainBlockContainer"] { max-width: 90rem; padding-top: 1.5rem; }
-        h1, h2, h3 { text-wrap: balance; letter-spacing: -0.015em; }
-        .psi-lead { font-size: 1.08rem; color: #3c484e; margin-top: -0.35rem; margin-bottom: 1.25rem; line-height: 1.55; }
-        [data-testid="stMetricValue"], table { font-variant-numeric: tabular-nums; }
-        [data-testid="stMetricLabel"] { white-space: normal !important; }
-        [data-testid="stMetricLabel"] p { white-space: normal !important; overflow-wrap: break-word; }
-        [data-testid="stMetric"] {
-            background: #FFFFFF;
-            border: 1px solid #E3E5DF;
-            border-radius: 0.65rem;
-            padding: 0.85rem 1rem;
-        }
-        [data-testid="stText"], [data-testid="stCaptionContainer"], p { overflow-wrap: anywhere; }
-        button, [data-testid="stLinkButton"] a { min-height: 2.65rem; }
-        :is(button, a, input, textarea, [role="radiogroup"] label):focus-visible {
-            outline: 3px solid #A44426 !important;
-            outline-offset: 2px;
-        }
-        @media (max-width: 48rem) {
-            [data-testid="stMainBlockContainer"] { padding-inline: 0.9rem; }
-        }
-        </style>"""
-    )
+    """Inject centralized, responsive scientific styling from design_system."""
+    inject_global_styles()
 
 
 def show_section(section: str, experiments: list[dict]) -> None:

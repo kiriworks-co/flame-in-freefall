@@ -2,13 +2,17 @@
 maxUploadSize = 25
 headless = true
 
+[client]
+toolbarMode = "viewer"
+showErrorDetails = "none"
+
 [browser]
 gatherUsageStats = false
 
 [theme]
 base = "light"
-primaryColor = "#A44426"
-backgroundColor = "#FAFAF7"
-secondaryBackgroundColor = "#F0F1EE"
-textColor = "#202C32"
+primaryColor = "#B84A24"
+backgroundColor = "#F8F9FA"
+secondaryBackgroundColor = "#EFF2F5"
+textColor = "#0F1D2B"
 font = "sans serif"
