@@ -71,7 +71,7 @@ On cold start, `ensure_scientific_bootstrap()` initializes `data/scientific.sqli
 ---
 
 ## 6. Owner Local Verification & Submission Checklist
-- [ ] Review live app locally at `http://127.0.0.1:8511` and complete independent scientific review ([SCIENTIFIC_REVIEW_CHECKLIST.md](SCIENTIFIC_REVIEW_CHECKLIST.md)).
+- [ ] Review live app locally at `http://127.0.0.1:8511` and independently review scientific interpretations against the original NASA sources.
 - [ ] *(Optional)* Configure personal Google AI Studio key with `python scripts/setup_gemini.py` and verify via `python scripts/gemini_live_check.py --require-key`.
 - [ ] Verify clean Git status and absence of secrets (`git status -sb`, `git ls-files .env .streamlit/secrets.toml`).
 - [ ] Push verified branch to your own GitHub repository and deploy on Streamlit Community Cloud.
