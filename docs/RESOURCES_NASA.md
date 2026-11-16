@@ -1,38 +1,42 @@
-# KIT — NASA Space Apps 2026 / Flame in Freefall
+# NASA Resources Used by Flame in Freefall
 
-**Ampliação Etapa 2 (2026-11-15):** o acervo atual cobre 12 investigações PSI,
-mais os guias oficiais. Foram incorporados 24 documentos adicionais de
-PSI-62/117/159 (21 úteis e três placeholders ISA preservados), além dos ZIPs
-de proveniência. Ver [STAGE2_SOURCE_AUDIT.md](STAGE2_SOURCE_AUDIT.md) e
-[DATA_PROVENANCE.md](DATA_PROVENANCE.md). A descrição do kit e da coleta
-inicial abaixo é histórica; não representa a contagem atual.
+The primary source of scientific material in this project is NASA's
+[Physical Sciences Informatics (PSI)](https://psi.nasa.gov/physci/repo/search?q=combustion)
+repository. The application preserves original materials from **12 investigations**
+and uses two official NASA guides for scientific context.
 
-**O que este arquivo contém:** cópia limpa do SEU projeto original Streamlit/Python, catálogo de 10 fontes oficiais, manifesto de 9 investigações prioritárias, dois scripts de download e instruções de continuidade do Codex. O código original foi preservado; as novidades estão em `resources/`, `scripts/`, `docs/`, `AGENTS.md`.
+The full inventory of source files, their versions, DOI identifiers, downloads,
+SHA-256 hashes, and known gaps is available in
+[DATA_PROVENANCE.md](DATA_PROVENANCE.md) and
+[STAGE2_SOURCE_AUDIT.md](STAGE2_SOURCE_AUDIT.md).
 
-**Atualização de execução (2026-11-15):** a coleta NASA foi realizada neste ambiente. Há nove CSVs PSI, cinco PDFs associados e dois guias oficiais, com importação real no dashboard. A lista completa, URLs, versões, hashes e lacunas está em [DATA_PROVENANCE.md](DATA_PROVENANCE.md). O kit inicial não continha esses arquivos; esse bloqueio histórico foi resolvido. Nenhum dado experimental foi fabricado.
+## Investigation records
 
-## Como usar — Windows
+| NASA PSI | Research area | Source |
+| --- | --- | --- |
+| PSI-25 | Burning and Suppression of Solids II (BASS-II) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-25 |
+| PSI-26 | Burning and Suppression of Solids (BASS) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-26 |
+| PSI-62 | Concurrent Flame Spread Modeling (UFGM; collected metadata only) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-62 |
+| PSI-68 | Flame Extinguishment Experiment 2 (FLEX-2) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-68 |
+| PSI-69 | Flame Extinguishment Experiment (FLEX) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-69 |
+| PSI-98 | Spacecraft Fire Experiment I (Saffire-I) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-98 |
+| PSI-99 | Spacecraft Fire Experiment II (Saffire-II) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-99 |
+| PSI-100 | Spacecraft Fire Experiment III (Saffire-III) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-100 |
+| PSI-101 | Smoke Aerosol Measurement Experiment — Reflight (SAME-R) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-101 |
+| PSI-102 | Smoke Aerosol Measurement Experiment (SAME) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-102 |
+| PSI-117 | Cool Flame Dynamics | https://psi.nasa.gov/physci/repo/data/investigations/PSI-117 |
+| PSI-159 | Cool Flames Investigation with Gases (ACME CFI-G) | https://psi.nasa.gov/physci/repo/data/investigations/PSI-159 |
 
-1. Descompacte este ZIP. Abra a pasta `PROJETO TESTE FLAME MICROGRAVITY` com Codex/VS Code.
-2. Envie ao Codex: **"Leia `CODEX_MISSION.md` e `AGENTS.md` e EXECUTE a missão integralmente, sem reconstruir o projeto e sem inventar dados."**
-3. Se preferir tentar os downloads você mesmo: `py scripts/fetch_nasa_resources.py --guide --psi-manual` e `py scripts/fetch_psi_tables.py --ids PSI-25 PSI-26 PSI-68 PSI-69 PSI-98 PSI-99 PSI-100 PSI-101 PSI-102`.
-4. Os endpoints Geode foram testados e os scripts corrigidos para os campos atuais `key` e `sortingCategory`. Mudanças futuras da API ainda podem exigir diagnóstico; falhas não são preenchidas por dados inventados.
-5. Os CSVs do PSI são muitas vezes tabelas de condições de ensaio, não matrizes de resultados medidos. Não os trate como equivalentes a telemetria ou séries temporais.
+## Reference guides
 
-## Fonte original dos 10 recursos
+- [A Researcher's Guide to International Space Station Combustion Science](https://www.nasa.gov/missions/station/a-researchers-guide-to-combustion-science/)
+- [Complete PSI Database Guide](https://assets.science.nasa.gov/content/dam/science/bps/bps-general/bps-data_osdr_psi/Complete_PSI_Database_Guide.pdf)
 
-https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/
+## Challenge
 
-A réplica do texto e links da aba Resources consultada em 2026-11-15: https://hackathlone.com/challenges/flame-in-freefall
+[NASA Space Apps Challenge 2026 — Flame in Freefall](https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/)
 
-## Referências úteis
-
-- PSI: https://psi.nasa.gov/physci/repo/search?q=combustion
-- Exemplo PSI-69: https://psi.nasa.gov/physci/repo/data/investigations/PSI-69
-- NASA PDF de combustão: https://www.nasa.gov/missions/station/a-researchers-guide-to-combustion-science/
-- Tutorial PSI de download: https://assets.science.nasa.gov/content/dam/science/bps/bps-general/bps-data_osdr_psi/Complete_PSI_Database_Guide.pdf
-- Documentação comunitária sobre os endpoints PSI (não oficial; revalidar): https://github.com/Krypton-N/NASA-SPACE-APPS-8/blob/main/research/docs/psi_ingestion.md
-
-## Fontes, licença e citações
-
-Registre DOI e URL por investigação. Todos os dados baixados devem ser auditados contra a página PSI, identificando versão, arquivo, tamanho e SHA-256. Não presuma que repositórios de outras equipes sejam fontes primárias NASA. Evite cópias de obras não autorizadas.
+The original research files represent different types of scientific evidence:
+experimental conditions, reported results, simulations, calculated quantities,
+and metadata. They must not be combined or interpreted as equivalent measurements.
+Source materials remain attributed to NASA and their original authors.
