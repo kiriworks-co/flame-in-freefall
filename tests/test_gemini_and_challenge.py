@@ -10,6 +10,7 @@ from typing import Any, cast
 
 from streamlit.testing.v1 import AppTest
 
+from scripts import gemini_live_check, setup_gemini
 from src import assistant, challenge_engine, design_system, gemini_provider, i18n
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -225,21 +226,99 @@ def test_challenge_engine_summarize_rank_interpret() -> None:
 
 def test_streamlit_config_and_design_tokens() -> None:
     config = tomllib.loads((ROOT / ".streamlit" / "config.toml").read_text(encoding="utf-8"))
-    assert config["client"]["toolbarMode"] == "viewer"
+    assert config["client"]["toolbarMode"] == "minimal"
     assert config["client"]["showErrorDetails"] == "none"
+    assert (ROOT / ".streamlit" / "secrets.toml.example").exists()
     assert design_system.DESIGN_TOKENS["accent_flame"] == "#B84A24"
     assert design_system.DESIGN_TOKENS["ink_primary"] == "#0F1D2B"
+
+
+def test_gemini_session_and_server_rate_limits(monkeypatch) -> None:
+    gemini_provider.reset_gemini_runtime_state()
+    monkeypatch.setattr(gemini_provider, "_MAX_SESSION_REQUESTS", 2)
+    monkeypatch.setattr(gemini_provider, "_MAX_REQUESTS_PER_MINUTE", 10)
+    monkeypatch.setattr(gemini_provider, "_MAX_SERVER_REQUESTS_PER_DAY", 3)
+
+    # Session A hits its 2-request session cap
+    gemini_provider._enforce_rate_limit(now=100.0, session_id="sess-a")
+    gemini_provider._enforce_rate_limit(now=101.0, session_id="sess-a")
+    try:
+        gemini_provider._enforce_rate_limit(now=102.0, session_id="sess-a")
+        raise AssertionError("Expected session quota error")
+    except gemini_provider.GeminiProviderError as err:
+        assert err.code == "session_quota_reached"
+
+    # Session B still has quota, until server daily cap (3 total) is reached
+    gemini_provider._enforce_rate_limit(now=103.0, session_id="sess-b")
+    try:
+        gemini_provider._enforce_rate_limit(now=104.0, session_id="sess-b")
+        raise AssertionError("Expected server daily quota error")
+    except gemini_provider.GeminiProviderError as err:
+        assert err.code == "server_daily_quota_reached"
+
+
+def test_gemini_grounded_explanation_validation() -> None:
+    evidence = SAMPLE_EVIDENCE[:1]
+    accepted, errors = assistant.validate_claims(
+        {
+            "claims": [
+                {
+                    "citation": "psi69-chunk-1",
+                    "quote": "O initial ambient composition; mole fraction was 0.21 with Fuel = n-heptane.",
+                    "kind": "condition",
+                    "explanation": "This test condition specifies an oxygen mole fraction of 0.21 for n-heptane.",
+                },
+                {
+                    "citation": "psi69-chunk-1",
+                    "quote": "O initial ambient composition; mole fraction was 0.21 with Fuel = n-heptane.",
+                    "kind": "condition",
+                    "explanation": "Invented number 999 proves flight-certified safety.",
+                },
+            ]
+        },
+        evidence,
+        language="en",
+    )
+    assert len(accepted) == 2
+    assert "explanation" in accepted[0]
+    assert "0.21" in accepted[0]["explanation"]
+    assert "explanation" not in accepted[1]
+    assert any("explanation omitted" in err.lower() for err in errors)
+
+
+def test_gemini_setup_and_live_check_scripts(tmp_path: Path, monkeypatch, capsys) -> None:
+    env_file = tmp_path / ".env"
+    env_file.write_text("RAG_EMBEDDING_MODEL=local-model\n", encoding="utf-8")
+
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+    assert setup_gemini.main(["--status", "--env-file", str(env_file)]) == 0
+    status_out = json.loads(capsys.readouterr().out)
+    assert status_out["status"] == "unconfigured"
+    assert status_out["model"] == "gemini-2.5-flash"
+
+    assert setup_gemini.main(["--key", "AIzaFakeLocalTestKey12345", "--env-file", str(env_file)]) == 0
+    updated_env = env_file.read_text(encoding="utf-8")
+    assert "RAG_EMBEDDING_MODEL=local-model" in updated_env
+    assert "GEMINI_API_KEY=AIzaFakeLocalTestKey12345" in updated_env
+    capsys.readouterr()
+
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    report = gemini_live_check.run_live_check(tmp_path / "missing.env")
+    assert report["status"] == "UNCONFIGURED"
+    assert report["fallback_mode"] == "offline-evidence"
 
 
 def test_app_ux_topbar_hub_and_no_dev_jargon() -> None:
     app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=90).run()
     assert not app.exception
 
-    # Top bar controls present
+    # Top bar controls present without duplicate language toggle button
     btn_keys = {b.key for b in app.button}
     assert "topbar-home-btn" in btn_keys
     assert "topbar-back-btn" in btn_keys
-    assert "topbar-lang-toggle" in btn_keys
+    assert "topbar-lang-toggle" not in btn_keys
+    assert len([r for r in app.radio if r.key == "lang_selector"]) == 1
 
     # Challenge Hub tabs & clean end-user copy
     tab_labels = [tb.label for tb in app.tabs]
@@ -254,26 +333,27 @@ def test_app_ux_topbar_hub_and_no_dev_jargon() -> None:
         *[str(x.value) for x in app.markdown],
         *[str(x.value) for x in app.info],
     ])
-    for forbidden in ("SQLite + SHA-256", "lexical vectors", "lexical-vectors"):
+    for forbidden in ("SQLite + SHA-256", "lexical vectors", "lexical-vectors", "GEMINI_API_KEY"):
         assert forbidden not in primary_text
 
-    # Top bar language toggle flips cleanly EN -> PT-BR -> EN without selectbox errors
-    app = next(b for b in app.button if b.key == "topbar-lang-toggle").click().run()
+    # Single language selector flips cleanly EN -> PT-BR -> EN -> PT-BR
+    app = app.radio(key="lang_selector").set_value("pt").run()
     assert not app.exception
     assert app.session_state["lang"] == "pt"
     assert app.radio(key="lang_selector").value == "pt"
-    app = next(b for b in app.button if b.key == "topbar-lang-toggle").click().run()
+    app = app.radio(key="lang_selector").set_value("en").run()
     assert not app.exception
     assert app.session_state["lang"] == "en"
     assert app.radio(key="lang_selector").value == "en"
-    app = next(b for b in app.button if b.key == "topbar-lang-toggle").click().run()
+    app = app.radio(key="lang_selector").set_value("pt").run()
     assert not app.exception
     assert app.session_state["lang"] == "pt"
 
-    # Launch Journey 1 and verify 5-question comprehension structure
+    # Launch Journey 1 and verify 5-question comprehension structure + Back navigation
     app = next(b for b in app.button if b.key == "home-start-j1").click().run()
     assert not app.exception
     j_text = "\n".join([str(x.value) for x in app.subheader] + [str(x.value) for x in app.markdown])
     assert i18n.t("journey.q_heading", "pt") in j_text
     assert i18n.t("journey.q_exploring", "pt") in j_text
     assert i18n.t("journey.q_limitations", "pt") in j_text
+    assert not next(b for b in app.button if b.key == "topbar-back-btn").disabled

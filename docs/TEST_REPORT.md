@@ -1,4 +1,23 @@
-# Test & Verification Report — Etapa 2 (`feat/spaceapps-public-release`)
+# Test & Verification Report — Etapa 3 (`feat/spaceapps-public-release`)
+
+## Validação Final de Engenharia, UX/UI e Gemini (Etapa 3 — 2026-11-15)
+
+Ambiente validado: Windows, `.venv` Python **3.12.14** (portabilidade fixada em Python **3.11** via `.python-version`).
+
+| Verificação | Resultado | Observações |
+|---|---|---|
+| Suíte `pytest` completa (offline) | **164 passed in 179.45s** | Inclui novos testes de cota por sessão/servidor Gemini, explicação ancorada e seletor único de idioma |
+| Suíte UI/i18n/Gemini pós-ajuste visual | **39 passed in 38.60s** | Revalida `test_gemini_and_challenge.py`, `test_guided_ux.py`, `test_i18n_and_deployment.py`, `test_app.py` e `test_ui_details.py` após último ajuste CSS/Hub |
+| Ruff (`app.py src scripts tests`) | **All checks passed!** | Zero avisos de estilo/lint |
+| Mypy ampliado (19 arquivos) | **Success: no issues found in 19 source files** | Cobre frontend, backend científico, Gemini, scripts CLI e testes |
+| `compileall` & `pip check` | **Exit 0 / No broken requirements** | Árvore de dependências limpa |
+| Scripts Gemini (`setup_gemini.py`, `gemini_live_check.py`) | **Validados em modo UNCONFIGURED** | Sem chave ativa local; fallback offline confirmado |
+| Auditoria de segredos / caminhos privados | **0 ocorrências** | `.env`, `.streamlit/secrets.toml` e `*.sqlite3` fora do Git |
+| Navegador real (`http://127.0.0.1:8511`) | **Desktop `1440×900` & Mobile `390×844` aprovados** | Zero exceções, diagrama `1g vs ~0g` visível, 3 cartões de entrada com altura idêntica (`224.95px`), 4 métricas em linha única, zero overflow horizontal (`390px`), `EN ↔ PT-BR`, Jornada 1 + `Voltar`/`Início`, `PSI-69`/`117`/`159`/`62` e Assistente |
+
+---
+
+## Histórico — Etapa 2 (`feat/spaceapps-public-release`)
 
 ## Validação científica em 2026-11-15
 

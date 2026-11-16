@@ -1,5 +1,34 @@
 # PROGRESS — Retomada de sessões
 
+## Etapa 3 — Concluída e Validada (`2026-11-15`)
+
+- **Checkpoint preservado:** `checkpoint/pre-stage3-final` em `e227b2f`; trabalho executado exclusivamente na branch `feat/spaceapps-public-release` sem reconstruir desnecessariamente `data/scientific.sqlite3` ou `data/search.sqlite3`.
+- **Refinamento UX/UI & Navegação (`app.py`, `src/design_system.py`, `src/scientific_ui.py`, `src/i18n.py`, `.streamlit/config.toml`):**
+  - `.streamlit/config.toml` atualizado para `toolbarMode = "minimal"` e `showErrorDetails = "none"`; chrome/menu do Streamlit ocultado preservando abertura da sidebar.
+  - Adicionado `<meta name="google" content="notranslate">` e classe `notranslate` na barra superior e pílulas.
+  - Removida duplicidade de idioma (`topbar-lang-toggle` removido): mantido **um único seletor segmentado `EN | PT-BR`** sincronizado na barra superior com alto contraste na opção ativa.
+  - Criado hero em azul-marinho aeroespacial (`#0F1D2B`) com **diagrama visual comparativo HTML/CSS `Terra (1g) — Chama em gota` vs. `Órbita (~0g) — Chama esférica`** e selos `SUMMARIZE · RANK · INTERPRET`.
+  - Os 3 cartões iniciais (*Discover the Science*, *Explore Fire Safety*, *Investigate NASA Data*) e as 4 métricas do acervo (`12` estudos, `40` arquivos, `117` tabelas, `15.524` segmentos) foram alinhados em linhas únicas em desktop (`1440×900`, altura idêntica `224,95 px`) com empilhamento limpo em mobile (`390×844`, `scrollWidth == 390 px`).
+  - `_go_back()` tornado sensível às Jornadas Guiadas; opções técnicas (`Nível de experiência` na sidebar e sincronização/CLI em `Fontes`) recolhidas em expanders para visitantes comuns; título duplicado `PSI-69 · PSI-69 · FLEX` no Hub corrigido.
+- **Google Gemini e Configuração (`src/gemini_provider.py`, `src/assistant.py`, `.env`, `.env.example`, `.streamlit/secrets.toml.example`, `scripts/setup_gemini.py`, `scripts/gemini_live_check.py`):**
+  - Placeholders `GEMINI_API_KEY=` e `GEMINI_MODEL=gemini-2.5-flash` preparados no `.env` local (preservando `RAG_EMBEDDING_MODEL`, fora do Git) e em `.streamlit/secrets.toml.example`.
+  - Limites separados por sessão (`40/sessão`) e servidor (`10/min`, `250/dia`), suporte a `explanation` curta opcional verificada contra números e limites da fonte em `validate_claims()`, e remoção de nomes de variáveis de ambiente das mensagens de interface.
+  - Status local: `UNCONFIGURED` (aguarda chave pessoal opcional do proprietário; fallback offline e mocks validados).
+- **Validação Técnica e em Navegador:**
+  - `pytest` completo offline: **164 passed in 179.45s** (`0` falhas), seguido por revalidação dirigida UI/i18n/Gemini após o ajuste final de CSS/título do Hub.
+  - `ruff`, `mypy` (19 arquivos), `compileall` e `pip check` aprovados; zero segredos ou caminhos privados em runtime.
+  - Chromium real em `http://127.0.0.1:8511` (`1440×900` e `390×844`) validado com inspeção direta das capturas de tela. Servidor local mantido ativo na porta `8511`.
+- **Documentação Final Obrigatória Gerada (A–E):**
+  - `docs/PROJECT_OVERVIEW_PTBR.md`
+  - `docs/FEATURES_AND_WORKFLOWS_PTBR.md`
+  - `docs/FOLDER_STRUCTURE_PTBR.md`
+  - `docs/SUBMISSION_DESCRIPTION_EN.md`
+  - `docs/FINAL_RELEASE_STATUS_PTBR.md`
+  - Atualizados `README.md`, `docs/DEPLOYMENT.md`, `docs/AI_USAGE.md`, `docs/TEST_REPORT.md`, `docs/ACTIVE_MISSION.md`, `docs/PROGRESS.md` e `docs/index.html`.
+- **Próxima ação do proprietário:** Conduzir a **Revisão Científica Independente (`PENDENTE`)** em `http://127.0.0.1:8511`, opcionalmente configurar a chave do Gemini via `scripts/setup_gemini.py`, e realizar `git push` + deploy público no Streamlit Community Cloud.
+
+---
+
 ## Etapa 2 — concluída e validada (2026-11-15)
 
 - Repositório original confirmado, branch `feat/spaceapps-public-release`, base
@@ -24,42 +53,6 @@
   sem falhas/avisos, com 21 documentos úteis novos recuperáveis. Dois warm starts
   retornaram `ready` sem importar/indexar novamente. Modo lexical também validado
   com 11.582 chunks. Consultas reais dos três estudos e insuficiência passaram.
-- Corrigidos disputa de escrita JSON no Windows, nomes temporários longos,
-  concorrência entre processos, retomada após `--no-index` e rótulos que antes
-  promoviam resultados reportados a medições. Limiar semântico conservador reduz
-  vizinhos sem apoio lexical; isso não é garantia universal de relevância.
 - `.gitattributes` preserva originais no Git; 83 verificações SHA-256 dos blobs
   preparados aprovadas. Originais no disco permaneceram inalterados.
-- Navegador real: PSI-62/117/159 no explorador; gráficos e avisos EN/PT, desktop
-  1280×900 e mobile 390×844 sem overflow observado, tab ativada por teclado,
-  zero exceções/erros de console. Inspeção visual de PDFs por amostragem.
-- Registro Git desta entrega: base `5a2c487`, branch correta, mensagem
-  `feat(science): integrate PSI-62 PSI-117 and PSI-159 sources`.
-- Próximo: **Etapa 3 — Final Engineering, Product Refinement & Documentation**,
-  ainda não iniciada. Gemini, publicação e documentos finais A–E não executados.
-
-## Histórico (recuperação anterior à Etapa 2 — `2026-11-15`)
-- **Branch e checkpoints Git (`feat/spaceapps-public-release`)**:
-  - Branch principal `main` em `880145a`.
-  - Checkpoints preservados: `checkpoint/pre-ux-journey-redesign` (`51ddf8a`), `checkpoint/pre-final-product-overhaul` (`16acce4`) e `checkpoint/pre-final-engineering-refinement` (`386ab9b`).
-  - Auditoria confirmou que a sessão interrompida do Claude Opus 5.5 (erro `429 RESOURCE_EXHAUSTED` no subagente Gemini) não deixou alterações não commitadas no repositório — apenas miniaturas temporárias em `tmp/img/rg_*.png` (ignoradas pelo Git).
-- **Verificações executadas na recuperação (`386ab9b`)**:
-  - `.\.venv\Scripts\python.exe -m ruff check app.py src scripts tests` → **All checks passed!**
-  - `.\.venv\Scripts\python.exe -m mypy app.py src/design_system.py src/gemini_provider.py src/challenge_engine.py src/assistant.py src/scientific_ui.py src/guided_journeys.py src/views.py src/i18n.py tests/test_gemini_and_challenge.py` → **Success: no issues found in 10 source files**
-  - `.\.venv\Scripts\python.exe -m compileall -q app.py src scripts tests` → **exit 0**
-  - `.\.venv\Scripts\python.exe -m pip check` → **No broken requirements found.**
-  - `$env:PYTHONUNBUFFERED="1"; $env:RAG_EMBEDDING_MODEL=" "; $env:HF_HUB_OFFLINE="1"; $env:TRANSFORMERS_OFFLINE="1"; .\.venv\Scripts\python.exe -m pytest -v` → **112 passed in 68.42s**
-  - *Nota técnica para Windows PowerShell:* usar `$env:RAG_EMBEDDING_MODEL=" "` (espaço) em vez de `""`, pois string vazia remove a variável do ambiente Windows e faz `load_dotenv(override=False)` recarregar o modelo do `.env`, travando threads do `AppTest`.
-- **O que já funciona integralmente**:
-  - Catálogo e acervo verificado de 9 investigações NASA PSI (`PSI-25`, `PSI-26`, `PSI-68`, `PSI-69`, `PSI-98`, `PSI-99`, `PSI-100`, `PSI-101`, `PSI-102`) + 2 guias oficiais (`16` arquivos, `7.881.267` bytes, SHA-256 e DOIs verificados).
-  - Persistência SQLite (`data/scientific.sqlite3` e `data/search.sqlite3`) com cold-start idempotente (`ensure_scientific_bootstrap()`), normalização conservadora Pint (`src/units.py`), busca híbrida `FTS5` + vetores + filtros físicos (`src/retrieval.py`), validação extrativa (`src/assistant.py`), comparação e ranking determinístico `0–100` (`src/comparison.py`, `src/relevance.py`, `src/challenge_engine.py`), bilíngue EN/PT-BR com `679` chaves (`src/i18n.py`), Jornadas Guiadas 1 e 2 (`src/guided_journeys.py`), Revisão Visual Offline (`src/visual_review.py`) e modo `PSI_READONLY_MODE`.
-- **O que está parcial ou pendente**:
-  - *Parcial:* finalização dos scripts/limites/explicações ancoradas do Google Gemini (`scripts/setup_gemini.py`, `scripts/gemini_live_check.py`, `.streamlit/secrets.toml.example`) e refinamento UX/UI/navegação/idioma (13 pontos apontados na avaliação visual).
-  - *Pendente:* incorporação das investigações NASA `PSI-62`, `PSI-117` e `PSI-159`, validação em navegador após refinamento e geração dos Documentos A–E (`PROJECT_OVERVIEW_PTBR.md`, `FEATURES_AND_WORKFLOWS_PTBR.md`, `FOLDER_STRUCTURE_PTBR.md`, `SUBMISSION_DESCRIPTION_EN.md`, `FINAL_RELEASE_STATUS_PTBR.md`).
-
----
-
-## Próximos Passos (Plano Registrado em [ACTIVE_MISSION.md](ACTIVE_MISSION.md))
-1. **Etapa 1 — Continuidade e recuperação do trabalho anterior** *(Concluída)*: auditoria Git, diagnóstico do travamento de testes no PowerShell, validação dos 112 testes e criação de `docs/ACTIVE_MISSION.md`.
-2. **Etapa 2 — Incorporação dos materiais NASA `PSI-62`, `PSI-117` e `PSI-159`** *(Concluída)*: arquivos verificáveis ingeridos, documentos úteis pesquisáveis, catálogo bilíngue, SQLite/FTS/embeddings atualizados e 161 testes aprovados. Detalhes em `docs/STAGE2_INTEGRATION.md`.
-3. **Etapa 3 — Finalização da missão de engenharia, UX/UI, integração Gemini e documentação**: aplicar melhorias visuais e de navegação, finalizar scripts/proteções Gemini, validar em navegador real e produzir os Documentos A–E antes da publicação via [DEPLOYMENT.md](DEPLOYMENT.md).
+- Registro Git da Etapa 2: commit `e227b2f` (`feat(science): integrate PSI-62 PSI-117 and PSI-159 sources`).

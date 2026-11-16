@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 from src import scientific_ui, views
 from src.design_system import inject_global_styles, render_context_navigation_bar
 from src.extractors import SCHEMA_VERSION, SUPPORTED_EXTENSIONS
-from src.guided_journeys import TOTAL_STEPS, current_journey, stop_journey
+from src.guided_journeys import TOTAL_STEPS, current_journey, start_journey, stop_journey
 from src.i18n import (
     DEFAULT_LANG,
     LANGUAGE_OPTIONS,
@@ -42,7 +42,7 @@ from src.storage import (
 )
 
 st.set_page_config(
-    page_title="PSI Flame Microgravity",
+    page_title="Flame in Freefall · NASA PSI",
     page_icon="🔥",
     layout="wide",
     initial_sidebar_state="auto",
@@ -133,18 +133,24 @@ def _on_language_change() -> None:
     set_lang(str(st.session_state.get("lang_selector", DEFAULT_LANG)))
 
 
-def _toggle_language() -> None:
-    next_code = "pt" if get_lang() == "en" else "en"
-    set_lang(next_code)
-    st.session_state["lang_selector"] = next_code
-
-
 def _go_home() -> None:
     stop_journey()
     st.session_state["workspace_section"] = "home"
 
 
 def _go_back() -> None:
+    jid, jstep = current_journey()
+    section = st.session_state.get("workspace_section", "home")
+    if jid is not None and section == "home":
+        if jstep > 1:
+            start_journey(jid, jstep - 1)
+        else:
+            stop_journey()
+        return
+    if jid is not None and section != "home":
+        st.session_state["workspace_section"] = "home"
+        st.session_state["_skip_nav_push"] = True
+        return
     history = st.session_state.get("nav_history") or []
     if history:
         prev = history.pop()
@@ -486,28 +492,12 @@ def main() -> None:
     with st.sidebar:
         st.markdown(f"## {t('app.title', lang)}")
         st.caption(t("app.subtitle", lang))
-        st.radio(
-            t("sidebar.language", lang),
-            options=["en", "pt"],
-            format_func=lambda code: LANGUAGE_OPTIONS[code],
-            horizontal=True,
-            key="lang_selector",
-            on_change=_on_language_change,
-        )
         st.divider()
         section = st.radio(
             t("sidebar.nav_label", lang),
             SECTION_KEYS,
             format_func=lambda key: section_label(key, lang),
             key="workspace_section",
-        )
-        st.divider()
-        st.radio(
-            t("sidebar.mode_label", lang),
-            options=["guided", "advanced"],
-            format_func=lambda mode: t(f"sidebar.mode_{mode}", lang),
-            help=t("sidebar.mode_help", lang),
-            key="interaction_mode",
         )
         if jid is not None:
             st.button(
@@ -517,6 +507,15 @@ def main() -> None:
                 on_click=stop_journey,
             )
         st.divider()
+        with st.expander(t("sidebar.mode_label", lang), expanded=False):
+            st.radio(
+                t("sidebar.mode_label", lang),
+                options=["guided", "advanced"],
+                format_func=lambda mode: t(f"sidebar.mode_{mode}", lang),
+                help=t("sidebar.mode_help", lang),
+                label_visibility="collapsed",
+                key="interaction_mode",
+            )
         st.caption(t("sidebar.readonly_badge", lang) if readonly else t("sidebar.local_badge", lang))
         st.caption(t("sidebar.footer_note", lang))
 
@@ -538,9 +537,11 @@ def main() -> None:
         back_label=t("topbar.back", lang),
         can_go_home=(section != "home" or jid is not None),
         on_go_home=_go_home,
-        on_go_back=_go_back if (history_list or (jid is not None and section != "home")) else None,
+        on_go_back=_go_back if (history_list or jid is not None or section != "home") else None,
         lang=lang,
-        on_toggle_lang=_toggle_language,
+        on_lang_change=_on_language_change,
+        language_options=LANGUAGE_OPTIONS,
+        language_label=t("sidebar.language", lang),
         active_journey_label=active_j_label,
         return_journey_label=return_j_label,
         on_return_journey=_return_to_journey,

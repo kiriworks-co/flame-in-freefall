@@ -1,36 +1,19 @@
 # ACTIVE MISSION — Continuidade e Plano de Execução (`Flame in Freefall`)
 
-**Atualizado em:** `2026-11-15`  
+**Atualizado em:** `2026-11-15` (Etapa 3 concluída)  
 **Branch ativa:** `feat/spaceapps-public-release`  
-**Commit base recuperado:** `386ab9b` (`feat(ux-ai): finalize Aerospace Daylight UI, Challenge Hub, 5-question journeys, and Gemini integration`)  
-**Checkpoint de segurança preservado:** `checkpoint/pre-final-engineering-refinement` (`386ab9b`)
+**Checkpoints preservados:** `checkpoint/pre-final-engineering-refinement` (`386ab9b`) · `checkpoint/pre-stage3-final` (`e227b2f`)  
+**Servidor local ativo:** `http://127.0.0.1:8511`
 
-## Estado após integração científica da Etapa 2
+## Estado após conclusão da Etapa 3 (Final Engineering, UX/UI & Documentation)
 
-Base desta sessão: `5a2c487`, no repositório original e branch correta, sem
-alterações iniciais a preservar. As 15 instruções fornecidas pelo proprietário
-estão rastreadas em [STAGE2_INTEGRATION.md](STAGE2_INTEGRATION.md).
-
-- 12 investigações PSI + registro NASA-CONTEXT; 40 documentos preservados
-  (24 novos, dos quais 21 úteis e três placeholders ISA).
-- PSI-62: somente metadados, sem séries numéricas públicas. PSI-117: dados
-  experimentais reportados e CFD separados. PSI-159: relatórios, condições,
-  cálculos e resultados reportados em dois CSVs complementados da NASA.
-- SQLite: 117 tabelas extraídas, 10.114 linhas tabulares, 26.803 registros
-  tipados; sem violações de chave estrangeira. Originais e blobs Git verificados.
-- Busca persistente: 15.524 passagens FTS5/embeddings locais de 384 dimensões;
-  recuperação real dos três estudos e resposta insuficiente verificadas.
-- Ingestão idempotente, bloqueio entre processos, retomada de índice e
-  preservação de bytes no Git corrigidos. UI EN/PT-BR, gráficos e tipos de
-  evidência validados sem reformular o produto.
-- Validação final: **161 testes aprovados em 243,83 s**, Ruff, Mypy em 15
-  arquivos, compileall e pip check aprovados. Smoke com embeddings reais e
-  navegador desktop/mobile concluídos. Etapa 2 encerrada no commit de mensagem
-  `feat(science): integrate PSI-62 PSI-117 and PSI-159 sources`.
-
-**Próxima etapa autorizável:** Etapa 3 — Final Engineering, Product Refinement
-& Documentation. Ela não foi iniciada: nenhuma configuração Gemini, publicação
-ou criação dos cinco documentos finais A–E nesta sessão.
+- **Etapa 1 (Recuperação):** concluída (`5a2c487`).
+- **Etapa 2 (Integração científica PSI-62, PSI-117, PSI-159):** concluída e validada (`e227b2f`) — 12 investigações PSI + `NASA-CONTEXT`, 40 documentos (`82.099.713` bytes), 117 tabelas, 10.114 linhas, 26.803 observações tipadas e 15.524 passagens indexadas com embeddings locais de 384 dimensões.
+- **Etapa 3 (Refinamento UX/UI, Gemini, Deploy Prep & Documentação Final A–E):** **CONCLUÍDA**.
+  - Interface refinada e validada em navegador real (`1440×900` e `390×844`): hero aeroespacial com diagrama `1g vs ~0g`, 3 cartões de entrada com altura igual (`224.95 px`), 4 métricas em linha única, seletor único `EN | PT-BR`, `toolbarMode = "minimal"`, `<meta name="google" content="notranslate">` e navegação `← Voltar` / `🏠 Início` sensível a jornadas.
+  - Integração Gemini concluída (`src/gemini_provider.py`, `src/assistant.py`, `scripts/setup_gemini.py`, `scripts/gemini_live_check.py`, `.streamlit/secrets.toml.example`, `.env` placeholders); status local `UNCONFIGURED` aguardando chave opcional do proprietário.
+  - Documentos obrigatórios A–E gerados: [PROJECT_OVERVIEW_PTBR.md](PROJECT_OVERVIEW_PTBR.md), [FEATURES_AND_WORKFLOWS_PTBR.md](FEATURES_AND_WORKFLOWS_PTBR.md), [FOLDER_STRUCTURE_PTBR.md](FOLDER_STRUCTURE_PTBR.md), [SUBMISSION_DESCRIPTION_EN.md](SUBMISSION_DESCRIPTION_EN.md) e [FINAL_RELEASE_STATUS_PTBR.md](FINAL_RELEASE_STATUS_PTBR.md).
+  - **Próxima etapa exclusiva do proprietário:** Revisão científica independente (`PENDENTE`) em `http://127.0.0.1:8511`, configuração opcional de chave Gemini, `git push` e publicação no Streamlit Community Cloud conforme [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ---
 

@@ -1,7 +1,7 @@
 # Deployment Guide — Local Execution, Streamlit Community Cloud & GitHub Pages
 
-## 1. Local Execution (Recommended First Check)
-Requires **Python 3.11** (matching `.python-version`).
+## 1. Local Execution & Owner Verification Checklist
+Requires **Python 3.11+** (`.python-version` pins `3.11` for cloud compatibility; locally verified on Python `3.12.14`).
 
 ```powershell
 python -m venv .venv
@@ -10,70 +10,70 @@ python -m venv .venv
 ```
 
 Open `http://127.0.0.1:8511`.  
-On cold start, `ensure_scientific_bootstrap()` initializes `data/scientific.sqlite3` and `data/search.sqlite3` locally from preserved NASA files in ~5–6 seconds without requiring external API keys or model downloads.
+On cold start, `ensure_scientific_bootstrap()` initializes `data/scientific.sqlite3` and `data/search.sqlite3` locally from preserved NASA artifacts without requiring external API keys or model downloads.
+
+### Optional Google Gemini Setup (Local or Cloud)
+1. Obtain a key from Google AI Studio.
+2. Run locally:
+   ```powershell
+   .\.venv\Scripts\python.exe scripts/setup_gemini.py
+   .\.venv\Scripts\python.exe scripts/gemini_live_check.py --require-key
+   ```
+3. Or copy `.streamlit/secrets.toml.example` into Streamlit Community Cloud **App Settings → Secrets**.
 
 ---
 
 ## 2. Hosting Architecture: Streamlit Community Cloud vs. GitHub Pages
-- **Streamlit Community Cloud (Interactive App)**: Runs the Python 3.11 + SQLite + PyMuPDF + Plotly interactive application directly from `app.py`.
-- **GitHub Pages (Optional Static Showcase)**: GitHub Pages hosts static HTML/CSS/JS only (`docs/index.html`) as a lightweight bilingual entry page linking to the deployed Streamlit Cloud URL.
+- **Streamlit Community Cloud (Interactive Python Application):** Runs `app.py` with Python `3.11`, SQLite, PyMuPDF, Pint, and Plotly directly from GitHub.
+- **GitHub Pages (Optional Static Card):** Hosts static HTML/CSS/JS only (`docs/index.html`) linking out to the deployed Streamlit Cloud app. The Python app is completely independent of GitHub Pages.
 
 ---
 
-## 3. Repository Configuration & Cold-Start Behavior
+## 3. Repository Configuration & Public Read-Only Behavior
 - `.python-version`: pins Python `3.11`.
-- `.streamlit/config.toml`: configures **Aerospace Laboratory Daylight** theme tokens (`#B84A24`, `#F8F9FA`, `#EFF2F5`, `#0F1D2B`), sets `[client] toolbarMode = "viewer"` and `showErrorDetails = "none"` to hide Streamlit developer chrome, and omits localhost-only bindings so cloud reverse proxies attach cleanly.
-- `app.py`: uses `initial_sidebar_state="auto"` so desktop opens with navigation visible while narrow mobile viewports collapse the sidebar cleanly.
-- Preserved NASA artifacts (`data/psi_downloads/`, `data/experimentos/`, `resources/official/`, `resources/manifests/`) fit directly inside standard Git without Git LFS.
-- Generated SQLite databases (`data/scientific.sqlite3`, `data/search.sqlite3`), virtual environments (`.venv/`), and secrets (`.env`) are excluded via `.gitignore`.
+- `.streamlit/config.toml`: configures **Aerospace Laboratory Daylight** theme tokens (`#B84A24`, `#F8F9FA`, `#EFF2F5`, `#0F1D2B`), sets `[client] toolbarMode = "minimal"` and `showErrorDetails = "none"` to hide Streamlit developer chrome/three-dot menus, and omits localhost-only bindings so cloud reverse proxies attach cleanly.
+- `.streamlit/secrets.toml.example`: safe commented TOML template for Streamlit Cloud Secrets (`.streamlit/secrets.toml` and `.env` are gitignored).
+- `app.py`: uses `initial_sidebar_state="auto"` so desktop opens with navigation visible while mobile collapses cleanly.
+- Preserved NASA artifacts (`data/psi_downloads/`, `data/experimentos/`, `resources/official/`, `resources/manifests/`) are stored directly in Git (with `.gitattributes` preserving original bytes).
+- Generated SQLite databases (`data/scientific.sqlite3`, `data/search.sqlite3`), virtual environments (`.venv/`), temporary folders (`tmp/`), and `.env` / `.streamlit/secrets.toml` are excluded via `.gitignore`.
 - Public cloud hosts (`STREAMLIT_SHARING_MODE`, `/mount/src`, or `PSI_READONLY_MODE=1`) trigger `is_public_readonly()` automatically: public file uploads, document reprocessing, and archive mutations are disabled, while chart inspection choices remain ephemeral inside per-user `st.session_state`.
 
 ---
 
-## 4. Optional Environment Variables & Secrets (`.env` / Streamlit Secrets)
-All external AI integrations are **optional and disabled by default**. Never commit real credentials to Git.
-
-```toml
-# Read-only public archive enforcement
-PSI_READONLY_MODE = "1"
-
-# Optional Google Gemini API (for Scientific Assistant grounded synthesis)
-# GEMINI_API_KEY = "AIza..."
-# GEMINI_MODEL = "gemini-2.5-flash"
-
-# Optional OpenAI-compatible RAG / VLM fallback endpoints
-# RAG_BASE_URL = "https://..."
-# RAG_MODEL = "..."
-# RAG_API_KEY = "..."
-# VLM_BASE_URL = "https://..."
-# VLM_MODEL = "..."
-# VLM_API_KEY = "..."
-```
-
-### Runtime Privacy & Cost Guardrails
+## 4. Runtime Privacy & Cost Guardrails
 - `src/gemini_provider.py` filters retrieved passages through `filter_public_nasa_evidence()`, blocking private `local_upload` excerpts from external API transmission.
-- Built-in rolling limits enforce `10` Gemini calls/minute and `40` calls/session with cached repeated queries and automatic fallback to offline NASA citations on errors/timeouts.
-- `validate_claims()` requires every generated sentence to cite real retrieved sources and match reported numeric values before appearing in chat.
-- Leave `requirements-models.txt` / `RAG_EMBEDDING_MODEL` omitted on standard free cloud containers so retrieval uses zero-weight deterministic offline EN/PT `lexical-vectors` + SQLite `FTS5` cleanly.
+- Built-in rolling limits enforce **`10` Gemini calls/minute**, **`250` calls/day**, and **`40` calls/session** with cached repeated queries and automatic fallback to offline NASA citations on errors/timeouts.
+- `validate_claims()` requires every generated quote and optional 1-sentence explanation to cite real retrieved sources, preserve evidence roles (`condition`, `simulation`, `reported_result`, `metadata`), and match reported numeric values before appearing in chat.
+- Leave `requirements-models.txt` / `RAG_EMBEDDING_MODEL` omitted on standard free cloud containers so retrieval uses zero-weight deterministic offline EN/PT lexical vectors + SQLite `FTS5` cleanly within free-tier memory limits.
 
 ---
 
-## 5. Deploying to Streamlit Community Cloud
-1. Merge or select branch `main` (or `feat/spaceapps-public-release`) on your GitHub repository.
+## 5. Deploying to Streamlit Community Cloud (When Ready)
+1. Verify local checks pass and push `feat/spaceapps-public-release` (or merge to `main`) to your GitHub repository.
 2. Open [https://share.streamlit.io/](https://share.streamlit.io/) and select **Create app**.
 3. Configure:
    - **Repository**: `<owner>/<repo>`
-   - **Branch**: `main` (or `feat/spaceapps-public-release`)
+   - **Branch**: `feat/spaceapps-public-release` (or `main`)
    - **Main file path**: `app.py`
    - **Python version**: `3.11`
-4. *(Optional)* Add `PSI_READONLY_MODE = "1"` (and optional `GEMINI_API_KEY`) under **Advanced settings → Secrets**.
-5. Deploy and verify:
-   - Default load renders `"Explore the Science of Fire in Space"` with `Where you are`, `← Back`, `🏠 Home`, `Language: EN → PT-BR`, `9` PSI Studies, `16` NASA Files, `31` Tables, and `1,517` offline index chunks (or `2,711` when local semantic embeddings are active).
-   - No `Deploy` button or raw tracebacks appear (`toolbarMode = "viewer"`, `showErrorDetails = "none"`).
+4. Under **Advanced settings → Secrets**, add:
+   ```toml
+   PSI_READONLY_MODE = "1"
+   # Optional:
+   # GEMINI_API_KEY = "AIza..."
+   # GEMINI_MODEL = "gemini-2.5-flash"
+   ```
+5. Deploy and verify on the live URL:
+   - Default load renders `"Explore the Science of Fire in Space"`, deep-navy hero with `1g vs ~0g` visual diagram, single `EN | PT-BR` selector, `12` NASA PSI Studies, `40` Preserved NASA Files, `117` Extracted Tables, and offline indexed passages.
+   - No `Deploy` button, developer CLI commands, or raw tracebacks appear.
    - `Data Explorer` and `Sources & Methodology` display read-only protection cleanly.
 
 ---
 
-## 6. Publishing the Optional GitHub Pages Card
-1. Update the launch button `href` inside `docs/index.html` to point to your live `https://<app-name>.streamlit.app/` URL.
-2. Under GitHub **Settings → Pages**, deploy from branch `main` folder `/docs`.
+## 6. Owner Local Verification & Submission Checklist
+- [ ] Review live app locally at `http://127.0.0.1:8511` and complete independent scientific review ([SCIENTIFIC_REVIEW_CHECKLIST.md](SCIENTIFIC_REVIEW_CHECKLIST.md)).
+- [ ] *(Optional)* Configure personal Google AI Studio key with `python scripts/setup_gemini.py` and verify via `python scripts/gemini_live_check.py --require-key`.
+- [ ] Verify clean Git status and absence of secrets (`git status -sb`, `git ls-files .env .streamlit/secrets.toml`).
+- [ ] Push verified branch to your own GitHub repository and deploy on Streamlit Community Cloud.
+- [ ] *(Optional)* Update the launch URL inside `docs/index.html` and enable GitHub Pages on `/docs`.
+- [ ] Submit text from [SUBMISSION_DESCRIPTION_EN.md](SUBMISSION_DESCRIPTION_EN.md) on the Space Apps portal.

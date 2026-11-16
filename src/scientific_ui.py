@@ -1,6 +1,7 @@
 """Global NASA catalog, evidence retrieval, assistant, comparison, and methodology views."""
 from __future__ import annotations
 
+import html
 import json
 import os
 import re
@@ -8,6 +9,7 @@ import sqlite3
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
+from uuid import uuid4
 
 import pandas as pd
 import streamlit as st
@@ -210,7 +212,9 @@ def _render_challenge_hub(experiments: list[dict], records: list[dict], lang: st
             t("hub.select_study", lang),
             options=study_ids,
             index=study_ids.index(default_sid),
-            format_func=lambda s: f"{s} · {exp_by_id[s].get('name', s)}",
+            format_func=lambda s: exp_by_id[s].get("name", s)
+            if str(exp_by_id[s].get("name", s)).startswith(s)
+            else f"{s} · {exp_by_id[s].get('name', s)}",
             key="hub_sum_study",
         )
         safe_sum = chosen_sum if chosen_sum in exp_by_id else default_sid
@@ -218,7 +222,12 @@ def _render_challenge_hub(experiments: list[dict], records: list[dict], lang: st
         summary = build_study_summary(target_exp, lang)
         with st.container(border=True):
             render_pillar_badge(summary["pillar"])
-            st.subheader(f"{summary['study_id']} · {summary['title']}")
+            display_title = (
+                summary["title"]
+                if str(summary["title"]).startswith(str(summary["study_id"]))
+                else f"{summary['study_id']} · {summary['title']}"
+            )
+            st.subheader(display_title)
             st.markdown(f"**{t('hub.summarize_objective', lang)}:** {summary['objective']}")
             c_cov, c_role = st.columns(2)
             c_cov.markdown(f"**{t('hub.summarize_coverage', lang)}:** {summary['archive_coverage']}")
@@ -275,7 +284,9 @@ def _render_challenge_hub(experiments: list[dict], records: list[dict], lang: st
             t("hub.select_study", lang),
             options=study_ids,
             index=study_ids.index(default_sid),
-            format_func=lambda s: f"{s} · {exp_by_id[s].get('name', s)}",
+            format_func=lambda s: exp_by_id[s].get("name", s)
+            if str(exp_by_id[s].get("name", s)).startswith(s)
+            else f"{s} · {exp_by_id[s].get('name', s)}",
             key="hub_interp_study",
         )
         safe_interp = chosen_interp if chosen_interp in exp_by_id else default_sid
@@ -287,6 +298,16 @@ def _render_challenge_hub(experiments: list[dict], records: list[dict], lang: st
             st.info(f"**{t('hub.interpret_limit', lang)}:** {interp['scientific_boundary']}")
 
 
+def _entry_card_html(badge: str, title: str, desc: str) -> str:
+    return (
+        "<div class='psi-entry-card-body'>"
+        f"<div class='psi-entry-kicker'>{html.escape(badge, quote=True)}</div>"
+        f"<div class='psi-entry-title'>{html.escape(title, quote=True)}</div>"
+        f"<p class='psi-entry-desc'>{html.escape(desc, quote=True)}</p>"
+        "</div>"
+    )
+
+
 def show_overview(experiments: list[dict]) -> None:
     from .guided_journeys import render_active_journey, start_journey
 
@@ -296,94 +317,11 @@ def show_overview(experiments: list[dict]) -> None:
     lang = get_lang()
     st.title(t("home.title", lang))
     st.markdown(f"<p class='psi-lead'>{t('home.subtitle', lang)}</p>", unsafe_allow_html=True)
-    render_hero_banner(t("app.subtitle", lang), t("home.plain_intro", lang))
+    render_hero_banner(t("app.subtitle", lang), t("home.plain_intro", lang), lang=lang)
 
     records = catalog(experiments)
     documents = [doc for exp in experiments for doc in exp.get("documents", [])]
     flex_id = _study_id_for(experiments, "PSI-69")
-
-    st.header(t("home.start_title", lang))
-    c1, c2, c3 = st.columns(3, gap="medium")
-    with c1.container(border=True):
-        st.caption(t("home.exp_a_badge", lang))
-        st.subheader(t("home.exp_a_title", lang))
-        st.write(t("home.exp_a_desc", lang))
-        st.button(
-            t("home.exp_a_btn", lang),
-            type="primary",
-            key="home-start-j1",
-            use_container_width=True,
-            on_click=start_journey,
-            args=("journey_1", 1),
-        )
-    with c2.container(border=True):
-        st.caption(t("home.exp_b_badge", lang))
-        st.subheader(t("home.exp_b_title", lang))
-        st.write(t("home.exp_b_desc", lang))
-        st.button(
-            t("home.exp_b_btn", lang),
-            type="primary",
-            key="home-start-j2",
-            use_container_width=True,
-            on_click=start_journey,
-            args=("journey_2", 1),
-        )
-    with c3.container(border=True):
-        st.caption(t("home.exp_c_badge", lang))
-        st.subheader(t("home.exp_c_title", lang))
-        st.write(t("home.exp_c_desc", lang))
-        if flex_id:
-            st.button(
-                t("home.exp_c_btn_data", lang),
-                key="home-open-explorer",
-                use_container_width=True,
-                on_click=_open_experiment,
-                args=(flex_id,),
-            )
-        else:
-            st.button(
-                t("home.exp_c_btn_data", lang),
-                key="home-open-explorer",
-                use_container_width=True,
-                on_click=_jump_section,
-                args=("explorer",),
-            )
-        st.button(
-            t("home.exp_c_btn_assistant", lang),
-            key="home-open-assistant",
-            use_container_width=True,
-            on_click=_jump_section,
-            args=("assistant",),
-        )
-        st.button(
-            t("home.exp_c_btn_studies", lang),
-            key="home-open-studies",
-            use_container_width=True,
-            on_click=_jump_section,
-            args=("investigations",),
-            kwargs={"inv_pillar_filter": "All"},
-        )
-
-    _render_challenge_hub(experiments, records, lang)
-
-    st.header(t("home.compare_title", lang))
-    col_earth, col_space = st.columns(2, gap="medium")
-    with col_earth.container(border=True):
-        st.subheader(t("home.earth_title", lang))
-        st.markdown(t("home.earth_points", lang))
-    with col_space.container(border=True):
-        st.subheader(t("home.space_title", lang))
-        st.markdown(t("home.space_points", lang))
-
-    with st.expander(t("home.glossary_title", lang), expanded=False):
-        st.markdown(
-            f"- **{t('glossary.microgravity_term', lang)}:** {t('glossary.microgravity_def', lang)}\n"
-            f"- **{t('glossary.o2_term', lang)}:** {t('glossary.o2_def', lang)}\n"
-            f"- **{t('glossary.drop_diam_term', lang)}:** {t('glossary.drop_diam_def', lang)}\n"
-            f"- **{t('glossary.psi_term', lang)}:** {t('glossary.psi_def', lang)}"
-        )
-
-    st.subheader(t("home.archive_title", lang))
     chunk_count, chunk_model = _indexed_chunk_info()
     is_semantic = chunk_model.startswith("local-semantic:")
 
@@ -411,12 +349,102 @@ def show_overview(experiments: list[dict]) -> None:
             failed=failures,
         )
     )
+
+    st.header(t("home.start_title", lang))
+    c1, c2, c3 = st.columns(3, gap="medium")
+    with c1.container(border=True):
+        st.markdown(
+            _entry_card_html(t("home.exp_a_badge", lang), t("home.exp_a_title", lang), t("home.exp_a_desc", lang)),
+            unsafe_allow_html=True,
+        )
+        st.button(
+            t("home.exp_a_btn", lang),
+            type="primary",
+            key="home-start-j1",
+            use_container_width=True,
+            on_click=start_journey,
+            args=("journey_1", 1),
+        )
+    with c2.container(border=True):
+        st.markdown(
+            _entry_card_html(t("home.exp_b_badge", lang), t("home.exp_b_title", lang), t("home.exp_b_desc", lang)),
+            unsafe_allow_html=True,
+        )
+        st.button(
+            t("home.exp_b_btn", lang),
+            type="primary",
+            key="home-start-j2",
+            use_container_width=True,
+            on_click=start_journey,
+            args=("journey_2", 1),
+        )
+    with c3.container(border=True):
+        st.markdown(
+            _entry_card_html(t("home.exp_c_badge", lang), t("home.exp_c_title", lang), t("home.exp_c_desc", lang)),
+            unsafe_allow_html=True,
+        )
+        if flex_id:
+            st.button(
+                t("home.exp_c_btn_data", lang),
+                type="primary",
+                key="home-open-explorer",
+                use_container_width=True,
+                on_click=_open_experiment,
+                args=(flex_id,),
+            )
+        else:
+            st.button(
+                t("home.exp_c_btn_data", lang),
+                type="primary",
+                key="home-open-explorer",
+                use_container_width=True,
+                on_click=_jump_section,
+                args=("explorer",),
+            )
+
+    q1, q2 = st.columns(2, gap="medium")
+    q1.button(
+        t("home.exp_c_btn_studies", lang),
+        key="home-open-studies",
+        use_container_width=True,
+        on_click=_jump_section,
+        args=("investigations",),
+        kwargs={"inv_pillar_filter": "All"},
+    )
+    q2.button(
+        t("home.exp_c_btn_assistant", lang),
+        key="home-open-assistant",
+        use_container_width=True,
+        on_click=_jump_section,
+        args=("assistant",),
+    )
+
+    _render_challenge_hub(experiments, records, lang)
+
+    with st.expander(t("home.compare_title", lang), expanded=False):
+        col_earth, col_space = st.columns(2, gap="medium")
+        with col_earth.container(border=True):
+            st.subheader(t("home.earth_title", lang))
+            st.markdown(t("home.earth_points", lang))
+        with col_space.container(border=True):
+            st.subheader(t("home.space_title", lang))
+            st.markdown(t("home.space_points", lang))
+
+    with st.expander(t("home.glossary_title", lang), expanded=False):
+        st.markdown(
+            f"- **{t('glossary.microgravity_term', lang)}:** {t('glossary.microgravity_def', lang)}\n"
+            f"- **{t('glossary.o2_term', lang)}:** {t('glossary.o2_def', lang)}\n"
+            f"- **{t('glossary.drop_diam_term', lang)}:** {t('glossary.drop_diam_def', lang)}\n"
+            f"- **{t('glossary.psi_term', lang)}:** {t('glossary.psi_def', lang)}"
+        )
+
     with st.expander(t("home.tech_diag_label", lang), expanded=False):
         raw_model = chunk_model.split(":", 1)[-1]
         model_short = "local SentenceTransformer" if re.fullmatch(r"[0-9a-f]{32,40}", raw_model) else raw_model
         gemini_info = gemini_status_summary(lang)
         st.caption(f"Index profile: `{model_short}` ({chunk_count} indexed entries)")
         st.caption(gemini_info["summary"])
+
     st.warning(t("home.warning_conditions", lang))
     if not documents:
         st.info(t("home.no_docs", lang))
@@ -774,6 +802,7 @@ def show_search(experiments: list[dict]) -> None:
             filters.append({"field": "velocity", "unit": "cm/s", "min": vmin, "max": vmax})
         if fuel.strip():
             filters.append({"field": "fuel", "value": fuel.strip()})
+        session_id = str(st.session_state.setdefault("_gemini_session_id", uuid4().hex[:12]))
         with st.spinner(t("ast.spinner", lang)):
             result = answer(
                 question,
@@ -782,6 +811,7 @@ def show_search(experiments: list[dict]) -> None:
                 numeric_filters=filters or None,
                 language=lang,
                 use_llm=bool(use_llm and has_llm),
+                session_id=session_id,
             )
         st.session_state["scientific_answer"] = result
         st.session_state["scientific_query_context"] = {
@@ -997,27 +1027,29 @@ def show_ingestion(experiments: list[dict]) -> None:
             st.markdown(t("src.sec4_body", lang))
 
     st.divider()
-    st.header(t("src.ingestion_title", lang))
     if readonly:
+        st.header(t("src.ingestion_title", lang))
         st.info(t("src.ingestion_readonly", lang))
     else:
-        st.write(t("src.ingestion_desc", lang))
-        with st.expander(t("src.cli_commands", lang)):
-            st.code(
-                "python scripts/fetch_nasa_resources.py --guide --psi-manual\n"
-                "python scripts/fetch_psi_tables.py --ids PSI-25 PSI-26 PSI-68 PSI-69 PSI-98 PSI-99 PSI-100 PSI-101 PSI-102\n"
-                "python scripts/fetch_psi_tables.py --ids PSI-69 PSI-25 PSI-102 --pdfs\n"
-                "python scripts/ingest_nasa.py",
-                language="powershell",
-            )
-        c1, c2 = st.columns(2)
-        if c1.button(t("src.ingestion_btn", lang), type="primary"):
-            st.session_state["ingestion_job_id"] = enqueue_ingestion()
-        if c2.button(t("src.refresh_btn", lang)):
-            views.clear_cache()
-            st.rerun()
-        if st.session_state.get("ingestion_job_id"):
-            _job_monitor(st.session_state["ingestion_job_id"])
+        has_job = bool(st.session_state.get("ingestion_job_id"))
+        with st.expander(t("src.ingestion_title", lang), expanded=has_job):
+            st.write(t("src.ingestion_desc", lang))
+            with st.expander(t("src.cli_commands", lang)):
+                st.code(
+                    "python scripts/fetch_nasa_resources.py --guide --psi-manual\n"
+                    "python scripts/fetch_psi_tables.py --ids PSI-25 PSI-26 PSI-68 PSI-69 PSI-98 PSI-99 PSI-100 PSI-101 PSI-102\n"
+                    "python scripts/fetch_psi_tables.py --ids PSI-69 PSI-25 PSI-102 --pdfs\n"
+                    "python scripts/ingest_nasa.py",
+                    language="powershell",
+                )
+            c1, c2 = st.columns(2)
+            if c1.button(t("src.ingestion_btn", lang), type="primary"):
+                st.session_state["ingestion_job_id"] = enqueue_ingestion()
+            if c2.button(t("src.refresh_btn", lang)):
+                views.clear_cache()
+                st.rerun()
+            if st.session_state.get("ingestion_job_id"):
+                _job_monitor(st.session_state["ingestion_job_id"])
 
     jobs = ScientificStore().jobs()
     if jobs:

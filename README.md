@@ -1,72 +1,67 @@
-# PSI Flame Microgravity — Flame in Freefall (NASA Space Apps 2026)
+# Flame in Freefall — PSI Flame Microgravity (NASA Space Apps 2026)
 
-> **Bilingual / Bilíngue:** Default interface in **English (`en`)** with persistent top-bar **`Language: EN → PT-BR`** toggle and segmented sidebar **`Language: [EN | PT-BR]`** selector.  
-> Interactive scientific workbench covering **12 NASA Physical Sciences Informatics (PSI)** investigations and two official guides. The archive preserves **40 documents, 82,099,713 bytes** (37 with useful content and three explicitly marked ISA placeholders), immutable **SHA-256** provenance, conservative **Pint** normalization, and an evidence-first research assistant.
+> **Bilingual / Bilíngue:** Default interface in **English (`en`)** with a single top-bar **`EN | PT-BR`** selector.  
+> Interactive scientific workbench covering **12 NASA Physical Sciences Informatics (PSI)** combustion investigations and **2 official NASA reference guides** (`NASA-CONTEXT`). The archive preserves **40 documents (82,099,713 bytes)** — 37 with scientific or documentary content and 3 explicitly flagged 56-byte ISA placeholders (`s_PSI-*.txt`) — immutable **SHA-256** provenance, conservative **Pint** normalization, **117 extracted tables** (`10,114` tabular rows, `26,803` typed cell observations), and **15,524 searchable evidence passages**.
 
 ---
 
 ## Why Freefall Changes Fire
 
-On Earth, buoyancy lifts hot combustion gases and draws fresh oxygen inward, shaping a familiar teardrop flame. In orbital microgravity (freefall), natural buoyancy nearly vanishes: flames become spherical, heat and soot remain near the fuel, low-temperature **cool flames** can persist, and smoke aerosols evolve differently along cabin airflow.
+On Earth (`1g`), buoyancy lifts hot combustion gases and pulls fresh oxygen inward, stretching flames into a teardrop. In orbital microgravity (`~0g` freefall), natural buoyancy nearly vanishes: flames become **spherical**, heat and soot linger near the fuel, low-temperature **cool flames** can persist after visible extinction, and smoke aerosols evolve differently along cabin airflow.
 
-NASA's PSI repository spreads these studies across heterogeneous spreadsheets, engineering requirements PDFs, and final reports using conflicting unit conventions (`psia`, `psig`, `mmHg`, `cm/s`, mole fractions). **PSI Flame Microgravity** covers all three spacecraft fire-safety pillars (**Prevention**, **Detection**, **Suppression**) and distinguishes **test conditions, reported experimental results, numerical simulations, calculations and metadata**.
-
----
-
-## Workspace Structure & Guided Discovery
-
-On arrival, **Home / Overview (`home`)** acts as an interactive science exhibit (*"Explore the Science of Fire in Space"*) with plain-English microgravity physics (1g vs. 0g), a beginner glossary, progressive disclosure (**Guided Exploration** default vs. **Advanced Research** in the sidebar), and **three starting experiences**:
-
-- **Experience A — Discover How Fire Behaves**: Interactive 4-step **Guided Journey 1** (`src/guided_journeys.py`) structured around **5 Scientific Questions** (*What am I exploring · Why does it matter · NASA evidence · Conclusions · Limitations*), covering 1g vs. 0g buoyancy, NASA's **FLEX (`PSI-69`)** experiment and ISS PDF page preview, live interactive Plotly exploration paired with *"How to Read This Chart"*, and preserved caveats (`Burning rate; mm`, `FLEX-2` PDF notice).
-- **Experience B — Investigate Spacecraft Fire Safety**: Interactive 4-step **Guided Journey 2** with the **5 Scientific Questions** framework exploring cabin hazards across **Prevention** (`BASS`, `BASS-II`, `Saffire I–III`), **Detection** (`SAME`, `SAME-R`), and **Suppression** (`FLEX`, `FLEX-2`), live inspection of `PSI-25 · BASS-II` plots and `PSI-102 · SAME` reports, method-boundary guardrails, and 1-click transition to advanced tools with a persistent *Return to Guided Journey* control.
-- **Experience C — Explore Scientific Data & Space Apps Challenge Hub**: Persistent top context navigation bar (**Where you are · `← Back` · `🏠 Home` · `Language: EN → PT-BR`**), an interactive Homepage **Challenge Hub (`SUMMARIZE · RANK · INTERPRET`)**, and direct access to all 7 workspace sections:
-
-1. **Home / Overview (`home`)**: Discovery-first entry, Earth vs. microgravity contrast, live verified archive/index metrics, starting experiences A/B/C, and interactive **Challenge Hub (`SUMMARIZE · RANK · INTERPRET`)**.
-2. **Investigations (`investigations`)**: Searchable catalog of 12 NASA PSI studies + 2 official reference guides grouped under NASA-CONTEXT, with permanent URLs, confirmed DOIs, objectives, caveats, and direct jump into Data Explorer.
-3. **Data Explorer (`explorer`)**: Study selector (defaulting to `PSI-69 · FLEX`), collapsible **Variable & Unit Glossary**, chart-first **Visual First Look** + **SUMMARIZE & INTERPRET** directly in `Tab 0`, unified Plotly charts paired with **How to Read This Chart**, descriptive statistics, progressive-disclosure engineering controls, source tables with original row numbers, document integrity & SHA-256 verification, in-PDF keyword reader, and ISA-Tab metadata.
-4. **Compare (`compare`)**: Guided cross-study schema and methodology audit (with quick presets such as *FLEX vs BASS-II*, *SAME vs SAME-R*, *Saffire-I vs Saffire-II*) plus a deterministic **0–100 Reading Priority Ranking** chart & matrix (never a safety score).
-5. **Scientific Assistant (`assistant`)**: Conversational `st.chat_message` workflow backed by hybrid search (SQLite **FTS5** + offline `lexical-vectors` or local multilingual embeddings when configured), progressive-disclosure filters, instant-executing example questions, structured **SUMMARIZE / INTERPRET** synthesis cards, and optional Google Gemini API integration (`src/gemini_provider.py`, blocking private `local_upload` excerpts and verifying every claim extratively against retrieved NASA text).
-6. **Visual Page Review (`visual_review`)**: Offline rendered PDF diagram inspector with optional opt-in VLM qualitative review strictly tagged as `inference` (`needs_human_review = True`).
-7. **Sources & Methodology (`sources`)**: Full provenance, unit normalization policy, known scientific caveats, verification hashes, and archive synchronization controls (read-only when publicly deployed).
+**Flame in Freefall** structures NASA's fragmented PSI files across all three spacecraft fire-safety pillars (**Prevention**, **Detection**, **Suppression**) while strictly separating **test conditions, reported experimental outcomes, numerical simulations, derived calculations, and metadata** — never equating `26,803` typed observations to `26,803` independent experiments or treating any metric as flight certification.
 
 ---
 
-## Included NASA PSI Dataset
+## Workspace & Key Capabilities
 
-- **Prevention**: `PSI-25` (BASS-II), `PSI-26` (BASS), `PSI-98` (Saffire-I), `PSI-99` (Saffire-II), `PSI-100` (Saffire-III)
-- **Detection**: `PSI-101` (SAME-R), `PSI-102` (SAME)
-- **Suppression**: `PSI-68` (FLEX-2), `PSI-69` (FLEX)
-- **Context Guides**: *A Researcher's Guide to ISS Combustion Science* and *Complete PSI Database Guide*
-- **Stage 2 additions**: `PSI-62` (UFGM flame-spread modeling, **metadata only**), `PSI-117` (cool-flame CFD and experimental reference series), and `PSI-159` (ACME CFI-G reports, conditions, calculations and reported outcomes).
-
-Stage 2 source hashes, acquisition details, publication/figure maps and availability limits are in [docs/STAGE2_SOURCE_AUDIT.md](docs/STAGE2_SOURCE_AUDIT.md); integration/validation is recorded in [docs/STAGE2_INTEGRATION.md](docs/STAGE2_INTEGRATION.md). Reproduce the verified archive import with `python scripts/import_stage2_archive.py <experienciass.zip> --verify-online`, then `python scripts/ingest_nasa.py`. Offline replay omits `--verify-online` and requires the same previously verified ZIP hash.
+1. **Discovery Home & Space Apps Challenge Hub (`SUMMARIZE · RANK · INTERPRET`)**:
+   - Aerospace Navy hero banner with an embedded **1g Teardrop vs. ~0g Spherical** visual schematic and live verified archive counters (`12` PSI studies, `40` NASA files, `117` tables, `15,524` passages).
+   - Three equal-height starting paths: **Discover the Science** (Guided Journey 1), **Explore Fire Safety** (Guided Journey 2), and **Investigate NASA Data** (Data Explorer), plus direct links to **Investigations** and **Scientific Assistant**.
+   - Interactive **Challenge Hub** tabs for **SUMMARIZE Study**, **RANK Priority** (`0–100` reading-priority index, never a fire-risk score), and **INTERPRET Safety Impact**.
+2. **Guided Journeys 1 & 2 (4 Steps · 5 Scientific Questions)**:
+   - Repeatable *What am I exploring · Why does it matter · What does the NASA evidence show · What can I conclude · What are the limitations?* framework with interactive Plotly plots, PDF previews, and persistent *Return to Guided Journey* state.
+3. **Investigations Catalog (`investigations`)**:
+   - Searchable inventory of all 12 NASA PSI studies and 2 official guides with confirmed DOIs, permanent NASA PSI links, pillar filters, caveats, and 1-click jump to Data Explorer.
+4. **Data Explorer (`explorer`)**:
+   - 6-tab workbench (*Overview & Variables* with chart-first *Visual First Look*, *Interactive Charts* with reversible column fixes & series analysis, *Tables & Source Rows*, *Documents & Integrity* with SHA-256 verification, *PDF Reader & Search*, and *ISA-Tab Metadata*).
+5. **Compare (`compare`)**:
+   - Side-by-side schema, unit, and evidence-role compatibility audit across 2–3 studies plus deterministic reading-priority ranking.
+6. **Evidence-First Scientific Assistant (`assistant`)**:
+   - Bilingual hybrid retrieval (**SQLite FTS5** + 384-d local embeddings or deterministic offline lexical vectors), row-aligned physical filters (`O₂`, `psia`, `cm/s`, fuel), verifiable citations, and optional **Google Gemini (`gemini-2.5-flash`)** excerpt selection & anchored 1-sentence explanations verified programmatically via `validate_claims()`.
+7. **Visual Page Review (`visual_review`) & Sources (`sources`)**:
+   - Offline PyMuPDF page inspector (with optional consent-gated VLM candidate review isolated as `inference`) and complete archive SHA-256 inventory.
 
 ---
 
-## Key Scientific Caveats (Preserved Transparently)
+## Included NASA PSI Dataset (`12` PSI Studies + `2` Context Guides)
 
-1. **`Burning rate; mm` in `PSI-69_Experimental table_FLEX.csv`**: Original NASA column declares length without time (`mm` instead of `mm/s` or `mm²/s`). Kept raw without automated dimensional conversion.
-2. **FLEX-2 Requirements PDF under `PSI-69`**: NASA catalogs the requirements PDF under `PSI-69`, while its cover title states `FLEX-2`; an explicit warning surfaces wherever this file is displayed.
-3. **SAME Ignitor Drawing (`PSI-102`)**: 1-page CAD engineering PDF contains no embedded text layer; full OCR requires external Tesseract.
-4. **No Certification Claim**: Retrieved summaries, statistics, regressions, and reading rankings never replace independent scientific review or spacecraft fire-safety qualification.
+- **Prevention:** `PSI-25` (BASS-II, `10.60555/4qc4-de67`), `PSI-26` (BASS, `10.60555/58h4-dy80`), `PSI-62` (UFGM modeling, `10.60555/e9xp-ex83`, *metadata only*), `PSI-98` (Saffire-I, `10.60555/0t15-1z43`), `PSI-99` (Saffire-II, `10.60555/2chp-m469`), `PSI-100` (Saffire-III, `10.60555/040q-4h36`)
+- **Detection:** `PSI-101` (SAME-R, `10.60555/2np7-jv14`), `PSI-102` (SAME, `10.60555/gd4k-8h62`)
+- **Suppression & Cool Flames:** `PSI-68` (FLEX-2, `10.60555/byp8-h018`), `PSI-69` (FLEX, `10.60555/mbq8-0451`), `PSI-117` (Cool Flame Dynamics CFD/FLEX, `10.60555/gz0q-b577`), `PSI-159` (ACME CFI-G, `10.60555/cyt1-kh64`)
+- **Reference Guides (`NASA-CONTEXT`):** *A Researcher's Guide to ISS Combustion Science* & *Complete PSI Database Guide*
 
 ---
 
-## Quickstart (Local Development)
-
-Requires **Python 3.11** (matching `.python-version`).
+## Quickstart (Windows · Python 3.11+)
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m streamlit run app.py
+.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8511 --server.address 127.0.0.1
 ```
 
-On cold start, `app.py` invokes `ensure_scientific_bootstrap()`, initializing both SQLite stores from preserved repository artifacts without API keys. Separate source/index checkpoints also detect additions to an existing checkout and recover an interrupted or deferred index update. Initial extraction/model indexing time depends on corpus size and local hardware.
+Open `http://127.0.0.1:8511`. On cold start, `ensure_scientific_bootstrap()` initializes `data/scientific.sqlite3` and `data/search.sqlite3` automatically from preserved repository artifacts with zero API keys required.
 
-### Optional Providers (Unconfigured by Default)
-- Local multilingual embeddings (`requirements-models.txt` + `scripts/setup_embeddings.py` + `RAG_EMBEDDING_MODEL`).
-- Optional **Google Gemini API** (`GEMINI_API_KEY` or `GOOGLE_API_KEY`, default `GEMINI_MODEL=gemini-2.5-flash`) and OpenAI-compatible RAG / VLM endpoints configured exclusively via local `.env` or Streamlit Cloud Secrets (see `.env.example` and `docs/DEPLOYMENT.md`). Private `local_upload` excerpts are blocked from Gemini requests, and never commit credentials.
+### Optional Google Gemini Configuration
+The app works 100% offline in **Verified Local Evidence Mode**. To enable optional Gemini excerpt selection and anchored explanations (`gemini-2.5-flash`):
+
+```powershell
+.\.venv\Scripts\python.exe scripts/setup_gemini.py
+.\.venv\Scripts\python.exe scripts/gemini_live_check.py
+```
+
+Private `local_upload` excerpts are blocked by code (`filter_public_nasa_evidence`) and rate caps (`10/min`, `250/day`, `40/session`) are enforced automatically. Never commit `.env` or `.streamlit/secrets.toml`.
 
 ---
 
@@ -74,25 +69,19 @@ On cold start, `app.py` invokes `ensure_scientific_bootstrap()`, initializing bo
 
 ```powershell
 .\.venv\Scripts\python.exe -m ruff check app.py src scripts tests
-.\.venv\Scripts\python.exe -m mypy app.py src/design_system.py src/gemini_provider.py src/challenge_engine.py src/assistant.py src/scientific_ui.py src/guided_journeys.py src/views.py src/i18n.py tests/test_gemini_and_challenge.py
+.\.venv\Scripts\python.exe -m mypy app.py src/design_system.py src/gemini_provider.py src/challenge_engine.py src/assistant.py src/scientific_ui.py src/guided_journeys.py src/views.py src/i18n.py src/pipeline.py src/scientific_store.py src/storage.py src/units.py src/retrieval.py src/comparison.py src/relevance.py scripts/setup_gemini.py scripts/gemini_live_check.py tests/test_gemini_and_challenge.py
 .\.venv\Scripts\python.exe -m compileall -q app.py src scripts tests
 .\.venv\Scripts\python.exe -m pip check
-$env:RAG_EMBEDDING_MODEL=""; .\.venv\Scripts\python.exe -m pytest -q
+$env:PYTHONUNBUFFERED="1"; $env:RAG_EMBEDDING_MODEL=" "; $env:HF_HUB_OFFLINE="1"; $env:TRANSFORMERS_OFFLINE="1"; .\.venv\Scripts\python.exe -m pytest -q
 ```
 
 ---
 
-## Key Project Documentation
-- Owner Local Acceptance Guide (PT-BR): [docs/LOCAL_ACCEPTANCE.md](docs/LOCAL_ACCEPTANCE.md)
-- Feature Audit: [docs/FEATURE_AUDIT.md](docs/FEATURE_AUDIT.md)
-- Scientific Review Checklist: [docs/SCIENTIFIC_REVIEW_CHECKLIST.md](docs/SCIENTIFIC_REVIEW_CHECKLIST.md)
-- Design System & UX Audit: [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) · [docs/UX_AUDIT.md](docs/UX_AUDIT.md)
-- Testing & Browser Verification Report: [docs/TEST_REPORT.md](docs/TEST_REPORT.md)
-- Deployment & Public Hosting: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) · [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md)
+## Final Release & Stage 3 Documentation
 
-## Public Deployment Architecture
-
-- **Primary Runtime (`Streamlit Community Cloud`)**: Runs `app.py` with `PSI_READONLY_MODE` auto-detected on cloud hosts (`STREAMLIT_SHARING_MODE` / `/mount/src`) or set explicitly. Public visitors cannot upload files or overwrite the NASA archive; ephemeral chart column overrides remain session-scoped.
-- **Static Showcase (`docs/index.html` for GitHub Pages)**: GitHub Pages only serves static assets; `docs/index.html` provides a bilingual overview and links directly to the interactive Streamlit Community Cloud app.
-
-See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) and [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md) for deployment instructions.
+- **A — Project Overview (PT-BR):** [docs/PROJECT_OVERVIEW_PTBR.md](docs/PROJECT_OVERVIEW_PTBR.md)
+- **B — Complete Functional Manual (PT-BR):** [docs/FEATURES_AND_WORKFLOWS_PTBR.md](docs/FEATURES_AND_WORKFLOWS_PTBR.md)
+- **C — Real Folder Structure (PT-BR):** [docs/FOLDER_STRUCTURE_PTBR.md](docs/FOLDER_STRUCTURE_PTBR.md)
+- **D — NASA Space Apps Submission Description (EN):** [docs/SUBMISSION_DESCRIPTION_EN.md](docs/SUBMISSION_DESCRIPTION_EN.md)
+- **E — Final Release Status (PT-BR):** [docs/FINAL_RELEASE_STATUS_PTBR.md](docs/FINAL_RELEASE_STATUS_PTBR.md)
+- Provenance, Testing & Deployment: [docs/DATA_PROVENANCE.md](docs/DATA_PROVENANCE.md) · [docs/TEST_REPORT.md](docs/TEST_REPORT.md) · [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) · [docs/AI_USAGE.md](docs/AI_USAGE.md)

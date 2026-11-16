@@ -3,7 +3,7 @@ maxUploadSize = 25
 headless = true
 
 [client]
-toolbarMode = "viewer"
+toolbarMode = "minimal"
 showErrorDetails = "none"
 
 [browser]

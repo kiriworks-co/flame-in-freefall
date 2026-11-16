@@ -16,6 +16,15 @@ from .gemini_provider import GeminiProviderError, gemini_configured, request_gem
 from .retrieval import RetrievalIndex
 
 _NUMBERS = re.compile(r"(?<![\w])[-+]?\d+(?:[.,]\d+)?(?:[eE][-+]?\d+)?")
+_CERTIFICATION_CLAIM_RE = re.compile(
+    r"\b(?:flight[- ]certified|fire[- ]safe|certifies|certified safe|proves safety|safety certification|"
+    r"certifica(?:ção|do) de segurança|prova segurança)\b",
+    re.IGNORECASE,
+)
+_MEASUREMENT_MISLABEL_RE = re.compile(
+    r"\b(?:measured result|experimental measurement|medição experimental|resultado medido)\b",
+    re.IGNORECASE,
+)
 
 
 def sanitize_markdown(text: str) -> str:
@@ -51,14 +60,35 @@ def validate_claims(payload: dict, evidence: list[dict], language: str = "pt") -
         if claim.get("text", quote) != quote:
             errors.append("Unverifiable free-form paraphrase rejected: only verbatim source excerpts are shown." if english else "Paráfrase livre não verificável: exibimos apenas trechos originais.")
             continue
-        if not set(_NUMBERS.findall(quote)).issubset(_NUMBERS.findall(source["text"])):
+        source_numbers = set(_NUMBERS.findall(source["text"]))
+        if not set(_NUMBERS.findall(quote)).issubset(source_numbers):
             errors.append("Numeric value unsupported by the cited source." if english else "Valor numérico sem apoio na fonte citada.")
             continue
         source_kind = source.get("evidence_kind", "document_context")
         if claim.get("kind", source_kind) != source_kind:
             errors.append("Category does not match the source: test condition is not a measurement." if english else "A categoria não corresponde à fonte: condição não é medição.")
             continue
-        accepted.append({"citation": cid, "quote": quote, "kind": source_kind})
+        entry: dict[str, str] = {"citation": str(cid), "quote": quote, "kind": str(source_kind)}
+        raw_explanation = claim.get("explanation")
+        if isinstance(raw_explanation, str) and raw_explanation.strip():
+            clean_exp = re.sub(r"\s+", " ", raw_explanation.strip())[:400]
+            if not set(_NUMBERS.findall(clean_exp)).issubset(source_numbers):
+                errors.append(
+                    "Unanchored explanation omitted (numbers not verified in cited source)."
+                    if english
+                    else "Explicação omitida por conter números sem apoio na fonte citada."
+                )
+            elif _CERTIFICATION_CLAIM_RE.search(clean_exp) or (
+                source_kind in {"condition", "simulation", "metadata"} and _MEASUREMENT_MISLABEL_RE.search(clean_exp)
+            ):
+                errors.append(
+                    "Overstated explanation omitted to preserve evidence boundaries."
+                    if english
+                    else "Explicação extrapolada omitida para preservar os limites da evidência."
+                )
+            else:
+                entry["explanation"] = clean_exp
+        accepted.append(entry)
     return accepted, errors
 
 
@@ -107,7 +137,7 @@ def _llm_claims(question: str, evidence: list[dict], language: str) -> dict:
 
 def answer(question: str, index: RetrievalIndex | None = None, study_ids: list[str] | None = None,
            numeric_filters: list[dict] | None = None, language: str = "pt", use_llm: bool = False,
-           active_study: str | None = None) -> dict:
+           active_study: str | None = None, session_id: str = "default") -> dict:
     index = index or RetrievalIndex()
     evidence = index.search(question, study_ids=study_ids, numeric_filters=numeric_filters,
                             active_study=active_study, limit=8)
@@ -129,15 +159,15 @@ def answer(question: str, index: RetrievalIndex | None = None, study_ids: list[s
     if use_llm and evidence:
         if not llm_configured():
             warnings.append(
-                "AI synthesis provider is not configured (set GEMINI_API_KEY or RAG_MODEL); verified local NASA retrieval remains active."
+                "External AI synthesis is not configured in this environment; verified local NASA retrieval remains active."
                 if english
-                else "Provedor de IA não configurado (defina GEMINI_API_KEY ou RAG_MODEL); recuperação local verificada preservada."
+                else "Síntese externa de IA não configurada neste ambiente; recuperação local verificada da NASA preservada."
             )
         else:
             use_gemini = gemini_configured()
             try:
                 raw_payload = (
-                    request_gemini_claims(question, evidence, language)
+                    request_gemini_claims(question, evidence, language, session_id=session_id)
                     if use_gemini
                     else _llm_claims(question, evidence, language)
                 )
@@ -174,11 +204,17 @@ def answer(question: str, index: RetrievalIndex | None = None, study_ids: list[s
     if claims:
         source_by_id = {e["id"]: e for e in evidence}
         paragraphs = []
+        note_prefix = "Grounded explanation" if english else "Explicação ancorada"
         for claim in claims:
             source = source_by_id[claim["citation"]]
-            paragraphs.append(f"{sanitize_markdown(claim['quote'])}\n\n"
-                              f"{sanitize_markdown(source['study_id'])} · {sanitize_markdown(source['document_name'])} · "
-                              f"{sanitize_markdown(source['location'])} · {claim['kind']}")
+            block = (
+                f"{sanitize_markdown(claim['quote'])}\n\n"
+                f"{sanitize_markdown(source['study_id'])} · {sanitize_markdown(source['document_name'])} · "
+                f"{sanitize_markdown(source['location'])} · {claim['kind']}"
+            )
+            if claim.get("explanation"):
+                block += f"\n\n{note_prefix}: {sanitize_markdown(claim['explanation'])}"
+            paragraphs.append(block)
         text = intro + "\n\n" + "\n\n".join(paragraphs)
     else:
         text = intro
