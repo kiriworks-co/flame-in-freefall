@@ -1,6 +1,5 @@
 # Flame in Freefall — Ready-to-Paste Submission Texts (EN)
 
-> **Editorial note — 2026-11-15, Stage 3 baseline `e8db878`.** Adapted from the existing Stage 2 submission draft and the final Stage 3 documentation. Copy the text blocks into the matching portal fields; field names and length limits have not been verified in the live submission form. Archive counts describe the locally validated release, not independent experiments. Search passage counts vary with the selected embedding/chunking mode. Public hosting status and URL must be confirmed separately; this document does not claim a completed deployment. No live Gemini/VLM API validation is claimed. No separately identified owner-authored scientific manuscript was found in the reviewed project documentation; its wording can be incorporated when supplied.
 
 ---
 
@@ -199,4 +198,4 @@ Flame in Freefall helps students, educators, and researchers trace microgravity 
 - Source repository currently remains private; the application itself is public and searchable.
 - Provenance: [DATA_PROVENANCE.md](DATA_PROVENANCE.md) and [STAGE2_SOURCE_AUDIT.md](STAGE2_SOURCE_AUDIT.md).
 - AI disclosure: [AI_USAGE.md](AI_USAGE.md).
-- Final release and validation status: [FINAL_RELEASE_STATUS_PTBR.md](FINAL_RELEASE_STATUS_PTBR.md).
+- Software test results: [TEST_REPORT.md](TEST_REPORT.md).
