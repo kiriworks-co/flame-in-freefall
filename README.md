@@ -1,13 +1,13 @@
 # Flame in Freefall — PSI Flame Microgravity (NASA Space Apps 2026)
 
 > **Bilingual / Bilíngue:** Default interface in **English (`en`)** with a single top-bar **`EN | PT-BR`** selector.  
-> Interactive scientific workbench covering **12 NASA Physical Sciences Informatics (PSI)** combustion investigations and **2 official NASA reference guides** (`NASA-CONTEXT`). The archive preserves **40 documents (82,099,713 bytes)** — 37 with scientific or documentary content and 3 explicitly flagged 56-byte ISA placeholders (`s_PSI-*.txt`) — immutable **SHA-256** provenance, conservative **Pint** normalization, **117 extracted tables** (`10,114` tabular rows, `26,803` typed cell observations), and **15,524 searchable evidence passages**.
+> Interactive scientific workbench covering **12 NASA Physical Sciences Informatics (PSI)** combustion investigations and **2 official NASA reference guides** (`NASA-CONTEXT`). The archive preserves **40 documents (82,099,713 bytes)** — 37 with scientific or documentary content and 3 explicitly flagged 56-byte ISA placeholders (`s_PSI-*.txt`) — immutable **SHA-256** provenance, conservative **Pint** normalization, **117 extracted tables** (`10,114` tabular rows, `26,803` typed cell observations), and **15,524 searchable evidence passages in the validated local semantic index** (the cloud lexical fallback has a different passage count).
 
 ---
 
 ## Why Freefall Changes Fire
 
-On Earth (`1g`), buoyancy lifts hot combustion gases and pulls fresh oxygen inward, stretching flames into a teardrop. In orbital microgravity (`~0g` freefall), natural buoyancy nearly vanishes: flames become **spherical**, heat and soot linger near the fuel, low-temperature **cool flames** can persist after visible extinction, and smoke aerosols evolve differently along cabin airflow.
+On Earth (`1g`), buoyancy lifts hot combustion gases and pulls fresh oxygen inward, stretching flames into a teardrop. In orbital microgravity (`~0g` freefall), natural buoyancy nearly vanishes: diffusion-dominated flames can become **approximately spherical**, heat and soot linger near the fuel, low-temperature **cool flames** can persist after visible extinction, and smoke aerosols evolve differently along cabin airflow.
 
 **Flame in Freefall** structures NASA's fragmented PSI files across all three spacecraft fire-safety pillars (**Prevention**, **Detection**, **Suppression**) while strictly separating **test conditions, reported experimental outcomes, numerical simulations, derived calculations, and metadata** — never equating `26,803` typed observations to `26,803` independent experiments or treating any metric as flight certification.
 

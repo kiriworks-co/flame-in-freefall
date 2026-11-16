@@ -1,5 +1,14 @@
 # PROGRESS — Retomada de sessões
 
+## Publicação assistida — 2026-11-15 (em andamento)
+
+- GitHub confirmado: https://github.com/kiriworks-co/flame-in-freefall . Remoto inicialmente vazio; main avançada por fast-forward até e8db878; push atômico de main e feat/spaceapps-public-release confirmado por ls-remote/fetch.
+- 279 arquivos versionados (186.839.350 bytes); 353 blobs históricos verificados para padrões de credenciais, sem correspondências; nenhum blob acima de 95 MiB. .env e secrets.toml não versionados. Checagem focada, sem garantia de auditoria exaustiva.
+- Índice code-review-graph atualizado para e8db878; documentos não são indexados, portanto impacto documental conferido por leitura direta.
+- Arquivos de deploy presentes; Python 3.11 selecionado explicitamente no Streamlit. Implantação e URL pública ainda aguardam confirmação.
+- Textos de submissão consolidados em SUBMISSION_TEXTS_EN.md a partir do rascunho existente e docs da Etapa 3. submission_drafts/ preservado localmente, fora dos commits desta publicação.
+- Nenhuma chamada Gemini real executada; fallback sem chave é o modo de publicação. Suíte completa de 164 testes é resultado da Etapa 3, não reexecutada nesta sessão.
+
 ## Etapa 3 — Concluída e Validada (`2026-11-15`)
 
 - **Checkpoint preservado:** `checkpoint/pre-stage3-final` em `e227b2f`; trabalho executado exclusivamente na branch `feat/spaceapps-public-release` sem reconstruir desnecessariamente `data/scientific.sqlite3` ou `data/search.sqlite3`.

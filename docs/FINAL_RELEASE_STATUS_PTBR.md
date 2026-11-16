@@ -72,7 +72,9 @@ Verificada ponta a ponta:
 
 ## 6. Prontidão para Implantação Pública
 
-- **Estado atual:** preparado para publicação em GitHub + Streamlit Community Cloud; **nenhum deploy público ou `git push` foi executado ainda**.
+- **GitHub confirmado nesta publicação assistida:** [kiriworks-co/flame-in-freefall](https://github.com/kiriworks-co/flame-in-freefall), repositório privado preservado. `main` avançou por fast-forward para `e8db878`; push de `main` e `feat/spaceapps-public-release` confirmado pelo remoto. Os 279 arquivos dessa versão, incluindo os originais NASA, estão publicados.
+- **Streamlit Community Cloud:** acesso ao repositório privado autorizado pelo proprietário; implantação solicitada com `main`, `app.py`, Python `3.11` e modo somente leitura sem Gemini. URL e validação pública ainda aguardam confirmação.
+- **Documentação adicional:** [SUBMISSION_TEXTS_EN.md](SUBMISSION_TEXTS_EN.md) reúne textos copiáveis; [manual completo em PDF](FLAME_IN_FREEFALL_MANUAL_COMPLETO_PTBR.pdf) reúne a documentação validada em 27 páginas. Nenhum texto científico separado com autoria identificável foi localizado.
 - **Checklist verificado:**
   - `requirements.txt` enxuto (sem dependências pesadas de ML obrigatórias na nuvem), `.python-version` (`3.11`), `.streamlit/config.toml` e `.streamlit/secrets.toml.example` presentes.
   - Inicialização automática (*cold-start*) via `ensure_scientific_bootstrap()` a partir dos arquivos originais e extrações versionadas.
