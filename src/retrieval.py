@@ -118,13 +118,16 @@ def structural_chunks(experiment: dict, document: dict, extraction: dict) -> lis
     for caption in extraction.get("captions", []):
         add(caption.get("text", ""), kind="caption", page=caption.get("page"),
             location=f"página {caption.get('page')}, {caption.get('kind')} {caption.get('number')}", observations=[])
-    all_obs = extraction.get("observations", [])
+    observations_by_row: dict[tuple, list[dict]] = {}
+    for observation in extraction.get("observations", []):
+        key = (observation.get("table_index"), observation.get("row_number"))
+        observations_by_row.setdefault(key, []).append(observation)
     for ti, table in enumerate(extraction.get("tables", [])):
         columns = table.get("columns", [])
         row_numbers = table.get("source_rows", table.get("row_numbers", []))
         for ri, row in enumerate(table.get("rows", [])):
             rn = row_numbers[ri] if ri < len(row_numbers) else (table.get("header_row") or 1) + ri + 1
-            observations = [o for o in all_obs if o.get("table_index") == ti and o.get("row_number") == rn]
+            observations = observations_by_row.get((ti, rn), [])
             add(" | ".join(f"{col}: {row[j] if j < len(row) else ''}" for j, col in enumerate(columns)),
                 kind="table_row", page=table.get("page"), table_index=ti, row_number=rn,
                 location=f"{table.get('location', table.get('name', 'tabela'))}; linha {rn}",
@@ -284,6 +287,7 @@ class RetrievalIndex:
         batches = 0
         with self.connect() as db:
             known = {cid: (model, payload) for cid, model, payload in db.execute("SELECT id,model,payload FROM chunks")}
+            fts_ids = {row[0] for row in db.execute("SELECT id FROM chunks_fts")}
         for experiment in experiments:
             for document in experiment.get("documents", []):
                 if document.get("status") == "erro":
@@ -320,8 +324,11 @@ class RetrievalIndex:
             db.execute("BEGIN IMMEDIATE")
             for cid, payload, vector, mode, searchable in encoded:
                 db.execute("INSERT OR REPLACE INTO chunks VALUES (?,?,?,?)", (cid, payload, vector, mode))
-                db.execute("DELETE FROM chunks_fts WHERE id=?", (cid,))
+                # FTS id is UNINDEXED: avoid a full scan for every new passage.
+                if cid in fts_ids:
+                    db.execute("DELETE FROM chunks_fts WHERE id=?", (cid,))
                 db.execute("INSERT INTO chunks_fts VALUES (?,?)", (cid, searchable))
+                fts_ids.add(cid)
             # Reconcile only studies explicitly supplied; failures retain old sources.
             if not failures:
                 active_ids = {e["id"] for e in experiments}

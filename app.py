@@ -76,7 +76,7 @@ def _sync_streamlit_secrets() -> None:
         return
 
 
-@st.cache_resource(show_spinner=False)
+@st.cache_resource(show_spinner="Preparing verified NASA evidence. First startup may take a few minutes...")
 def _bootstrap_archive() -> dict:
     """Initialize SQLite scientific registry and search index once on cold start."""
     return ensure_scientific_bootstrap()

@@ -47,6 +47,54 @@ def test_structural_chunks_retain_page_and_source_row(corpus):
     assert all(c["sha256"] == "a" * 64 and c["study_id"] == "PSI-TEST" for c in chunks)
 
 
+def test_structural_observations_keep_table_boundary_and_source_order(corpus):
+    experiments, _ = corpus
+    observations = [
+        {"table_index": 0, "row_number": 7, "field": "pressure", "value": 14.7},
+        {"table_index": 1, "row_number": 7, "field": "oxygen", "value": .30},
+        {"table_index": 0, "row_number": 7, "field": "oxygen", "value": .21},
+        {"table_index": 1, "row_number": 7, "field": "pressure", "value": 30},
+        {"table_index": 0, "row_number": 8, "field": "oxygen", "value": .99},
+    ]
+    extraction = {"observations": observations, "tables": [
+        {"columns": ["fuel"], "rows": [["heptane"]], "source_rows": [7]},
+        {"columns": ["fuel"], "rows": [["methanol"]], "source_rows": [7]},
+    ]}
+    chunks = structural_chunks(experiments[0], experiments[0]["documents"][0], extraction)
+    rows = [chunk for chunk in chunks if chunk["kind"] == "table_row"]
+    assert len(rows) == 2
+    assert rows[0]["observations"] == [observations[0], observations[2]]
+    assert rows[1]["observations"] == [observations[1], observations[3]]
+    assert observations[4] not in rows[0]["observations"]
+
+
+def test_duplicate_pending_and_existing_updates_keep_one_fts_row_per_chunk(tmp_path, corpus):
+    experiments, _ = corpus
+    index = RetrievalIndex(tmp_path / "index.db")
+    # Repeated input creates duplicate pending IDs before the first transaction.
+    duplicated = experiments + experiments
+    first = index.index_experiments(duplicated)
+    assert first["indexed"] == first["total"] * 2
+    with index.connect() as db:
+        old_fts = dict(db.execute("SELECT id,text FROM chunks_fts"))
+        assert len(old_fts) == first["total"]
+        assert not db.execute("SELECT id FROM chunks_fts GROUP BY id HAVING COUNT(*) != 1").fetchall()
+
+    # Metadata changes preserve chunk IDs but must replace existing FTS text.
+    experiments[0]["name"] = "Updated synthetic investigation label"
+    updated = index.index_experiments(duplicated)
+    assert updated["total"] == first["total"]
+    assert updated["indexed"] == first["total"] * 2
+    with index.connect() as db:
+        fts_rows = db.execute("SELECT id,text FROM chunks_fts").fetchall()
+        assert len(fts_rows) == first["total"]
+        assert {cid for cid, _ in fts_rows} == set(old_fts)
+        assert all(text != old_fts[cid] for cid, text in fts_rows)
+        assert all("Updated synthetic investigation label" in text for _, text in fts_rows)
+        assert not db.execute("SELECT id FROM chunks_fts GROUP BY id HAVING COUNT(*) != 1").fetchall()
+    assert index.index_experiments(experiments)["indexed"] == 0
+
+
 def test_persistent_idempotent_hybrid_index(tmp_path, corpus):
     experiments, _ = corpus
     index = RetrievalIndex(tmp_path / "index.db")
