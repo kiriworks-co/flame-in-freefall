@@ -42,7 +42,7 @@ The project uses [NASA Physical Sciences Informatics](https://psi.nasa.gov/physc
 
 The application extracts information from CSV, XLSX, PDF, and ISA-Tab material and stores processed records in SQLite. Plotly provides the interactive figures. Scientific search combines SQLite FTS5 with local semantic embeddings when available, or a lighter lexical index in cloud environments. Retrieved material retains references to its source documents.
 
-The scientific assistant works without external AI services. An optional Google Gemini integration can provide brief explanations of retrieved material when a key is configured; it is not required for the published application. See [AI implementation and limitations](docs/AI_USAGE.md).
+The scientific assistant works without external AI services. An optional Google Gemini integration can provide brief explanations of retrieved material when a key is configured; it is not required for the published application.
 
 This is an exploratory research and educational tool. It does not independently validate NASA measurements, simulate a new spacecraft fire, or establish operational safety limits.
 
@@ -65,15 +65,10 @@ To run the test suite:
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-## Documentation
+## Scientific sources
 
-- [Project overview (Portuguese)](docs/PROJECT_OVERVIEW_PTBR.md)
-- [Feature guide and workflows (Portuguese)](docs/FEATURES_AND_WORKFLOWS_PTBR.md)
-- [Complete technical manual (PDF, Portuguese)](docs/FLAME_IN_FREEFALL_MANUAL_COMPLETO_PTBR.pdf)
-- [Scientific data and provenance](docs/DATA_PROVENANCE.md)
-- [Technical testing](docs/TEST_REPORT.md)
-- [Deployment guide](docs/DEPLOYMENT.md)
-- [NASA Space Apps submission description](docs/SUBMISSION_DESCRIPTION_EN.md)
+The [NASA data provenance inventory](docs/DATA_PROVENANCE.md) records source documents, NASA investigation identifiers, original URLs and integrity checks. The original NASA reference files are retained with the application.
+
 
 ## Licensing and sources
 
