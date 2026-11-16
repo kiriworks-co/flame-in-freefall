@@ -45,7 +45,7 @@ tipos reportado/simulação preservados e unidade ausente explícita; não houve
 overflow horizontal de página nas duas larguras observadas. PSI-62 abriu
 metadados sem fabricar gráfico numérico; PSI-159 abriu suas tabelas e relatórios.
 Capturas e logs locais em `tmp/`; comandos e limites detalhados em
-[STAGE2_INTEGRATION.md](STAGE2_INTEGRATION.md). As figuras PDF foram inspecionadas
+[STAGE2_SOURCE_AUDIT.md](STAGE2_SOURCE_AUDIT.md). As figuras PDF foram inspecionadas
 por amostragem, não integralmente. Não houve auditoria WCAG completa, configuração
 Gemini, chamada LLM ao vivo ou publicação.
 
@@ -109,4 +109,4 @@ Verified directly against a live Streamlit headless server (`streamlit run app.p
 
 - **Google Gemini API**: **`IMPLEMENTED BUT UNCONFIGURED`** in the local `.env`; live Gemini HTTP calls were not executed without an active key and were verified through mocked unit/integration tests alongside offline NASA evidence fallback.
 - **External VLM Endpoint**: Intentionally unconfigured by default; verified with quarantined mock visual reviews (`needs_human_review = True`).
-- **Public Cloud Deployment**: Verified locally (`PSI_READONLY_MODE=1` tested cleanly); remote Git push and Streamlit Cloud provisioning remain intentionally left for owner approval via [LOCAL_ACCEPTANCE.md](LOCAL_ACCEPTANCE.md) and [DEPLOYMENT.md](DEPLOYMENT.md).
+- **Public Cloud Deployment**: Verified locally (`PSI_READONLY_MODE=1` tested cleanly); the application was subsequently published at https://flame-in-freefall-kiriworks.streamlit.app/; see [DEPLOYMENT.md](DEPLOYMENT.md) for current deployment instructions.
