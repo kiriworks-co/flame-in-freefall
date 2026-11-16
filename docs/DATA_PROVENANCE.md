@@ -1,14 +1,14 @@
 # Proveniência dos dados NASA
 
-## Ampliação Etapa 2 — PSI-62, PSI-117 e PSI-159 (2026-11-15)
+## Investigações PSI-62, PSI-117 e PSI-159
 
-Esta ampliação acrescenta três investigações às nove da versão `5a2c487`.
+Além das outras nove investigações do acervo, estas três fontes foram preservadas com seus metadados originais.
 Os arquivos originais das três investigações, seus identificadores e os
 metadados de integridade são preservados em `data/psi_downloads/`. A trilha
 dos arquivos ISA e seus membros está em `data/psi_downloads/stage2_archive_audit.json`;
 os manifests individuais registram versões, identificadores, URLs e hashes
-SHA-256 para conferência com os registros oficiais da NASA. Os originais anteriores permanecem
-inalterados. O inventário da seção seguinte é o acervo **anterior** à ampliação.
+SHA-256 para conferência com os registros oficiais da NASA. Os originais das demais investigações também permanecem
+inalterados. A relação de arquivos mais abaixo registra o restante do acervo.
 
 - **PSI-62**, versão 1, DOI `10.60555/e9xp-ex83`: metadados de uma investigação
   de modelagem UFGM e comparação com BASS/BASS-II. Não há resultados numéricos
@@ -35,10 +35,8 @@ usadas apenas para transporte; as referências persistidas são URLs NASA
 permanentes. Não há licença específica inventada. Reexecução offline do
 importador preservou o conteúdo de todos os arquivos.
 
-Reprodução: `python scripts/import_stage2_archive.py <experienciass.zip>
---verify-online` para primeira verificação; omitir `--verify-online` permite
-replay offline somente contra o mesmo SHA-256 de arquivo previamente
-verificado. Em seguida executar `python scripts/ingest_nasa.py`.
+O processamento de dados é realizado pelos scripts do diretório `scripts/`.
+Arquivos preservados podem ser conferidos com os hashes registrados no acervo.
 
 Coleta real em 2026-11-15. Os originais abaixo foram recebidos por HTTPS diretamente de NASA PSI ou NASA.gov; nenhum arquivo científico foi copiado de equipes externas. SHA-256 verificado novamente após a coleta. Links API são estáveis para solicitar o arquivo na versão registrada; URLs S3 assinadas foram usadas apenas em memória e não persistidas.
 
