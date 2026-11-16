@@ -4,6 +4,15 @@ Em `2026-11-15` (Etapa 3), o **Flame in Freefall (`PSI Flame Microgravity`)** ma
 
 ---
 
+## Assistência no desenvolvimento
+
+A implementação da aplicação contou com assistência de ferramentas de programação
+baseadas em IA, incluindo OpenAI Codex e Google Antigravity, para apoio à escrita de
+código, depuração, testes e documentação. Os arquivos de pesquisa utilizados pela
+aplicação vêm do repositório NASA PSI. Nenhuma medição experimental foi inventada
+para substituir dados ausentes. A revisão científica independente das interpretações
+continua sendo uma atividade distinta dos testes de software.
+
 ## 1. Busca Local e Fallback Sem Chave (Ativo por Padrão)
 
 - **SQLite FTS5 + Vetores Locais:** operam offline sem envio de dados externos.
