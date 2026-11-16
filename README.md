@@ -1,89 +1,80 @@
-# Flame in Freefall — PSI Flame Microgravity (NASA Space Apps 2026)
+# Flame in Freefall
 
-**Public application:** [Open Flame in Freefall](https://flame-in-freefall-kiriworks.streamlit.app/) — verified without login. Source repository visibility remains private. See [publication verification](docs/PUBLICATION_VERIFICATION_PTBR.md), [copy-ready submission texts](docs/SUBMISSION_TEXTS_EN.md), and the [complete Portuguese technical manual (PDF)](docs/FLAME_IN_FREEFALL_MANUAL_COMPLETO_PTBR.pdf).
+An interactive platform for exploring NASA research on combustion in microgravity.
 
-> **Bilingual / Bilíngue:** Default interface in **English (`en`)** with a single top-bar **`EN | PT-BR`** selector.  
-> Interactive scientific workbench covering **12 NASA Physical Sciences Informatics (PSI)** combustion investigations and **2 official NASA reference guides** (`NASA-CONTEXT`). The archive preserves **40 documents (82,099,713 bytes)** — 37 with scientific or documentary content and 3 explicitly flagged 56-byte ISA placeholders (`s_PSI-*.txt`) — immutable **SHA-256** provenance, conservative **Pint** normalization, **117 extracted tables** (`10,114` tabular rows, `26,803` typed cell observations), and **15,524 searchable evidence passages in the validated local semantic index** (the cloud lexical fallback has a different passage count).
+**[Open the web application](https://flame-in-freefall-kiriworks.streamlit.app/)** · [NASA Space Apps Challenge 2026](https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/)
 
----
+## About the project
 
-## Why Freefall Changes Fire
+Fire behaves differently when buoyancy-driven convection is reduced. Flame shape, oxygen transport, extinction conditions, and the movement of smoke all depend on the surrounding flow and experimental setup. These differences matter when studying fire prevention, detection, and suppression aboard spacecraft.
 
-On Earth (`1g`), buoyancy lifts hot combustion gases and pulls fresh oxygen inward, stretching flames into a teardrop. In orbital microgravity (`~0g` freefall), natural buoyancy nearly vanishes: diffusion-dominated flames can become **approximately spherical**, heat and soot linger near the fuel, low-temperature **cool flames** can persist after visible extinction, and smoke aerosols evolve differently along cabin airflow.
+NASA's Physical Sciences Informatics (PSI) repository contains experimental tables, numerical results, investigation metadata, and technical reports relevant to these questions. However, the source material is distributed across several file formats and studies. Flame in Freefall brings a selection of these records into one interface while keeping links to the original documents.
 
-**Flame in Freefall** structures NASA's fragmented PSI files across all three spacecraft fire-safety pillars (**Prevention**, **Detection**, **Suppression**) while strictly separating **test conditions, reported experimental outcomes, numerical simulations, derived calculations, and metadata** — never equating `26,803` typed observations to `26,803` independent experiments or treating any metric as flight certification.
+The application was developed in Python using Streamlit. It provides two guided introductions for visitors alongside more detailed tools for examining the underlying data.
 
----
+## What you can do
 
-## Workspace & Key Capabilities
+- **Explore investigations.** Browse twelve NASA PSI studies, search by topic, and open the original sources and DOIs.
+- **Inspect data.** Review tables, plot numerical variables, examine PDF pages, and export selected views.
+- **Compare studies.** Check whether variables, physical units, and types of evidence are compatible before drawing comparisons.
+- **Find relevant research.** Search the collected NASA material in English or Portuguese and inspect citations at the document, page, or table-row level.
+- **Summarize, rank, and interpret.** Review a study's documented scope, order investigations by their relevance to a research question, and examine possible implications and limitations for spacecraft fire safety.
 
-1. **Discovery Home & Space Apps Challenge Hub (`SUMMARIZE · RANK · INTERPRET`)**:
-   - Aerospace Navy hero banner with an embedded **1g Teardrop vs. ~0g Spherical** visual schematic and live verified archive counters (`12` PSI studies, `40` NASA files, `117` tables, `15,524` passages).
-   - Three equal-height starting paths: **Discover the Science** (Guided Journey 1), **Explore Fire Safety** (Guided Journey 2), and **Investigate NASA Data** (Data Explorer), plus direct links to **Investigations** and **Scientific Assistant**.
-   - Interactive **Challenge Hub** tabs for **SUMMARIZE Study**, **RANK Priority** (`0–100` reading-priority index, never a fire-risk score), and **INTERPRET Safety Impact**.
-2. **Guided Journeys 1 & 2 (4 Steps · 5 Scientific Questions)**:
-   - Repeatable *What am I exploring · Why does it matter · What does the NASA evidence show · What can I conclude · What are the limitations?* framework with interactive Plotly plots, PDF previews, and persistent *Return to Guided Journey* state.
-3. **Investigations Catalog (`investigations`)**:
-   - Searchable inventory of all 12 NASA PSI studies and 2 official guides with confirmed DOIs, permanent NASA PSI links, pillar filters, caveats, and 1-click jump to Data Explorer.
-4. **Data Explorer (`explorer`)**:
-   - 6-tab workbench (*Overview & Variables* with chart-first *Visual First Look*, *Interactive Charts* with reversible column fixes & series analysis, *Tables & Source Rows*, *Documents & Integrity* with SHA-256 verification, *PDF Reader & Search*, and *ISA-Tab Metadata*).
-5. **Compare (`compare`)**:
-   - Side-by-side schema, unit, and evidence-role compatibility audit across 2–3 studies plus deterministic reading-priority ranking.
-6. **Evidence-First Scientific Assistant (`assistant`)**:
-   - Bilingual hybrid retrieval (**SQLite FTS5** + 384-d local embeddings or deterministic offline lexical vectors), row-aligned physical filters (`O₂`, `psia`, `cm/s`, fuel), verifiable citations, and optional **Google Gemini (`gemini-2.5-flash`)** excerpt selection & anchored 1-sentence explanations verified programmatically via `validate_claims()`.
-7. **Visual Page Review (`visual_review`) & Sources (`sources`)**:
-   - Offline PyMuPDF page inspector (with optional consent-gated VLM candidate review isolated as `inference`) and complete archive SHA-256 inventory.
+The ranking is a reading-priority aid, **not** a measure of fire risk or a spacecraft safety certification.
 
----
+## NASA data
 
-## Included NASA PSI Dataset (`12` PSI Studies + `2` Context Guides)
+The current collection covers **12 PSI investigations** and two NASA reference guides:
 
-- **Prevention:** `PSI-25` (BASS-II, `10.60555/4qc4-de67`), `PSI-26` (BASS, `10.60555/58h4-dy80`), `PSI-62` (UFGM modeling, `10.60555/e9xp-ex83`, *metadata only*), `PSI-98` (Saffire-I, `10.60555/0t15-1z43`), `PSI-99` (Saffire-II, `10.60555/2chp-m469`), `PSI-100` (Saffire-III, `10.60555/040q-4h36`)
-- **Detection:** `PSI-101` (SAME-R, `10.60555/2np7-jv14`), `PSI-102` (SAME, `10.60555/gd4k-8h62`)
-- **Suppression & Cool Flames:** `PSI-68` (FLEX-2, `10.60555/byp8-h018`), `PSI-69` (FLEX, `10.60555/mbq8-0451`), `PSI-117` (Cool Flame Dynamics CFD/FLEX, `10.60555/gz0q-b577`), `PSI-159` (ACME CFI-G, `10.60555/cyt1-kh64`)
-- **Reference Guides (`NASA-CONTEXT`):** *A Researcher's Guide to ISS Combustion Science* & *Complete PSI Database Guide*
+| Research area | Investigations |
+| --- | --- |
+| Solid-fuel combustion and spacecraft fire experiments | PSI-25 (BASS-II), PSI-26 (BASS), PSI-62 (flame-spread modeling), PSI-98 (Saffire-I), PSI-99 (Saffire-II), PSI-100 (Saffire-III) |
+| Smoke aerosols and detection | PSI-101 (SAME-R), PSI-102 (SAME) |
+| Droplet and gas-phase combustion and flame extinction | PSI-68 (FLEX-2), PSI-69 (FLEX), PSI-117 (cool-flame dynamics), PSI-159 (ACME CFI-G) |
 
----
+Forty source documents are preserved, including three ISA metadata placeholders. The local processing pipeline extracted 117 tables and 10,114 tabular rows. Its 26,803 typed records include simulation values, reported results, test conditions, calculations, and metadata; they do **not** represent 26,803 separate experiments.
 
-## Quickstart (Windows · Python 3.11+)
+The NASA data are accompanied by source identifiers, permanent URLs, DOIs where available, and SHA-256 checksums. PSI-62 has descriptive metadata but no numerical series in the files collected for this project. Some other sources contain missing or ambiguous units; these are retained rather than silently corrected.
+
+The project uses [NASA Physical Sciences Informatics](https://psi.nasa.gov/physci/repo/search?q=combustion) as its primary data source. Detailed file provenance is recorded in [docs/DATA_PROVENANCE.md](docs/DATA_PROVENANCE.md).
+
+## How it works
+
+The application extracts information from CSV, XLSX, PDF, and ISA-Tab material and stores processed records in SQLite. Plotly provides the interactive figures. Scientific search combines SQLite FTS5 with local semantic embeddings when available, or a lighter lexical index in cloud environments. Retrieved material retains references to its source documents.
+
+The scientific assistant works without external AI services. An optional Google Gemini integration can provide brief explanations of retrieved material when a key is configured; it is not required for the published application. See [AI implementation and limitations](docs/AI_USAGE.md).
+
+This is an exploratory research and educational tool. It does not independently validate NASA measurements, simulate a new spacecraft fire, or establish operational safety limits.
+
+## Run locally
+
+Python 3.11 is recommended.
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8511 --server.address 127.0.0.1
+.\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-Open `http://127.0.0.1:8511`. On cold start, `ensure_scientific_bootstrap()` initializes `data/scientific.sqlite3` and `data/search.sqlite3` automatically from preserved repository artifacts with zero API keys required.
+Streamlit will display the local URL after startup. The application builds its SQLite databases from the preserved NASA source files. No Gemini API key is necessary.
 
-### Optional Google Gemini Configuration
-The app works 100% offline in **Verified Local Evidence Mode**. To enable optional Gemini excerpt selection and anchored explanations (`gemini-2.5-flash`):
+To run the test suite:
 
 ```powershell
-.\.venv\Scripts\python.exe scripts/setup_gemini.py
-.\.venv\Scripts\python.exe scripts/gemini_live_check.py
+.\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
+.\.venv\Scripts\python.exe -m pytest -q
 ```
 
-Private `local_upload` excerpts are blocked by code (`filter_public_nasa_evidence`) and rate caps (`10/min`, `250/day`, `40/session`) are enforced automatically. Never commit `.env` or `.streamlit/secrets.toml`.
+## Documentation
 
----
+- [Project overview (Portuguese)](docs/PROJECT_OVERVIEW_PTBR.md)
+- [Feature guide and workflows (Portuguese)](docs/FEATURES_AND_WORKFLOWS_PTBR.md)
+- [Complete technical manual (PDF, Portuguese)](docs/FLAME_IN_FREEFALL_MANUAL_COMPLETO_PTBR.pdf)
+- [Scientific data and provenance](docs/DATA_PROVENANCE.md)
+- [Technical testing](docs/TEST_REPORT.md)
+- [Deployment guide](docs/DEPLOYMENT.md)
+- [NASA Space Apps submission description](docs/SUBMISSION_DESCRIPTION_EN.md)
 
-## Verification & Quality Assurance
+## Licensing and sources
 
-```powershell
-.\.venv\Scripts\python.exe -m ruff check app.py src scripts tests
-.\.venv\Scripts\python.exe -m mypy app.py src/design_system.py src/gemini_provider.py src/challenge_engine.py src/assistant.py src/scientific_ui.py src/guided_journeys.py src/views.py src/i18n.py src/pipeline.py src/scientific_store.py src/storage.py src/units.py src/retrieval.py src/comparison.py src/relevance.py scripts/setup_gemini.py scripts/gemini_live_check.py tests/test_gemini_and_challenge.py
-.\.venv\Scripts\python.exe -m compileall -q app.py src scripts tests
-.\.venv\Scripts\python.exe -m pip check
-$env:PYTHONUNBUFFERED="1"; $env:RAG_EMBEDDING_MODEL=" "; $env:HF_HUB_OFFLINE="1"; $env:TRANSFORMERS_OFFLINE="1"; .\.venv\Scripts\python.exe -m pytest -q
-```
-
----
-
-## Final Release & Stage 3 Documentation
-
-- **A — Project Overview (PT-BR):** [docs/PROJECT_OVERVIEW_PTBR.md](docs/PROJECT_OVERVIEW_PTBR.md)
-- **B — Complete Functional Manual (PT-BR):** [docs/FEATURES_AND_WORKFLOWS_PTBR.md](docs/FEATURES_AND_WORKFLOWS_PTBR.md)
-- **C — Real Folder Structure (PT-BR):** [docs/FOLDER_STRUCTURE_PTBR.md](docs/FOLDER_STRUCTURE_PTBR.md)
-- **D — NASA Space Apps Submission Description (EN):** [docs/SUBMISSION_DESCRIPTION_EN.md](docs/SUBMISSION_DESCRIPTION_EN.md)
-- **E — Final Release Status (PT-BR):** [docs/FINAL_RELEASE_STATUS_PTBR.md](docs/FINAL_RELEASE_STATUS_PTBR.md)
-- Provenance, Testing & Deployment: [docs/DATA_PROVENANCE.md](docs/DATA_PROVENANCE.md) · [docs/TEST_REPORT.md](docs/TEST_REPORT.md) · [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) · [docs/AI_USAGE.md](docs/AI_USAGE.md)
+Original project software is made available under the [MIT License](LICENSE). NASA research files and other third-party materials retain their respective source terms; they are not relicensed by the project's code license. See [third-party resources](THIRD_PARTY_NOTICES.md).
