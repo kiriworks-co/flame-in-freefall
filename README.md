@@ -1,5 +1,7 @@
 # Flame in Freefall — PSI Flame Microgravity (NASA Space Apps 2026)
 
+**Public application:** [Open Flame in Freefall](https://flame-in-freefall-kiriworks.streamlit.app/) — verified without login. Source repository visibility remains private. See [publication verification](docs/PUBLICATION_VERIFICATION_PTBR.md), [copy-ready submission texts](docs/SUBMISSION_TEXTS_EN.md), and the [complete Portuguese technical manual (PDF)](docs/FLAME_IN_FREEFALL_MANUAL_COMPLETO_PTBR.pdf).
+
 > **Bilingual / Bilíngue:** Default interface in **English (`en`)** with a single top-bar **`EN | PT-BR`** selector.  
 > Interactive scientific workbench covering **12 NASA Physical Sciences Informatics (PSI)** combustion investigations and **2 official NASA reference guides** (`NASA-CONTEXT`). The archive preserves **40 documents (82,099,713 bytes)** — 37 with scientific or documentary content and 3 explicitly flagged 56-byte ISA placeholders (`s_PSI-*.txt`) — immutable **SHA-256** provenance, conservative **Pint** normalization, **117 extracted tables** (`10,114` tabular rows, `26,803` typed cell observations), and **15,524 searchable evidence passages in the validated local semantic index** (the cloud lexical fallback has a different passage count).
 

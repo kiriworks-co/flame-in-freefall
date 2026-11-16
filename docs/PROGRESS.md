@@ -1,11 +1,13 @@
 # PROGRESS — Retomada de sessões
 
-## Publicação assistida — 2026-11-15 (em andamento)
+## Publicação assistida — 2026-11-15 (concluída; submissão no portal pendente)
 
 - GitHub confirmado: https://github.com/kiriworks-co/flame-in-freefall . Remoto inicialmente vazio; main avançada por fast-forward até e8db878; push atômico de main e feat/spaceapps-public-release confirmado por ls-remote/fetch.
 - 279 arquivos versionados (186.839.350 bytes); 353 blobs históricos verificados para padrões de credenciais, sem correspondências; nenhum blob acima de 95 MiB. .env e secrets.toml não versionados. Checagem focada, sem garantia de auditoria exaustiva.
 - Índice code-review-graph atualizado para e8db878; documentos não são indexados, portanto impacto documental conferido por leitura direta.
-- Arquivos de deploy presentes; Python 3.11 selecionado explicitamente no Streamlit. Implantação e URL pública ainda aguardam confirmação.
+- Aplicação publicada e aberta sem login: https://flame-in-freefall-kiriworks.streamlit.app/ . Python 3.11, app público/pesquisável; GitHub privado preservado. Modo sem Gemini, 12 PSI, 40 arquivos, 117 tabelas e 11.582 segmentos lexicais.
+- `94b865a`: correção mínima de desempenho no arranque, com 33 testes dirigidos aprovados, Ruff e Mypy. Não foi reconstruído o índice científico local. Relatório dos fluxos efetivamente verificados: PUBLICATION_VERIFICATION_PTBR.md.
+- Manual PDF de 28 páginas atualizado, incluindo adendo de publicação/testes. Rascunho científico autoral não incorporado, por instrução do proprietário. Revisão científica independente, decisão de licença do código e submissão no portal permanecem pendentes.
 - Textos de submissão consolidados em SUBMISSION_TEXTS_EN.md a partir do rascunho existente e docs da Etapa 3. submission_drafts/ preservado localmente, fora dos commits desta publicação.
 - Nenhuma chamada Gemini real executada; fallback sem chave é o modo de publicação. Suíte completa de 164 testes é resultado da Etapa 3, não reexecutada nesta sessão.
 

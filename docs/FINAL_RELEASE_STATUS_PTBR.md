@@ -10,9 +10,9 @@
 
 ## Classificação Final Selecionada
 
-> **1. Pronto para submissão — resta apenas a publicação** *(Ready for submission — only publication remains)*
+> **Publicado no GitHub e no Streamlit; material técnico e textos de submissão disponíveis.** A submissão no portal e a revisão científica independente permanecem sob responsabilidade do proprietário.
 
-*(Justificativa: todos os defeitos críticos de UX/UI, navegação, idioma único e layout identificados na revisão anterior foram corrigidos e validados visualmente em navegador real; toda a suíte de 164 testes offline e checagens estáticas foi aprovada; a integração opcional do Google Gemini e os templates de implantação pública estão concluídos; e os cinco documentos obrigatórios de entrega foram produzidos. Restam exclusivamente a revisão científica independente pelo proprietário, a inserção opcional de chave pessoal do Gemini se desejada e os passos finais de publicação pública no GitHub / Streamlit Community Cloud / página do desafio.)*
+A validacao completa da Etapa 3 permanece registrada abaixo. A publicacao GitHub/Streamlit e a verificacao dirigida desta sessao estao em PUBLICATION_VERIFICATION_PTBR.md; a submissao no portal e a revisao cientifica independente ainda dependem do proprietario.
 
 ---
 
@@ -73,8 +73,9 @@ Verificada ponta a ponta:
 ## 6. Prontidão para Implantação Pública
 
 - **GitHub confirmado nesta publicação assistida:** [kiriworks-co/flame-in-freefall](https://github.com/kiriworks-co/flame-in-freefall), repositório privado preservado. `main` avançou por fast-forward para `e8db878`; push de `main` e `feat/spaceapps-public-release` confirmado pelo remoto. Os 279 arquivos dessa versão, incluindo os originais NASA, estão publicados.
-- **Streamlit Community Cloud:** acesso ao repositório privado autorizado pelo proprietário; implantação solicitada com `main`, `app.py`, Python `3.11` e modo somente leitura sem Gemini. URL e validação pública ainda aguardam confirmação.
-- **Documentação adicional:** [SUBMISSION_TEXTS_EN.md](SUBMISSION_TEXTS_EN.md) reúne textos copiáveis; [manual completo em PDF](FLAME_IN_FREEFALL_MANUAL_COMPLETO_PTBR.pdf) reúne a documentação validada em 27 páginas. Nenhum texto científico separado com autoria identificável foi localizado.
+- **Streamlit Community Cloud:** [aplicação pública verificada sem login](https://flame-in-freefall-kiriworks.streamlit.app/), usando `main`, `app.py`, Python `3.11` e modo somente leitura sem Gemini. O proprietário autorizou o acesso GitHub; o app está público e pesquisável, enquanto o repositório permanece privado.
+- **Documentação adicional:** [SUBMISSION_TEXTS_EN.md](SUBMISSION_TEXTS_EN.md) reúne textos copiáveis; [manual completo em PDF](FLAME_IN_FREEFALL_MANUAL_COMPLETO_PTBR.pdf) reúne a documentação validada em 28 páginas. Por instrução do proprietário, seu rascunho científico incompleto não foi incorporado nem revisado.
+- **Validação desta publicação:** [PUBLICATION_VERIFICATION_PTBR.md](PUBLICATION_VERIFICATION_PTBR.md). O modo lexical da nuvem mostrou 11.582 segmentos; os 15.524 segmentos anteriores pertencem ao índice semântico local. Correção mínima de desempenho no arranque em `94b865a`, com 33 testes dirigidos aprovados, incluindo duas regressões novas. Os 164 testes da Etapa 3 não foram repetidos integralmente.
 - **Checklist verificado:**
   - `requirements.txt` enxuto (sem dependências pesadas de ML obrigatórias na nuvem), `.python-version` (`3.11`), `.streamlit/config.toml` e `.streamlit/secrets.toml.example` presentes.
   - Inicialização automática (*cold-start*) via `ensure_scientific_bootstrap()` a partir dos arquivos originais e extrações versionadas.
@@ -106,6 +107,6 @@ Verificada ponta a ponta:
 
 1. **Conduzir a revisão científica independente (`PENDENTE`)** navegando pelo servidor ativo em `http://127.0.0.1:8511` e seguindo [SCIENTIFIC_REVIEW_CHECKLIST.md](SCIENTIFIC_REVIEW_CHECKLIST.md).
 2. *(Opcional, se desejar síntese por IA no Assistente)* Configurar a chave da Google AI Studio executando `.\.venv\Scripts\python.exe scripts/setup_gemini.py` e validar com `.\.venv\Scripts\python.exe scripts/gemini_live_check.py --require-key`.
-3. **Publicar no GitHub** revisando o repositório de destino e executando `git push` da branch `feat/spaceapps-public-release` (ou mesclando para `main`).
-4. **Implantar no Streamlit Community Cloud** apontando para `app.py`, Python `3.11`, definindo `PSI_READONLY_MODE = "1"` (e opcional `GEMINI_API_KEY`) em *Secrets*.
+3. **GitHub publicado:** main contem a Etapa 3 e os commits incrementais de publicacao; confirmado pelo remoto.
+4. **Streamlit publicado:** https://flame-in-freefall-kiriworks.streamlit.app/ , app.py, Python 3.11, modo publico somente leitura sem Gemini.
 5. *(Opcional)* Atualizar a URL pública do app no botão de abertura de `docs/index.html` caso ative o GitHub Pages, e preencher o formulário oficial do NASA Space Apps Challenge 2026 com base em [SUBMISSION_DESCRIPTION_EN.md](SUBMISSION_DESCRIPTION_EN.md).

@@ -6,3 +6,4 @@ data/psi_downloads/**/*.xlsx -text
 data/psi_downloads/**/*.zip -text
 data/experimentos/**/originais/** -text -whitespace
 resources/official/*.pdf -text
+docs/*.pdf binary

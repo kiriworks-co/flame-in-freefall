@@ -195,7 +195,8 @@ Flame in Freefall helps students, educators, and researchers trace microgravity 
 ## 15. Project Links for the Submission
 
 - Source code: https://github.com/kiriworks-co/flame-in-freefall
-- Application: insert only the exact public URL after deployment and an anonymous-access check.
+- Public application (verified without login): https://flame-in-freefall-kiriworks.streamlit.app/
+- Source repository currently remains private; the application itself is public and searchable.
 - Provenance: [DATA_PROVENANCE.md](DATA_PROVENANCE.md) and [STAGE2_SOURCE_AUDIT.md](STAGE2_SOURCE_AUDIT.md).
 - AI disclosure: [AI_USAGE.md](AI_USAGE.md).
 - Final release and validation status: [FINAL_RELEASE_STATUS_PTBR.md](FINAL_RELEASE_STATUS_PTBR.md).
