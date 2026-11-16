@@ -22,7 +22,9 @@
     "modDate": "D:20160302154945-06'00'",
     "page_count": 1,
     "legendas": 0,
-    "tabelas_detectadas": 0
+    "tabelas_detectadas": 0,
+    "evidence_kind": "engineering_or_publication",
+    "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection."
   },
   "warnings": [
     "Página 1: sem camada de texto; OCR indisponível ou não configurado."

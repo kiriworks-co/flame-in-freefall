@@ -7,11 +7,15 @@ from __future__ import annotations
 
 import json
 import os
+import re
+import sys
 import threading
+import time
 import uuid
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import contextmanager
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterator
 
 from . import storage
 from .extractors import MAX_UPLOAD_BYTES, SCHEMA_VERSION, SUPPORTED_EXTENSIONS, extract_document
@@ -21,6 +25,89 @@ from .units import observations_from_tables
 _EXECUTOR = ThreadPoolExecutor(max_workers=1, thread_name_prefix="psi-ingestion")
 _IMPORT_LOCK = threading.Lock()
 _ACTIVE_JOBS: set[str] = set()
+_PIPELINE_VERSION = 3
+
+
+@contextmanager
+def _archive_lock(timeout: float = 300) -> Iterator[None]:
+    """Serialize CLI and Streamlit imports of the same JSON archive across processes."""
+    storage.DATA_DIR.mkdir(parents=True, exist_ok=True)
+    lock_path = storage.DATA_DIR / ".ingestion.lock"
+    with lock_path.open("a+b") as handle:
+        handle.seek(0, os.SEEK_END)
+        if handle.tell() == 0:
+            handle.write(b"0")
+            handle.flush()
+        deadline = time.monotonic() + timeout
+        while True:
+            handle.seek(0)
+            try:
+                if sys.platform == "win32":
+                    import msvcrt
+                    msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+                else:
+                    import fcntl
+                    fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+                break
+            except (OSError, BlockingIOError):
+                if time.monotonic() >= deadline:
+                    raise TimeoutError("Another process is importing this scientific archive")
+                time.sleep(.1)
+        try:
+            yield
+        finally:
+            handle.seek(0)
+            if sys.platform == "win32":
+                import msvcrt
+                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                import fcntl
+                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+
+
+def _source_fingerprint(project: Path) -> str:
+    """Changes to manifests, catalog or extraction semantics invalidate warm stores."""
+    paths = sorted((project / "data" / "psi_downloads").glob("PSI-*/source_manifest.json"))
+    paths += sorted((project / "resources" / "official").glob("*.provenance.json"))
+    catalog = project / "resources" / "manifests" / "priority_investigations.json"
+    if catalog.is_file():
+        paths.append(catalog)
+    parts = [f"extractor:{SCHEMA_VERSION};pipeline:{_PIPELINE_VERSION}"]
+    for path in paths:
+        parts.extend((path.relative_to(project).as_posix(), storage.sha256_bytes(path.read_bytes())))
+    return storage.sha256_bytes("\n".join(parts).encode())
+
+
+def _table_source_columns(table: dict[str, Any]) -> list[int]:
+    """CSV block ranges retain original columns even after empty columns split groups."""
+    match = re.match(r"([A-Z]+)\d+:", table.get("block", {}).get("range", ""))
+    offset = 0
+    if match:
+        for letter in match.group(1):
+            offset = offset * 26 + ord(letter) - ord("A") + 1
+        offset -= 1
+    return list(range(offset, offset + len(table.get("columns", []))))
+
+
+def _classify_tables(extraction: dict[str, Any], provenance: dict[str, Any], evidence_kind: str) -> None:
+    for table in extraction.get("tables", []):
+        source_columns = _table_source_columns(table)
+        table["source_column_indices"] = source_columns
+        roles = []
+        for local_index, header in enumerate(table.get("columns", [])):
+            for entry in provenance.get("field_classification", []):
+                if "column_index" in entry:
+                    matches = entry["column_index"] == source_columns[local_index]
+                else:
+                    matches = str(entry.get("header", "")).strip() == str(header).strip()
+                if matches:
+                    roles.append({**entry, "column_index": local_index,
+                                  "source_column_index": source_columns[local_index]})
+                    break
+        kinds = {role.get("role", evidence_kind) for role in roles}
+        table["evidence_kind"] = next(iter(kinds)) if len(kinds) == 1 else evidence_kind
+        table["field_classification"] = roles
+        table["classification_note"] = provenance.get("classification_note", "")
 
 
 def _json(path: Path) -> dict[str, Any]:
@@ -48,6 +135,11 @@ def _experiment(study: dict[str, Any], experiments: list[dict[str, Any]]) -> dic
     if record is None:
         record = storage.create_experiment(f"{study_id} · {study.get('name', study_id)}", study.get("description", ""))
         experiments.append(record)
+    elif record.get("name") == f"{study_id} · {study_id}":
+        # Early metadata-only imports can precede the scientific catalog entry.
+        record["name"] = f"{study_id} · {study.get('name', study_id)}"
+    if not record.get("description") and study.get("description"):
+        record["description"] = study["description"]
     record.update(psi_id=study_id, investigation_id=study_id, study_id=study_id,
                   source_url=study.get("source_url") or study.get("nasa_record_url"),
                   doi=study.get("doi"), category=study.get("category", "Contexto"))
@@ -81,20 +173,11 @@ def _import_file(store: ScientificStore, experiment: dict[str, Any], path: Path,
         else:
             document, already = storage.save_document(experiment, path.name, content, extraction)
     extraction["evidence_kind"] = evidence_kind
-    for table in extraction.get("tables", []):
-        table["evidence_kind"] = evidence_kind
-        table["field_classification"] = provenance.get("field_classification", [])
+    extraction.setdefault("metadata", {}).update(
+        evidence_kind=evidence_kind, classification_note=provenance.get("classification_note", ""),
+    )
+    _classify_tables(extraction, provenance, evidence_kind)
     extraction["observations"] = observations_from_tables(extraction.get("tables", []), evidence_kind)
-    field_roles = {item["header"].strip(): item for item in provenance.get("field_classification", [])}
-    for observation in extraction["observations"]:
-        role = field_roles.get(observation["field"].strip())
-        if role:
-            observation["evidence_kind"] = role.get("role", observation["evidence_kind"])
-            if role.get("warning"):
-                observation["warning"] = role["warning"]
-                observation["normalized_value"] = None
-                observation["normalized_unit"] = None
-                observation["status"] = "source_unit_ambiguous"
     extraction["provenance"] = provenance
     document["provenance"] = provenance
     document["evidence_kind"] = evidence_kind
@@ -122,7 +205,7 @@ def ingest_downloads(project_dir: str | Path | None = None, db_path: str | Path 
     """
     project = Path(project_dir or storage.PROJECT_DIR)
     result: dict[str, Any] = {"imported": 0, "existing": 0, "errors": [], "investigations": 0, "documents": []}
-    with _IMPORT_LOCK:
+    with _IMPORT_LOCK, _archive_lock():
         store = ScientificStore(db_path)
         catalog_path = project / "resources" / "manifests" / "priority_investigations.json"
         catalog = _json(catalog_path).get("investigations", []) if catalog_path.is_file() else []
@@ -150,7 +233,7 @@ def ingest_downloads(project_dir: str | Path | None = None, db_path: str | Path 
                         assert experiment is not None
                         path = _safe_local(source_manifest.parent, record["filename"])
                         classification = record.get("classification", "condition")
-                        if classification not in {"condition", "sample", "measurement", "context", "unclassified", "mixed_conditions_and_reported_results", "engineering_or_publication"}:
+                        if classification not in {"condition", "sample", "measurement", "context", "unclassified", "mixed_conditions_and_reported_results", "engineering_or_publication", "simulation", "reported_result", "metadata", "mixed_experiment_and_simulation"}:
                             classification = "unclassified"
                         already, document = _import_file(store, experiment, path, record, classification)
                         result["existing" if already else "imported"] += 1
@@ -193,6 +276,10 @@ def ingest_downloads(project_dir: str | Path | None = None, db_path: str | Path 
                 result["index_warning"] = "Search adapter not yet installed; reindex from the dashboard."
             except Exception as exc:
                 result["errors"].append({"stage": "search_index", "error": str(exc)})
+        if not result["errors"]:
+            with store.connection() as conn:
+                conn.execute("INSERT OR REPLACE INTO ingestion_state VALUES (?,?)",
+                             ("source_fingerprint", _source_fingerprint(project)))
     return result
 
 
@@ -249,7 +336,7 @@ def ensure_scientific_bootstrap(
     db_path: str | Path | None = None,
     search_db_path: str | Path | None = None,
 ) -> dict[str, Any]:
-    """Initialize SQLite stores and search index on cold start if missing or empty."""
+    """Initialize or incrementally refresh stores when committed source manifests change."""
     from .retrieval import RetrievalIndex
 
     if project_dir is None:
@@ -265,22 +352,32 @@ def ensure_scientific_bootstrap(
     docs_in_db = store.list_documents()
     ingest_result: dict[str, Any] | None = None
     bootstrapped = False
+    fingerprint = _source_fingerprint(Path(project_dir or storage.PROJECT_DIR))
+    with store.connection() as conn:
+        state = conn.execute("SELECT value FROM ingestion_state WHERE key='source_fingerprint'").fetchone()
 
-    if not experiments or not docs_in_db:
+    if not experiments or not docs_in_db or state is None or state[0] != fingerprint:
         ingest_result = ingest_downloads(project_dir, db_path, index_search=False)
         experiments = storage.list_experiments()
         bootstrapped = True
 
     index = RetrievalIndex(search_db_path)
     with index.connect() as db:
+        db.execute("CREATE TABLE IF NOT EXISTS ingestion_index_state(key TEXT PRIMARY KEY,value TEXT NOT NULL)")
+        indexed_state = db.execute("SELECT value FROM ingestion_index_state WHERE key='source_fingerprint'").fetchone()
         chunk_count = int(db.execute("SELECT COUNT(*) FROM chunks").fetchone()[0])
         models_in_db = {str(row[0]) for row in db.execute("SELECT DISTINCT model FROM chunks").fetchall() if row and row[0]}
 
     index_result: dict[str, Any] | None = None
-    needs_reindex = chunk_count == 0 or (index.model is not None and models_in_db != {index.mode})
+    needs_reindex = (ingest_result is not None or indexed_state is None or indexed_state[0] != fingerprint
+                     or chunk_count == 0 or (index.model is not None and models_in_db != {index.mode}))
     if needs_reindex and experiments:
         index_result = index.index_experiments(experiments)
         chunk_count = int(index_result.get("total", 0))
+        if not index_result.get("failures") and not (ingest_result or {}).get("errors"):
+            with index.connect() as db:
+                db.execute("INSERT OR REPLACE INTO ingestion_index_state VALUES (?,?)",
+                           ("source_fingerprint", fingerprint))
         bootstrapped = True
 
     return {

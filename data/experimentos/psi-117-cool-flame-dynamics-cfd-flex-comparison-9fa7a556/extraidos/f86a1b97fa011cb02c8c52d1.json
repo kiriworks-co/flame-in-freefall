@@ -1,0 +1,735 @@
+{
+  "status": "processado",
+  "text": "ONTOLOGY SOURCE REFERENCE\r\nTerm Source Name\tPSI\tEFO\r\nTerm Source File\thttps://psi.nasa.gov/\thttp://data.bioontology.org/ontologies/EFO\r\nTerm Source Version\t1.0\t132\r\nTerm Source Description\tUser defined terms\tExperimental Factor Ontology\r\nINVESTIGATION\r\nInvestigation Identifier\t\r\nInvestigation Title\t\r\nInvestigation Description\t\r\nInvestigation Submission Date\t\r\nInvestigation Public Release Date\t\r\nINVESTIGATION PUBLICATIONS\r\nInvestigation PubMed ID\r\nInvestigation Publication DOI\r\nInvestigation Publication Author List\r\nInvestigation Publication Title\r\nInvestigation Publication Status\r\nInvestigation Publication Status Term Accession Number\r\nInvestigation Publication Status Term Source REF\r\nINVESTIGATION CONTACTS\r\nInvestigation Person Last Name\r\nInvestigation Person First Name\r\nInvestigation Person Mid Initials\r\nInvestigation Person Email\r\nInvestigation Person Phone\r\nInvestigation Person Fax\r\nInvestigation Person Address\r\nInvestigation Person Affiliation\r\nInvestigation Person Roles\r\nInvestigation Person Roles Term Accession Number\r\nInvestigation Person Roles Term Source REF\r\nSTUDY\r\nStudy Identifier\tPSI-117\r\nStudy Title\tEffect of External Thermo-Convective Perturbation on Cool Flame Dynamics: A Multidimensional Multi-Physics CFD Analysis\r\nStudy Description\t\r\nStudy Submission Date\t18-Sep-2024\r\nStudy Public Release Date\t10-Jun-2026\r\nStudy File Name\ts_PSI-117.txt\r\nComment[Acknowledgments]\t\r\nComment[Approach]\t\"OpenFOAM was used to develop a 3-D CFD model of n-alkane droplet cool flames in microgravity, coupling variable-density Navier–Stokes flow with low-temperature combustion chemistry, coupled heat and mass transfer, and radiation. Model fidelity was established against ISS FLEX measurements, after which controlled simulations examined three forcing modes (i) convection alone to mimic droplet drift, (ii) imposed heat flux, and (iii) combined convection plus heating applied to both large (1–4 mm) and sub-millimeter (~0.5 mm) droplets.\n\nTo accelerate progress, the study began with simplified chemistry and transitioned to reduced mechanisms for parameter sweeps over forcing amplitude and frequency, ambient composition (including ozone-assisted cases), and pressure. From each case, predictive observables were extracted (ignition delay, oscillation frequency and amplitude, stand-off and extinction diameters), and were used to construct stability maps that delineated conditions for cool-flame onset, persistence, and quenching. These maps were reconciled with FLEX observations and were used to guide next-generation test matrices for both large- and small-droplet experiments.\"\r\nComment[DOI]\t10.60555/gz0q-b577\r\nComment[Data Source Accession]\t\r\nComment[Data Source Link]\t\r\nComment[Experiment Hardware]\t\r\nComment[Experiment Hardware Link]\t\r\nComment[Flight Platform]\t\r\nComment[Funding]\tNNX17AF97A\r\nComment[Hypothesis]\tExternal thermo-convective perturbations (imposed temperature gradients, non-uniform heating, oscillatory/shear inflow) were expected to govern cool-flame ignition, oscillation, transition to hot ignition, and extinction by shifting residence time and scalar dissipation. In microgravity, where buoyancy was suppressed, this forcing was anticipated to dominate transport. A multidimensional, multi-physics CFD model was used to map perturbation-dependent stability boundaries and predict observables for comparison with FLEX data.\r\nComment[Identifiers]\t\r\nComment[Investigation Acronym]\t\r\nComment[Investigation End Date]\t02-14-2022\r\nComment[Investigation Start Date]\t02-15-2017\r\nComment[Managing NASA Center]\tGlenn Research Center (GRC)\r\nComment[Mission End]\t\r\nComment[Mission Link]\t\r\nComment[Mission Name]\t\r\nComment[Mission Start]\t\r\nComment[Objective]\tThe objective of this ground investigation was to use flight data obtained from PSI through NASA’s Flame Extinguishment Experiment (FLEX) to quantify how externally imposed thermal and convective perturbations regulated the dynamics and ultimate fate of already established droplet cool flames, and to explain run-to-run variability by isolating the roles of deliberate heating and unintentional drift-induced convection. Focusing on both small and large droplets, the work mapped stability windows for ignition, sustained oscillation, transitions to hot ignition and warm-flame behavior, and extinction under microgravity. By leveraging and extending the FLEX data in the PSI, this study produced reusable models and sensitivity analyses that coupled low-temperature chemistry with transport and radiative effects.\r\nComment[Project Identifier]\t\r\nComment[Project Link]\t\r\nComment[Project Title]\t\r\nComment[Project Type]\tGround Investigation\r\nComment[Proposal Title]\tEffect of External Thermo-Convective Perturbation on Cool Flame Dynamics: A Multidimensional Multi-Physics CFD Analysis\r\nComment[Research Area]\tCombustion Science\r\nComment[Research Impacts]\t\"Space Benefits: Potential to improve spacecraft fire-safety modeling by resolving cool-flame/extinction behavior in microgravity; leverages FLEX to define safer operating envelopes/materials.\nEarth Benefits: Advances low-temperature combustion understanding relevant to engine knock, efficiency, and emissions; delivers validated CFD tools transferrable to practical combustors.\"\r\nComment[Space Program]\tNational Aeronautics and Space Administration (NASA), PSI grant\r\nComment[Study Grant Number]\t\r\nComment[SubResearch Area]\tDroplet\r\nSTUDY DESIGN DESCRIPTORS\r\nStudy Design Type\tCool Flames\tDroplet combustion\tthermo-convective perturbation\tFLEX\r\nStudy Design Type Term Accession Number\thttps://psi.nasa.gov/\thttps://psi.nasa.gov/\thttps://psi.nasa.gov/\thttps://psi.nasa.gov/\r\nStudy Design Type Term Source REF\tPSI\tPSI\tPSI\tPSI\r\nSTUDY PUBLICATIONS\r\nStudy PubMed ID\t\t\t\t\t\t\t\t\t\t\r\nStudy Publication DOI\t10.1016/j.proci.2022.07.094\t10.1016/j.proci.2020.06.200\t10.1016/j.combustflame.2020.06.012\t10.1016/j.proci.2018.05.151\t\t\t\t\t\t10.1016/j.pecs.2019.100787\r\nStudy Publication Author List\tFarouk Tanvir I., Dryer Frederick L.\tFarouk Tanvir I., Won Sang Hee, Dryer Frederick L.\tXu Yuhao, Farouk Tanvir I., Hicks Michael C., Avedisian C. Thomas\tAlam Fahd E., Aghdam Ali Charchi, Dryer Frederick L., Farouk Tanvir I.\tFarouk T, Won S, Dryer F.\tFarouk T, Won S, Dryer F.\tAlam F, Dryer F, Farouk T.\tAlam F, Dryer F, Farouk T.\tAlam F, Charchi A, Dryer F, Farouk T.\tJu Yiguang, Reuter Christopher B., Yehia Omar R., Farouk Tanvir I., Won Sang Hee\r\nStudy Publication Title\tExtinction characteristics of isolated n-alkane fuel droplets during low temperature cool flame burning in air (2023)\tSub-millimeter sized multi-component jet fuel surrogate droplet combustion: Physicochemical preferential vaporization effects (2021)\tInitial diameter effects on combustion of unsupported equi-volume n-heptane/iso-octane mixture droplets and the transition to cool flame behavior: Experimental observations and detailed numerical modeling (2020)\tOscillatory cool flame combustion behavior of submillimeter sized n-alkane droplet under near limit conditions (2019)\tInvestigating the role of preferential vaporization during submillimeter sized multicomponent jet fuel surrogate droplet combustion (2019)\tMulti-component jet fuel surrogate droplet combustion: Preferential vaporization behaviors under spray relevant conditions and effects on combustion behaviors (2019)\tCool Flame Combustion of Sub-Millimeter Sized Higher n-Alkane Droplets at Atmospheric Condition (2017)\tNon-Premixed - Partially Premixed to Diffusive Burning: Initial Transient of Direct Cool Flame Burn (2017)\tOscillatory Cool Flame Combustion Behavior of Submillimeter Sized n-Alkane Droplet under Near Limit Conditions (2018)\tDynamics of cool flames (2019)\r\nStudy Publication Status\tpublished\tpublished\tpublished\tpublished\tpublished\tpublished\tpublished\tpublished\tpublished\tpublished\r\nStudy Publication Status Term Accession Number\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\r\nStudy Publication Status Term Source REF\tEFO\tEFO\tEFO\tEFO\tEFO\tEFO\tEFO\tEFO\tEFO\tEFO\r\nComment[Study Publication Link]\thttps://doi.org/10.1016/j.proci.2022.07.094\thttps://doi.org/10.1016/j.proci.2020.06.200\thttps://doi.org/10.1016/j.combustflame.2020.06.012\thttps://doi.org/10.1016/j.proci.2018.05.151\t\t\t\t\t\thttps://doi.org/10.1016/j.pecs.2019.100787\r\nSTUDY FACTORS\r\nStudy Factor Name\r\nStudy Factor Type\r\nStudy Factor Type Term Accession Number\r\nStudy Factor Type Term Source REF\r\nSTUDY ASSAYS\r\nStudy Assay File Name\r\nStudy Assay Measurement Type\r\nStudy Assay Measurement Type Term Accession Number\r\nStudy Assay Measurement Type Term Source REF\r\nStudy Assay Technology Type\r\nStudy Assay Technology Type Term Accession Number\r\nStudy Assay Technology Type Term Source REF\r\nStudy Assay Technology Platform\r\nSTUDY PROTOCOLS\r\nStudy Protocol Name\r\nStudy Protocol Type\r\nStudy Protocol Type Term Accession Number\r\nStudy Protocol Type Term Source REF\r\nStudy Protocol Description\r\nStudy Protocol URI\r\nStudy Protocol Version\r\nStudy Protocol Parameters Name\r\nStudy Protocol Parameters Name Term Accession Number\r\nStudy Protocol Parameters Name Term Source REF\r\nStudy Protocol Components Name\r\nStudy Protocol Components Type\r\nStudy Protocol Components Type Term Accession Number\r\nStudy Protocol Components Type Term Source REF\r\nSTUDY CONTACTS\r\nStudy Person Last Name\tFarouk\tHicks\r\nStudy Person First Name\tTanvir\tMike\r\nStudy Person Mid Initials\t\t\r\nStudy Person Email\tfarouk@cec.sc.edu\tmichael.hicks@nasa.gov\r\nStudy Person Phone\t\t\r\nStudy Person Fax\t\t\r\nStudy Person Address\t\t\r\nStudy Person Affiliation\tUniversity of South Carolina\tNASA GRC\r\nStudy Person Roles\tPrincipal Investigator (PI)\tProject Scientist\r\nStudy Person Roles Term Accession Number\tPrincipal Investigator (PI)\tProject Scientist\r\nStudy Person Roles Term Source REF\t\t\r\nComment[Study Person REF]\t\t\r\nComment[orcidIdentifier]\t\t0000-0002-5579-0949\r\n",
+  "pages": [
+    {
+      "page": 1,
+      "location": "ISA > Estudo > Título",
+      "text": "PSI-117 Effect of External Thermo-Convective Perturbation on Cool Flame Dynamics: A Multidimensional Multi-Physics CFD Analysis"
+    },
+    {
+      "page": 2,
+      "location": "ISA > Estudo > Approach",
+      "text": "OpenFOAM was used to develop a 3-D CFD model of n-alkane droplet cool flames in microgravity, coupling variable-density Navier–Stokes flow with low-temperature combustion chemistry, coupled heat and mass transfer, and radiation. Model fidelity was established against ISS FLEX measurements, after which controlled simulations examined three forcing modes (i) convection alone to mimic droplet drift, (ii) imposed heat flux, and (iii) combined convection plus heating applied to both large (1–4 mm) and sub-millimeter (~0.5 mm) droplets.\n\nTo accelerate progress, the study began with simplified chemistry and transitioned to reduced mechanisms for parameter sweeps over forcing amplitude and frequency, ambient composition (including ozone-assisted cases), and pressure. From each case, predictive observables were extracted (ignition delay, oscillation frequency and amplitude, stand-off and extinction diameters), and were used to construct stability maps that delineated conditions for cool-flame onset, persistence, and quenching. These maps were reconciled with FLEX observations and were used to guide next-generation test matrices for both large- and small-droplet experiments."
+    },
+    {
+      "page": 3,
+      "location": "ISA > Estudo > DOI",
+      "text": "10.60555/gz0q-b577"
+    },
+    {
+      "page": 4,
+      "location": "ISA > Estudo > Funding",
+      "text": "NNX17AF97A"
+    },
+    {
+      "page": 5,
+      "location": "ISA > Estudo > Hypothesis",
+      "text": "External thermo-convective perturbations (imposed temperature gradients, non-uniform heating, oscillatory/shear inflow) were expected to govern cool-flame ignition, oscillation, transition to hot ignition, and extinction by shifting residence time and scalar dissipation. In microgravity, where buoyancy was suppressed, this forcing was anticipated to dominate transport. A multidimensional, multi-physics CFD model was used to map perturbation-dependent stability boundaries and predict observables for comparison with FLEX data."
+    },
+    {
+      "page": 6,
+      "location": "ISA > Estudo > Investigation End Date",
+      "text": "2022-02-14"
+    },
+    {
+      "page": 7,
+      "location": "ISA > Estudo > Investigation Start Date",
+      "text": "2017-02-15"
+    },
+    {
+      "page": 8,
+      "location": "ISA > Estudo > Managing NASA Center",
+      "text": "Glenn Research Center (GRC)"
+    },
+    {
+      "page": 9,
+      "location": "ISA > Estudo > Objective",
+      "text": "The objective of this ground investigation was to use flight data obtained from PSI through NASA’s Flame Extinguishment Experiment (FLEX) to quantify how externally imposed thermal and convective perturbations regulated the dynamics and ultimate fate of already established droplet cool flames, and to explain run-to-run variability by isolating the roles of deliberate heating and unintentional drift-induced convection. Focusing on both small and large droplets, the work mapped stability windows for ignition, sustained oscillation, transitions to hot ignition and warm-flame behavior, and extinction under microgravity. By leveraging and extending the FLEX data in the PSI, this study produced reusable models and sensitivity analyses that coupled low-temperature chemistry with transport and radiative effects."
+    },
+    {
+      "page": 10,
+      "location": "ISA > Estudo > Project Type",
+      "text": "Ground Investigation"
+    },
+    {
+      "page": 11,
+      "location": "ISA > Estudo > Proposal Title",
+      "text": "Effect of External Thermo-Convective Perturbation on Cool Flame Dynamics: A Multidimensional Multi-Physics CFD Analysis"
+    },
+    {
+      "page": 12,
+      "location": "ISA > Estudo > Research Area",
+      "text": "Combustion Science"
+    },
+    {
+      "page": 13,
+      "location": "ISA > Estudo > Research Impacts",
+      "text": "Space Benefits: Potential to improve spacecraft fire-safety modeling by resolving cool-flame/extinction behavior in microgravity; leverages FLEX to define safer operating envelopes/materials.\nEarth Benefits: Advances low-temperature combustion understanding relevant to engine knock, efficiency, and emissions; delivers validated CFD tools transferrable to practical combustors."
+    },
+    {
+      "page": 14,
+      "location": "ISA > Estudo > Space Program",
+      "text": "National Aeronautics and Space Administration (NASA), PSI grant"
+    },
+    {
+      "page": 15,
+      "location": "ISA > Estudo > SubResearch Area",
+      "text": "Droplet"
+    },
+    {
+      "page": 16,
+      "location": "ISA > Estudo > Palavras-chave",
+      "text": "Cool Flames, Droplet combustion, thermo-convective perturbation, FLEX"
+    },
+    {
+      "page": 17,
+      "location": "ISA > Publicação 1",
+      "text": "Extinction characteristics of isolated n-alkane fuel droplets during low temperature cool flame burning in air Farouk Tanvir I., Dryer Frederick L. 2023 10.1016/j.proci.2022.07.094"
+    },
+    {
+      "page": 18,
+      "location": "ISA > Publicação 2",
+      "text": "Sub-millimeter sized multi-component jet fuel surrogate droplet combustion: Physicochemical preferential vaporization effects Farouk Tanvir I., Won Sang Hee, Dryer Frederick L. 2021 10.1016/j.proci.2020.06.200"
+    },
+    {
+      "page": 19,
+      "location": "ISA > Publicação 3",
+      "text": "Initial diameter effects on combustion of unsupported equi-volume n-heptane/iso-octane mixture droplets and the transition to cool flame behavior: Experimental observations and detailed numerical modeling Xu Yuhao, Farouk Tanvir I., Hicks Michael C., Avedisian C. Thomas 2020 10.1016/j.combustflame.2020.06.012"
+    },
+    {
+      "page": 20,
+      "location": "ISA > Publicação 4",
+      "text": "Oscillatory cool flame combustion behavior of submillimeter sized n-alkane droplet under near limit conditions Alam Fahd E., Aghdam Ali Charchi, Dryer Frederick L., Farouk Tanvir I. 2019 10.1016/j.proci.2018.05.151"
+    },
+    {
+      "page": 21,
+      "location": "ISA > Publicação 5",
+      "text": "Investigating the role of preferential vaporization during submillimeter sized multicomponent jet fuel surrogate droplet combustion Farouk T, Won S, Dryer F. 2019"
+    },
+    {
+      "page": 22,
+      "location": "ISA > Publicação 6",
+      "text": "Multi-component jet fuel surrogate droplet combustion: Preferential vaporization behaviors under spray relevant conditions and effects on combustion behaviors Farouk T, Won S, Dryer F. 2019"
+    },
+    {
+      "page": 23,
+      "location": "ISA > Publicação 7",
+      "text": "Cool Flame Combustion of Sub-Millimeter Sized Higher n-Alkane Droplets at Atmospheric Condition Alam F, Dryer F, Farouk T. 2017"
+    },
+    {
+      "page": 24,
+      "location": "ISA > Publicação 8",
+      "text": "Non-Premixed - Partially Premixed to Diffusive Burning: Initial Transient of Direct Cool Flame Burn Alam F, Dryer F, Farouk T. 2017"
+    },
+    {
+      "page": 25,
+      "location": "ISA > Publicação 9",
+      "text": "Oscillatory Cool Flame Combustion Behavior of Submillimeter Sized n-Alkane Droplet under Near Limit Conditions Alam F, Charchi A, Dryer F, Farouk T. 2018"
+    },
+    {
+      "page": 26,
+      "location": "ISA > Publicação 10",
+      "text": "Dynamics of cool flames Ju Yiguang, Reuter Christopher B., Yehia Omar R., Farouk Tanvir I., Won Sang Hee 2019 10.1016/j.pecs.2019.100787"
+    }
+  ],
+  "tables": [
+    {
+      "name": "Publicações (ISA)",
+      "location": "ISA > Estudo > Publicações",
+      "header_row": 1,
+      "columns": [
+        "Ano",
+        "Título",
+        "Autores",
+        "DOI",
+        "Link",
+        "Situação"
+      ],
+      "original_headers": [
+        "Ano",
+        "Título",
+        "Autores",
+        "DOI",
+        "Link",
+        "Situação"
+      ],
+      "rows": [
+        [
+          "2023",
+          "Extinction characteristics of isolated n-alkane fuel droplets during low temperature cool flame burning in air",
+          "Farouk Tanvir I., Dryer Frederick L.",
+          "10.1016/j.proci.2022.07.094",
+          "https://doi.org/10.1016/j.proci.2022.07.094",
+          "published"
+        ],
+        [
+          "2021",
+          "Sub-millimeter sized multi-component jet fuel surrogate droplet combustion: Physicochemical preferential vaporization effects",
+          "Farouk Tanvir I., Won Sang Hee, Dryer Frederick L.",
+          "10.1016/j.proci.2020.06.200",
+          "https://doi.org/10.1016/j.proci.2020.06.200",
+          "published"
+        ],
+        [
+          "2020",
+          "Initial diameter effects on combustion of unsupported equi-volume n-heptane/iso-octane mixture droplets and the transition to cool flame behavior: Experimental observations and detailed numerical modeling",
+          "Xu Yuhao, Farouk Tanvir I., Hicks Michael C., Avedisian C. Thomas",
+          "10.1016/j.combustflame.2020.06.012",
+          "https://doi.org/10.1016/j.combustflame.2020.06.012",
+          "published"
+        ],
+        [
+          "2019",
+          "Oscillatory cool flame combustion behavior of submillimeter sized n-alkane droplet under near limit conditions",
+          "Alam Fahd E., Aghdam Ali Charchi, Dryer Frederick L., Farouk Tanvir I.",
+          "10.1016/j.proci.2018.05.151",
+          "https://doi.org/10.1016/j.proci.2018.05.151",
+          "published"
+        ],
+        [
+          "2019",
+          "Investigating the role of preferential vaporization during submillimeter sized multicomponent jet fuel surrogate droplet combustion",
+          "Farouk T, Won S, Dryer F.",
+          null,
+          null,
+          "published"
+        ],
+        [
+          "2019",
+          "Multi-component jet fuel surrogate droplet combustion: Preferential vaporization behaviors under spray relevant conditions and effects on combustion behaviors",
+          "Farouk T, Won S, Dryer F.",
+          null,
+          null,
+          "published"
+        ],
+        [
+          "2017",
+          "Cool Flame Combustion of Sub-Millimeter Sized Higher n-Alkane Droplets at Atmospheric Condition",
+          "Alam F, Dryer F, Farouk T.",
+          null,
+          null,
+          "published"
+        ],
+        [
+          "2017",
+          "Non-Premixed - Partially Premixed to Diffusive Burning: Initial Transient of Direct Cool Flame Burn",
+          "Alam F, Dryer F, Farouk T.",
+          null,
+          null,
+          "published"
+        ],
+        [
+          "2018",
+          "Oscillatory Cool Flame Combustion Behavior of Submillimeter Sized n-Alkane Droplet under Near Limit Conditions",
+          "Alam F, Charchi A, Dryer F, Farouk T.",
+          null,
+          null,
+          "published"
+        ],
+        [
+          "2019",
+          "Dynamics of cool flames",
+          "Ju Yiguang, Reuter Christopher B., Yehia Omar R., Farouk Tanvir I., Won Sang Hee",
+          "10.1016/j.pecs.2019.100787",
+          "https://doi.org/10.1016/j.pecs.2019.100787",
+          "published"
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "ISA",
+        "range": "",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "catalog",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "Ano",
+          "base": "Ano",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 10,
+          "n_nonempty": 10,
+          "n_numeric": 10,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 2017.0,
+          "max": 2023.0
+        },
+        {
+          "name": "Título",
+          "base": "Título",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 10,
+          "n_nonempty": 10,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Autores",
+          "base": "Autores",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 10,
+          "n_nonempty": 10,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "DOI",
+          "base": "DOI",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 10,
+          "n_nonempty": 5,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Link",
+          "base": "Link",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 10,
+          "n_nonempty": 5,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Situação",
+          "base": "Situação",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 10,
+          "n_nonempty": 10,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        }
+      ],
+      "chart": {
+        "type": "catalog",
+        "x": null,
+        "y": []
+      },
+      "flags": [],
+      "source_column_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "evidence_kind": "metadata",
+      "field_classification": [],
+      "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample."
+    },
+    {
+      "name": "Contatos (ISA)",
+      "location": "ISA > Estudo > Contatos",
+      "header_row": 1,
+      "columns": [
+        "Sobrenome",
+        "Nome",
+        "Função",
+        "Afiliação",
+        "E-mail",
+        "ORCID"
+      ],
+      "original_headers": [
+        "Sobrenome",
+        "Nome",
+        "Função",
+        "Afiliação",
+        "E-mail",
+        "ORCID"
+      ],
+      "rows": [
+        [
+          "Farouk",
+          "Tanvir",
+          "Principal Investigator (PI)",
+          "University of South Carolina",
+          "farouk@cec.sc.edu",
+          null
+        ],
+        [
+          "Hicks",
+          "Mike",
+          "Project Scientist",
+          "NASA GRC",
+          "michael.hicks@nasa.gov",
+          "0000-0002-5579-0949"
+        ]
+      ],
+      "source_rows": [
+        2,
+        3
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "ISA",
+        "range": "",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "catalog",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "Sobrenome",
+          "base": "Sobrenome",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Nome",
+          "base": "Nome",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Função",
+          "base": "Função",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Afiliação",
+          "base": "Afiliação",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "E-mail",
+          "base": "E-mail",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "ORCID",
+          "base": "ORCID",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 1,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        }
+      ],
+      "chart": {
+        "type": "catalog",
+        "x": null,
+        "y": []
+      },
+      "flags": [],
+      "source_column_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "evidence_kind": "metadata",
+      "field_classification": [],
+      "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample."
+    }
+  ],
+  "isa": {
+    "study": {
+      "id": "PSI-117",
+      "title": "Effect of External Thermo-Convective Perturbation on Cool Flame Dynamics: A Multidimensional Multi-Physics CFD Analysis",
+      "description": "",
+      "submitted": "2024-09-18",
+      "released": "2026-06-10",
+      "file": "s_PSI-117.txt"
+    },
+    "comments": {
+      "Approach": "OpenFOAM was used to develop a 3-D CFD model of n-alkane droplet cool flames in microgravity, coupling variable-density Navier–Stokes flow with low-temperature combustion chemistry, coupled heat and mass transfer, and radiation. Model fidelity was established against ISS FLEX measurements, after which controlled simulations examined three forcing modes (i) convection alone to mimic droplet drift, (ii) imposed heat flux, and (iii) combined convection plus heating applied to both large (1–4 mm) and sub-millimeter (~0.5 mm) droplets.\n\nTo accelerate progress, the study began with simplified chemistry and transitioned to reduced mechanisms for parameter sweeps over forcing amplitude and frequency, ambient composition (including ozone-assisted cases), and pressure. From each case, predictive observables were extracted (ignition delay, oscillation frequency and amplitude, stand-off and extinction diameters), and were used to construct stability maps that delineated conditions for cool-flame onset, persistence, and quenching. These maps were reconciled with FLEX observations and were used to guide next-generation test matrices for both large- and small-droplet experiments.",
+      "DOI": "10.60555/gz0q-b577",
+      "Funding": "NNX17AF97A",
+      "Hypothesis": "External thermo-convective perturbations (imposed temperature gradients, non-uniform heating, oscillatory/shear inflow) were expected to govern cool-flame ignition, oscillation, transition to hot ignition, and extinction by shifting residence time and scalar dissipation. In microgravity, where buoyancy was suppressed, this forcing was anticipated to dominate transport. A multidimensional, multi-physics CFD model was used to map perturbation-dependent stability boundaries and predict observables for comparison with FLEX data.",
+      "Investigation End Date": "2022-02-14",
+      "Investigation Start Date": "2017-02-15",
+      "Managing NASA Center": "Glenn Research Center (GRC)",
+      "Objective": "The objective of this ground investigation was to use flight data obtained from PSI through NASA’s Flame Extinguishment Experiment (FLEX) to quantify how externally imposed thermal and convective perturbations regulated the dynamics and ultimate fate of already established droplet cool flames, and to explain run-to-run variability by isolating the roles of deliberate heating and unintentional drift-induced convection. Focusing on both small and large droplets, the work mapped stability windows for ignition, sustained oscillation, transitions to hot ignition and warm-flame behavior, and extinction under microgravity. By leveraging and extending the FLEX data in the PSI, this study produced reusable models and sensitivity analyses that coupled low-temperature chemistry with transport and radiative effects.",
+      "Project Type": "Ground Investigation",
+      "Proposal Title": "Effect of External Thermo-Convective Perturbation on Cool Flame Dynamics: A Multidimensional Multi-Physics CFD Analysis",
+      "Research Area": "Combustion Science",
+      "Research Impacts": "Space Benefits: Potential to improve spacecraft fire-safety modeling by resolving cool-flame/extinction behavior in microgravity; leverages FLEX to define safer operating envelopes/materials.\nEarth Benefits: Advances low-temperature combustion understanding relevant to engine knock, efficiency, and emissions; delivers validated CFD tools transferrable to practical combustors.",
+      "Space Program": "National Aeronautics and Space Administration (NASA), PSI grant",
+      "SubResearch Area": "Droplet"
+    },
+    "design_types": [
+      "Cool Flames",
+      "Droplet combustion",
+      "thermo-convective perturbation",
+      "FLEX"
+    ],
+    "publications": [
+      {
+        "pubmed": "",
+        "doi": "10.1016/j.proci.2022.07.094",
+        "authors": "Farouk Tanvir I., Dryer Frederick L.",
+        "title": "Extinction characteristics of isolated n-alkane fuel droplets during low temperature cool flame burning in air",
+        "status": "published",
+        "link": "https://doi.org/10.1016/j.proci.2022.07.094",
+        "year": "2023"
+      },
+      {
+        "pubmed": "",
+        "doi": "10.1016/j.proci.2020.06.200",
+        "authors": "Farouk Tanvir I., Won Sang Hee, Dryer Frederick L.",
+        "title": "Sub-millimeter sized multi-component jet fuel surrogate droplet combustion: Physicochemical preferential vaporization effects",
+        "status": "published",
+        "link": "https://doi.org/10.1016/j.proci.2020.06.200",
+        "year": "2021"
+      },
+      {
+        "pubmed": "",
+        "doi": "10.1016/j.combustflame.2020.06.012",
+        "authors": "Xu Yuhao, Farouk Tanvir I., Hicks Michael C., Avedisian C. Thomas",
+        "title": "Initial diameter effects on combustion of unsupported equi-volume n-heptane/iso-octane mixture droplets and the transition to cool flame behavior: Experimental observations and detailed numerical modeling",
+        "status": "published",
+        "link": "https://doi.org/10.1016/j.combustflame.2020.06.012",
+        "year": "2020"
+      },
+      {
+        "pubmed": "",
+        "doi": "10.1016/j.proci.2018.05.151",
+        "authors": "Alam Fahd E., Aghdam Ali Charchi, Dryer Frederick L., Farouk Tanvir I.",
+        "title": "Oscillatory cool flame combustion behavior of submillimeter sized n-alkane droplet under near limit conditions",
+        "status": "published",
+        "link": "https://doi.org/10.1016/j.proci.2018.05.151",
+        "year": "2019"
+      },
+      {
+        "pubmed": "",
+        "doi": "",
+        "authors": "Farouk T, Won S, Dryer F.",
+        "title": "Investigating the role of preferential vaporization during submillimeter sized multicomponent jet fuel surrogate droplet combustion",
+        "status": "published",
+        "link": "",
+        "year": "2019"
+      },
+      {
+        "pubmed": "",
+        "doi": "",
+        "authors": "Farouk T, Won S, Dryer F.",
+        "title": "Multi-component jet fuel surrogate droplet combustion: Preferential vaporization behaviors under spray relevant conditions and effects on combustion behaviors",
+        "status": "published",
+        "link": "",
+        "year": "2019"
+      },
+      {
+        "pubmed": "",
+        "doi": "",
+        "authors": "Alam F, Dryer F, Farouk T.",
+        "title": "Cool Flame Combustion of Sub-Millimeter Sized Higher n-Alkane Droplets at Atmospheric Condition",
+        "status": "published",
+        "link": "",
+        "year": "2017"
+      },
+      {
+        "pubmed": "",
+        "doi": "",
+        "authors": "Alam F, Dryer F, Farouk T.",
+        "title": "Non-Premixed - Partially Premixed to Diffusive Burning: Initial Transient of Direct Cool Flame Burn",
+        "status": "published",
+        "link": "",
+        "year": "2017"
+      },
+      {
+        "pubmed": "",
+        "doi": "",
+        "authors": "Alam F, Charchi A, Dryer F, Farouk T.",
+        "title": "Oscillatory Cool Flame Combustion Behavior of Submillimeter Sized n-Alkane Droplet under Near Limit Conditions",
+        "status": "published",
+        "link": "",
+        "year": "2018"
+      },
+      {
+        "pubmed": "",
+        "doi": "10.1016/j.pecs.2019.100787",
+        "authors": "Ju Yiguang, Reuter Christopher B., Yehia Omar R., Farouk Tanvir I., Won Sang Hee",
+        "title": "Dynamics of cool flames",
+        "status": "published",
+        "link": "https://doi.org/10.1016/j.pecs.2019.100787",
+        "year": "2019"
+      }
+    ],
+    "contacts": [
+      {
+        "sobrenome": "Farouk",
+        "nome": "Tanvir",
+        "email": "farouk@cec.sc.edu",
+        "afiliacao": "University of South Carolina",
+        "funcao": "Principal Investigator (PI)",
+        "orcid": ""
+      },
+      {
+        "sobrenome": "Hicks",
+        "nome": "Mike",
+        "email": "michael.hicks@nasa.gov",
+        "afiliacao": "NASA GRC",
+        "funcao": "Project Scientist",
+        "orcid": "0000-0002-5579-0949"
+      }
+    ],
+    "empty_sections": [
+      "STUDY FACTORS",
+      "STUDY ASSAYS",
+      "STUDY PROTOCOLS"
+    ]
+  },
+  "metadata": {
+    "encoding": "utf-8-sig",
+    "formato": "ISA-Tab",
+    "estudo": "PSI-117",
+    "evidence_kind": "metadata",
+    "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample."
+  },
+  "warnings": [
+    "Seções ISA sem conteúdo: STUDY FACTORS, STUDY ASSAYS, STUDY PROTOCOLS. Fatores, ensaios e protocolos não estão descritos; as condições devem vir das planilhas e publicações."
+  ],
+  "schema_version": 4,
+  "source_filename": "i_Investigation.txt",
+  "source_extension": ".txt",
+  "document": {
+    "name": "i_Investigation.txt",
+    "extension": ".txt",
+    "sha256": "f86a1b97fa011cb02c8c52d1e05184840d4f020197cf60462a942654612fb27a",
+    "size_bytes": 10088
+  },
+  "evidence_kind": "metadata",
+  "observations": [],
+  "provenance": {
+    "study_id": "PSI-117",
+    "source": "NASA Physical Sciences Informatics",
+    "filename": "metadata/i_Investigation.txt",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_metadata_NEWID-13_Effect+of+External+T.zip&version=2&redirect=false",
+    "doi": "10.60555/gz0q-b577",
+    "sha256": "f86a1b97fa011cb02c8c52d1e05184840d4f020197cf60462a942654612fb27a",
+    "size_bytes": 10088,
+    "study_version": 2,
+    "file_version": 2,
+    "verified_utc": "2026-11-15T23:49:00.107261+00:00",
+    "retrieved_utc": "2026-11-15T23:49:00.107261+00:00",
+    "verification": "byte_identical_to_nasa_download",
+    "archive_member": "exeperiencias/PIS-117/metadados-117/PSI-117_metadata_NEWID-13_Effect of External T (1).zip",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 10382,
+      "directory": false,
+      "files": [],
+      "id": "6a282739d9d7246402cb43de",
+      "key": "psi-data/PSI-117/metadata/PSI-117_metadata_NEWID-13_Effect of External T.zip",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "10.14 KB",
+      "sortingCategory": "Investigation Metadata Files",
+      "status": "active",
+      "subcategory": null,
+      "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+      "version": 2,
+      "visible": true
+    },
+    "license": "No file-specific license exposed; retain NASA and author attribution.",
+    "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+    "classification": "metadata",
+    "media_type": "text/plain",
+    "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample.",
+    "parent_archive_sha256": "a9698dbe10629c226dc498610d62ab8c5c7f15e2668412e831164ab74df99222",
+    "parent_archive_filename": "PSI-117_metadata_NEWID-13_Effect of External T.zip",
+    "nested_member": "i_Investigation.txt"
+  }
+}

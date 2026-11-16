@@ -1,0 +1,1970 @@
+{
+  "status": "processado",
+  "text": "Three Stage Cool Flame Droplet Burning Behavior of n-\nAlkane Droplets at Elevated Pressure Conditions: Hot,\n        Warmand CoolFlame\n\n                T. I. Farouka, D. Dietrichb and F. L. Dryera\n\n                             a Department of Mechanical Engineering\n                University of South Carolina, Columbia, SC 29208, USA\n\n\n                               b NASA Glenn Research Center\n                            Cleveland, OH 44135, USA\n\n\n\n                    37th International Symposium on Combustion\n                                 Dublin, Ireland\n                          July 29th – August 3rd, 2018                                                                                   1\n\n“Cool” Flames Triggered By Radiative Losses\n     First observation of “Cool Flames” in\n      n-heptane droplet diffusion flames\n       International Space Station 2011, Flame\n        Extinguishment Experiments (FLEX)\n\n              Hot Flame\n\n\n\n\n                   First Stage\n\n\n\n            “Cool Flame”\n\n\n\n            Second Stage                                                           Evolution of droplet diameter and burning rate (n-\n                                                       heptane, do = 4.00 mm, air, atmospheric pressure)\nV. Nayagam et al. Combustion and Flame (2012), 159, 3583 – 3588.                                                                                         2 T. Farouk and F. L. Dryer Combustion and Flame (2014), 161, 565 – 581\n\n“Cool Flames” – Multistage (hot-cool) Burning\n\n\n\n\n\n                                  Higher Pressure, n-heptane, CO2 diluent\n                                     augmenting radiative losses\n\n\n\n\n\n   Evolution of droplet diameter and burning\n        rate (do = 4.08 mm, O2/CO2/N2\n                                                               Evolution of flame diameter (do = 4.08            0.21/0.15/0.64, 3 atm)\n                                            mm, O2/CO2/N2 0.21/0.15/0.64, 3 atm)\nT. Farouk and F. L. Dryer Proceedings of Combustion Institute (2015) 35, 1701 – 1708                                                                                         3A. Cuoci et al. Proceedings of the Combustion Institute (2015) 35, 1621 - 1627\n\nInitiation\nWith a Hot Flame\n              High Temperature\n               Combustion\n\n\n\n\n\n                                                 “Cool Flame”\n                                                 AlternativeExtinction\n\n\n\n\n\n                                                                                       4\n\nConditions augmenting diffusive losses\nand higher reactivity– Helium diluent and\n          Higher pressure?\n\n\n\n\n\n                                                                                  5\n\nTransient Droplet Combustion Model*+\n\n\n                     Gas Phase:\n                                           • Multi-component molecular diffusion\n                                           • Detailed chemical kinetics  - high and low temperature\n                         • Mass conservation                                                  mv                             Fiber Model:                               • Species equation                                                                             One dimensional temperature                               • Energy conservation                                                       drs                       mp                                        distribution                               Statistical                                                                           qambient            Energy exchange with                                                               dt                                       ∂Yl , i                      Narrowband     Liquid Phase:                                                                                qloss            flame and ambient                                               Dl , i                          Radiation Model                                                           • Mass conservation      ∂r            qR\n                                                                                                                                                                                                                              fib                                                           • Species equation                                       q\n                          ∂T                                                           • Energy conservation                                              ∂T                       λ\n                                                                                                                                               l ∂r     λ∂r\n\n\n                          Droplet Surface:\n                                                              The code numeric and data                                                 • Surface regression – Adaptive Grid\n                                          • Evaporation of fuel                                      handling methodology has\n                                          • Condensation/Dissolution of products                        been revised to relax\n                                          • Radiative heat exchange                                                                      number of species\n                                                                                                  constraints\n\n* T. Farouk and F. L. Dryer Combust. and Flame (2012) 159, 200 – 209\n+                                                                                        6  T. Farouk and F. L. Dryer Combust Theory & Modelling (2011), 15, 487 – 515\n\nHigh Pressure Helium Exchange – 3 atm\n\n                                                Introduction of helium increases the\n                                            burning rate, at higher helium\n                                              concentration a third stage quasi-steady\n                                          burn is observed\n\n\n\n\n                                                                                                   1st Stage\n                                                                   High Temperature\n                                                                          burn\n\n                                                                                         2nd Stage             3rd Stage\n                                                                         Moderate     Low Temperature\n                                                                        Temperature burn         burn\n                                                                                                    Tflame ~ 950 K         Tflame ~ 770 K     Evolution of droplet diameter (n-heptane, do =\n   4.00 mm, XO2 = 21%, He exchange with balance\n                      N2, 3 atm).\n\n\n\n\n                                                          Evolution of peak temperature (n-heptane, do =\n                                                     4.00 mm, XO2 = 21%, He exchange with balance\n                                                                           N2, 3 atm).                                                                                        7\n\nHigh Pressure Helium Exchange – 3 atm\n\n\n                                                                  •  The second stage suppresses at\n                                                higher helium concentration\n                                                                  •  The droplet diameter regression do not\n                                      show any significant changes\n\n\n                                                                                         2nd Stage\n                                                                         Moderate\n                                                                        Temperature burn\n                                                                                                    Tflame ~ 950 K\n\n\n                                                                                                      3rd Stage\n                                                           Low Temperature burn\n     Evolution of droplet diameter (n-heptane, do =                                                                                                     Tflame ~ 770 K\n   4.00 mm, XO2 = 21%, He exchange with balance\n                      N2, 3 atm).\n\n\n\n\n                                                          Evolution of peak temperature (n-heptane, do =\n                                                     4.00 mm, XO2 = 21%, He exchange with balance\n                                                                           N2, 3 atm).                                                                                        8\n\nHigh Pressure Helium Exchange – 3 atm\n\n                                                          • A second contraction in the flame occurs as\n                                            the system transitions to the third stage/low\n         1st            2nd               3rd                temperature burn.\n        Stage             Stage             3rdStage\n                                                          •  Despite the decrease in the maximum\n                                         temperature it is the flame contraction that\n                                   makes the droplet diameter regression\n                                              insensitive to the different burn stages.\n\n\n\n\n\n Evolution of flame standoff ratio (n-heptane, do =\n 4.00 mm, XO2 = 21%, He exchange with balance\n                   N2, 3 atm).\n\n\n\n\n\n                                                             Evolution of burning rate (n-heptane, do = 4.00\n                                          mm, XO2 = 21%, He exchange with balance N2, 3\n                                                                                 atm).                  9\n\nHigh Pressure Helium Exchange – 3 atm\n\n                                                           • A strong coupling between heat generation\n                                     and losses in the system.\n                                                           •  The radiative and diffusive heat losses are\n                                       comparable in the first and second stage.\n                                                           •  The diffusive losses become prominent in\n                                            the third stage “Cool flame” burn.\n\n\n\n\n\n  Evolution of radiative loss (n-heptane, do = 4.00\n mm, XO2 = 21%, He exchange with balance N2, 3\n                       atm).\n\n\n\n\n                                                             Evolution of diffusive loss (n-heptane, do = 4.00\n                                           mm, XO2 = 21%, He exchange with balance N2, 3\n                                                                                  atm).\n                                                                                       10\n\nPressure Dependence\n\n\n\n\n\n                Ignition delay of n-heptane\n\n                                                                       Degenerate\n                                                                           Branching\n\n\n\n\n                                                                                             11\n\nSpatiotemporal variation of species and temperature\n\n\n\n\n\n                                    CO\n\n\n\n\n\n      Temperature\n\n\n                                          CH2O\n\n\n                                                                                       12\n\nSpecies Distribution – 3 atm, XHe = 40%\n\n\n\n\n\n             Spatiotemporal distribution of species representative of three distinct stages\n\n\n\n                                                                                       13\n\nSpecies Distribution – 3 atm, XHe = 40%\n\n\n\n\n\n    •  Species representative of low temperature kinetics is in prominence in the third stage\n    •  Competition between O2 addition to QOOH and decomposition of QOOH (i.e. OH, HO2, olefin,\n       carbonyl, QO)\n\n                                                                                       14\n\nExperimental Observation of 3 Stage Behavior\n\n\n\n\n\nFLEX 1268:\nn-dodecane, 2.75 atm, 21.6% O2, 50.2% N2,\n28.2% He.\nQualitative agreement between\npredictions and observations\n\n\n\n                                                                                       15\n\nExperimental Observation of 3 Stage Behavior\n\n\n\n\n\nAtef et al. Combustion and Flame (2017)\n\n\n\n FLEX 1268:\n n-dodecane, 2.75 atm, 21.6% O2, 50.2% N2,\n 28.2% He.\n Qualitative agreement between\n predictions and observations\n\n\n\n                                                                                        16\n\nSummary\n\n     • The experimental results and detailed predictions support that\n    there exists two possible modes of quasi-steady cool flame\n    droplet burning behaviour: “Warm” in the NTC regime and “Cold”\n    in the low temperature regime.\n     • The helium concentration is critical for the observed\n    characteristics – promoting the second stage burn or completely\n   supressing it.\n     • A dynamic coupling between heat generation and heat loss in\n    the system.\n     • The low temperature kinetics is distinctive and different in the\n   second and third stage.\n     • Experimental observation with n-dodecane at higher pressure\n   and helium exchange validates the “a priori” numerical\n    predictions of a three stage behaviour inferred from n-heptane\n    simulations.\n                                                                                        17\n\nAcknowledgements\n\n\n\n\n     • This work was supported by the National Aeronautics and\n   Space Administration through grants NNX14AG461A (TIF),\n   NNX09AW 19A (FLD) .\n\n     • Thanks to Drs. Michael Hicks, Forman Williams and Vedha\n   Nayagam for interest and insight throughout the course of this\n    investigation.\n\n\n\n\n\n                                                                                   18\n\nThank You\n\nQuestions??\n\n\n\n\n\n                                         Solar Eclipse in Columbia, South Carolina\n                                                          August 22, 2017\n                                         Canon 60D, 400 mm telephoto19\n\nHigh Pressure Helium Exchange – 5 atm\n\n\n                                                   Similar stable three stage burning\n                 1st Stage                                behavior is observed at increased        High Temperature\n              burn                                                pressure, but under higher helium\n                  2nd Stage\n               Moderate                                     loading conditions\n              Temperature            3rd Stage\n                  burn      Low Temperature burn\n                  Tflame ~ 950 K          Tflame ~ 770 K\n\n\n\n\n\n     Evolution of peak temperature (n-heptane, do =\n    4.00 mm, XO2 = 21%, He exchange with balance\n                       N2, 5 atm).\n\n\n                                                            Evolution of flame standoff ratio (n-heptane, do =\n                                                        4.00 mm, XO2 = 21%, He exchange with balance\n                                                                              N2, 5 atm).                                                                                       20\n\nExperimental Observation of 3 Stage Behavior\nFLEX 1256:\nn-dodecane, 3.00 atm, 21.0% O2, 79.0% N2\nDo ~ 4.2 mm\n\n\n\n\n\n                                                                                       21\n\nExperimental Observation of 3 Stage Behavior\nFLEX 1256:\nn-dodecane, 3.00 atm, 21.0% O2, 79.0% N2\nDo ~ 4.2 mm\n\n\n\n\n\n                                                                                       22",
+  "pages": [
+    {
+      "page": 1,
+      "location": "página 1",
+      "text": "Three Stage Cool Flame Droplet Burning Behavior of n-\nAlkane Droplets at Elevated Pressure Conditions: Hot,\n        Warmand CoolFlame\n\n                T. I. Farouka, D. Dietrichb and F. L. Dryera\n\n                             a Department of Mechanical Engineering\n                University of South Carolina, Columbia, SC 29208, USA\n\n\n                               b NASA Glenn Research Center\n                            Cleveland, OH 44135, USA\n\n\n\n                    37th International Symposium on Combustion\n                                 Dublin, Ireland\n                          July 29th – August 3rd, 2018                                                                                   1",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            47.81,
+            94.46,
+            678.13,
+            128.83
+          ],
+          "text": "Three Stage Cool Flame Droplet Burning Behavior of n-",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            50.21,
+            121.89,
+            682.32,
+            156.91
+          ],
+          "text": "Alkane Droplets at Elevated Pressure Conditions: Hot,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            227.51,
+            150.69,
+            495.91,
+            185.71
+          ],
+          "text": "Warm and Cool Flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            169.37,
+            216.88,
+            550.46,
+            245.58
+          ],
+          "text": "T. I. Farouka, D. Dietrichb and F. L. Dryera",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            161.81,
+            270.4,
+            558.01,
+            311.39
+          ],
+          "text": "a Department of Mechanical Engineering\nUniversity of South Carolina, Columbia, SC 29208, USA",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            247.73,
+            347.2,
+            472.11,
+            368.99
+          ],
+          "text": "b NASA Glenn Research Center",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            262.6,
+            366.4,
+            457.16,
+            388.19
+          ],
+          "text": "Cleveland, OH 44135, USA",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            186.49,
+            464.35,
+            535.8,
+            525.6
+          ],
+          "text": "37th International Symposium on Combustion \nDublin, Ireland\nJuly 29th  –  August 3rd, 2018",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            698.88,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "1",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "location": "página 2",
+      "text": "“Cool” Flames Triggered By Radiative Losses\n     First observation of “Cool Flames” in\n      n-heptane droplet diffusion flames\n       International Space Station 2011, Flame\n        Extinguishment Experiments (FLEX)\n\n              Hot Flame\n\n\n\n\n                   First Stage\n\n\n\n            “Cool Flame”\n\n\n\n            Second Stage                                                           Evolution of droplet diameter and burning rate (n-\n                                                       heptane, do = 4.00 mm, air, atmospheric pressure)\nV. Nayagam et al. Combustion and Flame (2012), 159, 3583 – 3588.                                                                                         2 T. Farouk and F. L. Dryer Combustion and Flame (2014), 161, 565 – 581",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            4.41,
+            582.1,
+            41.7
+          ],
+          "text": "“Cool” Flames Triggered By Radiative Losses",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            46.49,
+            50.11,
+            389.49,
+            75.89
+          ],
+          "text": "First observation of “Cool Flames” in",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            55.49,
+            72.0,
+            344.8,
+            116.4
+          ],
+          "text": "n-heptane droplet diffusion flames \nInternational Space Station 2011, Flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            68.69,
+            113.35,
+            327.13,
+            135.6
+          ],
+          "text": "Extinguishment Experiments (FLEX)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            143.23,
+            152.11,
+            230.28,
+            177.89
+          ],
+          "text": "Hot Flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            143.12,
+            277.59,
+            230.05,
+            301.41
+          ],
+          "text": "First Stage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            128.45,
+            375.98,
+            243.41,
+            401.76
+          ],
+          "text": "“Cool Flame”",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            130.46,
+            465.16,
+            243.4,
+            488.97
+          ],
+          "text": "Second Stage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            698.88,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            7.2,
+            476.56,
+            692.31,
+            536.97
+          ],
+          "text": "Evolution of droplet diameter and burning rate (n-\nheptane, do = 4.00 mm, air, atmospheric pressure)\nV. Nayagam et al. Combustion and Flame (2012), 159, 3583 – 3588.\n T. Farouk and F. L. Dryer Combustion and Flame  (2014), 161, 565 – 581",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "location": "página 3",
+      "text": "“Cool Flames” – Multistage (hot-cool) Burning\n\n\n\n\n\n                                  Higher Pressure, n-heptane, CO2 diluent\n                                     augmenting radiative losses\n\n\n\n\n\n   Evolution of droplet diameter and burning\n        rate (do = 4.08 mm, O2/CO2/N2\n                                                               Evolution of flame diameter (do = 4.08            0.21/0.15/0.64, 3 atm)\n                                            mm, O2/CO2/N2 0.21/0.15/0.64, 3 atm)\nT. Farouk and F. L. Dryer Proceedings of Combustion Institute (2015) 35, 1701 – 1708                                                                                         3A. Cuoci et al. Proceedings of the Combustion Institute (2015) 35, 1621 - 1627",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            3.1,
+            637.43,
+            43.14
+          ],
+          "text": "“Cool Flames” – Multistage (hot-cool) Burning",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            339.05,
+            188.04,
+            692.23,
+            212.45
+          ],
+          "text": "Higher Pressure, n-heptane, CO2 diluent",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            389.8,
+            207.24,
+            636.03,
+            229.43
+          ],
+          "text": "augmenting radiative losses",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            25.25,
+            440.56,
+            284.58,
+            459.72
+          ],
+          "text": "Evolution of droplet diameter and burning",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            58.61,
+            457.36,
+            251.28,
+            478.36
+          ],
+          "text": "rate (do = 4.08 mm, O2/CO2/N2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            83.93,
+            470.56,
+            648.84,
+            508.36
+          ],
+          "text": "0.21/0.15/0.64, 3 atm)\nEvolution of flame diameter (do = 4.08 \nmm, O2/CO2/N2 0.21/0.15/0.64, 3 atm)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            7.2,
+            506.96,
+            706.69,
+            537.32
+          ],
+          "text": "3\nT. Farouk and F. L. Dryer Proceedings of Combustion Institute (2015) 35, 1701 – 1708\nA. Cuoci et al. Proceedings of the Combustion Institute (2015) 35, 1621 - 1627",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "location": "página 4",
+      "text": "Initiation\nWith a Hot Flame\n              High Temperature\n               Combustion\n\n\n\n\n\n                                                 “Cool Flame”\n                                                 AlternativeExtinction\n\n\n\n\n\n                                                                                       4",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            19.72,
+            90.62,
+            208.3,
+            142.48
+          ],
+          "text": "Initiation\nWith a Hot Flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            146.33,
+            140.77,
+            290.22,
+            169.15
+          ],
+          "text": "High Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            167.93,
+            164.78,
+            268.49,
+            193.16
+          ],
+          "text": "Combustion",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            462.38,
+            349.87,
+            567.21,
+            378.25
+          ],
+          "text": "“Cool Flame”",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            560.33,
+            378.62,
+            681.71,
+            406.47
+          ],
+          "text": "Extinction\nAlternative",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            698.88,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "4",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "location": "página 5",
+      "text": "Conditions augmenting diffusive losses\nand higher reactivity– Helium diluent and\n          Higher pressure?\n\n\n\n\n\n                                                                                  5",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            61.32,
+            199.57,
+            665.06,
+            283.32
+          ],
+          "text": "Conditions augmenting diffusive losses \nand higher reactivity– Helium diluent and",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            227.17,
+            275.84,
+            490.26,
+            321.72
+          ],
+          "text": "Higher pressure?",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            698.88,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "5",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "location": "página 6",
+      "text": "Transient Droplet Combustion Model*+\n\n\n                     Gas Phase:\n                                           • Multi-component molecular diffusion\n                                           • Detailed chemical kinetics  - high and low temperature\n                         • Mass conservation                                                  mv                             Fiber Model:                               • Species equation                                                                             One dimensional temperature                               • Energy conservation                                                       drs                       mp                                        distribution                               Statistical                                                                           qambient            Energy exchange with                                                               dt                                       ∂Yl , i                      Narrowband     Liquid Phase:                                                                                qloss            flame and ambient                                               Dl , i                          Radiation Model                                                           • Mass conservation      ∂r            qR\n                                                                                                                                                                                                                              fib                                                           • Species equation                                       q\n                          ∂T                                                           • Energy conservation                                              ∂T                       λ\n                                                                                                                                               l ∂r     λ∂r\n\n\n                          Droplet Surface:\n                                                              The code numeric and data                                                 • Surface regression – Adaptive Grid\n                                          • Evaporation of fuel                                      handling methodology has\n                                          • Condensation/Dissolution of products                        been revised to relax\n                                          • Radiative heat exchange                                                                      number of species\n                                                                                                  constraints\n\n* T. Farouk and F. L. Dryer Combust. and Flame (2012) 159, 200 – 209\n+                                                                                        6  T. Farouk and F. L. Dryer Combust Theory & Modelling (2011), 15, 487 – 515",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            5.04,
+            485.41,
+            44.71
+          ],
+          "text": "Transient Droplet Combustion Model*+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            181.8,
+            100.47,
+            467.37,
+            156.44
+          ],
+          "text": "Gas Phase: \n• Multi-component molecular diffusion\n• Detailed chemical kinetics  - high and low temperature",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            439.96,
+            163.8,
+            452.29,
+            187.04
+          ],
+          "text": "mv",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            565.78,
+            167.32,
+            720.16,
+            206.49
+          ],
+          "text": "Fiber Model:\nOne dimensional temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            357.87,
+            202.15,
+            475.81,
+            224.84
+          ],
+          "text": "mp\ns\ndr",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            500.0,
+            218.3,
+            531.13,
+            239.08
+          ],
+          "text": "ambient\nq",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            531.94,
+            203.73,
+            720.18,
+            240.09
+          ],
+          "text": "distribution \n \nEnergy exchange with",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            360.13,
+            224.22,
+            371.39,
+            243.29
+          ],
+          "text": "dt",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            402.46,
+            233.97,
+            412.55,
+            249.06
+          ],
+          "text": "∂",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            622.42,
+            237.33,
+            716.93,
+            256.89
+          ],
+          "text": "flame and ambient",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            537.5,
+            238.05,
+            555.71,
+            258.83
+          ],
+          "text": "loss\nq",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            386.59,
+            233.75,
+            416.48,
+            259.34
+          ],
+          "text": "Y\nD",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            394.08,
+            242.24,
+            421.65,
+            260.92
+          ],
+          "text": "l i\nl i",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            396.55,
+            242.12,
+            419.75,
+            260.92
+          ],
+          "text": ",\n,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            131.04,
+            161.92,
+            242.92,
+            265.51
+          ],
+          "text": "• Mass conservation\n• Species equation\n• Energy conservation\n     Statistical \n     Narrowband \n     Radiation Model",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            405.98,
+            252.61,
+            416.07,
+            267.7
+          ],
+          "text": "∂",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            414.49,
+            252.39,
+            418.84,
+            268.77
+          ],
+          "text": "r",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            475.84,
+            250.26,
+            485.34,
+            271.6
+          ],
+          "text": "qR",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            598.87,
+            265.03,
+            615.0,
+            278.96
+          ],
+          "text": "fib\nq",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            413.95,
+            280.78,
+            423.34,
+            299.76
+          ],
+          "text": "T",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            243.95,
+            229.65,
+            355.84,
+            302.43
+          ],
+          "text": "Liquid Phase:\n• Mass conservation\n• Species equation\n• Energy conservation",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            492.13,
+            290.45,
+            498.47,
+            306.03
+          ],
+          "text": "T",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            395.54,
+            299.84,
+            398.25,
+            310.81
+          ],
+          "text": "l",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            385.61,
+            281.04,
+            423.02,
+            319.91
+          ],
+          "text": "r\n∂\nλ ∂",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            475.26,
+            290.67,
+            498.25,
+            322.55
+          ],
+          "text": "r\n∂\nλ ∂",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            532.8,
+            373.69,
+            716.7,
+            398.77
+          ],
+          "text": "The code numeric and data",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            539.88,
+            395.29,
+            716.7,
+            420.37
+          ],
+          "text": "handling methodology has",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            575.4,
+            416.89,
+            716.72,
+            441.97
+          ],
+          "text": "been revised to relax",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            175.8,
+            362.96,
+            379.63,
+            452.66
+          ],
+          "text": "Droplet Surface:\n• Surface regression – Adaptive Grid\n• Evaporation of fuel\n• Condensation/Dissolution  of products \n• Radiative heat exchange",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            591.84,
+            438.49,
+            716.74,
+            463.57
+          ],
+          "text": "number of species",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            641.39,
+            460.09,
+            712.59,
+            485.17
+          ],
+          "text": "constraints",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            7.2,
+            500.59,
+            355.32,
+            525.16
+          ],
+          "text": "* T. Farouk and F. L. Dryer Combust. and Flame (2012) 159, 200 – 209",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            698.88,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "6",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            7.2,
+            522.75,
+            395.88,
+            538.71
+          ],
+          "text": "+ T. Farouk and F. L. Dryer Combust Theory &  Modelling (2011), 15, 487 – 515",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "location": "página 7",
+      "text": "High Pressure Helium Exchange – 3 atm\n\n                                                Introduction of helium increases the\n                                            burning rate, at higher helium\n                                              concentration a third stage quasi-steady\n                                          burn is observed\n\n\n\n\n                                                                                                   1st Stage\n                                                                   High Temperature\n                                                                          burn\n\n                                                                                         2nd Stage             3rd Stage\n                                                                         Moderate     Low Temperature\n                                                                        Temperature burn         burn\n                                                                                                    Tflame ~ 950 K         Tflame ~ 770 K     Evolution of droplet diameter (n-heptane, do =\n   4.00 mm, XO2 = 21%, He exchange with balance\n                      N2, 3 atm).\n\n\n\n\n                                                          Evolution of peak temperature (n-heptane, do =\n                                                     4.00 mm, XO2 = 21%, He exchange with balance\n                                                                           N2, 3 atm).                                                                                        7",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            3.1,
+            548.91,
+            43.14
+          ],
+          "text": "High Pressure Helium Exchange – 3 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            385.2,
+            68.35,
+            696.82,
+            148.8
+          ],
+          "text": "Introduction of helium increases the \nburning rate, at higher helium \nconcentration a third stage quasi-steady \nburn is observed",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            421.41,
+            221.87,
+            519.91,
+            252.65
+          ],
+          "text": "1st Stage \nHigh Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            456.93,
+            250.67,
+            481.0,
+            267.05
+          ],
+          "text": "burn",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            569.44,
+            292.83,
+            668.65,
+            323.61
+          ],
+          "text": "3rd  Stage \nLow  Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            456.81,
+            291.32,
+            551.44,
+            336.51
+          ],
+          "text": "2nd  Stage \nModerate \nTemperature burn",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            468.09,
+            334.53,
+            540.05,
+            352.5
+          ],
+          "text": "Tflame ~ 950 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            581.32,
+            321.63,
+            653.28,
+            354.0
+          ],
+          "text": "burn\nTflame ~ 770 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            36.17,
+            338.56,
+            339.58,
+            393.16
+          ],
+          "text": "Evolution of droplet diameter (n-heptane, do = \n4.00 mm, XO2 = 21%, He exchange with balance \nN2, 3 atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            378.17,
+            472.39,
+            681.58,
+            527.0
+          ],
+          "text": "Evolution of peak temperature (n-heptane, do = \n4.00 mm, XO2 = 21%, He exchange with balance \nN2, 3 atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            698.88,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "7",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "location": "página 8",
+      "text": "High Pressure Helium Exchange – 3 atm\n\n\n                                                                  •  The second stage suppresses at\n                                                higher helium concentration\n                                                                  •  The droplet diameter regression do not\n                                      show any significant changes\n\n\n                                                                                         2nd Stage\n                                                                         Moderate\n                                                                        Temperature burn\n                                                                                                    Tflame ~ 950 K\n\n\n                                                                                                      3rd Stage\n                                                           Low Temperature burn\n     Evolution of droplet diameter (n-heptane, do =                                                                                                     Tflame ~ 770 K\n   4.00 mm, XO2 = 21%, He exchange with balance\n                      N2, 3 atm).\n\n\n\n\n                                                          Evolution of peak temperature (n-heptane, do =\n                                                     4.00 mm, XO2 = 21%, He exchange with balance\n                                                                           N2, 3 atm).                                                                                        8",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            3.1,
+            548.91,
+            43.14
+          ],
+          "text": "High Pressure Helium Exchange – 3 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            379.2,
+            85.53,
+            653.08,
+            127.58
+          ],
+          "text": "•\nThe second stage suppresses at \nhigher helium concentration",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            379.19,
+            135.93,
+            704.05,
+            177.98
+          ],
+          "text": "•\nThe droplet diameter regression do not \nshow any significant changes",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            457.16,
+            218.76,
+            551.79,
+            263.94
+          ],
+          "text": "2nd  Stage \nModerate \nTemperature burn",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            468.44,
+            261.96,
+            540.4,
+            279.93
+          ],
+          "text": "Tflame ~ 950 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            446.67,
+            317.87,
+            569.86,
+            348.65
+          ],
+          "text": "3rd  Stage \nLow  Temperature burn",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            472.35,
+            346.67,
+            544.31,
+            364.64
+          ],
+          "text": "Tflame ~ 770 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            36.17,
+            338.56,
+            339.58,
+            393.16
+          ],
+          "text": "Evolution of droplet diameter (n-heptane, do = \n4.00 mm, XO2 = 21%, He exchange with balance \nN2, 3 atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            378.17,
+            472.39,
+            681.58,
+            527.0
+          ],
+          "text": "Evolution of peak temperature (n-heptane, do = \n4.00 mm, XO2 = 21%, He exchange with balance \nN2, 3 atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            698.88,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "8",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "location": "página 9",
+      "text": "High Pressure Helium Exchange – 3 atm\n\n                                                          • A second contraction in the flame occurs as\n                                            the system transitions to the third stage/low\n         1st            2nd               3rd                temperature burn.\n        Stage             Stage             3rdStage\n                                                          •  Despite the decrease in the maximum\n                                         temperature it is the flame contraction that\n                                   makes the droplet diameter regression\n                                              insensitive to the different burn stages.\n\n\n\n\n\n Evolution of flame standoff ratio (n-heptane, do =\n 4.00 mm, XO2 = 21%, He exchange with balance\n                   N2, 3 atm).\n\n\n\n\n\n                                                             Evolution of burning rate (n-heptane, do = 4.00\n                                          mm, XO2 = 21%, He exchange with balance N2, 3\n                                                                                 atm).                  9",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            3.1,
+            548.91,
+            43.14
+          ],
+          "text": "High Pressure Helium Exchange – 3 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            52.17,
+            98.76,
+            65.2,
+            115.14
+          ],
+          "text": "1st",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            127.63,
+            98.76,
+            143.26,
+            115.14
+          ],
+          "text": "2nd",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            212.59,
+            98.76,
+            226.42,
+            115.14
+          ],
+          "text": "3rd",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            337.2,
+            59.66,
+            700.1,
+            120.91
+          ],
+          "text": "•\nA second contraction in the flame occurs as \nthe system transitions to the third stage/low \ntemperature burn.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            48.21,
+            113.68,
+            69.24,
+            124.65
+          ],
+          "text": "Stage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            124.99,
+            113.68,
+            146.02,
+            124.65
+          ],
+          "text": "Stage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            208.99,
+            113.68,
+            230.02,
+            124.65
+          ],
+          "text": "Stage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            207.73,
+            112.95,
+            221.55,
+            129.33
+          ],
+          "text": "3rd",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            337.19,
+            129.26,
+            689.16,
+            209.71
+          ],
+          "text": "•\nDespite the decrease in the maximum \ntemperature it is the flame contraction that \nmakes the droplet diameter regression \ninsensitive to the different burn stages.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            18.81,
+            316.4,
+            322.22,
+            371.0
+          ],
+          "text": "Evolution of flame standoff ratio (n-heptane, do = \n4.00 mm, XO2 = 21%, He exchange with balance \nN2, 3 atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            394.5,
+            478.4,
+            701.39,
+            516.2
+          ],
+          "text": "Evolution of burning rate (n-heptane, do = 4.00 \nmm, XO2 = 21%, He exchange with balance N2, 3",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            529.96,
+            512.0,
+            561.95,
+            531.17
+          ],
+          "text": "atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            698.88,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "9",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "location": "página 10",
+      "text": "High Pressure Helium Exchange – 3 atm\n\n                                                           • A strong coupling between heat generation\n                                     and losses in the system.\n                                                           •  The radiative and diffusive heat losses are\n                                       comparable in the first and second stage.\n                                                           •  The diffusive losses become prominent in\n                                            the third stage “Cool flame” burn.\n\n\n\n\n\n  Evolution of radiative loss (n-heptane, do = 4.00\n mm, XO2 = 21%, He exchange with balance N2, 3\n                       atm).\n\n\n\n\n                                                             Evolution of diffusive loss (n-heptane, do = 4.00\n                                           mm, XO2 = 21%, He exchange with balance N2, 3\n                                                                                  atm).\n                                                                                       10",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            3.1,
+            548.91,
+            43.14
+          ],
+          "text": "High Pressure Helium Exchange – 3 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            343.59,
+            58.52,
+            698.67,
+            100.57
+          ],
+          "text": "•\nA strong coupling between heat generation \nand losses in the system.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            343.58,
+            108.92,
+            692.58,
+            150.97
+          ],
+          "text": "•\nThe radiative and diffusive heat losses are \ncomparable in the first and second stage.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            343.58,
+            159.32,
+            689.91,
+            201.37
+          ],
+          "text": "•\nThe diffusive losses become prominent in \nthe third stage “Cool flame” burn.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            23.14,
+            320.56,
+            330.03,
+            358.36
+          ],
+          "text": "Evolution of radiative loss (n-heptane, do = 4.00 \nmm, XO2 = 21%, He exchange with balance N2, 3",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            158.61,
+            354.16,
+            190.59,
+            373.33
+          ],
+          "text": "atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            400.5,
+            466.4,
+            707.39,
+            504.2
+          ],
+          "text": "Evolution of diffusive loss (n-heptane, do = 4.00 \nmm, XO2 = 21%, He exchange with balance N2, 3",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            535.96,
+            500.0,
+            567.95,
+            519.17
+          ],
+          "text": "atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "10",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "location": "página 11",
+      "text": "Pressure Dependence\n\n\n\n\n\n                Ignition delay of n-heptane\n\n                                                                       Degenerate\n                                                                           Branching\n\n\n\n\n                                                                                             11",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            3.1,
+            307.28,
+            43.14
+          ],
+          "text": "Pressure Dependence",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            105.18,
+            362.56,
+            269.89,
+            381.72
+          ],
+          "text": "Ignition delay of n-heptane",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            534.19,
+            393.33,
+            611.28,
+            412.49
+          ],
+          "text": "Degenerate",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            539.1,
+            410.14,
+            602.34,
+            429.3
+          ],
+          "text": "Branching",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            692.16,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "11",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "location": "página 12",
+      "text": "Spatiotemporal variation of species and temperature\n\n\n\n\n\n                                    CO\n\n\n\n\n\n      Temperature\n\n\n                                          CH2O\n\n\n                                                                                       12",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            5.84,
+            613.11,
+            40.21
+          ],
+          "text": "Spatiotemporal variation of species and temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            412.71,
+            213.02,
+            434.88,
+            238.51
+          ],
+          "text": "CO",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            58.51,
+            357.61,
+            146.62,
+            383.1
+          ],
+          "text": "Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            413.54,
+            447.02,
+            451.91,
+            475.11
+          ],
+          "text": "CH2O",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "12",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "location": "página 13",
+      "text": "Species Distribution – 3 atm, XHe = 40%\n\n\n\n\n\n             Spatiotemporal distribution of species representative of three distinct stages\n\n\n\n                                                                                       13",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            4.41,
+            504.3,
+            44.76
+          ],
+          "text": "Species Distribution – 3 atm, XHe = 40%",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            107.99,
+            434.61,
+            603.58,
+            459.68
+          ],
+          "text": "Spatiotemporal distribution of species representative of three distinct stages",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "13",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "location": "página 14",
+      "text": "Species Distribution – 3 atm, XHe = 40%\n\n\n\n\n\n    •  Species representative of low temperature kinetics is in prominence in the third stage\n    •  Competition between O2 addition to QOOH and decomposition of QOOH (i.e. OH, HO2, olefin,\n       carbonyl, QO)\n\n                                                                                       14",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            4.41,
+            504.3,
+            44.76
+          ],
+          "text": "Species Distribution – 3 atm, XHe = 40%",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            37.2,
+            426.87,
+            678.13,
+            495.15
+          ],
+          "text": "•\nSpecies representative of low temperature kinetics is in prominence in the third stage\n•\nCompetition between O2 addition to QOOH and decomposition of QOOH (i.e. OH, HO2, olefin, \ncarbonyl, QO)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "14",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "location": "página 15",
+      "text": "Experimental Observation of 3 Stage Behavior\n\n\n\n\n\nFLEX 1268:\nn-dodecane, 2.75 atm, 21.6% O2, 50.2% N2,\n28.2% He.\nQualitative agreement between\npredictions and observations\n\n\n\n                                                                                       15",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            4.41,
+            586.54,
+            41.7
+          ],
+          "text": "Experimental Observation of 3 Stage Behavior",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            13.19,
+            349.41,
+            338.39,
+            410.66
+          ],
+          "text": "FLEX 1268:\nn-dodecane, 2.75 atm, 21.6% O2, 50.2% N2, \n28.2% He.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            13.2,
+            413.51,
+            266.53,
+            459.68
+          ],
+          "text": "Qualitative agreement between \npredictions and observations",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "15",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "location": "página 16",
+      "text": "Experimental Observation of 3 Stage Behavior\n\n\n\n\n\nAtef et al. Combustion and Flame (2017)\n\n\n\n FLEX 1268:\n n-dodecane, 2.75 atm, 21.6% O2, 50.2% N2,\n 28.2% He.\n Qualitative agreement between\n predictions and observations\n\n\n\n                                                                                        16",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            4.41,
+            586.54,
+            41.7
+          ],
+          "text": "Experimental Observation of 3 Stage Behavior",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            7.2,
+            266.96,
+            204.4,
+            282.92
+          ],
+          "text": "Atef et al. Combustion and Flame (2017)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            13.19,
+            349.41,
+            338.39,
+            410.66
+          ],
+          "text": "FLEX 1268:\nn-dodecane, 2.75 atm, 21.6% O2, 50.2% N2, \n28.2% He.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            13.2,
+            413.51,
+            266.53,
+            459.68
+          ],
+          "text": "Qualitative agreement between \npredictions and observations",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "16",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "location": "página 17",
+      "text": "Summary\n\n     • The experimental results and detailed predictions support that\n    there exists two possible modes of quasi-steady cool flame\n    droplet burning behaviour: “Warm” in the NTC regime and “Cold”\n    in the low temperature regime.\n     • The helium concentration is critical for the observed\n    characteristics – promoting the second stage burn or completely\n   supressing it.\n     • A dynamic coupling between heat generation and heat loss in\n    the system.\n     • The low temperature kinetics is distinctive and different in the\n   second and third stage.\n     • Experimental observation with n-dodecane at higher pressure\n   and helium exchange validates the “a priori” numerical\n    predictions of a three stage behaviour inferred from n-heptane\n    simulations.\n                                                                                        17",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            6.66,
+            -0.49,
+            125.4,
+            36.8
+          ],
+          "text": "Summary",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            43.2,
+            68.12,
+            677.69,
+            177.28
+          ],
+          "text": "• The experimental results and detailed predictions support that \nthere exists two possible modes of quasi-steady cool flame \ndroplet burning behaviour: “Warm” in the NTC regime and “Cold” \nin the low temperature regime.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            186.9,
+            673.55,
+            269.67
+          ],
+          "text": "• The helium concentration is critical for the observed \ncharacteristics – promoting the second stage burn or completely \nsupressing it.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            43.2,
+            279.29,
+            660.46,
+            335.66
+          ],
+          "text": "• A dynamic coupling between heat generation and heat loss in \nthe system.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            43.2,
+            345.28,
+            657.34,
+            401.65
+          ],
+          "text": "• The low temperature kinetics is distinctive and different in the \nsecond and third stage.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            43.2,
+            411.27,
+            662.91,
+            520.43
+          ],
+          "text": "• Experimental observation with n-dodecane at higher pressure \nand helium exchange validates the “a priori” numerical \npredictions of a three stage behaviour inferred from n-heptane \nsimulations.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "17",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "location": "página 18",
+      "text": "Acknowledgements\n\n\n\n\n     • This work was supported by the National Aeronautics and\n   Space Administration through grants NNX14AG461A (TIF),\n   NNX09AW 19A (FLD) .\n\n     • Thanks to Drs. Michael Hicks, Forman Williams and Vedha\n   Nayagam for interest and insight throughout the course of this\n    investigation.\n\n\n\n\n\n                                                                                   18",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            43.2,
+            20.03,
+            288.01,
+            57.32
+          ],
+          "text": "Acknowledgements",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            82.2,
+            188.04,
+            665.0,
+            273.3
+          ],
+          "text": "• This work was supported by the National Aeronautics and \nSpace Administration through grants NNX14AG461A (TIF), \nNNX09AW 19A (FLD) .",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            82.2,
+            309.56,
+            690.73,
+            392.33
+          ],
+          "text": "• Thanks to Drs. Michael Hicks, Forman Williams and Vedha \nNayagam for interest and insight throughout the course of this \ninvestigation.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "18",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "location": "página 19",
+      "text": "Thank You\n\nQuestions??\n\n\n\n\n\n                                         Solar Eclipse in Columbia, South Carolina\n                                                          August 22, 2017\n                                         Canon 60D, 400 mm telephoto19",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            287.33,
+            36.83,
+            420.51,
+            74.12
+          ],
+          "text": "Thank You",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            274.26,
+            99.23,
+            433.73,
+            136.52
+          ],
+          "text": "Questions??",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            492.36,
+            476.03,
+            705.36,
+            495.59
+          ],
+          "text": "Solar Eclipse in Columbia, South Carolina",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            548.89,
+            492.84,
+            705.42,
+            529.2
+          ],
+          "text": "August 22, 2017\nCanon 60D, 400 mm telephoto",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "19",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "location": "página 20",
+      "text": "High Pressure Helium Exchange – 5 atm\n\n\n                                                   Similar stable three stage burning\n                 1st Stage                                behavior is observed at increased        High Temperature\n              burn                                                pressure, but under higher helium\n                  2nd Stage\n               Moderate                                     loading conditions\n              Temperature            3rd Stage\n                  burn      Low Temperature burn\n                  Tflame ~ 950 K          Tflame ~ 770 K\n\n\n\n\n\n     Evolution of peak temperature (n-heptane, do =\n    4.00 mm, XO2 = 21%, He exchange with balance\n                       N2, 5 atm).\n\n\n                                                            Evolution of flame standoff ratio (n-heptane, do =\n                                                        4.00 mm, XO2 = 21%, He exchange with balance\n                                                                              N2, 5 atm).                                                                                       20",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            3.1,
+            548.91,
+            43.14
+          ],
+          "text": "High Pressure Helium Exchange – 5 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            63.41,
+            119.87,
+            161.91,
+            150.65
+          ],
+          "text": "1st Stage \nHigh Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            98.93,
+            148.67,
+            123.0,
+            165.05
+          ],
+          "text": "burn",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            410.09,
+            94.96,
+            680.47,
+            171.35
+          ],
+          "text": "Similar stable three stage burning \nbehavior is observed at increased \npressure, but under higher helium",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            470.09,
+            166.99,
+            615.79,
+            195.36
+          ],
+          "text": "loading conditions",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            98.21,
+            164.26,
+            169.11,
+            209.44
+          ],
+          "text": "2nd  Stage \nModerate \nTemperature",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            187.42,
+            191.76,
+            310.62,
+            222.54
+          ],
+          "text": "3rd  Stage \nLow  Temperature burn",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            213.1,
+            220.56,
+            285.07,
+            238.53
+          ],
+          "text": "Tflame ~ 770 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            95.93,
+            207.46,
+            167.89,
+            239.83
+          ],
+          "text": "burn\nTflame ~ 950 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            42.17,
+            364.4,
+            345.58,
+            419.0
+          ],
+          "text": "Evolution of peak temperature (n-heptane, do = \n4.00 mm, XO2 = 21%, He exchange with balance \nN2, 5 atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            396.16,
+            470.55,
+            699.58,
+            525.16
+          ],
+          "text": "Evolution of flame standoff ratio (n-heptane, do = \n4.00 mm, XO2 = 21%, He exchange with balance \nN2, 5 atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "20",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "location": "página 21",
+      "text": "Experimental Observation of 3 Stage Behavior\nFLEX 1256:\nn-dodecane, 3.00 atm, 21.0% O2, 79.0% N2\nDo ~ 4.2 mm\n\n\n\n\n\n                                                                                       21",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            4.41,
+            586.54,
+            41.7
+          ],
+          "text": "Experimental Observation of 3 Stage Behavior",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            13.2,
+            44.35,
+            329.58,
+            107.46
+          ],
+          "text": "FLEX 1256:\nn-dodecane, 3.00 atm, 21.0% O2, 79.0% N2\nDo ~ 4.2 mm",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "21",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "location": "página 22",
+      "text": "Experimental Observation of 3 Stage Behavior\nFLEX 1256:\nn-dodecane, 3.00 atm, 21.0% O2, 79.0% N2\nDo ~ 4.2 mm\n\n\n\n\n\n                                                                                       22",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            4.41,
+            586.54,
+            41.7
+          ],
+          "text": "Experimental Observation of 3 Stage Behavior",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            13.2,
+            44.35,
+            329.58,
+            107.46
+          ],
+          "text": "FLEX 1256:\nn-dodecane, 3.00 atm, 21.0% O2, 79.0% N2\nDo ~ 4.2 mm",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            691.08,
+            512.31,
+            706.69,
+            531.47
+          ],
+          "text": "22",
+          "kind": "heading_candidate"
+        }
+      ]
+    }
+  ],
+  "tables": [],
+  "captions": [],
+  "metadata": {
+    "format": "PDF 1.7",
+    "title": "Slide 1",
+    "author": "Tanvir Farouk",
+    "creator": "Acrobat PDFMaker 26 for PowerPoint",
+    "producer": "Adobe PDF Library 26.1.183",
+    "creationDate": "D:20260428082902-04'00'",
+    "modDate": "D:20260428082908-04'00'",
+    "page_count": 22,
+    "legendas": 0,
+    "tabelas_detectadas": 0,
+    "evidence_kind": "engineering_or_publication",
+    "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+  },
+  "warnings": [],
+  "schema_version": 4,
+  "source_filename": "PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+  "source_extension": ".pdf",
+  "document": {
+    "name": "PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+    "extension": ".pdf",
+    "sha256": "99b341840ed423878c622478b3b7817729d0ccf4d772f407f860a91d66972917",
+    "size_bytes": 30873451
+  },
+  "evidence_kind": "engineering_or_publication",
+  "observations": [],
+  "provenance": {
+    "study_id": "PSI-117",
+    "source": "NASA Physical Sciences Informatics",
+    "filename": "PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf&version=1&redirect=false",
+    "doi": "10.60555/gz0q-b577",
+    "sha256": "99b341840ed423878c622478b3b7817729d0ccf4d772f407f860a91d66972917",
+    "size_bytes": 30873451,
+    "study_version": 2,
+    "file_version": 1,
+    "verified_utc": "2026-11-15T23:48:35.675157+00:00",
+    "retrieved_utc": "2026-11-15T23:48:35.675157+00:00",
+    "verification": "byte_identical_to_nasa_download",
+    "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 30873451,
+      "directory": false,
+      "files": [],
+      "id": "6a282739d9d7246402cb43e2",
+      "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "29.44 MB",
+      "sortingCategory": "Presentations",
+      "status": "active",
+      "subcategory": "",
+      "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+      "version": 1,
+      "visible": true
+    },
+    "license": "No file-specific license exposed; retain NASA and author attribution.",
+    "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+    "classification": "engineering_or_publication",
+    "media_type": "application/pdf",
+    "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+  }
+}

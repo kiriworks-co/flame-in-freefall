@@ -127,12 +127,24 @@ def build_spacecraft_interpretation(experiment: dict[str, Any], language: str = 
     pillar = profile.get("pillar") or ("Contexto" if is_pt else "Context")
     relevance = profile.get("relevance") or ""
 
-    has_conditions = any("condition" in str(d.get("evidence_kind") or "").lower() for d in docs)
-    has_results = any(
-        any(tok in str(d.get("evidence_kind") or "").lower() for tok in ("measurement", "result", "mixed"))
-        for d in docs
-    )
-    if has_conditions and not has_results:
+    kinds = {str(d.get("evidence_kind") or "document_context").lower() for d in docs}
+    has_conditions = bool(kinds & {"condition", "mixed_conditions_and_reported_results"})
+    has_results = bool(kinds & {"measurement", "reported_result", "mixed_conditions_and_reported_results",
+                                "mixed_experiment_and_simulation"})
+    has_simulation = bool(kinds & {"simulation", "mixed_experiment_and_simulation"})
+    if kinds and kinds <= {"metadata"}:
+        obs_scope = (
+            "O acervo contém apenas metadados de pesquisa e referências bibliográficas; não contém séries numéricas de medições nem resultados de simulação."
+            if is_pt else
+            "The archive contains research metadata and bibliographic references only; no numerical measurement series or simulation outputs are present."
+        )
+    elif has_simulation:
+        obs_scope = (
+            "O acervo inclui previsões de simulação numérica. Séries experimentais de referência, quando presentes, são identificadas separadamente; resultados modelados não são medições."
+            if is_pt else
+            "The archive includes numerical simulation predictions. Experimental reference series, when present, are identified separately; modeled outputs are not measurements."
+        )
+    elif has_conditions and not has_results:
         obs_scope = (
             "As tabelas indexadas registram principalmente configurações de câmara, combustíveis e parâmetros de ensaio (`Test condition`)."
             if is_pt

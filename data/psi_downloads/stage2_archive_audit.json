@@ -1,0 +1,149 @@
+{
+  "archive_filename": "experienciass.zip",
+  "archive_sha256": "73cde2c18c4dafa63e96ebb372a6a3d530e3bddc94e19139e5e2e7bb92e016c0",
+  "archive_size_bytes": 69290025,
+  "members": [
+    {
+      "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+      "sha256": "2fe2fc85aa8ee3ac99a07495d31c49704f32d42bb83ae2ba2481d47c14407c43",
+      "size_bytes": 11802360
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+      "sha256": "8e4625bb2b2a8b17bd19854765815a3dd877e5192a9b94bd001aea2e8cccb4b2",
+      "size_bytes": 8994674
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+      "sha256": "9b69c81ba20b7a9af49ca899fb7520ae8e2034f9ceadf94fc6ef22910fc417aa",
+      "size_bytes": 10786102
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+      "sha256": "99b341840ed423878c622478b3b7817729d0ccf4d772f407f860a91d66972917",
+      "size_bytes": 30873451
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/PSI-117_Analyzed Data_ReadMe_List_of_Data.xlsx",
+      "sha256": "a84c138d22545ba9f59c4aa336710741dd48cf3c27823124ed04ac8f91a5f4a0",
+      "size_bytes": 11059
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_Analyzed Data_MST_2024_Burning_history_Flame_diameter.csv",
+      "sha256": "81e6b16c355bc64a226cf638f51156758c6a259ed10bc372c1612a0984cc7bc9",
+      "size_bytes": 44107
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_Analyzed Data_MST_2024_Dext.csv",
+      "sha256": "2ed485fec6fad15c1409cd9b5c558ecf7bee262df29c832e9a54f3befc9c2e46",
+      "size_bytes": 372
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+      "sha256": "a89e0639567f05f19a6d0dffa9b2f659048358dee1c603b6c65bfcebd1101796",
+      "size_bytes": 518
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_Analyzed Data_MST_2024_Radiance_Flame_Diameter.csv",
+      "sha256": "277998f5c80c08907f2c05e362e7a13a507ce4ebc967418ca883db2811a84d0d",
+      "size_bytes": 82277
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_metadata_NEWID-13_Effect of External T (1).zip",
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+      "size_bytes": 22
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_2019_Oscillatory_Cool_Flame.csv",
+      "sha256": "5d329362ea8b6ff78cded953b289b95c83c45956ae36d136bfd33750a80a5a11",
+      "size_bytes": 37138
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_2019_Stable_Cool.csv",
+      "sha256": "c0713c4ad79d1d20832d5ab9582d1bef6d184cff1a86bc3565d059f44998ed6f",
+      "size_bytes": 15477
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_2023_Alkane_Extinction_Diameter_1atm.csv",
+      "sha256": "2b3c8edcfbba8916da95d1e13200310b5a30fa2e62dc8d77145a6ac3c206deb3",
+      "size_bytes": 745
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+      "sha256": "4ab6f8c19f40a3349096eab8bdceb0a62611020af15e63f816922b149cfa7001",
+      "size_bytes": 449
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_C12_2019_Three_Stage.csv",
+      "sha256": "0e7c8c7e9ea35bd139ba52c9f2118724b8cc9f251d82b9222adf03cb67317809",
+      "size_bytes": 89130
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_metadata_NEWID-13_Effect of External T (1).zip",
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+      "size_bytes": 22
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/metadados-117/PSI-117_metadata_NEWID-13_Effect of External T (1).zip",
+      "sha256": "a9698dbe10629c226dc498610d62ab8c5c7f15e2668412e831164ab74df99222",
+      "size_bytes": 10382
+    },
+    {
+      "archive_member": "exeperiencias/PSI-159/Engineering Documents/PSI-159_Engineering Documents_ACME Engineering Implementation Rpt.pdf",
+      "sha256": "393f3ebc6662b10f0fe55d87ceda3b6696d2cc9c91266b81132761de50078456",
+      "size_bytes": 7496324
+    },
+    {
+      "archive_member": "exeperiencias/PSI-159/metadados/PSI-159_metadata_PSI-159-ISA (1).zip",
+      "sha256": "0ef60d1ee8d4d53bbe58139d56fa99e9500ca48dd7913b25ac85dc853d6710ab",
+      "size_bytes": 8404
+    },
+    {
+      "archive_member": "exeperiencias/PSI-159/repots/PSI-159_Reports_FinalRpt_ACME.CFI-G.pdf",
+      "sha256": "f6cce7cc08ca69c155994d7a8898e21cd4aba122f4e46d5e00708e4889a1ebab",
+      "size_bytes": 3894907
+    },
+    {
+      "archive_member": "exeperiencias/PSI-62/PSI-62_metadata_NEWID-7_Concurrent Flame Spr (1).zip",
+      "sha256": "e8f984349473da4763818a424719afcb212c4876e35961792aefc3604aa9ea7a",
+      "size_bytes": 9694
+    }
+  ],
+  "anomalies": [
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_metadata_NEWID-13_Effect of External T (1).zip",
+      "preserved_as": "PSI-117/archive_anomalies/empty_044758ebfde2.zip",
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+      "reason": "Empty 22-byte ZIP; no scientific content"
+    },
+    {
+      "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_metadata_NEWID-13_Effect of External T (1).zip",
+      "preserved_as": "PSI-117/archive_anomalies/empty_3b76748e6eef.zip",
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+      "reason": "Empty 22-byte ZIP; no scientific content"
+    }
+  ],
+  "studies": {
+    "PSI-62": {
+      "doi": "10.60555/e9xp-ex83",
+      "study_version": 1,
+      "documents": 2,
+      "archives": 1,
+      "availability_note": "NASA exposes metadata only; no raw experimental, numerical model, or PDF files available."
+    },
+    "PSI-117": {
+      "doi": "10.60555/gz0q-b577",
+      "study_version": 2,
+      "documents": 16,
+      "archives": 1,
+      "availability_note": "All uploaded analyzed CSVs, ReadMe, presentations and ISA metadata."
+    },
+    "PSI-159": {
+      "doi": "10.60555/cyt1-kh64",
+      "study_version": 1,
+      "documents": 6,
+      "archives": 1,
+      "availability_note": "Selected uploaded originals plus both public experimental tables."
+    }
+  }
+}

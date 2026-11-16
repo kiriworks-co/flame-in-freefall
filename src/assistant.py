@@ -116,6 +116,13 @@ def answer(question: str, index: RetrievalIndex | None = None, study_ids: list[s
     warning = ("Test conditions are not measured outcomes or proof of fire safety. Excerpts may be context only."
                if english else "Condições de ensaio não são resultados medidos nem prova de segurança contra incêndio. Os trechos podem conter apenas contexto.")
     warnings.append(warning)
+    if any(e.get("evidence_kind") in {"simulation", "mixed_experiment_and_simulation"} or
+           any(f.get("role") == "simulation" for f in e.get("field_classification", [])) for e in evidence):
+        warnings.append(
+            "Retrieved sources include numerical simulations. Predictions and experimental reference series are distinct evidence types; neither is relabeled as the other."
+            if english else
+            "As fontes recuperadas incluem simulações numéricas. Previsões e séries experimentais de referência são evidências distintas; nenhuma é reclassificada como a outra."
+        )
     mode = "offline-evidence"
     provider_status = "local_deterministic"
     claims: list[dict] = []

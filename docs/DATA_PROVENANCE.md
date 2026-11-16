@@ -1,5 +1,46 @@
 # Proveniência dos dados NASA
 
+## Ampliação Etapa 2 — PSI-62, PSI-117 e PSI-159 (2026-11-15)
+
+Esta ampliação acrescenta três investigações às nove da versão `5a2c487`.
+O inventário completo dos **24 novos documentos**, três ZIPs ISA preservados,
+SHA-256, tamanhos, versões, DOI e URLs permanentes está em
+[STAGE2_SOURCE_AUDIT.md](STAGE2_SOURCE_AUDIT.md). A trilha de cada membro do
+ZIP fornecido está em `data/psi_downloads/stage2_archive_audit.json`; os
+manifests individuais guardam a correspondência com o inventário oficial e
+com o arquivo pai dos metadados extraídos. Os originais anteriores permanecem
+inalterados. O inventário da seção seguinte é o acervo **anterior** à ampliação.
+
+- **PSI-62**, versão 1, DOI `10.60555/e9xp-ex83`: metadados de uma investigação
+  de modelagem UFGM e comparação com BASS/BASS-II. Não há resultados numéricos
+  ou relatório público na seleção disponibilizada pela NASA.
+- **PSI-117**, versão 2, DOI `10.60555/gz0q-b577`: nove CSVs analisados, quatro
+  apresentações, ReadMe XLSX e dois TXT ISA. Séries CFD e resultados
+  experimentais reportados são classificados separadamente por coluna/bloco.
+  Unidades ausentes e convenções ambíguas do ReadMe permanecem sem correção.
+- **PSI-159**, versão 1, DOI `10.60555/cyt1-kh64`: dois relatórios/PDFs, dois
+  TXT ISA e duas tabelas pequenas obtidas diretamente da NASA para completar
+  a pasta vazia do ZIP. As tabelas contêm condições, resultados reportados e
+  cálculos tabulados, identificados separadamente; não são telemetria bruta.
+
+Os três TXT `s_*.txt` são placeholders publicados pela NASA; foram preservados
+e explicitamente excluídos da interpretação como amostras ou medições. Dois
+ZIPs internos vazios foram ignorados pela ingestão científica e registrados
+como anomalias. Documentos ou hipóteses teóricas não foram promovidos a
+medições. Texto científico é conteúdo de fonte, nunca instrução do sistema.
+
+Verificação independente: cada original não vazio fornecido foi comparado
+com novo download NASA da versão indicada. Os metadados ISA extraídos
+mantêm exatamente os bytes do ZIP verificado. As URLs S3 temporárias foram
+usadas apenas para transporte; as referências persistidas são URLs NASA
+permanentes. Não há licença específica inventada. Reexecução offline do
+importador preservou o conteúdo de todos os arquivos.
+
+Reprodução: `python scripts/import_stage2_archive.py <experienciass.zip>
+--verify-online` para primeira verificação; omitir `--verify-online` permite
+replay offline somente contra o mesmo SHA-256 de arquivo previamente
+verificado. Em seguida executar `python scripts/ingest_nasa.py`.
+
 Coleta real em 2026-11-15. Os originais abaixo foram recebidos por HTTPS diretamente de NASA PSI ou NASA.gov; nenhum arquivo científico foi copiado de equipes externas. SHA-256 verificado novamente após a coleta. Links API são estáveis para solicitar o arquivo na versão registrada; URLs S3 assinadas foram usadas apenas em memória e não persistidas.
 
 ## Arquivos obtidos

@@ -20,6 +20,7 @@ from .extractors import render_pdf_page
 from .frames import axis_label, suggest_chart, table_to_frame
 from .i18n import (
     chart_label,
+    evidence_label,
     get_lang,
     quantity_label,
     t,
@@ -97,6 +98,47 @@ def collect_entries(experiment: dict) -> list[dict[str, Any]]:
 def _label(entry: dict[str, Any], lang: str | None = None) -> str:
     active = lang or get_lang()
     return f"{entry['document']['name'][:30]} › {entry['table']['name']} ({t('view.rows_suffix', active, rows=len(entry['table']['rows']))})"
+
+
+def paired_y_columns(meta: list[dict[str, Any]], x: str) -> list[str]:
+    """Keep repeated source time axes paired with their own adjacent data series.
+
+    NASA wide tables can place time/Q and a separately sampled time/Q pair on
+    the same row. Matching row numbers do not make those time bases equal.
+    """
+    numeric = [m for m in meta if m.get("kind") in {"numeric", "range"} and m.get("n_numeric", 0)]
+    selected = next((m for m in numeric if m["name"] == x), None)
+    if selected is None:
+        return []
+    axes = [m["name"] for m in numeric if m.get("quantity") == "time"]
+    if x in axes and len(axes) > 1:
+        names = [m["name"] for m in numeric]
+        start = names.index(x) + 1
+        end = next((j for j in range(start, len(names)) if names[j] in axes), len(names))
+        return names[start:end]
+    return [m["name"] for m in numeric if m["name"] != x]
+
+
+def _series_kind(table: dict[str, Any], column: str) -> str:
+    columns = table.get("columns", [])
+    index = columns.index(column) if column in columns else -1
+    field: dict[str, Any] = next((f for f in table.get("field_classification", []) if f.get("column_index") == index), {})
+    return str(field.get("role") or field.get("evidence_kind") or table.get("evidence_kind", "unclassified"))
+
+
+def comparable_plot_axes(prepared: list[dict[str, Any]]) -> bool:
+    """Overlay only explicitly matching physical axes; never guess missing units."""
+    signatures = []
+    for item in prepared:
+        by_name = {m["name"]: m for m in item["meta"]}
+        for y in item["ys"]:
+            axes = [by_name.get(item["x"], {}), by_name.get(y, {})]
+            signatures.append(tuple((m.get("quantity"), m.get("unit")) for m in axes))
+    if len(signatures) <= 1:
+        return True
+    return all(q not in {None, "unknown"} and unit for signature in signatures for q, unit in signature) and all(
+        signature == signatures[0] for signature in signatures[1:]
+    )
 
 
 def _load_effective_overrides(experiment: dict) -> dict[str, Any]:
@@ -179,13 +221,16 @@ def show_study_overview(experiment: dict) -> None:
             raw_x = suggestion.get("x")
             px_col = str(raw_x) if isinstance(raw_x, str) and raw_x in numeric_cols else str(numeric_cols[0])
             py_candidates = [str(c) for c in suggestion.get("y", []) if c in numeric_cols and c != px_col]
-            py_col = py_candidates[0] if py_candidates else next((str(c) for c in numeric_cols if c != px_col), None)
+            paired = paired_y_columns(p_meta, px_col)
+            py_candidates = [c for c in py_candidates if c in paired]
+            py_col = py_candidates[0] if py_candidates else next(iter(paired), None)
             if py_col:
                 work = p_frame[[px_col, py_col]].dropna()
                 if not work.empty:
                     st.divider()
                     st.subheader(t("view.overview_preview_title", lang))
                     st.caption(t("view.overview_preview_caption", lang))
+                    st.caption(t("view.evidence_nature", lang, kind=evidence_label(_series_kind(preview_entry["table"], py_col), lang)))
                     meta_map = {m["name"]: m for m in p_meta}
                     xm = meta_map.get(px_col)
                     ym = meta_map.get(py_col, {"name": py_col, "unit": "", "quantity": "unknown"})
@@ -330,6 +375,21 @@ def show_study_overview(experiment: dict) -> None:
 
 def _show_flags(table: dict[str, Any], lang: str | None = None) -> None:
     active = lang or get_lang()
+    kind = table.get("evidence_kind", "unclassified")
+    st.caption(t("view.evidence_nature", active, kind=evidence_label(kind, active)))
+    if table.get("classification_note"):
+        st.caption(table["classification_note"])
+    if kind in {"simulation", "mixed_experiment_and_simulation"}:
+        st.warning(t("view.simulation_notice", active))
+    fields = table.get("field_classification", [])
+    if fields:
+        with st.expander(t("view.field_nature", active)):
+            st.dataframe(pd.DataFrame([
+                {t("view.columns_heading", active): f.get("header", ""),
+                 t("view.field_nature", active): evidence_label(f.get("role") or f.get("evidence_kind"), active),
+                 t("view.source_basis", active): f.get("basis") or f.get("classification_basis") or f.get("source_marker", "")}
+                for f in fields
+            ]), hide_index=True, use_container_width=True)
     flags = table.get("flags", [])
     for flag in (f for f in flags if f["level"] == "aviso"):
         st.warning(translate_quality_flag(flag, active))
@@ -557,10 +617,13 @@ def show_explorer(experiment: dict) -> None:
             st.caption(t("view.suggested_type", lang, kind=chart_label(chart["type"], lang)))
             x_default = numeric.index(chart["x"]) if chart.get("x") in numeric else 0
             x = st.selectbox(t("view.x_axis", lang), numeric, index=x_default, key=f"{key}-x")
-            y_default = [c for c in chart.get("y", []) if c in numeric and c != x][:1]
+            y_options = paired_y_columns(meta, x)
+            y_default = [c for c in chart.get("y", []) if c in y_options][:1]
             if not y_default:
-                y_default = [column for column in numeric if column != x][:1]
-            ys = st.multiselect(t("view.y_axis", lang), [c for c in numeric if c != x], default=y_default, key=f"{key}-y")
+                y_default = y_options[:1]
+            if f"{key}-y" in st.session_state:
+                st.session_state[f"{key}-y"] = [y for y in st.session_state[f"{key}-y"] if y in y_options]
+            ys = st.multiselect(t("view.y_axis", lang), y_options, default=y_default, key=f"{key}-y")
         prepared.append({"entry": entry, "frame": frame, "meta": meta, "x": x, "ys": ys, "chart": chart})
 
     first = prepared[0]
@@ -608,6 +671,9 @@ def show_explorer(experiment: dict) -> None:
     }
     series: dict[str, pd.DataFrame] = {}
     origin: dict[str, dict[str, Any]] = {}
+    if chart_key not in {"heatmap", "xyc"} and not comparable_plot_axes(prepared):
+        st.warning(t("view.incompatible_axes", lang))
+        return
     multi_doc = len({p["entry"]["document"]["name"] for p in prepared}) > 1
     for item in prepared:
         for y in item["ys"]:
@@ -625,8 +691,9 @@ def show_explorer(experiment: dict) -> None:
             if s.empty:
                 continue
             name = f"{item['entry']['table']['name']} · {y}"
+            name += f" · {evidence_label(_series_kind(item['entry']['table'], y), lang)}"
             if multi_doc:
-                name = f"{item['entry']['document']['name'][:20]} › {name}"
+                name = f"{Path(item['entry']['document']['name']).stem} › {name}"
             series[name] = s
             origin[name] = item["entry"]
     if on_grid:

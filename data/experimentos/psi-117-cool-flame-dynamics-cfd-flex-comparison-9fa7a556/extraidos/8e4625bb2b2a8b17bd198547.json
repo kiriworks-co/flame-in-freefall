@@ -1,0 +1,4836 @@
+{
+  "status": "processado",
+  "text": "Oscillatory cool flame behavior of submillimeter\n           sized n-heptane droplets\n\n\n\n             Fahd E. Alama, Frederick L. Dryera,b, Tanvir I. Farouka\n\n                                      a Department of Mechanical Engineering\n                        University of South Carolina, Columbia, SC 29208, USA\n\n                              b Department of Mechanical & Aerospace Engineering\n                          Princeton University, Princeton NJ 08544, USA\n\n\n\n\n\n                         34th Annual Meeting of the American Society for Gravitational and\n                                   Space Research (ASGSR),\n                         Bethesda North Marriott Hotel & Conference Center,\n                                10/31/2018 – 11/03/2018, Bethesda, MD, USA\n                                                                                                     1\n\nMotivation\n\nCool flame has practical                                         Recent research\nrelevance to-                                interest triggers        Multiphase        Gas phase\n Engine knock & multi-stage auto-ignition [1]\n Lean flammability limit [2]                                                     Theory &                                            [3]                                   Experiment Spacecraft fire safety                                                             Analysis\n Low and NTC kinetics [4]\n\n                                                                              Farouk et al. (PROCI 2015)\n                       Nayagam et al. (CNF 2012)\n                                                                                               Microgravity droplet experiment\n                                Microgravity droplet experiment\n                                                                                              n-C7H16 pulsation behavior\n                             Steady cool flame n-C7H16 droplet\n                                                                                     High pressure (3 atm)\n                            Atmospheric pressure\n\n\n\n\n                          Reuter et al. (CNF 2017)                                                                      Deng et al. (CNF 2017)\n                            Counter flow burner experiments                                                                                                  Hysteretic Nature of DME Cool\n                               Extinction limit of cool flame for                                                                                          flame\n                              various n-Alkanes                                                                            Opposed diffusion flame\n                                                                                        experiments at 2 and 3 atm\n\n\n\n  [1] Dec (PROCI 2009) [2] Reuter et al. (CNF 2016) [3] Nayagam et al. (CNF 2012) [4] Liang & Law (CNF 2017)               2\n\nMotivation …\n\n                                     Katta et al. (PROCI 2017)\n                           CFD  study   to   explore   self\n                                   supporting   cool   flame    for\n                               opposed diffusion arrangement\n\n\n\n                                             Alam et al. (C&F 2018)\n                                         1-D CFD study  for  smaller  n-\n                                           alkane  droplet  to    investigate\n                                                 direct initiation of cool flame\n\n\n\n                                          Cool flame behavior\n                                                   for smaller droplets at\n                                                    near-limit condition\n                              Sohn et al. (PROCI 2017)                                               without significant\n                                 Cool flame study of n-Heptane at          heat loss?\n                                   high    strain   rates    (limiting\n                                      condition) and flame instability                                                                                                        3\n\nDroplet Combustion Model\n\nKinetic Schemes                                         Do                      (D/Do)2\nDetailed model O(100 species) &\n                            Gas Phase:O(1000) elementary reactions)                            D   D   D  D D                                             • Multi-component molecular diffusion\n                                             • Detailed chemical kinetics\n                                                                    Flame\n                                             • Statistical narrow band (SNB) radiation                                                     • Mass conservation                     D  Df  Stand-off\n                                                                            Ratio =D/Df Droplet Surface:                           • Species equation\n                                                     • Energy conservation • Surface regression\n • Evaporation of fuel\n • Condensation/Dissolution                              Fiber Model  of products\n • Radiative heat exchange                                           Biot number in the order of 10-2\n                                Liquid Phase:                                                     One dimensional temperature distribution\n                   mv                • Mass conservation           ∂ (ρf c p , f T f )   ∂    ∂T f   4 hconv , j                                                                                         T − T f )                                                   • Species equation                    =     k f       +          (                                                                          ∂t      ∂x    ∂x    d fiber                     mp\n      drs                                         • Energy conservation                               qR                                              4σεf     4      4      dt                                                                 −        ( T f                                                                                 − T∞ )\n              ∂Yl ,i                     ∂T                                            d fiber\n       Dl ,i                     λ               ∂r                      ∂r\n      qambient      ∂T                             qambient                Fiber:             λ\n            qloss   l ∂r                                  qloss                  • Energy conservation\n                                    q fib                                       q fib\n\n     T. Farouk and F. L. Dryer Combust. and Flame (2012) 159, 200 – 209\n     T. Farouk and F. L. Dryer Combust Theory & Modelling (2011), 15, 487 – 515                                       4\n\nDirect Initiation of Cool Flame\n\n                                                                                       XN2 =     P = 1 atm,                                                       XO2 = 21%     XO3 = 5%                                                                               Balance     T = 298 K\n\n                                                                                Model        Species    Rxn\n                                                          Do =               Sun et al. (2010)       128       565\n                                                                     0.5                                                                                Mehl et al. (2011)       652      2827                                      mm                           n-C7H16\n                                                                                  Reuter et al. (2017)     11        26                                              O3\n                                             Radial direction\n                                                                  rgas\n\n\n\n\n\n        Rapid inception\n           of cool flame\n                                                                         Ignition\n                                                          energy\n\n\n\n\n\nOzone assisted cool flame combustion of sub-millimeter sized n-alkane droplets\nat atmospheric and higher pressure. Alam et al. (Combust. Flame 2018)                                                             5\n\nCool Flame Under Near Limit Conditions?\n\n                                                                                        XN2 =     P = 1 atm,        Do =                                                         XO2 = 10%     XO3 = 5%                                                0.5                                                                                Balance     T = 298 K     mm\n\n\n\n                                                      Attempt to establish direct cool flame\n                                                          Drop in Tpeak, gas\n                                                                     Rise in Tpeak, gas\n\n\n\n\n\n    Blue: Oscillatory cool flame\n      Red: Stable cool flame                                                                        6\n\nOscillatory Cool Flame: Primary Observations\n\n\n\n\n\n                                                                       Temperature\n\n\n\n\n                                                                               80 x Ddrop\n\n    Initiation energy results in Tpeak, gas exceeding ~1150 K locally\n\n    Flame expands radially  gradual decrease in flame T \n       Contracts (t < 0.1 s)\n\n    Stable cool flame for brief period of time (~0.12 s @ ~710 K)\n\n                                                                        Ketohydroperoxides\n      How does the oscillation start?\n       Role of LT chemistry?\n      Why does the oscillation grow?                                                      7\n\nInception of oscillation\n\n\n                      O3 kinetics (dissociation/recombination) elevates\n                                                 local O2 mole fraction\n                                       Initial local XO2 : 0.10  0.16 (at flame location)\n\n\n                                 Gradient in O2 mole fraction compels O2 to diffuse\n                                                   radially  outward  direction   causing  local\n                                             depletion\n\n\n                                                Flame temperature        As time                              Pulsing starts at         increases due to      progresses, local                                XO2 < ~0.135               higher O2       O2 depletes                                                                      availability\n\n                           Flame contracts         Oscillations                                 Flame moves                              due to          repeats                                               radially out                          consumption of O2\n                                                                                                        8\n\nRole of Low Temperature Chemistry on the Oscillation\n              RH                                                   Consumption of C7H14OOH depends on the extend of\n                  +X                                   reactivity from chain propagation/termination  reactions\n                   -XH                         and degenerate chain branching reactions\n                             RO + OH\n             Alkyl radical  Ṙ\n                                                         Chain\n                                                             branching                    first O2 addition    + O2\n                              ROOH + O2\n      Alkylperoxy radical  ṘOO\n\n         Internal H abstraction                        AlkeneAlkene ++ HȮ2HȮ2\n\nHydroperoxy alkyl radical  QOOH\n                                ȮH+ȮH+ cycliccyclic ethers,ethers,         second O2 addition    ++ O2O2                                               aldehydesaldehydes\n                                                      oror ketonesketones\n             OOQOOHOOQOOH\n\n         internal H abstraction\n               HOOQ-HOOHHOOQ-HOOH\n\n\n     Ketohydroperoxide  HOOQ-HOHOOQ-HO ++ ȮHȮH\n\n             Degenerate\n          chain branching                                         Chain propagation /        Chain branching\n                ȮQ-HOȮQ-HO ++ 2ȮH2ȮH                           termination reaction          reaction class\n                                                                class correlates with        undergoes three\n  Low-temperature oxidation and autoignition chemistry of large hydrocarbons.           temperature               distinct stages       9                 Combustion (5th Edition), Chapter 3, Page 104\n\nRole of LT Chemistry: Stage # 1\n\n\n\n                                                      Drop in O2C7H14OOH mole fraction, and shutting\n                                                        down HR contribution from\n                                                            O2C7H14OOH   C7H14O3 + OH\n\n\n\n                                                                                     Initial high temperature decompose C7H14O3 via\n                                                                 endothermic reaction (stage # 1)\n                                                                  C7H14O3  R’CHO + R’(CO) R’’ +OH\n\n\n                                                             C7H14OOH   C7H14O + OH\n                                                            O2C7H14OOH   C7H14OOH + O2\n                                                             Exothermicity from other classes are not enough to\n                                                              maintain same Tgas w/o additional contribution\n       Stage # 1\n  Favorable Tmax for O2C7H14OOH production @ 1 atm\n                   hovers ~700 K\n\n                                                 Steep fall in peak gas temperature (stage #\n                                                                  1)  drop in C7H14 mole fraction          𝐝𝐝𝐝𝐝                𝐎𝐎𝟐𝟐𝐂𝐂𝟕𝟕𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇            Tgas             𝐝𝐝𝐝𝐝                                                                                             10\n\nRole of LT Chemistry: Stage # 2 & 3\n\n                                           Gas phase temperature starts to increase\n                                                  (change slope)  Reflection of C7H14\n\n                                                  Simultaneous  exothermic   contributions\n                                                 from  degenerate  branching  and  chain\n                                                    propagation  sharp increase in Tgas\n\n                                                              Tgas >  Tthreshold  degenerate branching\n                                                        contribution starts to diminish  abrupt\n                                               change in C7H14O3\n\n\n                                   Stage # 3\n\n                                                  Balance between two classes of reactions\n                                                     continue  for  brief  period  of  time        Stage # 2                                                  Temperature increases to ~750 K\n  Drop in Tgas beyond a threshold ( point A,                                                              Insufficient heat  release from the chain  ~712 K)  changes C7H14O3 profile slope                                                       branching/termination  route compels  the  Reactivates                                                gas temperature to fall @ t~0.638 s  O2C7H14OOH   C7H14O3 + OH (exothermic)\n\n                                                                                                       11\n\nDynamic Competition of LTC & Fuel Leakage\n\n\n\n\n\n                                          Radial Growth of Oscillation:\n                                                Fuel Leakage\n\n\n\n\n\n                                                                                                       12\n\nSummary\n\n      Dynamics of near-limit cool flame burning of isolated submillimeter (Do =\n      0.5 mm) n-C7H16 droplet is numerically studied.\n   Reduced ambient O2 mole fraction (10%) is considered to facilitate near-\n        limit condition.\n   Under selective O3 seeding (5%), the droplet briefly attempts to initiate\n      stable cool flame before entering continuous oscillatory cool flame burn.\n   Local depletion of O2 (<13.5%) near the droplet initiates the pulsing\n      behavior with initial small fluctuation in flame temperature.\n\n  The oscillation is found to increase in magnitude with time, and at each\n      successive cycle.\n\n   Dynamic interaction of degenerate chain branching and chain propagation\n          / termination reaction classes of QOOH (within NTC region) is responsible\n       for the observed oscillation.\n\n   Continuous fuel leakage through the flame location assists the oscillation\n      to grow in radial direction with time.\n\n                                                                                                       13\n\nAcknowledgement\n\n\n              This work was supported by the National\n             Aeronautics  and  Space  Administration\n             through grant NNX17AF97A\n\n\n\n\n\n                                                                                                       14\n\nBackup slide # 1: Direct Initiation of Cool Flame: Initial Dynamics\n\n\n\n\n\n                                                                                              Flash point 269.3 K\n                                                                                       (NOAA)\n\n\n\n\n\n             Initiation energy          Premixed  Diffusive\n              dissipation                    burn\n\n\n       Reaction with partially                                  Steady ‘cool flame’      premixed gas phase fuel\n\n\n                                                                                                       15\n\nBackup slide # 2: Dynamic Competition of LTC & Fuel Leakage\n\n\n\n\n\n                                          Radial Growth of Oscillation:\n                                                Fuel Leakage\n\n\n\n\n\n                                                                                                       16\n\nGoverning Equations & Boundary Conditions\n Species𝑟𝑟+ 𝜕𝜕(𝑦𝑦𝑖𝑖𝜌𝜌 ) Conservation𝑟𝑟2̇𝑟𝑟𝑟𝑟−|𝑟𝑟+𝑟𝑟+  Equation𝑟𝑟+                                             𝑟𝑟+                        𝑟𝑟+           𝑟𝑟+̇න𝑟𝑟−         𝑟𝑟2𝑑𝑑𝑑𝑑+    න𝑟𝑟−  𝑦𝑦𝑖𝑖𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ 𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2 ቚ𝑟𝑟− =  −𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖𝑟𝑟2 ቚ𝑟𝑟− + න𝑟𝑟− 𝜔𝜔𝑖𝑖𝑟𝑟2𝑑𝑑𝑑𝑑           𝜕𝜕𝑡𝑡        1                                              G                            𝑟𝑟3 ฬ𝑟𝑟−               3\n                                                                                                            x Do) Energy Conservation Equation                                             At ∞ (200\n                                                                                               XO2 = 0.21             L                                        𝑟𝑟+                                𝑟𝑟+    𝑟𝑟+                                          𝑟𝑟+                                                                                      = 0.79                               𝜕𝜕(ℎ𝜌𝜌 )             𝑟𝑟2̇𝑟𝑟𝑟𝑟−|                                                                           𝑟𝑟+                                                        XN2                                     𝑟𝑟2𝑑𝑑𝑑𝑑+            න𝑟𝑟−                         න𝑟𝑟− ℎ𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ ℎ𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2 ቚ𝑟𝑟−                          T  = 298 K                                                  𝜕𝜕𝑡𝑡                               1                                                        𝑟𝑟3 ฬ𝑟𝑟−                               3Conservation of Mass Fraction𝑟𝑟+                     Diffusive Heat Flux Equation                                                                                      𝑜𝑜𝑜𝑜 𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔−𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓             = −𝑞𝑞𝑟𝑟2 ቚ𝑟𝑟− + 𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿                                                                                                  Flux Balance                                                                                                                                       − = −𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖−ቚ+ ෍ yi = 1                                                                  𝑞𝑞𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑= ෍   ℎ𝑖𝑖𝜌𝜌𝑦𝑦𝑖𝑖𝑉𝑉𝑖𝑖−𝜆𝜆𝛻𝛻𝑇𝑇𝑔𝑔−𝑝𝑝 ෍    𝜃𝜃𝑖𝑖𝒅𝒅𝑖𝑖                                               𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝑝𝑝̇𝑟𝑟 ቚ+    ∀i                                                                                                                                                                                                          𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔                                                                  𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔         Energy Balance                                                                                                                                                                + Radiative Heat Flux Equation                                       𝐻𝐻𝐻𝐻𝐻𝐻𝐻𝐻, 𝜃𝜃𝑖𝑖= 𝐷𝐷𝑖𝑖𝑖𝑖𝜒𝜒𝑗𝑗                                                                                                                                                                                                                                               𝑖𝑖 𝜖𝜖 ෍𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙 ℎ𝑣𝑣𝑣𝑣𝑣𝑣,𝑖𝑖𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟+ 𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖+ = −𝑞𝑞 ቚ− −𝑞𝑞𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓\n                                                                                                   Liquid & Gas\n                                                                                                  Fraction Balance                         𝑖𝑖 𝜖𝜖 𝑔𝑔𝑔𝑔𝑔𝑔  𝛻𝛻 .⃗𝑞𝑞𝑟𝑟𝑟𝑟𝑟𝑟= න0∞ 𝑎𝑎(𝜂𝜂,⃗𝑟𝑟)  4𝜋𝜋𝐼𝐼𝑏𝑏𝜂𝜂,⃗𝑟𝑟−ර4𝜋𝜋 𝐼𝐼𝜂𝜂,⃗𝑟𝑟, 𝜔𝜔𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑                                         Phase Mass     ෍   𝑦𝑦𝑖𝑖,+ = 1 Fiber Model                                                   ෍   𝑦𝑦𝑖𝑖,−= 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      𝑖𝑖 𝜖𝜖 𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙\n                                                                      Temp Balance 𝜕𝜕𝜌𝜌𝑓𝑓𝐶𝐶𝑝𝑝,𝑓𝑓𝑇𝑇𝑓𝑓       𝜕𝜕         𝜕𝜕𝑇𝑇𝑓𝑓       4ℎ𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐,𝑗𝑗                     4        =        +          𝑇𝑇−𝑇𝑇𝑓𝑓−4𝜎𝜎𝜀𝜀𝑓𝑓    𝑇𝑇𝑓𝑓 −𝑇𝑇∞4          𝜕𝜕𝜕𝜕          𝜕𝜕𝜕𝜕𝑘𝑘𝑓𝑓  𝜕𝜕𝜕𝜕            𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                           𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                                                                                                                   𝑇𝑇+ = 𝑇𝑇−                                            𝑟𝑟+                                                                                     Phase Balance                               4ℎ∞𝑛𝑛𝑓𝑓                         𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝐼𝐼𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                    2              4           𝑜𝑜𝑜𝑜 𝐺𝐺𝐺𝐺𝐺𝐺𝐺𝐺 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿                  𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓= න         𝑇𝑇−𝑇𝑇𝑓𝑓𝑟𝑟2                    𝑑𝑑𝑑𝑑        𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓= 𝜋𝜋𝑟𝑟𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓    𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔=    𝜋𝜋𝑟𝑟𝑙𝑙/𝑔𝑔3                                                                 𝑥𝑥𝑖𝑖,+ 𝑝𝑝= 𝑥𝑥𝑖𝑖,−𝛾𝛾𝑖𝑖𝑇𝑇, 𝑥𝑥𝑗𝑗,−   𝑝𝑝𝑣𝑣𝑣𝑣𝑣𝑣,𝑖𝑖(𝑇𝑇 ൯     *                                   𝑟𝑟−      𝑑𝑑𝑓𝑓                              𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔                               3     T. Farouk and F. L. Dryer Combust. and Flame (2012) 159, 200 – 209\n   + T. Farouk and F. L. Dryer Combust Theory & Modelling (2011), 15, 487 – 515\n\n\n                                                                                                         17\n\nSupplementary Slide # Governing Equations\n\n\n\n\n                                                                                    = Mass fraction Species𝑟𝑟+ 𝜕𝜕(𝑦𝑦𝑖𝑖𝜌𝜌 ) Conservation𝑟𝑟2̇𝑟𝑟𝑟𝑟−|𝑟𝑟+𝑟𝑟+  Equation𝑟𝑟+                                             𝑟𝑟+                        𝑟𝑟+           𝑟𝑟+̇                                              yi             𝑟𝑟2𝑑𝑑𝑑𝑑+න𝑟𝑟−              න𝑟𝑟−  𝑦𝑦𝑖𝑖𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ 𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2 ቚ𝑟𝑟− =  −𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖𝑟𝑟2 ቚ𝑟𝑟− + න𝑟𝑟− 𝜔𝜔𝑖𝑖𝑟𝑟2𝑑𝑑𝑑𝑑                      ρ = Mass density           𝜕𝜕𝑡𝑡               1                            𝑟𝑟3 ฬ𝑟𝑟−               3                                                                                                                      ṙ = Radius Energy Conservation Equation\n                                                                U = Bulk fluid velocity\n                                                                                                                  Vi = Diffusion velocity,\n                                                                                         ωi = Rate of species production due to chemical reaction                                        𝑟𝑟+ 𝜕𝜕(ℎ𝜌𝜌 )             𝑟𝑟2̇𝑟𝑟𝑟𝑟−| 𝑟𝑟+    𝑟𝑟+                                          𝑟𝑟+                                                                           𝑟𝑟+            න𝑟𝑟−         𝑟𝑟2𝑑𝑑𝑑𝑑+    න𝑟𝑟− ℎ𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ ℎ𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2 ቚ𝑟𝑟−                        h = Enthalpy per unit mass                                                  𝜕𝜕𝑡𝑡        1                                                        𝑟𝑟3 ฬ𝑟𝑟−                                              q = Heat flux                               3Conservation of Mass Fraction𝑟𝑟+                     Diffusive Heat Flux Equation                                                                                      𝑜𝑜𝑜𝑜 𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔−𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                                                                      Sloss/gain due to fiber = Loss and gain due to the presence of the             = −𝑞𝑞𝑟𝑟2 ቚ𝑟𝑟− + 𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿                                                                                                 tether fiber\n                                                                                          k = Thermal conductivity ෍ yi = 1                                                                  𝑞𝑞𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑= ෍   ℎ𝑖𝑖𝜌𝜌𝑦𝑦𝑖𝑖𝑉𝑉𝑖𝑖−𝜆𝜆𝛻𝛻𝑇𝑇𝑔𝑔−𝑝𝑝 ෍    𝜃𝜃𝑖𝑖𝒅𝒅𝑖𝑖    ∀i                                                                                                                                                                                                          𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔                                                                  𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔            Tg = Gas temperature,\n                                                                                                                        θi = Thermal diffusion coefficient Radiative Heat Flux Equation                                                                                           𝐻𝐻𝐻𝐻𝐻𝐻𝐻𝐻, 𝜃𝜃𝑖𝑖= 𝐷𝐷𝑖𝑖𝑖𝑖𝜒𝜒𝑗𝑗                                                                                     θi = DijXj\n                                                                                                                      di = Thermodynamic driving forceFiber𝛻𝛻 .⃗𝑞𝑞𝑟𝑟𝑟𝑟𝑟𝑟=Modelන0∞ 𝑎𝑎(𝜂𝜂,⃗𝑟𝑟)  4𝜋𝜋𝐼𝐼𝑏𝑏𝜂𝜂,⃗𝑟𝑟−ර4𝜋𝜋 𝐼𝐼𝜂𝜂,⃗𝑟𝑟, 𝜔𝜔𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑                                                                                                                                          hvap,i = Enthalpy of vaporization\n                                                                              p = System pressure,\n                                                                                                                                             xi = Mole fraction,  𝜕𝜕𝜌𝜌𝑓𝑓𝐶𝐶𝑝𝑝,𝑓𝑓𝑇𝑇𝑓𝑓       𝜕𝜕         𝜕𝜕𝑇𝑇𝑓𝑓       4ℎ𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐,𝑗𝑗                   4𝜎𝜎𝜀𝜀𝑓𝑓    4        =        +        𝑇𝑇−𝑇𝑇𝑓𝑓−               𝑇𝑇𝑓𝑓 −𝑇𝑇∞4                                                          γi = Activity coefficient           𝜕𝜕𝜕𝜕          𝜕𝜕𝜕𝜕𝑘𝑘𝑓𝑓  𝜕𝜕𝜕𝜕            𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                           𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                                             𝑟𝑟+                                                                                                      pvap,i = Vapor pressure of the i-th component                                                                                2              4   3                                4ℎ∞𝑛𝑛𝑓𝑓                         𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝐼𝐼𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                                                           ‘+’ and ‘-’ denote location in the gas and liquid phase             𝑜𝑜𝑜𝑜 𝐺𝐺𝐺𝐺𝐺𝐺𝐺𝐺 𝑡𝑡𝑡𝑡𝑡𝑡𝑡                                                                               𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓= 𝜋𝜋𝑟𝑟𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓    𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔=    𝜋𝜋𝑟𝑟𝑙𝑙/𝑔𝑔  𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿                  𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓= න         𝑇𝑇−𝑇𝑇𝑓𝑓𝑟𝑟2                    𝑑𝑑𝑑𝑑                            3                                            𝑟𝑟−      𝑑𝑑𝑓𝑓                              𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔\n\n\n\n                                                                                                         18\n\nSupplementary Slide # Governing Equations\n\n\n The complete set of coupled partial differential and algebraic equations are\n     discretized first in space and then integrated in an automated fashion as a set\n     of coupled ordinary differential-algebraic equations in time.\n\n  Spatial  discretization  is performed according to a node-centered  finite\n    volume scheme with a second order accuracy.\n\n The innermost liquid node is centered at the origin, providing the required\n     no-flux condition.\n\n The discretized mass flux  is represented on  cell interfaces and not cell\n     centers, in the manner traditionally referred to as a staggered grid to avoid\n     oscillatory solutions.\n\n  Numerical integration of the final set of discretized equations is performed\n     using a backward difference formula with a variable order of up to fifth order\n    and a variable time step utilizing a fully implicit multipoint interpolation.\n                                                                                                       19",
+  "pages": [
+    {
+      "page": 1,
+      "location": "página 1",
+      "text": "Oscillatory cool flame behavior of submillimeter\n           sized n-heptane droplets\n\n\n\n             Fahd E. Alama, Frederick L. Dryera,b, Tanvir I. Farouka\n\n                                      a Department of Mechanical Engineering\n                        University of South Carolina, Columbia, SC 29208, USA\n\n                              b Department of Mechanical & Aerospace Engineering\n                          Princeton University, Princeton NJ 08544, USA\n\n\n\n\n\n                         34th Annual Meeting of the American Society for Gravitational and\n                                   Space Research (ASGSR),\n                         Bethesda North Marriott Hotel & Conference Center,\n                                10/31/2018 – 11/03/2018, Bethesda, MD, USA\n                                                                                                     1",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            40.01,
+            69.02,
+            687.77,
+            109.06
+          ],
+          "text": "Oscillatory cool flame behavior of submillimeter",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            194.94,
+            101.79,
+            525.02,
+            141.83
+          ],
+          "text": "sized n-heptane droplets",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            159.21,
+            212.95,
+            560.78,
+            235.2
+          ],
+          "text": "Fahd E. Alama, Frederick L. Dryera,b, Tanvir I. Farouka",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            186.81,
+            248.56,
+            533.1,
+            284.53
+          ],
+          "text": "a Department of Mechanical Engineering \nUniversity of South Carolina, Columbia, SC 29208, USA",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            193.65,
+            298.96,
+            526.25,
+            318.12
+          ],
+          "text": "b Department of Mechanical & Aerospace Engineering",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            214.89,
+            315.76,
+            505.01,
+            334.93
+          ],
+          "text": "Princeton University, Princeton NJ 08544, USA",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            173.18,
+            442.94,
+            550.08,
+            488.93
+          ],
+          "text": "34th Annual Meeting of the American Society for Gravitational and \nSpace Research (ASGSR),\nBethesda North Marriott Hotel & Conference Center,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            234.98,
+            486.14,
+            485.33,
+            503.33
+          ],
+          "text": "10/31/2018 – 11/03/2018, Bethesda, MD, USA",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            657.06,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "1",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "location": "página 2",
+      "text": "Motivation\n\nCool flame has practical                                         Recent research\nrelevance to-                                interest triggers        Multiphase        Gas phase\n Engine knock & multi-stage auto-ignition [1]\n Lean flammability limit [2]                                                     Theory &                                            [3]                                   Experiment Spacecraft fire safety                                                             Analysis\n Low and NTC kinetics [4]\n\n                                                                              Farouk et al. (PROCI 2015)\n                       Nayagam et al. (CNF 2012)\n                                                                                               Microgravity droplet experiment\n                                Microgravity droplet experiment\n                                                                                              n-C7H16 pulsation behavior\n                             Steady cool flame n-C7H16 droplet\n                                                                                     High pressure (3 atm)\n                            Atmospheric pressure\n\n\n\n\n                          Reuter et al. (CNF 2017)                                                                      Deng et al. (CNF 2017)\n                            Counter flow burner experiments                                                                                                  Hysteretic Nature of DME Cool\n                               Extinction limit of cool flame for                                                                                          flame\n                              various n-Alkanes                                                                            Opposed diffusion flame\n                                                                                        experiments at 2 and 3 atm\n\n\n\n  [1] Dec (PROCI 2009) [2] Reuter et al. (CNF 2016) [3] Nayagam et al. (CNF 2012) [4] Liang & Law (CNF 2017)               2",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            122.81,
+            49.12
+          ],
+          "text": "Motivation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            296.04,
+            77.78,
+            392.74,
+            94.96
+          ],
+          "text": "Recent research",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            297.0,
+            92.18,
+            388.39,
+            109.36
+          ],
+          "text": "interest triggers",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            24.65,
+            68.87,
+            663.46,
+            128.98
+          ],
+          "text": "Cool flame has practical \nrelevance to-\nMultiphase\nGas phase\nEngine knock & multi-stage auto-ignition [1]",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            29.52,
+            132.2,
+            185.67,
+            149.38
+          ],
+          "text": "Lean flammability limit [2]",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            443.57,
+            135.14,
+            662.46,
+            163.58
+          ],
+          "text": "Experiment\nTheory &",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            29.52,
+            152.6,
+            177.15,
+            169.78
+          ],
+          "text": "Spacecraft fire safety [3]",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            599.75,
+            151.94,
+            656.75,
+            172.05
+          ],
+          "text": "Analysis",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            29.52,
+            173.0,
+            181.11,
+            190.18
+          ],
+          "text": "Low and NTC kinetics [4]",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            542.11,
+            203.59,
+            692.51,
+            220.32
+          ],
+          "text": "Farouk et al. (PROCI 2015)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            196.28,
+            212.32,
+            346.43,
+            229.05
+          ],
+          "text": "Nayagam et al. (CNF 2012)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            542.11,
+            224.84,
+            709.45,
+            240.23
+          ],
+          "text": "Microgravity droplet experiment",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            196.28,
+            233.57,
+            363.62,
+            248.96
+          ],
+          "text": "Microgravity droplet experiment",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            542.11,
+            244.64,
+            681.64,
+            261.27
+          ],
+          "text": "n-C7H16 pulsation behavior",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            196.28,
+            253.37,
+            371.79,
+            270.01
+          ],
+          "text": "Steady cool flame n-C7H16 droplet",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            542.1,
+            264.44,
+            655.21,
+            279.83
+          ],
+          "text": "High pressure (3 atm)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            196.27,
+            273.17,
+            313.04,
+            288.56
+          ],
+          "text": "Atmospheric pressure",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            189.57,
+            356.5,
+            324.48,
+            373.23
+          ],
+          "text": "Reuter et al. (CNF 2017)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            544.93,
+            360.16,
+            671.93,
+            376.89
+          ],
+          "text": "Deng et al. (CNF 2017)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            189.57,
+            377.76,
+            362.64,
+            393.15
+          ],
+          "text": "Counter flow burner experiments",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            544.93,
+            381.42,
+            707.35,
+            396.81
+          ],
+          "text": "Hysteretic Nature of DME Cool",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            189.57,
+            397.55,
+            359.56,
+            412.94
+          ],
+          "text": "Extinction limit of cool flame for",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            544.93,
+            401.21,
+            573.87,
+            416.6
+          ],
+          "text": "flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            189.57,
+            417.35,
+            284.38,
+            432.74
+          ],
+          "text": "various n-Alkanes",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            544.93,
+            421.01,
+            677.01,
+            436.4
+          ],
+          "text": "Opposed diffusion flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            544.93,
+            440.8,
+            685.89,
+            456.19
+          ],
+          "text": "experiments at 2 and 3 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            657.06,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            29.52,
+            510.45,
+            567.68,
+            525.17
+          ],
+          "text": "[1] Dec (PROCI 2009)  [2] Reuter et al. (CNF 2016)  [3] Nayagam et al. (CNF 2012)  [4] Liang & Law (CNF 2017)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "location": "página 3",
+      "text": "Motivation …\n\n                                     Katta et al. (PROCI 2017)\n                           CFD  study   to   explore   self\n                                   supporting   cool   flame    for\n                               opposed diffusion arrangement\n\n\n\n                                             Alam et al. (C&F 2018)\n                                         1-D CFD study  for  smaller  n-\n                                           alkane  droplet  to    investigate\n                                                 direct initiation of cool flame\n\n\n\n                                          Cool flame behavior\n                                                   for smaller droplets at\n                                                    near-limit condition\n                              Sohn et al. (PROCI 2017)                                               without significant\n                                 Cool flame study of n-Heptane at          heat loss?\n                                   high    strain   rates    (limiting\n                                      condition) and flame instability                                                                                                        3",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            148.26,
+            49.12
+          ],
+          "text": "Motivation …",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            245.04,
+            62.69,
+            385.24,
+            79.42
+          ],
+          "text": "Katta et al. (PROCI 2017)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            245.04,
+            84.29,
+            441.1,
+            101.02
+          ],
+          "text": "CFD \nstudy \nto \nexplore \nself",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            245.04,
+            105.89,
+            441.1,
+            122.62
+          ],
+          "text": "supporting \ncool \nflame \nfor",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            245.04,
+            127.49,
+            425.44,
+            144.22
+          ],
+          "text": "opposed diffusion arrangement",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            356.04,
+            201.73,
+            482.32,
+            218.46
+          ],
+          "text": "Alam et al. (C&F 2018)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            289.56,
+            223.33,
+            482.32,
+            240.06
+          ],
+          "text": "1-D CFD study for smaller n-",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            289.56,
+            244.93,
+            485.62,
+            261.66
+          ],
+          "text": "alkane droplet to  investigate",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            289.56,
+            266.53,
+            453.43,
+            283.26
+          ],
+          "text": "direct initiation of cool flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            481.28,
+            360.25,
+            696.62,
+            412.96
+          ],
+          "text": "Cool flame behavior \nfor smaller droplets at",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            493.53,
+            408.27,
+            684.49,
+            436.96
+          ],
+          "text": "near-limit condition",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            245.04,
+            436.79,
+            385.48,
+            453.52
+          ],
+          "text": "Sohn et al. (PROCI 2017)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            497.83,
+            432.27,
+            680.07,
+            460.97
+          ],
+          "text": "without significant",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            245.04,
+            458.39,
+            441.1,
+            475.12
+          ],
+          "text": "Cool flame study of n-Heptane at",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            536.71,
+            456.28,
+            635.73,
+            484.98
+          ],
+          "text": "heat loss?",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            245.04,
+            479.99,
+            441.1,
+            496.72
+          ],
+          "text": "high \nstrain \nrates \n(limiting",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            245.04,
+            501.59,
+            422.11,
+            518.32
+          ],
+          "text": "condition) and flame instability",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            657.06,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "3",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "location": "página 4",
+      "text": "Droplet Combustion Model\n\nKinetic Schemes                                         Do                      (D/Do)2\nDetailed model O(100 species) &\n                            Gas Phase:O(1000) elementary reactions)                            D   D   D  D D                                             • Multi-component molecular diffusion\n                                             • Detailed chemical kinetics\n                                                                    Flame\n                                             • Statistical narrow band (SNB) radiation                                                     • Mass conservation                     D  Df  Stand-off\n                                                                            Ratio =D/Df Droplet Surface:                           • Species equation\n                                                     • Energy conservation • Surface regression\n • Evaporation of fuel\n • Condensation/Dissolution                              Fiber Model  of products\n • Radiative heat exchange                                           Biot number in the order of 10-2\n                                Liquid Phase:                                                     One dimensional temperature distribution\n                   mv                • Mass conservation           ∂ (ρf c p , f T f )   ∂    ∂T f   4 hconv , j                                                                                         T − T f )                                                   • Species equation                    =     k f       +          (                                                                          ∂t      ∂x    ∂x    d fiber                     mp\n      drs                                         • Energy conservation                               qR                                              4σεf     4      4      dt                                                                 −        ( T f                                                                                 − T∞ )\n              ∂Yl ,i                     ∂T                                            d fiber\n       Dl ,i                     λ               ∂r                      ∂r\n      qambient      ∂T                             qambient                Fiber:             λ\n            qloss   l ∂r                                  qloss                  • Energy conservation\n                                    q fib                                       q fib\n\n     T. Farouk and F. L. Dryer Combust. and Flame (2012) 159, 200 – 209\n     T. Farouk and F. L. Dryer Combust Theory & Modelling (2011), 15, 487 – 515                                       4",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            278.53,
+            49.12
+          ],
+          "text": "Droplet Combustion Model",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            486.24,
+            67.72,
+            503.6,
+            94.37
+          ],
+          "text": "Do",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            662.75,
+            70.03,
+            713.21,
+            94.74
+          ],
+          "text": "(D/Do)2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            19.81,
+            72.52,
+            189.61,
+            123.07
+          ],
+          "text": "Kinetic Schemes\nDetailed model O(100 species) & \nO(1000) elementary reactions)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            487.08,
+            105.94,
+            644.8,
+            130.65
+          ],
+          "text": "D\nD\nD\nD\nD",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            574.5,
+            173.74,
+            617.82,
+            200.4
+          ],
+          "text": "D\nDf",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            627.67,
+            151.9,
+            712.59,
+            215.0
+          ],
+          "text": "Flame \nStand-off \nRatio =D/Df",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            434.33,
+            250.72,
+            529.59,
+            275.63
+          ],
+          "text": "Fiber Model",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            434.33,
+            281.29,
+            613.24,
+            300.2
+          ],
+          "text": "Biot number in the order of 10-2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            434.33,
+            306.49,
+            671.9,
+            325.4
+          ],
+          "text": "One dimensional temperature distribution",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            175.4,
+            316.16,
+            191.66,
+            339.61
+          ],
+          "text": "mv",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            459.57,
+            324.45,
+            471.53,
+            339.87
+          ],
+          "text": "ρ",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            455.63,
+            324.01,
+            602.04,
+            340.97
+          ],
+          "text": "(\n)\n4",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            483.9,
+            332.74,
+            623.71,
+            342.56
+          ],
+          "text": ",\n,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            631.3,
+            328.42,
+            672.46,
+            352.56
+          ],
+          "text": "(\n)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            473.44,
+            324.23,
+            661.83,
+            360.49
+          ],
+          "text": "c\nT\nT\nh\nk\nT\nT\nt\nx\nx\nd",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            469.18,
+            332.86,
+            664.49,
+            362.09
+          ],
+          "text": "f\np f\nf\nf\nconv j\nf\nf\nfiber",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            449.0,
+            324.45,
+            653.3,
+            362.56
+          ],
+          "text": "∂\n∂\n\n\n∂\n=\n+\n−\n\n\n∂\n∂\n∂\n\n",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            195.48,
+            339.14,
+            212.34,
+            362.59
+          ],
+          "text": "mp",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            25.86,
+            99.43,
+            460.63,
+            370.65
+          ],
+          "text": "Gas Phase: \n• Multi-component molecular diffusion\n• Detailed chemical kinetics \n \n• Statistical narrow band (SNB) radiation\n• Mass conservation\n• Species equation\n• Energy conservation\nDroplet Surface:\n• Surface regression\n• Evaporation of fuel\n• Condensation/Dissolution\n of products \n• Radiative heat exchange\nLiquid Phase:\n• Mass conservation\n• Species equation\n• Energy conservation",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            63.39,
+            360.45,
+            67.26,
+            374.78
+          ],
+          "text": "s",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            528.39,
+            364.72,
+            546.38,
+            380.14
+          ],
+          "text": "σε",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            52.6,
+            353.21,
+            235.29,
+            382.46
+          ],
+          "text": "qR\ndr",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            544.62,
+            373.13,
+            546.63,
+            382.83
+          ],
+          "text": "f",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            565.05,
+            373.79,
+            593.32,
+            383.61
+          ],
+          "text": "4\n4",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            513.62,
+            374.39,
+            579.24,
+            389.81
+          ],
+          "text": "−\n−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            448.39,
+            364.28,
+            530.08,
+            390.89
+          ],
+          "text": "4",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            586.97,
+            382.91,
+            592.12,
+            391.85
+          ],
+          "text": "∞",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            54.71,
+            373.22,
+            65.77,
+            392.33
+          ],
+          "text": "dt",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            551.82,
+            368.55,
+            599.58,
+            392.99
+          ],
+          "text": "(\n)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            524.96,
+            374.15,
+            587.76,
+            400.76
+          ],
+          "text": "T\nT\nd",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            106.52,
+            384.46,
+            114.34,
+            400.95
+          ],
+          "text": "Y",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            533.13,
+            382.79,
+            565.79,
+            402.36
+          ],
+          "text": "f\nfiber",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            244.82,
+            386.82,
+            251.82,
+            403.22
+          ],
+          "text": "T",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            100.87,
+            384.9,
+            119.15,
+            403.39
+          ],
+          "text": ",\n∂",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            229.9,
+            387.24,
+            244.84,
+            410.11
+          ],
+          "text": "λ ∂",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            80.08,
+            394.53,
+            89.2,
+            411.02
+          ],
+          "text": "D",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            92.1,
+            389.65,
+            121.74,
+            413.46
+          ],
+          "text": "l i\n,",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            106.7,
+            403.38,
+            112.49,
+            418.37
+          ],
+          "text": "∂",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            240.46,
+            404.45,
+            246.12,
+            419.36
+          ],
+          "text": "∂",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            88.44,
+            399.71,
+            116.9,
+            419.43
+          ],
+          "text": "r\nl i",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            246.12,
+            404.02,
+            249.93,
+            420.42
+          ],
+          "text": "r",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            138.79,
+            413.21,
+            146.98,
+            432.33
+          ],
+          "text": "T",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            60.24,
+            412.53,
+            367.74,
+            433.31
+          ],
+          "text": "ambient\nq\nambient\nq",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            117.28,
+            413.72,
+            138.95,
+            441.36
+          ],
+          "text": "λ ∂",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            125.24,
+            430.71,
+            140.84,
+            451.1
+          ],
+          "text": "∂\nl",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            97.48,
+            431.15,
+            391.7,
+            451.94
+          ],
+          "text": "loss\nq\nloss\nq",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            479.36,
+            413.61,
+            603.25,
+            452.05
+          ],
+          "text": "Fiber:\n• Energy conservation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            140.68,
+            433.22,
+            145.9,
+            452.33
+          ],
+          "text": "r",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            261.62,
+            459.9,
+            553.75,
+            480.99
+          ],
+          "text": "fib\nq\nfib\nq",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            41.81,
+            492.07,
+            422.21,
+            522.43
+          ],
+          "text": "T. Farouk and F. L. Dryer Combust. and Flame (2012) 159, 200 – 209 \nT. Farouk and F. L. Dryer Combust Theory &  Modelling (2011), 15, 487 – 515",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            657.06,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "4",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "location": "página 5",
+      "text": "Direct Initiation of Cool Flame\n\n                                                                                       XN2 =     P = 1 atm,                                                       XO2 = 21%     XO3 = 5%                                                                               Balance     T = 298 K\n\n                                                                                Model        Species    Rxn\n                                                          Do =               Sun et al. (2010)       128       565\n                                                                     0.5                                                                                Mehl et al. (2011)       652      2827                                      mm                           n-C7H16\n                                                                                  Reuter et al. (2017)     11        26                                              O3\n                                             Radial direction\n                                                                  rgas\n\n\n\n\n\n        Rapid inception\n           of cool flame\n                                                                         Ignition\n                                                          energy\n\n\n\n\n\nOzone assisted cool flame combustion of sub-millimeter sized n-alkane droplets\nat atmospheric and higher pressure. Alam et al. (Combust. Flame 2018)                                                             5",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            305.82,
+            49.12
+          ],
+          "text": "Direct Initiation of Cool Flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            626.09,
+            60.42,
+            685.7,
+            77.6
+          ],
+          "text": "P = 1 atm,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            368.9,
+            60.42,
+            590.91,
+            92.0
+          ],
+          "text": "XO2 = 21%\nXO3 = 5%\nXN2 = \nBalance",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            627.65,
+            74.82,
+            680.71,
+            92.0
+          ],
+          "text": "T = 298 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            511.64,
+            103.89,
+            676.2,
+            119.01
+          ],
+          "text": "Model\nSpecies\nRxn",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            478.47,
+            124.74,
+            675.02,
+            139.86
+          ],
+          "text": "Sun et al. (2010)\n128\n565",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            358.13,
+            126.1,
+            381.59,
+            141.87
+          ],
+          "text": "Do =",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            478.47,
+            145.41,
+            678.03,
+            159.83
+          ],
+          "text": "Mehl et al. (2011)\n652\n2827",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            359.45,
+            138.7,
+            378.59,
+            165.71
+          ],
+          "text": "0.5 \nmm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            478.47,
+            168.27,
+            672.14,
+            183.4
+          ],
+          "text": "Reuter et al. (2017)\n11\n26",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            448.91,
+            121.46,
+            467.48,
+            188.99
+          ],
+          "text": "n-C7H16\nO3",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            338.23,
+            192.86,
+            447.15,
+            212.97
+          ],
+          "text": "Radial direction",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            379.99,
+            209.67,
+            401.64,
+            231.37
+          ],
+          "text": "rgas",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            72.91,
+            380.13,
+            158.67,
+            395.94
+          ],
+          "text": "Rapid inception",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            80.23,
+            393.33,
+            148.17,
+            409.14
+          ],
+          "text": "of cool flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            349.85,
+            406.54,
+            388.55,
+            421.61
+          ],
+          "text": "Ignition",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            350.81,
+            419.74,
+            384.64,
+            434.81
+          ],
+          "text": "energy",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            698.95,
+            512.08,
+            705.03,
+            528.13
+          ],
+          "text": "5",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            24.64,
+            505.55,
+            380.66,
+            528.89
+          ],
+          "text": "Ozone assisted cool flame combustion of sub-millimeter sized n-alkane droplets \nat atmospheric and higher pressure. Alam et al. (Combust. Flame 2018)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "location": "página 6",
+      "text": "Cool Flame Under Near Limit Conditions?\n\n                                                                                        XN2 =     P = 1 atm,        Do =                                                         XO2 = 10%     XO3 = 5%                                                0.5                                                                                Balance     T = 298 K     mm\n\n\n\n                                                      Attempt to establish direct cool flame\n                                                          Drop in Tpeak, gas\n                                                                     Rise in Tpeak, gas\n\n\n\n\n\n    Blue: Oscillatory cool flame\n      Red: Stable cool flame                                                                        6",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            419.49,
+            49.12
+          ],
+          "text": "Cool Flame Under Near Limit Conditions?",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            668.06,
+            71.57,
+            688.45,
+            85.49
+          ],
+          "text": "Do =",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            575.91,
+            74.33,
+            630.7,
+            90.14
+          ],
+          "text": "P = 1 atm,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            577.59,
+            87.54,
+            625.99,
+            103.35
+          ],
+          "text": "T = 298 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            345.11,
+            74.33,
+            685.8,
+            106.06
+          ],
+          "text": "0.5 \nmm\nXO2 = 10%\nXO3 = 5%\nXN2 = \nBalance",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            427.08,
+            165.46,
+            676.09,
+            185.56
+          ],
+          "text": "Attempt to establish direct cool flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            494.89,
+            193.47,
+            598.97,
+            215.17
+          ],
+          "text": "Drop in Tpeak, gas",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            536.59,
+            224.15,
+            637.55,
+            245.86
+          ],
+          "text": "Rise in Tpeak, gas",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            50.53,
+            490.39,
+            234.49,
+            510.49
+          ],
+          "text": "Blue: Oscillatory cool flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            657.06,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "6",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            67.57,
+            507.19,
+            217.47,
+            527.3
+          ],
+          "text": "Red: Stable cool flame",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "location": "página 7",
+      "text": "Oscillatory Cool Flame: Primary Observations\n\n\n\n\n\n                                                                       Temperature\n\n\n\n\n                                                                               80 x Ddrop\n\n    Initiation energy results in Tpeak, gas exceeding ~1150 K locally\n\n    Flame expands radially  gradual decrease in flame T \n       Contracts (t < 0.1 s)\n\n    Stable cool flame for brief period of time (~0.12 s @ ~710 K)\n\n                                                                        Ketohydroperoxides\n      How does the oscillation start?\n       Role of LT chemistry?\n      Why does the oscillation grow?                                                      7",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            459.14,
+            49.12
+          ],
+          "text": "Oscillatory Cool Flame: Primary Observations",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            487.69,
+            234.81,
+            559.64,
+            251.99
+          ],
+          "text": "Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            553.66,
+            332.06,
+            606.81,
+            350.64
+          ],
+          "text": "80 x Ddrop",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            42.19,
+            364.38,
+            412.95,
+            382.96
+          ],
+          "text": "\nInitiation energy results in Tpeak, gas exceeding ~1150 K locally",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            42.19,
+            392.55,
+            419.21,
+            424.14
+          ],
+          "text": "\nFlame expands radially  gradual decrease in flame T  \nContracts (t < 0.1 s)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            42.19,
+            437.33,
+            404.15,
+            454.51
+          ],
+          "text": "\nStable cool flame for brief period of time (~0.12 s @ ~710 K)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            487.69,
+            463.32,
+            604.16,
+            480.51
+          ],
+          "text": "Ketohydroperoxides",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            657.06,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "7",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            96.57,
+            473.95,
+            328.48,
+            527.13
+          ],
+          "text": "How does the oscillation start?\nRole of LT chemistry?\nWhy does the oscillation grow?",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "location": "página 8",
+      "text": "Inception of oscillation\n\n\n                      O3 kinetics (dissociation/recombination) elevates\n                                                 local O2 mole fraction\n                                       Initial local XO2 : 0.10  0.16 (at flame location)\n\n\n                                 Gradient in O2 mole fraction compels O2 to diffuse\n                                                   radially  outward  direction   causing  local\n                                             depletion\n\n\n                                                Flame temperature        As time                              Pulsing starts at         increases due to      progresses, local                                XO2 < ~0.135               higher O2       O2 depletes                                                                      availability\n\n                           Flame contracts         Oscillations                                 Flame moves                              due to          repeats                                               radially out                          consumption of O2\n                                                                                                        8",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            240.68,
+            49.12
+          ],
+          "text": "Inception of oscillation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            312.35,
+            99.02,
+            677.57,
+            120.73
+          ],
+          "text": "O3 kinetics (dissociation/recombination) elevates",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            334.91,
+            115.82,
+            478.6,
+            137.53
+          ],
+          "text": "local O2 mole fraction",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            312.35,
+            144.62,
+            645.6,
+            166.33
+          ],
+          "text": "Initial local XO2 : 0.10  0.16 (at flame location)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            312.35,
+            216.62,
+            677.58,
+            238.33
+          ],
+          "text": "Gradient in O2 mole fraction compels O2 to diffuse",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            334.92,
+            233.42,
+            677.58,
+            270.33
+          ],
+          "text": "radially \noutward \ndirection \n \ncausing \nlocal \ndepletion",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            520.15,
+            317.58,
+            685.91,
+            343.36
+          ],
+          "text": "Flame temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            304.8,
+            339.18,
+            449.7,
+            364.96
+          ],
+          "text": "Pulsing starts at",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            529.51,
+            339.18,
+            676.55,
+            364.96
+          ],
+          "text": "increases due to",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            74.93,
+            328.38,
+            227.98,
+            375.76
+          ],
+          "text": "As time \nprogresses, local",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            322.8,
+            360.3,
+            426.74,
+            388.26
+          ],
+          "text": "XO2 < ~0.135",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            99.64,
+            371.1,
+            198.32,
+            399.06
+          ],
+          "text": "O2 depletes",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            554.71,
+            360.78,
+            646.43,
+            407.68
+          ],
+          "text": "higher O2 \navailability",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            305.76,
+            434.44,
+            448.61,
+            460.21
+          ],
+          "text": "Flame contracts",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            97.85,
+            445.22,
+            204.96,
+            471.0
+          ],
+          "text": "Oscillations",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            543.79,
+            445.22,
+            662.29,
+            471.0
+          ],
+          "text": "Flame moves",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            117.06,
+            466.34,
+            180.93,
+            492.11
+          ],
+          "text": "repeats",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            552.43,
+            466.34,
+            648.53,
+            492.11
+          ],
+          "text": "radially out",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            294.35,
+            456.04,
+            455.11,
+            505.12
+          ],
+          "text": "due to \nconsumption of O2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            657.06,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "8",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "location": "página 9",
+      "text": "Role of Low Temperature Chemistry on the Oscillation\n              RH                                                   Consumption of C7H14OOH depends on the extend of\n                  +X                                   reactivity from chain propagation/termination  reactions\n                   -XH                         and degenerate chain branching reactions\n                             RO + OH\n             Alkyl radical  Ṙ\n                                                         Chain\n                                                             branching                    first O2 addition    + O2\n                              ROOH + O2\n      Alkylperoxy radical  ṘOO\n\n         Internal H abstraction                        AlkeneAlkene ++ HȮ2HȮ2\n\nHydroperoxy alkyl radical  QOOH\n                                ȮH+ȮH+ cycliccyclic ethers,ethers,         second O2 addition    ++ O2O2                                               aldehydesaldehydes\n                                                      oror ketonesketones\n             OOQOOHOOQOOH\n\n         internal H abstraction\n               HOOQ-HOOHHOOQ-HOOH\n\n\n     Ketohydroperoxide  HOOQ-HOHOOQ-HO ++ ȮHȮH\n\n             Degenerate\n          chain branching                                         Chain propagation /        Chain branching\n                ȮQ-HOȮQ-HO ++ 2ȮH2ȮH                           termination reaction          reaction class\n                                                                class correlates with        undergoes three\n  Low-temperature oxidation and autoignition chemistry of large hydrocarbons.           temperature               distinct stages       9                 Combustion (5th Edition), Chapter 3, Page 104",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            537.91,
+            49.12
+          ],
+          "text": "Role of Low Temperature Chemistry on the Oscillation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            54.8,
+            168.06,
+            73.96
+          ],
+          "text": "RH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            364.77,
+            61.43,
+            706.03,
+            109.51
+          ],
+          "text": "Consumption of C7H14OOH depends on the extend of \nreactivity from chain propagation/termination reactions \nand degenerate chain branching reactions",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            163.58,
+            76.93,
+            187.87,
+            112.89
+          ],
+          "text": "+X\n-XH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            272.49,
+            110.23,
+            322.31,
+            126.61
+          ],
+          "text": "RO + OH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            67.63,
+            124.21,
+            126.19,
+            138.48
+          ],
+          "text": "Alkyl radical",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            120.75,
+            157.97,
+            139.91
+          ],
+          "text": "Ṙ",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            302.05,
+            140.64,
+            345.74,
+            165.81
+          ],
+          "text": "Chain \nbranching",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            66.46,
+            154.47,
+            191.7,
+            175.48
+          ],
+          "text": "+ O2\nfirst O2 addition",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            280.08,
+            176.01,
+            343.71,
+            193.99
+          ],
+          "text": "ROOH + O2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            36.88,
+            192.53,
+            128.08,
+            206.8
+          ],
+          "text": "Alkylperoxy radical",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            192.29,
+            179.76,
+            211.45
+          ],
+          "text": "ṘOO",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            42.34,
+            225.61,
+            128.22,
+            237.51
+          ],
+          "text": "Internal H abstraction",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            275.52,
+            225.79,
+            348.27,
+            243.76
+          ],
+          "text": "Alkene + HȮ2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            275.52,
+            225.88,
+            348.27,
+            243.86
+          ],
+          "text": "Alkene + HȮ2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            257.43,
+            190.74,
+            276.6
+          ],
+          "text": "QOOH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            8.04,
+            263.35,
+            129.12,
+            277.61
+          ],
+          "text": "Hydroperoxy alkyl radical",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            274.27,
+            284.88,
+            375.41,
+            301.26
+          ],
+          "text": "ȮH+ cyclic ethers,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            274.18,
+            284.91,
+            375.32,
+            301.29
+          ],
+          "text": "ȮH+ cyclic ethers,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            161.53,
+            289.96,
+            189.66,
+            310.96
+          ],
+          "text": "+ O2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            51.49,
+            290.33,
+            189.68,
+            311.34
+          ],
+          "text": "+ O2\nsecond O2 addition",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            293.26,
+            299.31,
+            352.9,
+            330.09
+          ],
+          "text": "aldehydes\n or ketones",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            299.28,
+            352.99,
+            341.71
+          ],
+          "text": "aldehydes\n or ketones\nOOQOOH",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            147.84,
+            322.68,
+            212.58,
+            341.85
+          ],
+          "text": "OOQOOH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            40.92,
+            349.27,
+            126.33,
+            361.17
+          ],
+          "text": "internal H abstraction",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            370.12,
+            232.5,
+            391.12
+          ],
+          "text": "HOOQ-HOOH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            370.26,
+            232.5,
+            391.26
+          ],
+          "text": "HOOQ-HOOH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            34.96,
+            427.23,
+            126.3,
+            441.49
+          ],
+          "text": "Ketohydroperoxide",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            423.21,
+            248.21,
+            444.22
+          ],
+          "text": "HOOQ-HO + ȮH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            423.35,
+            248.21,
+            444.36
+          ],
+          "text": "HOOQ-HO + ȮH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            55.99,
+            451.41,
+            128.95,
+            476.58
+          ],
+          "text": "Degenerate \nchain branching",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            564.15,
+            465.62,
+            662.29,
+            482.8
+          ],
+          "text": "Chain branching",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            477.71,
+            235.01,
+            498.71
+          ],
+          "text": "ȮQ-HO + 2ȮH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            147.84,
+            477.85,
+            235.01,
+            498.85
+          ],
+          "text": "ȮQ-HO + 2ȮH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            564.51,
+            480.02,
+            662.05,
+            511.61
+          ],
+          "text": "reaction class \nundergoes three",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            394.52,
+            465.79,
+            515.81,
+            511.77
+          ],
+          "text": "Chain propagation / \ntermination reaction \nclass correlates with",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            17.99,
+            508.1,
+            351.2,
+            520.64
+          ],
+          "text": "Low-temperature oxidation and autoignition chemistry of large hydrocarbons.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            569.43,
+            508.2,
+            702.61,
+            525.65
+          ],
+          "text": "distinct stages\n9",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            418.76,
+            508.63,
+            494.57,
+            525.81
+          ],
+          "text": "temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            92.27,
+            519.08,
+            276.91,
+            530.99
+          ],
+          "text": "Combustion (5th Edition), Chapter 3, Page 104",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "location": "página 10",
+      "text": "Role of LT Chemistry: Stage # 1\n\n\n\n                                                      Drop in O2C7H14OOH mole fraction, and shutting\n                                                        down HR contribution from\n                                                            O2C7H14OOH   C7H14O3 + OH\n\n\n\n                                                                                     Initial high temperature decompose C7H14O3 via\n                                                                 endothermic reaction (stage # 1)\n                                                                  C7H14O3  R’CHO + R’(CO) R’’ +OH\n\n\n                                                             C7H14OOH   C7H14O + OH\n                                                            O2C7H14OOH   C7H14OOH + O2\n                                                             Exothermicity from other classes are not enough to\n                                                              maintain same Tgas w/o additional contribution\n       Stage # 1\n  Favorable Tmax for O2C7H14OOH production @ 1 atm\n                   hovers ~700 K\n\n                                                 Steep fall in peak gas temperature (stage #\n                                                                  1)  drop in C7H14 mole fraction          𝐝𝐝𝐝𝐝                𝐎𝐎𝟐𝟐𝐂𝐂𝟕𝟕𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇            Tgas             𝐝𝐝𝐝𝐝                                                                                             10",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            322.24,
+            49.12
+          ],
+          "text": "Role of LT Chemistry: Stage # 1",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            402.94,
+            109.05,
+            681.32,
+            127.63
+          ],
+          "text": "Drop in O2C7H14OOH mole fraction, and shutting",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            456.94,
+            123.45,
+            624.13,
+            156.43
+          ],
+          "text": "down HR contribution from \nO2C7H14OOH \n C7H14O3 + OH",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            405.87,
+            207.4,
+            680.04,
+            225.97
+          ],
+          "text": "Initial high temperature decompose C7H14O3 via",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            441.39,
+            221.8,
+            641.09,
+            254.78
+          ],
+          "text": "endothermic reaction (stage # 1)\nC7H14O3 \n R’CHO + R’(CO) R’’ +OH",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            393.46,
+            298.55,
+            690.8,
+            344.53
+          ],
+          "text": "C7H14OOH \n C7H14O + OH\nO2C7H14OOH \n C7H14OOH + O2 \nExothermicity from other classes are not enough to",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            407.98,
+            341.75,
+            672.96,
+            360.32
+          ],
+          "text": "maintain same Tgas w/o additional contribution",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            117.8,
+            356.05,
+            223.18,
+            390.42
+          ],
+          "text": "Stage # 1",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            37.98,
+            398.52,
+            335.68,
+            417.09
+          ],
+          "text": "Favorable Tmax for O2C7H14OOH production @ 1 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            144.42,
+            412.56,
+            225.93,
+            429.74
+          ],
+          "text": "hovers ~700 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            397.78,
+            455.0,
+            688.59,
+            475.1
+          ],
+          "text": "Steep fall in peak gas temperature (stage  #",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            434.26,
+            471.79,
+            648.4,
+            493.5
+          ],
+          "text": "1)  drop in C7H14 mole fraction",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            64.99,
+            425.25,
+            85.37,
+            503.61
+          ],
+          "text": "𝐝𝐝𝐝𝐝",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            650.94,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "10",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            68.11,
+            434.96,
+            261.97,
+            523.64
+          ],
+          "text": "𝐝𝐝𝐝𝐝\n𝐎𝐎𝟐𝟐𝐂𝐂𝟕𝟕𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇𝐇\nTgas",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "location": "página 11",
+      "text": "Role of LT Chemistry: Stage # 2 & 3\n\n                                           Gas phase temperature starts to increase\n                                                  (change slope)  Reflection of C7H14\n\n                                                  Simultaneous  exothermic   contributions\n                                                 from  degenerate  branching  and  chain\n                                                    propagation  sharp increase in Tgas\n\n                                                              Tgas >  Tthreshold  degenerate branching\n                                                        contribution starts to diminish  abrupt\n                                               change in C7H14O3\n\n\n                                   Stage # 3\n\n                                                  Balance between two classes of reactions\n                                                     continue  for  brief  period  of  time        Stage # 2                                                  Temperature increases to ~750 K\n  Drop in Tgas beyond a threshold ( point A,                                                              Insufficient heat  release from the chain  ~712 K)  changes C7H14O3 profile slope                                                       branching/termination  route compels  the  Reactivates                                                gas temperature to fall @ t~0.638 s  O2C7H14OOH   C7H14O3 + OH (exothermic)\n\n                                                                                                       11",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            358.84,
+            49.12
+          ],
+          "text": "Role of LT Chemistry: Stage # 2 & 3",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            402.97,
+            68.77,
+            698.36,
+            107.27
+          ],
+          "text": "Gas phase temperature starts to increase \n(change slope)  Reflection of C7H14",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            402.99,
+            129.09,
+            698.37,
+            184.4
+          ],
+          "text": "Simultaneous \nexothermic \ncontributions \nfrom degenerate branching and chain \npropagation  sharp increase in Tgas",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            402.98,
+            206.3,
+            698.38,
+            261.6
+          ],
+          "text": "Tgas > Tthreshold  degenerate branching \ncontribution starts to diminish  abrupt \nchange in C7H14O3",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            483.63,
+            313.55,
+            589.02,
+            347.92
+          ],
+          "text": "Stage # 3",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            117.8,
+            375.88,
+            223.18,
+            410.24
+          ],
+          "text": "Stage # 2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            405.08,
+            362.63,
+            700.49,
+            416.35
+          ],
+          "text": "Balance between two classes of reactions \ncontinue for brief period of time  \nTemperature increases to ~750 K",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            405.09,
+            432.57,
+            700.49,
+            486.29
+          ],
+          "text": "Insufficient heat release from the chain \nbranching/termination route compels the \ngas temperature to fall @ t~0.638 s",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            36.23,
+            422.69,
+            331.62,
+            494.79
+          ],
+          "text": "Drop in Tgas beyond a threshold ( point A, \n~712 K)  changes C7H14O3 profile slope  \nReactivates\nO2C7H14OOH \n C7H14O3 + OH (exothermic)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            650.94,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "11",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "location": "página 12",
+      "text": "Dynamic Competition of LTC & Fuel Leakage\n\n\n\n\n\n                                          Radial Growth of Oscillation:\n                                                Fuel Leakage\n\n\n\n\n\n                                                                                                       12",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            448.16,
+            49.12
+          ],
+          "text": "Dynamic Competition of LTC & Fuel Leakage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            404.44,
+            219.93,
+            651.6,
+            245.71
+          ],
+          "text": "Radial Growth of Oscillation:",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            471.16,
+            241.53,
+            585.06,
+            267.31
+          ],
+          "text": "Fuel Leakage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            650.94,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "12",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "location": "página 13",
+      "text": "Summary\n\n      Dynamics of near-limit cool flame burning of isolated submillimeter (Do =\n      0.5 mm) n-C7H16 droplet is numerically studied.\n   Reduced ambient O2 mole fraction (10%) is considered to facilitate near-\n        limit condition.\n   Under selective O3 seeding (5%), the droplet briefly attempts to initiate\n      stable cool flame before entering continuous oscillatory cool flame burn.\n   Local depletion of O2 (<13.5%) near the droplet initiates the pulsing\n      behavior with initial small fluctuation in flame temperature.\n\n  The oscillation is found to increase in magnitude with time, and at each\n      successive cycle.\n\n   Dynamic interaction of degenerate chain branching and chain propagation\n          / termination reaction classes of QOOH (within NTC region) is responsible\n       for the observed oscillation.\n\n   Continuous fuel leakage through the flame location assists the oscillation\n      to grow in radial direction with time.\n\n                                                                                                       13",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            114.02,
+            49.12
+          ],
+          "text": "Summary",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            53.44,
+            85.2,
+            655.69,
+            112.26
+          ],
+          "text": " Dynamics of near-limit cool flame burning of isolated submillimeter (Do =",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            71.44,
+            104.64,
+            446.1,
+            131.7
+          ],
+          "text": "0.5 mm) n-C7H16 droplet is numerically studied.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            53.44,
+            142.08,
+            647.92,
+            169.14
+          ],
+          "text": "Reduced ambient O2 mole fraction (10%) is considered to facilitate near-",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            71.45,
+            161.52,
+            185.15,
+            186.09
+          ],
+          "text": "limit condition.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            53.44,
+            198.96,
+            635.75,
+            226.02
+          ],
+          "text": "Under selective O3 seeding (5%), the droplet briefly attempts to initiate",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            71.44,
+            218.4,
+            642.19,
+            242.97
+          ],
+          "text": "stable cool flame before entering continuous oscillatory cool flame burn.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            53.44,
+            255.84,
+            610.2,
+            282.9
+          ],
+          "text": "Local depletion of O2 (<13.5%) near the droplet initiates the pulsing",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            71.45,
+            275.28,
+            532.22,
+            299.85
+          ],
+          "text": "behavior with initial small fluctuation in flame temperature.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            53.44,
+            312.72,
+            640.14,
+            337.29
+          ],
+          "text": "The oscillation is found to increase in magnitude with time, and at each",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            71.44,
+            332.16,
+            210.13,
+            356.73
+          ],
+          "text": "successive cycle.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            53.44,
+            369.6,
+            664.95,
+            394.17
+          ],
+          "text": "Dynamic interaction of degenerate chain branching and chain propagation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            71.44,
+            389.04,
+            663.94,
+            433.05
+          ],
+          "text": "/ termination reaction classes of QOOH (within NTC region) is responsible \nfor the observed oscillation.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            53.44,
+            445.92,
+            655.01,
+            470.49
+          ],
+          "text": "Continuous fuel leakage through the flame location assists the oscillation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            71.44,
+            465.36,
+            352.38,
+            489.93
+          ],
+          "text": "to grow in radial direction with time.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            650.94,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "13",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "location": "página 14",
+      "text": "Acknowledgement\n\n\n              This work was supported by the National\n             Aeronautics  and  Space  Administration\n             through grant NNX17AF97A\n\n\n\n\n\n                                                                                                       14",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            200.05,
+            49.12
+          ],
+          "text": "Acknowledgement",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            190.1,
+            137.09,
+            700.75,
+            228.78
+          ],
+          "text": "This work was supported by the National \nAeronautics and Space Administration \nthrough grant NNX17AF97A",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            650.94,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "14",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "location": "página 15",
+      "text": "Backup slide # 1: Direct Initiation of Cool Flame: Initial Dynamics\n\n\n\n\n\n                                                                                              Flash point 269.3 K\n                                                                                       (NOAA)\n\n\n\n\n\n             Initiation energy          Premixed  Diffusive\n              dissipation                    burn\n\n\n       Reaction with partially                                  Steady ‘cool flame’      premixed gas phase fuel\n\n\n                                                                                                       15",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            638.45,
+            49.12
+          ],
+          "text": "Backup slide # 1: Direct Initiation of Cool Flame: Initial Dynamics",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            509.37,
+            122.34,
+            600.06,
+            136.6
+          ],
+          "text": "Flash point 269.3 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            536.85,
+            134.34,
+            572.45,
+            148.6
+          ],
+          "text": "(NOAA)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            80.73,
+            392.16,
+            168.55,
+            408.54
+          ],
+          "text": "Initiation energy",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            227.66,
+            392.16,
+            346.92,
+            408.54
+          ],
+          "text": "Premixed  Diffusive",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            94.65,
+            406.56,
+            151.48,
+            422.94
+          ],
+          "text": "dissipation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            273.62,
+            406.56,
+            297.7,
+            422.94
+          ],
+          "text": "burn",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            235.35,
+            458.47,
+            336.17,
+            474.85
+          ],
+          "text": "Steady ‘cool flame’",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            57.93,
+            450.92,
+            188.27,
+            481.7
+          ],
+          "text": "Reaction with partially \npremixed gas phase fuel",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            650.94,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "15",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "location": "página 16",
+      "text": "Backup slide # 2: Dynamic Competition of LTC & Fuel Leakage\n\n\n\n\n\n                                          Radial Growth of Oscillation:\n                                                Fuel Leakage\n\n\n\n\n\n                                                                                                       16",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            22.85,
+            20.42,
+            616.85,
+            49.12
+          ],
+          "text": "Backup slide # 2: Dynamic Competition of LTC & Fuel Leakage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            404.44,
+            219.93,
+            651.6,
+            245.71
+          ],
+          "text": "Radial Growth of Oscillation:",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            471.16,
+            241.53,
+            585.06,
+            267.31
+          ],
+          "text": "Fuel Leakage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            650.94,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "16",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "location": "página 17",
+      "text": "Governing Equations & Boundary Conditions\n Species𝑟𝑟+ 𝜕𝜕(𝑦𝑦𝑖𝑖𝜌𝜌 ) Conservation𝑟𝑟2̇𝑟𝑟𝑟𝑟−|𝑟𝑟+𝑟𝑟+  Equation𝑟𝑟+                                             𝑟𝑟+                        𝑟𝑟+           𝑟𝑟+̇න𝑟𝑟−         𝑟𝑟2𝑑𝑑𝑑𝑑+    න𝑟𝑟−  𝑦𝑦𝑖𝑖𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ 𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2 ቚ𝑟𝑟− =  −𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖𝑟𝑟2 ቚ𝑟𝑟− + න𝑟𝑟− 𝜔𝜔𝑖𝑖𝑟𝑟2𝑑𝑑𝑑𝑑           𝜕𝜕𝑡𝑡        1                                              G                            𝑟𝑟3 ฬ𝑟𝑟−               3\n                                                                                                            x Do) Energy Conservation Equation                                             At ∞ (200\n                                                                                               XO2 = 0.21             L                                        𝑟𝑟+                                𝑟𝑟+    𝑟𝑟+                                          𝑟𝑟+                                                                                      = 0.79                               𝜕𝜕(ℎ𝜌𝜌 )             𝑟𝑟2̇𝑟𝑟𝑟𝑟−|                                                                           𝑟𝑟+                                                        XN2                                     𝑟𝑟2𝑑𝑑𝑑𝑑+            න𝑟𝑟−                         න𝑟𝑟− ℎ𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ ℎ𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2 ቚ𝑟𝑟−                          T  = 298 K                                                  𝜕𝜕𝑡𝑡                               1                                                        𝑟𝑟3 ฬ𝑟𝑟−                               3Conservation of Mass Fraction𝑟𝑟+                     Diffusive Heat Flux Equation                                                                                      𝑜𝑜𝑜𝑜 𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔−𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓             = −𝑞𝑞𝑟𝑟2 ቚ𝑟𝑟− + 𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿                                                                                                  Flux Balance                                                                                                                                       − = −𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖−ቚ+ ෍ yi = 1                                                                  𝑞𝑞𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑= ෍   ℎ𝑖𝑖𝜌𝜌𝑦𝑦𝑖𝑖𝑉𝑉𝑖𝑖−𝜆𝜆𝛻𝛻𝑇𝑇𝑔𝑔−𝑝𝑝 ෍    𝜃𝜃𝑖𝑖𝒅𝒅𝑖𝑖                                               𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝑝𝑝̇𝑟𝑟 ቚ+    ∀i                                                                                                                                                                                                          𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔                                                                  𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔         Energy Balance                                                                                                                                                                + Radiative Heat Flux Equation                                       𝐻𝐻𝐻𝐻𝐻𝐻𝐻𝐻, 𝜃𝜃𝑖𝑖= 𝐷𝐷𝑖𝑖𝑖𝑖𝜒𝜒𝑗𝑗                                                                                                                                                                                                                                               𝑖𝑖 𝜖𝜖 ෍𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙 ℎ𝑣𝑣𝑣𝑣𝑣𝑣,𝑖𝑖𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟+ 𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖+ = −𝑞𝑞 ቚ− −𝑞𝑞𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓\n                                                                                                   Liquid & Gas\n                                                                                                  Fraction Balance                         𝑖𝑖 𝜖𝜖 𝑔𝑔𝑔𝑔𝑔𝑔  𝛻𝛻 .⃗𝑞𝑞𝑟𝑟𝑟𝑟𝑟𝑟= න0∞ 𝑎𝑎(𝜂𝜂,⃗𝑟𝑟)  4𝜋𝜋𝐼𝐼𝑏𝑏𝜂𝜂,⃗𝑟𝑟−ර4𝜋𝜋 𝐼𝐼𝜂𝜂,⃗𝑟𝑟, 𝜔𝜔𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑                                         Phase Mass     ෍   𝑦𝑦𝑖𝑖,+ = 1 Fiber Model                                                   ෍   𝑦𝑦𝑖𝑖,−= 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      𝑖𝑖 𝜖𝜖 𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙\n                                                                      Temp Balance 𝜕𝜕𝜌𝜌𝑓𝑓𝐶𝐶𝑝𝑝,𝑓𝑓𝑇𝑇𝑓𝑓       𝜕𝜕         𝜕𝜕𝑇𝑇𝑓𝑓       4ℎ𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐,𝑗𝑗                     4        =        +          𝑇𝑇−𝑇𝑇𝑓𝑓−4𝜎𝜎𝜀𝜀𝑓𝑓    𝑇𝑇𝑓𝑓 −𝑇𝑇∞4          𝜕𝜕𝜕𝜕          𝜕𝜕𝜕𝜕𝑘𝑘𝑓𝑓  𝜕𝜕𝜕𝜕            𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                           𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                                                                                                                   𝑇𝑇+ = 𝑇𝑇−                                            𝑟𝑟+                                                                                     Phase Balance                               4ℎ∞𝑛𝑛𝑓𝑓                         𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝐼𝐼𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                    2              4           𝑜𝑜𝑜𝑜 𝐺𝐺𝐺𝐺𝐺𝐺𝐺𝐺 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿                  𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓= න         𝑇𝑇−𝑇𝑇𝑓𝑓𝑟𝑟2                    𝑑𝑑𝑑𝑑        𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓= 𝜋𝜋𝑟𝑟𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓    𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔=    𝜋𝜋𝑟𝑟𝑙𝑙/𝑔𝑔3                                                                 𝑥𝑥𝑖𝑖,+ 𝑝𝑝= 𝑥𝑥𝑖𝑖,−𝛾𝛾𝑖𝑖𝑇𝑇, 𝑥𝑥𝑗𝑗,−   𝑝𝑝𝑣𝑣𝑣𝑣𝑣𝑣,𝑖𝑖(𝑇𝑇 ൯     *                                   𝑟𝑟−      𝑑𝑑𝑓𝑓                              𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔                               3     T. Farouk and F. L. Dryer Combust. and Flame (2012) 159, 200 – 209\n   + T. Farouk and F. L. Dryer Combust Theory & Modelling (2011), 15, 487 – 515\n\n\n                                                                                                         17",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            23.18,
+            72.05,
+            443.25,
+            100.06
+          ],
+          "text": "Governing Equations & Boundary Conditions",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            14.38,
+            126.43,
+            145.44,
+            140.56
+          ],
+          "text": "Species Conservation Equation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            92.82,
+            126.67,
+            99.13,
+            160.15
+          ],
+          "text": "𝑟𝑟+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            108.78,
+            128.71,
+            115.09,
+            162.19
+          ],
+          "text": "𝑟𝑟+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            290.34,
+            122.8,
+            296.65,
+            169.01
+          ],
+          "text": "𝑟𝑟+̇",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            77.94,
+            121.0,
+            99.13,
+            170.21
+          ],
+          "text": "|\n𝑟𝑟2̇𝑟𝑟𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            16.02,
+            124.48,
+            47.53,
+            170.93
+          ],
+          "text": "𝑟𝑟+\n)\n𝜕𝜕(𝑦𝑦𝑖𝑖𝜌𝜌",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            296.94,
+            130.96,
+            322.48,
+            177.17
+          ],
+          "text": "𝜔𝜔𝑖𝑖𝑟𝑟2𝑑𝑑𝑑𝑑",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            210.06,
+            130.86,
+            266.95,
+            177.28
+          ],
+          "text": "𝑟𝑟+ = \nቚ\n−𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖𝑟𝑟2",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            9.3,
+            131.08,
+            15.98,
+            177.29
+          ],
+          "text": "න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            116.82,
+            130.96,
+            210.08,
+            177.29
+          ],
+          "text": "ቚ\n𝑦𝑦𝑖𝑖𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ 𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            266.94,
+            124.96,
+            290.3,
+            177.29
+          ],
+          "text": "𝑟𝑟+ + න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            210.06,
+            143.95,
+            216.37,
+            177.43
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            266.94,
+            143.95,
+            273.13,
+            177.43
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            13.02,
+            145.99,
+            19.33,
+            179.47
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            105.78,
+            145.99,
+            112.09,
+            179.47
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            287.34,
+            145.99,
+            293.53,
+            179.47
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            93.78,
+            131.08,
+            108.74,
+            180.41
+          ],
+          "text": "𝑟𝑟+ න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            31.73,
+            130.95,
+            73.8,
+            182.69
+          ],
+          "text": "𝜕𝜕𝑡𝑡\n𝑟𝑟2𝑑𝑑𝑑𝑑+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            607.78,
+            158.63,
+            619.14,
+            182.71
+          ],
+          "text": "G",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            93.78,
+            155.95,
+            100.09,
+            189.43
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            76.98,
+            136.96,
+            93.81,
+            192.17
+          ],
+          "text": "ฬ\n1\n3 𝑟𝑟3",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            14.38,
+            185.67,
+            142.81,
+            199.79
+          ],
+          "text": "Energy Conservation Equation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            440.82,
+            177.45,
+            523.37,
+            205.55
+          ],
+          "text": "At ∞ (200 x Do)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            181.87,
+            187.99,
+            188.78,
+            224.82
+          ],
+          "text": "𝑟𝑟+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            584.0,
+            200.25,
+            591.61,
+            225.24
+          ],
+          "text": "L",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            199.15,
+            190.27,
+            206.06,
+            227.1
+          ],
+          "text": "𝑟𝑟+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            165.67,
+            182.07,
+            188.78,
+            235.54
+          ],
+          "text": "|\n𝑟𝑟2̇𝑟𝑟𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            100.75,
+            185.67,
+            132.33,
+            236.37
+          ],
+          "text": "𝑟𝑟+\n)\n𝜕𝜕(ℎ𝜌𝜌",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            93.43,
+            192.99,
+            100.69,
+            243.22
+          ],
+          "text": "න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            207.67,
+            192.99,
+            302.6,
+            243.22
+          ],
+          "text": "ቚ\nℎ𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ ℎ𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            302.59,
+            192.55,
+            312.01,
+            243.22
+          ],
+          "text": "𝑟𝑟+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            302.59,
+            206.71,
+            309.5,
+            243.54
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            97.39,
+            208.99,
+            104.3,
+            245.82
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            195.79,
+            208.99,
+            202.7,
+            245.82
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            182.95,
+            192.99,
+            199.09,
+            246.7
+          ],
+          "text": "𝑟𝑟+ න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            440.82,
+            208.56,
+            489.38,
+            247.89
+          ],
+          "text": "XO2  = 0.21\nXN2  = 0.79\nT     = 298 K",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            116.48,
+            192.99,
+            161.11,
+            249.22
+          ],
+          "text": "𝜕𝜕𝑡𝑡\n𝑟𝑟2𝑑𝑑𝑑𝑑+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            182.95,
+            219.91,
+            189.86,
+            256.74
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            164.59,
+            199.35,
+            182.98,
+            259.41
+          ],
+          "text": "ฬ\n1\n3 𝑟𝑟3",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            11.58,
+            250.96,
+            342.88,
+            265.88
+          ],
+          "text": "Conservation of Mass Fraction\nDiffusive Heat Flux Equation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            93.43,
+            226.23,
+            128.47,
+            276.45
+          ],
+          "text": "= \nቚ\n−𝑞𝑞𝑟𝑟2",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            128.47,
+            219.63,
+            232.16,
+            276.46
+          ],
+          "text": "𝑟𝑟+ + 𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿 𝑜𝑜𝑜𝑜 𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔−𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            128.47,
+            239.95,
+            135.38,
+            276.78
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            434.3,
+            267.92,
+            487.43,
+            282.05
+          ],
+          "text": "Flux Balance",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            574.88,
+            253.84,
+            579.08,
+            285.99
+          ],
+          "text": "+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            615.8,
+            253.84,
+            620.0,
+            285.99
+          ],
+          "text": "+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            532.16,
+            254.07,
+            574.9,
+            298.27
+          ],
+          "text": "ቚ\n𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝑝𝑝̇𝑟𝑟",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            574.88,
+            266.2,
+            579.08,
+            298.35
+          ],
+          "text": "−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            581.6,
+            254.07,
+            620.0,
+            298.35
+          ],
+          "text": "=\nቚ\n−𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖−",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            19.49,
+            253.61,
+            31.43,
+            303.84
+          ],
+          "text": "෍",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            290.16,
+            254.76,
+            384.17,
+            304.99
+          ],
+          "text": "ℎ𝑖𝑖𝜌𝜌𝑦𝑦𝑖𝑖𝑉𝑉𝑖𝑖−𝜆𝜆𝛻𝛻𝑇𝑇𝑔𝑔−𝑝𝑝\n෍",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            392.76,
+            254.76,
+            408.51,
+            304.99
+          ],
+          "text": "𝜃𝜃𝑖𝑖𝒅𝒅𝑖𝑖",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            32.93,
+            253.61,
+            281.69,
+            305.64
+          ],
+          "text": "yi = 1\n𝑞𝑞𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑=\n෍",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            22.25,
+            272.49,
+            28.4,
+            309.32
+          ],
+          "text": "∀i",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            262.8,
+            273.64,
+            288.55,
+            310.48
+          ],
+          "text": "𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            365.28,
+            273.64,
+            391.03,
+            310.48
+          ],
+          "text": "𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            434.3,
+            297.79,
+            499.44,
+            311.92
+          ],
+          "text": "Energy Balance",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            681.78,
+            282.78,
+            685.98,
+            314.93
+          ],
+          "text": "+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            11.58,
+            311.93,
+            133.88,
+            326.06
+          ],
+          "text": "Radiative Heat Flux Equation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            540.54,
+            283.01,
+            551.04,
+            327.21
+          ],
+          "text": "෍",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            559.62,
+            283.01,
+            681.8,
+            327.21
+          ],
+          "text": "ℎ𝑣𝑣𝑣𝑣𝑣𝑣,𝑖𝑖𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟+ 𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖+ =\nቚ\n−𝑞𝑞",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            687.9,
+            283.01,
+            714.83,
+            327.21
+          ],
+          "text": "−𝑞𝑞𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            681.78,
+            295.14,
+            685.98,
+            327.29
+          ],
+          "text": "−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            533.34,
+            299.82,
+            558.26,
+            331.97
+          ],
+          "text": "𝑖𝑖 𝜖𝜖 𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            229.0,
+            281.95,
+            291.62,
+            332.18
+          ],
+          "text": "𝐻𝐻𝐻𝐻𝐻𝐻𝐻𝐻, 𝜃𝜃𝑖𝑖= 𝐷𝐷𝑖𝑖𝑖𝑖𝜒𝜒𝑗𝑗",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            63.81,
+            315.32,
+            69.91,
+            352.16
+          ],
+          "text": "∞",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            536.34,
+            316.74,
+            546.84,
+            360.94
+          ],
+          "text": "෍",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            552.06,
+            316.74,
+            578.65,
+            362.5
+          ],
+          "text": "𝑦𝑦𝑖𝑖,+ = 1",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            532.62,
+            333.55,
+            550.77,
+            365.7
+          ],
+          "text": "𝑖𝑖 𝜖𝜖 𝑔𝑔𝑔𝑔𝑔𝑔",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            436.96,
+            327.15,
+            507.61,
+            366.48
+          ],
+          "text": "Liquid & Gas \nPhase Mass \nFraction Balance",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            14.49,
+            318.04,
+            63.75,
+            368.27
+          ],
+          "text": "𝛻𝛻 .⃗𝑞𝑞𝑟𝑟𝑟𝑟𝑟𝑟= න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            71.49,
+            318.04,
+            160.11,
+            368.27
+          ],
+          "text": "𝑎𝑎(𝜂𝜂,⃗𝑟𝑟) 4𝜋𝜋𝐼𝐼𝑏𝑏𝜂𝜂,⃗𝑟𝑟−ර",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            60.45,
+            334.04,
+            64.27,
+            370.88
+          ],
+          "text": "0",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            156.81,
+            318.04,
+            228.96,
+            370.88
+          ],
+          "text": "4𝜋𝜋\n𝐼𝐼𝜂𝜂,⃗𝑟𝑟, 𝜔𝜔𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            11.58,
+            360.76,
+            63.32,
+            374.89
+          ],
+          "text": "Fiber Model",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            539.94,
+            348.55,
+            550.45,
+            392.75
+          ],
+          "text": "෍",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            558.9,
+            348.55,
+            585.49,
+            392.75
+          ],
+          "text": "𝑦𝑦𝑖𝑖,−= 1",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            532.74,
+            365.37,
+            557.66,
+            397.51
+          ],
+          "text": "𝑖𝑖 𝜖𝜖 𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            436.96,
+            391.36,
+            497.06,
+            405.49
+          ],
+          "text": "Temp Balance",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            11.98,
+            359.26,
+            53.38,
+            409.49
+          ],
+          "text": "𝜕𝜕𝜌𝜌𝑓𝑓𝐶𝐶𝑝𝑝,𝑓𝑓𝑇𝑇𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            96.94,
+            359.26,
+            109.9,
+            409.49
+          ],
+          "text": "𝜕𝜕𝑇𝑇𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            162.58,
+            359.26,
+            221.86,
+            416.69
+          ],
+          "text": "𝑇𝑇−𝑇𝑇𝑓𝑓−4𝜎𝜎𝜀𝜀𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            230.14,
+            366.46,
+            237.94,
+            416.69
+          ],
+          "text": "𝑇𝑇𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            236.02,
+            362.86,
+            261.2,
+            416.69
+          ],
+          "text": "4 −𝑇𝑇∞4",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            30.58,
+            359.62,
+            77.1,
+            422.69
+          ],
+          "text": "𝜕𝜕𝜕𝜕\n= 𝜕𝜕",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            98.74,
+            359.26,
+            156.31,
+            422.69
+          ],
+          "text": "𝜕𝜕𝜕𝜕\n+ 4ℎ𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐,𝑗𝑗",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            130.42,
+            372.46,
+            152.38,
+            422.69
+          ],
+          "text": "𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            202.06,
+            372.46,
+            224.02,
+            422.69
+          ],
+          "text": "𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            69.69,
+            366.46,
+            94.66,
+            422.7
+          ],
+          "text": "𝜕𝜕𝜕𝜕𝑘𝑘𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            533.34,
+            378.13,
+            559.86,
+            423.9
+          ],
+          "text": "𝑇𝑇+ = 𝑇𝑇−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            439.02,
+            420.21,
+            500.08,
+            434.34
+          ],
+          "text": "Phase Balance",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            110.26,
+            385.91,
+            143.98,
+            442.14
+          ],
+          "text": "𝑟𝑟+ 4ℎ∞𝑛𝑛𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            532.98,
+            400.59,
+            638.54,
+            444.79
+          ],
+          "text": "൯\n𝑥𝑥𝑖𝑖,+ 𝑝𝑝= 𝑥𝑥𝑖𝑖,−𝛾𝛾𝑖𝑖𝑇𝑇, 𝑥𝑥𝑗𝑗,− 𝑝𝑝𝑣𝑣𝑣𝑣𝑣𝑣,𝑖𝑖(𝑇𝑇",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            308.79,
+            391.45,
+            389.25,
+            448.52
+          ],
+          "text": "2\n𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔= 4",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            9.58,
+            399.11,
+            115.72,
+            449.34
+          ],
+          "text": "𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿 𝑜𝑜𝑜𝑜 𝐺𝐺𝐺𝐺𝐺𝐺𝐺𝐺 𝑡𝑡𝑡𝑡𝑡𝑡𝑡 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓=\nන",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            150.1,
+            391.91,
+            231.7,
+            449.34
+          ],
+          "text": "𝑇𝑇−𝑇𝑇𝑓𝑓𝑟𝑟2 𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝐼𝐼𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            233.86,
+            399.11,
+            324.04,
+            449.36
+          ],
+          "text": "𝑑𝑑𝑑𝑑\n𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓= 𝜋𝜋𝑟𝑟𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            384.26,
+            398.29,
+            409.86,
+            454.53
+          ],
+          "text": "3 𝜋𝜋𝑟𝑟𝑙𝑙/𝑔𝑔\n3",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            127.06,
+            405.11,
+            135.58,
+            455.34
+          ],
+          "text": "𝑑𝑑𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            191.14,
+            405.11,
+            229.85,
+            455.34
+          ],
+          "text": "𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            106.9,
+            419.07,
+            113.81,
+            455.91
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            23.47,
+            442.3,
+            317.9,
+            470.92
+          ],
+          "text": "* T. Farouk and F. L. Dryer Combust. and Flame (2012) 159, 200 – 209 \n+ T. Farouk and F. L. Dryer Combust Theory &  Modelling (2011), 15, 487 – 515",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            650.94,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "17",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "location": "página 18",
+      "text": "Supplementary Slide # Governing Equations\n\n\n\n\n                                                                                    = Mass fraction Species𝑟𝑟+ 𝜕𝜕(𝑦𝑦𝑖𝑖𝜌𝜌 ) Conservation𝑟𝑟2̇𝑟𝑟𝑟𝑟−|𝑟𝑟+𝑟𝑟+  Equation𝑟𝑟+                                             𝑟𝑟+                        𝑟𝑟+           𝑟𝑟+̇                                              yi             𝑟𝑟2𝑑𝑑𝑑𝑑+න𝑟𝑟−              න𝑟𝑟−  𝑦𝑦𝑖𝑖𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ 𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2 ቚ𝑟𝑟− =  −𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖𝑟𝑟2 ቚ𝑟𝑟− + න𝑟𝑟− 𝜔𝜔𝑖𝑖𝑟𝑟2𝑑𝑑𝑑𝑑                      ρ = Mass density           𝜕𝜕𝑡𝑡               1                            𝑟𝑟3 ฬ𝑟𝑟−               3                                                                                                                      ṙ = Radius Energy Conservation Equation\n                                                                U = Bulk fluid velocity\n                                                                                                                  Vi = Diffusion velocity,\n                                                                                         ωi = Rate of species production due to chemical reaction                                        𝑟𝑟+ 𝜕𝜕(ℎ𝜌𝜌 )             𝑟𝑟2̇𝑟𝑟𝑟𝑟−| 𝑟𝑟+    𝑟𝑟+                                          𝑟𝑟+                                                                           𝑟𝑟+            න𝑟𝑟−         𝑟𝑟2𝑑𝑑𝑑𝑑+    න𝑟𝑟− ℎ𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ ℎ𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2 ቚ𝑟𝑟−                        h = Enthalpy per unit mass                                                  𝜕𝜕𝑡𝑡        1                                                        𝑟𝑟3 ฬ𝑟𝑟−                                              q = Heat flux                               3Conservation of Mass Fraction𝑟𝑟+                     Diffusive Heat Flux Equation                                                                                      𝑜𝑜𝑜𝑜 𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔−𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                                                                      Sloss/gain due to fiber = Loss and gain due to the presence of the             = −𝑞𝑞𝑟𝑟2 ቚ𝑟𝑟− + 𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿                                                                                                 tether fiber\n                                                                                          k = Thermal conductivity ෍ yi = 1                                                                  𝑞𝑞𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑= ෍   ℎ𝑖𝑖𝜌𝜌𝑦𝑦𝑖𝑖𝑉𝑉𝑖𝑖−𝜆𝜆𝛻𝛻𝑇𝑇𝑔𝑔−𝑝𝑝 ෍    𝜃𝜃𝑖𝑖𝒅𝒅𝑖𝑖    ∀i                                                                                                                                                                                                          𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔                                                                  𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔            Tg = Gas temperature,\n                                                                                                                        θi = Thermal diffusion coefficient Radiative Heat Flux Equation                                                                                           𝐻𝐻𝐻𝐻𝐻𝐻𝐻𝐻, 𝜃𝜃𝑖𝑖= 𝐷𝐷𝑖𝑖𝑖𝑖𝜒𝜒𝑗𝑗                                                                                     θi = DijXj\n                                                                                                                      di = Thermodynamic driving forceFiber𝛻𝛻 .⃗𝑞𝑞𝑟𝑟𝑟𝑟𝑟𝑟=Modelන0∞ 𝑎𝑎(𝜂𝜂,⃗𝑟𝑟)  4𝜋𝜋𝐼𝐼𝑏𝑏𝜂𝜂,⃗𝑟𝑟−ර4𝜋𝜋 𝐼𝐼𝜂𝜂,⃗𝑟𝑟, 𝜔𝜔𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑                                                                                                                                          hvap,i = Enthalpy of vaporization\n                                                                              p = System pressure,\n                                                                                                                                             xi = Mole fraction,  𝜕𝜕𝜌𝜌𝑓𝑓𝐶𝐶𝑝𝑝,𝑓𝑓𝑇𝑇𝑓𝑓       𝜕𝜕         𝜕𝜕𝑇𝑇𝑓𝑓       4ℎ𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐,𝑗𝑗                   4𝜎𝜎𝜀𝜀𝑓𝑓    4        =        +        𝑇𝑇−𝑇𝑇𝑓𝑓−               𝑇𝑇𝑓𝑓 −𝑇𝑇∞4                                                          γi = Activity coefficient           𝜕𝜕𝜕𝜕          𝜕𝜕𝜕𝜕𝑘𝑘𝑓𝑓  𝜕𝜕𝜕𝜕            𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                           𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                                             𝑟𝑟+                                                                                                      pvap,i = Vapor pressure of the i-th component                                                                                2              4   3                                4ℎ∞𝑛𝑛𝑓𝑓                         𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝐼𝐼𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓                                                           ‘+’ and ‘-’ denote location in the gas and liquid phase             𝑜𝑜𝑜𝑜 𝐺𝐺𝐺𝐺𝐺𝐺𝐺𝐺 𝑡𝑡𝑡𝑡𝑡𝑡𝑡                                                                               𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓= 𝜋𝜋𝑟𝑟𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓    𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔=    𝜋𝜋𝑟𝑟𝑙𝑙/𝑔𝑔  𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿                  𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓= න         𝑇𝑇−𝑇𝑇𝑓𝑓𝑟𝑟2                    𝑑𝑑𝑑𝑑                            3                                            𝑟𝑟−      𝑑𝑑𝑓𝑓                              𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔\n\n\n\n                                                                                                         18",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            23.18,
+            72.05,
+            434.63,
+            100.06
+          ],
+          "text": "Supplementary Slide # Governing Equations",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            14.38,
+            126.43,
+            145.44,
+            140.56
+          ],
+          "text": "Species Conservation Equation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            92.82,
+            126.67,
+            99.13,
+            160.15
+          ],
+          "text": "𝑟𝑟+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            108.78,
+            128.71,
+            115.09,
+            162.19
+          ],
+          "text": "𝑟𝑟+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            290.34,
+            122.8,
+            296.65,
+            169.01
+          ],
+          "text": "𝑟𝑟+̇",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            77.94,
+            121.0,
+            99.13,
+            170.21
+          ],
+          "text": "|\n𝑟𝑟2̇𝑟𝑟𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            16.02,
+            124.48,
+            47.53,
+            170.93
+          ],
+          "text": "𝑟𝑟+\n)\n𝜕𝜕(𝑦𝑦𝑖𝑖𝜌𝜌",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            296.94,
+            130.96,
+            322.48,
+            177.17
+          ],
+          "text": "𝜔𝜔𝑖𝑖𝑟𝑟2𝑑𝑑𝑑𝑑",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            210.06,
+            130.86,
+            266.95,
+            177.28
+          ],
+          "text": "𝑟𝑟+ = \nቚ\n−𝑦𝑦𝑖𝑖𝜌𝜌𝑉𝑉𝑖𝑖𝑟𝑟2",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            9.3,
+            131.08,
+            15.98,
+            177.29
+          ],
+          "text": "න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            116.82,
+            130.96,
+            210.08,
+            177.29
+          ],
+          "text": "ቚ\n𝑦𝑦𝑖𝑖𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ 𝑦𝑦𝑖𝑖𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            266.94,
+            124.96,
+            290.3,
+            177.29
+          ],
+          "text": "𝑟𝑟+ + න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            210.06,
+            143.95,
+            216.37,
+            177.43
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            266.94,
+            143.95,
+            273.13,
+            177.43
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            13.02,
+            145.99,
+            19.33,
+            179.47
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            105.78,
+            145.99,
+            112.09,
+            179.47
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            287.34,
+            145.99,
+            293.53,
+            179.47
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            93.78,
+            131.08,
+            108.74,
+            180.41
+          ],
+          "text": "𝑟𝑟+ න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            31.73,
+            130.95,
+            73.8,
+            182.69
+          ],
+          "text": "𝜕𝜕𝑡𝑡\n𝑟𝑟2𝑑𝑑𝑑𝑑+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            93.78,
+            155.95,
+            100.09,
+            189.43
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            76.98,
+            136.96,
+            93.81,
+            192.17
+          ],
+          "text": "ฬ\n1\n3 𝑟𝑟3",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            14.38,
+            185.67,
+            142.81,
+            199.79
+          ],
+          "text": "Energy Conservation Equation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            181.87,
+            187.99,
+            188.78,
+            224.82
+          ],
+          "text": "𝑟𝑟+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            199.15,
+            190.27,
+            206.06,
+            227.1
+          ],
+          "text": "𝑟𝑟+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            165.67,
+            182.07,
+            188.78,
+            235.54
+          ],
+          "text": "|\n𝑟𝑟2̇𝑟𝑟𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            100.75,
+            185.67,
+            132.33,
+            236.37
+          ],
+          "text": "𝑟𝑟+\n)\n𝜕𝜕(ℎ𝜌𝜌",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            93.43,
+            192.99,
+            100.69,
+            243.22
+          ],
+          "text": "න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            207.67,
+            192.99,
+            302.6,
+            243.22
+          ],
+          "text": "ቚ\nℎ𝜌𝜌𝑟𝑟2𝑑𝑑𝑑𝑑+ ℎ𝜌𝜌𝜌𝜌−𝜌𝜌̇𝑟𝑟𝑟𝑟2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            302.59,
+            192.55,
+            312.01,
+            243.22
+          ],
+          "text": "𝑟𝑟+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            302.59,
+            206.71,
+            309.5,
+            243.54
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            97.39,
+            208.99,
+            104.3,
+            245.82
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            195.79,
+            208.99,
+            202.7,
+            245.82
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            182.95,
+            192.99,
+            199.09,
+            246.7
+          ],
+          "text": "𝑟𝑟+ න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            116.48,
+            192.99,
+            161.11,
+            249.22
+          ],
+          "text": "𝜕𝜕𝑡𝑡\n𝑟𝑟2𝑑𝑑𝑑𝑑+",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            182.95,
+            219.91,
+            189.86,
+            256.74
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            164.59,
+            199.35,
+            182.98,
+            259.41
+          ],
+          "text": "ฬ\n1\n3 𝑟𝑟3",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            11.58,
+            250.96,
+            342.88,
+            265.88
+          ],
+          "text": "Conservation of Mass Fraction\nDiffusive Heat Flux Equation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            93.43,
+            226.23,
+            128.47,
+            276.45
+          ],
+          "text": "= \nቚ\n−𝑞𝑞𝑟𝑟2",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            128.47,
+            219.63,
+            232.16,
+            276.46
+          ],
+          "text": "𝑟𝑟+ + 𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿 𝑜𝑜𝑜𝑜 𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔−𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            128.47,
+            239.95,
+            135.38,
+            276.78
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            19.49,
+            253.61,
+            31.43,
+            303.84
+          ],
+          "text": "෍",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            290.16,
+            254.76,
+            384.17,
+            304.99
+          ],
+          "text": "ℎ𝑖𝑖𝜌𝜌𝑦𝑦𝑖𝑖𝑉𝑉𝑖𝑖−𝜆𝜆𝛻𝛻𝑇𝑇𝑔𝑔−𝑝𝑝\n෍",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            392.76,
+            254.76,
+            408.51,
+            304.99
+          ],
+          "text": "𝜃𝜃𝑖𝑖𝒅𝒅𝑖𝑖",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            32.93,
+            253.61,
+            281.69,
+            305.64
+          ],
+          "text": "yi = 1\n𝑞𝑞𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑=\n෍",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            22.25,
+            272.49,
+            28.4,
+            309.32
+          ],
+          "text": "∀i",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            262.8,
+            273.64,
+            288.55,
+            310.48
+          ],
+          "text": "𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            365.28,
+            273.64,
+            391.03,
+            310.48
+          ],
+          "text": "𝑖𝑖 𝜖𝜖 𝑆𝑆,𝑔𝑔𝑔𝑔𝑔𝑔",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            11.58,
+            311.93,
+            133.88,
+            326.06
+          ],
+          "text": "Radiative Heat Flux Equation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            229.0,
+            281.95,
+            291.62,
+            332.18
+          ],
+          "text": "𝐻𝐻𝐻𝐻𝐻𝐻𝐻𝐻, 𝜃𝜃𝑖𝑖= 𝐷𝐷𝑖𝑖𝑖𝑖𝜒𝜒𝑗𝑗",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            63.81,
+            315.32,
+            69.91,
+            352.16
+          ],
+          "text": "∞",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            443.1,
+            155.61,
+            693.54,
+            353.2
+          ],
+          "text": "yi = Mass fraction\nρ = Mass density\nṙ  = Radius\nU = Bulk fluid velocity\nVi = Diffusion velocity,\nωi = Rate of species production due to chemical reaction\nh = Enthalpy per unit mass\nq = Heat flux\nSloss/gain due to fiber = Loss and gain due to the presence of the \ntether fiber\nk = Thermal conductivity\nTg = Gas temperature, \nθi = Thermal diffusion coefficient\nθi = DijXj\ndi = Thermodynamic driving force",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            14.49,
+            318.04,
+            63.75,
+            368.27
+          ],
+          "text": "𝛻𝛻 .⃗𝑞𝑞𝑟𝑟𝑟𝑟𝑟𝑟= න",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            71.49,
+            318.04,
+            160.11,
+            368.27
+          ],
+          "text": "𝑎𝑎(𝜂𝜂,⃗𝑟𝑟) 4𝜋𝜋𝐼𝐼𝑏𝑏𝜂𝜂,⃗𝑟𝑟−ර",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            9.36,
+            355.24,
+            61.1,
+            369.37
+          ],
+          "text": "Fiber Model",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            60.45,
+            334.04,
+            64.27,
+            370.88
+          ],
+          "text": "0",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            156.81,
+            318.04,
+            228.96,
+            370.88
+          ],
+          "text": "4𝜋𝜋\n𝐼𝐼𝜂𝜂,⃗𝑟𝑟, 𝜔𝜔𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            13.37,
+            355.8,
+            54.77,
+            406.03
+          ],
+          "text": "𝜕𝜕𝜌𝜌𝑓𝑓𝐶𝐶𝑝𝑝,𝑓𝑓𝑇𝑇𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            98.33,
+            355.8,
+            111.29,
+            406.03
+          ],
+          "text": "𝜕𝜕𝑇𝑇𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            163.97,
+            363.0,
+            201.42,
+            413.23
+          ],
+          "text": "𝑇𝑇−𝑇𝑇𝑓𝑓−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            231.53,
+            363.0,
+            239.33,
+            413.23
+          ],
+          "text": "𝑇𝑇𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            237.41,
+            359.4,
+            262.59,
+            413.23
+          ],
+          "text": "4 −𝑇𝑇∞4",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            31.97,
+            356.16,
+            78.5,
+            419.23
+          ],
+          "text": "𝜕𝜕𝜕𝜕\n= 𝜕𝜕",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            100.13,
+            355.8,
+            157.71,
+            419.23
+          ],
+          "text": "𝜕𝜕𝜕𝜕\n+ 4ℎ𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐,𝑗𝑗",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            131.81,
+            369.0,
+            153.78,
+            419.23
+          ],
+          "text": "𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            203.45,
+            355.8,
+            225.42,
+            419.23
+          ],
+          "text": "4𝜎𝜎𝜀𝜀𝑓𝑓\n𝑑𝑑𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            71.09,
+            363.0,
+            96.05,
+            419.23
+          ],
+          "text": "𝜕𝜕𝜕𝜕𝑘𝑘𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            443.1,
+            362.61,
+            667.84,
+            439.74
+          ],
+          "text": "hvap,i = Enthalpy of vaporization\np = System pressure,\nxi = Mole fraction,\nγi = Activity coefficient\npvap,i = Vapor pressure of the i-th component\n‘+’ and ‘-’ denote location in the gas and liquid phase",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            113.93,
+            383.65,
+            147.65,
+            439.88
+          ],
+          "text": "𝑟𝑟+ 4ℎ∞𝑛𝑛𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            313.66,
+            386.34,
+            393.82,
+            443.41
+          ],
+          "text": "2\n𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔= 4",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            13.25,
+            396.85,
+            119.4,
+            447.08
+          ],
+          "text": "𝑆𝑆𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿 𝑜𝑜𝑜𝑜 𝐺𝐺𝐺𝐺𝐺𝐺𝐺𝐺 𝑡𝑡𝑡𝑡𝑡𝑡𝑡 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓=\nන",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            153.77,
+            389.65,
+            235.38,
+            447.08
+          ],
+          "text": "𝑇𝑇−𝑇𝑇𝑓𝑓𝑟𝑟2 𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝐼𝐼𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            237.53,
+            392.95,
+            328.91,
+            447.08
+          ],
+          "text": "𝑑𝑑𝑑𝑑\n𝐴𝐴𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓= 𝜋𝜋𝑟𝑟𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            388.83,
+            393.18,
+            414.43,
+            449.41
+          ],
+          "text": "3 𝜋𝜋𝑟𝑟𝑙𝑙/𝑔𝑔\n3",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            130.73,
+            402.85,
+            139.25,
+            453.08
+          ],
+          "text": "𝑑𝑑𝑓𝑓",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            194.81,
+            402.85,
+            233.53,
+            453.08
+          ],
+          "text": "𝑉𝑉𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙/𝑔𝑔𝑔𝑔𝑔𝑔",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            110.57,
+            416.81,
+            117.49,
+            453.65
+          ],
+          "text": "𝑟𝑟−",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            650.94,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "18",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "location": "página 19",
+      "text": "Supplementary Slide # Governing Equations\n\n\n The complete set of coupled partial differential and algebraic equations are\n     discretized first in space and then integrated in an automated fashion as a set\n     of coupled ordinary differential-algebraic equations in time.\n\n  Spatial  discretization  is performed according to a node-centered  finite\n    volume scheme with a second order accuracy.\n\n The innermost liquid node is centered at the origin, providing the required\n     no-flux condition.\n\n The discretized mass flux  is represented on  cell interfaces and not cell\n     centers, in the manner traditionally referred to as a staggered grid to avoid\n     oscillatory solutions.\n\n  Numerical integration of the final set of discretized equations is performed\n     using a backward difference formula with a variable order of up to fifth order\n    and a variable time step utilizing a fully implicit multipoint interpolation.\n                                                                                                       19",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            23.18,
+            14.66,
+            434.63,
+            42.67
+          ],
+          "text": "Supplementary Slide # Governing Equations",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            40.59,
+            98.9,
+            697.4,
+            125.71
+          ],
+          "text": "The complete set of coupled partial differential and algebraic equations are",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            63.11,
+            122.9,
+            697.5,
+            173.73
+          ],
+          "text": "discretized first in space and then integrated in an automated fashion as a set \nof coupled ordinary differential-algebraic equations in time.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            40.59,
+            194.9,
+            697.48,
+            221.71
+          ],
+          "text": "Spatial discretization is performed according to a node-centered finite",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            63.19,
+            218.9,
+            436.58,
+            245.72
+          ],
+          "text": "volume scheme with a second order accuracy.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            40.59,
+            266.9,
+            697.38,
+            293.71
+          ],
+          "text": "The innermost liquid node is centered at the origin, providing the required",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            63.09,
+            290.9,
+            206.62,
+            317.72
+          ],
+          "text": "no-flux condition.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            40.59,
+            338.9,
+            697.44,
+            365.71
+          ],
+          "text": "The discretized mass flux is represented on cell interfaces and not cell",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            63.05,
+            362.9,
+            697.34,
+            413.73
+          ],
+          "text": "centers, in the manner traditionally referred to as a staggered grid to avoid \noscillatory solutions.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            40.59,
+            434.9,
+            697.38,
+            461.71
+          ],
+          "text": "Numerical integration of the final set of discretized equations is performed",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            63.09,
+            458.9,
+            697.52,
+            509.73
+          ],
+          "text": "using a backward difference formula with a variable order of up to fifth order \nand a variable time step utilizing a fully implicit multipoint interpolation.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            650.94,
+            506.64,
+            663.14,
+            522.7
+          ],
+          "text": "19",
+          "kind": "heading_candidate"
+        }
+      ]
+    }
+  ],
+  "tables": [],
+  "captions": [],
+  "metadata": {
+    "format": "PDF 1.7",
+    "title": "PowerPoint Presentation",
+    "author": "Fahd E. Alam",
+    "creator": "Acrobat PDFMaker 26 for PowerPoint",
+    "producer": "Adobe PDF Library 26.1.183",
+    "creationDate": "D:20260428083427-04'00'",
+    "modDate": "D:20260428083441-04'00'",
+    "page_count": 19,
+    "legendas": 0,
+    "tabelas_detectadas": 0,
+    "evidence_kind": "engineering_or_publication",
+    "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+  },
+  "warnings": [],
+  "schema_version": 4,
+  "source_filename": "PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+  "source_extension": ".pdf",
+  "document": {
+    "name": "PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+    "extension": ".pdf",
+    "sha256": "8e4625bb2b2a8b17bd19854765815a3dd877e5192a9b94bd001aea2e8cccb4b2",
+    "size_bytes": 8994674
+  },
+  "evidence_kind": "engineering_or_publication",
+  "observations": [],
+  "provenance": {
+    "study_id": "PSI-117",
+    "source": "NASA Physical Sciences Informatics",
+    "filename": "PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Presentations_Oscillatory_Cool+Flame_TFarouk.pdf&version=1&redirect=false",
+    "doi": "10.60555/gz0q-b577",
+    "sha256": "8e4625bb2b2a8b17bd19854765815a3dd877e5192a9b94bd001aea2e8cccb4b2",
+    "size_bytes": 8994674,
+    "study_version": 2,
+    "file_version": 1,
+    "verified_utc": "2026-11-15T23:48:25.523574+00:00",
+    "retrieved_utc": "2026-11-15T23:48:25.523574+00:00",
+    "verification": "byte_identical_to_nasa_download",
+    "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 8994674,
+      "directory": false,
+      "files": [],
+      "id": "6a282739d9d7246402cb43e1",
+      "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "8.58 MB",
+      "sortingCategory": "Presentations",
+      "status": "active",
+      "subcategory": "",
+      "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+      "version": 1,
+      "visible": true
+    },
+    "license": "No file-specific license exposed; retain NASA and author attribution.",
+    "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+    "classification": "engineering_or_publication",
+    "media_type": "application/pdf",
+    "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+  }
+}

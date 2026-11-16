@@ -1,7 +1,7 @@
 # PSI Flame Microgravity — Flame in Freefall (NASA Space Apps 2026)
 
 > **Bilingual / Bilíngue:** Default interface in **English (`en`)** with persistent top-bar **`Language: EN → PT-BR`** toggle and segmented sidebar **`Language: [EN | PT-BR]`** selector.  
-> Interactive scientific workbench unifying **9 NASA Physical Sciences Informatics (PSI)** microgravity combustion investigations (**16 authentic NASA files, 7,881,267 bytes**) with immutable **SHA-256** provenance, conservative **Pint** unit normalization, side-by-side compatibility checks, and an evidence-first research assistant.
+> Interactive scientific workbench covering **12 NASA Physical Sciences Informatics (PSI)** investigations and two official guides. The archive preserves **40 documents, 82,099,713 bytes** (37 with useful content and three explicitly marked ISA placeholders), immutable **SHA-256** provenance, conservative **Pint** normalization, and an evidence-first research assistant.
 
 ---
 
@@ -9,7 +9,7 @@
 
 On Earth, buoyancy lifts hot combustion gases and draws fresh oxygen inward, shaping a familiar teardrop flame. In orbital microgravity (freefall), natural buoyancy nearly vanishes: flames become spherical, heat and soot remain near the fuel, low-temperature **cool flames** can persist, and smoke aerosols evolve differently along cabin airflow.
 
-NASA's PSI repository spreads these experiments across heterogeneous CSV spreadsheets, engineering requirements PDFs, and final science reports using conflicting unit conventions (`psia`, `psig`, `mmHg`, `cm/s`, mole fractions). **PSI Flame Microgravity** brings 9 high-priority investigations across all three spacecraft fire-safety pillars (**Prevention**, **Detection**, **Suppression**) into one transparent, verifiable explorer where **test conditions are never confused with measured results**.
+NASA's PSI repository spreads these studies across heterogeneous spreadsheets, engineering requirements PDFs, and final reports using conflicting unit conventions (`psia`, `psig`, `mmHg`, `cm/s`, mole fractions). **PSI Flame Microgravity** covers all three spacecraft fire-safety pillars (**Prevention**, **Detection**, **Suppression**) and distinguishes **test conditions, reported experimental results, numerical simulations, calculations and metadata**.
 
 ---
 
@@ -21,8 +21,8 @@ On arrival, **Home / Overview (`home`)** acts as an interactive science exhibit 
 - **Experience B — Investigate Spacecraft Fire Safety**: Interactive 4-step **Guided Journey 2** with the **5 Scientific Questions** framework exploring cabin hazards across **Prevention** (`BASS`, `BASS-II`, `Saffire I–III`), **Detection** (`SAME`, `SAME-R`), and **Suppression** (`FLEX`, `FLEX-2`), live inspection of `PSI-25 · BASS-II` plots and `PSI-102 · SAME` reports, method-boundary guardrails, and 1-click transition to advanced tools with a persistent *Return to Guided Journey* control.
 - **Experience C — Explore Scientific Data & Space Apps Challenge Hub**: Persistent top context navigation bar (**Where you are · `← Back` · `🏠 Home` · `Language: EN → PT-BR`**), an interactive Homepage **Challenge Hub (`SUMMARIZE · RANK · INTERPRET`)**, and direct access to all 7 workspace sections:
 
-1. **Home / Overview (`home`)**: Discovery-first entry, Earth vs. microgravity contrast, verified NASA archive metrics (**2,711** local semantic token-window chunks or **1,517** deterministic offline structural chunks), starting experiences A/B/C, and interactive **Challenge Hub (`SUMMARIZE · RANK · INTERPRET`)**.
-2. **Investigations (`investigations`)**: Searchable catalog of 9 NASA PSI studies + 2 official NASA reference guides with permanent NASA PSI URLs, confirmed DOIs, objectives, safety relevance, caveats, and direct jump into Data Explorer.
+1. **Home / Overview (`home`)**: Discovery-first entry, Earth vs. microgravity contrast, live verified archive/index metrics, starting experiences A/B/C, and interactive **Challenge Hub (`SUMMARIZE · RANK · INTERPRET`)**.
+2. **Investigations (`investigations`)**: Searchable catalog of 12 NASA PSI studies + 2 official reference guides grouped under NASA-CONTEXT, with permanent URLs, confirmed DOIs, objectives, caveats, and direct jump into Data Explorer.
 3. **Data Explorer (`explorer`)**: Study selector (defaulting to `PSI-69 · FLEX`), collapsible **Variable & Unit Glossary**, chart-first **Visual First Look** + **SUMMARIZE & INTERPRET** directly in `Tab 0`, unified Plotly charts paired with **How to Read This Chart**, descriptive statistics, progressive-disclosure engineering controls, source tables with original row numbers, document integrity & SHA-256 verification, in-PDF keyword reader, and ISA-Tab metadata.
 4. **Compare (`compare`)**: Guided cross-study schema and methodology audit (with quick presets such as *FLEX vs BASS-II*, *SAME vs SAME-R*, *Saffire-I vs Saffire-II*) plus a deterministic **0–100 Reading Priority Ranking** chart & matrix (never a safety score).
 5. **Scientific Assistant (`assistant`)**: Conversational `st.chat_message` workflow backed by hybrid search (SQLite **FTS5** + offline `lexical-vectors` or local multilingual embeddings when configured), progressive-disclosure filters, instant-executing example questions, structured **SUMMARIZE / INTERPRET** synthesis cards, and optional Google Gemini API integration (`src/gemini_provider.py`, blocking private `local_upload` excerpts and verifying every claim extratively against retrieved NASA text).
@@ -37,6 +37,9 @@ On arrival, **Home / Overview (`home`)** acts as an interactive science exhibit 
 - **Detection**: `PSI-101` (SAME-R), `PSI-102` (SAME)
 - **Suppression**: `PSI-68` (FLEX-2), `PSI-69` (FLEX)
 - **Context Guides**: *A Researcher's Guide to ISS Combustion Science* and *Complete PSI Database Guide*
+- **Stage 2 additions**: `PSI-62` (UFGM flame-spread modeling, **metadata only**), `PSI-117` (cool-flame CFD and experimental reference series), and `PSI-159` (ACME CFI-G reports, conditions, calculations and reported outcomes).
+
+Stage 2 source hashes, acquisition details, publication/figure maps and availability limits are in [docs/STAGE2_SOURCE_AUDIT.md](docs/STAGE2_SOURCE_AUDIT.md); integration/validation is recorded in [docs/STAGE2_INTEGRATION.md](docs/STAGE2_INTEGRATION.md). Reproduce the verified archive import with `python scripts/import_stage2_archive.py <experienciass.zip> --verify-online`, then `python scripts/ingest_nasa.py`. Offline replay omits `--verify-online` and requires the same previously verified ZIP hash.
 
 ---
 
@@ -59,7 +62,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-On cold start, `app.py` invokes `ensure_scientific_bootstrap()`, initializing `data/scientific.sqlite3` and `data/search.sqlite3` automatically from the preserved repository artifacts in under ~6 seconds with zero external API keys required.
+On cold start, `app.py` invokes `ensure_scientific_bootstrap()`, initializing both SQLite stores from preserved repository artifacts without API keys. Separate source/index checkpoints also detect additions to an existing checkout and recover an interrupted or deferred index update. Initial extraction/model indexing time depends on corpus size and local hardware.
 
 ### Optional Providers (Unconfigured by Default)
 - Local multilingual embeddings (`requirements-models.txt` + `scripts/setup_embeddings.py` + `RAG_EMBEDDING_MODEL`).

@@ -1,0 +1,606 @@
+{
+  "status": "processado",
+  "text": "ONTOLOGY SOURCE REFERENCE\r\nTerm Source Name\tPSI\tEFO\r\nTerm Source File\thttps://psi.nasa.gov/\t\r\nTerm Source Version\t1.0\t\r\nTerm Source Description\tUser defined terms\t\r\nINVESTIGATION\r\nInvestigation Identifier\t\r\nInvestigation Title\t\r\nInvestigation Description\t\r\nInvestigation Submission Date\t\r\nInvestigation Public Release Date\t\r\nINVESTIGATION PUBLICATIONS\r\nInvestigation PubMed ID\r\nInvestigation Publication DOI\r\nInvestigation Publication Author List\r\nInvestigation Publication Title\r\nInvestigation Publication Status\r\nInvestigation Publication Status Term Accession Number\r\nInvestigation Publication Status Term Source REF\r\nINVESTIGATION CONTACTS\r\nInvestigation Person Last Name\r\nInvestigation Person First Name\r\nInvestigation Person Mid Initials\r\nInvestigation Person Email\r\nInvestigation Person Phone\r\nInvestigation Person Fax\r\nInvestigation Person Address\r\nInvestigation Person Affiliation\r\nInvestigation Person Roles\r\nInvestigation Person Roles Term Accession Number\r\nInvestigation Person Roles Term Source REF\r\nSTUDY\r\nStudy Identifier\tPSI-62\r\nStudy Title\tConcurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography\r\nStudy Description\t\r\nStudy Submission Date\t30-Apr-2021\r\nStudy Public Release Date\t14-Nov-2025\r\nStudy File Name\ts_PSI-62.txt\r\nComment[Acknowledgments]\t\r\nComment[Approach]\t\"The approach combined high-resolution computational modeling with experimental validation to study concurrent flame spread in microgravity. A previously developed computational framework  was employed to run fully coupled simulations of fluid–solid responses, focusing on materials subject to charring and ablation. Within this framework, the unsteady FGM method was implemented and tested on various BASS geometries, including flat sheets, spheres, and rod-shaped polymethyl methacrylate (PMMA) samples, as well as wax cylinders.\nExperimental imagery found in PSI from the BASS and BASS-II investigations was post-processed using newly developed two-color tomography methods with DSLR cameras, enabling 3D reconstructions of soot and temperature fields for direct comparison to model predictions. The evaluation metrics included flame geometry, temperature distribution, soot volume fraction, and flame spread rate, with special emphasis on reproducing the “Goldilocks” flammability zone reported by Olson and Ferkul. Comparative analyses were also carried out with a parallel NSF-supported terrestrial flame spread project, ensuring that the predictive capabilities of the UFGM approach were assessed across both microgravity and normal-gravity conditions.\"\r\nComment[DOI]\t10.60555/e9xp-ex83\r\nComment[Data Source Accession]\t\r\nComment[Data Source Link]\t\r\nComment[Experiment Hardware]\t\r\nComment[Experiment Hardware Link]\t\r\nComment[Flight Platform]\t\r\nComment[Funding]\t80NSSC20K0426\r\nComment[Hypothesis]\tThe unsteady flamelet generated manifold (UFGM) approach was believed to be able to accurately reproduce concurrent flame spread in microgravity, including phenomena such as the “Goldilocks” flammability zone, by coupling near-wall thermal, mass transport, and chemical processes with far-field flow dynamics.\r\nComment[Identifiers]\t\r\nComment[Investigation Acronym]\t\r\nComment[Investigation End Date]\t04-30-2021\r\nComment[Investigation Start Date]\t05-01-2019\r\nComment[Managing NASA Center]\tGlenn Research Center (GRC)\r\nComment[Mission End]\t\r\nComment[Mission Link]\t\r\nComment[Mission Name]\t\r\nComment[Mission Start]\t\r\nComment[Objective]\t\"The objective of this research was to develop and validate new flamelet generated manifold (FGM) modeling techniques for concurrent flame spread in microgravity. Concurrent flame spread presented one of the greatest modeling challenges in combustion science due to the intricate coupling between heat transfer, mass transport, and chemical kinetics near the solid-vapor interface. Traditional modeling strategies often relied on hybridized turbulence and chemistry models that were not fully consistent and failed to capture important intermediate reaction pathways.\nTo overcome these shortcomings, this PSI grant advanced the use of an unsteady flamelet generated manifold (UFGM) framework that reduced the complexity of reacting systems by mapping them into lower-dimensional manifolds. The research aimed to leverage this methodology to simulate solid fuel combustion processes with high fidelity, using the NASA Burning and Suppression of Solids (BASS and BASS-II) experiments as benchmarks. Ultimately, the long-term goal was to enable accurate prediction of flammability limits for spacecraft materials and to provide a tool that could also serve as a subgrid-scale model in large-eddy simulations of fires, supporting spacecraft safety and hazard mitigation.\"\r\nComment[Project Identifier]\t\r\nComment[Project Link]\t\r\nComment[Project Title]\t\r\nComment[Project Type]\tGround Investigation\r\nComment[Proposal Title]\tConcurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography\r\nComment[Research Area]\tCombustion Science\r\nComment[Research Impacts]\tThis research provides predictive tools for screening new materials’ flammability limits, which can lead to the design of safer spacecrafts. The development of Large Eddy Simulation subgrid models is expected to improve hazard assessment capabilities critical for managing fire risks during long-duration space missions and within confined spacecraft habitats. On Earth, these advancements could improve combustion modeling by deepening our understanding of coupled thermal, chemical, and flow processes, which betters fire safety standards. The computational methods being refined have the potential to enable more effective fire prevention and mitigation strategies and  foster innovations in diagnostics and simulations applicable across a variety of combustion scenarios. Overall, this research can contribute significantly to safer human exploration in space and improvements to fire safety protocols on Earth.\r\nComment[Space Program]\tNASA, PSI grant\r\nComment[Study Grant Number]\t\r\nComment[SubResearch Area]\tSpacecraft Fire Safety\r\nSTUDY DESIGN DESCRIPTORS\r\nStudy Design Type\tBASS\tFlame Spread\tFlamelet Generated Manifolds\r\nStudy Design Type Term Accession Number\thttps://psi.nasa.gov/\thttps://psi.nasa.gov/\thttps://psi.nasa.gov/\r\nStudy Design Type Term Source REF\tPSI\tPSI\tPSI\r\nSTUDY PUBLICATIONS\r\nStudy PubMed ID\t\t\t\t\r\nStudy Publication DOI\t10.1016/j.combustflame.2017.03.001\t10.1016/j.combustflame.2023.112939\t10.1016/j.combustflame.2023.112910\t10.1016/j.combustflame.2021.111395\r\nStudy Publication Author List\tOlson Sandra L., Ferkul Paul V.\tBudzinski Kenneth, DesJardin Paul E.\tBudzinski Kenneth, DesJardin Paul E.\tAphale Siddhant S., DesJardin Paul E.\r\nStudy Publication Title\tMicrogravity flammability boundary for PMMA rods in axial stagnation flow: Experimental results and energy balance analyses (2017)\tRadiative flamelet generated manifolds for solid fuel flame spread in microgravity (2023)\tTheoretical estimates of flammability bounds for thin condensed fuel diffusion flames in microgravity using detailed models of chemistry and radiation (2023)\tTwo-color pyrometry based flame to fuel surface radiative heat flux diagnostic using flamelets\r\nStudy Publication Status\tpublished\tpublished\tpublished\tpublished\r\nStudy Publication Status Term Accession Number\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\thttp://www.ebi.ac.uk/efo/EFO_0001796\r\nStudy Publication Status Term Source REF\tEFO\tEFO\tEFO\tEFO\r\nComment[Study Publication Link]\thttps://doi.org/10.1016/j.combustflame.2017.03.001\thttps://doi.org/10.1016/j.combustflame.2023.112939\thttps://doi.org/10.1016/j.combustflame.2023.112910\thttps://doi.org/10.1016/j.combustflame.2021.111395\r\nSTUDY FACTORS\r\nStudy Factor Name\r\nStudy Factor Type\r\nStudy Factor Type Term Accession Number\r\nStudy Factor Type Term Source REF\r\nSTUDY ASSAYS\r\nStudy Assay File Name\r\nStudy Assay Measurement Type\r\nStudy Assay Measurement Type Term Accession Number\r\nStudy Assay Measurement Type Term Source REF\r\nStudy Assay Technology Type\r\nStudy Assay Technology Type Term Accession Number\r\nStudy Assay Technology Type Term Source REF\r\nStudy Assay Technology Platform\r\nSTUDY PROTOCOLS\r\nStudy Protocol Name\r\nStudy Protocol Type\r\nStudy Protocol Type Term Accession Number\r\nStudy Protocol Type Term Source REF\r\nStudy Protocol Description\r\nStudy Protocol URI\r\nStudy Protocol Version\r\nStudy Protocol Parameters Name\r\nStudy Protocol Parameters Name Term Accession Number\r\nStudy Protocol Parameters Name Term Source REF\r\nStudy Protocol Components Name\r\nStudy Protocol Components Type\r\nStudy Protocol Components Type Term Accession Number\r\nStudy Protocol Components Type Term Source REF\r\nSTUDY CONTACTS\r\nStudy Person Last Name\tDesJardin\tUrban\r\nStudy Person First Name\tPaul\tDavid\r\nStudy Person Mid Initials\t\t\r\nStudy Person Email\tped3@buffalo.edu\tdavid.l.urban@nasa.gov\r\nStudy Person Phone\t\t\r\nStudy Person Fax\t\t\r\nStudy Person Address\t\t\r\nStudy Person Affiliation\tNew York University, Buffalo\tNASA GRC\r\nStudy Person Roles\tPrincipal Investigator (PI)\tProject Scientist\r\nStudy Person Roles Term Accession Number\tPrincipal Investigator (PI)\tProject Scientist\r\nStudy Person Roles Term Source REF\t\t\r\nComment[orcidIdentifier]\t0009-0000-0124-2376\t0000-0003-0427-1871\r\n",
+  "pages": [
+    {
+      "page": 1,
+      "location": "ISA > Estudo > Título",
+      "text": "PSI-62 Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography"
+    },
+    {
+      "page": 2,
+      "location": "ISA > Estudo > Approach",
+      "text": "The approach combined high-resolution computational modeling with experimental validation to study concurrent flame spread in microgravity. A previously developed computational framework  was employed to run fully coupled simulations of fluid–solid responses, focusing on materials subject to charring and ablation. Within this framework, the unsteady FGM method was implemented and tested on various BASS geometries, including flat sheets, spheres, and rod-shaped polymethyl methacrylate (PMMA) samples, as well as wax cylinders.\nExperimental imagery found in PSI from the BASS and BASS-II investigations was post-processed using newly developed two-color tomography methods with DSLR cameras, enabling 3D reconstructions of soot and temperature fields for direct comparison to model predictions. The evaluation metrics included flame geometry, temperature distribution, soot volume fraction, and flame spread rate, with special emphasis on reproducing the “Goldilocks” flammability zone reported by Olson and Ferkul. Comparative analyses were also carried out with a parallel NSF-supported terrestrial flame spread project, ensuring that the predictive capabilities of the UFGM approach were assessed across both microgravity and normal-gravity conditions."
+    },
+    {
+      "page": 3,
+      "location": "ISA > Estudo > DOI",
+      "text": "10.60555/e9xp-ex83"
+    },
+    {
+      "page": 4,
+      "location": "ISA > Estudo > Funding",
+      "text": "80NSSC20K0426"
+    },
+    {
+      "page": 5,
+      "location": "ISA > Estudo > Hypothesis",
+      "text": "The unsteady flamelet generated manifold (UFGM) approach was believed to be able to accurately reproduce concurrent flame spread in microgravity, including phenomena such as the “Goldilocks” flammability zone, by coupling near-wall thermal, mass transport, and chemical processes with far-field flow dynamics."
+    },
+    {
+      "page": 6,
+      "location": "ISA > Estudo > Investigation End Date",
+      "text": "2021-04-30"
+    },
+    {
+      "page": 7,
+      "location": "ISA > Estudo > Investigation Start Date",
+      "text": "2019-05-01"
+    },
+    {
+      "page": 8,
+      "location": "ISA > Estudo > Managing NASA Center",
+      "text": "Glenn Research Center (GRC)"
+    },
+    {
+      "page": 9,
+      "location": "ISA > Estudo > Objective",
+      "text": "The objective of this research was to develop and validate new flamelet generated manifold (FGM) modeling techniques for concurrent flame spread in microgravity. Concurrent flame spread presented one of the greatest modeling challenges in combustion science due to the intricate coupling between heat transfer, mass transport, and chemical kinetics near the solid-vapor interface. Traditional modeling strategies often relied on hybridized turbulence and chemistry models that were not fully consistent and failed to capture important intermediate reaction pathways.\nTo overcome these shortcomings, this PSI grant advanced the use of an unsteady flamelet generated manifold (UFGM) framework that reduced the complexity of reacting systems by mapping them into lower-dimensional manifolds. The research aimed to leverage this methodology to simulate solid fuel combustion processes with high fidelity, using the NASA Burning and Suppression of Solids (BASS and BASS-II) experiments as benchmarks. Ultimately, the long-term goal was to enable accurate prediction of flammability limits for spacecraft materials and to provide a tool that could also serve as a subgrid-scale model in large-eddy simulations of fires, supporting spacecraft safety and hazard mitigation."
+    },
+    {
+      "page": 10,
+      "location": "ISA > Estudo > Project Type",
+      "text": "Ground Investigation"
+    },
+    {
+      "page": 11,
+      "location": "ISA > Estudo > Proposal Title",
+      "text": "Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography"
+    },
+    {
+      "page": 12,
+      "location": "ISA > Estudo > Research Area",
+      "text": "Combustion Science"
+    },
+    {
+      "page": 13,
+      "location": "ISA > Estudo > Research Impacts",
+      "text": "This research provides predictive tools for screening new materials’ flammability limits, which can lead to the design of safer spacecrafts. The development of Large Eddy Simulation subgrid models is expected to improve hazard assessment capabilities critical for managing fire risks during long-duration space missions and within confined spacecraft habitats. On Earth, these advancements could improve combustion modeling by deepening our understanding of coupled thermal, chemical, and flow processes, which betters fire safety standards. The computational methods being refined have the potential to enable more effective fire prevention and mitigation strategies and  foster innovations in diagnostics and simulations applicable across a variety of combustion scenarios. Overall, this research can contribute significantly to safer human exploration in space and improvements to fire safety protocols on Earth."
+    },
+    {
+      "page": 14,
+      "location": "ISA > Estudo > Space Program",
+      "text": "NASA, PSI grant"
+    },
+    {
+      "page": 15,
+      "location": "ISA > Estudo > SubResearch Area",
+      "text": "Spacecraft Fire Safety"
+    },
+    {
+      "page": 16,
+      "location": "ISA > Estudo > Palavras-chave",
+      "text": "BASS, Flame Spread, Flamelet Generated Manifolds"
+    },
+    {
+      "page": 17,
+      "location": "ISA > Publicação 1",
+      "text": "Microgravity flammability boundary for PMMA rods in axial stagnation flow: Experimental results and energy balance analyses Olson Sandra L., Ferkul Paul V. 2017 10.1016/j.combustflame.2017.03.001"
+    },
+    {
+      "page": 18,
+      "location": "ISA > Publicação 2",
+      "text": "Radiative flamelet generated manifolds for solid fuel flame spread in microgravity Budzinski Kenneth, DesJardin Paul E. 2023 10.1016/j.combustflame.2023.112939"
+    },
+    {
+      "page": 19,
+      "location": "ISA > Publicação 3",
+      "text": "Theoretical estimates of flammability bounds for thin condensed fuel diffusion flames in microgravity using detailed models of chemistry and radiation Budzinski Kenneth, DesJardin Paul E. 2023 10.1016/j.combustflame.2023.112910"
+    },
+    {
+      "page": 20,
+      "location": "ISA > Publicação 4",
+      "text": "Two-color pyrometry based flame to fuel surface radiative heat flux diagnostic using flamelets Aphale Siddhant S., DesJardin Paul E. 10.1016/j.combustflame.2021.111395"
+    }
+  ],
+  "tables": [
+    {
+      "name": "Publicações (ISA)",
+      "location": "ISA > Estudo > Publicações",
+      "header_row": 1,
+      "columns": [
+        "Ano",
+        "Título",
+        "Autores",
+        "DOI",
+        "Link",
+        "Situação"
+      ],
+      "original_headers": [
+        "Ano",
+        "Título",
+        "Autores",
+        "DOI",
+        "Link",
+        "Situação"
+      ],
+      "rows": [
+        [
+          "2017",
+          "Microgravity flammability boundary for PMMA rods in axial stagnation flow: Experimental results and energy balance analyses",
+          "Olson Sandra L., Ferkul Paul V.",
+          "10.1016/j.combustflame.2017.03.001",
+          "https://doi.org/10.1016/j.combustflame.2017.03.001",
+          "published"
+        ],
+        [
+          "2023",
+          "Radiative flamelet generated manifolds for solid fuel flame spread in microgravity",
+          "Budzinski Kenneth, DesJardin Paul E.",
+          "10.1016/j.combustflame.2023.112939",
+          "https://doi.org/10.1016/j.combustflame.2023.112939",
+          "published"
+        ],
+        [
+          "2023",
+          "Theoretical estimates of flammability bounds for thin condensed fuel diffusion flames in microgravity using detailed models of chemistry and radiation",
+          "Budzinski Kenneth, DesJardin Paul E.",
+          "10.1016/j.combustflame.2023.112910",
+          "https://doi.org/10.1016/j.combustflame.2023.112910",
+          "published"
+        ],
+        [
+          null,
+          "Two-color pyrometry based flame to fuel surface radiative heat flux diagnostic using flamelets",
+          "Aphale Siddhant S., DesJardin Paul E.",
+          "10.1016/j.combustflame.2021.111395",
+          "https://doi.org/10.1016/j.combustflame.2021.111395",
+          "published"
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "ISA",
+        "range": "",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "catalog",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "Ano",
+          "base": "Ano",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 4,
+          "n_nonempty": 3,
+          "n_numeric": 3,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 2017.0,
+          "max": 2023.0
+        },
+        {
+          "name": "Título",
+          "base": "Título",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 4,
+          "n_nonempty": 4,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Autores",
+          "base": "Autores",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 4,
+          "n_nonempty": 4,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "DOI",
+          "base": "DOI",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 4,
+          "n_nonempty": 4,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Link",
+          "base": "Link",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 4,
+          "n_nonempty": 4,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Situação",
+          "base": "Situação",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 4,
+          "n_nonempty": 4,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        }
+      ],
+      "chart": {
+        "type": "catalog",
+        "x": null,
+        "y": []
+      },
+      "flags": [
+        {
+          "level": "info",
+          "code": "valores_ausentes",
+          "message": "'Ano': 1 de 4 valores ausentes.",
+          "columns": [
+            "Ano"
+          ],
+          "suggest": {}
+        }
+      ],
+      "source_column_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "evidence_kind": "metadata",
+      "field_classification": [],
+      "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample."
+    },
+    {
+      "name": "Contatos (ISA)",
+      "location": "ISA > Estudo > Contatos",
+      "header_row": 1,
+      "columns": [
+        "Sobrenome",
+        "Nome",
+        "Função",
+        "Afiliação",
+        "E-mail",
+        "ORCID"
+      ],
+      "original_headers": [
+        "Sobrenome",
+        "Nome",
+        "Função",
+        "Afiliação",
+        "E-mail",
+        "ORCID"
+      ],
+      "rows": [
+        [
+          "DesJardin",
+          "Paul",
+          "Principal Investigator (PI)",
+          "New York University, Buffalo",
+          "ped3@buffalo.edu",
+          "0009-0000-0124-2376"
+        ],
+        [
+          "Urban",
+          "David",
+          "Project Scientist",
+          "NASA GRC",
+          "david.l.urban@nasa.gov",
+          "0000-0003-0427-1871"
+        ]
+      ],
+      "source_rows": [
+        2,
+        3
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "ISA",
+        "range": "",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "catalog",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "Sobrenome",
+          "base": "Sobrenome",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Nome",
+          "base": "Nome",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Função",
+          "base": "Função",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "Afiliação",
+          "base": "Afiliação",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "E-mail",
+          "base": "E-mail",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "ORCID",
+          "base": "ORCID",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 2,
+          "n_nonempty": 2,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        }
+      ],
+      "chart": {
+        "type": "catalog",
+        "x": null,
+        "y": []
+      },
+      "flags": [],
+      "source_column_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "evidence_kind": "metadata",
+      "field_classification": [],
+      "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample."
+    }
+  ],
+  "isa": {
+    "study": {
+      "id": "PSI-62",
+      "title": "Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography",
+      "description": "",
+      "submitted": "2021-04-30",
+      "released": "2025-11-14",
+      "file": "s_PSI-62.txt"
+    },
+    "comments": {
+      "Approach": "The approach combined high-resolution computational modeling with experimental validation to study concurrent flame spread in microgravity. A previously developed computational framework  was employed to run fully coupled simulations of fluid–solid responses, focusing on materials subject to charring and ablation. Within this framework, the unsteady FGM method was implemented and tested on various BASS geometries, including flat sheets, spheres, and rod-shaped polymethyl methacrylate (PMMA) samples, as well as wax cylinders.\nExperimental imagery found in PSI from the BASS and BASS-II investigations was post-processed using newly developed two-color tomography methods with DSLR cameras, enabling 3D reconstructions of soot and temperature fields for direct comparison to model predictions. The evaluation metrics included flame geometry, temperature distribution, soot volume fraction, and flame spread rate, with special emphasis on reproducing the “Goldilocks” flammability zone reported by Olson and Ferkul. Comparative analyses were also carried out with a parallel NSF-supported terrestrial flame spread project, ensuring that the predictive capabilities of the UFGM approach were assessed across both microgravity and normal-gravity conditions.",
+      "DOI": "10.60555/e9xp-ex83",
+      "Funding": "80NSSC20K0426",
+      "Hypothesis": "The unsteady flamelet generated manifold (UFGM) approach was believed to be able to accurately reproduce concurrent flame spread in microgravity, including phenomena such as the “Goldilocks” flammability zone, by coupling near-wall thermal, mass transport, and chemical processes with far-field flow dynamics.",
+      "Investigation End Date": "2021-04-30",
+      "Investigation Start Date": "2019-05-01",
+      "Managing NASA Center": "Glenn Research Center (GRC)",
+      "Objective": "The objective of this research was to develop and validate new flamelet generated manifold (FGM) modeling techniques for concurrent flame spread in microgravity. Concurrent flame spread presented one of the greatest modeling challenges in combustion science due to the intricate coupling between heat transfer, mass transport, and chemical kinetics near the solid-vapor interface. Traditional modeling strategies often relied on hybridized turbulence and chemistry models that were not fully consistent and failed to capture important intermediate reaction pathways.\nTo overcome these shortcomings, this PSI grant advanced the use of an unsteady flamelet generated manifold (UFGM) framework that reduced the complexity of reacting systems by mapping them into lower-dimensional manifolds. The research aimed to leverage this methodology to simulate solid fuel combustion processes with high fidelity, using the NASA Burning and Suppression of Solids (BASS and BASS-II) experiments as benchmarks. Ultimately, the long-term goal was to enable accurate prediction of flammability limits for spacecraft materials and to provide a tool that could also serve as a subgrid-scale model in large-eddy simulations of fires, supporting spacecraft safety and hazard mitigation.",
+      "Project Type": "Ground Investigation",
+      "Proposal Title": "Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography",
+      "Research Area": "Combustion Science",
+      "Research Impacts": "This research provides predictive tools for screening new materials’ flammability limits, which can lead to the design of safer spacecrafts. The development of Large Eddy Simulation subgrid models is expected to improve hazard assessment capabilities critical for managing fire risks during long-duration space missions and within confined spacecraft habitats. On Earth, these advancements could improve combustion modeling by deepening our understanding of coupled thermal, chemical, and flow processes, which betters fire safety standards. The computational methods being refined have the potential to enable more effective fire prevention and mitigation strategies and  foster innovations in diagnostics and simulations applicable across a variety of combustion scenarios. Overall, this research can contribute significantly to safer human exploration in space and improvements to fire safety protocols on Earth.",
+      "Space Program": "NASA, PSI grant",
+      "SubResearch Area": "Spacecraft Fire Safety"
+    },
+    "design_types": [
+      "BASS",
+      "Flame Spread",
+      "Flamelet Generated Manifolds"
+    ],
+    "publications": [
+      {
+        "pubmed": "",
+        "doi": "10.1016/j.combustflame.2017.03.001",
+        "authors": "Olson Sandra L., Ferkul Paul V.",
+        "title": "Microgravity flammability boundary for PMMA rods in axial stagnation flow: Experimental results and energy balance analyses",
+        "status": "published",
+        "link": "https://doi.org/10.1016/j.combustflame.2017.03.001",
+        "year": "2017"
+      },
+      {
+        "pubmed": "",
+        "doi": "10.1016/j.combustflame.2023.112939",
+        "authors": "Budzinski Kenneth, DesJardin Paul E.",
+        "title": "Radiative flamelet generated manifolds for solid fuel flame spread in microgravity",
+        "status": "published",
+        "link": "https://doi.org/10.1016/j.combustflame.2023.112939",
+        "year": "2023"
+      },
+      {
+        "pubmed": "",
+        "doi": "10.1016/j.combustflame.2023.112910",
+        "authors": "Budzinski Kenneth, DesJardin Paul E.",
+        "title": "Theoretical estimates of flammability bounds for thin condensed fuel diffusion flames in microgravity using detailed models of chemistry and radiation",
+        "status": "published",
+        "link": "https://doi.org/10.1016/j.combustflame.2023.112910",
+        "year": "2023"
+      },
+      {
+        "pubmed": "",
+        "doi": "10.1016/j.combustflame.2021.111395",
+        "authors": "Aphale Siddhant S., DesJardin Paul E.",
+        "title": "Two-color pyrometry based flame to fuel surface radiative heat flux diagnostic using flamelets",
+        "status": "published",
+        "link": "https://doi.org/10.1016/j.combustflame.2021.111395",
+        "year": ""
+      }
+    ],
+    "contacts": [
+      {
+        "sobrenome": "DesJardin",
+        "nome": "Paul",
+        "email": "ped3@buffalo.edu",
+        "afiliacao": "New York University, Buffalo",
+        "funcao": "Principal Investigator (PI)",
+        "orcid": "0009-0000-0124-2376"
+      },
+      {
+        "sobrenome": "Urban",
+        "nome": "David",
+        "email": "david.l.urban@nasa.gov",
+        "afiliacao": "NASA GRC",
+        "funcao": "Project Scientist",
+        "orcid": "0000-0003-0427-1871"
+      }
+    ],
+    "empty_sections": [
+      "STUDY FACTORS",
+      "STUDY ASSAYS",
+      "STUDY PROTOCOLS"
+    ]
+  },
+  "metadata": {
+    "encoding": "utf-8-sig",
+    "formato": "ISA-Tab",
+    "estudo": "PSI-62",
+    "evidence_kind": "metadata",
+    "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample."
+  },
+  "warnings": [
+    "Seções ISA sem conteúdo: STUDY FACTORS, STUDY ASSAYS, STUDY PROTOCOLS. Fatores, ensaios e protocolos não estão descritos; as condições devem vir das planilhas e publicações."
+  ],
+  "schema_version": 4,
+  "source_filename": "i_Investigation.txt",
+  "source_extension": ".txt",
+  "document": {
+    "name": "i_Investigation.txt",
+    "extension": ".txt",
+    "sha256": "fbbe3e34f381692c62721f4d59a6e85121e90cac852a5846a885da8935edaa16",
+    "size_bytes": 9402
+  },
+  "evidence_kind": "metadata",
+  "observations": [],
+  "provenance": {
+    "study_id": "PSI-62",
+    "source": "NASA Physical Sciences Informatics",
+    "filename": "metadata/i_Investigation.txt",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-62",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-62/download?file=PSI-62_metadata_NEWID-7_Concurrent+Flame+Spr.zip&version=1&redirect=false",
+    "doi": "10.60555/e9xp-ex83",
+    "sha256": "fbbe3e34f381692c62721f4d59a6e85121e90cac852a5846a885da8935edaa16",
+    "size_bytes": 9402,
+    "study_version": 1,
+    "file_version": 1,
+    "verified_utc": "2026-11-15T23:48:15.172723+00:00",
+    "retrieved_utc": "2026-11-15T23:48:15.172723+00:00",
+    "verification": "byte_identical_to_nasa_download",
+    "archive_member": "exeperiencias/PSI-62/PSI-62_metadata_NEWID-7_Concurrent Flame Spr (1).zip",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 9694,
+      "directory": false,
+      "files": [],
+      "id": "691cc8941e54369ebd26f6f7",
+      "key": "psi-data/PSI-62/metadata/PSI-62_metadata_NEWID-7_Concurrent Flame Spr.zip",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "9.47 KB",
+      "sortingCategory": "Investigation Metadata Files",
+      "status": "active",
+      "subcategory": null,
+      "updated": "Wed, 19 Nov 2025 03:27:16 GMT",
+      "version": 1,
+      "visible": true
+    },
+    "license": "No file-specific license exposed; retain NASA and author attribution.",
+    "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+    "classification": "metadata",
+    "media_type": "text/plain",
+    "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample.",
+    "parent_archive_sha256": "e8f984349473da4763818a424719afcb212c4876e35961792aefc3604aa9ea7a",
+    "parent_archive_filename": "PSI-62_metadata_NEWID-7_Concurrent Flame Spr.zip",
+    "nested_member": "i_Investigation.txt"
+  }
+}

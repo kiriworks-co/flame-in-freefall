@@ -1,0 +1,2142 @@
+{
+  "status": "processado",
+  "text": "Extinction characteristics of isolated n-\n        alkane fuel droplets during low\ntemperature cool flame droplet burning\n                                     in air\n\n        Tanvir Farouk and Frederick Dryer\n       University of South Carolina, Columbia, SC, USA\n\nExtinction characteristics of isolated n-alkane fuel droplets\n during low temperature cool flame droplet burning in air\n\n                         T. I. Farouka and F. L. Dryera,b\n\n                             a Department of Mechanical Engineering\n                 University of South Carolina, Columbia, SC 29208, USA\n\n\n                  b Department of Mechanical and Aerospace Engineering\n                   Princeton University, Princeton, NJ 08544, USA\n\n\n                          39th International Symposium on Combustion\n                                 Vancouver, Canada\n                                  July 24th – 29th, 2022\n                                                                                                             2\n\n“Cool” Flame – NASA FLEX Cool Program\n\n\n             Hot Flame\n                                                                                              2 stage hot-cool flame\n\n\n                                                                    n-heptane\n\n                   First Stage                                                                  2 stage hot-cool flame\n\n                                                                      n-octane\n\n                                                                                              2 stage hot-cool flame\n                                                                                                                 Single stage cool flame            “Cool Flame”\n\n                                                                  n-decane\n\n                                                                                              2 stage hot-cool flame\n            Second Stage                                                                                            3 stage hot-warm-cool flame\n\nV. Nayagam et al. Combustion and Flame (2012), 159, 3583 – 3588.                  n-dodecane\nT. Farouk and F. L. Dryer Combustion and Flame (2014), 161, 565 – 581\nV. Nayagam et al. Combustion and Flame (2015), 162, 2140 – 2147\nT. Farouk et al. Proc. Comb. Inst (2017), 36, 2523 – 2530                                                                                                                  3A. Cuoci et al. Proc. Comb. Inst (2017), 36, 2531 – 2539\n\nn-Decane: Two Stage Burning\n                                                                     •  Initiation energy plays a critical role in driving\n                                                       the hot flame condition.\n\n                                                                     •  Radiative loss is critical for transition from hot\n                                                             to cool flame burning.\n\n                                                                                                          Radiative\n                                                                                                                    extinction\n\n\n\n\n\n      Evolution of droplet diameter and FSR (n-decane,\n          do = 4.00 mm, air, atmospheric pressure)\n\n\n  Transition from hot to cool flame burning.\n\n\nV. Nayagam et al. Combustion and Flame (2015), 162, 2140 – 2147                   Evolution of burning rate and peak temperature (n-decane,                                                                                                                 4T. Farouk et al. Proc. Comb. Inst (2017), 36, 2523 – 2530                                   do = 4.00 mm, air, atmospheric pressure)\n\nn-Decane: Single Stage Burning\n\n                                                                               • Low ignition energy\n                                                                               •  Combustion behavior affected by fuel\n                                                              flash point relative to ambient and\n                                                                             initial fuel liquid temperature\n\n\n\n\n\n     Evolution of droplet diameter and FSR (n-decane,\n          do = 4.00 mm, air, atmospheric pressure)\n\n• Sufficiently constraining initiation energy can lead\nto single stage sustained cool flame burning.\n\n\nT. Farouk et al. Proc. Comb. Inst (2017), 36, 2523 – 2530                            Evolution of burning rate and peak temperature (n-decane,                                                                                                                 5                                                                                   do = 4.00 mm, air, atmospheric pressure)\n\nn-Dodecane: Three Stage Burning\n\n\n\n\n\n       Evolution of droplet diameter, radiant heat and FSR (n-dodecane, do = 4.40 mm, 2.75\n                             atm, 21% O2, 29% He, balance N2)\n\n\n  •  Qualitative agreement between predictions and observations\n  • No optimization of model input, physical, or kinetic parameters to\n    obtain these comparisons\n\n   T. Farouk et al. Proc. Comb. Inst (2019), 37, 3353 – 3361                                                                         6\n\nTransient Droplet Combustion Model                                                          Gas Phase:\n                                                                                                       •  Mass conservation\n                                                                                                       •   Species equation\n                                                                                                       •  Energy conservation\n                                                                                       Multi-component molecular diffusion\n                                                                                       Detailed chemical kinetics  - high, intermediate and\n                                                                                                 low temperature\n                                                                                       Statistical narrowband radiation model                                                                                                          mv                                                                                      C7 – C20 kinetic model, 583 species, 2609 reactions*\n                                                       drs                       mp                         Fiber:\n                                                                                                                      •  One dimensional temperature distribution                           qambient                          dt   ∂Yl , i                                                                                                                      •  Energy exchange with flame and ambient                                 qloss                   D                                                                                                                                                                                                                          l , i ∂r            qR\n                                                                                          q fib\n                          ∂T                        λ        ∂T            Droplet Surface:Soot:                                                                                                                                  l       λ                          ∂r      ∂r                    • Surface regression – Adaptive Grid•   Discrete sectional\n                                                                                                                                 • Evaporation of fuel   method\n                                                                                                                                 • Condensation/Dissolution of products•   Definition of classes of\n                                                                                                                                 • Radiative heat exchange   molecules (BINS)\n    describing large PAH                                                                    Liquid Phase:\n   and soot particles                                                                                                 •  Mass conservation\n•   Reactions describing                                                                                                 •   Species equation\n    nucleation,                                                                                                 •  Energy conservation\n    coagulation, oxidation                                                              Activity coefficient – UNIFAC Formulation\n    of BINs                                                                                                                       7                                                                                                    *M. Sarathy et al. Combust. Flame (2011), 158, 2338 – 2357\n\nProperties: n-heptane, n-decane, n-dodecane\n\n          Shorter Chain Length        Longer Chain\n\n\n\n            n-heptane             n-decane                 n-dodecane\n                                                    Longer straight chain HC more\n                                                          prevalent low temperature kinetics\n\n                 Property                        n-C7H16          n-C10H22         n-C12H26\nMolecular weight, Mw (g/mol)                         100.20           142.29          170.34\nFlash point, Tf (K)                                   269.1            319.1           344.0\nBoiling point, Tb (K)                                  372.0            447.4           487.0\nDensity, ρL (kg/m3)                                   679.5            730.2           749.5\nSpecific Heat, cP (kJ/kmol K)                         224.64           314.56          376.15\nHeat of vaporization, ∆HV (kJ/mol)                     36.41            52.09            61.0\nHeat of combustion, ∆Hc (kJ/mol)                     4849.2           6779.2          7901.4\n                                                                                                                 8\n\nn-Alkane Burning Characteristics: Model Validation (1 atm, Air)\n\n               Hot                                            Hot                                        Hot\n             Flame                                        Flame                                    Flame\n              Extinction                                            Extinction                                       Extinction\n\n                          Cool                                            Cool                                           Cool\n                        Flame                                         Flame                                        Flame\n                           Extinction                                             Extinction                                            Extinction\n\n\n\n\n    Experiment                            Experiment                           Experiment\n     dext HF   = 3.41 mm                       dext HF   = 3.32 mm                      dext HF   = 4.16 mm\n     dext CF   = 1.13 mm                       dext CF   = 0.59 mm                      dext CF   = 0.53 mm\n    Kavg HF  = 0.46 mm2s-1                Kavg HF  = 0.41 mm2s-1               Kavg HF  = 0.38 mm2s-1\n    Kavg CF  = 0.38 mm2s-1                Kavg CF  = 0.39 mm2s-1               Kavg CF  = 0.52 mm2s-1\n    Model                               Model                              Model\n     dext HF   = 3.53 mm                       dext HF   = 3.42 mm                      dext HF   = 4.34 mm\n     dext CF   = 0.81 mm                       dext CF   = 0.30 mm                      dext CF   = 0.24 mm\n    Kavg HF  = 0.44 mm2s-1                Kavg HF  = 0.37 mm2s-1               Kavg HF  = 0.32 mm2s-1\n    Kavg CF  = 0.39 mm2s-1                Kavg CF  = 0.42 mm2s-1               Kavg CF  = 0.52 mm2s-1        9\n\nn-Alkane Burning Characteristics: 1 atm, Air\n\n                                                            • During transition to second stage burn, the FSR and the\n                                             Tmax for all three fuels are almost identical.\n\n\n\n                                                                                            Critical flame diameter, results                                            FSR                                                                                          in excessive radiative loss –\n                                                                                       transition to second stage\n\n\n\n\n                                                            • Kb,CF C12 > Kb,CF C10 > Kb,CF C7\n                                                            • Tmax,CF C12 ~ 775 K > Tmax,CF C10 ~ 737 K > Tmax,CF C7 ~ 720 K\n                                                            • de,CF C7 > de,CF C10 > de,CF C12\n\n\nEvolution of droplet diameter, FSR, Kb and Tmax for                                                                                                                 10   n-alkane droplets (do = 4.00 mm, 1 atm, air)\n\nExtinction Diameter\n\n\n\n\n\n                       Comparison of measured and predicted hot and cool flame extinction diameter for different\n                                                     initial droplet diameter for the three n-alkane fuels (atmospheric air)\n•  High temperature combustion is strongly governed by the small species kinetics – all three fuels share\n   nearly identical values of HF extinction diameter for the same do\n•  The LTC differs with carbon number as each involve reactions associated with the carbon number of the\n   fuel and the large intermediates produced. The overall rates of isomerization of radical-O2 adducts\n   controlling rate of degenerate chain branching rate increase from C7 to C12\n•  The CF extinction is dictated by the increase in decomposition of •O2QnOOH for all three fuels.\n\n                                                                                                                          11\n\nExtinction Characteristics: Pressure Dependence\n\n                                                                •  For pressure ≤ 1.0 atm, two stage combustion – hot\n                                           and cool flame extinction.\n\n                                                                •  At 1.25 atm, multi-cycling of hot-cool-hot-cool flame\n                                                             transition.\n\n                                                                •  At 3.0 atm, the system transitions to a stable “Warm”\n                                                     flame.\n\n                                                                •  Cool flame temperature increases with pressure and\n                                                         results in a hot flame reignition.\n\n                                                                •  “Warm” flame is dictated by NTC kinetics and\n                                                   competition for OH between hydrocarbon and\n                                              oxygenated hydrocarbon fragments.\n\n\n\n\nEvolution of FSR, Kb and Tmax for n-dodecane droplets                                                                                                                    12        for different pressure (do = 4.00 mm, air)\n\nMulticycle Behavior\n\n\n\n\n\n Evolution of Kb and Tmax for n-dodecane droplet\n   combustion at 1.25 atm (do = 7.00 mm, air)\n•  Four “Hot-Cool” flame transition.\n•  At every transition, the cool flame\n   temperature decreases significantly, the\n   burn time increases.\n•  The hot flame behavior remains unaltered.\n\n\n                                                                                                                13\n\nMulticycle Behavior\n\n\n\n\n\n Evolution of Kb and Tmax for n-dodecane droplet\n   combustion at 1.25 atm (do = 7.00 mm, air)\n\n•  Four “Hot-Cool” flame transition.\n•  At every transition, the cool flame\n   temperature decreases significantly, the\n   burn time increases.\n•  The hot flame behavior remains unaltered.\n\n  Spatiotemporal contour of a) gas phase temperature and mass fraction of b) H2O, c) CO2, d) CO, e) H2O2 and f) CH2O for n-dodecane\n                            droplet undergoing multiple hot-cool flame transitions (do = 7.00 mm, 1.25 atm, air).                         14\n\nExtinction Diameter: Pressure Dependence\n\n\n\n                                                                  •  Both hot and cool flame extinction diameter has a\n                                                       non-linear dependence on pressure.\n\n                                                                  •  de,CF decreases as pressure is increased, and is\n                                                 absent at 3 atm as the droplet burns to completion\n                                                         following a “Warm” flame combustion\n                                                                  •  The de,CF is most sensitive to:\n\n                                         •O2QnOOH → •OQn`OOH + OH\n                                         •O2QnOOH → QnOOH + O2\n\n  Comparison of predicted and measured de,HF and de,CF as a\nfunction of operating pressure for of n-dodecane droplets burning\n                         in air. (do = 4.00 mm).\n\n\n\n                                                                                                                 15\n\nSummary\n • Two-stage hot-cool flame burning mode transitions are demonstrated to exist for the three\n fuels, and the maximum flame temperature at which transition to the second stage occurred\nwas universally found to be ~ 1200K.\n • Hot flame characteristics of all three fuels indicate that predicted extinction phenomena are all\n very similar.\n • Cool flame extinction properties are significantly affected by the n-alkane molecular weight,\n and the chain length of the n-alkane has significant effect on the cool flame reactivity - larger n-\n alkane exhibited more robust cool flame (i.e., higher temperature) and hence smaller extinction\n diameters.\n • Universally, de,CF for each fuel varies linearly with initial droplet diameter, but unlike de,HF these\n relationships do not collapse to a single function.\n • n-Dodecane droplet combustion reveal a strong dependence of observations on ambient\n pressure. Single, two-stage hot-cool flame combustion transitions to a multi-cycle combustion\n behavior at ambient pressures above one atmosphere, and eventually into a hot - “Warm” flame\n transition.\n\n\n\n                                                                                                                16\n\nAcknowledgements\n\n\n\n\n   • This work was supported by the National Aeronautics and Space Administration\n   through grants NNX17AF97A (TIF).\n\n    • Thanks to Drs. Daniel Dietrich, Vedha Nayagam and Forman Williams for interest\n  and insightful discussions throughout the course of this investigation.\n\n\n\n\n\n                                                                                                                17\n\nBackup\n\n\n\n\n\n                     Evolution of radiant energy (n-heptane,                     Evolution of radiant energy (n-decane,\n                           do = 3.89 mm, air, 1 atm)                                  do = 3.88 mm, air, 1 atm)\n\n\n                   Similar radiant energy during extinction for n-heptane and n-decane.\n\n\n\n\n                                                                                                                18",
+  "pages": [
+    {
+      "page": 1,
+      "location": "página 1",
+      "text": "Extinction characteristics of isolated n-\n        alkane fuel droplets during low\ntemperature cool flame droplet burning\n                                     in air\n\n        Tanvir Farouk and Frederick Dryer\n       University of South Carolina, Columbia, SC, USA",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            82.17,
+            67.79,
+            678.57,
+            113.67
+          ],
+          "text": "Extinction characteristics of isolated n-",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            81.82,
+            106.17,
+            687.46,
+            190.44
+          ],
+          "text": "alkane fuel droplets during low \ntemperature cool flame droplet burning",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            602.25,
+            182.94,
+            678.53,
+            228.82
+          ],
+          "text": "in air",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            156.76,
+            280.15,
+            678.57,
+            352.04
+          ],
+          "text": "Tanvir Farouk and Frederick Dryer\nUniversity of South Carolina, Columbia, SC, USA",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "location": "página 2",
+      "text": "Extinction characteristics of isolated n-alkane fuel droplets\n during low temperature cool flame droplet burning in air\n\n                         T. I. Farouka and F. L. Dryera,b\n\n                             a Department of Mechanical Engineering\n                 University of South Carolina, Columbia, SC 29208, USA\n\n\n                  b Department of Mechanical and Aerospace Engineering\n                   Princeton University, Princeton, NJ 08544, USA\n\n\n                          39th International Symposium on Combustion\n                                 Vancouver, Canada\n                                  July 24th – 29th, 2022\n                                                                                                             2",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            86.57,
+            93.08,
+            881.12,
+            133.12
+          ],
+          "text": "Extinction characteristics of isolated n-alkane fuel droplets",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            106.39,
+            126.68,
+            853.59,
+            166.72
+          ],
+          "text": "during low temperature cool flame droplet burning in air",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            315.77,
+            198.66,
+            644.11,
+            233.02
+          ],
+          "text": "T. I. Farouka and F. L. Dryera,b",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            232.13,
+            252.0,
+            727.94,
+            303.36
+          ],
+          "text": "a Department of Mechanical Engineering\nUniversity of South Carolina, Columbia, SC 29208, USA",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            231.65,
+            348.0,
+            728.25,
+            375.35
+          ],
+          "text": "b Department of Mechanical and Aerospace Engineering",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            269.56,
+            372.01,
+            690.36,
+            399.36
+          ],
+          "text": "Princeton University, Princeton, NJ 08544, USA",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            285.77,
+            451.28,
+            674.17,
+            520.26
+          ],
+          "text": "39th International Symposium on Combustion\nVancouver, Canada\nJuly 24th – 29th, 2022",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            936.92,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "2",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "location": "página 3",
+      "text": "“Cool” Flame – NASA FLEX Cool Program\n\n\n             Hot Flame\n                                                                                              2 stage hot-cool flame\n\n\n                                                                    n-heptane\n\n                   First Stage                                                                  2 stage hot-cool flame\n\n                                                                      n-octane\n\n                                                                                              2 stage hot-cool flame\n                                                                                                                 Single stage cool flame            “Cool Flame”\n\n                                                                  n-decane\n\n                                                                                              2 stage hot-cool flame\n            Second Stage                                                                                            3 stage hot-warm-cool flame\n\nV. Nayagam et al. Combustion and Flame (2012), 159, 3583 – 3588.                  n-dodecane\nT. Farouk and F. L. Dryer Combustion and Flame (2014), 161, 565 – 581\nV. Nayagam et al. Combustion and Flame (2015), 162, 2140 – 2147\nT. Farouk et al. Proc. Comb. Inst (2017), 36, 2523 – 2530                                                                                                                  3A. Cuoci et al. Proc. Comb. Inst (2017), 36, 2531 – 2539",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            576.12,
+            56.09
+          ],
+          "text": "“Cool” Flame – NASA FLEX Cool Program",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            179.23,
+            98.11,
+            266.28,
+            123.89
+          ],
+          "text": "Hot Flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            781.85,
+            129.69,
+            923.15,
+            148.86
+          ],
+          "text": "2 stage hot-cool flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            554.74,
+            179.09,
+            621.59,
+            199.2
+          ],
+          "text": "n-heptane",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            781.63,
+            226.36,
+            922.94,
+            245.52
+          ],
+          "text": "2 stage hot-cool flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            179.12,
+            223.59,
+            266.05,
+            247.41
+          ],
+          "text": "First Stage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            561.13,
+            273.71,
+            619.46,
+            293.82
+          ],
+          "text": "n-octane",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            780.75,
+            308.56,
+            929.23,
+            344.53
+          ],
+          "text": "2 stage hot-cool flame\nSingle stage cool flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            164.45,
+            321.98,
+            279.41,
+            347.76
+          ],
+          "text": "“Cool Flame”",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            558.14,
+            363.5,
+            619.58,
+            383.6
+          ],
+          "text": "n-decane",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            166.46,
+            411.16,
+            279.4,
+            434.97
+          ],
+          "text": "Second Stage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            766.2,
+            403.06,
+            946.27,
+            439.03
+          ],
+          "text": "2 stage hot-cool flame\n3 stage hot-warm-cool flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            551.42,
+            464.33,
+            629.92,
+            484.44
+          ],
+          "text": "n-dodecane",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            936.92,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "3",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            49.27,
+            464.76,
+            436.34,
+            538.74
+          ],
+          "text": "V. Nayagam et al. Combustion and Flame (2012), 159, 3583 – 3588.\nT. Farouk and F. L. Dryer Combustion and Flame  (2014), 161, 565 – 581\nV. Nayagam et al. Combustion and Flame (2015), 162, 2140 – 2147\nT. Farouk et al. Proc. Comb. Inst (2017), 36, 2523 – 2530\nA. Cuoci et al. Proc. Comb. Inst (2017), 36, 2531 – 2539",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "location": "página 4",
+      "text": "n-Decane: Two Stage Burning\n                                                                     •  Initiation energy plays a critical role in driving\n                                                       the hot flame condition.\n\n                                                                     •  Radiative loss is critical for transition from hot\n                                                             to cool flame burning.\n\n                                                                                                          Radiative\n                                                                                                                    extinction\n\n\n\n\n\n      Evolution of droplet diameter and FSR (n-decane,\n          do = 4.00 mm, air, atmospheric pressure)\n\n\n  Transition from hot to cool flame burning.\n\n\nV. Nayagam et al. Combustion and Flame (2015), 162, 2140 – 2147                   Evolution of burning rate and peak temperature (n-decane,                                                                                                                 4T. Farouk et al. Proc. Comb. Inst (2017), 36, 2523 – 2530                                   do = 4.00 mm, air, atmospheric pressure)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            424.55,
+            56.09
+          ],
+          "text": "n-Decane: Two Stage Burning",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            487.2,
+            65.83,
+            871.42,
+            112.0
+          ],
+          "text": "•\nInitiation energy plays a critical role in driving \nthe hot flame condition.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            487.21,
+            130.63,
+            875.64,
+            176.8
+          ],
+          "text": "•\nRadiative loss is critical for transition from hot \nto cool flame burning.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            643.45,
+            189.06,
+            697.55,
+            219.84
+          ],
+          "text": "Radiative \nextinction",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            91.45,
+            353.75,
+            402.79,
+            372.92
+          ],
+          "text": "Evolution of droplet diameter and FSR (n-decane,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            118.92,
+            370.55,
+            371.38,
+            391.56
+          ],
+          "text": "do = 4.00 mm, air, atmospheric pressure)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            75.21,
+            435.03,
+            432.41,
+            460.81
+          ],
+          "text": "Transition from hot to cool flame burning.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            533.38,
+            501.7,
+            899.68,
+            520.86
+          ],
+          "text": "Evolution of burning rate and peak temperature (n-decane,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            936.92,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "4",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            54.17,
+            507.14,
+            413.29,
+            537.92
+          ],
+          "text": "V. Nayagam et al. Combustion and Flame (2015), 162, 2140 – 2147\nT. Farouk et al. Proc. Comb. Inst (2017), 36, 2523 – 2530",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            588.33,
+            518.5,
+            840.8,
+            539.5
+          ],
+          "text": "do = 4.00 mm, air, atmospheric pressure)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "location": "página 5",
+      "text": "n-Decane: Single Stage Burning\n\n                                                                               • Low ignition energy\n                                                                               •  Combustion behavior affected by fuel\n                                                              flash point relative to ambient and\n                                                                             initial fuel liquid temperature\n\n\n\n\n\n     Evolution of droplet diameter and FSR (n-decane,\n          do = 4.00 mm, air, atmospheric pressure)\n\n• Sufficiently constraining initiation energy can lead\nto single stage sustained cool flame burning.\n\n\nT. Farouk et al. Proc. Comb. Inst (2017), 36, 2523 – 2530                            Evolution of burning rate and peak temperature (n-decane,                                                                                                                 5                                                                                   do = 4.00 mm, air, atmospheric pressure)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            450.71,
+            56.09
+          ],
+          "text": "n-Decane: Single Stage Burning",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            553.2,
+            75.65,
+            745.73,
+            101.42
+          ],
+          "text": "•\nLow ignition energy",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            553.21,
+            103.24,
+            902.85,
+            172.22
+          ],
+          "text": "•\nCombustion behavior affected by fuel \nflash point relative to ambient and  \ninitial fuel liquid temperature",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            88.61,
+            346.16,
+            399.95,
+            365.32
+          ],
+          "text": "Evolution of droplet diameter and FSR (n-decane,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            116.09,
+            362.96,
+            368.55,
+            383.96
+          ],
+          "text": "do = 4.00 mm, air, atmospheric pressure)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            55.19,
+            415.7,
+            463.89,
+            461.87
+          ],
+          "text": "• Sufficiently constraining initiation energy can lead \nto single stage sustained cool flame burning.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            539.42,
+            501.54,
+            905.72,
+            520.7
+          ],
+          "text": "Evolution of burning rate and peak temperature (n-decane,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            54.17,
+            507.14,
+            357.73,
+            523.52
+          ],
+          "text": "T. Farouk et al. Proc. Comb. Inst (2017), 36, 2523 – 2530",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            936.92,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "5",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            594.38,
+            518.34,
+            846.84,
+            539.34
+          ],
+          "text": "do = 4.00 mm, air, atmospheric pressure)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "location": "página 6",
+      "text": "n-Dodecane: Three Stage Burning\n\n\n\n\n\n       Evolution of droplet diameter, radiant heat and FSR (n-dodecane, do = 4.40 mm, 2.75\n                             atm, 21% O2, 29% He, balance N2)\n\n\n  •  Qualitative agreement between predictions and observations\n  • No optimization of model input, physical, or kinetic parameters to\n    obtain these comparisons\n\n   T. Farouk et al. Proc. Comb. Inst (2019), 37, 3353 – 3361                                                                         6",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            475.19,
+            56.09
+          ],
+          "text": "n-Dodecane: Three Stage Burning",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            98.21,
+            325.37,
+            627.47,
+            346.37
+          ],
+          "text": "Evolution of droplet diameter, radiant heat and FSR (n-dodecane, do = 4.40 mm, 2.75",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            252.41,
+            342.17,
+            469.36,
+            363.17
+          ],
+          "text": "atm, 21% O2, 29% He, balance N2)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            67.2,
+            416.04,
+            609.66,
+            483.81
+          ],
+          "text": "•\nQualitative agreement between predictions and observations\n•\nNo optimization of model input, physical, or kinetic parameters to \nobtain these comparisons",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            936.92,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "6",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            67.2,
+            516.24,
+            370.75,
+            532.62
+          ],
+          "text": "T. Farouk et al. Proc. Comb. Inst (2019), 37, 3353 – 3361",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "location": "página 7",
+      "text": "Transient Droplet Combustion Model                                                          Gas Phase:\n                                                                                                       •  Mass conservation\n                                                                                                       •   Species equation\n                                                                                                       •  Energy conservation\n                                                                                       Multi-component molecular diffusion\n                                                                                       Detailed chemical kinetics  - high, intermediate and\n                                                                                                 low temperature\n                                                                                       Statistical narrowband radiation model                                                                                                          mv                                                                                      C7 – C20 kinetic model, 583 species, 2609 reactions*\n                                                       drs                       mp                         Fiber:\n                                                                                                                      •  One dimensional temperature distribution                           qambient                          dt   ∂Yl , i                                                                                                                      •  Energy exchange with flame and ambient                                 qloss                   D                                                                                                                                                                                                                          l , i ∂r            qR\n                                                                                          q fib\n                          ∂T                        λ        ∂T            Droplet Surface:Soot:                                                                                                                                  l       λ                          ∂r      ∂r                    • Surface regression – Adaptive Grid•   Discrete sectional\n                                                                                                                                 • Evaporation of fuel   method\n                                                                                                                                 • Condensation/Dissolution of products•   Definition of classes of\n                                                                                                                                 • Radiative heat exchange   molecules (BINS)\n    describing large PAH                                                                    Liquid Phase:\n   and soot particles                                                                                                 •  Mass conservation\n•   Reactions describing                                                                                                 •   Species equation\n    nucleation,                                                                                                 •  Energy conservation\n    coagulation, oxidation                                                              Activity coefficient – UNIFAC Formulation\n    of BINs                                                                                                                       7                                                                                                    *M. Sarathy et al. Combust. Flame (2011), 158, 2338 – 2357",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            511.15,
+            56.09
+          ],
+          "text": "Transient Droplet Combustion Model",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            583.25,
+            44.37,
+            725.45,
+            124.01
+          ],
+          "text": "Gas Phase: \n•\nMass conservation\n•\nSpecies equation\n•\nEnergy conservation",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            443.19,
+            120.69,
+            956.02,
+            219.72
+          ],
+          "text": "\n Multi-component molecular diffusion\n\nDetailed chemical kinetics  - high, intermediate and  \nlow temperature\n\nStatistical narrowband radiation model\n\nC7 – C20 kinetic model, 583 species, 2609 reactions* \nmv",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            361.1,
+            226.14,
+            479.04,
+            248.84
+          ],
+          "text": "mp\ns\ndr",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            363.35,
+            248.22,
+            374.62,
+            267.29
+          ],
+          "text": "dt",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            184.9,
+            250.1,
+            216.03,
+            270.88
+          ],
+          "text": "ambient\nq",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            405.68,
+            257.97,
+            415.77,
+            273.06
+          ],
+          "text": "∂",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            389.82,
+            257.75,
+            419.71,
+            283.34
+          ],
+          "text": "Y\nD",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            664.15,
+            223.53,
+            930.44,
+            283.97
+          ],
+          "text": "Fiber:\n•\nOne dimensional temperature distribution \n•\nEnergy exchange with  flame and ambient",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            397.3,
+            266.24,
+            424.87,
+            284.92
+          ],
+          "text": "l i\nl i",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            399.78,
+            266.12,
+            422.97,
+            284.92
+          ],
+          "text": ",\n,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            220.6,
+            268.12,
+            238.81,
+            288.9
+          ],
+          "text": "loss\nq",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            409.21,
+            276.61,
+            419.3,
+            291.7
+          ],
+          "text": "∂",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            417.71,
+            276.39,
+            422.06,
+            292.77
+          ],
+          "text": "r",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            479.07,
+            274.26,
+            488.56,
+            295.6
+          ],
+          "text": "qR",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            602.1,
+            289.03,
+            618.23,
+            302.96
+          ],
+          "text": "fib\nq",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            417.18,
+            304.78,
+            426.56,
+            323.76
+          ],
+          "text": "T",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            495.35,
+            314.45,
+            501.69,
+            330.03
+          ],
+          "text": "T",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            398.77,
+            323.84,
+            401.48,
+            334.81
+          ],
+          "text": "l",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            388.83,
+            305.04,
+            426.24,
+            343.91
+          ],
+          "text": "r\n∂\nλ ∂",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            478.49,
+            314.67,
+            501.48,
+            346.55
+          ],
+          "text": "r\n∂\nλ ∂",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            594.65,
+            307.91,
+            827.08,
+            406.47
+          ],
+          "text": "Droplet Surface:\n• Surface regression – Adaptive Grid\n• Evaporation of fuel\n• Condensation/Dissolution  of products \n• Radiative heat exchange",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            546.78,
+            413.98,
+            688.97,
+            493.62
+          ],
+          "text": "Liquid Phase:\n•\nMass conservation \n•\nSpecies equation\n•\nEnergy conservation",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            582.78,
+            490.3,
+            844.72,
+            512.53
+          ],
+          "text": "\nActivity coefficient – UNIFAC Formulation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            5.45,
+            314.4,
+            162.61,
+            528.15
+          ],
+          "text": "Soot:\n•\nDiscrete sectional \nmethod\n•\nDefinition of classes of \nmolecules (BINS) \ndescribing large PAH \nand soot particles\n•\nReactions describing \nnucleation, \ncoagulation, oxidation \nof BINs",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            936.92,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "7",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            602.28,
+            520.95,
+            922.63,
+            537.33
+          ],
+          "text": "*M. Sarathy et al. Combust. Flame (2011), 158, 2338 – 2357",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "location": "página 8",
+      "text": "Properties: n-heptane, n-decane, n-dodecane\n\n          Shorter Chain Length        Longer Chain\n\n\n\n            n-heptane             n-decane                 n-dodecane\n                                                    Longer straight chain HC more\n                                                          prevalent low temperature kinetics\n\n                 Property                        n-C7H16          n-C10H22         n-C12H26\nMolecular weight, Mw (g/mol)                         100.20           142.29          170.34\nFlash point, Tf (K)                                   269.1            319.1           344.0\nBoiling point, Tb (K)                                  372.0            447.4           487.0\nDensity, ρL (kg/m3)                                   679.5            730.2           749.5\nSpecific Heat, cP (kJ/kmol K)                         224.64           314.56          376.15\nHeat of vaporization, ∆HV (kJ/mol)                     36.41            52.09            61.0\nHeat of combustion, ∆Hc (kJ/mol)                     4849.2           6779.2          7901.4\n                                                                                                                 8",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            612.66,
+            56.09
+          ],
+          "text": "Properties: n-heptane, n-decane, n-dodecane",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            137.33,
+            67.99,
+            474.43,
+            90.85
+          ],
+          "text": "Shorter Chain Length\nLonger Chain",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            634.46,
+            170.44,
+            735.54,
+            195.53
+          ],
+          "text": "n-dodecane",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            166.97,
+            170.44,
+            460.47,
+            196.81
+          ],
+          "text": "n-heptane\nn-decane",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            571.73,
+            208.47,
+            867.64,
+            255.17
+          ],
+          "text": "Longer straight chain HC more \nprevalent low temperature kinetics",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            54.17,
+            290.11,
+            874.71,
+            346.66
+          ],
+          "text": "Property\nn-C7H16\nn-C10H22\nn-C12H26\nMolecular weight, Mw (g/mol)\n100.20\n142.29\n170.34",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            54.16,
+            348.8,
+            862.3,
+            375.86
+          ],
+          "text": "Flash point, Tf (K)\n269.1\n319.1\n344.0",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            54.17,
+            378.0,
+            862.3,
+            405.06
+          ],
+          "text": "Boiling point, Tb (K)\n372.0\n447.4\n487.0",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            54.17,
+            407.2,
+            862.3,
+            434.26
+          ],
+          "text": "Density, ρL (kg/m3) \n679.5\n730.2\n749.5",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            54.17,
+            436.4,
+            867.33,
+            463.46
+          ],
+          "text": "Specific Heat, cP (kJ/kmol K)\n224.64\n314.56\n376.15",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            54.16,
+            465.6,
+            857.38,
+            492.66
+          ],
+          "text": "Heat of vaporization, ∆HV (kJ/mol)\n36.41\n52.09\n61.0",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            54.17,
+            494.8,
+            867.35,
+            521.86
+          ],
+          "text": "Heat of combustion, ∆Hc (kJ/mol)\n4849.2\n6779.2\n7901.4",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            936.92,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "8",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "location": "página 9",
+      "text": "n-Alkane Burning Characteristics: Model Validation (1 atm, Air)\n\n               Hot                                            Hot                                        Hot\n             Flame                                        Flame                                    Flame\n              Extinction                                            Extinction                                       Extinction\n\n                          Cool                                            Cool                                           Cool\n                        Flame                                         Flame                                        Flame\n                           Extinction                                             Extinction                                            Extinction\n\n\n\n\n    Experiment                            Experiment                           Experiment\n     dext HF   = 3.41 mm                       dext HF   = 3.32 mm                      dext HF   = 4.16 mm\n     dext CF   = 1.13 mm                       dext CF   = 0.59 mm                      dext CF   = 0.53 mm\n    Kavg HF  = 0.46 mm2s-1                Kavg HF  = 0.41 mm2s-1               Kavg HF  = 0.38 mm2s-1\n    Kavg CF  = 0.38 mm2s-1                Kavg CF  = 0.39 mm2s-1               Kavg CF  = 0.52 mm2s-1\n    Model                               Model                              Model\n     dext HF   = 3.53 mm                       dext HF   = 3.42 mm                      dext HF   = 4.34 mm\n     dext CF   = 0.81 mm                       dext CF   = 0.30 mm                      dext CF   = 0.24 mm\n    Kavg HF  = 0.44 mm2s-1                Kavg HF  = 0.37 mm2s-1               Kavg HF  = 0.32 mm2s-1\n    Kavg CF  = 0.39 mm2s-1                Kavg CF  = 0.42 mm2s-1               Kavg CF  = 0.52 mm2s-1        9",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            832.24,
+            56.09
+          ],
+          "text": "n-Alkane Burning Characteristics: Model Validation (1 atm, Air)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            729.89,
+            70.17,
+            787.99,
+            116.15
+          ],
+          "text": "Hot \nFlame \nExtinction",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            133.49,
+            71.18,
+            191.59,
+            117.16
+          ],
+          "text": "Hot \nFlame \nExtinction",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            446.29,
+            71.18,
+            504.39,
+            117.16
+          ],
+          "text": "Hot \nFlame \nExtinction",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            843.89,
+            130.42,
+            901.99,
+            176.4
+          ],
+          "text": "Cool \nFlame \nExtinction",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            209.49,
+            131.68,
+            267.59,
+            177.66
+          ],
+          "text": "Cool \nFlame \nExtinction",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            531.89,
+            131.68,
+            589.99,
+            177.66
+          ],
+          "text": "Cool \nFlame \nExtinction",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            393.83,
+            280.01,
+            551.25,
+            351.39
+          ],
+          "text": "Experiment\ndext HF \n= 3.32 mm\ndext CF  \n= 0.59 mm",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            691.2,
+            280.01,
+            848.62,
+            351.39
+          ],
+          "text": "Experiment\ndext HF \n= 4.16 mm\ndext CF  \n= 0.53 mm",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            87.83,
+            280.54,
+            245.25,
+            351.92
+          ],
+          "text": "Experiment\ndext HF \n= 3.41 mm\ndext CF  \n= 1.13 mm",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            393.83,
+            351.93,
+            577.62,
+            400.59
+          ],
+          "text": "Kavg HF \n= 0.41 mm2s-1\nKavg CF \n= 0.39 mm2s-1",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            691.2,
+            351.93,
+            874.99,
+            400.59
+          ],
+          "text": "Kavg HF \n= 0.38 mm2s-1\nKavg CF \n= 0.52 mm2s-1",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            87.83,
+            352.46,
+            271.62,
+            401.12
+          ],
+          "text": "Kavg HF \n= 0.46 mm2s-1\nKavg CF \n= 0.38 mm2s-1",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            393.83,
+            408.75,
+            551.25,
+            480.13
+          ],
+          "text": "Model\ndext HF \n= 3.42 mm\ndext CF  \n= 0.30 mm",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            691.2,
+            408.75,
+            848.62,
+            480.13
+          ],
+          "text": "Model\ndext HF \n= 4.34 mm\ndext CF  \n= 0.24 mm",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            87.83,
+            409.28,
+            245.25,
+            480.66
+          ],
+          "text": "Model\ndext HF \n= 3.53 mm\ndext CF  \n= 0.81 mm",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            393.83,
+            480.66,
+            577.62,
+            507.73
+          ],
+          "text": "Kavg HF \n= 0.37 mm2s-1",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            691.2,
+            480.66,
+            874.99,
+            507.73
+          ],
+          "text": "Kavg HF \n= 0.32 mm2s-1",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            87.83,
+            481.19,
+            271.62,
+            508.26
+          ],
+          "text": "Kavg HF \n= 0.44 mm2s-1",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            393.83,
+            502.27,
+            577.62,
+            529.33
+          ],
+          "text": "Kavg CF \n= 0.42 mm2s-1",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            691.2,
+            502.27,
+            874.99,
+            529.33
+          ],
+          "text": "Kavg CF \n= 0.52 mm2s-1",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            87.83,
+            502.8,
+            271.62,
+            529.86
+          ],
+          "text": "Kavg CF \n= 0.39 mm2s-1",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            936.92,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "9",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "location": "página 10",
+      "text": "n-Alkane Burning Characteristics: 1 atm, Air\n\n                                                            • During transition to second stage burn, the FSR and the\n                                             Tmax for all three fuels are almost identical.\n\n\n\n                                                                                            Critical flame diameter, results                                            FSR                                                                                          in excessive radiative loss –\n                                                                                       transition to second stage\n\n\n\n\n                                                            • Kb,CF C12 > Kb,CF C10 > Kb,CF C7\n                                                            • Tmax,CF C12 ~ 775 K > Tmax,CF C10 ~ 737 K > Tmax,CF C7 ~ 720 K\n                                                            • de,CF C7 > de,CF C10 > de,CF C12\n\n\nEvolution of droplet diameter, FSR, Kb and Tmax for                                                                                                                 10   n-alkane droplets (do = 4.00 mm, 1 atm, air)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            600.97,
+            56.09
+          ],
+          "text": "n-Alkane Burning Characteristics: 1 atm, Air",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            461.04,
+            96.0,
+            766.91,
+            120.57
+          ],
+          "text": "for all three fuels are almost identical.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            427.2,
+            74.4,
+            888.32,
+            123.06
+          ],
+          "text": "• During transition to second stage burn, the FSR and the \nTmax",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            571.2,
+            200.4,
+            925.13,
+            268.17
+          ],
+          "text": "FSR\nCritical flame diameter, results \nin excessive radiative loss – \ntransition to second stage",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            427.2,
+            374.4,
+            661.03,
+            401.46
+          ],
+          "text": "• Kb,CF C12 > Kb,CF C10 > Kb,CF C7",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            427.2,
+            408.0,
+            905.98,
+            435.06
+          ],
+          "text": "• Tmax,CF C12 ~ 775 K > Tmax,CF C10 ~ 737 K > Tmax,CF C7 ~ 720 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            427.19,
+            441.6,
+            660.2,
+            468.66
+          ],
+          "text": "• de,CF C7 > de,CF C10 > de,CF C12",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            47.93,
+            503.37,
+            363.96,
+            524.37
+          ],
+          "text": "Evolution of droplet diameter, FSR, Kb and Tmax for",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            929.12,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "10",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            69.29,
+            520.17,
+            338.56,
+            541.17
+          ],
+          "text": "n-alkane droplets (do = 4.00 mm, 1 atm, air)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "location": "página 11",
+      "text": "Extinction Diameter\n\n\n\n\n\n                       Comparison of measured and predicted hot and cool flame extinction diameter for different\n                                                     initial droplet diameter for the three n-alkane fuels (atmospheric air)\n•  High temperature combustion is strongly governed by the small species kinetics – all three fuels share\n   nearly identical values of HF extinction diameter for the same do\n•  The LTC differs with carbon number as each involve reactions associated with the carbon number of the\n   fuel and the large intermediates produced. The overall rates of isomerization of radical-O2 adducts\n   controlling rate of degenerate chain branching rate increase from C7 to C12\n•  The CF extinction is dictated by the increase in decomposition of •O2QnOOH for all three fuels.\n\n                                                                                                                          11",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            298.72,
+            56.09
+          ],
+          "text": "Extinction Diameter",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            215.82,
+            314.56,
+            777.98,
+            333.72
+          ],
+          "text": "Comparison of measured and predicted hot and cool flame extinction diameter for different",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            287.58,
+            331.36,
+            706.4,
+            350.53
+          ],
+          "text": "initial droplet diameter for the three n-alkane fuels (atmospheric air)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            43.2,
+            358.45,
+            896.87,
+            493.51
+          ],
+          "text": "•\n High temperature combustion is strongly governed by the small species kinetics – all three fuels share \nnearly identical values of HF extinction diameter for the same do\n•\nThe LTC differs with carbon number as each involve reactions associated with the carbon number of the \nfuel and the large intermediates produced. The overall rates of isomerization of radical-O2 adducts \ncontrolling rate of degenerate chain branching rate increase from C7 to C12\n•\nThe CF extinction is dictated by the increase in decomposition of •O2QnOOH for all three fuels.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            930.2,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "11",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "location": "página 12",
+      "text": "Extinction Characteristics: Pressure Dependence\n\n                                                                •  For pressure ≤ 1.0 atm, two stage combustion – hot\n                                           and cool flame extinction.\n\n                                                                •  At 1.25 atm, multi-cycling of hot-cool-hot-cool flame\n                                                             transition.\n\n                                                                •  At 3.0 atm, the system transitions to a stable “Warm”\n                                                     flame.\n\n                                                                •  Cool flame temperature increases with pressure and\n                                                         results in a hot flame reignition.\n\n                                                                •  “Warm” flame is dictated by NTC kinetics and\n                                                   competition for OH between hydrocarbon and\n                                              oxygenated hydrocarbon fragments.\n\n\n\n\nEvolution of FSR, Kb and Tmax for n-dodecane droplets                                                                                                                    12        for different pressure (do = 4.00 mm, air)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            665.25,
+            56.09
+          ],
+          "text": "Extinction Characteristics: Pressure Dependence",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            433.2,
+            80.4,
+            871.63,
+            126.57
+          ],
+          "text": "•\nFor pressure ≤ 1.0 atm, two stage combustion – hot \nand cool flame extinction.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            433.2,
+            145.2,
+            869.69,
+            191.37
+          ],
+          "text": "•\nAt 1.25 atm, multi-cycling of hot-cool-hot-cool flame \ntransition.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            433.2,
+            210.0,
+            878.99,
+            256.17
+          ],
+          "text": "•\nAt 3.0 atm, the system transitions to a stable “Warm” \nflame.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            433.2,
+            281.41,
+            877.53,
+            327.58
+          ],
+          "text": "•\nCool flame temperature increases with pressure and \nresults in a hot flame reignition.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            433.2,
+            346.21,
+            823.51,
+            413.98
+          ],
+          "text": "•\n“Warm” flame is dictated by NTC kinetics and \ncompetition for OH between hydrocarbon and \noxygenated hydrocarbon fragments.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            27.17,
+            503.37,
+            366.7,
+            524.37
+          ],
+          "text": "Evolution of FSR, Kb and Tmax for n-dodecane droplets",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            929.12,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "12",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            70.97,
+            520.17,
+            319.0,
+            541.17
+          ],
+          "text": "for different pressure (do = 4.00 mm, air)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "location": "página 13",
+      "text": "Multicycle Behavior\n\n\n\n\n\n Evolution of Kb and Tmax for n-dodecane droplet\n   combustion at 1.25 atm (do = 7.00 mm, air)\n•  Four “Hot-Cool” flame transition.\n•  At every transition, the cool flame\n   temperature decreases significantly, the\n   burn time increases.\n•  The hot flame behavior remains unaltered.\n\n\n                                                                                                                13",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            298.97,
+            56.09
+          ],
+          "text": "Multicycle Behavior",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            59.64,
+            309.36,
+            356.33,
+            330.36
+          ],
+          "text": "Evolution of Kb and Tmax for n-dodecane droplet",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            73.8,
+            326.16,
+            338.4,
+            347.16
+          ],
+          "text": "combustion at 1.25 atm (do = 7.00 mm, air)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            54.17,
+            354.64,
+            419.41,
+            471.62
+          ],
+          "text": "•\nFour “Hot-Cool” flame transition. \n•\nAt every transition, the cool flame \ntemperature decreases significantly, the \nburn time increases. \n•\nThe hot flame behavior remains unaltered.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            929.12,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "13",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "location": "página 14",
+      "text": "Multicycle Behavior\n\n\n\n\n\n Evolution of Kb and Tmax for n-dodecane droplet\n   combustion at 1.25 atm (do = 7.00 mm, air)\n\n•  Four “Hot-Cool” flame transition.\n•  At every transition, the cool flame\n   temperature decreases significantly, the\n   burn time increases.\n•  The hot flame behavior remains unaltered.\n\n  Spatiotemporal contour of a) gas phase temperature and mass fraction of b) H2O, c) CO2, d) CO, e) H2O2 and f) CH2O for n-dodecane\n                            droplet undergoing multiple hot-cool flame transitions (do = 7.00 mm, 1.25 atm, air).                         14",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            298.97,
+            56.09
+          ],
+          "text": "Multicycle Behavior",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            59.64,
+            302.03,
+            356.33,
+            323.03
+          ],
+          "text": "Evolution of Kb and Tmax for n-dodecane droplet",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            73.8,
+            318.83,
+            338.4,
+            339.83
+          ],
+          "text": "combustion at 1.25 atm (do = 7.00 mm, air)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            54.17,
+            354.64,
+            419.41,
+            471.62
+          ],
+          "text": "•\nFour “Hot-Cool” flame transition. \n•\nAt every transition, the cool flame \ntemperature decreases significantly, the \nburn time increases. \n•\nThe hot flame behavior remains unaltered.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            66.57,
+            490.96,
+            897.38,
+            511.96
+          ],
+          "text": "Spatiotemporal contour of a) gas phase temperature and mass fraction of b) H2O, c) CO2, d) CO, e) H2O2 and f) CH2O for n-dodecane",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            223.53,
+            507.76,
+            736.34,
+            528.76
+          ],
+          "text": "droplet undergoing multiple hot-cool flame transitions (do = 7.00 mm, 1.25 atm, air).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            929.12,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "14",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "location": "página 15",
+      "text": "Extinction Diameter: Pressure Dependence\n\n\n\n                                                                  •  Both hot and cool flame extinction diameter has a\n                                                       non-linear dependence on pressure.\n\n                                                                  •  de,CF decreases as pressure is increased, and is\n                                                 absent at 3 atm as the droplet burns to completion\n                                                         following a “Warm” flame combustion\n                                                                  •  The de,CF is most sensitive to:\n\n                                         •O2QnOOH → •OQn`OOH + OH\n                                         •O2QnOOH → QnOOH + O2\n\n  Comparison of predicted and measured de,HF and de,CF as a\nfunction of operating pressure for of n-dodecane droplets burning\n                         in air. (do = 4.00 mm).\n\n\n\n                                                                                                                 15",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            588.4,
+            56.09
+          ],
+          "text": "Extinction Diameter: Pressure Dependence",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            469.2,
+            135.66,
+            890.59,
+            181.83
+          ],
+          "text": "•\nBoth hot and cool flame extinction diameter has a \nnon-linear dependence on pressure.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            469.21,
+            200.46,
+            896.34,
+            268.23
+          ],
+          "text": "•\nde,CF decreases as pressure is increased, and is \nabsent at 3 atm as the droplet burns to completion \nfollowing a “Warm” flame combustion",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            469.2,
+            279.66,
+            724.16,
+            306.72
+          ],
+          "text": "•\nThe de,CF is most sensitive to:",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            505.2,
+            321.66,
+            755.32,
+            348.72
+          ],
+          "text": "•O2QnOOH → •OQn`OOH + OH",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            505.2,
+            347.34,
+            723.55,
+            393.39
+          ],
+          "text": "•O2QnOOH → QnOOH + O2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            50.97,
+            404.56,
+            456.61,
+            440.53
+          ],
+          "text": "Comparison of predicted and measured de,HF and de,CF as a \nfunction of operating pressure for of n-dodecane droplets burning",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            185.01,
+            438.16,
+            318.63,
+            459.16
+          ],
+          "text": "in air. (do = 4.00 mm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            929.12,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "15",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "location": "página 16",
+      "text": "Summary\n • Two-stage hot-cool flame burning mode transitions are demonstrated to exist for the three\n fuels, and the maximum flame temperature at which transition to the second stage occurred\nwas universally found to be ~ 1200K.\n • Hot flame characteristics of all three fuels indicate that predicted extinction phenomena are all\n very similar.\n • Cool flame extinction properties are significantly affected by the n-alkane molecular weight,\n and the chain length of the n-alkane has significant effect on the cool flame reactivity - larger n-\n alkane exhibited more robust cool flame (i.e., higher temperature) and hence smaller extinction\n diameters.\n • Universally, de,CF for each fuel varies linearly with initial droplet diameter, but unlike de,HF these\n relationships do not collapse to a single function.\n • n-Dodecane droplet combustion reveal a strong dependence of observations on ambient\n pressure. Single, two-stage hot-cool flame combustion transitions to a multi-cycle combustion\n behavior at ambient pressures above one atmosphere, and eventually into a hot - “Warm” flame\n transition.\n\n\n\n                                                                                                                16",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            172.91,
+            56.09
+          ],
+          "text": "Summary",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            59.57,
+            63.53,
+            910.41,
+            450.92
+          ],
+          "text": "• Two-stage hot-cool flame burning mode transitions are demonstrated to exist for the three \nfuels, and the maximum flame temperature at which transition to the second stage occurred \nwas universally found to be ~ 1200K. \n• Hot flame characteristics of all three fuels indicate that predicted extinction phenomena are all \nvery similar.\n• Cool flame extinction properties are significantly affected by the n-alkane molecular weight, \nand the chain length of the n-alkane has significant effect on the cool flame reactivity - larger n-\nalkane exhibited more robust cool flame (i.e., higher temperature) and hence smaller extinction \ndiameters.\n• Universally, de,CF for each fuel varies linearly with initial droplet diameter, but unlike de,HF these \nrelationships do not collapse to a single function.\n• n-Dodecane droplet combustion reveal a strong dependence of observations on ambient \npressure. Single, two-stage hot-cool flame combustion transitions to a multi-cycle combustion \nbehavior at ambient pressures above one atmosphere, and eventually into a hot - “Warm” flame \ntransition.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            929.12,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "16",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "location": "página 17",
+      "text": "Acknowledgements\n\n\n\n\n   • This work was supported by the National Aeronautics and Space Administration\n   through grants NNX17AF97A (TIF).\n\n    • Thanks to Drs. Daniel Dietrich, Vedha Nayagam and Forman Williams for interest\n  and insightful discussions throughout the course of this investigation.\n\n\n\n\n\n                                                                                                                17",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            298.98,
+            56.09
+          ],
+          "text": "Acknowledgements",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            81.17,
+            188.04,
+            878.0,
+            246.91
+          ],
+          "text": "• This work was supported by the National Aeronautics and Space Administration \nthrough grants NNX17AF97A (TIF).",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            81.17,
+            283.16,
+            893.04,
+            339.53
+          ],
+          "text": "• Thanks to Drs. Daniel Dietrich, Vedha Nayagam and Forman Williams for interest \nand insightful discussions throughout the course of this investigation.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            929.12,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "17",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "location": "página 18",
+      "text": "Backup\n\n\n\n\n\n                     Evolution of radiant energy (n-heptane,                     Evolution of radiant energy (n-decane,\n                           do = 3.89 mm, air, 1 atm)                                  do = 3.88 mm, air, 1 atm)\n\n\n                   Similar radiant energy during extinction for n-heptane and n-decane.\n\n\n\n\n                                                                                                                18",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            54.17,
+            18.8,
+            148.48,
+            56.09
+          ],
+          "text": "Backup",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            561.15,
+            332.55,
+            801.92,
+            351.72
+          ],
+          "text": "Evolution of radiant energy (n-decane,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            186.86,
+            332.56,
+            432.19,
+            351.72
+          ],
+          "text": "Evolution of radiant energy (n-heptane,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            231.02,
+            349.36,
+            384.13,
+            370.36
+          ],
+          "text": "do = 3.89 mm, air, 1 atm)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            603.02,
+            349.36,
+            756.13,
+            370.36
+          ],
+          "text": "do = 3.88 mm, air, 1 atm)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            200.19,
+            410.4,
+            747.75,
+            434.97
+          ],
+          "text": "Similar radiant energy during extinction for n-heptane and n-decane.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            929.12,
+            512.31,
+            944.73,
+            531.47
+          ],
+          "text": "18",
+          "kind": "heading_candidate"
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "name": "Tabela detectada p.8.1",
+      "location": "página 8, tabela 1",
+      "header_row": 1,
+      "columns": [
+        "P t\nroper y",
+        "C H\nn\n- 7 16",
+        "C H\nn\n- 10 22",
+        "C H\nn\n- 12 26"
+      ],
+      "original_headers": [
+        "P t\nroper y",
+        "C H\nn\n- 7 16",
+        "C H\nn\n- 10 22",
+        "C H\nn\n- 12 26"
+      ],
+      "rows": [
+        [
+          "M l l i ht M ( / l)\no ecu ar we g g mo\n, w",
+          "100 20\n.",
+          "142 29\n.",
+          "170 34\n."
+        ],
+        [
+          "Fl h i t T (K)\nas po n\n, f",
+          "269 1\n.",
+          "319 1\n.",
+          "344 0\n."
+        ],
+        [
+          "B ili i t T (K)\no ng po n\n, b",
+          "372 0\n.",
+          "447 4\n.",
+          "487 0\n."
+        ],
+        [
+          "D it (k / 3)\nens y ρ g m\n, L",
+          "679 5\n.",
+          "730 2\n.",
+          "749 5\n."
+        ],
+        [
+          "S ifi H t (kJ/k l K)\npec c ea c mo\n, P",
+          "224 64\n.",
+          "314 56\n.",
+          "376 15\n."
+        ],
+        [
+          "H eat of vapori zati ∆H (kJ/ mol)\non\n, V",
+          "36 41\n.",
+          "52 09\n.",
+          "61 0\n."
+        ],
+        [
+          "H eat of comb usti ∆H (kJ/ mol)\non\n, c",
+          "4849 2\n.",
+          "6779 2\n.",
+          "7901 4\n."
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "página 8",
+        "range": "bbox 47,288,912,522",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "catalog",
+        "has_header": true
+      },
+      "params": {},
+      "page": 8,
+      "bbox": [
+        46.97,
+        288.0,
+        912.0,
+        521.6
+      ],
+      "column_meta": [
+        {
+          "name": "P t\nroper y",
+          "base": "P t\nroper y",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 7,
+          "n_nonempty": 7,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "C H\nn\n- 7 16",
+          "base": "C H\nn\n- 7 16",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 7,
+          "n_nonempty": 7,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "C H\nn\n- 10 22",
+          "base": "C H\nn\n- 10 22",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 7,
+          "n_nonempty": 7,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        },
+        {
+          "name": "C H\nn\n- 12 26",
+          "base": "C H\nn\n- 12 26",
+          "unit": "",
+          "kind": "text",
+          "quantity": "unknown",
+          "n_rows": 7,
+          "n_nonempty": 7,
+          "n_numeric": 0,
+          "n_range": 0,
+          "numeric_ratio": 0.0,
+          "min": null,
+          "max": null
+        }
+      ],
+      "chart": {
+        "type": "catalog",
+        "x": null,
+        "y": []
+      },
+      "flags": [],
+      "source_column_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "evidence_kind": "engineering_or_publication",
+      "field_classification": [],
+      "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+    }
+  ],
+  "captions": [],
+  "metadata": {
+    "format": "PDF 1.7",
+    "title": "Slide 1",
+    "author": "Tanvir Farouk",
+    "creator": "Acrobat PDFMaker 26 for PowerPoint",
+    "producer": "Adobe PDF Library 26.1.183",
+    "creationDate": "D:20260428082735-04'00'",
+    "modDate": "D:20260428082742-04'00'",
+    "page_count": 18,
+    "legendas": 0,
+    "tabelas_detectadas": 1,
+    "evidence_kind": "engineering_or_publication",
+    "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+  },
+  "warnings": [
+    "1 tabela(s) detectada(s) automaticamente no PDF; confira visualmente, pois a detecção pode errar. Dados de figuras (gráficos) não são extraídos como números."
+  ],
+  "schema_version": 4,
+  "source_filename": "PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+  "source_extension": ".pdf",
+  "document": {
+    "name": "PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+    "extension": ".pdf",
+    "sha256": "2fe2fc85aa8ee3ac99a07495d31c49704f32d42bb83ae2ba2481d47c14407c43",
+    "size_bytes": 11802360
+  },
+  "evidence_kind": "engineering_or_publication",
+  "observations": [],
+  "provenance": {
+    "study_id": "PSI-117",
+    "source": "NASA Physical Sciences Informatics",
+    "filename": "PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf&version=1&redirect=false",
+    "doi": "10.60555/gz0q-b577",
+    "sha256": "2fe2fc85aa8ee3ac99a07495d31c49704f32d42bb83ae2ba2481d47c14407c43",
+    "size_bytes": 11802360,
+    "study_version": 2,
+    "file_version": 1,
+    "verified_utc": "2026-11-15T23:48:21.236656+00:00",
+    "retrieved_utc": "2026-11-15T23:48:21.236656+00:00",
+    "verification": "byte_identical_to_nasa_download",
+    "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 11802360,
+      "directory": false,
+      "files": [],
+      "id": "6a282739d9d7246402cb43e0",
+      "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "11.26 MB",
+      "sortingCategory": "Presentations",
+      "status": "active",
+      "subcategory": "",
+      "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+      "version": 1,
+      "visible": true
+    },
+    "license": "No file-specific license exposed; retain NASA and author attribution.",
+    "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+    "classification": "engineering_or_publication",
+    "media_type": "application/pdf",
+    "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+  }
+}

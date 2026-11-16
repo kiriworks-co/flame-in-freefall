@@ -22,6 +22,11 @@ from .search import _SYN, _tokens
 
 PROJECT = Path(__file__).resolve().parents[1]
 MAX_CHUNK_CHARS = 1500
+# A lexical-free match needs substantially stronger support than an anchored
+# passage. On the real local multilingual corpus, an invented out-of-domain
+# token scored 0.493 against technical fragments: 0.35 admitted false evidence.
+# This conservative relevance gate is not a calibrated answer-confidence score.
+MIN_SEMANTIC_ONLY_COSINE = 0.60
 
 
 def _model_mode_id(resolved_model: str) -> str:
@@ -92,6 +97,10 @@ def structural_chunks(experiment: dict, document: dict, extraction: dict) -> lis
         doi = ""
     common = {"study_id": study_id, "investigation_name": experiment.get("name", ""), "experiment_id": experiment["id"], "document_name": document["name"],
               "document_id": document["id"], "sha256": document["sha256"], "source_url": source, "doi": doi,
+              "source_member": provenance.get("archive_member", provenance.get("source_member", "")),
+              "nested_member": provenance.get("nested_member", ""),
+              "parent_archive_sha256": provenance.get("parent_archive_sha256", ""),
+              "classification_basis": provenance.get("classification_basis") or provenance.get("classification_note", ""),
               "evidence_kind": provenance.get("evidence_kind", extraction.get("evidence_kind", "document_context"))}
     result = []
 
@@ -120,6 +129,8 @@ def structural_chunks(experiment: dict, document: dict, extraction: dict) -> lis
                 kind="table_row", page=table.get("page"), table_index=ti, row_number=rn,
                 location=f"{table.get('location', table.get('name', 'tabela'))}; linha {rn}",
                 observations=observations,
+                field_classification=table.get("field_classification", []),
+                source_column_indices=table.get("source_column_indices", []),
                 evidence_kind=table.get("evidence_kind", common["evidence_kind"]))
     return result
 
@@ -354,7 +365,7 @@ class RetrievalIndex:
             cosine = (_dot(qv, json.loads(vector)) if compatible_model else
                       _dot(lexical_qv, _vector(self._searchable(chunk)))) if terms else 0
             word_hits = expanded.intersection(_tokens(self._searchable(chunk)))
-            if terms and not word_hits and (self.model is None or not compatible_model or cosine < .35):
+            if terms and not word_hits and (self.model is None or not compatible_model or cosine < MIN_SEMANTIC_ONLY_COSINE):
                 continue
             coverage = len(word_hits) / max(1, len(terms))
             score = .55 * min(1, coverage) + .35 * max(0, cosine) + (.1 if cid in lexical else 0)

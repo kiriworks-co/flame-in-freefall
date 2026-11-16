@@ -113,7 +113,9 @@
     "modDate": "D:20140723164600-04'00'",
     "page_count": 1,
     "legendas": 0,
-    "tabelas_detectadas": 0
+    "tabelas_detectadas": 0,
+    "evidence_kind": "engineering_or_publication",
+    "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection."
   },
   "warnings": [],
   "schema_version": 4,

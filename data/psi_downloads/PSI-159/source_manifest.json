@@ -1,0 +1,536 @@
+{
+  "investigation_id": "PSI-159",
+  "title": "Advanced Combustion via Microgravity Experiments / Cool Flames Investigation with Gases",
+  "doi": "10.60555/cyt1-kh64",
+  "study_version": 1,
+  "metadata_source_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-159/metadata",
+  "archive_sha256": "73cde2c18c4dafa63e96ebb372a6a3d530e3bddc94e19139e5e2e7bb92e016c0",
+  "downloaded_csvs": [
+    {
+      "study_id": "PSI-159",
+      "source": "NASA Physical Sciences Informatics",
+      "filename": "PSI-159_Experimental table_CFI-G_Normal Flames.csv",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-159/download?file=PSI-159_Experimental+table_CFI-G_Normal+Flames.csv&version=1&redirect=false",
+      "doi": "10.60555/cyt1-kh64",
+      "sha256": "d95a621c3fbd27d204dd32ed29fa17d68f2b779d6a523cde8479ed7ebaa5251a",
+      "size_bytes": 22166,
+      "study_version": 1,
+      "file_version": 1,
+      "verified_utc": "2026-11-15T23:49:23.664957+00:00",
+      "retrieved_utc": "2026-11-15T23:49:23.664957+00:00",
+      "verification": "byte_identical_to_nasa_download",
+      "archive_member": "NASA_API_SUPPLEMENT/PSI-159_Experimental table_CFI-G_Normal Flames.csv",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 22166,
+        "directory": false,
+        "files": [],
+        "id": "691f7ea117f78b371b26f6fa",
+        "key": "psi-data/PSI-159/Experimental table/PSI-159_Experimental table_CFI-G_Normal Flames.csv",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "21.65 KB",
+        "sortingCategory": "Experimental table",
+        "status": "active",
+        "subcategory": "",
+        "updated": "Fri, 21 Nov 2025 04:48:33 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "license": "No file-specific license exposed; retain NASA and author attribution.",
+      "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+      "classification": "mixed_conditions_and_reported_results",
+      "media_type": "text/csv",
+      "field_classification": [
+        {
+          "header": "Flame Type",
+          "column_index": 0,
+          "role": "identifier_or_unclassified",
+          "source_marker": "Normal | Normal | Normal"
+        },
+        {
+          "header": "Day",
+          "column_index": 1,
+          "role": "identifier_or_unclassified",
+          "source_marker": "1 | 1 | 1"
+        },
+        {
+          "header": "Fuel",
+          "column_index": 2,
+          "role": "identifier_or_unclassified",
+          "source_marker": "ethane | ethane | ethane"
+        },
+        {
+          "header": "Test",
+          "column_index": 3,
+          "role": "identifier_or_unclassified",
+          "source_marker": "21088A1 | 21088 B1 | 21088 C1"
+        },
+        {
+          "header": "Cool flame?",
+          "column_index": 4,
+          "role": "reported_result",
+          "source_marker": ""
+        },
+        {
+          "header": " XO2 before test",
+          "column_index": 5,
+          "role": "condition",
+          "source_marker": "0.3939 | 0.389822946 | 0.386321188"
+        },
+        {
+          "header": "XO2  after test",
+          "column_index": 6,
+          "role": "reported_result",
+          "source_marker": "0.389822946 | 0.386321188 | 0.382905163"
+        },
+        {
+          "header": "approx p (bar)",
+          "column_index": 7,
+          "role": "condition",
+          "source_marker": "0.9443956 | 0.9443956 | 0.9443956"
+        },
+        {
+          "header": "Xf",
+          "column_index": 8,
+          "role": "condition",
+          "source_marker": "1 | 1 | 1"
+        },
+        {
+          "header": "mHC (mg/s)",
+          "column_index": 9,
+          "role": "condition",
+          "source_marker": "2 | 2 | 2"
+        },
+        {
+          "header": "TFP",
+          "column_index": 10,
+          "role": "identifier_or_unclassified",
+          "source_marker": "No | Yes | Yes"
+        },
+        {
+          "header": "Tad (K)",
+          "column_index": 11,
+          "role": "derived",
+          "source_marker": "2719.323211 | 2713.594987 | 2708.596221"
+        },
+        {
+          "header": "Zst",
+          "column_index": 12,
+          "role": "derived",
+          "source_marker": "0.102651783 | 0.101747543 | 0.100968644"
+        },
+        {
+          "header": "Hot ignition",
+          "column_index": 13,
+          "role": "reported_result",
+          "source_marker": "Yes | Yes | Yes"
+        },
+        {
+          "header": "burn time (sec)",
+          "column_index": 14,
+          "role": "reported_result",
+          "source_marker": "50 | 43 | 42"
+        },
+        {
+          "header": "Self-ext or flow term",
+          "column_index": 15,
+          "role": "reported_result",
+          "source_marker": "SE | SE | SE"
+        },
+        {
+          "header": "Peak burner T (C )",
+          "column_index": 16,
+          "role": "reported_result",
+          "source_marker": "290.617198 | 276.009368 | 266.374008"
+        },
+        {
+          "header": "Comments",
+          "column_index": 17,
+          "role": "reported_result",
+          "source_marker": "hit burner T limit"
+        }
+      ],
+      "classification_note": "Flight test catalog containing conditions, calculated Tad/Zst and reported outcomes (cool flame, burn time, peak burner temperature, termination). Not raw measured telemetry; respect field-level evidence roles."
+    },
+    {
+      "study_id": "PSI-159",
+      "source": "NASA Physical Sciences Informatics",
+      "filename": "PSI-159_Experimental table_CFI-G_Inverse Flames.csv",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-159/download?file=PSI-159_Experimental+table_CFI-G_Inverse+Flames.csv&version=1&redirect=false",
+      "doi": "10.60555/cyt1-kh64",
+      "sha256": "d4d44f8b9896936728748e34d1b6ad0812032a92fa5289599b708c138e3a9b39",
+      "size_bytes": 39422,
+      "study_version": 1,
+      "file_version": 1,
+      "verified_utc": "2026-11-15T23:49:26.295293+00:00",
+      "retrieved_utc": "2026-11-15T23:49:26.295293+00:00",
+      "verification": "byte_identical_to_nasa_download",
+      "archive_member": "NASA_API_SUPPLEMENT/PSI-159_Experimental table_CFI-G_Inverse Flames.csv",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 39422,
+        "directory": false,
+        "files": [],
+        "id": "691f7ea117f78b371b26f6fb",
+        "key": "psi-data/PSI-159/Experimental table/PSI-159_Experimental table_CFI-G_Inverse Flames.csv",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "38.5 KB",
+        "sortingCategory": "Experimental table",
+        "status": "active",
+        "subcategory": "",
+        "updated": "Fri, 21 Nov 2025 04:48:33 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "license": "No file-specific license exposed; retain NASA and author attribution.",
+      "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+      "classification": "mixed_conditions_and_reported_results",
+      "media_type": "text/csv",
+      "field_classification": [
+        {
+          "header": "Flame Type",
+          "column_index": 0,
+          "role": "identifier_or_unclassified",
+          "source_marker": "Inverse | Inverse | Inverse"
+        },
+        {
+          "header": "Day",
+          "column_index": 1,
+          "role": "identifier_or_unclassified",
+          "source_marker": "1 | 1 | 1"
+        },
+        {
+          "header": "Fuel",
+          "column_index": 2,
+          "role": "identifier_or_unclassified",
+          "source_marker": "ethane | ethane | ethane"
+        },
+        {
+          "header": "Test",
+          "column_index": 3,
+          "role": "identifier_or_unclassified",
+          "source_marker": "21196 A1 | 21196 A2 | 21196 F1"
+        },
+        {
+          "header": "Xf  before test",
+          "column_index": 4,
+          "role": "condition",
+          "source_marker": "0.298100 | 0.298100 | 0.295424848"
+        },
+        {
+          "header": "Xf  after test",
+          "column_index": 5,
+          "role": "reported_result",
+          "source_marker": "0.298100 | 0.295425 | 0.291765297"
+        },
+        {
+          "header": "approx p (bar)",
+          "column_index": 6,
+          "role": "condition",
+          "source_marker": "1.10 | 1.10 | 1.1033"
+        },
+        {
+          "header": "XO2",
+          "column_index": 7,
+          "role": "condition",
+          "source_marker": "0.21 | 0.21 | 0.15"
+        },
+        {
+          "header": "HC burnrate (mg/s)",
+          "column_index": 8,
+          "role": "condition",
+          "source_marker": "1.5 | 1.5 | 1.5"
+        },
+        {
+          "header": "O2 flow rate (mg/s)",
+          "column_index": 9,
+          "role": "condition",
+          "source_marker": "5.59 | 5.59 | 5.58675424"
+        },
+        {
+          "header": "TFP",
+          "column_index": 10,
+          "role": "identifier_or_unclassified",
+          "source_marker": "No | No | No"
+        },
+        {
+          "header": "Tad (K)",
+          "column_index": 11,
+          "role": "derived",
+          "source_marker": "2120 | 2120 | 1786.994366"
+        },
+        {
+          "header": "Zst",
+          "column_index": 12,
+          "role": "derived",
+          "source_marker": "0.1665 | 0.1665 | 0.126728327"
+        },
+        {
+          "header": "Hot ignition",
+          "column_index": 13,
+          "role": "reported_result",
+          "source_marker": "No | Yes | Yes"
+        },
+        {
+          "header": "burn time (sec)",
+          "column_index": 14,
+          "role": "reported_result",
+          "source_marker": "0 | 35 | 36"
+        },
+        {
+          "header": "Self -ext or flow term",
+          "column_index": 15,
+          "role": "reported_result",
+          "source_marker": "- | FT | FT"
+        },
+        {
+          "header": "Peak burner Temp (C)",
+          "column_index": 16,
+          "role": "reported_result",
+          "source_marker": "27.1 | 162.9 | 118.5"
+        },
+        {
+          "header": "Peak burner temp (K)",
+          "column_index": 17,
+          "role": "reported_result",
+          "source_marker": "300.25 | 436.05 | 391.65"
+        },
+        {
+          "header": "Color",
+          "column_index": 18,
+          "role": "reported_result",
+          "source_marker": "- | yellow | blue"
+        },
+        {
+          "header": "Comments",
+          "column_index": 19,
+          "role": "reported_result",
+          "source_marker": "Failed to ignite | Not spherical shape"
+        }
+      ],
+      "classification_note": "Flight test catalog containing conditions, calculated Tad/Zst and reported outcomes (cool flame, burn time, peak burner temperature, termination). Not raw measured telemetry; respect field-level evidence roles."
+    }
+  ],
+  "downloaded_pdfs": [
+    {
+      "study_id": "PSI-159",
+      "source": "NASA Physical Sciences Informatics",
+      "filename": "PSI-159_Engineering Documents_ACME Engineering Implementation Rpt..pdf",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-159/download?file=PSI-159_Engineering+Documents_ACME+Engineering+Implementation+Rpt..pdf&version=1&redirect=false",
+      "doi": "10.60555/cyt1-kh64",
+      "sha256": "393f3ebc6662b10f0fe55d87ceda3b6696d2cc9c91266b81132761de50078456",
+      "size_bytes": 7496324,
+      "study_version": 1,
+      "file_version": 1,
+      "verified_utc": "2026-11-15T23:49:15.273415+00:00",
+      "retrieved_utc": "2026-11-15T23:49:15.273415+00:00",
+      "verification": "byte_identical_to_nasa_download",
+      "archive_member": "exeperiencias/PSI-159/Engineering Documents/PSI-159_Engineering Documents_ACME Engineering Implementation Rpt.pdf",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 7496324,
+        "directory": false,
+        "files": [],
+        "id": "691f7ea117f78b371b26f6f9",
+        "key": "psi-data/PSI-159/Engineering Documents/PSI-159_Engineering Documents_ACME Engineering Implementation Rpt..pdf",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "7.15 MB",
+        "sortingCategory": "Engineering Documents",
+        "status": "active",
+        "subcategory": "",
+        "updated": "Fri, 21 Nov 2025 04:48:33 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "license": "No file-specific license exposed; retain NASA and author attribution.",
+      "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+      "classification": "engineering_or_publication",
+      "media_type": "application/pdf",
+      "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+    },
+    {
+      "study_id": "PSI-159",
+      "source": "NASA Physical Sciences Informatics",
+      "filename": "PSI-159_Reports_FinalRpt_ACME.CFI-G.pdf",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-159/download?file=PSI-159_Reports_FinalRpt_ACME.CFI-G.pdf&version=1&redirect=false",
+      "doi": "10.60555/cyt1-kh64",
+      "sha256": "f6cce7cc08ca69c155994d7a8898e21cd4aba122f4e46d5e00708e4889a1ebab",
+      "size_bytes": 3894907,
+      "study_version": 1,
+      "file_version": 1,
+      "verified_utc": "2026-11-15T23:49:21.534961+00:00",
+      "retrieved_utc": "2026-11-15T23:49:21.534961+00:00",
+      "verification": "byte_identical_to_nasa_download",
+      "archive_member": "exeperiencias/PSI-159/repots/PSI-159_Reports_FinalRpt_ACME.CFI-G.pdf",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 3894907,
+        "directory": false,
+        "files": [],
+        "id": "691f7ea117f78b371b26f6f8",
+        "key": "psi-data/PSI-159/Reports/PSI-159_Reports_FinalRpt_ACME.CFI-G.pdf",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "3.71 MB",
+        "sortingCategory": "Reports",
+        "status": "active",
+        "subcategory": "",
+        "updated": "Fri, 21 Nov 2025 04:48:33 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "license": "No file-specific license exposed; retain NASA and author attribution.",
+      "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+      "classification": "engineering_or_publication",
+      "media_type": "application/pdf",
+      "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+    }
+  ],
+  "downloaded_documents": [
+    {
+      "study_id": "PSI-159",
+      "source": "NASA Physical Sciences Informatics",
+      "filename": "metadata/i_Investigation.txt",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-159/download?file=PSI-159_metadata_PSI-159-ISA.zip&version=1&redirect=false",
+      "doi": "10.60555/cyt1-kh64",
+      "sha256": "03092ce8efc68e1a8430098bf73da9b4e9ae2ef302c677c368c2c81ded355ac9",
+      "size_bytes": 8110,
+      "study_version": 1,
+      "file_version": 1,
+      "verified_utc": "2026-11-15T23:49:17.433579+00:00",
+      "retrieved_utc": "2026-11-15T23:49:17.433579+00:00",
+      "verification": "byte_identical_to_nasa_download",
+      "archive_member": "exeperiencias/PSI-159/metadados/PSI-159_metadata_PSI-159-ISA (1).zip",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 8404,
+        "directory": false,
+        "files": [],
+        "id": "691f7ea117f78b371b26f6f7",
+        "key": "psi-data/PSI-159/metadata/PSI-159_metadata_PSI-159-ISA.zip",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "8.21 KB",
+        "sortingCategory": "Investigation Metadata Files",
+        "status": "active",
+        "subcategory": null,
+        "updated": "Fri, 21 Nov 2025 04:48:33 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "license": "No file-specific license exposed; retain NASA and author attribution.",
+      "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+      "classification": "metadata",
+      "media_type": "text/plain",
+      "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample.",
+      "parent_archive_sha256": "0ef60d1ee8d4d53bbe58139d56fa99e9500ca48dd7913b25ac85dc853d6710ab",
+      "parent_archive_filename": "PSI-159_metadata_PSI-159-ISA.zip",
+      "nested_member": "i_Investigation.txt"
+    },
+    {
+      "study_id": "PSI-159",
+      "source": "NASA Physical Sciences Informatics",
+      "filename": "metadata/s_PSI-159.txt",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-159/download?file=PSI-159_metadata_PSI-159-ISA.zip&version=1&redirect=false",
+      "doi": "10.60555/cyt1-kh64",
+      "sha256": "cb9374159b9b01a83bfe53a0b8ba1a602793df86f298e0ad222615c55d200135",
+      "size_bytes": 56,
+      "study_version": 1,
+      "file_version": 1,
+      "verified_utc": "2026-11-15T23:49:17.433579+00:00",
+      "retrieved_utc": "2026-11-15T23:49:17.433579+00:00",
+      "verification": "byte_identical_to_nasa_download",
+      "archive_member": "exeperiencias/PSI-159/metadados/PSI-159_metadata_PSI-159-ISA (1).zip",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 8404,
+        "directory": false,
+        "files": [],
+        "id": "691f7ea117f78b371b26f6f7",
+        "key": "psi-data/PSI-159/metadata/PSI-159_metadata_PSI-159-ISA.zip",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "8.21 KB",
+        "sortingCategory": "Investigation Metadata Files",
+        "status": "active",
+        "subcategory": null,
+        "updated": "Fri, 21 Nov 2025 04:48:33 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "license": "No file-specific license exposed; retain NASA and author attribution.",
+      "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+      "classification": "metadata",
+      "media_type": "text/plain",
+      "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample.",
+      "parent_archive_sha256": "0ef60d1ee8d4d53bbe58139d56fa99e9500ca48dd7913b25ac85dc853d6710ab",
+      "parent_archive_filename": "PSI-159_metadata_PSI-159-ISA.zip",
+      "nested_member": "s_PSI-159.txt"
+    }
+  ],
+  "preserved_archives": [
+    {
+      "study_id": "PSI-159",
+      "source": "NASA Physical Sciences Informatics",
+      "filename": "PSI-159_metadata_PSI-159-ISA.zip",
+      "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+      "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-159/download?file=PSI-159_metadata_PSI-159-ISA.zip&version=1&redirect=false",
+      "doi": "10.60555/cyt1-kh64",
+      "sha256": "0ef60d1ee8d4d53bbe58139d56fa99e9500ca48dd7913b25ac85dc853d6710ab",
+      "size_bytes": 8404,
+      "study_version": 1,
+      "file_version": 1,
+      "verified_utc": "2026-11-15T23:49:17.433579+00:00",
+      "retrieved_utc": "2026-11-15T23:49:17.433579+00:00",
+      "verification": "byte_identical_to_nasa_download",
+      "archive_member": "exeperiencias/PSI-159/metadados/PSI-159_metadata_PSI-159-ISA (1).zip",
+      "original_metadata": {
+        "ChecksumAlgorithm": "",
+        "ETag": "",
+        "StorageClass": "",
+        "bytes_size": 8404,
+        "directory": false,
+        "files": [],
+        "id": "691f7ea117f78b371b26f6f7",
+        "key": "psi-data/PSI-159/metadata/PSI-159_metadata_PSI-159-ISA.zip",
+        "restricted": false,
+        "restrictedAccess": false,
+        "size": "8.21 KB",
+        "sortingCategory": "Investigation Metadata Files",
+        "status": "active",
+        "subcategory": null,
+        "updated": "Fri, 21 Nov 2025 04:48:33 GMT",
+        "version": 1,
+        "visible": true
+      },
+      "license": "No file-specific license exposed; retain NASA and author attribution.",
+      "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+      "classification": "metadata",
+      "media_type": "application/zip",
+      "classification_note": "ISA-Tab metadata archive; not numerical experiment or model output."
+    }
+  ],
+  "status": "verified_originals_imported",
+  "availability_note": "Selected uploaded originals plus both public experimental tables."
+}

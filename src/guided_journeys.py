@@ -17,15 +17,19 @@ from .i18n import (
     quantity_label,
     t,
 )
+from .quantities import split_header
 
 TOTAL_STEPS = 4
 
 
-def extract_display_unit(col_name: str, meta: dict[str, Any] | None = None) -> str:
+def extract_display_unit(col_name: str, meta: dict[str, Any] | None = None, language: str | None = None) -> str:
     """Resolve an axis unit from column metadata or raw NASA header suffixes."""
     unit = str((meta or {}).get("unit") or "").strip()
     if unit:
         return unit
+    _, header_unit = split_header(col_name)
+    if header_unit:
+        return header_unit
     if ";" in col_name:
         suffix = col_name.split(";")[-1].strip()
         if suffix and len(suffix) <= 32:
@@ -35,7 +39,21 @@ def extract_display_unit(col_name: str, meta: dict[str, Any] | None = None) -> s
         return "% by vol"
     if "(ppm)" in lower:
         return "ppm"
-    return "unitless / categorical" if get_lang() == "en" else "adimensional / categórica"
+    active = language or get_lang()
+    return "unit not declared" if active == "en" else "unidade não declarada"
+
+
+def chart_evidence_roles(entry: dict[str, Any], columns: list[str]) -> dict[str, str]:
+    """Resolve exact selected-column provenance without promoting reported outcomes."""
+    table = entry.get("table") or {}
+    fallback = table.get("evidence_kind") or (entry.get("document") or {}).get("evidence_kind") or "unclassified"
+    table_columns = table.get("columns", [])
+    roles = {}
+    for column in columns:
+        index = table_columns.index(column) if column in table_columns else -1
+        field = next((f for f in table.get("field_classification", []) if f.get("column_index") == index), None)
+        roles[column] = str((field or {}).get("role") or (field or {}).get("evidence_kind") or fallback)
+    return roles
 
 
 def render_term_help(lang: str) -> None:
@@ -68,30 +86,13 @@ def render_chart_explanation(
         or experiment.get("name")
         or study_id
     )
-    raw_kind = str(
-        (entry.get("table") or {}).get("evidence_kind")
-        or (entry.get("document") or {}).get("evidence_kind")
-        or "mixed"
-    ).lower()
-    if "mixed" in raw_kind:
-        role_code = "mixed"
-    elif "condition" in raw_kind:
-        role_code = "condition"
-    elif "measurement" in raw_kind or "result" in raw_kind:
-        role_code = "measurement"
-    else:
-        role_code = "mixed"
-    role_map = {
-        "measurement": t("chart_guide.role_measurement", lang),
-        "condition": t("chart_guide.role_condition", lang),
-        "mixed": t("chart_guide.role_mixed", lang),
-    }
-    role_text = role_map.get(role_code, t("chart_guide.role_mixed", lang))
+    selected_roles = chart_evidence_roles(entry, [x_col, *y_cols])
+    role_text = " · ".join(f"{column}: {evidence_label(kind, lang)}" for column, kind in selected_roles.items())
 
-    x_unit = extract_display_unit(x_col, x_meta)
+    x_unit = extract_display_unit(x_col, x_meta, lang)
     y_parts = []
     for col, ym in zip(y_cols, y_metas):
-        y_unit = extract_display_unit(col, ym)
+        y_unit = extract_display_unit(col, ym, lang)
         qty = quantity_label(str(ym.get("quantity") or ""), lang)
         y_parts.append(f"`{col}` ({y_unit}; {qty})")
     y_summary = ", ".join(y_parts) if y_parts else "`value`"
@@ -114,7 +115,7 @@ def render_chart_explanation(
 
     interpret_text = (
         t("chart_guide.note_condition_only", lang)
-        if role_code == "condition"
+        if set(selected_roles.values()) == {"condition"}
         else t("chart_guide.note_trend", lang, x=x_col, y=", ".join(y_cols))
     )
 

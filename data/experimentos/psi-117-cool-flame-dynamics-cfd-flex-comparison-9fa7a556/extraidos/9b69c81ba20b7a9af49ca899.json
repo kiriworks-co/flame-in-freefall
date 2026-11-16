@@ -1,0 +1,3051 @@
+{
+  "status": "processado",
+  "text": "Cool Flames in Space\n\n\n\n\n\n            Tanvir Farouk*\n\nDepartment of Mechanical Engineering, University of South Carolina\n          *ONR Fellow , Naval Research Laboratory\n\n\n           NASA Physical Sciences Informatics (PSI) Seminar\n                        March 26, 2026\n\nAcknowledgements\n\n Students: Rajib Mahamud (Idaho State University), Fahd Alam (GE Vernova), Sheikh Ahmed\n (Honeywell), Ali Charchi (Mitsubishi), Sudipta Saha (Pratt and Whitney), Ejaz Ahmed (Virginia Tech\n Graduate School)\n\n Collaborators: Yiguang Ju (Princeton), Tom Avedesian (Cornell), Fred Dryer (Princeton), Forman\n Williams (UCSD), Sang Hee Won (USC), Daniel Dietrich (NASA), Michael Hicks (NASA), Vedha\nNayagam (NASA)\n\nIntroduction\n\n   Cool flame: A flame having a typical temperature of ~ 650 K, reaction is not vigorous and releases little heat,\n    light, or carbon dioxide (source: Wikipedia)\n\n\n\n\n\n                                                                                                Gasoline Engine\n\n\n\n                            Sir Humphrey Davy                 Harry Julius Emeléus\n                   1817 Low temperature flame                    First to record their\n                                                                emission spectra                  Hot platinum wire into a mixture of\n                              air and diethyl ether vapor               1929 coined the term\n                                                              Cool /Cold flame                   Formation of pale phosphorescent\n                                     light in the dark\n\nIntroduction\n  Traditional view of cool flames prior to 2012-2014\n   •  Cool flames associated with premixed combustion leading to ignition of hot fuel/air mixtures –\n    commonly encountered in car-engine knock\n                                           Cool flames →Ignition\n   History of cool flame research – Professor Griffiths (2004)                                                                                                     Ignition delay of n-heptane\nPre-1900    First observation: Davy (1817),Perkin (1882)        Poincore theorems and\n                                                    Liapounov stability analysis                                               Curran et al. Combustion & Flame (1998)\n1920\n               First flow tube experiments                                                                                       HCCI Engine\n                           Lotka-Volterra isothermal oscillations1930\n          Pease C3H8 cool flame studies in a closed vessel\n            Extensive mapping of p-T ignition diagrams (Townsend et al.)\n1940                                                        Zeldovich chemical reactor                                                                                                Gasoline Engine\n                                                                  theory\n                          Sal’nikov non-isothermal theory1950\n        RH + O2 product\n             analysis and\n1960        R + O2 = RO2                                                                                                                               Diesel Engine                         Gray and Yang unified          mechanisms\n                             chain-thermal theory1970      proposed\n                                                     Chemical reactor stability\n                  Thermokinetic                         and non-linear dynamics                                        Stirred closed vessel1980           models                                               (Aris, Uppal et al.)                              and CSTR studies\n\n1990      Zero dimensional numerical simulation\n          and reduced/detailed kinetic model\n           development                           Technical development\n                                           and applications2000      Reaction – diffusion\n           models                                                                   Temperature                                      Cool flames in space (µg)\n\nFirst observation of multiphase cool flames – “Anomalous Combustion”\n                                                                             High Temperature\n                                                                            Combustion\n\n\n\n\n\n                                                                                “Cool Flame”????\n\nCool Flames – Model Predictions\n\n\n\n\n\n     Evolution of droplet diameter and burning rate (n-heptane, do = 4.00 mm, air, atmospheric pressure)\n\n\n                                  Classical “Cool Flames” (premixed\n                              systems) ―“Cool Flame”  to Hot\n                                       Ignition.\n\nDriving Mechanism\n\n\n\n\n                                                                              •  Radiative heat loss pushes the\n                                                      system to transition to the\n                                                     second stage, cool flame burn.\n\n                                                                              • A dynamic balance between heat                      Heat loss                                                            generation and heat loss\n                                                            maintains the long-duration cool\n                                                          flame burn.                   Heat generation\n\n\n\n\n\n   Evolution of heat generation and losses (n-heptane, do = 4.00 mm, air,\n                        atmospheric pressure)\n\nSensitivity of Kinetic Parameters\n\n\n\n\n\n                                                                          Uncertainty in droplet diameter and burning rate predictions, (n-\n                                                                            heptane, do = 4.00 mm, air, atmospheric pressure)\n\n\n                                                                In general increase in QOOHO2 → QOOH + O2\n                                                              rate decreased the burning rate and increased the\n                                                                extinction diameter.\n\n                                                        Vice versa QOOHO2→ Ketohydroperoxide + OH\n                                                (Q = CnH2n)\n\nSensitivity coefficients for burning rate and extinction\n              diameter predictions.\n\nCool Flames → Revised Kinetics\n\n\n\n\n\n                                                                           Uncertainty in droplet diameter and burning rate predictions, (n-\n                                                                             heptane, do = 4.00 mm, air, atmospheric pressure)\n\n\n                                                                 In general increase in QOOHO2 → QOOH + O2\n                                                               rate decreased the burning rate and increased the\n                                                                extinction diameter.\n\n                                                        Vice versa QOOHO2→ Ketohydroperoxide + OH\n                                                 (Q = CnH2n)\n\nPredicted droplet diameter and burning rate evolution with\n            revised chemical kinetics model.\n\nMultistage Oscillatory Cool Flames – Pressure Effects\n\nOscillatory Cool Flames – Model Predictions\n\n\n\n\n\n                             Evolution of droplet diameter and flame diameter (do = 4.08 mm, O2/CO2/N2 0.21/0.15/0.64, 3 atm)\n\nOscillatory Cool Flames – Model Predictions\n\n\n                High\n             temperature\n                  ignition-\n                 radiative\n                extinction\n                Low temperature\n                   reaction-auto-thermal\n                          heating\n\n                      High temperature re-\n                              initiation-radiative\n                               extinction                                   Hot Flame ???                    Low                                           Transient !!!                     temperature\n                    combustion\n\n\n\n\n\n         Evolution of maximum temperature and burning rate (do = 4.08 mm,\n                      O2/CO2/N2 0.21/0.15/0.64, 3 atm)\n\nHigh Pressure Helium Exchange – 3 atm\n\n\n                                                               Introduction of helium increases the burning\n                                                                    rate, at higher helium concentration a third\n                                                        stage quasi-steady burn is observed\n\n\n\n\n                                                                                                                                 1st Stage\n                                                                                         High Temperature\n                                                                                              burn\n\n                                                                                                                   2nd Stage                    3rd Stage\n                                                                                               Moderate          Low Temperature\n                                                                                                Temperature burn              burn\n   Evolution of droplet diameter (n-heptane, do = 4.00 mm,                                                   Tflame ~ 950 K                  Tflame ~ 770 K\n     XO2 = 21%, He exchange with balance N2, 3 atm).\n\n\n\n\n\n                                                                            Evolution of peak temperature (n-heptane, do = 4.00\n                                                     mm, XO2 = 21%, He exchange with balance N2, 3 atm).\n\nHigh Pressure Helium Exchange – 3 atm\n\n                                                                          •  The second stage suppresses at a higher\n                                                        helium concentration\n\n                                                                          •  The droplet diameter regression does not\n                                               show any significant changes\n\n\n\n\n                                                                                                                     2nd Stage\n                                                                                                 Moderate\n                                                                                                 Temperature burn\n                                                                                                                                           Tflame ~ 950 K\n\n\n   Evolution of droplet diameter (n-heptane, do = 4.00 mm,                                                     3rd Stage\n     XO2 = 21%, He exchange with balance N2, 3 atm).                               Low Temperature burn\n                                                                                                                                            Tflame ~ 770 K\n\n\n\n\n\n                                                                            Evolution of peak temperature (n-heptane, do = 4.00\n                                                     mm, XO2 = 21%, He exchange with balance N2, 3 atm).\n\nHigh Pressure Helium Exchange – 3 atm\n\n                                                                    • A second contraction in the flame occurs as the system\n                                                             transitions to the third stage/low temperature burn.\n\n                                                     3rd\n                    1st            2nd                   3rd                                                                    •  Despite the decrease in the maximum temperature, it is\n                      Stage               Stage                     Stage                    the flame contraction that makes the droplet diameter\n                                                      regression insensitive to the different burn stages.\n\n\n\n\n\n        Evolution of flame standoff ratio (n-heptane, do = 4.00\n     mm, XO2 = 21%, He exchange with balance N2, 3 atm).\n\n\n\n\n\n                                                                                Evolution of burning rate (n-heptane, do = 4.00 mm,\n                                                                      XO2 = 21%, He exchange with balance N2, 3 atm).\n\nHigh Pressure Helium Exchange – 3 atm\n\n                                                                             •  A strong coupling between heat generation and losses in the\n                                                          system.\n                                                                             •  The radiative and diffusive heat losses are comparable in the first\n                                                   and second stages.\n                                                                             •  The diffusive losses become prominent in the third stage, “Cool\n                                                             flame” burn.\n\n\n\n\n\n         Evolution of radiative loss (n-heptane, do = 4.00 mm,\n         XO2 = 21%, He exchange with balance N2, 3 atm).\n\n\n\n\n\n                                                                                Evolution of diffusive loss (n-heptane, do = 4.00 mm,\n                                                                       XO2 = 21%, He exchange with balance N2, 3 atm).\n\nPressure dependence\n\n\n\n\n\n                                 Ignition delay of n-heptane\n\n                                                                                                     Degenerate\n                                                                                                         Branching\n\nSpatiotemporal variation of species and temperature\n\n\n\n\n\n                                                     CO\n\n\n\n\n          Temperature\n\n\n\n                                                              CH2O\n\nSpecies Distribution – 3 atm, XHe = 40%\n\n\n\n\n\n                              Spatiotemporal distribution of species representative of three distinct stages\n\nSpecies Distribution – 3 atm, XHe = 40%\n\n\n\n\n\n              •  Species representative of low temperature kinetics is prominent in the third stage\n              •  Competition between O2 addition to QOOH and decomposition of QOOH (i.e., OH, HO2, olefin, carbonyl, QO)\n\nExperimental Observation of Three Stage Burn\n\n\n\n\n\n    n-dodecane, 2.75 atm, 21.6% O2, 50.2% N2, 28.2% He.\n\n\n          Qualitative agreement between\n          predictions and observations\n\nCan We Trigger “Cool Flame” Burn For\n         Smaller Droplets\n\nOzone Assisted Cool Flames\n\n\n                      Increasing\n                 Ozone\n\n\n\n\n\n                        Amount of Ambient Ozone\n               Dictating Factor !!!\n\n                   Low                                 Sustained    combustion    of\n                   Temperature               Hot Ignition    “Droplet” requires a minimum\n                  Combustion                        Ozone Concentration\n\nCool Flame under Near Limit Conditions\n           Blue: Oscillatory cool flame\n            Red: Stable cool flame\n\n\n\n                                                                         XO2 = 10%\n\n                                                                          XO3 = 5%\n\n                                                                             XN2 =\n                                                                      Balance\n                                                                                                       Temperature                                                         P = 1 atm,\n                                                              T = 298 K\n\n                                                                                      Do =\n                                                                                                        0.5\n                                                      mm\n                                                                                                               80 x Ddrop\n\n\n                                  Flame  expands   radially   gradual\n                                                        decrease in flame T  Contracts (t < 0.1\n                                                                   s)\n                                 Stable cool flame for brief period of time\n                                                               (~0.12 s @ ~710 K)\n                                                                                                         Ketohydroperoxides\n\nTerrestrial Cool Flame Experiments\n\nCounterflow Diffusion Flame\n\n\n\n\n\n            Cool diffusion flame, 1 g (Won et al.)\n                                           Excellent configuration for studying flame’s strength under the\n                                                           effect of stretch.\n                                       Useful platform for validating reaction kinetics and transport\n                                                models.\n                                           Idealized condition, it can be treated as a 1D problem:\n\n                                     Leads to the derivation of an analytical solution\n                                   Makes numerical modeling tractable\n\nLimitations of the conventional numerical approach\n\n    The numerical effort to study counterflow flame configuration has been predominantly centered\n       upon OPPDIF module of CHEMKIN chemical kinetic package\n    This module implements a similarity transformation approach that reduces the flow field to a\n         one-dimensional/ plug flow problem with the following assumptions:\n\n       Radial component of velocity is linear in radius\n       Dependent variables become functions of the axial direction only\n\n\n\n               What are the physical conditions that can be\n                         represented by this assumption?\n\n\n                                                             Cool flames\n\n High Reynolds number flow configuration: High strain rate (a)\n Thin flame sheet: Hot flame (high activation energy)           Low Re: Low strain rate (a ~100 s-1)\n                                                           Finite Flame Thickness: low activation energy)\n\nEffect of buoyancy\n\n                                                          Buoyancy lifts the flame\n                                                                          upward.\n\n                                                              Without buoyancy, 1D and\n                                                           2D models predict the flame\n                                                                                          at or near the stagnation\n                                                                             plane due to momentum-\n                                                                          balanced BC.\na) Temperature distribution and streamlines, and b) heat release rate, for DME diffusion cool flame\nwith and without buoyancy for identical conditions (XDME= 0.587, UF = 62.3 cm/s, UO = 50.9 cm/s, a ~\n90 s-1, P = 1 atm)                                        The peak flame temperature\n                                                                                                in 1D is slightly lower\n                                                                   compared to the 2D\n                                                                                         prediction, but the peak HRR\n                                                                   shows the opposite trend.\n\n                                                               Temperature gradient is\n                                                                                 higher in 1D calculation.\n                                                                  More diffusive heat loss.\n\nFlow field analyses\n\n\n                                            The extended entrance channels\n                                                                           allow the velocity at the nozzle exits\n                                                                                  to be perturbed by the flame.\n\n                                       2D model captures the perturbation\n                                                                                        in a self-consistent manner.\n\n                                       2D model without buoyancy retains\n                                                                          the momentum-balanced condition\n                       c                        d          and forms the stagnation plane at the\n                                                                             axis midpoint, exhibiting identical\n                                                                             perturbation on either side\n\n                                                            Axisymmetric dip in 2D simulation,\n                                                                   observed in experiments of Sarnecki\n                                                                                  et al.\n\n\n\nComputed centerline distribution of a) axial velocity, b) axial velocity gradient\nComputed radial distribution of c) axial, and d) radial velocity at the fuel-side nozzle exit\n\nEffect of global strain rate\n\n\n                                         − T∞ ) D                                      g β( Thot                                      Ri =\n                                   V 2 Richardson number            1  ∂∀    1 ∂  RT   1 R  1                   β =        =         =    =                                                                         \n                     ∀∂ T  p ∀∂T  p  ∀ p  T\n                                           − T∞ ) D 3                                        g β( Thot                                Gr =\n                                     V 2\n                                 Gr                                     Ri =\n                                   Re 2\n\n                   Flow characteristics based in Richardson number\n             Ri < 0.1                   Natural convection is negligible\n           0.1< Ri <10        Both natural and forced convection are important\n              Ri > 10                 Forced convection is negligible\n\nFlame is pushed away from the nozzle as the convective\n   effect becomes dominant with the increase of global strain\n   rate.\n\nThe flame location ceases to move further when the\n  buoyancy effect becomes negligible (i.e., low Ri).          XCH2O contours of DME diffusion cool flame at different global strain\n                                                                             rates (XDME = 0.587, P = 1 atm)\n\nSummary\n\n    • Insights obtained from modeling on cool flame characteristics and\n    dynamics\n\n    • Models were developed for a number of scenarios\n\n    • Models were validated against the FLEX data and then utilized to\n     explore other scenarios\n\n    • Extensive amount of experimental data available for interpretation\n    and new insights\n\nThe Resurgence of “Cool Flame” Research\n                                             “Anomalous Combustion/Cool Flame?” of large n-heptane\n                                                               droplet onboard ISS in 2011, NASA FLEX\n\nThe Resurgence of “Cool Flame” Research\n\nResurgence of “Cool Flame” Research\n\n                              2012                     2014\n\nReferences\n\n     •   Farouk, T., Dryer, F., “Isolated n-heptane droplet combustion in microgravity: “cool flames” – two stage combustion” Combustion and\n       Flame, 161, (2014), 565 - 581.\n\n     •   Farouk, T., Hicks, M., Dryer, F., “Multistage oscillatory “Cool Flame” behavior for isolated alkane droplet combustion in elevated\n        pressure microgravity conditions” Proceedings of the Combustion Institute, 35, (2015), 1701 – 1708.\n\n     •   Farouk, T., Dietrich, D., Alam, F., Dryer, D., “Isolated n-decane droplet combustion – dual stage and single stage transition to “cool\n        flame” droplet burning” Proceedings of the Combustion Institute, 36, (2017), 2523 - 2530.\n\n     •   Alam, F., Won, S. H., Farouk, T., “Ozone assisted cool flame combustion of sub-millimeter sized n-alkane droplets at atmospheric and\n        higher pressure” Combustion and Flame, 195, (2018), 220 - 231.\n\n     •   Alam, F., Aghdam, A., Dryer, F., Farouk, T., “Oscillatory cool flame combustion behavior of submillimeter sized n-alkane droplet under\n       near limit conditions” Proceedings of the Combustion Institute, 37, (2019), 3383 – 3391.\n\n     •   Farouk,  T., Dietrich, D., Dryer,  F., “Three stage cool flame droplet burning behavior of n-alkane droplets at elevated pressure\n        conditions” Proceedings of the Combustion Institute, 37, (2019), 3353 – 3361.\n\n     •   Farouk, T., Dryer, F., “Extinction characteristics of isolated n-alkane fuel droplets during low temperature cool flame burning in air”\n       Proceedings of the Combustion Institute 39, (2023), 2471 – 2481.\n\n     •   Saha., S., Farouk, T., “Effects of multidimensional transport and buoyancy on the cool flame dynamics in a counterflow burner”\n         International Journal of Heat and Mass Transfer 256, (2026), 127954.\n\nThank You",
+  "pages": [
+    {
+      "page": 1,
+      "location": "página 1",
+      "text": "Cool Flames in Space\n\n\n\n\n\n            Tanvir Farouk*\n\nDepartment of Mechanical Engineering, University of South Carolina\n          *ONR Fellow , Naval Research Laboratory\n\n\n           NASA Physical Sciences Informatics (PSI) Seminar\n                        March 26, 2026",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            342.75,
+            67.44,
+            617.28,
+            105.99
+          ],
+          "text": "Cool Flames in Space",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            379.01,
+            336.94,
+            581.01,
+            378.11
+          ],
+          "text": "Tanvir Farouk*",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            202.73,
+            389.76,
+            757.12,
+            412.89
+          ],
+          "text": "Department of Mechanical Engineering, University of South Carolina",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            313.25,
+            411.36,
+            646.58,
+            434.49
+          ],
+          "text": "*ONR Fellow , Naval Research Laboratory",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            306.05,
+            476.16,
+            654.0,
+            499.29
+          ],
+          "text": "NASA Physical Sciences Informatics (PSI) Seminar",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            425.94,
+            498.03,
+            533.95,
+            518.54
+          ],
+          "text": "March 26, 2026",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "location": "página 2",
+      "text": "Acknowledgements\n\n Students: Rajib Mahamud (Idaho State University), Fahd Alam (GE Vernova), Sheikh Ahmed\n (Honeywell), Ali Charchi (Mitsubishi), Sudipta Saha (Pratt and Whitney), Ejaz Ahmed (Virginia Tech\n Graduate School)\n\n Collaborators: Yiguang Ju (Princeton), Tom Avedesian (Cornell), Fred Dryer (Princeton), Forman\n Williams (UCSD), Sang Hee Won (USC), Daniel Dietrich (NASA), Michael Hicks (NASA), Vedha\nNayagam (NASA)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            260.02,
+            42.22
+          ],
+          "text": "Acknowledgements",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            19.2,
+            79.88,
+            897.72,
+            155.57
+          ],
+          "text": "Students: Rajib Mahamud (Idaho State University), Fahd Alam (GE Vernova), Sheikh Ahmed \n(Honeywell), Ali Charchi (Mitsubishi), Sudipta Saha (Pratt and Whitney), Ejaz Ahmed (Virginia Tech \nGraduate School)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            19.2,
+            171.64,
+            887.6,
+            247.33
+          ],
+          "text": "Collaborators: Yiguang Ju (Princeton), Tom Avedesian (Cornell), Fred Dryer (Princeton), Forman \nWilliams (UCSD), Sang Hee Won (USC), Daniel Dietrich (NASA), Michael Hicks (NASA), Vedha \nNayagam (NASA)",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "location": "página 3",
+      "text": "Introduction\n\n   Cool flame: A flame having a typical temperature of ~ 650 K, reaction is not vigorous and releases little heat,\n    light, or carbon dioxide (source: Wikipedia)\n\n\n\n\n\n                                                                                                Gasoline Engine\n\n\n\n                            Sir Humphrey Davy                 Harry Julius Emeléus\n                   1817 Low temperature flame                    First to record their\n                                                                emission spectra                  Hot platinum wire into a mixture of\n                              air and diethyl ether vapor               1929 coined the term\n                                                              Cool /Cold flame                   Formation of pale phosphorescent\n                                     light in the dark",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            166.56,
+            42.22
+          ],
+          "text": "Introduction",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            38.94,
+            65.6,
+            918.66,
+            112.97
+          ],
+          "text": "Cool flame: A flame having a typical temperature of ~ 650 K, reaction is not vigorous and releases little heat, \nlight, or carbon dioxide (source: Wikipedia)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            624.11,
+            257.18,
+            718.26,
+            273.9
+          ],
+          "text": "Gasoline Engine",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            233.66,
+            345.88,
+            404.49,
+            370.97
+          ],
+          "text": "Sir Humphrey Davy",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            558.39,
+            345.7,
+            746.26,
+            371.47
+          ],
+          "text": "Harry Julius Emeléus",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            202.08,
+            373.08,
+            431.05,
+            397.65
+          ],
+          "text": "1817 Low temperature flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            574.34,
+            374.34,
+            730.27,
+            398.15
+          ],
+          "text": "First to record their",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            582.39,
+            395.94,
+            717.29,
+            419.75
+          ],
+          "text": "emission spectra",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            180.61,
+            401.43,
+            457.59,
+            425.24
+          ],
+          "text": "Hot platinum wire into a mixture of",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            212.65,
+            423.03,
+            420.41,
+            446.84
+          ],
+          "text": "air and diethyl ether vapor",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            565.34,
+            423.53,
+            739.13,
+            468.94
+          ],
+          "text": "1929 coined the term \nCool /Cold flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            180.25,
+            450.62,
+            457.79,
+            474.43
+          ],
+          "text": "Formation of pale phosphorescent",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            255.62,
+            472.22,
+            377.49,
+            496.03
+          ],
+          "text": "light in the dark",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "location": "página 4",
+      "text": "Introduction\n  Traditional view of cool flames prior to 2012-2014\n   •  Cool flames associated with premixed combustion leading to ignition of hot fuel/air mixtures –\n    commonly encountered in car-engine knock\n                                           Cool flames →Ignition\n   History of cool flame research – Professor Griffiths (2004)                                                                                                     Ignition delay of n-heptane\nPre-1900    First observation: Davy (1817),Perkin (1882)        Poincore theorems and\n                                                    Liapounov stability analysis                                               Curran et al. Combustion & Flame (1998)\n1920\n               First flow tube experiments                                                                                       HCCI Engine\n                           Lotka-Volterra isothermal oscillations1930\n          Pease C3H8 cool flame studies in a closed vessel\n            Extensive mapping of p-T ignition diagrams (Townsend et al.)\n1940                                                        Zeldovich chemical reactor                                                                                                Gasoline Engine\n                                                                  theory\n                          Sal’nikov non-isothermal theory1950\n        RH + O2 product\n             analysis and\n1960        R + O2 = RO2                                                                                                                               Diesel Engine                         Gray and Yang unified          mechanisms\n                             chain-thermal theory1970      proposed\n                                                     Chemical reactor stability\n                  Thermokinetic                         and non-linear dynamics                                        Stirred closed vessel1980           models                                               (Aris, Uppal et al.)                              and CSTR studies\n\n1990      Zero dimensional numerical simulation\n          and reduced/detailed kinetic model\n           development                           Technical development\n                                           and applications2000      Reaction – diffusion\n           models                                                                   Temperature                                      Cool flames in space (µg)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            166.56,
+            42.22
+          ],
+          "text": "Introduction",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            33.5,
+            42.59,
+            868.05,
+            111.56
+          ],
+          "text": "Traditional view of cool flames prior to 2012-2014\n•\nCool flames associated with premixed combustion leading to ignition of hot fuel/air mixtures – \ncommonly encountered in car-engine knock",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            446.99,
+            104.5,
+            641.94,
+            129.59
+          ],
+          "text": "Cool flames → Ignition",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            31.1,
+            131.33,
+            336.9,
+            147.71
+          ],
+          "text": "History of cool flame research – Professor Griffiths (2004)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            82.95,
+            149.34,
+            321.79,
+            165.3
+          ],
+          "text": "First observation: Davy (1817), Perkin (1882)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            15.6,
+            125.25,
+            870.97,
+            165.91
+          ],
+          "text": "Ignition delay of n-heptane\nPre-1900",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            360.7,
+            148.95,
+            520.98,
+            180.54
+          ],
+          "text": "Poincore theorems and \nLiapounov stability analysis",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            754.26,
+            170.57,
+            929.74,
+            183.37
+          ],
+          "text": "Curran et al. Combustion & Flame (1998)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            15.6,
+            177.53,
+            42.43,
+            194.71
+          ],
+          "text": "1920",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            82.86,
+            186.0,
+            226.26,
+            201.88
+          ],
+          "text": "First flow tube experiments",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            859.7,
+            187.11,
+            932.37,
+            203.84
+          ],
+          "text": "HCCI Engine",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            168.25,
+            203.9,
+            382.17,
+            221.08
+          ],
+          "text": "Lotka-Volterra isothermal oscillations",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            15.6,
+            212.33,
+            42.43,
+            229.51
+          ],
+          "text": "1930",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            82.38,
+            221.52,
+            406.66,
+            251.8
+          ],
+          "text": "Pease C3H8 cool flame studies in a closed vessel\nExtensive mapping of p-T ignition diagrams (Townsend et al.)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            15.6,
+            247.13,
+            42.43,
+            264.31
+          ],
+          "text": "1940",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            359.83,
+            251.2,
+            518.09,
+            268.38
+          ],
+          "text": "Zeldovich chemical reactor",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            624.11,
+            257.18,
+            718.26,
+            273.9
+          ],
+          "text": "Gasoline Engine",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            419.11,
+            265.6,
+            455.78,
+            282.78
+          ],
+          "text": "theory",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            166.44,
+            275.16,
+            349.4,
+            292.35
+          ],
+          "text": "Sal’nikov non-isothermal theory",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            15.6,
+            281.93,
+            42.43,
+            299.11
+          ],
+          "text": "1950",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            15.6,
+            322.73,
+            42.43,
+            339.91
+          ],
+          "text": "1960",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            761.59,
+            333.28,
+            840.26,
+            350.01
+          ],
+          "text": "Diesel Engine",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            187.68,
+            336.77,
+            317.61,
+            353.96
+          ],
+          "text": "Gray and Yang unified",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            191.88,
+            351.17,
+            310.51,
+            368.36
+          ],
+          "text": "chain-thermal theory",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            82.38,
+            300.24,
+            170.8,
+            373.72
+          ],
+          "text": "RH + O2 product\nanalysis and \nR + O2 = RO2\nmechanisms\nproposed",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            15.6,
+            357.53,
+            42.43,
+            374.71
+          ],
+          "text": "1970",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            368.73,
+            374.6,
+            517.63,
+            391.79
+          ],
+          "text": "Chemical reactor stability",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            370.77,
+            389.0,
+            515.59,
+            406.19
+          ],
+          "text": "and non-linear dynamics",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            115.02,
+            388.45,
+            190.38,
+            418.73
+          ],
+          "text": "Thermokinetic\nmodels",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            15.6,
+            404.33,
+            42.43,
+            421.51
+          ],
+          "text": "1980",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            213.49,
+            397.96,
+            492.49,
+            428.24
+          ],
+          "text": "(Aris, Uppal et al.)\nStirred closed vessel \nand CSTR studies",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            15.6,
+            439.13,
+            42.43,
+            456.31
+          ],
+          "text": "1990",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            80.94,
+            438.0,
+            285.01,
+            482.68
+          ],
+          "text": "Zero dimensional numerical simulation\nand reduced/detailed kinetic model\ndevelopment",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            301.69,
+            465.6,
+            427.18,
+            495.87
+          ],
+          "text": "Technical development \nand applications",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            15.6,
+            485.93,
+            42.43,
+            503.11
+          ],
+          "text": "2000",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            80.94,
+            489.84,
+            186.25,
+            520.12
+          ],
+          "text": "Reaction – diffusion\nmodels",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            745.08,
+            498.14,
+            848.32,
+            521.27
+          ],
+          "text": "Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            249.99,
+            508.63,
+            385.74,
+            524.59
+          ],
+          "text": "Cool flames in space (µg)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "location": "página 5",
+      "text": "First observation of multiphase cool flames – “Anomalous Combustion”\n                                                                             High Temperature\n                                                                            Combustion\n\n\n\n\n\n                                                                                “Cool Flame”????",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            914.35,
+            42.22
+          ],
+          "text": "First observation of multiphase cool flames – “Anomalous Combustion”",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            718.58,
+            47.61,
+            862.47,
+            75.99
+          ],
+          "text": "High Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            740.18,
+            71.62,
+            840.74,
+            100.0
+          ],
+          "text": "Combustion",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            725.15,
+            468.23,
+            870.2,
+            496.61
+          ],
+          "text": "“Cool Flame”????",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "location": "página 6",
+      "text": "Cool Flames – Model Predictions\n\n\n\n\n\n     Evolution of droplet diameter and burning rate (n-heptane, do = 4.00 mm, air, atmospheric pressure)\n\n\n                                  Classical “Cool Flames” (premixed\n                              systems) ―“Cool Flame”  to Hot\n                                       Ignition.",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            424.54,
+            42.22
+          ],
+          "text": "Cool Flames – Model Predictions",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            46.73,
+            337.1,
+            661.22,
+            358.1
+          ],
+          "text": "Evolution of droplet diameter and burning rate (n-heptane, do = 4.00 mm, air, atmospheric pressure)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            281.38,
+            412.46,
+            570.33,
+            478.79
+          ],
+          "text": "Classical “Cool Flames” (premixed \nsystems) ―“Cool Flame” to Hot \nIgnition.",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "location": "página 7",
+      "text": "Driving Mechanism\n\n\n\n\n                                                                              •  Radiative heat loss pushes the\n                                                      system to transition to the\n                                                     second stage, cool flame burn.\n\n                                                                              • A dynamic balance between heat                      Heat loss                                                            generation and heat loss\n                                                            maintains the long-duration cool\n                                                          flame burn.                   Heat generation\n\n\n\n\n\n   Evolution of heat generation and losses (n-heptane, do = 4.00 mm, air,\n                        atmospheric pressure)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            254.14,
+            42.22
+          ],
+          "text": "Driving Mechanism",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            559.97,
+            162.78,
+            860.53,
+            238.15
+          ],
+          "text": "• Radiative heat loss pushes the \nsystem to transition to the \nsecond stage, cool flame burn.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            228.7,
+            274.46,
+            309.27,
+            297.59
+          ],
+          "text": "Heat loss",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            559.97,
+            258.78,
+            881.66,
+            358.16
+          ],
+          "text": "• A dynamic balance between heat \ngeneration and heat loss \nmaintains the long-duration cool \nflame burn.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            202.18,
+            339.26,
+            332.23,
+            362.39
+          ],
+          "text": "Heat generation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            31.28,
+            457.47,
+            472.09,
+            478.47
+          ],
+          "text": "Evolution of heat generation and losses  (n-heptane, do = 4.00 mm, air,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            180.2,
+            474.27,
+            319.39,
+            493.44
+          ],
+          "text": "atmospheric pressure)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "location": "página 8",
+      "text": "Sensitivity of Kinetic Parameters\n\n\n\n\n\n                                                                          Uncertainty in droplet diameter and burning rate predictions, (n-\n                                                                            heptane, do = 4.00 mm, air, atmospheric pressure)\n\n\n                                                                In general increase in QOOHO2 → QOOH + O2\n                                                              rate decreased the burning rate and increased the\n                                                                extinction diameter.\n\n                                                        Vice versa QOOHO2→ Ketohydroperoxide + OH\n                                                (Q = CnH2n)\n\nSensitivity coefficients for burning rate and extinction\n              diameter predictions.",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            421.66,
+            42.22
+          ],
+          "text": "Sensitivity of Kinetic Parameters",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            493.21,
+            260.06,
+            888.73,
+            279.22
+          ],
+          "text": "Uncertainty in  droplet diameter and burning rate predictions, (n-",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            535.7,
+            276.86,
+            846.36,
+            297.86
+          ],
+          "text": "heptane, do = 4.00 mm, air, atmospheric pressure)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            497.02,
+            347.27,
+            749.81,
+            374.33
+          ],
+          "text": "In general increase in QOOHO2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            497.02,
+            347.27,
+            900.86,
+            415.04
+          ],
+          "text": "→ QOOH + O2 \nrate decreased the burning rate and increased the \nextinction diameter.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            497.02,
+            433.67,
+            882.61,
+            482.33
+          ],
+          "text": "Vice versa QOOHO2→ Ketohydroperoxide + OH\n(Q = CnH2n)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            13.49,
+            506.56,
+            342.56,
+            525.72
+          ],
+          "text": "Sensitivity coefficients for burning rate and extinction",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            111.17,
+            523.36,
+            241.07,
+            542.52
+          ],
+          "text": "diameter predictions.",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "location": "página 9",
+      "text": "Cool Flames → Revised Kinetics\n\n\n\n\n\n                                                                           Uncertainty in droplet diameter and burning rate predictions, (n-\n                                                                             heptane, do = 4.00 mm, air, atmospheric pressure)\n\n\n                                                                 In general increase in QOOHO2 → QOOH + O2\n                                                               rate decreased the burning rate and increased the\n                                                                extinction diameter.\n\n                                                        Vice versa QOOHO2→ Ketohydroperoxide + OH\n                                                 (Q = CnH2n)\n\nPredicted droplet diameter and burning rate evolution with\n            revised chemical kinetics model.",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            432.97,
+            42.22
+          ],
+          "text": "Cool Flames → Revised Kinetics",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            493.21,
+            260.06,
+            888.73,
+            279.22
+          ],
+          "text": "Uncertainty in  droplet diameter and burning rate predictions, (n-",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            535.7,
+            276.86,
+            846.36,
+            297.86
+          ],
+          "text": "heptane, do = 4.00 mm, air, atmospheric pressure)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            497.02,
+            347.27,
+            749.81,
+            374.33
+          ],
+          "text": "In general increase in QOOHO2",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            497.02,
+            347.27,
+            900.86,
+            415.04
+          ],
+          "text": "→ QOOH + O2 \nrate decreased the burning rate and increased the \nextinction diameter.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            497.02,
+            433.67,
+            882.61,
+            482.33
+          ],
+          "text": "Vice versa QOOHO2→ Ketohydroperoxide + OH\n(Q = CnH2n)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            10.1,
+            503.59,
+            371.41,
+            522.75
+          ],
+          "text": "Predicted droplet diameter and burning rate evolution with",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            88.58,
+            520.39,
+            289.01,
+            539.55
+          ],
+          "text": "revised chemical kinetics model.",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "location": "página 10",
+      "text": "Multistage Oscillatory Cool Flames – Pressure Effects",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            685.67,
+            42.22
+          ],
+          "text": "Multistage Oscillatory Cool Flames – Pressure Effects",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "location": "página 11",
+      "text": "Oscillatory Cool Flames – Model Predictions\n\n\n\n\n\n                             Evolution of droplet diameter and flame diameter (do = 4.08 mm, O2/CO2/N2 0.21/0.15/0.64, 3 atm)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            567.47,
+            42.22
+          ],
+          "text": "Oscillatory Cool Flames – Model Predictions",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            200.53,
+            511.85,
+            806.76,
+            532.85
+          ],
+          "text": "Evolution of droplet diameter and flame diameter (do = 4.08 mm, O2/CO2/N2 0.21/0.15/0.64, 3 atm)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "location": "página 12",
+      "text": "Oscillatory Cool Flames – Model Predictions\n\n\n                High\n             temperature\n                  ignition-\n                 radiative\n                extinction\n                Low temperature\n                   reaction-auto-thermal\n                          heating\n\n                      High temperature re-\n                              initiation-radiative\n                               extinction                                   Hot Flame ???                    Low                                           Transient !!!                     temperature\n                    combustion\n\n\n\n\n\n         Evolution of maximum temperature and burning rate (do = 4.08 mm,\n                      O2/CO2/N2 0.21/0.15/0.64, 3 atm)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            567.47,
+            42.22
+          ],
+          "text": "Oscillatory Cool Flames – Model Predictions",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            100.18,
+            74.38,
+            178.15,
+            109.23
+          ],
+          "text": "High \ntemperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            107.86,
+            107.99,
+            167.67,
+            159.64
+          ],
+          "text": "ignition-\nradiative \nextinction",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            133.54,
+            164.38,
+            270.9,
+            199.23
+          ],
+          "text": "Low temperature \nreaction-auto-thermal",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            178.3,
+            197.99,
+            226.03,
+            216.03
+          ],
+          "text": "heating",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            168.22,
+            238.22,
+            293.23,
+            256.26
+          ],
+          "text": "High temperature re-",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            175.9,
+            255.02,
+            288.55,
+            273.06
+          ],
+          "text": "initiation-radiative",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            287.5,
+            279.62,
+            378.05,
+            297.66
+          ],
+          "text": "Hot Flame ???",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            295.78,
+            296.43,
+            369.86,
+            314.47
+          ],
+          "text": "Transient !!!",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            157.18,
+            271.83,
+            260.68,
+            322.31
+          ],
+          "text": "extinction\nLow \ntemperature",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            158.26,
+            321.07,
+            231.27,
+            339.11
+          ],
+          "text": "combustion",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            70.32,
+            458.56,
+            491.59,
+            479.56
+          ],
+          "text": "Evolution of maximum temperature and burning rate (do = 4.08 mm,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            176.04,
+            475.36,
+            381.95,
+            496.36
+          ],
+          "text": "O2/CO2/N2 0.21/0.15/0.64, 3 atm)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "location": "página 13",
+      "text": "High Pressure Helium Exchange – 3 atm\n\n\n                                                               Introduction of helium increases the burning\n                                                                    rate, at higher helium concentration a third\n                                                        stage quasi-steady burn is observed\n\n\n\n\n                                                                                                                                 1st Stage\n                                                                                         High Temperature\n                                                                                              burn\n\n                                                                                                                   2nd Stage                    3rd Stage\n                                                                                               Moderate          Low Temperature\n                                                                                                Temperature burn              burn\n   Evolution of droplet diameter (n-heptane, do = 4.00 mm,                                                   Tflame ~ 950 K                  Tflame ~ 770 K\n     XO2 = 21%, He exchange with balance N2, 3 atm).\n\n\n\n\n\n                                                                            Evolution of peak temperature (n-heptane, do = 4.00\n                                                     mm, XO2 = 21%, He exchange with balance N2, 3 atm).",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            514.99,
+            42.22
+          ],
+          "text": "High Pressure Helium Exchange – 3 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            504.43,
+            93.41,
+            858.04,
+            161.18
+          ],
+          "text": "Introduction of helium increases the burning \nrate, at higher helium concentration a third \nstage quasi-steady burn is observed",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            543.21,
+            221.63,
+            637.09,
+            251.45
+          ],
+          "text": "1st Stage \nHigh Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            576.93,
+            250.43,
+            600.94,
+            265.85
+          ],
+          "text": "burn",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            718.11,
+            292.59,
+            811.75,
+            322.41
+          ],
+          "text": "3rd  Stage \nLow  Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            578.25,
+            291.08,
+            670.06,
+            335.31
+          ],
+          "text": "2nd  Stage \nModerate \nTemperature burn",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            591.57,
+            334.29,
+            656.71,
+            351.5
+          ],
+          "text": "Tflame ~ 950 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            731.19,
+            321.39,
+            796.33,
+            353.0
+          ],
+          "text": "burn\nTflame ~ 770 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            31.47,
+            335.96,
+            379.18,
+            356.96
+          ],
+          "text": "Evolution of droplet diameter (n-heptane, do = 4.00 mm,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            49.47,
+            352.76,
+            357.33,
+            373.76
+          ],
+          "text": "XO2 = 21%, He exchange with balance N2, 3 atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            493.19,
+            492.52,
+            832.0,
+            530.33
+          ],
+          "text": "Evolution of peak temperature (n-heptane, do = 4.00 \nmm, XO2 = 21%, He exchange with balance N2, 3 atm).",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "location": "página 14",
+      "text": "High Pressure Helium Exchange – 3 atm\n\n                                                                          •  The second stage suppresses at a higher\n                                                        helium concentration\n\n                                                                          •  The droplet diameter regression does not\n                                               show any significant changes\n\n\n\n\n                                                                                                                     2nd Stage\n                                                                                                 Moderate\n                                                                                                 Temperature burn\n                                                                                                                                           Tflame ~ 950 K\n\n\n   Evolution of droplet diameter (n-heptane, do = 4.00 mm,                                                     3rd Stage\n     XO2 = 21%, He exchange with balance N2, 3 atm).                               Low Temperature burn\n                                                                                                                                            Tflame ~ 770 K\n\n\n\n\n\n                                                                            Evolution of peak temperature (n-heptane, do = 4.00\n                                                     mm, XO2 = 21%, He exchange with balance N2, 3 atm).",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            514.99,
+            42.22
+          ],
+          "text": "High Pressure Helium Exchange – 3 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            481.47,
+            71.23,
+            838.68,
+            117.4
+          ],
+          "text": "•\nThe second stage suppresses at a higher \nhelium concentration",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            481.47,
+            136.03,
+            837.85,
+            182.2
+          ],
+          "text": "•\nThe droplet diameter regression does not \nshow any significant changes",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            586.76,
+            239.64,
+            678.57,
+            283.86
+          ],
+          "text": "2nd  Stage \nModerate \nTemperature burn",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            600.08,
+            282.84,
+            665.22,
+            300.05
+          ],
+          "text": "Tflame ~ 950 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            31.47,
+            335.96,
+            379.18,
+            356.96
+          ],
+          "text": "Evolution of droplet diameter (n-heptane, do = 4.00 mm,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            577.47,
+            338.75,
+            695.44,
+            368.57
+          ],
+          "text": "3rd  Stage \nLow  Temperature burn",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            49.47,
+            352.76,
+            357.33,
+            373.76
+          ],
+          "text": "XO2 = 21%, He exchange with balance N2, 3 atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            603.87,
+            367.55,
+            669.01,
+            384.76
+          ],
+          "text": "Tflame ~ 770 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            490.06,
+            492.52,
+            828.87,
+            530.33
+          ],
+          "text": "Evolution of peak temperature (n-heptane, do = 4.00 \nmm, XO2 = 21%, He exchange with balance N2, 3 atm).",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "location": "página 15",
+      "text": "High Pressure Helium Exchange – 3 atm\n\n                                                                    • A second contraction in the flame occurs as the system\n                                                             transitions to the third stage/low temperature burn.\n\n                                                     3rd\n                    1st            2nd                   3rd                                                                    •  Despite the decrease in the maximum temperature, it is\n                      Stage               Stage                     Stage                    the flame contraction that makes the droplet diameter\n                                                      regression insensitive to the different burn stages.\n\n\n\n\n\n        Evolution of flame standoff ratio (n-heptane, do = 4.00\n     mm, XO2 = 21%, He exchange with balance N2, 3 atm).\n\n\n\n\n\n                                                                                Evolution of burning rate (n-heptane, do = 4.00 mm,\n                                                                      XO2 = 21%, He exchange with balance N2, 3 atm).",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            514.99,
+            42.22
+          ],
+          "text": "High Pressure Helium Exchange – 3 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            442.65,
+            64.69,
+            908.82,
+            110.86
+          ],
+          "text": "•\nA second contraction in the flame occurs as the system \ntransitions to the third stage/low temperature burn.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            101.4,
+            125.87,
+            263.74,
+            149.3
+          ],
+          "text": "3rd\n1st",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            176.86,
+            133.88,
+            192.17,
+            149.3
+          ],
+          "text": "2nd",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            278.84,
+            133.88,
+            292.23,
+            149.3
+          ],
+          "text": "3rd",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            98.04,
+            148.68,
+            117.63,
+            159.01
+          ],
+          "text": "Stage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            174.82,
+            148.68,
+            194.42,
+            159.01
+          ],
+          "text": "Stage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            275.84,
+            148.68,
+            295.44,
+            159.01
+          ],
+          "text": "Stage",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            442.65,
+            129.49,
+            911.12,
+            197.26
+          ],
+          "text": "•\nDespite the decrease in the maximum temperature, it is \nthe flame contraction that makes the droplet diameter \nregression insensitive to the different burn stages.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            59.19,
+            359.06,
+            398.0,
+            396.87
+          ],
+          "text": "Evolution of flame standoff ratio (n-heptane, do = 4.00 \nmm, XO2 = 21%, He exchange with balance N2, 3 atm).",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            522.08,
+            495.36,
+            843.39,
+            516.36
+          ],
+          "text": "Evolution of burning rate (n-heptane, do = 4.00 mm,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            526.77,
+            512.16,
+            834.62,
+            533.16
+          ],
+          "text": "XO2 = 21%, He exchange with balance N2, 3 atm).",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "location": "página 16",
+      "text": "High Pressure Helium Exchange – 3 atm\n\n                                                                             •  A strong coupling between heat generation and losses in the\n                                                          system.\n                                                                             •  The radiative and diffusive heat losses are comparable in the first\n                                                   and second stages.\n                                                                             •  The diffusive losses become prominent in the third stage, “Cool\n                                                             flame” burn.\n\n\n\n\n\n         Evolution of radiative loss (n-heptane, do = 4.00 mm,\n         XO2 = 21%, He exchange with balance N2, 3 atm).\n\n\n\n\n\n                                                                                Evolution of diffusive loss (n-heptane, do = 4.00 mm,\n                                                                       XO2 = 21%, He exchange with balance N2, 3 atm).",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            514.99,
+            42.22
+          ],
+          "text": "High Pressure Helium Exchange – 3 atm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            443.53,
+            71.29,
+            897.87,
+            112.28
+          ],
+          "text": "•\nA strong coupling between heat generation and losses in the \nsystem.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            443.53,
+            115.69,
+            931.64,
+            156.68
+          ],
+          "text": "•\nThe radiative and diffusive heat losses are comparable in the first \nand second stages.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            443.53,
+            160.09,
+            917.48,
+            201.08
+          ],
+          "text": "•\nThe diffusive losses become prominent in the third stage, “Cool \nflame” burn.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            73.99,
+            354.09,
+            402.37,
+            375.09
+          ],
+          "text": "Evolution of radiative loss (n-heptane, do = 4.00 mm,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            82.27,
+            370.89,
+            390.13,
+            391.89
+          ],
+          "text": "XO2 = 21%, He exchange with balance N2, 3 atm).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            527.65,
+            495.36,
+            854.24,
+            516.36
+          ],
+          "text": "Evolution of diffusive loss (n-heptane, do = 4.00 mm,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            534.97,
+            512.16,
+            842.83,
+            533.16
+          ],
+          "text": "XO2 = 21%, He exchange with balance N2, 3 atm).",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "location": "página 17",
+      "text": "Pressure dependence\n\n\n\n\n\n                                 Ignition delay of n-heptane\n\n                                                                                                     Degenerate\n                                                                                                         Branching",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            286.46,
+            42.22
+          ],
+          "text": "Pressure dependence",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            198.93,
+            380.91,
+            363.64,
+            400.07
+          ],
+          "text": "Ignition delay of n-heptane",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            719.96,
+            412.35,
+            792.65,
+            430.39
+          ],
+          "text": "Degenerate",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            724.39,
+            429.16,
+            785.18,
+            447.2
+          ],
+          "text": "Branching",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "location": "página 18",
+      "text": "Spatiotemporal variation of species and temperature\n\n\n\n\n\n                                                     CO\n\n\n\n\n          Temperature\n\n\n\n                                                              CH2O",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            669.62,
+            42.22
+          ],
+          "text": "Spatiotemporal variation of species and temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            605.51,
+            231.95,
+            627.67,
+            257.44
+          ],
+          "text": "CO",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            90.51,
+            364.11,
+            178.62,
+            389.59
+          ],
+          "text": "Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            604.72,
+            461.85,
+            643.08,
+            489.94
+          ],
+          "text": "CH2O",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "location": "página 19",
+      "text": "Species Distribution – 3 atm, XHe = 40%\n\n\n\n\n\n                              Spatiotemporal distribution of species representative of three distinct stages",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            502.17,
+            46.87
+          ],
+          "text": "Species Distribution – 3 atm, XHe = 40%",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            226.39,
+            477.49,
+            721.98,
+            502.57
+          ],
+          "text": "Spatiotemporal distribution of species representative of three distinct stages",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "location": "página 20",
+      "text": "Species Distribution – 3 atm, XHe = 40%\n\n\n\n\n\n              •  Species representative of low temperature kinetics is prominent in the third stage\n              •  Competition between O2 addition to QOOH and decomposition of QOOH (i.e., OH, HO2, olefin, carbonyl, QO)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            502.17,
+            46.87
+          ],
+          "text": "Species Distribution – 3 atm, XHe = 40%",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            98.4,
+            463.67,
+            839.99,
+            512.94
+          ],
+          "text": "•\nSpecies representative of low temperature kinetics is prominent in the third stage\n•\nCompetition between O2 addition to QOOH and decomposition of QOOH (i.e., OH, HO2, olefin, carbonyl, QO)",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "location": "página 21",
+      "text": "Experimental Observation of Three Stage Burn\n\n\n\n\n\n    n-dodecane, 2.75 atm, 21.6% O2, 50.2% N2, 28.2% He.\n\n\n          Qualitative agreement between\n          predictions and observations",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            596.54,
+            42.22
+          ],
+          "text": "Experimental Observation of Three Stage Burn",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            50.14,
+            357.81,
+            431.97,
+            380.7
+          ],
+          "text": "n-dodecane, 2.75 atm, 21.6% O2, 50.2% N2, 28.2% He.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            94.0,
+            426.31,
+            347.33,
+            472.48
+          ],
+          "text": "Qualitative agreement between \npredictions and observations",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "location": "página 22",
+      "text": "Can We Trigger “Cool Flame” Burn For\n         Smaller Droplets",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            205.57,
+            198.97,
+            758.43,
+            240.15
+          ],
+          "text": "Can We Trigger “Cool Flame” Burn For",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            355.2,
+            237.36,
+            602.13,
+            278.53
+          ],
+          "text": "Smaller Droplets",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "location": "página 23",
+      "text": "Ozone Assisted Cool Flames\n\n\n                      Increasing\n                 Ozone\n\n\n\n\n\n                        Amount of Ambient Ozone\n               Dictating Factor !!!\n\n                   Low                                 Sustained    combustion    of\n                   Temperature               Hot Ignition    “Droplet” requires a minimum\n                  Combustion                        Ozone Concentration",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            372.6,
+            42.22
+          ],
+          "text": "Ozone Assisted Cool Flames",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            129.94,
+            74.87,
+            186.02,
+            104.69
+          ],
+          "text": "Increasing \nOzone",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            212.51,
+            344.39,
+            378.96,
+            362.43
+          ],
+          "text": "Amount of Ambient Ozone",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            228.59,
+            361.3,
+            363.04,
+            379.34
+          ],
+          "text": " Dictating Factor !!!",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            341.83,
+            407.87,
+            411.73,
+            425.91
+          ],
+          "text": "Hot Ignition",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            152.81,
+            393.69,
+            236.53,
+            428.54
+          ],
+          "text": "Low \nTemperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            433.2,
+            391.99,
+            632.6,
+            444.77
+          ],
+          "text": "Sustained \ncombustion \nof \n“Droplet” requires a minimum \nOzone Concentration",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            153.77,
+            427.3,
+            232.7,
+            445.34
+          ],
+          "text": "Combustion",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 24,
+      "location": "página 24",
+      "text": "Cool Flame under Near Limit Conditions\n           Blue: Oscillatory cool flame\n            Red: Stable cool flame\n\n\n\n                                                                         XO2 = 10%\n\n                                                                          XO3 = 5%\n\n                                                                             XN2 =\n                                                                      Balance\n                                                                                                       Temperature                                                         P = 1 atm,\n                                                              T = 298 K\n\n                                                                                      Do =\n                                                                                                        0.5\n                                                      mm\n                                                                                                               80 x Ddrop\n\n\n                                  Flame  expands   radially   gradual\n                                                        decrease in flame T  Contracts (t < 0.1\n                                                                   s)\n                                 Stable cool flame for brief period of time\n                                                               (~0.12 s @ ~710 K)\n                                                                                                         Ketohydroperoxides",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            514.78,
+            42.22
+          ],
+          "text": "Cool Flame under Near Limit Conditions",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            86.8,
+            49.57,
+            270.76,
+            69.68
+          ],
+          "text": "Blue: Oscillatory cool flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            103.84,
+            66.38,
+            253.74,
+            86.48
+          ],
+          "text": "Red: Stable cool flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            428.75,
+            146.07,
+            480.43,
+            163.12
+          ],
+          "text": "XO2 = 10%",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            433.07,
+            180.09,
+            478.64,
+            197.14
+          ],
+          "text": "XO3 = 5%",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            435.2,
+            207.91,
+            477.45,
+            236.92
+          ],
+          "text": "XN2 = \nBalance",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            690.09,
+            234.81,
+            762.04,
+            251.99
+          ],
+          "text": "Temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            430.4,
+            242.32,
+            485.19,
+            258.13
+          ],
+          "text": "P = 1 atm,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            432.08,
+            255.53,
+            480.48,
+            271.33
+          ],
+          "text": "T = 298 K",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            446.95,
+            290.26,
+            467.34,
+            304.18
+          ],
+          "text": "Do =",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            447.79,
+            301.06,
+            464.69,
+            324.75
+          ],
+          "text": "0.5 \nmm",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            756.06,
+            332.06,
+            809.21,
+            350.64
+          ],
+          "text": "80 x Ddrop",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            351.38,
+            378.28,
+            611.87,
+            424.26
+          ],
+          "text": "\nFlame \nexpands \nradially \n \ngradual \ndecrease in flame T  Contracts (t < 0.1 \ns)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            349.88,
+            428.93,
+            610.38,
+            460.51
+          ],
+          "text": "\nStable cool flame for brief period of time \n(~0.12 s @ ~710 K)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            690.09,
+            463.32,
+            806.56,
+            480.51
+          ],
+          "text": "Ketohydroperoxides",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 25,
+      "location": "página 25",
+      "text": "Terrestrial Cool Flame Experiments",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            223.45,
+            198.97,
+            734.01,
+            240.15
+          ],
+          "text": "Terrestrial Cool Flame Experiments",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 26,
+      "location": "página 26",
+      "text": "Counterflow Diffusion Flame\n\n\n\n\n\n            Cool diffusion flame, 1 g (Won et al.)\n                                           Excellent configuration for studying flame’s strength under the\n                                                           effect of stretch.\n                                       Useful platform for validating reaction kinetics and transport\n                                                models.\n                                           Idealized condition, it can be treated as a 1D problem:\n\n                                     Leads to the derivation of an analytical solution\n                                   Makes numerical modeling tractable",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            370.44,
+            42.22
+          ],
+          "text": "Counterflow Diffusion Flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            102.77,
+            336.6,
+            328.98,
+            356.7
+          ],
+          "text": "Cool diffusion flame, 1 g (Won et al.)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            420.06,
+            348.78,
+            939.11,
+            373.35
+          ],
+          "text": "Excellent configuration for studying flame’s strength under the",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            420.06,
+            370.38,
+            920.41,
+            416.55
+          ],
+          "text": "effect of stretch.\nUseful platform for validating reaction kinetics and transport",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            420.06,
+            413.58,
+            872.29,
+            459.75
+          ],
+          "text": "models.\nIdealized condition, it can be treated as a 1D problem:",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            456.06,
+            478.38,
+            852.34,
+            524.55
+          ],
+          "text": "Leads to the derivation of an analytical solution\nMakes numerical modeling tractable",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 27,
+      "location": "página 27",
+      "text": "Limitations of the conventional numerical approach\n\n    The numerical effort to study counterflow flame configuration has been predominantly centered\n       upon OPPDIF module of CHEMKIN chemical kinetic package\n    This module implements a similarity transformation approach that reduces the flow field to a\n         one-dimensional/ plug flow problem with the following assumptions:\n\n       Radial component of velocity is linear in radius\n       Dependent variables become functions of the axial direction only\n\n\n\n               What are the physical conditions that can be\n                         represented by this assumption?\n\n\n                                                             Cool flames\n\n High Reynolds number flow configuration: High strain rate (a)\n Thin flame sheet: Hot flame (high activation energy)           Low Re: Low strain rate (a ~100 s-1)\n                                                           Finite Flame Thickness: low activation energy)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            657.63,
+            42.22
+          ],
+          "text": "Limitations of the conventional numerical approach",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            63.43,
+            75.1,
+            844.21,
+            99.67
+          ],
+          "text": "The numerical effort to study counterflow flame configuration has been predominantly centered",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            63.43,
+            96.7,
+            819.81,
+            142.87
+          ],
+          "text": "upon OPPDIF module of CHEMKIN chemical kinetic package\nThis module implements a similarity transformation approach that reduces the flow field to a",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            85.99,
+            139.9,
+            621.68,
+            164.47
+          ],
+          "text": "one-dimensional/ plug flow problem with the following assumptions:",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            81.94,
+            191.63,
+            561.34,
+            232.61
+          ],
+          "text": "Radial component of velocity is linear in radius \nDependent variables become functions of the axial direction only",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            170.65,
+            293.93,
+            532.9,
+            316.36
+          ],
+          "text": "What are the physical conditions that can be",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            221.9,
+            313.13,
+            474.76,
+            335.56
+          ],
+          "text": "represented by this assumption?",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            686.89,
+            393.5,
+            802.89,
+            418.52
+          ],
+          "text": "Cool flames",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            23.98,
+            438.12,
+            483.64,
+            479.1
+          ],
+          "text": "High Reynolds number flow configuration: High strain rate (a) \nThin flame sheet: Hot flame (high activation energy)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            558.45,
+            457.46,
+            934.69,
+            499.52
+          ],
+          "text": "Low Re: Low strain rate (a ~100 s-1) \nFinite Flame Thickness: low activation energy)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "location": "página 28",
+      "text": "Effect of buoyancy\n\n                                                          Buoyancy lifts the flame\n                                                                          upward.\n\n                                                              Without buoyancy, 1D and\n                                                           2D models predict the flame\n                                                                                          at or near the stagnation\n                                                                             plane due to momentum-\n                                                                          balanced BC.\na) Temperature distribution and streamlines, and b) heat release rate, for DME diffusion cool flame\nwith and without buoyancy for identical conditions (XDME= 0.587, UF = 62.3 cm/s, UO = 50.9 cm/s, a ~\n90 s-1, P = 1 atm)                                        The peak flame temperature\n                                                                                                in 1D is slightly lower\n                                                                   compared to the 2D\n                                                                                         prediction, but the peak HRR\n                                                                   shows the opposite trend.\n\n                                                               Temperature gradient is\n                                                                                 higher in 1D calculation.\n                                                                  More diffusive heat loss.",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            248.28,
+            42.22
+          ],
+          "text": "Effect of buoyancy",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            662.58,
+            71.56,
+            880.06,
+            96.13
+          ],
+          "text": "Buoyancy lifts the flame",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            685.14,
+            93.16,
+            748.56,
+            117.73
+          ],
+          "text": "upward.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            662.58,
+            136.36,
+            899.59,
+            160.93
+          ],
+          "text": "Without buoyancy, 1D and",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            685.14,
+            157.96,
+            914.0,
+            247.33
+          ],
+          "text": "2D models predict the flame \nat or near the stagnation \nplane due to momentum-\nbalanced BC.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            662.58,
+            265.96,
+            915.91,
+            290.53
+          ],
+          "text": "The peak flame temperature",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            15.04,
+            240.46,
+            643.08,
+            293.46
+          ],
+          "text": "a) Temperature distribution and streamlines, and b) heat release rate, for DME diffusion cool flame \nwith and without buoyancy for identical conditions (XDME= 0.587,  UF = 62.3 cm/s, UO = 50.9 cm/s, a ~ \n90 s-1, P = 1 atm)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            685.14,
+            287.56,
+            920.95,
+            376.93
+          ],
+          "text": "in 1D is slightly lower \ncompared to the 2D \nprediction, but the peak HRR \nshows the opposite trend.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            662.58,
+            395.56,
+            879.08,
+            420.13
+          ],
+          "text": "Temperature gradient is",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            685.14,
+            417.16,
+            883.78,
+            463.33
+          ],
+          "text": "higher in 1D calculation. \nMore diffusive heat loss.",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 29,
+      "location": "página 29",
+      "text": "Flow field analyses\n\n\n                                            The extended entrance channels\n                                                                           allow the velocity at the nozzle exits\n                                                                                  to be perturbed by the flame.\n\n                                       2D model captures the perturbation\n                                                                                        in a self-consistent manner.\n\n                                       2D model without buoyancy retains\n                                                                          the momentum-balanced condition\n                       c                        d          and forms the stagnation plane at the\n                                                                             axis midpoint, exhibiting identical\n                                                                             perturbation on either side\n\n                                                            Axisymmetric dip in 2D simulation,\n                                                                   observed in experiments of Sarnecki\n                                                                                  et al.\n\n\n\nComputed centerline distribution of a) axial velocity, b) axial velocity gradient\nComputed radial distribution of c) axial, and d) radial velocity at the fuel-side nozzle exit",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            252.46,
+            42.22
+          ],
+          "text": "Flow field analyses",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            606.6,
+            90.66,
+            895.78,
+            115.23
+          ],
+          "text": "The extended entrance channels",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            629.16,
+            112.26,
+            918.97,
+            158.43
+          ],
+          "text": "allow the velocity at the nozzle exits \nto be perturbed by the flame.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            606.6,
+            177.06,
+            915.83,
+            201.63
+          ],
+          "text": "2D model captures the perturbation",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            629.16,
+            198.66,
+            847.96,
+            223.23
+          ],
+          "text": "in a self-consistent manner.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            606.6,
+            241.86,
+            913.93,
+            266.43
+          ],
+          "text": "2D model without buoyancy retains",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            241.43,
+            281.01,
+            530.55,
+            307.54
+          ],
+          "text": "c\nd",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            629.16,
+            263.46,
+            931.06,
+            352.83
+          ],
+          "text": "the momentum-balanced condition \nand forms the stagnation plane at the \naxis midpoint, exhibiting identical \nperturbation on either side",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            606.6,
+            371.46,
+            907.97,
+            396.03
+          ],
+          "text": "Axisymmetric dip in 2D simulation,",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            629.16,
+            393.06,
+            924.97,
+            439.23
+          ],
+          "text": "observed in experiments of Sarnecki \net al.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            13.2,
+            501.14,
+            556.98,
+            538.05
+          ],
+          "text": "Computed centerline distribution of a) axial velocity, b) axial velocity gradient\nComputed radial distribution of c) axial, and d) radial velocity at the fuel-side nozzle exit",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 30,
+      "location": "página 30",
+      "text": "Effect of global strain rate\n\n\n                                         − T∞ ) D                                      g β( Thot                                      Ri =\n                                   V 2 Richardson number            1  ∂∀    1 ∂  RT   1 R  1                   β =        =         =    =                                                                         \n                     ∀∂ T  p ∀∂T  p  ∀ p  T\n                                           − T∞ ) D 3                                        g β( Thot                                Gr =\n                                     V 2\n                                 Gr                                     Ri =\n                                   Re 2\n\n                   Flow characteristics based in Richardson number\n             Ri < 0.1                   Natural convection is negligible\n           0.1< Ri <10        Both natural and forced convection are important\n              Ri > 10                 Forced convection is negligible\n\nFlame is pushed away from the nozzle as the convective\n   effect becomes dominant with the increase of global strain\n   rate.\n\nThe flame location ceases to move further when the\n  buoyancy effect becomes negligible (i.e., low Ri).          XCH2O contours of DME diffusion cool flame at different global strain\n                                                                             rates (XDME = 0.587, P = 1 atm)",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            336.84,
+            42.22
+          ],
+          "text": "Effect of global strain rate",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            319.37,
+            92.37,
+            381.55,
+            116.3
+          ],
+          "text": "(\n)",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            268.59,
+            95.8,
+            394.48,
+            130.34
+          ],
+          "text": "2\nhot\ng\nT\nT\nD\nRi",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            336.72,
+            118.92,
+            345.92,
+            138.67
+          ],
+          "text": "V",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            26.18,
+            96.07,
+            373.82,
+            149.58
+          ],
+          "text": "β\n∞\n−\n=\nRichardson number",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            289.86,
+            132.23,
+            473.1,
+            159.13
+          ],
+          "text": "1\n1\n1\n1",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            333.49,
+            160.2,
+            337.8,
+            171.69
+          ],
+          "text": "p",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            390.9,
+            174.89,
+            395.46,
+            187.23
+          ],
+          "text": "3",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            264.29,
+            132.32,
+            472.4,
+            196.03
+          ],
+          "text": "RT\nR\nT\nT\np\np\nT\nβ\n\n\n∂∀\n∂\n\n\n=\n=\n=\n=\n\n\n\n\n∀∂\n∀∂\n∀\n\n\n\n\n(\n)",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            286.76,
+            176.41,
+            370.78,
+            204.65
+          ],
+          "text": "β\n∞\n−\n=",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            266.94,
+            176.15,
+            390.46,
+            209.65
+          ],
+          "text": "2\nhot\ng\nT\nT\nD\nGr",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            338.46,
+            198.57,
+            347.22,
+            217.72
+          ],
+          "text": "V",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            268.71,
+            213.48,
+            322.18,
+            248.71
+          ],
+          "text": "2\nGr\nRi",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            286.41,
+            223.81,
+            316.68,
+            257.6
+          ],
+          "text": "Re\n=",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            136.55,
+            266.03,
+            398.19,
+            282.41
+          ],
+          "text": "Flow characteristics based in Richardson number",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            89.03,
+            290.36,
+            401.53,
+            306.74
+          ],
+          "text": "Ri < 0.1\nNatural convection is negligible",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            78.83,
+            314.7,
+            448.59,
+            331.08
+          ],
+          "text": "0.1< Ri <10\nBoth natural and forced convection are important",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            90.71,
+            339.03,
+            401.05,
+            355.41
+          ],
+          "text": "Ri > 10\nForced convection is negligible",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            14.55,
+            378.42,
+            492.82,
+            402.99
+          ],
+          "text": "Flame is pushed away from the nozzle as the convective",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            37.11,
+            400.02,
+            504.57,
+            446.19
+          ],
+          "text": "effect becomes dominant with the increase of global strain \nrate.",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            14.55,
+            464.82,
+            454.91,
+            489.39
+          ],
+          "text": "The flame location ceases to move further when the",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            37.11,
+            486.42,
+            426.62,
+            510.99
+          ],
+          "text": "buoyancy effect becomes negligible (i.e., low Ri).",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            494.79,
+            492.56,
+            913.97,
+            530.36
+          ],
+          "text": "XCH2O contours of DME diffusion cool flame at different global strain \nrates (XDME = 0.587, P = 1 atm)",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 31,
+      "location": "página 31",
+      "text": "Summary\n\n    • Insights obtained from modeling on cool flame characteristics and\n    dynamics\n\n    • Models were developed for a number of scenarios\n\n    • Models were validated against the FLEX data and then utilized to\n     explore other scenarios\n\n    • Extensive amount of experimental data available for interpretation\n    and new insights",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            133.04,
+            42.22
+          ],
+          "text": "Summary",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            55.2,
+            70.56,
+            899.54,
+            142.33
+          ],
+          "text": "• Insights obtained from modeling on cool flame characteristics and \ndynamics",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            55.2,
+            171.36,
+            700.07,
+            209.53
+          ],
+          "text": "• Models were developed for a number of scenarios",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            55.2,
+            238.56,
+            893.18,
+            310.33
+          ],
+          "text": "• Models were validated against the FLEX data and then utilized to \nexplore other scenarios",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            55.2,
+            339.36,
+            901.14,
+            411.13
+          ],
+          "text": "• Extensive amount of experimental data available for interpretation \nand new insights",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 32,
+      "location": "página 32",
+      "text": "The Resurgence of “Cool Flame” Research\n                                             “Anomalous Combustion/Cool Flame?” of large n-heptane\n                                                               droplet onboard ISS in 2011, NASA FLEX",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            549.98,
+            42.22
+          ],
+          "text": "The Resurgence of “Cool Flame” Research",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            444.47,
+            52.25,
+            910.12,
+            76.82
+          ],
+          "text": "“Anomalous Combustion/Cool Flame?” of large n-heptane",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            508.91,
+            73.56,
+            840.71,
+            99.33
+          ],
+          "text": "droplet onboard ISS in 2011, NASA FLEX",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 33,
+      "location": "página 33",
+      "text": "The Resurgence of “Cool Flame” Research",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            549.98,
+            42.22
+          ],
+          "text": "The Resurgence of “Cool Flame” Research",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 34,
+      "location": "página 34",
+      "text": "Resurgence of “Cool Flame” Research\n\n                              2012                     2014",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            496.21,
+            42.22
+          ],
+          "text": "Resurgence of “Cool Flame” Research",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            246.68,
+            63.44,
+            474.14,
+            83.94
+          ],
+          "text": "2012\n2014",
+          "kind": "heading_candidate"
+        }
+      ]
+    },
+    {
+      "page": 35,
+      "location": "página 35",
+      "text": "References\n\n     •   Farouk, T., Dryer, F., “Isolated n-heptane droplet combustion in microgravity: “cool flames” – two stage combustion” Combustion and\n       Flame, 161, (2014), 565 - 581.\n\n     •   Farouk, T., Hicks, M., Dryer, F., “Multistage oscillatory “Cool Flame” behavior for isolated alkane droplet combustion in elevated\n        pressure microgravity conditions” Proceedings of the Combustion Institute, 35, (2015), 1701 – 1708.\n\n     •   Farouk, T., Dietrich, D., Alam, F., Dryer, D., “Isolated n-decane droplet combustion – dual stage and single stage transition to “cool\n        flame” droplet burning” Proceedings of the Combustion Institute, 36, (2017), 2523 - 2530.\n\n     •   Alam, F., Won, S. H., Farouk, T., “Ozone assisted cool flame combustion of sub-millimeter sized n-alkane droplets at atmospheric and\n        higher pressure” Combustion and Flame, 195, (2018), 220 - 231.\n\n     •   Alam, F., Aghdam, A., Dryer, F., Farouk, T., “Oscillatory cool flame combustion behavior of submillimeter sized n-alkane droplet under\n       near limit conditions” Proceedings of the Combustion Institute, 37, (2019), 3383 – 3391.\n\n     •   Farouk,  T., Dietrich, D., Dryer,  F., “Three stage cool flame droplet burning behavior of n-alkane droplets at elevated pressure\n        conditions” Proceedings of the Combustion Institute, 37, (2019), 3353 – 3361.\n\n     •   Farouk, T., Dryer, F., “Extinction characteristics of isolated n-alkane fuel droplets during low temperature cool flame burning in air”\n       Proceedings of the Combustion Institute 39, (2023), 2471 – 2481.\n\n     •   Saha., S., Farouk, T., “Effects of multidimensional transport and buoyancy on the cool flame dynamics in a counterflow burner”\n         International Journal of Heat and Mass Transfer 256, (2026), 127954.",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            13.2,
+            -3.14,
+            155.02,
+            42.22
+          ],
+          "text": "References",
+          "kind": "heading_candidate"
+        },
+        {
+          "bbox": [
+            38.4,
+            52.06,
+            902.41,
+            88.03
+          ],
+          "text": "•\nFarouk, T., Dryer, F., “Isolated n-heptane droplet combustion in microgravity: “cool flames” – two stage combustion” Combustion and \nFlame, 161, (2014), 565 - 581.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            38.4,
+            108.46,
+            902.39,
+            144.43
+          ],
+          "text": "•\nFarouk, T., Hicks, M., Dryer, F., “Multistage oscillatory “Cool Flame” behavior for isolated alkane droplet combustion in elevated \npressure microgravity conditions” Proceedings of the Combustion Institute, 35, (2015), 1701 – 1708.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            38.4,
+            164.86,
+            902.42,
+            200.83
+          ],
+          "text": "•\nFarouk, T., Dietrich, D., Alam, F., Dryer, D., “Isolated n-decane droplet combustion – dual stage and single stage transition to “cool \nflame” droplet burning” Proceedings of the Combustion Institute, 36, (2017), 2523 - 2530.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            38.4,
+            221.26,
+            902.36,
+            257.23
+          ],
+          "text": "•\nAlam, F., Won, S. H., Farouk, T., “Ozone assisted cool flame combustion of sub-millimeter sized n-alkane droplets at atmospheric and \nhigher pressure” Combustion and Flame, 195, (2018), 220 - 231.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            38.4,
+            277.66,
+            902.35,
+            313.63
+          ],
+          "text": "•\nAlam, F., Aghdam, A., Dryer, F., Farouk, T., “Oscillatory cool flame combustion behavior of submillimeter sized n-alkane droplet under \nnear limit conditions” Proceedings of the Combustion Institute, 37, (2019), 3383 – 3391.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            38.4,
+            334.06,
+            902.46,
+            370.03
+          ],
+          "text": "•\nFarouk, T., Dietrich, D., Dryer, F., “Three stage cool flame droplet burning behavior of n-alkane droplets at elevated pressure \nconditions” Proceedings of the Combustion Institute, 37, (2019), 3353 – 3361.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            38.4,
+            390.46,
+            902.34,
+            426.43
+          ],
+          "text": "•\nFarouk, T., Dryer, F., “Extinction characteristics of isolated n-alkane fuel droplets during low temperature cool flame burning in air” \nProceedings of the Combustion Institute 39, (2023), 2471 – 2481.",
+          "kind": "text"
+        },
+        {
+          "bbox": [
+            38.4,
+            446.86,
+            902.39,
+            482.83
+          ],
+          "text": "•\nSaha., S., Farouk, T., “Effects of multidimensional transport and buoyancy on the cool flame dynamics in a counterflow burner” \nInternational Journal of Heat and Mass Transfer 256, (2026), 127954.",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "page": 36,
+      "location": "página 36",
+      "text": "Thank You",
+      "method": "camada de texto do PDF",
+      "blocks": [
+        {
+          "bbox": [
+            389.33,
+            200.73,
+            570.57,
+            263.09
+          ],
+          "text": "Thank You",
+          "kind": "heading_candidate"
+        }
+      ]
+    }
+  ],
+  "tables": [],
+  "captions": [],
+  "metadata": {
+    "format": "PDF 1.7",
+    "author": "Tanvir Farouk",
+    "creator": "Acrobat PDFMaker 25 for PowerPoint",
+    "producer": "Adobe PDF Library 25.1.40",
+    "creationDate": "D:20260330210519-04'00'",
+    "modDate": "D:20260330210532-04'00'",
+    "page_count": 36,
+    "legendas": 0,
+    "tabelas_detectadas": 0,
+    "evidence_kind": "engineering_or_publication",
+    "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+  },
+  "warnings": [],
+  "schema_version": 4,
+  "source_filename": "PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+  "source_extension": ".pdf",
+  "document": {
+    "name": "PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+    "extension": ".pdf",
+    "sha256": "9b69c81ba20b7a9af49ca899fb7520ae8e2034f9ceadf94fc6ef22910fc417aa",
+    "size_bytes": 10786102
+  },
+  "evidence_kind": "engineering_or_publication",
+  "observations": [],
+  "provenance": {
+    "study_id": "PSI-117",
+    "source": "NASA Physical Sciences Informatics",
+    "filename": "PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf&version=1&redirect=false",
+    "doi": "10.60555/gz0q-b577",
+    "sha256": "9b69c81ba20b7a9af49ca899fb7520ae8e2034f9ceadf94fc6ef22910fc417aa",
+    "size_bytes": 10786102,
+    "study_version": 2,
+    "file_version": 1,
+    "verified_utc": "2026-11-15T23:48:29.512768+00:00",
+    "retrieved_utc": "2026-11-15T23:48:29.512768+00:00",
+    "verification": "byte_identical_to_nasa_download",
+    "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 10786102,
+      "directory": false,
+      "files": [],
+      "id": "6a282739d9d7246402cb43df",
+      "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "10.29 MB",
+      "sortingCategory": "Presentations",
+      "status": "active",
+      "subcategory": "",
+      "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+      "version": 1,
+      "visible": true
+    },
+    "license": "No file-specific license exposed; retain NASA and author attribution.",
+    "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+    "classification": "engineering_or_publication",
+    "media_type": "application/pdf",
+    "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+  }
+}

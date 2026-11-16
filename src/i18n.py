@@ -203,6 +203,48 @@ INVESTIGATION_PROFILES: dict[str, dict[str, dict[str, str]]] = {
             "caveat": "Inclui relatório científico final de 68 páginas e desenho CAD de 1 página sem camada textual (OCR requer Tesseract).",
         },
     },
+    "PSI-62": {
+        "en": {
+            "pillar": "Prevention",
+            "objective": "Develop unsteady flamelet generated manifold (UFGM) models of concurrent solid-fuel flame spread in microgravity, benchmarked against BASS and BASS-II experiments using two-color tomography.",
+            "relevance": "Supports investigation of modeled material flammability boundaries and radiation/chemistry coupling.",
+            "caveat": "Ground modeling investigation. Only ISA-Tab research metadata and publication references are available in the supplied/public archive; no independent measured series or numerical simulation outputs were supplied.",
+        },
+        "pt": {
+            "pillar": "Prevenção",
+            "objective": "Desenvolver modelos UFGM (unsteady flamelet generated manifolds) de propagação concorrente de chama em sólidos em microgravidade, comparados aos experimentos BASS e BASS-II por tomografia de duas cores.",
+            "relevance": "Apoia a investigação de limites modelados de inflamabilidade e do acoplamento entre radiação e química.",
+            "caveat": "Investigação de modelagem em solo. O acervo fornecido/público contém apenas metadados ISA-Tab e referências bibliográficas; não foram fornecidas séries medidas independentes nem resultados numéricos de simulação.",
+        },
+    },
+    "PSI-117": {
+        "en": {
+            "pillar": "Suppression",
+            "objective": "Investigate how external thermal and convective perturbations affect droplet cool-flame dynamics using multidimensional CFD models informed by FLEX flight data.",
+            "relevance": "Examines cool-flame oscillation, extinction and transitions through simulation and comparisons with reported experimental observations.",
+            "caveat": "Ground CFD investigation: analyzed CSVs contain simulations and selected experimental reference series. Expt/Sim/Model labels remain distinct; absent units are not inferred, and presentation plots are not digitized as exact measurements.",
+        },
+        "pt": {
+            "pillar": "Supressão",
+            "objective": "Investigar o efeito de perturbações térmicas e convectivas externas na dinâmica de chamas frias de gotas com modelos CFD multidimensionais apoiados em dados de voo FLEX.",
+            "relevance": "Examina oscilação, extinção e transições de chamas frias por simulações e comparações com observações experimentais reportadas.",
+            "caveat": "Investigação CFD em solo: os CSVs analisados contêm simulações e séries experimentais de referência selecionadas. Expt/Sim/Model permanecem distintos; unidades ausentes não são inferidas e gráficos das apresentações não viram medições exatas.",
+        },
+    },
+    "PSI-159": {
+        "en": {
+            "pillar": "Suppression",
+            "objective": "ACME CFI-G (Cool Flames Investigation with Gases): investigate spherical cool diffusion flames of gaseous fuels aboard the ISS, supported by CFD and chemical-kinetics studies.",
+            "relevance": "Studies cool-flame regimes across fuel mixtures, normal/inverse flow, pressure and flow conditions.",
+            "caveat": "Engineering and final-report PDFs provide documentary evidence; experimental tables include run conditions and selected reported outcomes, not raw sensor telemetry. Simulation predictions and reported flight observations must remain distinct.",
+        },
+        "pt": {
+            "pillar": "Supressão",
+            "objective": "ACME CFI-G (Cool Flames Investigation with Gases): investigar chamas frias de difusão esférica de combustíveis gasosos na ISS, com apoio de CFD e estudos de cinética química.",
+            "relevance": "Estuda regimes de chama fria com diferentes misturas, fluxos normais/inversos, pressões e vazões.",
+            "caveat": "Os PDFs de engenharia e relatório final fornecem evidência documental; tabelas experimentais incluem condições de ensaios e resultados reportados selecionados, não telemetria bruta. Previsões de simulação e observações de voo reportadas permanecem distintas.",
+        },
+    },
     "NASA-CONTEXT": {
         "en": {
             "pillar": "Context",
@@ -225,6 +267,11 @@ INVESTIGATION_PROFILES: dict[str, dict[str, dict[str, str]]] = {
 TRANSLATIONS: dict[str, dict[str, str]] = {
     "en": {
         # App & Sidebar
+        "view.evidence_nature": "Evidence type: {kind}",
+        "view.field_nature": "Source classification by column",
+        "view.source_basis": "Classification basis",
+        "view.simulation_notice": "Numerical predictions are not experimental measurements. Keep simulation and experimental reference series distinct; unclassified columns remain unvalidated.",
+        "view.incompatible_axes": "These series have different or undeclared quantities/units. Inspect one series at a time; no common-axis overlay or interpolation is produced.",
         "app.title": "PSI Flame Microgravity",
         "app.subtitle": "NASA Space Apps 2026 · Flame in Freefall",
         "sidebar.language": "Language: [EN | PT-BR]",
@@ -312,7 +359,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "home.problem_body": (
             "NASA's PSI repository hosts high-value combustion data spread across heterogeneous CSV tables, engineering PDFs, "
             "and science reports with inconsistent units (`psia`, `psig`, `mmHg`, `cm/s`, `mole fraction`). "
-            "**PSI Flame Microgravity** unifies 9 priority investigations into a transparent, verifiable workspace where "
+            "**PSI Flame Microgravity** unifies 12 priority investigations into a transparent, verifiable workspace where "
             "**test conditions are never confused with measured outcomes**, units are conservatively normalized, and every claim links back to an exact NASA document, page/row, and SHA-256 hash."
         ),
         "home.metric_studies": "NASA PSI Studies",
@@ -591,7 +638,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "ast.ex4_q": "Saffire spacecraft material flame spread test conditions",
         "ast.ex5_label": "Unsupported query guard demo",
         "ast.ex5_q": "quasizebraunobtainium unsupported microgravity claim",
-        "ast.studies_filter": "Filter by NASA investigation (empty = search all 9 studies + guides)",
+        "ast.studies_filter": "Filter by NASA investigation (empty = search all indexed studies + guides)",
         "ast.question_label": "Research question",
         "ast.question_help": "Ask about experimental conditions, fuels, oxygen levels, or documents. Never use as a safety certification.",
         "ast.filters_expander": "Physical & numerical filters (applied on the same source row)",
@@ -645,14 +692,14 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "src.sec1_title": "1. NASA PSI Data Origins & Provenance",
         "src.sec1_body": (
             "- **Primary source**: NASA Physical Sciences Informatics (PSI) Data Repository (`https://psi.nasa.gov/physci/repo/search?q=combustion`).\n"
-            "- **Dataset scope**: **9 PSI investigations** (`PSI-25`, `PSI-26`, `PSI-68`, `PSI-69`, `PSI-98`, `PSI-99`, `PSI-100`, `PSI-101`, `PSI-102`) + **2 official NASA context guides**, totaling **16 authentic NASA files (7,881,267 bytes)**.\n"
+            "- **Dataset scope**: **{studies} PSI investigations** plus the official NASA context guides, totaling **{files} processed source files ({size} bytes)**. PSI-62 contains research metadata, PSI-117 includes simulations and experimental references, and PSI-159 includes flight-study documentation and run conditions.\n"
             "- **Immutable integrity**: Every downloaded file is stored untouched alongside its UTC access timestamp, permanent PSI API URL, confirmed DOI, and SHA-256 digest. Ephemeral signed S3 download links are never stored."
         ),
         "src.sec2_title": "2. Extraction, Unit Normalization & Data Categories",
         "src.sec2_body": (
             "- **Conservative Pint normalization**: Only explicitly documented units are converted (`1 atm = 14.6959 psia`, `1 m/s = 100 cm/s`, `°C → K`, `% O₂ → mole fraction`).\n"
             "- **Reference protection**: Unreferenced `psi` or `mmHg` is never silently converted to absolute `psia`; gauge pressure (`psig`) requires an independent ambient reference.\n"
-            "- **Strict evidence separation**: `condition` (test setup), `sample` (catalog metadata), `reported_result` (published outcomes), `derived` (e.g. partial O₂ pressure), and `document_context` never mix silently."
+            "- **Strict evidence separation**: `condition` (test setup), `sample` (catalog metadata), `reported_result` (published outcomes), `derived` (e.g. partial O₂ pressure), `simulation` (numerical predictions), `metadata` (research context), and `document_context` never mix silently."
         ),
         "src.sec3_title": "3. Hybrid Retrieval, Grounding & AI Disclosure",
         "src.sec3_body": (
@@ -1116,7 +1163,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
 
         "j2.s2_q_exploring": "Which authentic NASA PSI investigations belong to Prevention, Detection, or Suppression in our verified archive.",
         "j2.s2_q_why": "Mapping each NASA campaign (`BASS-II`, `Saffire`, `SAME`, `FLEX`) prevents mixing incompatible test setups during analysis.",
-        "j2.s2_q_evidence": "All 9 priority PSI studies are indexed and mapped cleanly to their primary safety layer with preserved DOIs and original files.",
+        "j2.s2_q_evidence": "The original nine safety investigations and the newly integrated PSI-62, PSI-117 and PSI-159 studies are indexed with preserved DOIs and originals. Research metadata, simulations, experimental references and test conditions remain distinct evidence types.",
         "j2.s2_q_conclude": "Solid fabric/polymer airflow tests cover Prevention, aerosol particle sizing covers Detection, and droplet tests illuminate Suppression.",
         "j2.s2_q_limits": "Studies differ in test scale (glovebox droplets vs Cygnus cabin fabrics) and table evidence types (`condition` vs `reported_result`).",
 
@@ -1134,6 +1181,11 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     },
     "pt": {
         # App & Sidebar
+        "view.evidence_nature": "Natureza da evidência: {kind}",
+        "view.field_nature": "Classificação de origem por coluna",
+        "view.source_basis": "Base da classificação",
+        "view.simulation_notice": "Previsões numéricas não são medições experimentais. Mantenha simulações e séries experimentais de referência distintas; colunas não classificadas permanecem sem validação.",
+        "view.incompatible_axes": "As séries têm grandezas/unidades diferentes ou não declaradas. Inspecione uma série por vez; não é gerada sobreposição em eixo comum nem interpolação.",
         "app.title": "PSI Flame Microgravity",
         "app.subtitle": "NASA Space Apps 2026 · Flame in Freefall",
         "sidebar.language": "Idioma · Language: [EN | PT-BR]",
@@ -1220,7 +1272,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "home.problem_title": "Qual problema este aplicativo resolve?",
         "home.problem_body": (
             "Os dados públicos do NASA PSI estão dispersos em planilhas CSV heterogêneas, PDFs de engenharia e relatórios científicos com unidades "
-            "divergentes (`psia`, `psig`, `mmHg`, `cm/s`, fração molar). O **PSI Flame Microgravity** reúne 9 investigações prioritárias em um painel transparente "
+            "divergentes (`psia`, `psig`, `mmHg`, `cm/s`, fração molar). O **PSI Flame Microgravity** reúne 12 investigações prioritárias em um painel transparente "
             "onde **condições de ensaio nunca se confundem com medições**, unidades são normalizadas de forma conservadora e cada resposta aponta para o arquivo NASA, página/linha e hash SHA-256."
         ),
         "home.metric_studies": "Estudos NASA PSI",
@@ -1499,7 +1551,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "ast.ex4_q": "Saffire spacecraft material flame spread test conditions",
         "ast.ex5_label": "Teste de insuficiência de evidências",
         "ast.ex5_q": "quasizebraunobtainium unsupported microgravity claim",
-        "ast.studies_filter": "Filtrar por investigação NASA (vazio = consulta todos os 9 estudos + guias)",
+        "ast.studies_filter": "Filtrar por investigação NASA (vazio = consulta todos os estudos indexados + guias)",
         "ast.question_label": "Pergunta científica",
         "ast.question_help": "Pergunte por condições experimentais, combustíveis, oxigênio ou documentos. Não use como laudo de segurança.",
         "ast.filters_expander": "Filtros numéricos e físicos (aplicados na mesma linha de origem)",
@@ -1553,14 +1605,14 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "src.sec1_title": "1. Origem e Proveniência dos Dados NASA PSI",
         "src.sec1_body": (
             "- **Fonte primária**: NASA Physical Sciences Informatics (PSI) Data Repository (`https://psi.nasa.gov/physci/repo/search?q=combustion`).\n"
-            "- **Cobertura do acervo**: **9 investigações PSI** (`PSI-25`, `PSI-26`, `PSI-68`, `PSI-69`, `PSI-98`, `PSI-99`, `PSI-100`, `PSI-101`, `PSI-102`) + **2 guias oficiais NASA**, somando **16 arquivos autênticos (7.881.267 bytes)**.\n"
+            "- **Cobertura do acervo**: **{studies} investigações PSI** e guias oficiais NASA, somando **{files} arquivos de origem processados ({size} bytes)**. PSI-62 contém metadados de pesquisa, PSI-117 inclui simulações e referências experimentais e PSI-159 inclui documentação de voo e condições de ensaios.\n"
             "- **Integridade imutável**: Cada arquivo baixado preserva data UTC de acesso, endpoint permanente na API PSI, DOI confirmado e hash SHA-256. URLs S3 assinadas temporárias nunca são persistidas."
         ),
         "src.sec2_title": "2. Extração, Normalização de Unidades e Categorias",
         "src.sec2_body": (
             "- **Normalização conservadora com Pint**: Apenas unidades explicitamente documentadas são convertidas (`1 atm = 14,6959 psia`, `1 m/s = 100 cm/s`, `°C → K`, `% O₂ → fração molar`).\n"
             "- **Proteção de referência**: `psi` ou `mmHg` sem referência nunca viram `psia` absoluto por suposição; pressão manométrica (`psig`) exige referência independente.\n"
-            "- **Separação rigorosa de categorias**: `condition` (condição de ensaio), `sample` (catálogo), `reported_result` (resultado reportado), `derived` (cálculo derivado, ex.: pO₂) e `document_context` permanecem distintos."
+            "- **Separação rigorosa de categorias**: `condition` (condição de ensaio), `sample` (catálogo), `reported_result` (resultado reportado), `derived` (cálculo derivado, ex.: pO₂) `simulation` (previsões numéricas), `metadata` (contexto de pesquisa) e `document_context` permanecem distintos."
         ),
         "src.sec3_title": "3. Busca Híbrida, Grounding e Uso de IA",
         "src.sec3_body": (
@@ -2024,7 +2076,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
 
         "j2.s2_q_exploring": "Quais investigações autênticas NASA PSI pertencem a Prevenção, Detecção ou Supressão em nosso acervo verificado.",
         "j2.s2_q_why": "Mapear cada campanha NASA (`BASS-II`, `Saffire`, `SAME`, `FLEX`) impede misturar configurações experimentais incompatíveis.",
-        "j2.s2_q_evidence": "Todas as 9 investigações prioritárias PSI estão indexadas e ligadas à sua camada de segurança com DOIs e arquivos originais.",
+        "j2.s2_q_evidence": "As nove investigações originais de segurança e os estudos PSI-62, PSI-117 e PSI-159 recém-integrados estão indexados com DOIs e originais preservados. Metadados de pesquisa, simulações, referências experimentais e condições de ensaio permanecem distintos.",
         "j2.s2_q_conclude": "Ensaios com tecidos/polímeros atendem Prevenção, partículas de aerossol atendem Detecção e ensaios com gotas fundamentam Supressão.",
         "j2.s2_q_limits": "As campanhas diferem em escala (gotas na glovebox vs tecidos no Cygnus) e natureza tabular (`condition` vs `reported_result`).",
 
@@ -2067,6 +2119,10 @@ _EVIDENCE_LABELS: dict[str, dict[str, str]] = {
         "engineering_or_publication": "Engineering document / publication",
         "reported_result": "Reported outcome (not independent validation)",
         "derived": "Derived calculation",
+        "simulation": "Numerical simulation (not a measurement)",
+        "metadata": "Research metadata / bibliographic context",
+        "identifier_or_unclassified": "Identifier or unclassified source field",
+        "mixed_experiment_and_simulation": "Experimental references & numerical simulations (distinct series)",
     },
     "pt": {
         "condition": "Condição de ensaio",
@@ -2081,6 +2137,10 @@ _EVIDENCE_LABELS: dict[str, dict[str, str]] = {
         "engineering_or_publication": "Documento de engenharia ou publicação",
         "reported_result": "Resultado reportado (não validação independente)",
         "derived": "Cálculo derivado",
+        "simulation": "Simulação numérica (não é medição)",
+        "metadata": "Metadados de pesquisa / contexto bibliográfico",
+        "identifier_or_unclassified": "Identificador ou campo de origem não classificado",
+        "mixed_experiment_and_simulation": "Referências experimentais e simulações numéricas (séries distintas)",
     },
 }
 

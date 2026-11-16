@@ -1,0 +1,69 @@
+{
+  "status": "processado",
+  "text": "Source Name\tSample Name\nDo not use this\tDo not use this\n",
+  "pages": [],
+  "tables": [],
+  "metadata": {
+    "encoding": "utf-8-sig",
+    "placeholder": true,
+    "evidence_kind": "metadata",
+    "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample."
+  },
+  "warnings": [
+    "Arquivo de amostras ISA-Tab vazio (placeholder 'Do not use this'); não contém dados."
+  ],
+  "schema_version": 4,
+  "source_filename": "s_PSI-62.txt",
+  "source_extension": ".txt",
+  "document": {
+    "name": "s_PSI-62.txt",
+    "extension": ".txt",
+    "sha256": "cb9374159b9b01a83bfe53a0b8ba1a602793df86f298e0ad222615c55d200135",
+    "size_bytes": 56
+  },
+  "evidence_kind": "metadata",
+  "observations": [],
+  "provenance": {
+    "study_id": "PSI-62",
+    "source": "NASA Physical Sciences Informatics",
+    "filename": "metadata/s_PSI-62.txt",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-62",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-62/download?file=PSI-62_metadata_NEWID-7_Concurrent+Flame+Spr.zip&version=1&redirect=false",
+    "doi": "10.60555/e9xp-ex83",
+    "sha256": "cb9374159b9b01a83bfe53a0b8ba1a602793df86f298e0ad222615c55d200135",
+    "size_bytes": 56,
+    "study_version": 1,
+    "file_version": 1,
+    "verified_utc": "2026-11-15T23:48:15.172723+00:00",
+    "retrieved_utc": "2026-11-15T23:48:15.172723+00:00",
+    "verification": "byte_identical_to_nasa_download",
+    "archive_member": "exeperiencias/PSI-62/PSI-62_metadata_NEWID-7_Concurrent Flame Spr (1).zip",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 9694,
+      "directory": false,
+      "files": [],
+      "id": "691cc8941e54369ebd26f6f7",
+      "key": "psi-data/PSI-62/metadata/PSI-62_metadata_NEWID-7_Concurrent Flame Spr.zip",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "9.47 KB",
+      "sortingCategory": "Investigation Metadata Files",
+      "status": "active",
+      "subcategory": null,
+      "updated": "Wed, 19 Nov 2025 03:27:16 GMT",
+      "version": 1,
+      "visible": true
+    },
+    "license": "No file-specific license exposed; retain NASA and author attribution.",
+    "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+    "classification": "metadata",
+    "media_type": "text/plain",
+    "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample.",
+    "parent_archive_sha256": "e8f984349473da4763818a424719afcb212c4876e35961792aefc3604aa9ea7a",
+    "parent_archive_filename": "PSI-62_metadata_NEWID-7_Concurrent Flame Spr.zip",
+    "nested_member": "s_PSI-62.txt"
+  }
+}

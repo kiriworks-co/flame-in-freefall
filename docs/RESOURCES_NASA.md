@@ -1,5 +1,12 @@
 # KIT — NASA Space Apps 2026 / Flame in Freefall
 
+**Ampliação Etapa 2 (2026-11-15):** o acervo atual cobre 12 investigações PSI,
+mais os guias oficiais. Foram incorporados 24 documentos adicionais de
+PSI-62/117/159 (21 úteis e três placeholders ISA preservados), além dos ZIPs
+de proveniência. Ver [STAGE2_SOURCE_AUDIT.md](STAGE2_SOURCE_AUDIT.md) e
+[DATA_PROVENANCE.md](DATA_PROVENANCE.md). A descrição do kit e da coleta
+inicial abaixo é histórica; não representa a contagem atual.
+
 **O que este arquivo contém:** cópia limpa do SEU projeto original Streamlit/Python, catálogo de 10 fontes oficiais, manifesto de 9 investigações prioritárias, dois scripts de download e instruções de continuidade do Codex. O código original foi preservado; as novidades estão em `resources/`, `scripts/`, `docs/`, `AGENTS.md`.
 
 **Atualização de execução (2026-11-15):** a coleta NASA foi realizada neste ambiente. Há nove CSVs PSI, cinco PDFs associados e dois guias oficiais, com importação real no dashboard. A lista completa, URLs, versões, hashes e lacunas está em [DATA_PROVENANCE.md](DATA_PROVENANCE.md). O kit inicial não continha esses arquivos; esse bloqueio histórico foi resolvido. Nenhum dado experimental foi fabricado.

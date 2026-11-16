@@ -1,0 +1,1512 @@
+{
+  "status": "processado",
+  "text": "P (atm),Dext_HF_EXPT,,P (atm),Dext_HF_model,,P (atm),Dext_CF_EXPT,,P (atm),Dext_CF_Model,,P (atm),Dext_CF_ErrorBar+,,P (atm),Dext_CF_ErrorBar-\r\n0.5,3.48,,0.5,3.43,,0.5,1.89,,0.5,1.19,,0.5,2.29,,0.5,0.66\r\n0.75,3.57,,0.75,3.69,,0.75,0.49,,0.75,0.41,,0.75,0.81,,0.75,0.23\r\n1,3.56,,1,3.68,,1,0.39,,1,0.25,,1,0.67,,1,0.15\r\n1.25,3.62,,1.25,3.74,,1,0.48,,1.25,0.33,,1.25,0.58,,1.25,0.14\r\n3,3.56,,3,3.94,,1.25,0.38,,3,0.03,,3,0,,3,0\r\n,,,,,,3,0,,,,,,,,,\r\n",
+  "pages": [
+    {
+      "page": 1,
+      "location": "arquivo CSV",
+      "text": "P (atm),Dext_HF_EXPT,,P (atm),Dext_HF_model,,P (atm),Dext_CF_EXPT,,P (atm),Dext_CF_Model,,P (atm),Dext_CF_ErrorBar+,,P (atm),Dext_CF_ErrorBar-\r\n0.5,3.48,,0.5,3.43,,0.5,1.89,,0.5,1.19,,0.5,2.29,,0.5,0.66\r\n0.75,3.57,,0.75,3.69,,0.75,0.49,,0.75,0.41,,0.75,0.81,,0.75,0.23\r\n1,3.56,,1,3.68,,1,0.39,,1,0.25,,1,0.67,,1,0.15\r\n1.25,3.62,,1.25,3.74,,1,0.48,,1.25,0.33,,1.25,0.58,,1.25,0.14\r\n3,3.56,,3,3.94,,1.25,0.38,,3,0.03,,3,0,,3,0\r\n,,,,,,3,0,,,,,,,,,\r\n"
+    }
+  ],
+  "tables": [
+    {
+      "name": "CSV · bloco 1",
+      "location": "arquivo CSV; intervalo A1:B6",
+      "header_row": 1,
+      "columns": [
+        "P (atm)",
+        "Dext_HF_EXPT"
+      ],
+      "original_headers": [
+        "P (atm)",
+        "Dext_HF_EXPT"
+      ],
+      "rows": [
+        [
+          0.5,
+          3.48
+        ],
+        [
+          0.75,
+          3.57
+        ],
+        [
+          1.0,
+          3.56
+        ],
+        [
+          1.25,
+          3.62
+        ],
+        [
+          3.0,
+          3.56
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "CSV",
+        "range": "A1:B6",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "data",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "P (atm)",
+          "base": "P",
+          "unit": "atm",
+          "kind": "numeric",
+          "quantity": "pressure",
+          "n_rows": 5,
+          "n_nonempty": 5,
+          "n_numeric": 5,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.5,
+          "max": 3.0
+        },
+        {
+          "name": "Dext_HF_EXPT",
+          "base": "Dext_HF_EXPT",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 5,
+          "n_nonempty": 5,
+          "n_numeric": 5,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 3.48,
+          "max": 3.62
+        }
+      ],
+      "chart": {
+        "type": "parametric",
+        "x": "P (atm)",
+        "y": [
+          "Dext_HF_EXPT"
+        ]
+      },
+      "flags": [],
+      "source_column_indices": [
+        0,
+        1
+      ],
+      "evidence_kind": "reported_result",
+      "field_classification": [
+        {
+          "header": "P (atm)",
+          "column_index": 0,
+          "role": "reported_result",
+          "source_marker": "0.5 | 0.75 | 1",
+          "source_column_index": 0
+        },
+        {
+          "header": "Dext_HF_EXPT",
+          "column_index": 1,
+          "role": "reported_result",
+          "source_marker": "3.48 | 3.57 | 3.56",
+          "source_column_index": 1
+        }
+      ],
+      "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+    },
+    {
+      "name": "CSV · bloco 2",
+      "location": "arquivo CSV; intervalo D1:E6",
+      "header_row": 1,
+      "columns": [
+        "P (atm)",
+        "Dext_HF_model"
+      ],
+      "original_headers": [
+        "P (atm)",
+        "Dext_HF_model"
+      ],
+      "rows": [
+        [
+          0.5,
+          3.43
+        ],
+        [
+          0.75,
+          3.69
+        ],
+        [
+          1.0,
+          3.68
+        ],
+        [
+          1.25,
+          3.74
+        ],
+        [
+          3.0,
+          3.94
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "CSV",
+        "range": "D1:E6",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "data",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "P (atm)",
+          "base": "P",
+          "unit": "atm",
+          "kind": "numeric",
+          "quantity": "pressure",
+          "n_rows": 5,
+          "n_nonempty": 5,
+          "n_numeric": 5,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.5,
+          "max": 3.0
+        },
+        {
+          "name": "Dext_HF_model",
+          "base": "Dext_HF_model",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 5,
+          "n_nonempty": 5,
+          "n_numeric": 5,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 3.43,
+          "max": 3.94
+        }
+      ],
+      "chart": {
+        "type": "parametric",
+        "x": "P (atm)",
+        "y": [
+          "Dext_HF_model"
+        ]
+      },
+      "flags": [],
+      "source_column_indices": [
+        3,
+        4
+      ],
+      "evidence_kind": "simulation",
+      "field_classification": [
+        {
+          "header": "P (atm)",
+          "column_index": 0,
+          "role": "simulation",
+          "source_marker": "0.5 | 0.75 | 1",
+          "source_column_index": 3
+        },
+        {
+          "header": "Dext_HF_model",
+          "column_index": 1,
+          "role": "simulation",
+          "source_marker": "3.43 | 3.69 | 3.68",
+          "source_column_index": 4
+        }
+      ],
+      "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+    },
+    {
+      "name": "CSV · bloco 3",
+      "location": "arquivo CSV; intervalo G1:H7",
+      "header_row": 1,
+      "columns": [
+        "P (atm)",
+        "Dext_CF_EXPT"
+      ],
+      "original_headers": [
+        "P (atm)",
+        "Dext_CF_EXPT"
+      ],
+      "rows": [
+        [
+          0.5,
+          1.89
+        ],
+        [
+          0.75,
+          0.49
+        ],
+        [
+          1.0,
+          0.39
+        ],
+        [
+          1.0,
+          0.48
+        ],
+        [
+          1.25,
+          0.38
+        ],
+        [
+          3.0,
+          0.0
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "CSV",
+        "range": "G1:H7",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "data",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "P (atm)",
+          "base": "P",
+          "unit": "atm",
+          "kind": "numeric",
+          "quantity": "pressure",
+          "n_rows": 6,
+          "n_nonempty": 6,
+          "n_numeric": 6,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.5,
+          "max": 3.0
+        },
+        {
+          "name": "Dext_CF_EXPT",
+          "base": "Dext_CF_EXPT",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 6,
+          "n_nonempty": 6,
+          "n_numeric": 6,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.0,
+          "max": 1.89
+        }
+      ],
+      "chart": {
+        "type": "parametric",
+        "x": "P (atm)",
+        "y": [
+          "Dext_CF_EXPT"
+        ]
+      },
+      "flags": [
+        {
+          "level": "info",
+          "code": "x_repetido",
+          "message": "'P (atm)' tem valores repetidos.",
+          "columns": [
+            "P (atm)"
+          ],
+          "suggest": {}
+        }
+      ],
+      "source_column_indices": [
+        6,
+        7
+      ],
+      "evidence_kind": "reported_result",
+      "field_classification": [
+        {
+          "header": "P (atm)",
+          "column_index": 0,
+          "role": "reported_result",
+          "source_marker": "0.5 | 0.75 | 1",
+          "source_column_index": 6
+        },
+        {
+          "header": "Dext_CF_EXPT",
+          "column_index": 1,
+          "role": "reported_result",
+          "source_marker": "1.89 | 0.49 | 0.39",
+          "source_column_index": 7
+        }
+      ],
+      "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+    },
+    {
+      "name": "CSV · bloco 4",
+      "location": "arquivo CSV; intervalo J1:K6",
+      "header_row": 1,
+      "columns": [
+        "P (atm)",
+        "Dext_CF_Model"
+      ],
+      "original_headers": [
+        "P (atm)",
+        "Dext_CF_Model"
+      ],
+      "rows": [
+        [
+          0.5,
+          1.19
+        ],
+        [
+          0.75,
+          0.41
+        ],
+        [
+          1.0,
+          0.25
+        ],
+        [
+          1.25,
+          0.33
+        ],
+        [
+          3.0,
+          0.03
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "CSV",
+        "range": "J1:K6",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "data",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "P (atm)",
+          "base": "P",
+          "unit": "atm",
+          "kind": "numeric",
+          "quantity": "pressure",
+          "n_rows": 5,
+          "n_nonempty": 5,
+          "n_numeric": 5,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.5,
+          "max": 3.0
+        },
+        {
+          "name": "Dext_CF_Model",
+          "base": "Dext_CF_Model",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 5,
+          "n_nonempty": 5,
+          "n_numeric": 5,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.03,
+          "max": 1.19
+        }
+      ],
+      "chart": {
+        "type": "parametric",
+        "x": "P (atm)",
+        "y": [
+          "Dext_CF_Model"
+        ]
+      },
+      "flags": [],
+      "source_column_indices": [
+        9,
+        10
+      ],
+      "evidence_kind": "simulation",
+      "field_classification": [
+        {
+          "header": "P (atm)",
+          "column_index": 0,
+          "role": "simulation",
+          "source_marker": "0.5 | 0.75 | 1",
+          "source_column_index": 9
+        },
+        {
+          "header": "Dext_CF_Model",
+          "column_index": 1,
+          "role": "simulation",
+          "source_marker": "1.19 | 0.41 | 0.25",
+          "source_column_index": 10
+        }
+      ],
+      "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+    },
+    {
+      "name": "CSV · bloco 5",
+      "location": "arquivo CSV; intervalo M1:N6",
+      "header_row": 1,
+      "columns": [
+        "P (atm)",
+        "Dext_CF_ErrorBar+"
+      ],
+      "original_headers": [
+        "P (atm)",
+        "Dext_CF_ErrorBar+"
+      ],
+      "rows": [
+        [
+          0.5,
+          2.29
+        ],
+        [
+          0.75,
+          0.81
+        ],
+        [
+          1.0,
+          0.67
+        ],
+        [
+          1.25,
+          0.58
+        ],
+        [
+          3.0,
+          0.0
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "CSV",
+        "range": "M1:N6",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "data",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "P (atm)",
+          "base": "P",
+          "unit": "atm",
+          "kind": "numeric",
+          "quantity": "pressure",
+          "n_rows": 5,
+          "n_nonempty": 5,
+          "n_numeric": 5,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.5,
+          "max": 3.0
+        },
+        {
+          "name": "Dext_CF_ErrorBar+",
+          "base": "Dext_CF_ErrorBar+",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 5,
+          "n_nonempty": 5,
+          "n_numeric": 5,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.0,
+          "max": 2.29
+        }
+      ],
+      "chart": {
+        "type": "parametric",
+        "x": "P (atm)",
+        "y": [
+          "Dext_CF_ErrorBar+"
+        ]
+      },
+      "flags": [],
+      "source_column_indices": [
+        12,
+        13
+      ],
+      "evidence_kind": "reported_result",
+      "field_classification": [
+        {
+          "header": "P (atm)",
+          "column_index": 0,
+          "role": "reported_result",
+          "source_marker": "0.5 | 0.75 | 1",
+          "source_column_index": 12
+        },
+        {
+          "header": "Dext_CF_ErrorBar+",
+          "column_index": 1,
+          "role": "reported_result",
+          "source_marker": "2.29 | 0.81 | 0.67",
+          "source_column_index": 13
+        }
+      ],
+      "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+    },
+    {
+      "name": "CSV · bloco 6",
+      "location": "arquivo CSV; intervalo P1:Q6",
+      "header_row": 1,
+      "columns": [
+        "P (atm)",
+        "Dext_CF_ErrorBar-"
+      ],
+      "original_headers": [
+        "P (atm)",
+        "Dext_CF_ErrorBar-"
+      ],
+      "rows": [
+        [
+          0.5,
+          0.66
+        ],
+        [
+          0.75,
+          0.23
+        ],
+        [
+          1.0,
+          0.15
+        ],
+        [
+          1.25,
+          0.14
+        ],
+        [
+          3.0,
+          0.0
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "CSV",
+        "range": "P1:Q6",
+        "label": null,
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "data",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "P (atm)",
+          "base": "P",
+          "unit": "atm",
+          "kind": "numeric",
+          "quantity": "pressure",
+          "n_rows": 5,
+          "n_nonempty": 5,
+          "n_numeric": 5,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.5,
+          "max": 3.0
+        },
+        {
+          "name": "Dext_CF_ErrorBar-",
+          "base": "Dext_CF_ErrorBar-",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 5,
+          "n_nonempty": 5,
+          "n_numeric": 5,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.0,
+          "max": 0.66
+        }
+      ],
+      "chart": {
+        "type": "parametric",
+        "x": "P (atm)",
+        "y": [
+          "Dext_CF_ErrorBar-"
+        ]
+      },
+      "flags": [],
+      "source_column_indices": [
+        15,
+        16
+      ],
+      "evidence_kind": "reported_result",
+      "field_classification": [
+        {
+          "header": "P (atm)",
+          "column_index": 0,
+          "role": "reported_result",
+          "source_marker": "0.5 | 0.75 | 1",
+          "source_column_index": 15
+        },
+        {
+          "header": "Dext_CF_ErrorBar-",
+          "column_index": 1,
+          "role": "reported_result",
+          "source_marker": "0.66 | 0.23 | 0.15",
+          "source_column_index": 16
+        }
+      ],
+      "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+    }
+  ],
+  "raw_matrix": {
+    "rows": [
+      [
+        "P (atm)",
+        "Dext_HF_EXPT",
+        null,
+        "P (atm)",
+        "Dext_HF_model",
+        null,
+        "P (atm)",
+        "Dext_CF_EXPT",
+        null,
+        "P (atm)",
+        "Dext_CF_Model",
+        null,
+        "P (atm)",
+        "Dext_CF_ErrorBar+",
+        null,
+        "P (atm)",
+        "Dext_CF_ErrorBar-"
+      ],
+      [
+        0.5,
+        3.48,
+        null,
+        0.5,
+        3.43,
+        null,
+        0.5,
+        1.89,
+        null,
+        0.5,
+        1.19,
+        null,
+        0.5,
+        2.29,
+        null,
+        0.5,
+        0.66
+      ],
+      [
+        0.75,
+        3.57,
+        null,
+        0.75,
+        3.69,
+        null,
+        0.75,
+        0.49,
+        null,
+        0.75,
+        0.41,
+        null,
+        0.75,
+        0.81,
+        null,
+        0.75,
+        0.23
+      ],
+      [
+        1.0,
+        3.56,
+        null,
+        1.0,
+        3.68,
+        null,
+        1.0,
+        0.39,
+        null,
+        1.0,
+        0.25,
+        null,
+        1.0,
+        0.67,
+        null,
+        1.0,
+        0.15
+      ],
+      [
+        1.25,
+        3.62,
+        null,
+        1.25,
+        3.74,
+        null,
+        1.0,
+        0.48,
+        null,
+        1.25,
+        0.33,
+        null,
+        1.25,
+        0.58,
+        null,
+        1.25,
+        0.14
+      ],
+      [
+        3.0,
+        3.56,
+        null,
+        3.0,
+        3.94,
+        null,
+        1.25,
+        0.38,
+        null,
+        3.0,
+        0.03,
+        null,
+        3.0,
+        0.0,
+        null,
+        3.0,
+        0.0
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3.0,
+        0.0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "source_rows": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "metadata": {
+    "encoding": "utf-8-sig",
+    "rows": 7,
+    "sheet_titles": [],
+    "evidence_kind": "mixed_experiment_and_simulation",
+    "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+  },
+  "warnings": [],
+  "schema_version": 4,
+  "source_filename": "PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+  "source_extension": ".csv",
+  "document": {
+    "name": "PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+    "extension": ".csv",
+    "sha256": "4ab6f8c19f40a3349096eab8bdceb0a62611020af15e63f816922b149cfa7001",
+    "size_bytes": 449
+  },
+  "evidence_kind": "mixed_experiment_and_simulation",
+  "observations": [
+    {
+      "value": 0.5,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.5,
+      "table_index": 0,
+      "row_number": 2,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 0
+    },
+    {
+      "value": 0.75,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.75,
+      "table_index": 0,
+      "row_number": 3,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 0
+    },
+    {
+      "value": 1.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.0,
+      "table_index": 0,
+      "row_number": 4,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 0
+    },
+    {
+      "value": 1.25,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.25,
+      "table_index": 0,
+      "row_number": 5,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 0
+    },
+    {
+      "value": 3.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 3.0,
+      "table_index": 0,
+      "row_number": 6,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 0
+    },
+    {
+      "value": 0.5,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.5,
+      "table_index": 1,
+      "row_number": 2,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 3
+    },
+    {
+      "value": 0.75,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.75,
+      "table_index": 1,
+      "row_number": 3,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 3
+    },
+    {
+      "value": 1.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.0,
+      "table_index": 1,
+      "row_number": 4,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 3
+    },
+    {
+      "value": 1.25,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.25,
+      "table_index": 1,
+      "row_number": 5,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 3
+    },
+    {
+      "value": 3.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 3.0,
+      "table_index": 1,
+      "row_number": 6,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 3
+    },
+    {
+      "value": 0.5,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.5,
+      "table_index": 2,
+      "row_number": 2,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 6
+    },
+    {
+      "value": 0.75,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.75,
+      "table_index": 2,
+      "row_number": 3,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 6
+    },
+    {
+      "value": 1.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.0,
+      "table_index": 2,
+      "row_number": 4,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 6
+    },
+    {
+      "value": 1.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.0,
+      "table_index": 2,
+      "row_number": 5,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 6
+    },
+    {
+      "value": 1.25,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.25,
+      "table_index": 2,
+      "row_number": 6,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 6
+    },
+    {
+      "value": 3.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 3.0,
+      "table_index": 2,
+      "row_number": 7,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 6
+    },
+    {
+      "value": 0.5,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.5,
+      "table_index": 3,
+      "row_number": 2,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 9
+    },
+    {
+      "value": 0.75,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.75,
+      "table_index": 3,
+      "row_number": 3,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 9
+    },
+    {
+      "value": 1.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.0,
+      "table_index": 3,
+      "row_number": 4,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 9
+    },
+    {
+      "value": 1.25,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.25,
+      "table_index": 3,
+      "row_number": 5,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 9
+    },
+    {
+      "value": 3.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 3.0,
+      "table_index": 3,
+      "row_number": 6,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 9
+    },
+    {
+      "value": 0.5,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.5,
+      "table_index": 4,
+      "row_number": 2,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 12
+    },
+    {
+      "value": 0.75,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.75,
+      "table_index": 4,
+      "row_number": 3,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 12
+    },
+    {
+      "value": 1.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.0,
+      "table_index": 4,
+      "row_number": 4,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 12
+    },
+    {
+      "value": 1.25,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.25,
+      "table_index": 4,
+      "row_number": 5,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 12
+    },
+    {
+      "value": 3.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 3.0,
+      "table_index": 4,
+      "row_number": 6,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 12
+    },
+    {
+      "value": 0.5,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.5,
+      "table_index": 5,
+      "row_number": 2,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 15
+    },
+    {
+      "value": 0.75,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 0.75,
+      "table_index": 5,
+      "row_number": 3,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 15
+    },
+    {
+      "value": 1.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.0,
+      "table_index": 5,
+      "row_number": 4,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 15
+    },
+    {
+      "value": 1.25,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 1.25,
+      "table_index": 5,
+      "row_number": 5,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 15
+    },
+    {
+      "value": 3.0,
+      "unit": "atm",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "P (atm)",
+      "raw_value": 3.0,
+      "table_index": 5,
+      "row_number": 6,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 15
+    }
+  ],
+  "provenance": {
+    "study_id": "PSI-117",
+    "source": "NASA Physical Sciences Informatics",
+    "filename": "PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv&version=1&redirect=false",
+    "doi": "10.60555/gz0q-b577",
+    "sha256": "4ab6f8c19f40a3349096eab8bdceb0a62611020af15e63f816922b149cfa7001",
+    "size_bytes": 449,
+    "study_version": 2,
+    "file_version": 1,
+    "verified_utc": "2026-11-15T23:48:55.266541+00:00",
+    "retrieved_utc": "2026-11-15T23:48:55.266541+00:00",
+    "verification": "byte_identical_to_nasa_download",
+    "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 449,
+      "directory": false,
+      "files": [],
+      "id": "6a28273ad9d7246402cb43e6",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "449.0 B",
+      "sortingCategory": "Analyzed Data",
+      "status": "active",
+      "subcategory": "Reduced Gravity/Simulation/PROC1",
+      "updated": "Tue, 09 Jun 2026 22:46:18 GMT",
+      "version": 1,
+      "visible": true
+    },
+    "license": "No file-specific license exposed; retain NASA and author attribution.",
+    "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+    "classification": "mixed_experiment_and_simulation",
+    "media_type": "text/csv",
+    "field_classification": [
+      {
+        "header": "P (atm)",
+        "column_index": 0,
+        "role": "reported_result",
+        "source_marker": "0.5 | 0.75 | 1"
+      },
+      {
+        "header": "Dext_HF_EXPT",
+        "column_index": 1,
+        "role": "reported_result",
+        "source_marker": "3.48 | 3.57 | 3.56"
+      },
+      {
+        "header": "",
+        "column_index": 2,
+        "role": "reported_result",
+        "source_marker": ""
+      },
+      {
+        "header": "P (atm)",
+        "column_index": 3,
+        "role": "simulation",
+        "source_marker": "0.5 | 0.75 | 1"
+      },
+      {
+        "header": "Dext_HF_model",
+        "column_index": 4,
+        "role": "simulation",
+        "source_marker": "3.43 | 3.69 | 3.68"
+      },
+      {
+        "header": "",
+        "column_index": 5,
+        "role": "simulation",
+        "source_marker": ""
+      },
+      {
+        "header": "P (atm)",
+        "column_index": 6,
+        "role": "reported_result",
+        "source_marker": "0.5 | 0.75 | 1"
+      },
+      {
+        "header": "Dext_CF_EXPT",
+        "column_index": 7,
+        "role": "reported_result",
+        "source_marker": "1.89 | 0.49 | 0.39"
+      },
+      {
+        "header": "",
+        "column_index": 8,
+        "role": "reported_result",
+        "source_marker": ""
+      },
+      {
+        "header": "P (atm)",
+        "column_index": 9,
+        "role": "simulation",
+        "source_marker": "0.5 | 0.75 | 1"
+      },
+      {
+        "header": "Dext_CF_Model",
+        "column_index": 10,
+        "role": "simulation",
+        "source_marker": "1.19 | 0.41 | 0.25"
+      },
+      {
+        "header": "",
+        "column_index": 11,
+        "role": "simulation",
+        "source_marker": ""
+      },
+      {
+        "header": "P (atm)",
+        "column_index": 12,
+        "role": "reported_result",
+        "source_marker": "0.5 | 0.75 | 1"
+      },
+      {
+        "header": "Dext_CF_ErrorBar+",
+        "column_index": 13,
+        "role": "reported_result",
+        "source_marker": "2.29 | 0.81 | 0.67"
+      },
+      {
+        "header": "",
+        "column_index": 14,
+        "role": "reported_result",
+        "source_marker": ""
+      },
+      {
+        "header": "P (atm)",
+        "column_index": 15,
+        "role": "reported_result",
+        "source_marker": "0.5 | 0.75 | 1"
+      },
+      {
+        "header": "Dext_CF_ErrorBar-",
+        "column_index": 16,
+        "role": "reported_result",
+        "source_marker": "0.66 | 0.23 | 0.15"
+      }
+    ],
+    "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+  }
+}

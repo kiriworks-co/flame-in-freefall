@@ -100,6 +100,51 @@
       "doi": "10.60555/gd4k-8h62",
       "doi_verified_from": "https://psi.nasa.gov/geode-py/ws/studies/PSI-102/metadata",
       "study_version": 4
+    },
+    {
+      "id": "PSI-62",
+      "name": "Concurrent Flame Spread Modeling (UFGM)",
+      "title": "Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography",
+      "category": "Prevenção/modelagem de propagação",
+      "description": "The objective of this research was to develop and validate new flamelet generated manifold (FGM) modeling techniques for concurrent flame spread in microgravity. Concurrent flame spread presented one of the greatest modeling challenges in combustion science due to the intricate coupling between heat transfer, mass transport, and chemical kinetics near the solid-vapor interface. Traditional modeling strategies often relied on hybridized turbulence and chemistry models that were not fully consistent and failed to capture important intermediate reaction pathways.\nTo overcome these shortcomings, this PSI grant advanced the use of an unsteady flamelet generated manifold (UFGM) framework that reduced the complexity of reacting systems by mapping them into lower-dimensional manifolds. The research aimed to leverage this methodology to simulate solid fuel combustion processes with high fidelity, using the NASA Burning and Suppression of Solids (BASS and BASS-II) experiments as benchmarks. Ultimately, the long-term goal was to enable accurate prediction of flammability limits for spacecraft materials and to provide a tool that could also serve as a subgrid-scale model in large-eddy simulations of fires, supporting spacecraft safety and hazard mitigation.",
+      "nasa_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-62",
+      "doi": "10.60555/e9xp-ex83",
+      "doi_verified_from": "https://psi.nasa.gov/geode-py/ws/studies/PSI-62/metadata",
+      "study_version": 1,
+      "source_type": "metadata_only_modeling_study",
+      "scientific_caveats": "Only ISA metadata publicly exposed; no numerical model results or new experimental measurements available.",
+      "files_downloaded": 2,
+      "metadata_archives_preserved": 1
+    },
+    {
+      "id": "PSI-117",
+      "name": "Cool Flame Dynamics (CFD / FLEX comparison)",
+      "title": "Effect of External Thermo-Convective Perturbation on Cool Flame Dynamics: A Multidimensional Multi-Physics CFD Analysis",
+      "category": "Supressão/combustão de gotas",
+      "description": "The objective of this ground investigation was to use flight data obtained from PSI through NASA’s Flame Extinguishment Experiment (FLEX) to quantify how externally imposed thermal and convective perturbations regulated the dynamics and ultimate fate of already established droplet cool flames, and to explain run-to-run variability by isolating the roles of deliberate heating and unintentional drift-induced convection. Focusing on both small and large droplets, the work mapped stability windows for ignition, sustained oscillation, transitions to hot ignition and warm-flame behavior, and extinction under microgravity. By leveraging and extending the FLEX data in the PSI, this study produced reusable models and sensitivity analyses that coupled low-temperature chemistry with transport and radiative effects.",
+      "nasa_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+      "doi": "10.60555/gz0q-b577",
+      "doi_verified_from": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/metadata",
+      "study_version": 2,
+      "source_type": "mixed_experimental_and_simulation",
+      "scientific_caveats": "Analyzed data include independent experimental and CFD series; preserve Expt/Sim grouping and source units. ReadMe composition conventions contain ambiguities and are not repaired.",
+      "files_downloaded": 16,
+      "metadata_archives_preserved": 1
+    },
+    {
+      "id": "PSI-159",
+      "name": "ACME CFI-G",
+      "title": "Advanced Combustion via Microgravity Experiments / Cool Flames Investigation with Gases",
+      "category": "Prevenção/chamas frias gasosas",
+      "description": "1. Plan and support flight testing on the International Space Station (ISS).\n2. Determine the conditions for which cool diffusion flames occur for propane, n-butane, and n-pentane; normal and inverse flames; and a broad range of Zst, Tad, and fluent flow rate.\n3. Support the flight tests with advanced CFD simulations.\n4. Identify or develop a chemical kinetics mechanism that yields good agreement between the CFD predictions and the ISS measurements.\n5. Disseminate the results as widely as possible.",
+      "nasa_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+      "doi": "10.60555/cyt1-kh64",
+      "doi_verified_from": "https://psi.nasa.gov/geode-py/ws/studies/PSI-159/metadata",
+      "study_version": 1,
+      "source_type": "flight_conditions_reported_results_and_reports",
+      "scientific_caveats": "Experimental tables contain flight conditions, tabulated calculations and reported outcomes, separately classified by field. Final report distinguishes proposals, preliminary findings and simulations; none is certification evidence.",
+      "files_downloaded": 6,
+      "metadata_archives_preserved": 1
     }
   ]
 }

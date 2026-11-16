@@ -46,6 +46,9 @@ def normalize_quantity(value: Any, unit: str, quantity: str | None = None,
                  "cm/sec": "cm/s", "m/sec": "m/s", "sec": "s", "µm": "um",
                  "mol%": "%", "mol.%": "%", "vol%": "%", "mole fraction": "dimensionless",
                  "% by vol": "%", "% by volume": "%", "ppm": "ppm"}.get(raw, raw)
+    # Scientific spreadsheets commonly omit the caret in an explicit area unit.
+    # This expands the written unit; it never supplies a unit absent from source.
+    canonical = re.sub(r"\b(mm|cm|m)(?:2|²)\b", r"\1**2", canonical)
     lowered = canonical.casefold()
     if lowered in {"psia", "psi (absolute)", "psi absolute"}:
         result.update(normalized_value=number, normalized_unit="psia", reference="absolute", status="normalized", quantity="pressure")
@@ -62,6 +65,7 @@ def normalize_quantity(value: Any, unit: str, quantity: str | None = None,
     targets = {"pressure": ("psi", "psig" if reference == "gauge" else "psia"),
                "velocity": ("cm/s", "cm/s"), "temperature": ("kelvin", "K"),
                "diameter": ("mm", "mm"), "length": ("mm", "mm"),
+               "area_rate": ("mm**2/second", "mm²/s"),
                "time": ("second", "s"), "rate": ("1/second", "1/s"),
                "oxygen": ("dimensionless", "fraction"), "mass_rate": ("mg/min", "mg/min")}
     if not canonical:
@@ -99,16 +103,18 @@ def field_definition(header: str) -> tuple[str | None, str, str | None]:
     quantity = None
     if re.search(r"oxygen|\bo[₂2]\b|oxig[eê]nio|^o initial ambient composition", lower):
         quantity = "oxygen"
-    elif "pressure" in lower or "pressão" in lower or "pressao" in lower:
+    elif "pressure" in lower or "pressão" in lower or "pressao" in lower or re.search(r"\bp\s*\((?:atm|bar|pa|kpa)\)", lower):
         quantity = "pressure"
     elif re.search(r"velocity|speed|velocidade|air flow", lower):
         quantity = "velocity"
-    elif "diameter" in lower or "diâmetro" in lower:
+    elif re.search(r"diameter|diâmetro|^(?:dflame|dext[_\w]*|df|do|d)\s*\(", lower):
         quantity = "diameter"
-    elif "temperature" in lower or "temperatura" in lower:
+    elif re.search(r"temperature|temperatura|\btemp\b|\bt_?max\s*\(|\btad\s*\(|\bt\s*\([kc° ]+\)", lower):
         quantity = "temperature"
-    elif re.search(r"\btime\b|tempo|duration", lower):
+    elif re.search(r"\btime\b|tempo|duration|^t\s*\(", lower):
         quantity = "time"
+    elif re.match(r"^(?:k|kb)\s*\(", lower):
+        quantity = "area_rate"
     elif re.search(r"fuel|combust[ií]vel", lower):
         quantity = "fuel"
     elif "burning rate" in lower:
@@ -136,19 +142,29 @@ def observations_from_tables(tables: list[dict[str, Any]], evidence_kind: str = 
     for table_index, table in enumerate(tables):
         for column_index, header in enumerate(table.get("columns", [])):
             quantity, unit, reference = field_definition(str(header))
+            role: dict[str, Any] = next((item for item in table.get("field_classification", [])
+                         if item.get("column_index") == column_index), {})
+            quantity = role.get("quantity", quantity)
+            unit = role.get("unit", unit)
+            reference = role.get("reference", reference)
             if quantity is None and not unit:
                 continue
             for row_index, row in enumerate(table.get("rows", [])):
                 raw = row[column_index] if column_index < len(row) else None
                 source_rows = table.get("source_rows", [])
                 row_number = source_rows[row_index] if row_index < len(source_rows) else row_index + 2
-                kind = evidence_kind
-                if evidence_kind == "mixed_conditions_and_reported_results":
+                kind = role.get("role", table.get("evidence_kind", evidence_kind))
+                if kind == "mixed_conditions_and_reported_results":
                     kind = classify_field(str(header))
                 normalized = normalize_quantity(raw, unit, quantity, reference)
-                observations.append({**normalized, "field": str(header), "raw_value": raw,
+                observation = {**normalized, "field": str(header), "raw_value": raw,
                                      "table_index": table_index, "row_number": row_number,
-                                     "column_index": column_index, "evidence_kind": kind})
+                                     "column_index": column_index, "evidence_kind": kind,
+                                     "source_column_index": role.get("source_column_index", column_index)}
+                if role.get("warning"):
+                    observation.update(warning=role["warning"], normalized_value=None,
+                                       normalized_unit=None, status="source_unit_ambiguous")
+                observations.append(observation)
     return observations
 
 

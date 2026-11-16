@@ -552,6 +552,12 @@ def show_evidence(evidence: list[dict], experiments: list[dict]) -> None:
         with st.expander(label, expanded=position == 1):
             kind = item.get("evidence_kind", "unclassified")
             st.caption(t("ast.ev_nature", lang, kind=evidence_label(kind, lang), ref=item.get("id", "")))
+            if item.get("field_classification"):
+                st.caption(" · ".join(
+                    f"{field.get('header', field.get('source_column_index', ''))}: "
+                    f"{evidence_label(field.get('role') or field.get('evidence_kind'), lang)}"
+                    for field in item["field_classification"]
+                ))
             st.text(item.get("text", ""))
             b1, b2 = st.columns(2)
             with b1:
@@ -975,7 +981,10 @@ def show_ingestion(experiments: list[dict]) -> None:
     with m1:
         with st.container(border=True):
             st.subheader(t("src.sec1_title", lang))
-            st.markdown(t("src.sec1_body", lang))
+            st.markdown(t("src.sec1_body", lang,
+                          studies=sum(_study(e).startswith("PSI-") for e in experiments),
+                          files=sum(len(e.get("documents", [])) for e in experiments),
+                          size=sum(d.get("size_bytes", 0) for e in experiments for d in e.get("documents", []))))
         with st.container(border=True):
             st.subheader(t("src.sec3_title", lang))
             st.markdown(t("src.sec3_body", lang))

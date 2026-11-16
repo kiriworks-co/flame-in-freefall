@@ -682,89 +682,143 @@
         {
           "header": "Sample Number",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 0,
+          "source_column_index": 0
         },
         {
           "header": "Material",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 1,
+          "source_column_index": 1
         },
         {
           "header": "Samle Thickness ",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 2,
+          "source_column_index": 2
         },
         {
           "header": "Sample Length ",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 3,
+          "source_column_index": 3
         },
         {
           "header": "Sample Width (cm)",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 4,
+          "source_column_index": 4
         },
         {
           "header": "Air Flow (cm/s)",
           "role": "condition",
-          "warning": null
+          "warning": null,
+          "column_index": 5,
+          "source_column_index": 5
         },
         {
           "header": "Percent O2 (Note 1)",
           "role": "condition",
-          "warning": null
+          "warning": null,
+          "column_index": 6,
+          "source_column_index": 6
         },
         {
           "header": "Ignition Power (W)",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 7,
+          "source_column_index": 7
         },
         {
           "header": "Ignition Time (s)",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 8,
+          "source_column_index": 8
         },
         {
           "header": "Burn Time (s)",
           "role": "reported_result",
-          "warning": null
+          "warning": null,
+          "column_index": 9,
+          "source_column_index": 9
         },
         {
           "header": "Flow Direction",
           "role": "condition",
-          "warning": null
+          "warning": null,
+          "column_index": 10,
+          "source_column_index": 10
         },
         {
           "header": "?-g Burn Length",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 11,
+          "source_column_index": 11
         },
         {
           "header": "?-g Spread Length",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 12,
+          "source_column_index": 12
         },
         {
           "header": "1-g Burn Length",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 13,
+          "source_column_index": 13
         },
         {
           "header": "1-g Spread Rate",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 14,
+          "source_column_index": 14
         },
         {
           "header": "Camera 1",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 15,
+          "source_column_index": 15
         },
         {
           "header": "Camera 2",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 16,
+          "source_column_index": 16
         }
-      ]
+      ],
+      "source_column_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "classification_note": "Contains conditions and reported outcomes. Preserve header meanings and uncertain units; do not infer material risk rankings."
     }
   ],
   "raw_matrix": {
@@ -1096,7 +1150,9 @@
   "metadata": {
     "encoding": "utf-8-sig",
     "rows": 16,
-    "sheet_titles": []
+    "sheet_titles": [],
+    "evidence_kind": "mixed_conditions_and_reported_results",
+    "classification_note": "Contains conditions and reported outcomes. Preserve header meanings and uncertain units; do not infer material risk rankings."
   },
   "warnings": [],
   "schema_version": 4,
@@ -1123,7 +1179,8 @@
       "table_index": 0,
       "row_number": 2,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1138,7 +1195,8 @@
       "table_index": 0,
       "row_number": 3,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1153,7 +1211,8 @@
       "table_index": 0,
       "row_number": 4,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1168,7 +1227,8 @@
       "table_index": 0,
       "row_number": 5,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1183,7 +1243,8 @@
       "table_index": 0,
       "row_number": 6,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1198,7 +1259,8 @@
       "table_index": 0,
       "row_number": 7,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1213,7 +1275,8 @@
       "table_index": 0,
       "row_number": 8,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1228,7 +1291,8 @@
       "table_index": 0,
       "row_number": 9,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1243,7 +1307,8 @@
       "table_index": 0,
       "row_number": 10,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1258,7 +1323,8 @@
       "table_index": 0,
       "row_number": 11,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1273,7 +1339,8 @@
       "table_index": 0,
       "row_number": 12,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1288,7 +1355,8 @@
       "table_index": 0,
       "row_number": 13,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1303,7 +1371,8 @@
       "table_index": 0,
       "row_number": 14,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1318,7 +1387,8 @@
       "table_index": 0,
       "row_number": 15,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1333,7 +1403,8 @@
       "table_index": 0,
       "row_number": 16,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -1348,7 +1419,8 @@
       "table_index": 0,
       "row_number": 2,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1363,7 +1435,8 @@
       "table_index": 0,
       "row_number": 3,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1378,7 +1451,8 @@
       "table_index": 0,
       "row_number": 4,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1393,7 +1467,8 @@
       "table_index": 0,
       "row_number": 5,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1408,7 +1483,8 @@
       "table_index": 0,
       "row_number": 6,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1423,7 +1499,8 @@
       "table_index": 0,
       "row_number": 7,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1438,7 +1515,8 @@
       "table_index": 0,
       "row_number": 8,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1453,7 +1531,8 @@
       "table_index": 0,
       "row_number": 9,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1468,7 +1547,8 @@
       "table_index": 0,
       "row_number": 10,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1483,7 +1563,8 @@
       "table_index": 0,
       "row_number": 11,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1498,7 +1579,8 @@
       "table_index": 0,
       "row_number": 12,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1513,7 +1595,8 @@
       "table_index": 0,
       "row_number": 13,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1528,7 +1611,8 @@
       "table_index": 0,
       "row_number": 14,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1543,7 +1627,8 @@
       "table_index": 0,
       "row_number": 15,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -1558,7 +1643,8 @@
       "table_index": 0,
       "row_number": 16,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": 21.5,
@@ -1573,7 +1659,8 @@
       "table_index": 0,
       "row_number": 2,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": 22.1,
@@ -1588,7 +1675,8 @@
       "table_index": 0,
       "row_number": 3,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": 22.1,
@@ -1603,7 +1691,8 @@
       "table_index": 0,
       "row_number": 4,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": 22.1,
@@ -1618,7 +1707,8 @@
       "table_index": 0,
       "row_number": 5,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": 22.1,
@@ -1633,7 +1723,8 @@
       "table_index": 0,
       "row_number": 6,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": 22.1,
@@ -1648,7 +1739,8 @@
       "table_index": 0,
       "row_number": 7,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": 22.1,
@@ -1663,7 +1755,8 @@
       "table_index": 0,
       "row_number": 8,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": null,
@@ -1680,7 +1773,8 @@
       "table_index": 0,
       "row_number": 9,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": null,
@@ -1697,7 +1791,8 @@
       "table_index": 0,
       "row_number": 10,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": null,
@@ -1712,7 +1807,8 @@
       "table_index": 0,
       "row_number": 11,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": null,
@@ -1727,7 +1823,8 @@
       "table_index": 0,
       "row_number": 12,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": null,
@@ -1742,7 +1839,8 @@
       "table_index": 0,
       "row_number": 13,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": null,
@@ -1757,7 +1855,8 @@
       "table_index": 0,
       "row_number": 14,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": null,
@@ -1772,7 +1871,8 @@
       "table_index": 0,
       "row_number": 15,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": null,
@@ -1787,7 +1887,8 @@
       "table_index": 0,
       "row_number": 16,
       "column_index": 6,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 6
     },
     {
       "value": null,
@@ -1802,7 +1903,8 @@
       "table_index": 0,
       "row_number": 2,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1817,7 +1919,8 @@
       "table_index": 0,
       "row_number": 3,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1832,7 +1935,8 @@
       "table_index": 0,
       "row_number": 4,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1847,7 +1951,8 @@
       "table_index": 0,
       "row_number": 5,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1862,7 +1967,8 @@
       "table_index": 0,
       "row_number": 6,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1877,7 +1983,8 @@
       "table_index": 0,
       "row_number": 7,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1892,7 +1999,8 @@
       "table_index": 0,
       "row_number": 8,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1907,7 +2015,8 @@
       "table_index": 0,
       "row_number": 9,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1922,7 +2031,8 @@
       "table_index": 0,
       "row_number": 10,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1937,7 +2047,8 @@
       "table_index": 0,
       "row_number": 11,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1952,7 +2063,8 @@
       "table_index": 0,
       "row_number": 12,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1967,7 +2079,8 @@
       "table_index": 0,
       "row_number": 13,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1982,7 +2095,8 @@
       "table_index": 0,
       "row_number": 14,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -1997,7 +2111,8 @@
       "table_index": 0,
       "row_number": 15,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -2012,7 +2127,8 @@
       "table_index": 0,
       "row_number": 16,
       "column_index": 7,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 7
     },
     {
       "value": null,
@@ -2027,7 +2143,8 @@
       "table_index": 0,
       "row_number": 2,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2042,7 +2159,8 @@
       "table_index": 0,
       "row_number": 3,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2057,7 +2175,8 @@
       "table_index": 0,
       "row_number": 4,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2072,7 +2191,8 @@
       "table_index": 0,
       "row_number": 5,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2087,7 +2207,8 @@
       "table_index": 0,
       "row_number": 6,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2102,7 +2223,8 @@
       "table_index": 0,
       "row_number": 7,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2117,7 +2239,8 @@
       "table_index": 0,
       "row_number": 8,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2132,7 +2255,8 @@
       "table_index": 0,
       "row_number": 9,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2147,7 +2271,8 @@
       "table_index": 0,
       "row_number": 10,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2162,7 +2287,8 @@
       "table_index": 0,
       "row_number": 11,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2177,7 +2303,8 @@
       "table_index": 0,
       "row_number": 12,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2192,7 +2319,8 @@
       "table_index": 0,
       "row_number": 13,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2207,7 +2335,8 @@
       "table_index": 0,
       "row_number": 14,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2222,7 +2351,8 @@
       "table_index": 0,
       "row_number": 15,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2237,7 +2367,8 @@
       "table_index": 0,
       "row_number": 16,
       "column_index": 8,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 8
     },
     {
       "value": null,
@@ -2252,7 +2383,8 @@
       "table_index": 0,
       "row_number": 2,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2267,7 +2399,8 @@
       "table_index": 0,
       "row_number": 3,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2282,7 +2415,8 @@
       "table_index": 0,
       "row_number": 4,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2297,7 +2431,8 @@
       "table_index": 0,
       "row_number": 5,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2312,7 +2447,8 @@
       "table_index": 0,
       "row_number": 6,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2327,7 +2463,8 @@
       "table_index": 0,
       "row_number": 7,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2342,7 +2479,8 @@
       "table_index": 0,
       "row_number": 8,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2357,7 +2495,8 @@
       "table_index": 0,
       "row_number": 9,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2372,7 +2511,8 @@
       "table_index": 0,
       "row_number": 10,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2387,7 +2527,8 @@
       "table_index": 0,
       "row_number": 11,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2402,7 +2543,8 @@
       "table_index": 0,
       "row_number": 12,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2417,7 +2559,8 @@
       "table_index": 0,
       "row_number": 13,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2432,7 +2575,8 @@
       "table_index": 0,
       "row_number": 14,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2447,7 +2591,8 @@
       "table_index": 0,
       "row_number": 15,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     },
     {
       "value": null,
@@ -2462,7 +2607,8 @@
       "table_index": 0,
       "row_number": 16,
       "column_index": 9,
-      "evidence_kind": "reported_result"
+      "evidence_kind": "reported_result",
+      "source_column_index": 9
     }
   ],
   "provenance": {

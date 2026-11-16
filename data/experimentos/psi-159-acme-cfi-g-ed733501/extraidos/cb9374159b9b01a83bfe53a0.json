@@ -1,0 +1,69 @@
+{
+  "status": "processado",
+  "text": "Source Name\tSample Name\nDo not use this\tDo not use this\n",
+  "pages": [],
+  "tables": [],
+  "metadata": {
+    "encoding": "utf-8-sig",
+    "placeholder": true,
+    "evidence_kind": "metadata",
+    "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample."
+  },
+  "warnings": [
+    "Arquivo de amostras ISA-Tab vazio (placeholder 'Do not use this'); não contém dados."
+  ],
+  "schema_version": 4,
+  "source_filename": "s_PSI-159.txt",
+  "source_extension": ".txt",
+  "document": {
+    "name": "s_PSI-159.txt",
+    "extension": ".txt",
+    "sha256": "cb9374159b9b01a83bfe53a0b8ba1a602793df86f298e0ad222615c55d200135",
+    "size_bytes": 56
+  },
+  "evidence_kind": "metadata",
+  "observations": [],
+  "provenance": {
+    "study_id": "PSI-159",
+    "source": "NASA Physical Sciences Informatics",
+    "filename": "metadata/s_PSI-159.txt",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-159/download?file=PSI-159_metadata_PSI-159-ISA.zip&version=1&redirect=false",
+    "doi": "10.60555/cyt1-kh64",
+    "sha256": "cb9374159b9b01a83bfe53a0b8ba1a602793df86f298e0ad222615c55d200135",
+    "size_bytes": 56,
+    "study_version": 1,
+    "file_version": 1,
+    "verified_utc": "2026-11-15T23:49:17.433579+00:00",
+    "retrieved_utc": "2026-11-15T23:49:17.433579+00:00",
+    "verification": "byte_identical_to_nasa_download",
+    "archive_member": "exeperiencias/PSI-159/metadados/PSI-159_metadata_PSI-159-ISA (1).zip",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 8404,
+      "directory": false,
+      "files": [],
+      "id": "691f7ea117f78b371b26f6f7",
+      "key": "psi-data/PSI-159/metadata/PSI-159_metadata_PSI-159-ISA.zip",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "8.21 KB",
+      "sortingCategory": "Investigation Metadata Files",
+      "status": "active",
+      "subcategory": null,
+      "updated": "Fri, 21 Nov 2025 04:48:33 GMT",
+      "version": 1,
+      "visible": true
+    },
+    "license": "No file-specific license exposed; retain NASA and author attribution.",
+    "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+    "classification": "metadata",
+    "media_type": "text/plain",
+    "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample.",
+    "parent_archive_sha256": "0ef60d1ee8d4d53bbe58139d56fa99e9500ca48dd7913b25ac85dc853d6710ab",
+    "parent_archive_filename": "PSI-159_metadata_PSI-159-ISA.zip",
+    "nested_member": "s_PSI-159.txt"
+  }
+}

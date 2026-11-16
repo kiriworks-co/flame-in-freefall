@@ -1,0 +1,2016 @@
+{
+  "id": "9fa7a5567ef34ebcb98d7846b01515c1",
+  "folder": "psi-117-cool-flame-dynamics-cfd-flex-comparison-9fa7a556",
+  "name": "PSI-117 · Cool Flame Dynamics (CFD / FLEX comparison)",
+  "description": "The objective of this ground investigation was to use flight data obtained from PSI through NASA’s Flame Extinguishment Experiment (FLEX) to quantify how externally imposed thermal and convective perturbations regulated the dynamics and ultimate fate of already established droplet cool flames, and to explain run-to-run variability by isolating the roles of deliberate heating and unintentional drift-induced convection. Focusing on both small and large droplets, the work mapped stability windows for ignition, sustained oscillation, transitions to hot ignition and warm-flame behavior, and extinction under microgravity. By leveraging and extending the FLEX data in the PSI, this study produced reusable models and sensitivity analyses that coupled low-temperature chemistry with transport and radiative effects.",
+  "created_at": "2026-11-15T23:50:36+00:00",
+  "updated_at": "2026-11-15T23:57:51+00:00",
+  "documents": [
+    {
+      "id": "81e6b16c355bc64a226cf638f51156758c6a259ed10bc372c1612a0984cc7bc9",
+      "name": "PSI-117_Analyzed Data_MST_2024_Burning_history_Flame_diameter.csv",
+      "extension": ".csv",
+      "size_bytes": 44107,
+      "sha256": "81e6b16c355bc64a226cf638f51156758c6a259ed10bc372c1612a0984cc7bc9",
+      "uploaded_at": "2026-11-15T23:50:36+00:00",
+      "status": "processado",
+      "original_path": "originais/81e6b16c355bc64a226cf638.csv",
+      "extraction_path": "extraidos/81e6b16c355bc64a226cf638.json",
+      "warnings": [],
+      "table_count": 5,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Analyzed Data_MST_2024_Burning_history_Flame_diameter.csv",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_MST_2024_Burning_history_Flame_diameter.csv&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "81e6b16c355bc64a226cf638f51156758c6a259ed10bc372c1612a0984cc7bc9",
+        "size_bytes": 44107,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:40.098041+00:00",
+        "retrieved_utc": "2026-11-15T23:48:40.098041+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_Analyzed Data_MST_2024_Burning_history_Flame_diameter.csv",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 44107,
+          "directory": false,
+          "files": [],
+          "id": "6a28273bd9d7246402cb43e9",
+          "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_MST_2024_Burning_history_Flame_diameter.csv",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "43.07 KB",
+          "sortingCategory": "Analyzed Data",
+          "status": "active",
+          "subcategory": "Reduced Gravity/Simulation/MST",
+          "updated": "Tue, 09 Jun 2026 22:46:19 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "mixed_experiment_and_simulation",
+        "media_type": "text/csv",
+        "field_classification": [
+          {
+            "header": "",
+            "column_index": 0,
+            "role": "reported_result",
+            "source_marker": "EXP"
+          },
+          {
+            "header": "t",
+            "column_index": 1,
+            "role": "reported_result",
+            "source_marker": "0.043245302 | 6.383443001 | 7.01754212"
+          },
+          {
+            "header": "d^2 (mm^2)",
+            "column_index": 2,
+            "role": "reported_result",
+            "source_marker": "16.2372052 | 14.94100647 | 14.76397895"
+          },
+          {
+            "header": "",
+            "column_index": 3,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "t",
+            "column_index": 4,
+            "role": "reported_result",
+            "source_marker": "0.035489614 | 0.80130089 | 1.400147181"
+          },
+          {
+            "header": "dflame (mm)",
+            "column_index": 5,
+            "role": "reported_result",
+            "source_marker": "12.77822469 | 14.44360728 | 19.14021561"
+          },
+          {
+            "header": "",
+            "column_index": 6,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "time ",
+            "column_index": 7,
+            "role": "reported_result",
+            "source_marker": "0.203228798 | 0.70994834 | 1.44929002"
+          },
+          {
+            "header": "Q (W)",
+            "column_index": 8,
+            "role": "reported_result",
+            "source_marker": "13.95494714 | 15.05114539 | 16.40967011"
+          },
+          {
+            "header": "time ",
+            "column_index": 9,
+            "role": "reported_result",
+            "source_marker": "0.4063494 | 0.823049585 | 1.523945497"
+          },
+          {
+            "header": "Q (W)",
+            "column_index": 10,
+            "role": "reported_result",
+            "source_marker": "2.743933661 | 3.423753315 | 3.899284736"
+          },
+          {
+            "header": "",
+            "column_index": 11,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "Model",
+            "column_index": 12,
+            "role": "simulation",
+            "source_marker": "1 atm | do 4 mm | 1 atm"
+          },
+          {
+            "header": "t",
+            "column_index": 13,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 1E-10"
+          },
+          {
+            "header": "d^2 (mm^2)",
+            "column_index": 14,
+            "role": "simulation",
+            "source_marker": "16 | 16 | 16"
+          },
+          {
+            "header": "dflame (mm)",
+            "column_index": 15,
+            "role": "simulation",
+            "source_marker": "79.7148801 | 79.7148801 | 79.7148801"
+          },
+          {
+            "header": "",
+            "column_index": 16,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "Model",
+            "column_index": 17,
+            "role": "simulation",
+            "source_marker": "1 atm | do 4mm | Radiance"
+          },
+          {
+            "header": "t",
+            "column_index": 18,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 1E-10"
+          },
+          {
+            "header": "Q (W)",
+            "column_index": 19,
+            "role": "simulation",
+            "source_marker": "5.68291E-05 | 5.68291E-05 | 5.68291E-05"
+          }
+        ],
+        "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+      },
+      "evidence_kind": "mixed_experiment_and_simulation"
+    },
+    {
+      "id": "2ed485fec6fad15c1409cd9b5c558ecf7bee262df29c832e9a54f3befc9c2e46",
+      "name": "PSI-117_Analyzed Data_MST_2024_Dext.csv",
+      "extension": ".csv",
+      "size_bytes": 372,
+      "sha256": "2ed485fec6fad15c1409cd9b5c558ecf7bee262df29c832e9a54f3befc9c2e46",
+      "uploaded_at": "2026-11-15T23:50:36+00:00",
+      "status": "processado",
+      "original_path": "originais/2ed485fec6fad15c1409cd9b.csv",
+      "extraction_path": "extraidos/2ed485fec6fad15c1409cd9b.json",
+      "warnings": [],
+      "table_count": 2,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Analyzed Data_MST_2024_Dext.csv",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_MST_2024_Dext.csv&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "2ed485fec6fad15c1409cd9b5c558ecf7bee262df29c832e9a54f3befc9c2e46",
+        "size_bytes": 372,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:42.166256+00:00",
+        "retrieved_utc": "2026-11-15T23:48:42.166256+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_Analyzed Data_MST_2024_Dext.csv",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 372,
+          "directory": false,
+          "files": [],
+          "id": "6a28273bd9d7246402cb43eb",
+          "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_MST_2024_Dext.csv",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "372.0 B",
+          "sortingCategory": "Analyzed Data",
+          "status": "active",
+          "subcategory": "Reduced Gravity/Simulation/MST",
+          "updated": "Tue, 09 Jun 2026 22:46:19 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "mixed_experiment_and_simulation",
+        "media_type": "text/csv",
+        "field_classification": [
+          {
+            "header": "Model",
+            "column_index": 0,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "Pressure",
+            "column_index": 1,
+            "role": "simulation",
+            "source_marker": "0.5 | 0.75 | 1"
+          },
+          {
+            "header": "Dext_cool",
+            "column_index": 2,
+            "role": "simulation",
+            "source_marker": "1.197278912 | 0.414965986 | 0.27"
+          },
+          {
+            "header": "Dext_hot",
+            "column_index": 3,
+            "role": "simulation",
+            "source_marker": "3.442176871 | 3.68707483 | 3.72139"
+          },
+          {
+            "header": "",
+            "column_index": 4,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "Expt",
+            "column_index": 5,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "Pressure",
+            "column_index": 6,
+            "role": "reported_result",
+            "source_marker": "0.5 | 0.5 | 0.5"
+          },
+          {
+            "header": "Dext_cool_Expt",
+            "column_index": 7,
+            "role": "reported_result",
+            "source_marker": "1.947105678 | 1.815514531 | 1.753104633"
+          }
+        ],
+        "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+      },
+      "evidence_kind": "mixed_experiment_and_simulation"
+    },
+    {
+      "id": "a89e0639567f05f19a6d0dffa9b2f659048358dee1c603b6c65bfcebd1101796",
+      "name": "PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+      "extension": ".csv",
+      "size_bytes": 518,
+      "sha256": "a89e0639567f05f19a6d0dffa9b2f659048358dee1c603b6c65bfcebd1101796",
+      "uploaded_at": "2026-11-15T23:50:36+00:00",
+      "status": "processado",
+      "original_path": "originais/a89e0639567f05f19a6d0dff.csv",
+      "extraction_path": "extraidos/a89e0639567f05f19a6d0dff.json",
+      "warnings": [],
+      "table_count": 2,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_MST_2024_Kavg.csv&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "a89e0639567f05f19a6d0dffa9b2f659048358dee1c603b6c65bfcebd1101796",
+        "size_bytes": 518,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:44.201303+00:00",
+        "retrieved_utc": "2026-11-15T23:48:44.201303+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 518,
+          "directory": false,
+          "files": [],
+          "id": "6a28273bd9d7246402cb43ea",
+          "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "518.0 B",
+          "sortingCategory": "Analyzed Data",
+          "status": "active",
+          "subcategory": "Reduced Gravity/Simulation/MST",
+          "updated": "Tue, 09 Jun 2026 22:46:19 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "mixed_experiment_and_simulation",
+        "media_type": "text/csv",
+        "field_classification": [
+          {
+            "header": "Experiment",
+            "column_index": 0,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "Pressure",
+            "column_index": 1,
+            "role": "reported_result",
+            "source_marker": "0.5 | 0.5 | 0.5"
+          },
+          {
+            "header": "Kavg_CF",
+            "column_index": 2,
+            "role": "reported_result",
+            "source_marker": "0.315175121 | 0.315175121 | 0.329710005"
+          },
+          {
+            "header": "",
+            "column_index": 3,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "Model",
+            "column_index": 4,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "Pressure",
+            "column_index": 5,
+            "role": "simulation",
+            "source_marker": "5 | 3 | 1.25"
+          },
+          {
+            "header": "kb (mm2/s)",
+            "column_index": 6,
+            "role": "simulation",
+            "source_marker": "0.5012 | 0.48689 | 0.471387695"
+          }
+        ],
+        "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+      },
+      "evidence_kind": "mixed_experiment_and_simulation"
+    },
+    {
+      "id": "277998f5c80c08907f2c05e362e7a13a507ce4ebc967418ca883db2811a84d0d",
+      "name": "PSI-117_Analyzed Data_MST_2024_Radiance_Flame_Diameter.csv",
+      "extension": ".csv",
+      "size_bytes": 82277,
+      "sha256": "277998f5c80c08907f2c05e362e7a13a507ce4ebc967418ca883db2811a84d0d",
+      "uploaded_at": "2026-11-15T23:50:36+00:00",
+      "status": "processado",
+      "original_path": "originais/277998f5c80c08907f2c05e3.csv",
+      "extraction_path": "extraidos/277998f5c80c08907f2c05e3.json",
+      "warnings": [],
+      "table_count": 8,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Analyzed Data_MST_2024_Radiance_Flame_Diameter.csv",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_MST_2024_Radiance_Flame_Diameter.csv&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "277998f5c80c08907f2c05e362e7a13a507ce4ebc967418ca883db2811a84d0d",
+        "size_bytes": 82277,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:46.721120+00:00",
+        "retrieved_utc": "2026-11-15T23:48:46.721120+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_Analyzed Data_MST_2024_Radiance_Flame_Diameter.csv",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 82277,
+          "directory": false,
+          "files": [],
+          "id": "6a28273bd9d7246402cb43ec",
+          "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_MST_2024_Radiance_Flame_Diameter.csv",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "80.35 KB",
+          "sortingCategory": "Analyzed Data",
+          "status": "active",
+          "subcategory": "Reduced Gravity/Simulation/MST",
+          "updated": "Tue, 09 Jun 2026 22:46:19 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "mixed_experiment_and_simulation",
+        "media_type": "text/csv",
+        "field_classification": [
+          {
+            "header": "",
+            "column_index": 0,
+            "role": "reported_result",
+            "source_marker": "0.5 atm | do 4.46 mm"
+          },
+          {
+            "header": "time ",
+            "column_index": 1,
+            "role": "reported_result",
+            "source_marker": "0 | 0.981518423 | 1.985993959"
+          },
+          {
+            "header": "Radiance (W)",
+            "column_index": 2,
+            "role": "reported_result",
+            "source_marker": "17.13271608 | 20.2458781 | 22.49545533"
+          },
+          {
+            "header": "time",
+            "column_index": 3,
+            "role": "reported_result",
+            "source_marker": "0.041884817 | 0.376963351 | 0.712041885"
+          },
+          {
+            "header": "df (mm)",
+            "column_index": 4,
+            "role": "reported_result",
+            "source_marker": "22.18673219 | 23.21867322 | 23.3046683"
+          },
+          {
+            "header": "",
+            "column_index": 5,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "",
+            "column_index": 6,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "",
+            "column_index": 7,
+            "role": "reported_result",
+            "source_marker": "5 atm | do 4.48 mm"
+          },
+          {
+            "header": "time ",
+            "column_index": 8,
+            "role": "reported_result",
+            "source_marker": "0.031897725 | 0.994070514 | 2.039857842"
+          },
+          {
+            "header": "Radiance (W)",
+            "column_index": 9,
+            "role": "reported_result",
+            "source_marker": "7.897883638 | 10.40617403 | 13.17385685"
+          },
+          {
+            "header": "time",
+            "column_index": 10,
+            "role": "reported_result",
+            "source_marker": "0.083769634 | 0.335078534 | 0.544502618"
+          },
+          {
+            "header": "df (mm)",
+            "column_index": 11,
+            "role": "reported_result",
+            "source_marker": "7.997542998 | 7.30958231 | 6.965601966"
+          },
+          {
+            "header": "",
+            "column_index": 12,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "",
+            "column_index": 13,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "Simulation",
+            "column_index": 14,
+            "role": "simulation",
+            "source_marker": "Radiance"
+          },
+          {
+            "header": "",
+            "column_index": 15,
+            "role": "simulation",
+            "source_marker": "0.5 atm"
+          },
+          {
+            "header": "time (s)",
+            "column_index": 16,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 1E-10"
+          },
+          {
+            "header": "Q(W)",
+            "column_index": 17,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 0.47023868"
+          },
+          {
+            "header": "",
+            "column_index": 18,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "Simulation",
+            "column_index": 19,
+            "role": "simulation",
+            "source_marker": "Radiance 5 atm"
+          },
+          {
+            "header": "time (s)",
+            "column_index": 20,
+            "role": "simulation",
+            "source_marker": "0 | 2.75E-10 | 8.25E-10"
+          },
+          {
+            "header": "Q (W)",
+            "column_index": 21,
+            "role": "simulation",
+            "source_marker": "8.93155E-07 | 8.93155E-07 | 8.93155E-07"
+          },
+          {
+            "header": "",
+            "column_index": 22,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "",
+            "column_index": 23,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "Simulation",
+            "column_index": 24,
+            "role": "simulation",
+            "source_marker": "Flame Diameter 0.5 atm"
+          },
+          {
+            "header": "Time(sec)",
+            "column_index": 25,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 1E-10"
+          },
+          {
+            "header": "Dflame (mm)",
+            "column_index": 26,
+            "role": "simulation",
+            "source_marker": "100.34775 | 100.34775 | 100.34775"
+          },
+          {
+            "header": "",
+            "column_index": 27,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "Simulation ",
+            "column_index": 28,
+            "role": "simulation",
+            "source_marker": "Flame Diameter 5 atm"
+          },
+          {
+            "header": "Time(sec)",
+            "column_index": 29,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 1E-10"
+          },
+          {
+            "header": "Dflame (mm)",
+            "column_index": 30,
+            "role": "simulation",
+            "source_marker": "100.34775 | 100.34775 | 100.34775"
+          },
+          {
+            "header": "",
+            "column_index": 31,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "",
+            "column_index": 32,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "Simulation",
+            "column_index": 33,
+            "role": "simulation",
+            "source_marker": "Tmax 0.5 atm"
+          },
+          {
+            "header": "Time(sec)",
+            "column_index": 34,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 1E-10"
+          },
+          {
+            "header": "T_max(K)",
+            "column_index": 35,
+            "role": "simulation",
+            "source_marker": "2400 | 2400 | 2400"
+          },
+          {
+            "header": "",
+            "column_index": 36,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "Simulation",
+            "column_index": 37,
+            "role": "simulation",
+            "source_marker": "Tmax 5 atm"
+          },
+          {
+            "header": "Time(sec)",
+            "column_index": 38,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 1E-10"
+          },
+          {
+            "header": "T_max(K)",
+            "column_index": 39,
+            "role": "simulation",
+            "source_marker": "2400 | 2400 | 2400"
+          }
+        ],
+        "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+      },
+      "evidence_kind": "mixed_experiment_and_simulation"
+    },
+    {
+      "id": "5d329362ea8b6ff78cded953b289b95c83c45956ae36d136bfd33750a80a5a11",
+      "name": "PSI-117_Analyzed Data_PROCI_2019_Oscillatory_Cool_Flame.csv",
+      "extension": ".csv",
+      "size_bytes": 37138,
+      "sha256": "5d329362ea8b6ff78cded953b289b95c83c45956ae36d136bfd33750a80a5a11",
+      "uploaded_at": "2026-11-15T23:50:37+00:00",
+      "status": "processado",
+      "original_path": "originais/5d329362ea8b6ff78cded953.csv",
+      "extraction_path": "extraidos/5d329362ea8b6ff78cded953.json",
+      "warnings": [],
+      "table_count": 1,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Analyzed Data_PROCI_2019_Oscillatory_Cool_Flame.csv",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_PROCI_2019_Oscillatory_Cool_Flame.csv&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "5d329362ea8b6ff78cded953b289b95c83c45956ae36d136bfd33750a80a5a11",
+        "size_bytes": 37138,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:49.046221+00:00",
+        "retrieved_utc": "2026-11-15T23:48:49.046221+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_2019_Oscillatory_Cool_Flame.csv",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 37138,
+          "directory": false,
+          "files": [],
+          "id": "6a28273ad9d7246402cb43e5",
+          "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_2019_Oscillatory_Cool_Flame.csv",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "36.27 KB",
+          "sortingCategory": "Analyzed Data",
+          "status": "active",
+          "subcategory": "Reduced Gravity/Simulation/PROC1",
+          "updated": "Tue, 09 Jun 2026 22:46:18 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "simulation",
+        "media_type": "text/csv",
+        "field_classification": [
+          {
+            "header": "Time(sec)",
+            "column_index": 0,
+            "role": "simulation",
+            "source_marker": "0 | 1.00E-10 | 3.00E-10"
+          },
+          {
+            "header": "Diameter(mm)",
+            "column_index": 1,
+            "role": "simulation",
+            "source_marker": "0.5 | 0.5 | 0.5"
+          },
+          {
+            "header": "K(mm^2/sec)",
+            "column_index": 2,
+            "role": "simulation",
+            "source_marker": "-3.21E-02 | -3.21E-02 | -3.21E-02"
+          },
+          {
+            "header": "T_max(K)",
+            "column_index": 3,
+            "role": "simulation",
+            "source_marker": "600 | 600 | 600"
+          },
+          {
+            "header": "D_Tmax/D_drop",
+            "column_index": 4,
+            "role": "simulation",
+            "source_marker": "20.2494 | 20.2494 | 20.2494"
+          },
+          {
+            "header": "D_OHm/D_drop",
+            "column_index": 5,
+            "role": "simulation",
+            "source_marker": "1 | 6.96652 | 6.96669"
+          },
+          {
+            "header": "(D/Do)2",
+            "column_index": 6,
+            "role": "simulation",
+            "source_marker": "1 | 1 | 1"
+          }
+        ],
+        "classification_note": "CFD model trajectories, not flight measurements."
+      },
+      "evidence_kind": "simulation"
+    },
+    {
+      "id": "c0713c4ad79d1d20832d5ab9582d1bef6d184cff1a86bc3565d059f44998ed6f",
+      "name": "PSI-117_Analyzed Data_PROCI_2019_Stable_Cool.csv",
+      "extension": ".csv",
+      "size_bytes": 15477,
+      "sha256": "c0713c4ad79d1d20832d5ab9582d1bef6d184cff1a86bc3565d059f44998ed6f",
+      "uploaded_at": "2026-11-15T23:50:38+00:00",
+      "status": "processado",
+      "original_path": "originais/c0713c4ad79d1d20832d5ab9.csv",
+      "extraction_path": "extraidos/c0713c4ad79d1d20832d5ab9.json",
+      "warnings": [],
+      "table_count": 1,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Analyzed Data_PROCI_2019_Stable_Cool.csv",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_PROCI_2019_Stable_Cool.csv&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "c0713c4ad79d1d20832d5ab9582d1bef6d184cff1a86bc3565d059f44998ed6f",
+        "size_bytes": 15477,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:51.113156+00:00",
+        "retrieved_utc": "2026-11-15T23:48:51.113156+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_2019_Stable_Cool.csv",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 15477,
+          "directory": false,
+          "files": [],
+          "id": "6a28273ad9d7246402cb43e7",
+          "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_2019_Stable_Cool.csv",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "15.11 KB",
+          "sortingCategory": "Analyzed Data",
+          "status": "active",
+          "subcategory": "Reduced Gravity/Simulation/PROC1",
+          "updated": "Tue, 09 Jun 2026 22:46:18 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "simulation",
+        "media_type": "text/csv",
+        "field_classification": [
+          {
+            "header": "Time(sec)",
+            "column_index": 0,
+            "role": "simulation",
+            "source_marker": "0 | 1E-10 | 3E-10"
+          },
+          {
+            "header": "Diameter(mm)",
+            "column_index": 1,
+            "role": "simulation",
+            "source_marker": "0.5 | 0.5 | 0.5"
+          },
+          {
+            "header": "K(mm^2/sec)",
+            "column_index": 2,
+            "role": "simulation",
+            "source_marker": "-0.0325791 | -0.032579 | -0.032579"
+          },
+          {
+            "header": "T_max(K)",
+            "column_index": 3,
+            "role": "simulation",
+            "source_marker": "600 | 600 | 600"
+          },
+          {
+            "header": "D_Tmax/D_drop",
+            "column_index": 4,
+            "role": "simulation",
+            "source_marker": "20.0398 | 20.0398 | 20.0398"
+          },
+          {
+            "header": "D_OHm/D_drop",
+            "column_index": 5,
+            "role": "simulation",
+            "source_marker": "1 | 6.92455 | 6.92473"
+          },
+          {
+            "header": "(D/Do)2",
+            "column_index": 6,
+            "role": "simulation",
+            "source_marker": "1 | 1 | 1"
+          }
+        ],
+        "classification_note": "CFD model trajectories, not flight measurements."
+      },
+      "evidence_kind": "simulation"
+    },
+    {
+      "id": "2b3c8edcfbba8916da95d1e13200310b5a30fa2e62dc8d77145a6ac3c206deb3",
+      "name": "PSI-117_Analyzed Data_PROCI_2023_Alkane_Extinction_Diameter_1atm.csv",
+      "extension": ".csv",
+      "size_bytes": 745,
+      "sha256": "2b3c8edcfbba8916da95d1e13200310b5a30fa2e62dc8d77145a6ac3c206deb3",
+      "uploaded_at": "2026-11-15T23:50:38+00:00",
+      "status": "processado",
+      "original_path": "originais/2b3c8edcfbba8916da95d1e1.csv",
+      "extraction_path": "extraidos/2b3c8edcfbba8916da95d1e1.json",
+      "warnings": [],
+      "table_count": 6,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Analyzed Data_PROCI_2023_Alkane_Extinction_Diameter_1atm.csv",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_PROCI_2023_Alkane_Extinction_Diameter_1atm.csv&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "2b3c8edcfbba8916da95d1e13200310b5a30fa2e62dc8d77145a6ac3c206deb3",
+        "size_bytes": 745,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:53.221856+00:00",
+        "retrieved_utc": "2026-11-15T23:48:53.221856+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_2023_Alkane_Extinction_Diameter_1atm.csv",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 745,
+          "directory": false,
+          "files": [],
+          "id": "6a28273ad9d7246402cb43e4",
+          "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_2023_Alkane_Extinction_Diameter_1atm.csv",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "745.0 B",
+          "sortingCategory": "Analyzed Data",
+          "status": "active",
+          "subcategory": "Reduced Gravity/Simulation/PROC1",
+          "updated": "Tue, 09 Jun 2026 22:46:18 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "mixed_experiment_and_simulation",
+        "media_type": "text/csv",
+        "field_classification": [
+          {
+            "header": "C7",
+            "column_index": 0,
+            "role": "reported_result",
+            "source_marker": "Expt"
+          },
+          {
+            "header": "Do",
+            "column_index": 1,
+            "role": "reported_result",
+            "source_marker": "3.91 | 3.557 | 3.61"
+          },
+          {
+            "header": "Dext_HF",
+            "column_index": 2,
+            "role": "reported_result",
+            "source_marker": "3.28 | 2.794 | 2.838"
+          },
+          {
+            "header": "Dext_CF",
+            "column_index": 3,
+            "role": "reported_result",
+            "source_marker": "1.3 | 1.214 | 1.146"
+          },
+          {
+            "header": "",
+            "column_index": 4,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "C7",
+            "column_index": 5,
+            "role": "simulation",
+            "source_marker": "Sim"
+          },
+          {
+            "header": "Do",
+            "column_index": 6,
+            "role": "simulation",
+            "source_marker": "2 | 3 | 4"
+          },
+          {
+            "header": "Dext_HF",
+            "column_index": 7,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 3.57624"
+          },
+          {
+            "header": "Dext_CF",
+            "column_index": 8,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 0.95"
+          },
+          {
+            "header": "",
+            "column_index": 9,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "C10",
+            "column_index": 10,
+            "role": "reported_result",
+            "source_marker": "Expt"
+          },
+          {
+            "header": "Do",
+            "column_index": 11,
+            "role": "reported_result",
+            "source_marker": "4.381 | 3.925 | 3.763"
+          },
+          {
+            "header": "Dext_HF",
+            "column_index": 12,
+            "role": "reported_result",
+            "source_marker": "3.963 | 3.37 | 3.031"
+          },
+          {
+            "header": "Dext_CF",
+            "column_index": 13,
+            "role": "reported_result",
+            "source_marker": "1.317 | 1.042 | 1.11"
+          },
+          {
+            "header": "",
+            "column_index": 14,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "C10",
+            "column_index": 15,
+            "role": "simulation",
+            "source_marker": "Sim"
+          },
+          {
+            "header": "Do",
+            "column_index": 16,
+            "role": "simulation",
+            "source_marker": "2 | 3 | 4"
+          },
+          {
+            "header": "Dext_HF",
+            "column_index": 17,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 3.41"
+          },
+          {
+            "header": "Dext_CF",
+            "column_index": 18,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 0.43"
+          },
+          {
+            "header": "",
+            "column_index": 19,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "C12",
+            "column_index": 20,
+            "role": "reported_result",
+            "source_marker": "Expt"
+          },
+          {
+            "header": "Do",
+            "column_index": 21,
+            "role": "reported_result",
+            "source_marker": "4.408 | 4.042 | 4.137"
+          },
+          {
+            "header": "Dext_HF",
+            "column_index": 22,
+            "role": "reported_result",
+            "source_marker": "4.059 | 3.554 | 3.571"
+          },
+          {
+            "header": "Dext_CF",
+            "column_index": 23,
+            "role": "reported_result",
+            "source_marker": "0 | 0.4 | 0"
+          },
+          {
+            "header": "",
+            "column_index": 24,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "C12",
+            "column_index": 25,
+            "role": "simulation",
+            "source_marker": "Sim"
+          },
+          {
+            "header": "Do",
+            "column_index": 26,
+            "role": "simulation",
+            "source_marker": "4.408 | 4.042 | 4.137"
+          },
+          {
+            "header": "Dext_HF",
+            "column_index": 27,
+            "role": "simulation",
+            "source_marker": "4.197 | 3.69589 | 3.8303"
+          },
+          {
+            "header": "Dext_CF",
+            "column_index": 28,
+            "role": "simulation",
+            "source_marker": "0.22316 | 0.226994 | 0.2888"
+          }
+        ],
+        "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+      },
+      "evidence_kind": "mixed_experiment_and_simulation"
+    },
+    {
+      "id": "4ab6f8c19f40a3349096eab8bdceb0a62611020af15e63f816922b149cfa7001",
+      "name": "PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+      "extension": ".csv",
+      "size_bytes": 449,
+      "sha256": "4ab6f8c19f40a3349096eab8bdceb0a62611020af15e63f816922b149cfa7001",
+      "uploaded_at": "2026-11-15T23:50:39+00:00",
+      "status": "processado",
+      "original_path": "originais/4ab6f8c19f40a3349096eab8.csv",
+      "extraction_path": "extraidos/4ab6f8c19f40a3349096eab8.json",
+      "warnings": [],
+      "table_count": 6,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "4ab6f8c19f40a3349096eab8bdceb0a62611020af15e63f816922b149cfa7001",
+        "size_bytes": 449,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:55.266541+00:00",
+        "retrieved_utc": "2026-11-15T23:48:55.266541+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 449,
+          "directory": false,
+          "files": [],
+          "id": "6a28273ad9d7246402cb43e6",
+          "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "449.0 B",
+          "sortingCategory": "Analyzed Data",
+          "status": "active",
+          "subcategory": "Reduced Gravity/Simulation/PROC1",
+          "updated": "Tue, 09 Jun 2026 22:46:18 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "mixed_experiment_and_simulation",
+        "media_type": "text/csv",
+        "field_classification": [
+          {
+            "header": "P (atm)",
+            "column_index": 0,
+            "role": "reported_result",
+            "source_marker": "0.5 | 0.75 | 1"
+          },
+          {
+            "header": "Dext_HF_EXPT",
+            "column_index": 1,
+            "role": "reported_result",
+            "source_marker": "3.48 | 3.57 | 3.56"
+          },
+          {
+            "header": "",
+            "column_index": 2,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "P (atm)",
+            "column_index": 3,
+            "role": "simulation",
+            "source_marker": "0.5 | 0.75 | 1"
+          },
+          {
+            "header": "Dext_HF_model",
+            "column_index": 4,
+            "role": "simulation",
+            "source_marker": "3.43 | 3.69 | 3.68"
+          },
+          {
+            "header": "",
+            "column_index": 5,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "P (atm)",
+            "column_index": 6,
+            "role": "reported_result",
+            "source_marker": "0.5 | 0.75 | 1"
+          },
+          {
+            "header": "Dext_CF_EXPT",
+            "column_index": 7,
+            "role": "reported_result",
+            "source_marker": "1.89 | 0.49 | 0.39"
+          },
+          {
+            "header": "",
+            "column_index": 8,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "P (atm)",
+            "column_index": 9,
+            "role": "simulation",
+            "source_marker": "0.5 | 0.75 | 1"
+          },
+          {
+            "header": "Dext_CF_Model",
+            "column_index": 10,
+            "role": "simulation",
+            "source_marker": "1.19 | 0.41 | 0.25"
+          },
+          {
+            "header": "",
+            "column_index": 11,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "P (atm)",
+            "column_index": 12,
+            "role": "reported_result",
+            "source_marker": "0.5 | 0.75 | 1"
+          },
+          {
+            "header": "Dext_CF_ErrorBar+",
+            "column_index": 13,
+            "role": "reported_result",
+            "source_marker": "2.29 | 0.81 | 0.67"
+          },
+          {
+            "header": "",
+            "column_index": 14,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "P (atm)",
+            "column_index": 15,
+            "role": "reported_result",
+            "source_marker": "0.5 | 0.75 | 1"
+          },
+          {
+            "header": "Dext_CF_ErrorBar-",
+            "column_index": 16,
+            "role": "reported_result",
+            "source_marker": "0.66 | 0.23 | 0.15"
+          }
+        ],
+        "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+      },
+      "evidence_kind": "mixed_experiment_and_simulation"
+    },
+    {
+      "id": "0e7c8c7e9ea35bd139ba52c9f2118724b8cc9f251d82b9222adf03cb67317809",
+      "name": "PSI-117_Analyzed Data_PROCI_C12_2019_Three_Stage.csv",
+      "extension": ".csv",
+      "size_bytes": 89130,
+      "sha256": "0e7c8c7e9ea35bd139ba52c9f2118724b8cc9f251d82b9222adf03cb67317809",
+      "uploaded_at": "2026-11-15T23:50:39+00:00",
+      "status": "processado",
+      "original_path": "originais/0e7c8c7e9ea35bd139ba52c9.csv",
+      "extraction_path": "extraidos/0e7c8c7e9ea35bd139ba52c9.json",
+      "warnings": [],
+      "table_count": 10,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Analyzed Data_PROCI_C12_2019_Three_Stage.csv",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_PROCI_C12_2019_Three_Stage.csv&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "0e7c8c7e9ea35bd139ba52c9f2118724b8cc9f251d82b9222adf03cb67317809",
+        "size_bytes": 89130,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:58.023505+00:00",
+        "retrieved_utc": "2026-11-15T23:48:58.023505+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/PROC1/PSI-117_Analyzed Data_PROCI_C12_2019_Three_Stage.csv",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 89130,
+          "directory": false,
+          "files": [],
+          "id": "6a28273ad9d7246402cb43e8",
+          "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_C12_2019_Three_Stage.csv",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "87.04 KB",
+          "sortingCategory": "Analyzed Data",
+          "status": "active",
+          "subcategory": "Reduced Gravity/Simulation/PROC1",
+          "updated": "Tue, 09 Jun 2026 22:46:18 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "mixed_experiment_and_simulation",
+        "media_type": "text/csv",
+        "field_classification": [
+          {
+            "header": "",
+            "column_index": 0,
+            "role": "reported_result",
+            "source_marker": "EXPT"
+          },
+          {
+            "header": "t/(Do)2 (s/mm2)",
+            "column_index": 1,
+            "role": "reported_result",
+            "source_marker": "-0.200806 | -0.193548 | -0.18629"
+          },
+          {
+            "header": "(D/Do)2",
+            "column_index": 2,
+            "role": "reported_result",
+            "source_marker": "0.966184 | 0.966184 | 0.968599"
+          },
+          {
+            "header": "",
+            "column_index": 3,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "",
+            "column_index": 4,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "t/(Do)2 (s/mm2)",
+            "column_index": 5,
+            "role": "reported_result",
+            "source_marker": "0.00724638 | 0.00724638 | 0.00724638"
+          },
+          {
+            "header": "Dflame/Dodrop",
+            "column_index": 6,
+            "role": "reported_result",
+            "source_marker": "12.8947 | 13.2632 | 13.4737"
+          },
+          {
+            "header": "",
+            "column_index": 7,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "t/(Do)2 (s/mm2)",
+            "column_index": 8,
+            "role": "reported_result",
+            "source_marker": "0.00241546 | 0.00966184 | 0.0120773"
+          },
+          {
+            "header": "Dflame (mm)",
+            "column_index": 9,
+            "role": "reported_result",
+            "source_marker": "1.57895 | 1.68421 | 1.73684"
+          },
+          {
+            "header": "",
+            "column_index": 10,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "Flame Radiance I",
+            "column_index": 11,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "t/(Do)2",
+            "column_index": 12,
+            "role": "reported_result",
+            "source_marker": "-0.195652 | -0.183575 | -0.176329"
+          },
+          {
+            "header": "Flame Radiance (W)",
+            "column_index": 13,
+            "role": "reported_result",
+            "source_marker": "3.20874 | 3.20874 | 3.20874"
+          },
+          {
+            "header": "",
+            "column_index": 14,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "Flame Radiance II",
+            "column_index": 15,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "t/(Do)2",
+            "column_index": 16,
+            "role": "reported_result",
+            "source_marker": "-0.099839 | -0.0933977 | -0.0901771"
+          },
+          {
+            "header": "Flame Radiance (W)",
+            "column_index": 17,
+            "role": "reported_result",
+            "source_marker": "0.987816 | 1.02482 | 1.02482"
+          },
+          {
+            "header": "",
+            "column_index": 18,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "",
+            "column_index": 19,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "t/(Do)2",
+            "column_index": 20,
+            "role": "reported_result",
+            "source_marker": "0.450886 | 0.457327 | 0.454106"
+          },
+          {
+            "header": "Cool Flame Dia (HWFM)",
+            "column_index": 21,
+            "role": "reported_result",
+            "source_marker": "6.90311 | 7.75087 | 8.84083"
+          },
+          {
+            "header": "",
+            "column_index": 22,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "t/(Do)2",
+            "column_index": 23,
+            "role": "reported_result",
+            "source_marker": "0.444444 | 0.450886 | 0.434783"
+          },
+          {
+            "header": "Cool Flame Dia (peak-peak)",
+            "column_index": 24,
+            "role": "reported_result",
+            "source_marker": "0 | 0 | 19.8616"
+          },
+          {
+            "header": "",
+            "column_index": 25,
+            "role": "reported_result",
+            "source_marker": ""
+          },
+          {
+            "header": "",
+            "column_index": 26,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "Simulations",
+            "column_index": 27,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "t (s)",
+            "column_index": 28,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 1E-10"
+          },
+          {
+            "header": "D (mm)",
+            "column_index": 29,
+            "role": "simulation",
+            "source_marker": "4.5 | 4.5 | 4.5"
+          },
+          {
+            "header": "K(mm^2/sec)",
+            "column_index": 30,
+            "role": "simulation",
+            "source_marker": "-1.01677 | -1.01677 | -1.01677"
+          },
+          {
+            "header": "T_max(K)",
+            "column_index": 31,
+            "role": "simulation",
+            "source_marker": "2100 | 2100 | 2100"
+          },
+          {
+            "header": "D_Tmax/D_drop",
+            "column_index": 32,
+            "role": "simulation",
+            "source_marker": "18.0038 | 18.0038 | 18.0038"
+          },
+          {
+            "header": "D_OHm/D_drop",
+            "column_index": 33,
+            "role": "simulation",
+            "source_marker": "1 | 1 | 8.40946"
+          },
+          {
+            "header": "",
+            "column_index": 34,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "t/do^2 (s/mm2)",
+            "column_index": 35,
+            "role": "simulation",
+            "source_marker": "0 | 0 | 4.93827E-12"
+          },
+          {
+            "header": "(d/do)^2",
+            "column_index": 36,
+            "role": "simulation",
+            "source_marker": "1 | 1 | 1"
+          },
+          {
+            "header": "Dflame(mm)",
+            "column_index": 37,
+            "role": "simulation",
+            "source_marker": "81.0171 | 81.0171 | 81.0171"
+          },
+          {
+            "header": "",
+            "column_index": 38,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "t/do2(s/mm2)",
+            "column_index": 39,
+            "role": "simulation",
+            "source_marker": "0.00240282 | 0.004014099 | 0.006042296"
+          },
+          {
+            "header": "Radiance (W)",
+            "column_index": 40,
+            "role": "simulation",
+            "source_marker": "0.127959053 | 2.175303903 | 3.838771593"
+          },
+          {
+            "header": "",
+            "column_index": 41,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "",
+            "column_index": 42,
+            "role": "simulation",
+            "source_marker": ""
+          },
+          {
+            "header": "",
+            "column_index": 43,
+            "role": "simulation",
+            "source_marker": ""
+          }
+        ],
+        "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+      },
+      "evidence_kind": "mixed_experiment_and_simulation"
+    },
+    {
+      "id": "a84c138d22545ba9f59c4aa336710741dd48cf3c27823124ed04ac8f91a5f4a0",
+      "name": "PSI-117_Analyzed Data_ReadMe_List_of_Data.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 11059,
+      "sha256": "a84c138d22545ba9f59c4aa336710741dd48cf3c27823124ed04ac8f91a5f4a0",
+      "uploaded_at": "2026-11-15T23:50:41+00:00",
+      "status": "processado",
+      "original_path": "originais/a84c138d22545ba9f59c4aa3.xlsx",
+      "extraction_path": "extraidos/a84c138d22545ba9f59c4aa3.json",
+      "warnings": [],
+      "table_count": 4,
+      "page_count": 1,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Analyzed Data_ReadMe_List_of_Data.xlsx",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_ReadMe_List_of_Data.xlsx&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "a84c138d22545ba9f59c4aa336710741dd48cf3c27823124ed04ac8f91a5f4a0",
+        "size_bytes": 11059,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:37.827270+00:00",
+        "retrieved_utc": "2026-11-15T23:48:37.827270+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/data analizado/PSI-117_Analyzed Data_ReadMe_List_of_Data.xlsx",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 11059,
+          "directory": false,
+          "files": [],
+          "id": "6a28273ad9d7246402cb43e3",
+          "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_ReadMe_List_of_Data.xlsx",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "10.8 KB",
+          "sortingCategory": "Analyzed Data",
+          "status": "active",
+          "subcategory": "Reduced Gravity/Simulation",
+          "updated": "Tue, 09 Jun 2026 22:46:18 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "metadata",
+        "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "classification_note": "Published data-file/figure map and conditions. XN2=74/85 and XO3=Balance are retained verbatim; mixed fraction/percent conventions are unresolved."
+      },
+      "evidence_kind": "metadata"
+    },
+    {
+      "id": "f86a1b97fa011cb02c8c52d1e05184840d4f020197cf60462a942654612fb27a",
+      "name": "i_Investigation.txt",
+      "extension": ".txt",
+      "size_bytes": 10088,
+      "sha256": "f86a1b97fa011cb02c8c52d1e05184840d4f020197cf60462a942654612fb27a",
+      "uploaded_at": "2026-11-15T23:50:41+00:00",
+      "status": "processado",
+      "original_path": "originais/f86a1b97fa011cb02c8c52d1.txt",
+      "extraction_path": "extraidos/f86a1b97fa011cb02c8c52d1.json",
+      "warnings": [
+        "Seções ISA sem conteúdo: STUDY FACTORS, STUDY ASSAYS, STUDY PROTOCOLS. Fatores, ensaios e protocolos não estão descritos; as condições devem vir das planilhas e publicações."
+      ],
+      "table_count": 2,
+      "page_count": 26,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "metadata/i_Investigation.txt",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_metadata_NEWID-13_Effect+of+External+T.zip&version=2&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "f86a1b97fa011cb02c8c52d1e05184840d4f020197cf60462a942654612fb27a",
+        "size_bytes": 10088,
+        "study_version": 2,
+        "file_version": 2,
+        "verified_utc": "2026-11-15T23:49:00.107261+00:00",
+        "retrieved_utc": "2026-11-15T23:49:00.107261+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/metadados-117/PSI-117_metadata_NEWID-13_Effect of External T (1).zip",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 10382,
+          "directory": false,
+          "files": [],
+          "id": "6a282739d9d7246402cb43de",
+          "key": "psi-data/PSI-117/metadata/PSI-117_metadata_NEWID-13_Effect of External T.zip",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "10.14 KB",
+          "sortingCategory": "Investigation Metadata Files",
+          "status": "active",
+          "subcategory": null,
+          "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+          "version": 2,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "metadata",
+        "media_type": "text/plain",
+        "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample.",
+        "parent_archive_sha256": "a9698dbe10629c226dc498610d62ab8c5c7f15e2668412e831164ab74df99222",
+        "parent_archive_filename": "PSI-117_metadata_NEWID-13_Effect of External T.zip",
+        "nested_member": "i_Investigation.txt"
+      },
+      "evidence_kind": "metadata"
+    },
+    {
+      "id": "cb9374159b9b01a83bfe53a0b8ba1a602793df86f298e0ad222615c55d200135",
+      "name": "s_PSI-117.txt",
+      "extension": ".txt",
+      "size_bytes": 56,
+      "sha256": "cb9374159b9b01a83bfe53a0b8ba1a602793df86f298e0ad222615c55d200135",
+      "uploaded_at": "2026-11-15T23:50:41+00:00",
+      "status": "processado",
+      "original_path": "originais/cb9374159b9b01a83bfe53a0.txt",
+      "extraction_path": "extraidos/cb9374159b9b01a83bfe53a0.json",
+      "warnings": [
+        "Arquivo de amostras ISA-Tab vazio (placeholder 'Do not use this'); não contém dados."
+      ],
+      "table_count": 0,
+      "page_count": 0,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "metadata/s_PSI-117.txt",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_metadata_NEWID-13_Effect+of+External+T.zip&version=2&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "cb9374159b9b01a83bfe53a0b8ba1a602793df86f298e0ad222615c55d200135",
+        "size_bytes": 56,
+        "study_version": 2,
+        "file_version": 2,
+        "verified_utc": "2026-11-15T23:49:00.107261+00:00",
+        "retrieved_utc": "2026-11-15T23:49:00.107261+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/metadados-117/PSI-117_metadata_NEWID-13_Effect of External T (1).zip",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 10382,
+          "directory": false,
+          "files": [],
+          "id": "6a282739d9d7246402cb43de",
+          "key": "psi-data/PSI-117/metadata/PSI-117_metadata_NEWID-13_Effect of External T.zip",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "10.14 KB",
+          "sortingCategory": "Investigation Metadata Files",
+          "status": "active",
+          "subcategory": null,
+          "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+          "version": 2,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "metadata",
+        "media_type": "text/plain",
+        "classification_note": "Original ISA-Tab metadata extracted byte-for-byte from verified NASA archive. s_ file contains placeholder 'Do not use this'; never a scientific sample.",
+        "parent_archive_sha256": "a9698dbe10629c226dc498610d62ab8c5c7f15e2668412e831164ab74df99222",
+        "parent_archive_filename": "PSI-117_metadata_NEWID-13_Effect of External T.zip",
+        "nested_member": "s_PSI-117.txt"
+      },
+      "evidence_kind": "metadata"
+    },
+    {
+      "id": "2fe2fc85aa8ee3ac99a07495d31c49704f32d42bb83ae2ba2481d47c14407c43",
+      "name": "PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+      "extension": ".pdf",
+      "size_bytes": 11802360,
+      "sha256": "2fe2fc85aa8ee3ac99a07495d31c49704f32d42bb83ae2ba2481d47c14407c43",
+      "uploaded_at": "2026-11-15T23:50:48+00:00",
+      "status": "processado",
+      "original_path": "originais/2fe2fc85aa8ee3ac99a07495.pdf",
+      "extraction_path": "extraidos/2fe2fc85aa8ee3ac99a07495.json",
+      "warnings": [
+        "1 tabela(s) detectada(s) automaticamente no PDF; confira visualmente, pois a detecção pode errar. Dados de figuras (gráficos) não são extraídos como números."
+      ],
+      "table_count": 1,
+      "page_count": 18,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "2fe2fc85aa8ee3ac99a07495d31c49704f32d42bb83ae2ba2481d47c14407c43",
+        "size_bytes": 11802360,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:21.236656+00:00",
+        "retrieved_utc": "2026-11-15T23:48:21.236656+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 11802360,
+          "directory": false,
+          "files": [],
+          "id": "6a282739d9d7246402cb43e0",
+          "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "11.26 MB",
+          "sortingCategory": "Presentations",
+          "status": "active",
+          "subcategory": "",
+          "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "engineering_or_publication",
+        "media_type": "application/pdf",
+        "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+      },
+      "evidence_kind": "engineering_or_publication"
+    },
+    {
+      "id": "8e4625bb2b2a8b17bd19854765815a3dd877e5192a9b94bd001aea2e8cccb4b2",
+      "name": "PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+      "extension": ".pdf",
+      "size_bytes": 8994674,
+      "sha256": "8e4625bb2b2a8b17bd19854765815a3dd877e5192a9b94bd001aea2e8cccb4b2",
+      "uploaded_at": "2026-11-15T23:50:54+00:00",
+      "status": "processado",
+      "original_path": "originais/8e4625bb2b2a8b17bd198547.pdf",
+      "extraction_path": "extraidos/8e4625bb2b2a8b17bd198547.json",
+      "warnings": [],
+      "table_count": 0,
+      "page_count": 19,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Presentations_Oscillatory_Cool+Flame_TFarouk.pdf&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "8e4625bb2b2a8b17bd19854765815a3dd877e5192a9b94bd001aea2e8cccb4b2",
+        "size_bytes": 8994674,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:25.523574+00:00",
+        "retrieved_utc": "2026-11-15T23:48:25.523574+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 8994674,
+          "directory": false,
+          "files": [],
+          "id": "6a282739d9d7246402cb43e1",
+          "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "8.58 MB",
+          "sortingCategory": "Presentations",
+          "status": "active",
+          "subcategory": "",
+          "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "engineering_or_publication",
+        "media_type": "application/pdf",
+        "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+      },
+      "evidence_kind": "engineering_or_publication"
+    },
+    {
+      "id": "9b69c81ba20b7a9af49ca899fb7520ae8e2034f9ceadf94fc6ef22910fc417aa",
+      "name": "PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+      "extension": ".pdf",
+      "size_bytes": 10786102,
+      "sha256": "9b69c81ba20b7a9af49ca899fb7520ae8e2034f9ceadf94fc6ef22910fc417aa",
+      "uploaded_at": "2026-11-15T23:51:03+00:00",
+      "status": "processado",
+      "original_path": "originais/9b69c81ba20b7a9af49ca899.pdf",
+      "extraction_path": "extraidos/9b69c81ba20b7a9af49ca899.json",
+      "warnings": [],
+      "table_count": 0,
+      "page_count": 36,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "9b69c81ba20b7a9af49ca899fb7520ae8e2034f9ceadf94fc6ef22910fc417aa",
+        "size_bytes": 10786102,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:29.512768+00:00",
+        "retrieved_utc": "2026-11-15T23:48:29.512768+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 10786102,
+          "directory": false,
+          "files": [],
+          "id": "6a282739d9d7246402cb43df",
+          "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "10.29 MB",
+          "sortingCategory": "Presentations",
+          "status": "active",
+          "subcategory": "",
+          "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "engineering_or_publication",
+        "media_type": "application/pdf",
+        "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+      },
+      "evidence_kind": "engineering_or_publication"
+    },
+    {
+      "id": "99b341840ed423878c622478b3b7817729d0ccf4d772f407f860a91d66972917",
+      "name": "PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+      "extension": ".pdf",
+      "size_bytes": 30873451,
+      "sha256": "99b341840ed423878c622478b3b7817729d0ccf4d772f407f860a91d66972917",
+      "uploaded_at": "2026-11-15T23:51:08+00:00",
+      "status": "processado",
+      "original_path": "originais/99b341840ed423878c622478.pdf",
+      "extraction_path": "extraidos/99b341840ed423878c622478.json",
+      "warnings": [],
+      "table_count": 0,
+      "page_count": 22,
+      "schema_version": 4,
+      "provenance": {
+        "study_id": "PSI-117",
+        "source": "NASA Physical Sciences Informatics",
+        "filename": "PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+        "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+        "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf&version=1&redirect=false",
+        "doi": "10.60555/gz0q-b577",
+        "sha256": "99b341840ed423878c622478b3b7817729d0ccf4d772f407f860a91d66972917",
+        "size_bytes": 30873451,
+        "study_version": 2,
+        "file_version": 1,
+        "verified_utc": "2026-11-15T23:48:35.675157+00:00",
+        "retrieved_utc": "2026-11-15T23:48:35.675157+00:00",
+        "verification": "byte_identical_to_nasa_download",
+        "archive_member": "exeperiencias/PIS-117/apresentasao117/PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+        "original_metadata": {
+          "ChecksumAlgorithm": "",
+          "ETag": "",
+          "StorageClass": "",
+          "bytes_size": 30873451,
+          "directory": false,
+          "files": [],
+          "id": "6a282739d9d7246402cb43e2",
+          "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+          "restricted": false,
+          "restrictedAccess": false,
+          "size": "29.44 MB",
+          "sortingCategory": "Presentations",
+          "status": "active",
+          "subcategory": "",
+          "updated": "Tue, 09 Jun 2026 22:46:17 GMT",
+          "version": 1,
+          "visible": true
+        },
+        "license": "No file-specific license exposed; retain NASA and author attribution.",
+        "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+        "classification": "engineering_or_publication",
+        "media_type": "application/pdf",
+        "classification_note": "Publication/engineering context; numeric assertions require page-specific evidence."
+      },
+      "evidence_kind": "engineering_or_publication"
+    }
+  ],
+  "psi_id": "PSI-117",
+  "investigation_id": "PSI-117",
+  "study_id": "PSI-117",
+  "source_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+  "doi": "10.60555/gz0q-b577",
+  "category": "Supressão/combustão de gotas"
+}

@@ -5,6 +5,33 @@
 **Commit base recuperado:** `386ab9b` (`feat(ux-ai): finalize Aerospace Daylight UI, Challenge Hub, 5-question journeys, and Gemini integration`)  
 **Checkpoint de segurança preservado:** `checkpoint/pre-final-engineering-refinement` (`386ab9b`)
 
+## Estado após integração científica da Etapa 2
+
+Base desta sessão: `5a2c487`, no repositório original e branch correta, sem
+alterações iniciais a preservar. As 15 instruções fornecidas pelo proprietário
+estão rastreadas em [STAGE2_INTEGRATION.md](STAGE2_INTEGRATION.md).
+
+- 12 investigações PSI + registro NASA-CONTEXT; 40 documentos preservados
+  (24 novos, dos quais 21 úteis e três placeholders ISA).
+- PSI-62: somente metadados, sem séries numéricas públicas. PSI-117: dados
+  experimentais reportados e CFD separados. PSI-159: relatórios, condições,
+  cálculos e resultados reportados em dois CSVs complementados da NASA.
+- SQLite: 117 tabelas extraídas, 10.114 linhas tabulares, 26.803 registros
+  tipados; sem violações de chave estrangeira. Originais e blobs Git verificados.
+- Busca persistente: 15.524 passagens FTS5/embeddings locais de 384 dimensões;
+  recuperação real dos três estudos e resposta insuficiente verificadas.
+- Ingestão idempotente, bloqueio entre processos, retomada de índice e
+  preservação de bytes no Git corrigidos. UI EN/PT-BR, gráficos e tipos de
+  evidência validados sem reformular o produto.
+- Validação final: **161 testes aprovados em 243,83 s**, Ruff, Mypy em 15
+  arquivos, compileall e pip check aprovados. Smoke com embeddings reais e
+  navegador desktop/mobile concluídos. Etapa 2 encerrada no commit de mensagem
+  `feat(science): integrate PSI-62 PSI-117 and PSI-159 sources`.
+
+**Próxima etapa autorizável:** Etapa 3 — Final Engineering, Product Refinement
+& Documentation. Ela não foi iniciada: nenhuma configuração Gemini, publicação
+ou criação dos cinco documentos finais A–E nesta sessão.
+
 ---
 
 ## 1. Diagnóstico da Recuperação (Sessão Interrompida do Claude Opus 5.5)
@@ -32,7 +59,7 @@
 
 ---
 
-## 2. Inventário Real de Funcionalidades
+## 2. Inventário na recuperação (`386ab9b`, histórico anterior à Etapa 2)
 
 ### A. Concluídas e Validadas (`386ab9b`)
 - **Acervo NASA autêntico e imutável:** 9 investigações PSI (`PSI-25`, `PSI-26`, `PSI-68`, `PSI-69`, `PSI-98`, `PSI-99`, `PSI-100`, `PSI-101`, `PSI-102`) + 2 guias oficiais NASA (`16` arquivos, `7.881.267` bytes, SHA-256 e DOIs conferidos em [DATA_PROVENANCE.md](DATA_PROVENANCE.md)).
@@ -63,7 +90,7 @@
 - Diagnóstico do travamento de `pytest` no Windows PowerShell e revalidação integral (`112 passed` + `ruff`, `mypy`, `compileall`, `pip check`).
 - Registro oficial do estado em `docs/ACTIVE_MISSION.md` e `docs/PROGRESS.md` com checkpoint seguro no Git.
 
-### Etapa 2 — Incorporação dos materiais NASA `PSI-62`, `PSI-117` e `PSI-159` *(Próxima)*
+### Etapa 2 — Incorporação dos materiais NASA `PSI-62`, `PSI-117` e `PSI-159` *(Concluída e validada)*
 - Baixar/importar apenas arquivos verificáveis da NASA para `PSI-62`, `PSI-117` e `PSI-159` em `data/psi_downloads/`.
 - Registrar versão, DOI, URLs permanentes, tamanho, SHA-256, classificação e ressalvas científicas em `resources/manifests/priority_investigations.json` e `docs/DATA_PROVENANCE.md`.
 - Executar ingestão idempotente e atualização dos bancos/índices (`data/scientific.sqlite3` e `data/search.sqlite3`).

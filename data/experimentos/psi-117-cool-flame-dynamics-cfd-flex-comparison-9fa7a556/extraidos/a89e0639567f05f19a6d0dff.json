@@ -1,0 +1,1140 @@
+{
+  "status": "processado",
+  "text": "Experiment,Pressure,Kavg_CF,,Model,Pressure,kb (mm2/s)\r\n,0.5,0.315175121,,,5,0.5012\r\n,0.5,0.315175121,,,3,0.48689\r\n,0.5,0.329710005,,,1.25,0.471387695\r\n,0.5,0.332616982,,,1,0.447921\r\n,0.75,0.369273871,,,0.75,0.4078\r\n,1,0.365233085,,,0.5,0.37396\r\n,1,0.383838614,,,,\r\n,1,0.390233085,,,,\r\n,1,0.401281353,,,,\r\n,1,0.407675824,,,,\r\n,1.25,0.404795194,,,,\r\n,1.25,0.407121654,,,,\r\n,1.25,0.431540259,,,,\r\n,1.25,0.431540259,,,,\r\n,2,0.457207721,,,,\r\n,3,0.445111712,,,,\r\n,3,0.493367526,,,,\r\n,5,0.501739795,,,,\r\n,5,0.527320312,,,,\r\n",
+  "pages": [
+    {
+      "page": 1,
+      "location": "arquivo CSV",
+      "text": "Experiment,Pressure,Kavg_CF,,Model,Pressure,kb (mm2/s)\r\n,0.5,0.315175121,,,5,0.5012\r\n,0.5,0.315175121,,,3,0.48689\r\n,0.5,0.329710005,,,1.25,0.471387695\r\n,0.5,0.332616982,,,1,0.447921\r\n,0.75,0.369273871,,,0.75,0.4078\r\n,1,0.365233085,,,0.5,0.37396\r\n,1,0.383838614,,,,\r\n,1,0.390233085,,,,\r\n,1,0.401281353,,,,\r\n,1,0.407675824,,,,\r\n,1.25,0.404795194,,,,\r\n,1.25,0.407121654,,,,\r\n,1.25,0.431540259,,,,\r\n,1.25,0.431540259,,,,\r\n,2,0.457207721,,,,\r\n,3,0.445111712,,,,\r\n,3,0.493367526,,,,\r\n,5,0.501739795,,,,\r\n,5,0.527320312,,,,\r\n"
+    }
+  ],
+  "tables": [
+    {
+      "name": "CSV · Experiment",
+      "location": "arquivo CSV; intervalo B1:C20, rótulo 'Experiment'",
+      "header_row": 1,
+      "columns": [
+        "Pressure",
+        "Kavg_CF"
+      ],
+      "original_headers": [
+        "Pressure",
+        "Kavg_CF"
+      ],
+      "rows": [
+        [
+          0.5,
+          0.315175121
+        ],
+        [
+          0.5,
+          0.315175121
+        ],
+        [
+          0.5,
+          0.329710005
+        ],
+        [
+          0.5,
+          0.332616982
+        ],
+        [
+          0.75,
+          0.369273871
+        ],
+        [
+          1.0,
+          0.365233085
+        ],
+        [
+          1.0,
+          0.383838614
+        ],
+        [
+          1.0,
+          0.390233085
+        ],
+        [
+          1.0,
+          0.401281353
+        ],
+        [
+          1.0,
+          0.407675824
+        ],
+        [
+          1.25,
+          0.404795194
+        ],
+        [
+          1.25,
+          0.407121654
+        ],
+        [
+          1.25,
+          0.431540259
+        ],
+        [
+          1.25,
+          0.431540259
+        ],
+        [
+          2.0,
+          0.457207721
+        ],
+        [
+          3.0,
+          0.445111712
+        ],
+        [
+          3.0,
+          0.493367526
+        ],
+        [
+          5.0,
+          0.501739795
+        ],
+        [
+          5.0,
+          0.527320312
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "CSV",
+        "range": "B1:C20",
+        "label": "Experiment",
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "data",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "Pressure",
+          "base": "Pressure",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "pressure",
+          "n_rows": 19,
+          "n_nonempty": 19,
+          "n_numeric": 19,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.5,
+          "max": 5.0
+        },
+        {
+          "name": "Kavg_CF",
+          "base": "Kavg_CF",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "unknown",
+          "n_rows": 19,
+          "n_nonempty": 19,
+          "n_numeric": 19,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.315175121,
+          "max": 0.527320312
+        }
+      ],
+      "chart": {
+        "type": "parametric",
+        "x": "Pressure",
+        "y": [
+          "Kavg_CF"
+        ]
+      },
+      "flags": [
+        {
+          "level": "info",
+          "code": "x_repetido",
+          "message": "'Pressure' tem valores repetidos.",
+          "columns": [
+            "Pressure"
+          ],
+          "suggest": {}
+        }
+      ],
+      "source_column_indices": [
+        1,
+        2
+      ],
+      "evidence_kind": "reported_result",
+      "field_classification": [
+        {
+          "header": "Pressure",
+          "column_index": 0,
+          "role": "reported_result",
+          "source_marker": "0.5 | 0.5 | 0.5",
+          "source_column_index": 1
+        },
+        {
+          "header": "Kavg_CF",
+          "column_index": 1,
+          "role": "reported_result",
+          "source_marker": "0.315175121 | 0.315175121 | 0.329710005",
+          "source_column_index": 2
+        }
+      ],
+      "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+    },
+    {
+      "name": "CSV · Model",
+      "location": "arquivo CSV; intervalo F1:G7, rótulo 'Model'",
+      "header_row": 1,
+      "columns": [
+        "Pressure",
+        "kb (mm2/s)"
+      ],
+      "original_headers": [
+        "Pressure",
+        "kb (mm2/s)"
+      ],
+      "rows": [
+        [
+          5.0,
+          0.5012
+        ],
+        [
+          3.0,
+          0.48689
+        ],
+        [
+          1.25,
+          0.471387695
+        ],
+        [
+          1.0,
+          0.447921
+        ],
+        [
+          0.75,
+          0.4078
+        ],
+        [
+          0.5,
+          0.37396
+        ]
+      ],
+      "source_rows": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "first_data_row": 2,
+      "block": {
+        "sheet": "CSV",
+        "range": "F1:G7",
+        "label": "Model",
+        "titles": [],
+        "sheet_titles": [],
+        "kind": "data",
+        "has_header": true
+      },
+      "params": {},
+      "column_meta": [
+        {
+          "name": "Pressure",
+          "base": "Pressure",
+          "unit": "",
+          "kind": "numeric",
+          "quantity": "pressure",
+          "n_rows": 6,
+          "n_nonempty": 6,
+          "n_numeric": 6,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.5,
+          "max": 5.0
+        },
+        {
+          "name": "kb (mm2/s)",
+          "base": "kb",
+          "unit": "mm2/s",
+          "kind": "numeric",
+          "quantity": "burning_rate",
+          "n_rows": 6,
+          "n_nonempty": 6,
+          "n_numeric": 6,
+          "n_range": 0,
+          "numeric_ratio": 1.0,
+          "min": 0.37396,
+          "max": 0.5012
+        }
+      ],
+      "chart": {
+        "type": "parametric",
+        "x": "Pressure",
+        "y": [
+          "kb (mm2/s)"
+        ]
+      },
+      "flags": [
+        {
+          "level": "info",
+          "code": "x_decrescente",
+          "message": "'Pressure' está em ordem decrescente.",
+          "columns": [
+            "Pressure"
+          ],
+          "suggest": {}
+        }
+      ],
+      "source_column_indices": [
+        5,
+        6
+      ],
+      "evidence_kind": "simulation",
+      "field_classification": [
+        {
+          "header": "Pressure",
+          "column_index": 0,
+          "role": "simulation",
+          "source_marker": "5 | 3 | 1.25",
+          "source_column_index": 5
+        },
+        {
+          "header": "kb (mm2/s)",
+          "column_index": 1,
+          "role": "simulation",
+          "source_marker": "0.5012 | 0.48689 | 0.471387695",
+          "source_column_index": 6
+        }
+      ],
+      "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+    }
+  ],
+  "raw_matrix": {
+    "rows": [
+      [
+        "Experiment",
+        "Pressure",
+        "Kavg_CF",
+        null,
+        "Model",
+        "Pressure",
+        "kb (mm2/s)"
+      ],
+      [
+        null,
+        0.5,
+        0.315175121,
+        null,
+        null,
+        5.0,
+        0.5012
+      ],
+      [
+        null,
+        0.5,
+        0.315175121,
+        null,
+        null,
+        3.0,
+        0.48689
+      ],
+      [
+        null,
+        0.5,
+        0.329710005,
+        null,
+        null,
+        1.25,
+        0.471387695
+      ],
+      [
+        null,
+        0.5,
+        0.332616982,
+        null,
+        null,
+        1.0,
+        0.447921
+      ],
+      [
+        null,
+        0.75,
+        0.369273871,
+        null,
+        null,
+        0.75,
+        0.4078
+      ],
+      [
+        null,
+        1.0,
+        0.365233085,
+        null,
+        null,
+        0.5,
+        0.37396
+      ],
+      [
+        null,
+        1.0,
+        0.383838614,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        1.0,
+        0.390233085,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        1.0,
+        0.401281353,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        1.0,
+        0.407675824,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        1.25,
+        0.404795194,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        1.25,
+        0.407121654,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        1.25,
+        0.431540259,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        1.25,
+        0.431540259,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        2.0,
+        0.457207721,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        3.0,
+        0.445111712,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        3.0,
+        0.493367526,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        5.0,
+        0.501739795,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        5.0,
+        0.527320312,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "source_rows": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "metadata": {
+    "encoding": "utf-8-sig",
+    "rows": 20,
+    "sheet_titles": [],
+    "evidence_kind": "mixed_experiment_and_simulation",
+    "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+  },
+  "warnings": [],
+  "schema_version": 4,
+  "source_filename": "PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+  "source_extension": ".csv",
+  "document": {
+    "name": "PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+    "extension": ".csv",
+    "sha256": "a89e0639567f05f19a6d0dffa9b2f659048358dee1c603b6c65bfcebd1101796",
+    "size_bytes": 518
+  },
+  "evidence_kind": "mixed_experiment_and_simulation",
+  "observations": [
+    {
+      "value": 0.5,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 0.5,
+      "table_index": 0,
+      "row_number": 2,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 0.5,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 0.5,
+      "table_index": 0,
+      "row_number": 3,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 0.5,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 0.5,
+      "table_index": 0,
+      "row_number": 4,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 0.5,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 0.5,
+      "table_index": 0,
+      "row_number": 5,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 0.75,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 0.75,
+      "table_index": 0,
+      "row_number": 6,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 1.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.0,
+      "table_index": 0,
+      "row_number": 7,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 1.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.0,
+      "table_index": 0,
+      "row_number": 8,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 1.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.0,
+      "table_index": 0,
+      "row_number": 9,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 1.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.0,
+      "table_index": 0,
+      "row_number": 10,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 1.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.0,
+      "table_index": 0,
+      "row_number": 11,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 1.25,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.25,
+      "table_index": 0,
+      "row_number": 12,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 1.25,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.25,
+      "table_index": 0,
+      "row_number": 13,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 1.25,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.25,
+      "table_index": 0,
+      "row_number": 14,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 1.25,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.25,
+      "table_index": 0,
+      "row_number": 15,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 2.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 2.0,
+      "table_index": 0,
+      "row_number": 16,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 3.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 3.0,
+      "table_index": 0,
+      "row_number": 17,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 3.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 3.0,
+      "table_index": 0,
+      "row_number": 18,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 5.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 5.0,
+      "table_index": 0,
+      "row_number": 19,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 5.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 5.0,
+      "table_index": 0,
+      "row_number": 20,
+      "column_index": 0,
+      "evidence_kind": "reported_result",
+      "source_column_index": 1
+    },
+    {
+      "value": 5.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 5.0,
+      "table_index": 1,
+      "row_number": 2,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 5
+    },
+    {
+      "value": 3.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 3.0,
+      "table_index": 1,
+      "row_number": 3,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 5
+    },
+    {
+      "value": 1.25,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.25,
+      "table_index": 1,
+      "row_number": 4,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 5
+    },
+    {
+      "value": 1.0,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 1.0,
+      "table_index": 1,
+      "row_number": 5,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 5
+    },
+    {
+      "value": 0.75,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 0.75,
+      "table_index": 1,
+      "row_number": 6,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 5
+    },
+    {
+      "value": 0.5,
+      "unit": "",
+      "quantity": "pressure",
+      "normalized_value": null,
+      "normalized_unit": null,
+      "reference": "unspecified",
+      "status": "reference_required",
+      "field": "Pressure",
+      "raw_value": 0.5,
+      "table_index": 1,
+      "row_number": 7,
+      "column_index": 0,
+      "evidence_kind": "simulation",
+      "source_column_index": 5
+    },
+    {
+      "value": 0.5012,
+      "unit": "mm2/s",
+      "quantity": "area_rate",
+      "normalized_value": 0.5012,
+      "normalized_unit": "mm²/s",
+      "reference": null,
+      "status": "normalized",
+      "field": "kb (mm2/s)",
+      "raw_value": 0.5012,
+      "table_index": 1,
+      "row_number": 2,
+      "column_index": 1,
+      "evidence_kind": "simulation",
+      "source_column_index": 6
+    },
+    {
+      "value": 0.48689,
+      "unit": "mm2/s",
+      "quantity": "area_rate",
+      "normalized_value": 0.48689,
+      "normalized_unit": "mm²/s",
+      "reference": null,
+      "status": "normalized",
+      "field": "kb (mm2/s)",
+      "raw_value": 0.48689,
+      "table_index": 1,
+      "row_number": 3,
+      "column_index": 1,
+      "evidence_kind": "simulation",
+      "source_column_index": 6
+    },
+    {
+      "value": 0.471387695,
+      "unit": "mm2/s",
+      "quantity": "area_rate",
+      "normalized_value": 0.471387695,
+      "normalized_unit": "mm²/s",
+      "reference": null,
+      "status": "normalized",
+      "field": "kb (mm2/s)",
+      "raw_value": 0.471387695,
+      "table_index": 1,
+      "row_number": 4,
+      "column_index": 1,
+      "evidence_kind": "simulation",
+      "source_column_index": 6
+    },
+    {
+      "value": 0.447921,
+      "unit": "mm2/s",
+      "quantity": "area_rate",
+      "normalized_value": 0.447921,
+      "normalized_unit": "mm²/s",
+      "reference": null,
+      "status": "normalized",
+      "field": "kb (mm2/s)",
+      "raw_value": 0.447921,
+      "table_index": 1,
+      "row_number": 5,
+      "column_index": 1,
+      "evidence_kind": "simulation",
+      "source_column_index": 6
+    },
+    {
+      "value": 0.4078,
+      "unit": "mm2/s",
+      "quantity": "area_rate",
+      "normalized_value": 0.4078,
+      "normalized_unit": "mm²/s",
+      "reference": null,
+      "status": "normalized",
+      "field": "kb (mm2/s)",
+      "raw_value": 0.4078,
+      "table_index": 1,
+      "row_number": 6,
+      "column_index": 1,
+      "evidence_kind": "simulation",
+      "source_column_index": 6
+    },
+    {
+      "value": 0.37396,
+      "unit": "mm2/s",
+      "quantity": "area_rate",
+      "normalized_value": 0.37396,
+      "normalized_unit": "mm²/s",
+      "reference": null,
+      "status": "normalized",
+      "field": "kb (mm2/s)",
+      "raw_value": 0.37396,
+      "table_index": 1,
+      "row_number": 7,
+      "column_index": 1,
+      "evidence_kind": "simulation",
+      "source_column_index": 6
+    }
+  ],
+  "provenance": {
+    "study_id": "PSI-117",
+    "source": "NASA Physical Sciences Informatics",
+    "filename": "PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+    "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+    "source_api_url": "https://psi.nasa.gov/geode-py/ws/studies/PSI-117/download?file=PSI-117_Analyzed+Data_MST_2024_Kavg.csv&version=1&redirect=false",
+    "doi": "10.60555/gz0q-b577",
+    "sha256": "a89e0639567f05f19a6d0dffa9b2f659048358dee1c603b6c65bfcebd1101796",
+    "size_bytes": 518,
+    "study_version": 2,
+    "file_version": 1,
+    "verified_utc": "2026-11-15T23:48:44.201303+00:00",
+    "retrieved_utc": "2026-11-15T23:48:44.201303+00:00",
+    "verification": "byte_identical_to_nasa_download",
+    "archive_member": "exeperiencias/PIS-117/data analizado/tabelas/MST/PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+    "original_metadata": {
+      "ChecksumAlgorithm": "",
+      "ETag": "",
+      "StorageClass": "",
+      "bytes_size": 518,
+      "directory": false,
+      "files": [],
+      "id": "6a28273bd9d7246402cb43ea",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+      "restricted": false,
+      "restrictedAccess": false,
+      "size": "518.0 B",
+      "sortingCategory": "Analyzed Data",
+      "status": "active",
+      "subcategory": "Reduced Gravity/Simulation/MST",
+      "updated": "Tue, 09 Jun 2026 22:46:19 GMT",
+      "version": 1,
+      "visible": true
+    },
+    "license": "No file-specific license exposed; retain NASA and author attribution.",
+    "units": "Only explicitly declared source units; unspecified units remain unresolved.",
+    "classification": "mixed_experiment_and_simulation",
+    "media_type": "text/csv",
+    "field_classification": [
+      {
+        "header": "Experiment",
+        "column_index": 0,
+        "role": "reported_result",
+        "source_marker": ""
+      },
+      {
+        "header": "Pressure",
+        "column_index": 1,
+        "role": "reported_result",
+        "source_marker": "0.5 | 0.5 | 0.5"
+      },
+      {
+        "header": "Kavg_CF",
+        "column_index": 2,
+        "role": "reported_result",
+        "source_marker": "0.315175121 | 0.315175121 | 0.329710005"
+      },
+      {
+        "header": "",
+        "column_index": 3,
+        "role": "reported_result",
+        "source_marker": ""
+      },
+      {
+        "header": "Model",
+        "column_index": 4,
+        "role": "simulation",
+        "source_marker": ""
+      },
+      {
+        "header": "Pressure",
+        "column_index": 5,
+        "role": "simulation",
+        "source_marker": "5 | 3 | 1.25"
+      },
+      {
+        "header": "kb (mm2/s)",
+        "column_index": 6,
+        "role": "simulation",
+        "source_marker": "0.5012 | 0.48689 | 0.471387695"
+      }
+    ],
+    "classification_note": "Published analyzed data contain separate experimental and model series. Expt/EXP/Experiment and Sim/Model/Simulation markers define column groups. Columns in different groups are independent series; do not align by row as a common clock."
+  }
+}

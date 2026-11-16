@@ -221,29 +221,47 @@
         {
           "header": "Sample #",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 0,
+          "source_column_index": 0
         },
         {
           "header": "Sample Material  ",
           "role": "condition",
-          "warning": null
+          "warning": null,
+          "column_index": 1,
+          "source_column_index": 1
         },
         {
           "header": "Air Flow (cm/s)",
           "role": "condition",
-          "warning": null
+          "warning": null,
+          "column_index": 2,
+          "source_column_index": 2
         },
         {
           "header": "Weight loss rate (mg/min)",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 3,
+          "source_column_index": 3
         },
         {
           "header": "Aging Duration (minutes)",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 4,
+          "source_column_index": 4
         }
-      ]
+      ],
+      "source_column_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_note": "Experimental table: conditions/sample catalogue; not an independently validated measurement dataset."
     }
   ],
   "raw_matrix": {
@@ -327,7 +345,9 @@
   "metadata": {
     "encoding": "utf-8-sig",
     "rows": 9,
-    "sheet_titles": []
+    "sheet_titles": [],
+    "evidence_kind": "condition",
+    "classification_note": "Experimental table: conditions/sample catalogue; not an independently validated measurement dataset."
   },
   "warnings": [],
   "schema_version": 4,
@@ -354,7 +374,8 @@
       "table_index": 0,
       "row_number": 2,
       "column_index": 2,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 2
     },
     {
       "value": 5.0,
@@ -369,7 +390,8 @@
       "table_index": 0,
       "row_number": 3,
       "column_index": 2,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 2
     },
     {
       "value": 5.0,
@@ -384,7 +406,8 @@
       "table_index": 0,
       "row_number": 4,
       "column_index": 2,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 2
     },
     {
       "value": 10.0,
@@ -399,7 +422,8 @@
       "table_index": 0,
       "row_number": 5,
       "column_index": 2,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 2
     },
     {
       "value": null,
@@ -414,7 +438,8 @@
       "table_index": 0,
       "row_number": 6,
       "column_index": 2,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 2
     },
     {
       "value": null,
@@ -429,7 +454,8 @@
       "table_index": 0,
       "row_number": 7,
       "column_index": 2,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 2
     },
     {
       "value": null,
@@ -444,7 +470,8 @@
       "table_index": 0,
       "row_number": 8,
       "column_index": 2,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 2
     },
     {
       "value": null,
@@ -459,7 +486,8 @@
       "table_index": 0,
       "row_number": 9,
       "column_index": 2,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 2
     },
     {
       "value": 2.0,
@@ -474,7 +502,8 @@
       "table_index": 0,
       "row_number": 2,
       "column_index": 3,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 3
     },
     {
       "value": 1.0,
@@ -489,7 +518,8 @@
       "table_index": 0,
       "row_number": 3,
       "column_index": 3,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 3
     },
     {
       "value": 2.0,
@@ -504,7 +534,8 @@
       "table_index": 0,
       "row_number": 4,
       "column_index": 3,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 3
     },
     {
       "value": 2.0,
@@ -519,7 +550,8 @@
       "table_index": 0,
       "row_number": 5,
       "column_index": 3,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 3
     },
     {
       "value": null,
@@ -534,7 +566,8 @@
       "table_index": 0,
       "row_number": 6,
       "column_index": 3,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 3
     },
     {
       "value": null,
@@ -549,7 +582,8 @@
       "table_index": 0,
       "row_number": 7,
       "column_index": 3,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 3
     },
     {
       "value": null,
@@ -564,7 +598,8 @@
       "table_index": 0,
       "row_number": 8,
       "column_index": 3,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 3
     },
     {
       "value": null,
@@ -579,7 +614,8 @@
       "table_index": 0,
       "row_number": 9,
       "column_index": 3,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 3
     },
     {
       "value": 1.0,
@@ -594,7 +630,8 @@
       "table_index": 0,
       "row_number": 2,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": 1.0,
@@ -609,7 +646,8 @@
       "table_index": 0,
       "row_number": 3,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": 20.0,
@@ -624,7 +662,8 @@
       "table_index": 0,
       "row_number": 4,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": 1.0,
@@ -639,7 +678,8 @@
       "table_index": 0,
       "row_number": 5,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -654,7 +694,8 @@
       "table_index": 0,
       "row_number": 6,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -669,7 +710,8 @@
       "table_index": 0,
       "row_number": 7,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -684,7 +726,8 @@
       "table_index": 0,
       "row_number": 8,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     },
     {
       "value": null,
@@ -699,7 +742,8 @@
       "table_index": 0,
       "row_number": 9,
       "column_index": 4,
-      "evidence_kind": "identifier_or_unclassified"
+      "evidence_kind": "identifier_or_unclassified",
+      "source_column_index": 4
     }
   ],
   "provenance": {

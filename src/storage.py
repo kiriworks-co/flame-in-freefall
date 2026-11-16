@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import time
 import unicodedata
 import uuid
 from datetime import datetime, timezone
@@ -31,9 +32,24 @@ def _slug(value: str) -> str:
 
 def _write_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_name(path.name + ".tmp")
-    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding="utf-8")
-    temporary.replace(path)
+    # Independent workers must never truncate or rename one another's temporary file.
+    # Keep the sibling name short on Windows: the destination may be a 64-char SHA.
+    temporary = path.with_name(f".tmp-{uuid.uuid4().hex}")
+    try:
+        with temporary.open("x", encoding="utf-8") as output:
+            json.dump(value, output, ensure_ascii=False, indent=2)
+        for attempt in range(7):
+            try:
+                temporary.replace(path)
+                break
+            except PermissionError:
+                # Windows can briefly deny replacement while a reader/rename holds
+                # the destination. A real permission failure still propagates.
+                if attempt == 6:
+                    raise
+                time.sleep(.01 * 2 ** attempt)
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 def _read_json(path: Path) -> dict[str, Any]:

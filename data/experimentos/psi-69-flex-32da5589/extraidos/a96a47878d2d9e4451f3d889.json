@@ -5751,7 +5751,12 @@
       },
       "flags": [],
       "evidence_kind": "engineering_or_publication",
-      "field_classification": []
+      "field_classification": [],
+      "source_column_indices": [
+        0,
+        1
+      ],
+      "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection."
     },
     {
       "name": "Tabela detectada p.5.1",
@@ -5839,7 +5844,12 @@
       },
       "flags": [],
       "evidence_kind": "engineering_or_publication",
-      "field_classification": []
+      "field_classification": [],
+      "source_column_indices": [
+        0,
+        1
+      ],
+      "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection."
     },
     {
       "name": "Tabela detectada p.10.1",
@@ -5932,7 +5942,12 @@
       },
       "flags": [],
       "evidence_kind": "engineering_or_publication",
-      "field_classification": []
+      "field_classification": [],
+      "source_column_indices": [
+        0,
+        1
+      ],
+      "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection."
     },
     {
       "name": "Tabela detectada p.11.1",
@@ -6060,7 +6075,12 @@
       },
       "flags": [],
       "evidence_kind": "engineering_or_publication",
-      "field_classification": []
+      "field_classification": [],
+      "source_column_indices": [
+        0,
+        1
+      ],
+      "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection."
     },
     {
       "name": "Tabela detectada p.32.1",
@@ -6223,7 +6243,12 @@
       },
       "flags": [],
       "evidence_kind": "engineering_or_publication",
-      "field_classification": []
+      "field_classification": [],
+      "source_column_indices": [
+        0,
+        1
+      ],
+      "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection."
     },
     {
       "name": "Tabela detectada p.33.1",
@@ -6411,7 +6436,12 @@
       },
       "flags": [],
       "evidence_kind": "engineering_or_publication",
-      "field_classification": []
+      "field_classification": [],
+      "source_column_indices": [
+        0,
+        1
+      ],
+      "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection."
     },
     {
       "name": "Tabela detectada p.34.1",
@@ -6594,7 +6624,12 @@
       },
       "flags": [],
       "evidence_kind": "engineering_or_publication",
-      "field_classification": []
+      "field_classification": [],
+      "source_column_indices": [
+        0,
+        1
+      ],
+      "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection."
     }
   ],
   "captions": [
@@ -6623,7 +6658,9 @@
     "modDate": "D:20160310130132-05'00'",
     "page_count": 37,
     "legendas": 1,
-    "tabelas_detectadas": 7
+    "tabelas_detectadas": 7,
+    "evidence_kind": "engineering_or_publication",
+    "classification_note": "Official document linked from this PSI investigation; assertions require page-level inspection."
   },
   "warnings": [
     "7 tabela(s) detectada(s) automaticamente no PDF; confira visualmente, pois a detecção pode errar. Dados de figuras (gráficos) não são extraídos como números."
@@ -6652,7 +6689,8 @@
       "table_index": 5,
       "row_number": 2,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6667,7 +6705,8 @@
       "table_index": 5,
       "row_number": 3,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6682,7 +6721,8 @@
       "table_index": 5,
       "row_number": 4,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6697,7 +6737,8 @@
       "table_index": 5,
       "row_number": 5,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6712,7 +6753,8 @@
       "table_index": 5,
       "row_number": 6,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6727,7 +6769,8 @@
       "table_index": 5,
       "row_number": 7,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6742,7 +6785,8 @@
       "table_index": 5,
       "row_number": 8,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6757,7 +6801,8 @@
       "table_index": 5,
       "row_number": 9,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6772,7 +6817,8 @@
       "table_index": 5,
       "row_number": 10,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6787,7 +6833,8 @@
       "table_index": 5,
       "row_number": 11,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6802,7 +6849,8 @@
       "table_index": 5,
       "row_number": 12,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6817,7 +6865,8 @@
       "table_index": 5,
       "row_number": 13,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6832,7 +6881,8 @@
       "table_index": 5,
       "row_number": 14,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6847,7 +6897,8 @@
       "table_index": 5,
       "row_number": 15,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6862,7 +6913,8 @@
       "table_index": 5,
       "row_number": 16,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6877,7 +6929,8 @@
       "table_index": 5,
       "row_number": 17,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6892,7 +6945,8 @@
       "table_index": 5,
       "row_number": 18,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6907,7 +6961,8 @@
       "table_index": 5,
       "row_number": 19,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6922,7 +6977,8 @@
       "table_index": 5,
       "row_number": 20,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6937,7 +6993,8 @@
       "table_index": 5,
       "row_number": 21,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6952,7 +7009,8 @@
       "table_index": 5,
       "row_number": 22,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6967,7 +7025,8 @@
       "table_index": 5,
       "row_number": 23,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     },
     {
       "value": null,
@@ -6982,7 +7041,8 @@
       "table_index": 5,
       "row_number": 24,
       "column_index": 1,
-      "evidence_kind": "engineering_or_publication"
+      "evidence_kind": "engineering_or_publication",
+      "source_column_index": 1
     }
   ],
   "provenance": {

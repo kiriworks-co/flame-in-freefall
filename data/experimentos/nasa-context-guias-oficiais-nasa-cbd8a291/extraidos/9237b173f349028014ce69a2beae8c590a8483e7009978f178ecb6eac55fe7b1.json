@@ -422,7 +422,9 @@
     "modDate": "D:20251022083847-05'00'",
     "page_count": 11,
     "legendas": 0,
-    "tabelas_detectadas": 0
+    "tabelas_detectadas": 0,
+    "evidence_kind": "context",
+    "classification_note": ""
   },
   "warnings": [],
   "schema_version": 4,

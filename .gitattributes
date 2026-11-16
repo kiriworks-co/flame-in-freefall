@@ -1,0 +1,8 @@
+# Scientific originals must survive Windows Git checkout byte-for-byte.
+data/psi_downloads/**/*.csv -text -whitespace
+data/psi_downloads/**/*.txt -text -whitespace
+data/psi_downloads/**/*.pdf -text
+data/psi_downloads/**/*.xlsx -text
+data/psi_downloads/**/*.zip -text
+data/experimentos/**/originais/** -text -whitespace
+resources/official/*.pdf -text

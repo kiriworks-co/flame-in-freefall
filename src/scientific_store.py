@@ -10,7 +10,7 @@ from typing import Any, Iterator
 from .storage import PROJECT_DIR, utc_now
 
 DEFAULT_DB = PROJECT_DIR / "data" / "scientific.sqlite3"
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS schema_migrations(version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL);
@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS jobs(id TEXT PRIMARY KEY,kind TEXT,status TEXT,create
  finished_at TEXT,progress REAL NOT NULL DEFAULT 0,result_json TEXT,error TEXT);
 CREATE TABLE IF NOT EXISTS analysis_results(id TEXT PRIMARY KEY,investigation_id TEXT,kind TEXT,
  created_at TEXT,result_json TEXT);
+CREATE TABLE IF NOT EXISTS ingestion_state(key TEXT PRIMARY KEY,value TEXT NOT NULL);
 """
 
 

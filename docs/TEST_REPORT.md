@@ -1,4 +1,45 @@
-# Test & Verification Report — Final Product & UX/UI Overhaul (`feat/spaceapps-public-release`)
+# Test & Verification Report — Etapa 2 (`feat/spaceapps-public-release`)
+
+## Validação científica em 2026-11-15
+
+Ambiente efetivamente usado nesta etapa: Windows, Python **3.12.14** na `.venv`.
+Python 3.11 continua sendo a versão alvo de portabilidade; não foi executada
+uma segunda matriz Python 3.11 nesta sessão.
+
+| Verificação | Resultado |
+|---|---|
+| Suíte completa final | **161 passed in 243.83s**, sem falhas |
+| Ruff | Aprovado em app.py, src, scripts e tests |
+| Mypy ampliado | Aprovado em 15 arquivos, incluindo ingestão, armazenamento, unidades e recuperação |
+| compileall | Exit 0 |
+| pip check | No broken requirements found |
+| Proveniência e replay | Originais NASA conferidos por SHA-256; replay sem alterações de conteúdo |
+| Ingestão idempotente real | 0 importados, 40 existentes, errors vazio |
+| SQLite | 13 registros (12 PSI + contexto), 40 documentos, foreign_key_check vazio |
+| E2E novos originais | Os 24 documentos foram reextraídos e indexados em cópia isolada; RAG/DOI/hash/localizações e filtros validados |
+| Embeddings reais | 15.524 chunks FTS5/384 dimensões; três estudos, filtro de simulação e insuficiência de evidência aprovados |
+| Integridade no Git | 83 SHA-256 conferidos diretamente nos blobs preparados; atributos preservam bytes dos originais |
+| Navegador real | Chromium desktop 1280×900 e mobile 390×844; catálogo/explorador, tipos científicos EN/PT, gráficos e ativação de tab por teclado |
+
+No código final, o navegador mostrou dois gráficos em PSI-117, zero exceções,
+tipos reportado/simulação preservados e unidade ausente explícita; não houve
+overflow horizontal de página nas duas larguras observadas. PSI-62 abriu
+metadados sem fabricar gráfico numérico; PSI-159 abriu suas tabelas e relatórios.
+Capturas e logs locais em `tmp/`; comandos e limites detalhados em
+[STAGE2_INTEGRATION.md](STAGE2_INTEGRATION.md). As figuras PDF foram inspecionadas
+por amostragem, não integralmente. Não houve auditoria WCAG completa, configuração
+Gemini, chamada LLM ao vivo ou publicação.
+
+O primeiro passe de 143 testes teve um problema do diretório temporário global
+de AppTest; o teste foi isolado em arquivo próprio e os passes posteriores de
+158 e 161 passaram. O último inclui os três testes de relevância semântica.
+Os casos de escrita concorrente, nome temporário longo no Windows, retomada do
+índice e rótulos científicos incorretos foram corrigidos e cobertos por regressão.
+
+## Histórico anterior à Etapa 2 — Product & UX/UI Overhaul
+
+O registro abaixo foi preservado como histórico da versão anterior; as
+observações e o ambiente atualizados desta sessão estão na seção acima.
 
 All automated checks and live Chromium browser checks below were executed against the `.venv` Python 3.11 environment after the final product, responsive CSS, localization, Challenge Hub, and Gemini provider updates.
 

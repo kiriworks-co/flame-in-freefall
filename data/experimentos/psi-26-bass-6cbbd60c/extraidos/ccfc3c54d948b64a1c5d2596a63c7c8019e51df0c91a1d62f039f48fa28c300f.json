@@ -1289,34 +1289,55 @@
         {
           "header": "Date",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 0,
+          "source_column_index": 0
         },
         {
           "header": "GMT",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 1,
+          "source_column_index": 1
         },
         {
           "header": "As Run Test #",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 2,
+          "source_column_index": 2
         },
         {
           "header": "Test #",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 3,
+          "source_column_index": 3
         },
         {
           "header": "Sample #",
           "role": "identifier_or_unclassified",
-          "warning": null
+          "warning": null,
+          "column_index": 4,
+          "source_column_index": 4
         },
         {
           "header": "Fuel Sample Material",
           "role": "condition",
-          "warning": null
+          "warning": null,
+          "column_index": 5,
+          "source_column_index": 5
         }
-      ]
+      ],
+      "source_column_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "classification_note": "Experimental table: conditions/sample catalogue; not an independently validated measurement dataset."
     }
   ],
   "raw_matrix": {
@@ -2435,7 +2456,9 @@
   "metadata": {
     "encoding": "utf-8-sig",
     "rows": 123,
-    "sheet_titles": []
+    "sheet_titles": [],
+    "evidence_kind": "condition",
+    "classification_note": "Experimental table: conditions/sample catalogue; not an independently validated measurement dataset."
   },
   "warnings": [],
   "schema_version": 4,
@@ -2462,7 +2485,8 @@
       "table_index": 0,
       "row_number": 2,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2477,7 +2501,8 @@
       "table_index": 0,
       "row_number": 3,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2492,7 +2517,8 @@
       "table_index": 0,
       "row_number": 4,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2507,7 +2533,8 @@
       "table_index": 0,
       "row_number": 5,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2522,7 +2549,8 @@
       "table_index": 0,
       "row_number": 6,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2537,7 +2565,8 @@
       "table_index": 0,
       "row_number": 7,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2552,7 +2581,8 @@
       "table_index": 0,
       "row_number": 8,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2567,7 +2597,8 @@
       "table_index": 0,
       "row_number": 9,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2582,7 +2613,8 @@
       "table_index": 0,
       "row_number": 10,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2597,7 +2629,8 @@
       "table_index": 0,
       "row_number": 11,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2612,7 +2645,8 @@
       "table_index": 0,
       "row_number": 12,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2627,7 +2661,8 @@
       "table_index": 0,
       "row_number": 13,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2642,7 +2677,8 @@
       "table_index": 0,
       "row_number": 14,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2657,7 +2693,8 @@
       "table_index": 0,
       "row_number": 15,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2672,7 +2709,8 @@
       "table_index": 0,
       "row_number": 16,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2687,7 +2725,8 @@
       "table_index": 0,
       "row_number": 17,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2702,7 +2741,8 @@
       "table_index": 0,
       "row_number": 18,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2717,7 +2757,8 @@
       "table_index": 0,
       "row_number": 19,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2732,7 +2773,8 @@
       "table_index": 0,
       "row_number": 20,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2747,7 +2789,8 @@
       "table_index": 0,
       "row_number": 21,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2762,7 +2805,8 @@
       "table_index": 0,
       "row_number": 22,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2777,7 +2821,8 @@
       "table_index": 0,
       "row_number": 23,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2792,7 +2837,8 @@
       "table_index": 0,
       "row_number": 24,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2807,7 +2853,8 @@
       "table_index": 0,
       "row_number": 25,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2822,7 +2869,8 @@
       "table_index": 0,
       "row_number": 26,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2837,7 +2885,8 @@
       "table_index": 0,
       "row_number": 27,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2852,7 +2901,8 @@
       "table_index": 0,
       "row_number": 28,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2867,7 +2917,8 @@
       "table_index": 0,
       "row_number": 29,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2882,7 +2933,8 @@
       "table_index": 0,
       "row_number": 30,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2897,7 +2949,8 @@
       "table_index": 0,
       "row_number": 31,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2912,7 +2965,8 @@
       "table_index": 0,
       "row_number": 32,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2927,7 +2981,8 @@
       "table_index": 0,
       "row_number": 33,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2942,7 +2997,8 @@
       "table_index": 0,
       "row_number": 34,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2957,7 +3013,8 @@
       "table_index": 0,
       "row_number": 35,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2972,7 +3029,8 @@
       "table_index": 0,
       "row_number": 36,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -2987,7 +3045,8 @@
       "table_index": 0,
       "row_number": 37,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3002,7 +3061,8 @@
       "table_index": 0,
       "row_number": 38,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3017,7 +3077,8 @@
       "table_index": 0,
       "row_number": 39,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3032,7 +3093,8 @@
       "table_index": 0,
       "row_number": 40,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3047,7 +3109,8 @@
       "table_index": 0,
       "row_number": 41,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3062,7 +3125,8 @@
       "table_index": 0,
       "row_number": 42,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3077,7 +3141,8 @@
       "table_index": 0,
       "row_number": 43,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3092,7 +3157,8 @@
       "table_index": 0,
       "row_number": 44,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3107,7 +3173,8 @@
       "table_index": 0,
       "row_number": 45,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3122,7 +3189,8 @@
       "table_index": 0,
       "row_number": 46,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3137,7 +3205,8 @@
       "table_index": 0,
       "row_number": 47,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3152,7 +3221,8 @@
       "table_index": 0,
       "row_number": 48,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3167,7 +3237,8 @@
       "table_index": 0,
       "row_number": 49,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3182,7 +3253,8 @@
       "table_index": 0,
       "row_number": 50,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3197,7 +3269,8 @@
       "table_index": 0,
       "row_number": 51,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3212,7 +3285,8 @@
       "table_index": 0,
       "row_number": 52,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3227,7 +3301,8 @@
       "table_index": 0,
       "row_number": 53,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3242,7 +3317,8 @@
       "table_index": 0,
       "row_number": 54,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3257,7 +3333,8 @@
       "table_index": 0,
       "row_number": 55,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3272,7 +3349,8 @@
       "table_index": 0,
       "row_number": 56,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3287,7 +3365,8 @@
       "table_index": 0,
       "row_number": 57,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3302,7 +3381,8 @@
       "table_index": 0,
       "row_number": 58,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3317,7 +3397,8 @@
       "table_index": 0,
       "row_number": 59,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3332,7 +3413,8 @@
       "table_index": 0,
       "row_number": 60,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3347,7 +3429,8 @@
       "table_index": 0,
       "row_number": 61,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3362,7 +3445,8 @@
       "table_index": 0,
       "row_number": 62,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3377,7 +3461,8 @@
       "table_index": 0,
       "row_number": 63,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3392,7 +3477,8 @@
       "table_index": 0,
       "row_number": 64,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3407,7 +3493,8 @@
       "table_index": 0,
       "row_number": 65,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3422,7 +3509,8 @@
       "table_index": 0,
       "row_number": 66,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3437,7 +3525,8 @@
       "table_index": 0,
       "row_number": 67,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3452,7 +3541,8 @@
       "table_index": 0,
       "row_number": 68,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3467,7 +3557,8 @@
       "table_index": 0,
       "row_number": 69,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3482,7 +3573,8 @@
       "table_index": 0,
       "row_number": 70,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3497,7 +3589,8 @@
       "table_index": 0,
       "row_number": 71,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3512,7 +3605,8 @@
       "table_index": 0,
       "row_number": 72,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3527,7 +3621,8 @@
       "table_index": 0,
       "row_number": 73,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3542,7 +3637,8 @@
       "table_index": 0,
       "row_number": 74,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3557,7 +3653,8 @@
       "table_index": 0,
       "row_number": 75,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3572,7 +3669,8 @@
       "table_index": 0,
       "row_number": 76,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3587,7 +3685,8 @@
       "table_index": 0,
       "row_number": 77,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3602,7 +3701,8 @@
       "table_index": 0,
       "row_number": 78,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3617,7 +3717,8 @@
       "table_index": 0,
       "row_number": 79,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3632,7 +3733,8 @@
       "table_index": 0,
       "row_number": 80,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3647,7 +3749,8 @@
       "table_index": 0,
       "row_number": 81,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3662,7 +3765,8 @@
       "table_index": 0,
       "row_number": 82,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3677,7 +3781,8 @@
       "table_index": 0,
       "row_number": 83,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3692,7 +3797,8 @@
       "table_index": 0,
       "row_number": 84,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3707,7 +3813,8 @@
       "table_index": 0,
       "row_number": 85,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3722,7 +3829,8 @@
       "table_index": 0,
       "row_number": 86,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3737,7 +3845,8 @@
       "table_index": 0,
       "row_number": 87,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3752,7 +3861,8 @@
       "table_index": 0,
       "row_number": 88,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3767,7 +3877,8 @@
       "table_index": 0,
       "row_number": 89,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3782,7 +3893,8 @@
       "table_index": 0,
       "row_number": 90,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3797,7 +3909,8 @@
       "table_index": 0,
       "row_number": 91,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3812,7 +3925,8 @@
       "table_index": 0,
       "row_number": 92,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3827,7 +3941,8 @@
       "table_index": 0,
       "row_number": 93,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3842,7 +3957,8 @@
       "table_index": 0,
       "row_number": 94,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3857,7 +3973,8 @@
       "table_index": 0,
       "row_number": 95,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3872,7 +3989,8 @@
       "table_index": 0,
       "row_number": 96,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3887,7 +4005,8 @@
       "table_index": 0,
       "row_number": 97,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3902,7 +4021,8 @@
       "table_index": 0,
       "row_number": 98,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3917,7 +4037,8 @@
       "table_index": 0,
       "row_number": 99,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3932,7 +4053,8 @@
       "table_index": 0,
       "row_number": 100,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3947,7 +4069,8 @@
       "table_index": 0,
       "row_number": 101,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3962,7 +4085,8 @@
       "table_index": 0,
       "row_number": 102,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3977,7 +4101,8 @@
       "table_index": 0,
       "row_number": 103,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -3992,7 +4117,8 @@
       "table_index": 0,
       "row_number": 104,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4007,7 +4133,8 @@
       "table_index": 0,
       "row_number": 105,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4022,7 +4149,8 @@
       "table_index": 0,
       "row_number": 106,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4037,7 +4165,8 @@
       "table_index": 0,
       "row_number": 107,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4052,7 +4181,8 @@
       "table_index": 0,
       "row_number": 108,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4067,7 +4197,8 @@
       "table_index": 0,
       "row_number": 109,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4082,7 +4213,8 @@
       "table_index": 0,
       "row_number": 110,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4097,7 +4229,8 @@
       "table_index": 0,
       "row_number": 111,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4112,7 +4245,8 @@
       "table_index": 0,
       "row_number": 112,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4127,7 +4261,8 @@
       "table_index": 0,
       "row_number": 113,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4142,7 +4277,8 @@
       "table_index": 0,
       "row_number": 114,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4157,7 +4293,8 @@
       "table_index": 0,
       "row_number": 115,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4172,7 +4309,8 @@
       "table_index": 0,
       "row_number": 116,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4187,7 +4325,8 @@
       "table_index": 0,
       "row_number": 117,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4202,7 +4341,8 @@
       "table_index": 0,
       "row_number": 118,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4217,7 +4357,8 @@
       "table_index": 0,
       "row_number": 119,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4232,7 +4373,8 @@
       "table_index": 0,
       "row_number": 120,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4247,7 +4389,8 @@
       "table_index": 0,
       "row_number": 121,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4262,7 +4405,8 @@
       "table_index": 0,
       "row_number": 122,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     },
     {
       "value": null,
@@ -4277,7 +4421,8 @@
       "table_index": 0,
       "row_number": 123,
       "column_index": 5,
-      "evidence_kind": "condition"
+      "evidence_kind": "condition",
+      "source_column_index": 5
     }
   ],
   "provenance": {
