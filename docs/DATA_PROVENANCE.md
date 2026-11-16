@@ -3,12 +3,11 @@
 ## Ampliação Etapa 2 — PSI-62, PSI-117 e PSI-159 (2026-11-15)
 
 Esta ampliação acrescenta três investigações às nove da versão `5a2c487`.
-O inventário completo dos **24 novos documentos**, três ZIPs ISA preservados,
-SHA-256, tamanhos, versões, DOI e URLs permanentes está em
-[STAGE2_SOURCE_AUDIT.md](STAGE2_SOURCE_AUDIT.md). A trilha de cada membro do
-ZIP fornecido está em `data/psi_downloads/stage2_archive_audit.json`; os
-manifests individuais guardam a correspondência com o inventário oficial e
-com o arquivo pai dos metadados extraídos. Os originais anteriores permanecem
+Os arquivos originais das três investigações, seus identificadores e os
+metadados de integridade são preservados em `data/psi_downloads/`. A trilha
+dos arquivos ISA e seus membros está em `data/psi_downloads/stage2_archive_audit.json`;
+os manifests individuais registram versões, identificadores, URLs e hashes
+SHA-256 para conferência com os registros oficiais da NASA. Os originais anteriores permanecem
 inalterados. O inventário da seção seguinte é o acervo **anterior** à ampliação.
 
 - **PSI-62**, versão 1, DOI `10.60555/e9xp-ex83`: metadados de uma investigação
